@@ -1,0 +1,24 @@
+
+{
+    // C# implementation id
+    "EventId": "ConnectorMalfunction",
+    // How much does this story event cost to run
+    "Points": 16,
+    // Options: Negative, Positive, Neutral, Raid
+    "OutcomeType": "Negative",
+    // Full list is in StoryEventFlags class
+    "EventFlags": [
+        "Device",
+        "Annoying",
+        "Fire",
+        "Explosion"
+    ],
+    // Minimum days before this event can repeat
+    "MinRepeatDelayDays": 280,
+    // Requirements for this event to be available
+    "Require": {
+        "Difficulty": 3.0,
+        "Days": 30,
+        "GridSize": 70
+    }
+}

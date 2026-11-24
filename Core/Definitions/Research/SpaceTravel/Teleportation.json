@@ -1,0 +1,27 @@
+{
+    "Id" : "Research/Security/Teleportation",
+    "Tier" : 4,
+    "IsAbstract" : true,
+    "PreviewIcon" : "Icons/Color/Teleport",
+    "NameKey" : "research.spacetravel.teleportation",
+    "Researchable" : {
+        "IsTreeNode" : true,
+        "Prerequisites" : [
+            "Research/Security/TractorBeam"
+        ],
+        "DatoidCosts" : [
+            {
+                "TypeId" : "DatoidTechHigh",
+                "StackSize" : 18
+            },
+            {
+                "TypeId" : "DatoidAlien",
+                "StackSize" : 8
+            },
+            {
+                "TypeId" : "DatoidNuclear",
+                "StackSize" : 5
+            }
+        ]
+    }
+}

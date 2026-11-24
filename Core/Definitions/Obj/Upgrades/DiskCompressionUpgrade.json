@@ -1,0 +1,21 @@
+{
+    "Layer" : "FreeEntities",
+    "ParentId" : "Obj/Upgrades/BaseUpgrade",
+    "Researchable" : {
+        "Prerequisites" : [ "Research/Computing/ResearchStation" ]
+    },
+    "Components" : [
+        {
+            "Component" : "ObjGraphics",
+            "Properties" : [
+                { "Key" : "Graphic", "String": "Obj/Upgrades/DiskCompressionUpgrade" }
+            ]
+        },
+        {
+            "Component" : "UnstoredMat",
+            "Properties" : [
+                { "Key" : "Type", "String" : "DiskCompressionUpgrade" }
+            ]
+        }
+    ]
+}

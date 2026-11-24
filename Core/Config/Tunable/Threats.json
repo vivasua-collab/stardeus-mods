@@ -1,0 +1,27 @@
+{
+    "Ints" : [
+        {
+            // After crawler (face hugger) gets removed from a colonist face, that much time will have to pass until it can attach itself to someone again
+            "Key" : "CrawlerReattachDelayMinutes",
+            "Int" : 30
+        }
+    ],
+    "Floats" : [
+        { "Key" : "FireDamageMultiplier", "Float" : 0.01 },
+        { "Key" : "FireOxygenUse", "Float" : 0.02 },
+        { "Key" : "FireSelfCombustMinOxygen", "Float" : 0.09 },
+        { "Key" : "FireSpreadChance", "Float" : 0.05 },
+        { "Key" : "FireBeingSpreadChance", "Float" : 0.05 },
+        { "Key" : "FireSelfExtinguishMaxOxygen", "Float" : 0.07 },
+        { "Key" : "TractorBeamStrength", "Float" : 10.0 }
+    ],
+    "FloatSets" : [
+        { "Key" : "FireExtinguishMinutesCurve", "FloatSet" : [
+            0.0, 15.0,
+            0.3, 35.0,
+            0.5, 40.0,
+            0.8, 45.0,
+            1.0, 50.0
+        ] }
+    ]
+}

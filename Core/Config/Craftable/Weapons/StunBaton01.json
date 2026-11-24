@@ -1,0 +1,13 @@
+{
+    "Type": "Weapons3",
+    "Ingredients": [
+        { "TypeId" : "BatteryCell", "StackSize" : 2 },
+        { "TypeId" : "CopperWire", "StackSize" : 3 },
+        { "TypeId" : "Microchip", "StackSize" : 1 },
+        { "TypeId" : "Plastic", "StackSize" : 2 }
+    ],
+    "IgnoreMarket" : true,
+    "ProductDefId": "Obj/Equipment/Weapons/StunBaton01",
+    "ProductionTimeHours": 4.0,
+    "EnergyCost": 35.0
+}

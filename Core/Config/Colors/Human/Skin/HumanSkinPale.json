@@ -1,0 +1,6 @@
+{
+    "Id" : "HumanSkinPale",
+    "Data" : [239, 217, 206, 255],
+    "Groups" : [ "Human.Skin" ],
+    "Weight" : 0.5
+}

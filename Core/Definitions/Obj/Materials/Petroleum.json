@@ -1,0 +1,41 @@
+{
+    "Layer" : "FreeEntities",
+    "ParentId" : "Obj/Materials/BaseMaterial",
+    "Researchable" : {
+        "Prerequisites" : [
+            "Research/Production/OilProcessing"
+        ]
+    },
+    "Components" : [
+        {
+            "Component" : "ObjGraphics",
+            "Properties" : [
+                { "Key" : "Shader", "String": "Obj" },
+                { "Key" : "Graphic", "String": "Obj/Materials/Petroleum" }
+            ]
+        },
+        {
+            "Component" : "ObjHealth",
+            "Properties" : [
+                { "Key" : "Max", "Int" : 100 },
+                { "Key" : "IsInvincible", "Bool" : false }
+            ]
+        },
+        {
+            "Component" : "Flammable",
+            "Properties" : [
+                { "Key" : "IsTemperatureResistant", "Bool" : false },
+                { "Key" : "IgnitionTemperatureCelsius", "Int" : 150 },
+                { "Key" : "FireChance", "Float" : 1.5 },
+                { "Key" : "FlammabilityCurve", "String" : "Extreme" }
+            ]
+        },
+        {
+            "Component" : "UnstoredMat",
+            "Properties" : [
+                { "Key" : "Type", "String" : "Petroleum" },
+                { "Key" : "FixedSize", "Bool" : true }
+            ]
+        }
+    ]
+}

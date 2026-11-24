@@ -1,0 +1,15 @@
+{
+    "BuildGroup" : "FloorMarble",
+    "Layer" : "Floor",
+    "ParentId" : "Structure/Floors/FloorMarble01",
+    "UseParentTexts" : true,
+    "Components" : [
+        {
+            "Component" : "TileGraphics",
+            "Properties" : [
+                { "Key" : "Graphic", "String": "Structure/Floors/FloorMarble02" }
+                // { "Key" : "Shader", "String": "SeamlessFloorTile" }
+            ]
+        }
+    ]
+}

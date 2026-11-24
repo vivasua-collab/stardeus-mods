@@ -1,0 +1,22 @@
+{
+    "Layer" : "FreeEntities",
+    "ParentId" : "Obj/Parts/BasePartOrganic",
+    "NameKey" : "bodypart.Liver.LiverSmall",
+    "Researchable" : {
+        "Prerequisites" : [ "Research/LifeSupport/GrowingPartsBasic" ]
+    },
+    "Components" : [
+        {
+            "Component" : "ObjGraphics",
+            "Properties" : [
+                { "Key" : "Graphic", "String": "Obj/BodyParts/Organic1" }
+            ]
+        },
+        {
+            "Component" : "BodyPart",
+            "Properties" : [
+                { "Key" : "BodyPartDefId", "String" : "Liver/LiverSmall" }
+            ]
+        }
+    ]
+}

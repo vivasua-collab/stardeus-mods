@@ -1,0 +1,26 @@
+{
+    "Id" : "Research/Production/PowerArmor",
+    "Tier" : 5,
+    "IsAbstract" : true,
+    "PreviewIcon" : "Beings/Clothing/Human/PowerArmor01/PowerArmor01",
+    "Researchable" : {
+        "IsTreeNode" : true,
+        "Prerequisites" : [
+            "Research/Production/AssaultArmor"
+        ],
+        "DatoidCosts" : [
+            {
+                "TypeId" : "DatoidTechHigh",
+                "StackSize" : 22
+            },
+            {
+                "TypeId" : "DatoidNuclear",
+                "StackSize" : 14
+            },
+            {
+                "TypeId" : "DatoidAlien",
+                "StackSize" : 14
+            }
+        ]
+    }
+}

@@ -1,0 +1,10 @@
+{
+    "Id" : "Microchip2",
+    "IsComposite" : true,
+    "IsConsumedOnDestroy" : true,
+    "IconId" : "Obj/Materials/Microchip2",
+    "Property" : "Electronics",
+    "GroupId" : "Electronics",
+    "EnergyOutput" : 250.0,
+    "Rarity" : 2
+}

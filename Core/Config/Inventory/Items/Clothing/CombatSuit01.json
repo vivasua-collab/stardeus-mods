@@ -1,0 +1,105 @@
+{
+    "DefId" : "Obj/Equipment/Clothing/CombatSuit01",
+    "SlotId" : "Suit",
+    "SpriteId" : "Beings/Clothing/Human/CombatSuit01/[BODY_TYPE]/[BODY_TYPE]CombatSuit01",
+    "ColorGroupId" : "Suit",
+    "Rarity" : 0.35,
+    "CombatStrengthBonus" : 3.0,
+    "SpawnRequirements" : {
+        "Days" : 200,
+        "Friendlies" : 12,
+        "SectorDifficulty" : 0.75
+    },
+    "LooksShowFlags" : [
+        "SlotEmpty",
+        "Combat"
+    ],
+    "LooksHideFlags" : [
+        "SafeEnv"
+    ],
+    "HidesLookParts" : [
+        // "Body"
+    ],
+    "AddsAbilities" : [
+        "Fly"
+    ],
+    "ProvidesStats" : [
+        {
+            "Component" : "SpaceSuitIntegrity",
+            "Properties" : [
+                { "Key" : "StateMul", "Float" : 0.0 },
+                { "Key" : "Amount", "Float" : 0.90 },
+                { "Key" : "CompoundLimit", "Float" : 1.0 }
+            ]
+        }
+    ],
+    "AddsStatModifiers" : [
+        {
+            "Component" : "TempMin",
+            "Properties" : [
+                { "Key" : "Value", "Float" : -50 },
+                { "Key" : "Type", "String" : "Adds" }
+            ]
+        },
+        {
+            "Component" : "TempMax",
+            "Properties" : [
+                { "Key" : "Value", "Float" : 200.0 },
+                { "Key" : "Type", "String" : "Adds" }
+            ]
+        },
+        {
+            "Component" : "ArmorSharp",
+            "Properties" : [
+                { "Key" : "StateMul", "Float" : 1.0 },
+                { "Key" : "Value", "Float" : 9 },
+                { "Key" : "Type", "String" : "Adds" }
+            ]
+        },
+        {
+            "Component" : "ArmorPiercing",
+            "Properties" : [
+                { "Key" : "StateMul", "Float" : 1.0 },
+                { "Key" : "Value", "Float" : 9 },
+                { "Key" : "Type", "String" : "Adds" }
+            ]
+        },
+        {
+            "Component" : "ArmorBlunt",
+            "Properties" : [
+                { "Key" : "StateMul", "Float" : 1.0 },
+                { "Key" : "Value", "Float" : 9 },
+                { "Key" : "Type", "String" : "Adds" }
+            ]
+        },
+        {
+            "Component" : "ArmorEnergy",
+            "Properties" : [
+                { "Key" : "StateMul", "Float" : 1.0 },
+                // the body's own energy resistance is high (12), so 7 barely slowed an energy
+                // rifle down while the suit halved every other weapon
+                { "Key" : "Value", "Float" : 12 },
+                { "Key" : "Type", "String" : "Adds" }
+            ]
+        },
+        {
+            "Component" : "WeakPointCover",
+            "Properties" : [
+                { "Key" : "StateMul", "Float" : 1.0 },
+                { "Key" : "Value", "Float" : 0.2 },
+                { "Key" : "Type", "String" : "Adds" }
+            ]
+        }
+    ],
+    // only while the suit shows (outdoors, unsafe air, drafted, in combat):
+    // indoors under the clothes it does not slow its wearer
+    "AddsStatModifiersWhenShown" : [
+        {
+            "Component" : "MoveSpeed",
+            "Properties" : [
+                { "Key" : "Value", "Float" : -0.1 },
+                { "Key" : "Type", "String" : "AddsPercent" }
+            ]
+        }
+    ]
+}

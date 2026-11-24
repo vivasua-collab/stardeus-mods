@@ -1,0 +1,19 @@
+{
+    // C# implementation id.
+    // Multiple configurations can point to a single implementation.
+    "EventId" : "CapsuleEquipmentSet",
+    // How much does this story event cost to run
+    "Points" : 3,
+    // Options: Negative, Positive, Neutral, Raid, Raid
+    "OutcomeType" : "Positive",
+    // Full list is in StoryEventFlags class
+    "EventFlags" : [
+        "OnDemand",
+        "Capsule"
+    ],
+    "MinRepeatDelayDays" : 5
+    // Variables for the story event implementation
+    // "Properties" : [
+    //     { "Key" : "EquipmentSet", "Bool" : true }
+    // ]
+}

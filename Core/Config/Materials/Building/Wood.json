@@ -1,0 +1,8 @@
+{
+    "Id" : "Wood",
+    "IsComposite" : true,
+    "IconId" : "Obj/Materials/Wood",
+    "EnergyOutput" : 150.0,
+    "GroupId" : "Plants",
+    "Rarity" : 15
+}

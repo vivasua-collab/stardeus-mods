@@ -1,0 +1,9 @@
+{
+    "Id" : "Cleaning",
+    "Importance" : 0.5,
+    "EnabledByAbilities" : [ "CleanDevice", "CleanFloors" ],
+    "RequireAnyAbilities" : true,
+    "IconId" : "Icons/Color/Mop",
+    "Types" : [ "Mindless", "Physical", "NanobotCompatible" ],
+    "WorkSpeedStat" : "ManualWorkSpeed"
+}

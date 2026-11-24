@@ -1,0 +1,18 @@
+{
+    "Id" : "Research/Production/Assembly",
+    "Tier" : 1,
+    "IsAbstract" : true,
+    "PreviewIcon" : "Icons/Color/Cog",
+    "Researchable" : {
+        "IsTreeNode" : true,
+        "Prerequisites" : [
+            "Research/Production/Root"
+        ],
+        "DatoidCosts" : [
+            {
+                "TypeId" : "DatoidBasic",
+                "StackSize" : 9
+            }
+        ]
+    }
+}

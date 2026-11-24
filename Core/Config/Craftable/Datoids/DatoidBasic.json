@@ -1,0 +1,10 @@
+{
+    "Type": "DatoidBasic",
+    "Ingredients": [
+        { "TypeId" : "SteelPlate", "StackSize" : 1 },
+        { "TypeId" : "Gears", "StackSize" : 1 }
+    ],
+    "ProductDefId": "Obj/Datoids/DatoidBasic",
+    "ProductionTimeHours": 2.0,
+    "EnergyCost": 10.0
+}

@@ -1,0 +1,22 @@
+{
+    "Id" : "MallCop",
+    "LovesJobTypes" : [ ],
+    "IncompatibleTraitIds" : [ "Pacifist" ],
+    "Species" : [ "Human", "Dog", "Robot", "Drone", "Orbotron", "Sentry" ],
+    "AgePhaseIds" : [ "YoungAdult", "MidLife", "Retirement" ],
+    "RoleTypes" : [ "Good" ],
+    "AdjustsSkills" : [
+        {
+            "JobId" : "Melee",
+            "Adjustment" : 4
+        },
+        {
+            "JobId" : "Firefighting",
+            "Adjustment" : 2
+        },
+        {
+            "JobId" : "Social",
+            "Adjustment" : -1
+        }
+    ]
+}

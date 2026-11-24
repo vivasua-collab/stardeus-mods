@@ -1,0 +1,9 @@
+{
+    "Id" : "Text/Multiline",
+
+    "Color" : "UI/Text/Main",
+    "Alpha" : 1,
+
+    "TextFontSize" : 24,
+    "TextOverflowMode" : "Ellipsis"
+}

@@ -1,0 +1,84 @@
+{
+    "Id" : "relaxing",
+    "Level" : 0.5,
+    "DatoidCostScale" : 0.75,
+    "StartingResources" : 1.25,
+    "PlanetResources" : 1.25,
+    "DefaultDestructionLevel" : 0.40,
+    // Difficulty changes mood only through the resting sanity. Sanity falls at the same rate
+    // and breakdowns roll the same chance on every difficulty: scaling those too compounded,
+    // and on the hardest difficulty colonists broke down whatever the player did
+    "SanityDropRate" : 1.0,
+    "SanityBaseline" : 0.45,
+    "BreachCapsuleSpeed" : 2.0,
+    // For how many in-game minutes a brand new fire resists being extinguished,
+    // and how much it is boosted while that lasts
+    "FireBoostMinutes" : 60,
+    "FireBoostGrowthMul" : 1.5,
+    "FireBoostSpreadMul" : 1.25,
+    "FireBoostFirefightingMul" : 0.45,
+    // Strength above which a boosted fire builds up pressure to spread. Above
+    // FireStrengthAfterSpread (0.7), so a fought fire spreads once, then stalls
+    "FireBoostSpreadThreshold" : 0.85,
+    // Scales the chance that incidents start extra fires or explosions
+    "FireChanceScale" : 0.5,
+    "WantedTensionMultiplier" : 0.5,
+    // Raid adaptation: how much of its swing reaches raid points, and how fast it grows over
+    // a run without losses (RaidAdaptation)
+    "AdaptationEffect" : 1.0,
+    "AdaptationGrowthOverZero" : 0.6,
+    "MinDeepScansPerLocation" : 2,
+    "MaxDeepScansPerLocation" : 4,
+    // how many in-game minutes ships will linger before pressing "shoot" button
+    // when their weapons are ready
+    "NPCShipShootHesitationMin" : 20,
+    "NPCShipShootHesitationMax" : 30,
+    // Fraction of an NPC ship's free class points offensiveness may spend on weapons
+    "ShipCombatDifficulty" : 0.6,
+    // Multiplier applied to quest-spawned NPC ship opponents' class points
+    "QuestShipStrengthMul" : 0.8,
+    // Until this day the first raid waits for a repair station on the ship: a new player was
+    // raided before building one, and their downed bot could not be repaired. Under the plain
+    // first-raid roll (day 15-25), so that roll stays the latest a first raid can come
+    "FirstRaidWaitsForRepairStationDays" : 14,
+    // How strong will event-spawned opponents be against player's ship.
+    // strength: 0.0 - dead ship, 1.0, same as you, 2.0 - 2x as strong as you
+    // 0.0 - , 1.0 - not scared at all
+    // random value => strength
+    "NPCShipStrengthChance" : [
+        0.0, 0.1,
+        0.05, 0.15,
+        0.15, 0.25,
+        0.75, 0.4,
+        0.95, 0.5,
+        1.0, 0.75
+    ],
+    // Story cadence is the story generator's, not the difficulty's: CooldownMul stays 1.0 so
+    // Relaxing gets the same beats at the same times as Balanced. The one exception is the
+    // first raid, which may wait for a repair station (FirstRaidWaitsForRepairStationDays).
+    // What makes it easier is PointAllowanceMul (only the cheaper disasters and raid types are
+    // affordable), WantedTensionMultiplier (smaller raids), the fire settings, calmer
+    // colonists and that first-raid wait.
+    "StoryScheduleModifiers" : [
+        {
+            "Schedule" : "Neutral",
+            "PointAllowanceMul" : 1.0,
+            "CooldownMul" : 1.0
+        },
+        {
+            "Schedule" : "Positive",
+            "PointAllowanceMul" : 2.0,
+            "CooldownMul" : 1.0
+        },
+        {
+            "Schedule" : "Negative",
+            "PointAllowanceMul" : 0.5,
+            "CooldownMul" : 1.0
+        },
+        {
+            "Schedule" : "Raid",
+            "PointAllowanceMul" : 0.5,
+            "CooldownMul" : 1.0
+        }
+    ]
+}

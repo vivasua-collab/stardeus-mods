@@ -1,0 +1,11 @@
+{
+    // Skill level -> work speed. Mining: 0.04 + 0.12 per level,
+    // divided by its value at level 3, the typical generated skill, so a typical colonist
+    // works at the speed the content is tuned for and experts much faster. Linear, so the
+    // points only mark the ends; levels 21-25 come from training only
+    "FloatSet" : [
+        0, 0.1,
+        20, 6.1,
+        25, 7.6
+    ]
+}

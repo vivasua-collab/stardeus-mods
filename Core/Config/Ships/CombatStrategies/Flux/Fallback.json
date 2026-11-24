@@ -1,0 +1,15 @@
+{
+    "Strength" : 0.50,
+    "ShootFluxThreshold" : 0.9,
+    "ToleratedFluxTotal" : 0.9,
+    "ToleratedFluxHard" : 0.8,
+    "VentFluxStopHard" : 0.45,
+    "VentFluxStopTotal" : 0.50,
+
+    "MinOffensiveness" : 0.0,
+    "MaxOffensiveness" : 1.0,
+    "StrengthDifferenceChance" : [
+        -1.0, 0.01,
+        1.0, 0.01
+    ]
+}

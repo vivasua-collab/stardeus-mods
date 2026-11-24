@@ -1,0 +1,25 @@
+{
+    // C# implementation id.
+    // Multiple configurations can point to a single implementation.
+    "EventId" : "StasisWakeUp",
+    // How much does this story event cost to run
+    "Points" : 0,
+    // Options: Negative, Positive, Neutral, Raid
+    "OutcomeType" : "Positive",
+    // Full list is in StoryEventFlags class
+    "EventFlags" : [
+        "OnDemand"
+        // do not add StasisWakeUp flag here, nor ColonyGrowthBio!
+        // because StasisWakeUpStoryAspect will handle cooldowns on its own
+    ],
+    // "MinRepeatDelayDays" : 0,
+    // Full list of requirements can be found in Situation class
+    // "Require" : {
+    //     "Colonists" : 5
+    // },
+    // Variables for the story event implementation
+    "Properties" : [
+        // how many beings we will choose from
+        { "Key" : "Items", "Int" : 3 }
+    ]
+}

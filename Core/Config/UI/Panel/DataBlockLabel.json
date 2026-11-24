@@ -1,0 +1,11 @@
+{
+    "Id" : "Panel/DataBlockLabel",
+
+    // "Color" : "UI/Greyish/Primary",
+    "Color" : "UI/Main/Primary-2",
+    "Alpha" : 0.95,
+
+    "Image" : "UI/Buttons/IconButtonBG",
+    "ImageType" : "Sliced",
+    "ImageBorderLBRT" : [ 8, 8, 8, 8 ]
+}

@@ -1,0 +1,15 @@
+{
+    // Always shoots at whatever can hurt it most right now. Takes a strong ship
+    // to pick that fight.
+    "Mode" : "Strongest",
+    "SwitchIntervalHoursFrom" : 2,
+    "SwitchIntervalHoursTo" : 5,
+
+    "MinOffensiveness" : 0.0,
+    "MaxOffensiveness" : 1.0,
+    "StrengthDifferenceChance" : [
+        -1.0, 0.1,
+        0.0, 0.4,
+        1.0, 0.7
+    ]
+}

@@ -1,0 +1,25 @@
+{
+    "RemoveColonist" : true,
+    "IsDead" : true,
+    "IncludeInStasis" : true,
+    "ExcludeRobots" : true,
+    "Chance" : 0.01,
+    "GenerateName" : true,
+    "NameChanceWeights" : [ 1.0 ],
+    "NameParts" : [
+        {
+            "Type" : "DiseaseName",
+            "Paths" : [
+                "Space/Object/Name"
+            ],
+            "Chances" : [ 1.0 ]
+        },
+        {
+            "Type" : "DiseaseName",
+            "Paths" : [
+                "Space/Object/Name"
+            ],
+            "Chances" : [ 0.1 ]
+        }
+    ]
+}

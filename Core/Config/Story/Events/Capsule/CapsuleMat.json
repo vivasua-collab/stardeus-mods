@@ -1,0 +1,21 @@
+{
+    // C# implementation id.
+    // Multiple configurations can point to a single implementation.
+    "EventId" : "CapsuleMat",
+    // How much does this story event cost to run
+    // Keep it 0 since this is a fallback event.
+    "Points" : 0,
+    // Options: Negative, Positive, Neutral, Raid, Raid
+    "OutcomeType" : "Positive",
+    // Full list is in StoryEventFlags class
+    "EventFlags" : [
+        "OnDemand",
+        "CanIgnoreRepeatDelay",
+        "Capsule"
+    ],
+    "MinRepeatDelayDays" : 1
+    // Variables for the story event implementation
+    // "Properties" : [
+    //     { "Key" : "Material", "Bool" : true }
+    // ]
+}

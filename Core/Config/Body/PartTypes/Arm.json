@@ -1,0 +1,11 @@
+{
+    "AttachedTo" : "Shoulder",
+    "PartFlags" : [ "Limb", "Removable" ],
+    "SubpartHitChance" : 0.0,
+    "Size" : 0.2,
+    "ExtractRisk" : 0.4,
+    "ImplantRisk" : 0.1,
+    "FatalityRisk" : 0.0,
+    "RejectionRisk" : 0.15,
+    "SurgicalFatigue" : 0.05
+}

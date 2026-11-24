@@ -1,0 +1,56 @@
+{
+    "Id" : "Virus",
+    "FlagIcon" : "Icons/Faction/Virus",
+    "Friendliness" : -0.5,
+    "ChanceBlackMarket" : 1.0,
+    "TradesPeople" : true,
+    "ChancePolice" : 0.0,
+    "ChanceRandomShip" : 0.05,
+    "IsOutlaw" : true,
+    // Overridden only by the Asimov Override upgrade, which allies Virus with the player
+    "NeverAllies" : true,
+    // Rogue AI: its robots wield weapons that are illegal for robots everywhere else
+    "IgnoresAsimovLaws" : true,
+    "AI" : 1,
+    // share of its bot raiders that come as human bodies run by the bot mind (infected crew),
+    // see FactionDef.PilotedHumanShare
+    "PilotedHumanShare" : 0.35,
+    "ShipDensityMul" : 0.5,
+    "VictoryRaidChance" : 0.85,
+    "ChanceTradeWithOutlaw" : 1.0,
+    "RaidStrengthMul" : 1.35,
+    "HyperjumpRelayBaseToll" : 50000,
+    "RegionDifficultyChance" : [
+        0.0, 0.0,
+        0.8, 0.0,
+        0.9, 0.5,
+        1.0, 1.0
+    ],
+    // How likely the reaction will be positive (vs negative) given the faction standing
+    // key => standing, value => chance of positive reaction
+    "AttitudePositiveReactionChance" : [
+        -1.0, 0.0,
+        -0.5, 0.05,
+        -0.1, 0.1,
+        0.0, 0.25,
+        0.5, 0.75,
+        1.0, 0.95
+    ],
+    // power difference => chance to engage in combat
+    "BraveryChance" : [
+        -1.0, 1.0,
+        1.0, 1.0
+    ],
+    "GenBodyVars" : {
+        "ChanceModded" : 1.0,
+        "ChanceFreak" : 0.5,
+        "ChanceBionic" : 0.5,
+        "ChanceCustomMind" : 0.25,
+        "ChanceHighQualityParts" : 0.7,
+        "ChanceLowQualityParts" : 0.3,
+        "ChanceNonStandard" : 0.5,
+        "ChanceScarred" : 0.4,
+        "ChanceImplant" : 0.3
+    },
+    "CombatObjective" : "Raid"
+}

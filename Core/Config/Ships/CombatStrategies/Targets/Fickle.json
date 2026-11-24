@@ -1,0 +1,13 @@
+{
+    // Cannot keep its attention on one ship and swaps targets often.
+    "Mode" : "Fickle",
+    "SwitchIntervalHoursFrom" : 1,
+    "SwitchIntervalHoursTo" : 3,
+
+    "MinOffensiveness" : 0.0,
+    "MaxOffensiveness" : 1.0,
+    "StrengthDifferenceChance" : [
+        -1.0, 0.2,
+        1.0, 0.2
+    ]
+}

@@ -1,0 +1,23 @@
+{
+    "Id" : "Weapon_HeavyLaser",
+    "DefId" : "Objects/Devices/HeavyLaser",
+    "Tier" : 2,
+    "ClassPoints" : 5,
+
+    // if it has multiple rotations:
+    "ZoneSpriteId_D" : "Objects/Devices/HeavyLaser_ZoneView_D",
+    "ZoneSpriteId_L" : "Objects/Devices/HeavyLaser_ZoneView_L",
+    "ZoneSpriteId_U" : "Objects/Devices/HeavyLaser_ZoneView_U",
+    "ZoneSpriteId_R" : "Objects/Devices/HeavyLaser_ZoneView_R",
+
+    // "ZoneSpriteScale" : 0.5,
+
+    "HP" : 350,
+
+    // common device
+    "Rarity" : 0.75,
+
+    "TargetTypeId" : "ShipWeapon_Laser",
+    "EnergyCostPassive": 8,
+    "EnergyCostActive": 75
+}

@@ -1,0 +1,17 @@
+{
+    "Id" : "TaxiDriver",
+    "Species" : [ "Human", "Robot" ],
+    "RoleTypes" : [ "Poor" ],
+    "AgePhaseIds" : [ "YoungAdult", "MidLife", "Retirement" ],
+    // "LovesJobTypes" : [ "Social" ],
+    "AdjustsSkills" : [
+        {
+            "JobId" : "Social",
+            "Adjustment" : 2
+        },
+        {
+            "JobId" : "Piloting",
+            "Adjustment" : 4
+        }
+    ]
+}

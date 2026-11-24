@@ -1,0 +1,10 @@
+{
+    "Type": "DatoidEnergy",
+    "Ingredients": [
+        { "TypeId" : "BatteryCell", "StackSize" : 1 },
+        { "TypeId" : "Coal", "StackSize" : 1 }
+    ],
+    "ProductDefId": "Obj/Datoids/DatoidEnergy",
+    "ProductionTimeHours": 2.0,
+    "EnergyCost": 50.0
+}

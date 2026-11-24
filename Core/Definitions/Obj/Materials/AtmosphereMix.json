@@ -1,0 +1,39 @@
+{
+    "Layer" : "FreeEntities",
+    "ParentId" : "Obj/Materials/BaseMaterial",
+    "Researchable" : {
+        "Prerequisites" : [ "Research/LifeSupport/AtmosphereGeneration" ]
+    },
+    "Components" : [
+        {
+            "Component" : "ObjGraphics",
+            "Properties" : [
+                { "Key" : "Shader", "String": "Obj" },
+                { "Key" : "Graphic", "String": "Obj/Materials/AtmosphereMix" }
+            ]
+        },
+        {
+            "Component" : "Flammable",
+            "Properties" : [
+                { "Key" : "IsTemperatureResistant", "Bool" : false }
+            ]
+        },
+        {
+            "Component" : "UnstoredMat",
+            "Properties" : [
+                { "Key" : "Type", "String" : "AtmosphereMix" },
+                { "Key" : "FixedSize", "Bool" : true }
+            ]
+        },
+        {
+            "Component" : "LightSource",
+            "Properties" : [
+                { "Key" : "NeedsEnergy", "Bool" : false },
+                { "Key" : "Color", "IntSet" : [ 64, 191, 191, 128 ] },
+                { "Key" : "PulsateColor", "IntSet" : [ 179, 229, 230, 128 ] },
+                { "Key" : "FrequencyRange", "Vector2" : { "x" : 0.4, "y" : 0.9 } },
+                { "Key" : "Radius", "Float" : 3 }
+            ]
+        }
+    ]
+}

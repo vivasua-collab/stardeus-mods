@@ -1,0 +1,9 @@
+{
+    "Id" : "Plants",
+    "SkillSpeedCurve" : "Skills/SpeedIntellectual",
+    "Importance" : 1.0,
+    "IconId" : "Icons/Color/Leaf",
+    "EnabledByAbilities" : [ "Manipulate" ],
+    "Types" : [ "Caring", "Mindless", "NanobotCompatible" ],
+    "WorkSpeedStat" : "ManualWorkSpeed"
+}

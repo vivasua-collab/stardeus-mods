@@ -1,0 +1,13 @@
+{
+    "Type": "Weapons3",
+    "Ingredients": [
+        { "TypeId" : "Glass", "StackSize" : 2 },
+        { "TypeId" : "Microchip3", "StackSize" : 1 },
+        { "TypeId" : "BatteryCell", "StackSize" : 2 },
+        { "TypeId" : "GoldWire", "StackSize" : 3 }
+    ],
+    "IgnoreMarket" : true,
+    "ProductDefId": "Obj/Equipment/Weapons/Vibroblade01",
+    "ProductionTimeHours": 6.0,
+    "EnergyCost": 60.0
+}

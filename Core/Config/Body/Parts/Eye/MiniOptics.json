@@ -1,0 +1,19 @@
+{
+    "SlotTypeId" : "Eye",
+    "Compatibility" : "Any",
+    "Tier" : 2,
+    "ResistanceBase" : 6.0,
+    "Resistances" : [
+        { "DamageType" : "Piercing", "Resistance" : 3.0 }
+    ],
+    "ProvidesStats" : [
+        {
+            "Component" : "Sight",
+            "Properties" : [
+                { "Key" : "CompoundLimit", "Float" : 1.0 },
+                { "Key" : "Amount", "Float" : 1.0 },
+                { "Key" : "StateMul", "Float" : 1.0 }
+            ]
+        }
+    ]
+}

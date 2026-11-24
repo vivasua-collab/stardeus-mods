@@ -1,0 +1,9 @@
+{
+    "Id" : "Text/DialogButton",
+
+    "Color" : "UI/Text/Main",
+    "Alpha" : 1,
+
+    "TextFontSize" : 28,
+    "TextOverflowMode" : "Ellipsis"
+}

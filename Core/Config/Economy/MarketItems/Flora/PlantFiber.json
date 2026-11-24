@@ -1,0 +1,9 @@
+{
+    "Id" : "Obj/Materials/PlantFiber",
+    "Type" : "CFD",
+    "Groups" : [ "Flora", "Food" ],
+    "Value" : 4.0,
+    "Rarity" : 0.8,
+    "TraderQuantity" : 20.0,
+    "Volatility" : 0.0012
+}

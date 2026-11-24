@@ -1,0 +1,69 @@
+{
+    "QuestFlags" : [ "Tutorial", "AutoAdd", "Unique" ],
+    "TitleKey" : "quest.ConnectToSurvivorArea",
+    "DescKey" : "quest.ConnectToSurvivorArea.desc",
+    "QuestProviders" : [
+        "ShipComputer"
+    ],
+    // Scenarios without a survivor area skip this quest and get HasConnectedToSurvivorArea
+    // set the moment the charge station is done, so production follows the charge station
+    // directly there and the grid-unification lesson lives in ConnectToStasisArray instead.
+    "ForScenarios": [
+        "wrecked_empty_ship"
+    ],
+    // Second quest of the game. The intro cutscene shows the survivors right after the ship
+    // computer, so the lesson belongs here rather than two quests later, and it asks for
+    // nothing but the connectors the charge station just taught. The completing step only
+    // runs while there is more than one grid, so waiting lets the player unify the grid on
+    // their own and learn nothing.
+    "AvailableWhen" : [
+        "ReadyForTutorialQuests",
+        "HasChargeStation"
+    ],
+    "BoundTutorialIds" : [
+        "Electricity/UnifyingGrid"
+    ],
+    // Both steps are needed: the grid alone used to complete the quest, and then the step
+    // that allows the forbidden starting supplies would vanish with the crew still hungry
+    "CompleteWhen" : [
+        "SurvivorGridUnified",
+        "SurvivorSuppliesAllowed"
+    ],
+    "SetOnComplete" : [ "HasConnectedToSurvivorArea" ],
+    // if tutorial quest gets abandoned, we still want to move on with the other tutorials
+    "SetOnFail" : [ "HasConnectedToSurvivorArea" ],
+    "Steps" : [
+        // The survivors' meals and the emergency reactor's scrap spawn forbidden so they
+        // stay in the survivor area, and nobody eats or burns a forbidden item. First, so a
+        // saved instance with the old step list is given again whole (QuestSystem.md)
+        {
+            "Id": "AllowSupplies",
+            "Type" : "AllowItems",
+            "StepFlags" : [ "ActiveOnStart" ],
+            "SetOnComplete" : [
+                "SurvivorSuppliesAllowed"
+            ],
+            "Config" : [
+                { "Key" : "Definitions", "StringSet" : [
+                    "Obj/Meals/SurvivalMeal",
+                    "Obj/Materials/ScrapMetal"
+                ] }
+            ]
+        },
+        {
+            "Id": "BuildChainOfConnectors",
+            "Type" : "Info",
+            "TitleKey" : "quest.step.chain.connectors",
+            "DescKey" : "quest.ConnectToSurvivorArea.connectors.tip",
+            "StepFlags" : [ "ActiveOnStart", "Optional" ]
+        },
+        {
+            "Id": "UnifyGrid",
+            "Type" : "UnifyEnergyGrid",
+            "StepFlags" : [ "ActiveOnStart" ],
+            "SetOnComplete" : [
+                "SurvivorGridUnified"
+            ]
+        }
+    ]
+}

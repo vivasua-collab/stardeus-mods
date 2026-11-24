@@ -1,0 +1,63 @@
+{
+    "Layer" : "Walls",
+    "ParentId" : "Structure/Doors/BaseDoor",
+    "Researchable" : {
+        "Prerequisites" : [
+            "Research/Construction/AtmosphereControl"
+        ]
+    },
+    "Components" : [
+        {
+            "Component" : "TileGraphics",
+            "Properties" : [
+                { "Key" : "Graphic", "String" : "Structure/Doors/DoorAirlock01/DoorAirlock01" }
+            ]
+        },
+        {
+            "Component" : "HullIntegrity",
+            "Properties" : [
+                { "Key" : "MaxInsulation", "Float" : 0.995 },
+                { "Key" : "MaxAirtight", "Float" : 1 }
+            ]
+        },
+        {
+            "Component" : "Damageable",
+            "Properties" : [
+                { "Key" : "Max", "Int" : 200 }
+            ]
+        },
+        {
+            "Component" : "WithFuse",
+            "Properties" : [
+                { "Key" : "MalfunctionWeight", "Float": 0.2 }
+            ]
+        },
+        {
+            "Component" : "Door",
+            "Properties" : [
+                { "Key" : "EnergyConsumptionRegular", "Float" : 1.0 },
+                { "Key" : "EnergyConsumptionOperational", "Float" : 2.0 },
+                { "Key" : "EnergyConsumptionWhenLocked", "Float" : 2.0 },
+                { "Key" : "IsAirlock", "Bool" : true }
+            ]
+        },
+        {
+            "Component" : "Constructable",
+            "Properties" : [
+                { "Key" : "Placement", "String" : "OnFloor" },
+                { "Key" : "CanReplaceSameLayer", "Bool": true },
+                { "Key" : "WorkAmount", "Int" : 500 },
+                {
+                    "Key" : "Contents",
+                    "RawMaterials" : [
+                        { "TypeId" : "TitaniumPlate", "StackSize" : 2 },
+                        { "TypeId" : "CarbonFiber", "StackSize" : 1 },
+                        { "TypeId" : "Gears", "StackSize" : 2 },
+                        { "TypeId" : "Transistor", "StackSize" : 1 },
+                        { "TypeId" : "CopperWire", "StackSize" : 1 }
+                    ]
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,22 @@
+{
+    "SlotTypeId" : "Leg",
+    "Compatibility" : "Biological",
+    "TargetSpecies" : [ "Dog" ],
+    "CompatibleSpeciesFlags" : [ "Animal" ],
+    "CompatibleBodySizes" : [ "Small", "Medium" ],
+    "Tier" : 1,
+    "ResistanceBase" : 5.0,
+    "AddsAbilities" : [
+        "Move"
+    ],
+    "ProvidesStats" : [
+        {
+            "Component" : "MoveSpeed",
+            "Properties" : [
+                { "Key" : "CompoundLimit", "Float" : 0.66 },
+                { "Key" : "AmountPerMinute", "Float" : 0.165 },
+                { "Key" : "StateMul", "Float" : 1.0 }
+            ]
+        }
+    ]
+}

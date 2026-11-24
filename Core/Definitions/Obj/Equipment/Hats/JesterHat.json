@@ -1,0 +1,21 @@
+{
+    "Layer" : "FreeEntities",
+    "ParentId" : "Obj/Equipment/BaseEquipment",
+    "Components" : [
+        {
+            "Component" : "StorableObj",
+            "Properties" : [
+                { "Key" : "Group", "String" : "Clothing" }
+            ]
+        },
+        { "Component" : "SafetyCheck" },
+        {
+            "Component" : "ObjGraphics",
+            "Properties" : [
+                { "Key" : "Graphic", "String": "Beings/Hats/Human/JesterHat/JesterHat" },
+                { "Key" : "Scale", "Float": 0.5 },
+                { "Key" : "SelectableScale", "Float": 0.5 }
+            ]
+        }
+    ]
+}

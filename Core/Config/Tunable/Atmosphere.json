@@ -1,0 +1,15 @@
+{
+    "Floats" : [
+        // 0.0 is 100% loss, 1.0 is 0% loss. Don't set above 1.0.
+        { "Key" : "O2LossInSpace", "Float" : 0.2 },
+        // 0.0 is 100% loss, 1.0 is 0% loss. Don't set above 1.0.
+        { "Key" : "TempLossInSpace", "Float" : 0.5 }
+    ],
+    "Ints" : [
+        { "Key" : "MaxHeaterTempCelsius", "Int" : 70 },
+        { "Key" : "MaxHeaterTempCelsius_AsimovOverride", "Int" : 200 },
+        // Diffusion kernel iterations per simulation step: gas travels this many
+        // cells per step. 1 is the original speed; clamped to 1..8 in code.
+        { "Key" : "AtmoIterationsPerStep", "Int" : 4 }
+    ]
+}

@@ -1,0 +1,7 @@
+// For things that will flame up on first hit
+{
+    "FloatSet" : [
+        0.0, 10.0,
+        1.0, 10.0
+    ]
+}

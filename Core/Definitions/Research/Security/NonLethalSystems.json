@@ -1,0 +1,16 @@
+{
+    "Id" : "Research/Security/NonLethalSystems",
+    "Tier" : 2,
+    "IsAbstract" : true,
+    "PreviewIcon" : "Obj/Weapons/StunBaton01/StunBaton01",
+    "Researchable" : {
+        "IsTreeNode" : true,
+        "Prerequisites" : [
+            "Research/Security/DefensiveGear"
+        ],
+        "DatoidCosts" : [
+            { "TypeId" : "DatoidEnergy", "StackSize" : 8 },
+            { "TypeId" : "DatoidTech",   "StackSize" : 4 }
+        ]
+    }
+}

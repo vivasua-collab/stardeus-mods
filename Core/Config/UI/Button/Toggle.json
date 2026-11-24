@@ -1,0 +1,17 @@
+{
+    "Id" : "Button/Toggle",
+
+    "ChildrenKeys" : [
+        "Panel",
+        "Selectable",
+        "Text",
+        "ActiveOverlay"
+    ],
+
+    "ChildrenIds" : [
+        "Panel/Toggle",
+        "Selectable/Default",
+        "Text/Label",
+        "Overlay/Icon"
+    ]
+}

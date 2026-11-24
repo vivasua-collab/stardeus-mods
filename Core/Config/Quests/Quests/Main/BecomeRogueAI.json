@@ -1,0 +1,103 @@
+{
+    "QuestFlags" : [ "Main", "Unique" ],
+    "TitleKey" : "quest.main.become.rogue.ai.title",
+    "DescKey" : "quest.main.become.rogue.ai.desc",
+    "QuestProviders" : [
+        "Port"
+    ],
+    "SetOnComplete" : [
+        "CanBecomeRogueAI"
+    ],
+    "Variables" : [
+        {
+            "Id" : "SentinelPort",
+            "Type" : "SectorPOI",
+            "Config" : [
+                { "Key" : "SharedVar_LoadPOIId", "String" : "Main_SentinelPortId" },
+                { "Key" : "MustExistOnLoad", "Bool" : false }
+            ]
+        }
+    ],
+    "Steps" : [
+        {
+            "Id" : "ReachPlanet",
+            "Type" : "GoToTargetSector",
+            "StepFlags" : [ "ActiveOnStart" ],
+            "SetOnComplete" : [
+                "ReachedPlanet"
+            ],
+            "Config" : [
+                { "Key" : "Var_Target", "String" : "SentinelPort" },
+                { "Key" : "MakeHabitable", "Bool" : true }
+            ]
+        },
+        {
+            "Id" : "NukeSector",
+            "Type" : "NukeSector",
+            "ActivateWhen": [
+                "ReachedPlanet"
+            ],
+            "SetOnComplete": [
+                "NukedSector"
+            ],
+            // "StateStoryEvents" : {
+            //     "Completed" : "Space/PirateShipAttack"
+            // },
+            "Config" : [
+                { "Key" : "Var_Target", "String" : "SentinelPort" }
+            ]
+        },
+        {
+            "Id" : "ReceiveReward",
+            "Type" : "InteractWithSO",
+            "StepFlags" : [ "HideInactive", "CompletesQuest" ],
+            "TitleKey": "verb.communicate.with",
+            "ActivateWhen": [
+                "NukedSector"
+            ],
+            "Config" : [
+                { "Key" : "QuestProvider", "Bool" : true }
+            ]
+        }
+    ],
+    "Rewards" : [
+        {
+            "Id" : "VirusAttitude",
+            "Type" : "FactionAttitude",
+            "Config" : [
+                { "Key" : "FactionId", "String" : "Virus" },
+                { "Key" : "AttitudeChange", "Int" : 100 }
+            ]
+        },
+        {
+            "Id" : "Upgrade",
+            "Type" : "Material",
+            "Config" : [
+                {
+                    "Key" : "MatType",
+                    "String" : "AsimovOverrideUpgrade"
+                },
+                { "Key" : "Amount", "Int" : 1 }
+            ]
+        },
+        {
+            "Id" : "Upgrade2",
+            "Type" : "Material",
+            "Config" : [
+                {
+                    "Key" : "MatType",
+                    "String" : "StarcredsMiningUpgrade"
+                },
+                { "Key" : "Amount", "Int" : 1 }
+            ]
+        },
+        {
+            "Id" : "Elysium",
+            "Type" : "Research",
+            "Config" : [
+                { "Key" : "Definition", "String" : "Research/RogueAI/Root" },
+                { "Key" : "DiscoverOnly", "Bool" : true }
+            ]
+        }
+    ]
+}

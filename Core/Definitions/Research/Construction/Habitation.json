@@ -1,0 +1,18 @@
+{
+    "Id" : "Research/Construction/Habitation",
+    "Tier" : 1,
+    "IsAbstract" : true,
+    "PreviewIcon" : "Icons/Color/Construct",
+    "Researchable" : {
+        "IsTreeNode" : true,
+        "Prerequisites" : [
+            "Research/Construction/Structure"
+        ],
+        "DatoidCosts" : [
+            {
+                "TypeId" : "DatoidBasic",
+                "StackSize" : 8
+            }
+        ]
+    }
+}

@@ -1,0 +1,21 @@
+{
+    "SpeciesType" : "Crawler",
+    "IsDefault" : true,
+    "Parts" : [
+        { "Slot" : "Body", "Part" : "Body/BodyCrawler" },
+        { "Slot" : "Jaw", "Part" : "Jaw/JawCrawler" },
+        { "Slot" : "Brain", "Part" : "Brain/BrainCrawler" },
+        { "Slot" : "Implant", "Empty" : true },
+        { "Slot" : "Heart", "Part" : "Heart/HeartSmall" },
+        { "Slot" : "Stomach", "Part" : "Stomach/StomachSmall" },
+        { "Slot" : "Intestines", "Part" : "Intestines/IntestinesSmall" },
+        { "Slot" : "Leg_L1", "Part" : "Leg/LegCrawler" },
+        { "Slot" : "Leg_R1", "Part" : "Leg/LegCrawler" },
+        { "Slot" : "Leg_L2", "Part" : "Leg/LegCrawler" },
+        { "Slot" : "Leg_R2", "Part" : "Leg/LegCrawler" },
+        { "Slot" : "Leg_L3", "Part" : "Leg/LegCrawler" },
+        { "Slot" : "Leg_R3", "Part" : "Leg/LegCrawler" },
+        { "Slot" : "Leg_L4", "Part" : "Leg/LegCrawler" },
+        { "Slot" : "Leg_R4", "Part" : "Leg/LegCrawler" }
+    ]
+}

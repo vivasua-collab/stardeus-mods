@@ -1,0 +1,45 @@
+{
+    "BuildGroup" : "FloorWood",
+    "Layer" : "Floor",
+    "ParentId" : "Structure/Floors/Floor01",
+    "Researchable" : {
+        "Prerequisites" : [
+            "Research/Construction/Habitation"
+        ]
+    },
+    "Components" : [
+        {
+            "Component" : "TileGraphics",
+            "Properties" : [
+                { "Key" : "Graphic", "String": "Structure/Floors/FloorWood01" },
+                { "Key" : "Shader", "String": "SeamlessFloorTile" }
+            ]
+        },
+        {
+            "Component" : "Flammable",
+            "Properties" : [
+                { "Key" : "IgnitionTemperatureCelsius", "Int" : 250 },
+                { "Key" : "SpreadIntoChance", "Float" : 0.9 },
+                { "Key" : "FireChance", "Float" : 1.2 }
+            ]
+        },
+        {
+            "Component" : "Damageable",
+            "Properties" : [
+                { "Key" : "Max", "Int" : 300 }
+            ]
+        },
+        {
+            "Component" : "Constructable",
+            "Properties" : [
+                {
+                    "Key" : "Contents",
+                    "RawMaterials" : [
+                        { "TypeId" : "SteelPlate", "StackSize" : 2 },
+                        { "TypeId" : "Wood", "StackSize" : 1 }
+                    ]
+                }
+            ]
+        }
+    ]
+}

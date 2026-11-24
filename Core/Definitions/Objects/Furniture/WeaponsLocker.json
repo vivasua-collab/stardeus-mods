@@ -1,0 +1,66 @@
+{
+    "ToolPath" : "Furniture",
+    "Layer" : "Objects",
+    "ParentId" : "Objects/Furniture/BaseFurniture",
+    "Researchable" : {
+        "Prerequisites" : [ "Research/Habitation/Storage" ]
+    },
+    "Spawnable" : {
+        "Category": "Storage",
+        "Chance" : 1.0,
+        "ChanceLocked" : 0.5
+    },
+    "Components" : [
+        {
+            "Component" : "TileTransform",
+            "Properties" : [
+                // { "Key" : "WorkSpot", "Vector2" : { "x" : 0, "y" : -1 } }
+                { "Key" : "OutPort", "Vector2" : { "x" : 0, "y" : -1 } },
+                { "Key" : "InPort", "Vector2" : { "x" : 0, "y" : -1 } }
+            ]
+        },
+        { "Component" : "SafetyCheck" },
+        {
+            "Component" : "Flammable",
+            "Properties" : [
+                { "Key" : "FireChance", "Float" : 0.05 }
+            ]
+        },
+        {
+            "Component" : "TileGraphics",
+            "Properties" : [
+                { "Key" : "Graphic", "String": "Objects/Furniture/WeaponsLocker" },
+                { "Key" : "HasHeight", "Bool" : true }
+            ]
+        },
+        { "Component" : "ObjHaulTarget" },
+        {
+            "Component" : "ObjStorage",
+            "Properties" : [
+                { "Key" : "Groups", "StringSet" : [ "Weapon" ] },
+                { "Key" : "MaxCapacity", "Int" : 25 }
+            ]
+        },
+        {
+            "Component" : "Passability",
+            "Properties" : [
+                { "Key" : "IsPassable", "Bool" : false },
+                { "Key" : "IsWalkable", "Bool" : false },
+                { "Key" : "Difficulty", "Float" : 1 }
+            ]
+        },
+        {
+            "Component" : "Constructable",
+            "Properties" : [
+                { "Key" : "WorkAmount", "Int" : 225 },
+                {
+                    "Key" : "Contents",
+                    "RawMaterials" : [
+                        { "TypeId" : "TitaniumPlate", "StackSize" : 2 },
+                        { "TypeId" : "Glass", "StackSize" : 1 }
+                    ]
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,26 @@
+{
+    "Id" : "Research/LifeSupport/GeneticEngineering",
+    "Tier" : 3,
+    "IsAbstract" : true,
+    "PreviewIcon" : "Icons/Color/DNA",
+    "Researchable" : {
+        "IsTreeNode" : true,
+        "Prerequisites" : [
+            "Research/LifeSupport/MedicalCare"
+        ],
+        "DatoidCosts" : [
+            {
+                "TypeId" : "DatoidPhyto",
+                "StackSize" : 13
+            },
+            {
+                "TypeId" : "DatoidBiotic",
+                "StackSize" : 15
+            },
+            {
+                "TypeId" : "DatoidNuclear",
+                "StackSize" : 2
+            }
+        ]
+    }
+}

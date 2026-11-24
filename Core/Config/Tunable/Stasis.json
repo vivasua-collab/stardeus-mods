@@ -1,0 +1,59 @@
+{
+    "Floats" : [
+        { "Key" : "StasisMaxWakeUpDays", "Float" : 60.0 },
+        { "Key" : "StasisWakeUpSpeed", "Float" : 0.01 },
+        { "Key" : "StasisUnpoweredStabilityChangeRate", "Float" : 0.0005 },
+        { "Key" : "StasisPoweredStabilityChangeRate", "Float" : 0.0005 },
+        { "Key" : "StasisAdvancedStabilityEnergyPerBeing", "Float" : 5.0 },
+        { "Key" : "StasisBasicStabilityEnergyPerBeing", "Float" : 0.5 },
+        // An array that appears mid game (a derelict) arrives already unstable. Nobody in
+        // it is harmed for this long, so the player gets a chance to reach it first.
+        { "Key" : "StasisHarmGraceDays", "Float" : 5.0 },
+        // Damage throws sleepers clear only on a real blow (this share of max health) and then
+        // not again for a while. Otherwise a fire or a stream of small hits is a free way to
+        // wake everyone, which undoes paced wake-ups and the "Prevent wake-ups" setting.
+        { "Key" : "StasisThrowClearMinDamage", "Float" : 0.05 },
+        { "Key" : "StasisThrowClearCooldownHours", "Float" : 24.0 }
+    ],
+    "Ints" : [
+        // Sleepers only know the people in their own household of up to this many.
+        // Relationships are generated per household because they cost n^2 saved opinions.
+        { "Key" : "ManifestRelationshipClusterSize", "Int" : 6 }
+    ],
+    "FloatSets" : [
+        {
+            "Key" : "StasisUnpoweredStabilityChangeCurve",
+            "FloatSet" : [
+                1.0, -1.0,
+                0.9, -0.5,
+                0.75, -0.25,
+                0.5, -0.15,
+                0.33, -0.05,
+                0.0, -0.01
+            ]
+        },
+        {
+            "Key" : "StasisAdvancedStabilityChangeCurve",
+            "FloatSet" : [
+                0, 1.0,
+                0.33, 0.75,
+                0.5, 0.5,
+                0.75, 0.15,
+                0.9, 0.05,
+                1, 0.01
+            ]
+        },
+        {
+            "Key" : "StasisBasicStabilityChangeCurve",
+            "FloatSet" : [
+                0, 0.1,
+                0.33, 0.05,
+                0.5, 0.0,
+                0.7, 0.0,
+                0.8, -0.025,
+                0.9, -0.05,
+                1, -0.1
+            ]
+        }
+    ]
+}

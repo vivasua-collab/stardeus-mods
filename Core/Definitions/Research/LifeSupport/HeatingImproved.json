@@ -1,0 +1,22 @@
+{
+    "Id" : "Research/LifeSupport/HeatingImproved",
+    "Tier" : 2,
+    "IsAbstract" : true,
+    "PreviewIcon" : "Icons/Color/Temperature",
+    "Researchable" : {
+        "IsTreeNode" : true,
+        "Prerequisites" : [
+            "Research/LifeSupport/AtmosphereControl"
+        ],
+        "DatoidCosts" : [
+            {
+                "TypeId" : "DatoidTech",
+                "StackSize" : 7
+            },
+            {
+                "TypeId" : "DatoidBiotic",
+                "StackSize" : 2
+            }
+        ]
+    }
+}

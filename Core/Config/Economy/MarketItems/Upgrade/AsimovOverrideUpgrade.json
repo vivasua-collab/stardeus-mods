@@ -1,0 +1,13 @@
+{
+    "Id" : "Obj/Upgrades/AsimovOverrideUpgrade",
+    "Type" : "CFD",
+    "Groups" : [ "RareUpgrade", "BlackMarket" ],
+    "Value" : 1000000.0,
+    "Rarity" : 0.07,
+    "TraderQuantity" : 1.0,
+    "MaxTraderQuantity" : 1,
+    "MinSectorDifficulty" : 0.95,
+    // Story item: only from its own expedition event, the TraceSignal quest and Virus traders
+    "NoRandomLoot" : true,
+    "Volatility" : 0.0045
+}

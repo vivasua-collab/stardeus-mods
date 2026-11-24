@@ -1,0 +1,12 @@
+{
+    "Id" : "Obj/Upgrades/Game2048CartridgeUpgrade",
+    "Type" : "CFD",
+    "Groups" : [ "Upgrade", "RareUpgrade" ],
+    "Value" : 53000.0,
+    "Rarity" : 0.15,
+    "TraderQuantity" : 1.0,
+    "MaxTraderQuantity" : 1,
+    "MinSectorDifficulty" : 0.4,
+    "PlayerSellPriceMultiplier": 0.8,
+    "Volatility" : 0.0023
+}

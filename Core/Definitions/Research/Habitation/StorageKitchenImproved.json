@@ -1,0 +1,22 @@
+{
+    "Id" : "Research/Habitation/StorageKitchenImproved",
+    "Tier" : 2,
+    "IsAbstract" : true,
+    "PreviewIcon" : "Icons/Color/Food",
+    "Researchable" : {
+        "IsTreeNode" : true,
+        "Prerequisites" : [
+            "Research/Habitation/Storage"
+        ],
+        "DatoidCosts" : [
+            {
+                "TypeId" : "DatoidBasic",
+                "StackSize" : 10
+            },
+            {
+                "TypeId" : "DatoidPhyto",
+                "StackSize" : 6
+            }
+        ]
+    }
+}

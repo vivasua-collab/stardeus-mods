@@ -1,0 +1,70 @@
+{
+    "ToolPath" : "Food",
+    "Layer" : "Objects",
+    "ParentId" : "Objects/Furniture/BaseFurniture",
+    "Researchable" : {
+        "Prerequisites" : [ "Research/Habitation/StorageKitchenImproved" ]
+    },
+    "Spawnable" : {
+        "Category": "Food",
+        "Chance" : 0.9,
+        "ChanceLocked" : 0.4
+    },
+    "Components" : [
+        {
+            "Component" : "TileTransform",
+            "Properties" : [
+                { "Key" : "Width", "Int" : 2 },
+                { "Key" : "Height", "Int" : 1 },
+                { "Key" : "IsRotatable", "Bool" : true },
+                // { "Key" : "WorkSpot", "Vector2" : { "x" : 0, "y" : -1 } }
+                { "Key" : "OutPort", "Vector2" : { "x" : 0, "y" : -1 } },
+                { "Key" : "InPort", "Vector2" : { "x" : 0, "y" : -1 } }
+            ]
+        },
+        {
+            "Component" : "Flammable",
+            "Properties" : [
+                { "Key" : "FireChance", "Float" : 1.0 },
+                { "Key" : "SkipExplosivenessValidation", "Bool": true }
+            ]
+        },
+        {
+            "Component" : "TileGraphics",
+            "Properties" : [
+                { "Key" : "Graphic", "String": "Objects/Furniture/LargePantry" },
+                { "Key" : "HasHeight", "Bool" : true }
+            ]
+        },
+        {
+            "Component" : "MatStorage",
+            "Properties" : [
+                { "Key" : "Groups", "StringSet" : [ "RawFoodInedible" ] },
+                { "Key" : "MaxCapacity", "Int" : 2400 },
+                { "Key" : "IsPublic", "Bool" : true },
+                { "Key" : "ShowFulnessBar", "Bool" : true }
+            ]
+        },
+        { "Component" : "MatHaulTarget" },
+        {
+            "Component" : "Passability",
+            "Properties" : [
+                { "Key" : "IsPassable", "Bool" : false },
+                { "Key" : "IsWalkable", "Bool" : false },
+                { "Key" : "Difficulty", "Float" : 1 }
+            ]
+        },
+        {
+            "Component" : "Constructable",
+            "Properties" : [
+                { "Key" : "WorkAmount", "Int" : 350 },
+                {
+                    "Key" : "Contents",
+                    "RawMaterials" : [
+                        { "TypeId" : "Wood", "StackSize" : 4 }
+                    ]
+                }
+            ]
+        }
+    ]
+}

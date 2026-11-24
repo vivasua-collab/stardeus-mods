@@ -1,0 +1,12 @@
+{
+    "Id" : "DatoidBiotic",
+    "IsComposite" : true,   "IconId" : "Obj/Datoids/DatoidBiotic",
+    "DefId" : "Obj/Datoids/DatoidBiotic",
+    "Property" : "Datoid",
+    "Group" : "Datoid",
+    "GroupId" : "Datoids",
+    "IgnoreMarket" : true,
+    "EnergyOutput" : 100.0,
+    "Rarity" : 40,
+    "InternalValue" : 4
+}

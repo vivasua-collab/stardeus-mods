@@ -1,0 +1,11 @@
+{
+    "Type" : "Converter",
+    "Ingredients" : [
+        { "TypeId" : "Ashes", "StackSize" : 10 }
+    ],
+    "ListOrder" : 100,
+    "IgnoreMarket" : true,
+    "ProductDefId" : "Obj/Materials/Carbon",
+    "ProductionTimeHours" : 1,
+    "EnergyCost" : 10
+}

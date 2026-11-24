@@ -1,0 +1,21 @@
+{
+    "Layer" : "FreeEntities",
+    "IgnoreMarket" : true,
+    "ParentId" : "Obj/Parts/BasePartOrganic",
+    "NameKey" : "bodypart.Appendage.LegCrawler",
+
+    "Components" : [
+        {
+            "Component" : "ObjGraphics",
+            "Properties" : [
+                { "Key" : "Graphic", "String": "Obj/BodyParts/Organic" }
+            ]
+        },
+        {
+            "Component" : "BodyPart",
+            "Properties" : [
+                { "Key" : "BodyPartDefId", "String" : "Leg/LegCrawler" }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,32 @@
+{
+    "Id" : "Roughneck",
+    "Species" : [ "Human" ],
+    "AgePhaseIds" : [ "YoungAdult", "MidLife", "Retirement" ],
+    "RoleTypes" : [ "Dumb", "Poor" ],
+    "LovesJobTypes" : [ "Cleaning" ],
+    "IncapableJobTypes" : [ "Unskilled" ],
+    "SexChances" : [
+        {
+            "Sex" : "M",
+            "Chance" : 0.90
+        },
+        {
+            "Sex" : "F",
+            "Chance" : 0.10
+        }
+    ],
+    "AdjustsSkills" : [
+        {
+            "JobId" : "Melee",
+            "Adjustment" : 4
+        },
+        {
+            "JobId" : "Cleaning",
+            "Adjustment" : 4
+        },
+        {
+            "JobId" : "Social",
+            "Adjustment" : -2
+        }
+    ]
+}

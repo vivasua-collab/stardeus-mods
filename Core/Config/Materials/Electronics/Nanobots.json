@@ -1,0 +1,11 @@
+{
+    "Id" : "Nanobots",
+    "IsComposite" : true,
+    "IsConsumedOnConstruct" : true,
+    "IconId" : "Obj/Materials/Nanobots",
+    "GroupId" : "Electronics",
+    "EnergyOutput" : 1200.0,
+    "Rarity" : 2,
+    "ExplosionLevel" : 1,
+    "ExplosivenessCurveId" : "DeviceLow"
+}

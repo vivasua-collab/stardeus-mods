@@ -1,0 +1,13 @@
+{
+    "Id" : "AsimovOverrideUpgrade",
+    "DefId" : "Obj/Upgrades/AsimovOverrideUpgrade",
+    "IsComposite" : true,
+    "IsConsumedOnDestroy" : true,
+    "IconId" : "Obj/Upgrades/AsimovOverrideUpgrade",
+    "Property" : "Electronic",
+    "Group" : "Upgrade",
+    "GroupId" : "Upgrades",
+    "EnergyOutput" : 50.0,
+    "InternalValue" : 50000,
+    "Rarity" : 1
+}

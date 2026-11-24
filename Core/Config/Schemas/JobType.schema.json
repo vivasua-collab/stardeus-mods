@@ -1,0 +1,142 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Stardeus JobType",
+  "description": "Generated from C# by Game/Generate JSON Schemas, do not edit by hand",
+  "$ref": "#/$defs/JobType",
+  "$defs": {
+    "JobStatSource": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "Stat": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "CurveId": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "additionalProperties": false
+    },
+    "JobType": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "Id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "IdHash": {
+          "type": "integer"
+        },
+        "IconId": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "NameKey": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "Importance": {
+          "type": "number"
+        },
+        "Flags": {
+          "anyOf": [
+            {
+              "type": "string",
+              "pattern": "^\\s*(None|Mindless|Intellectual|Physical|Challenging|MicroPrecision|Violent|Caring|Internal|Creative|Unskilled|Dangerous|NanobotCompatible)(\\s*,\\s*(None|Mindless|Intellectual|Physical|Challenging|MicroPrecision|Violent|Caring|Internal|Creative|Unskilled|Dangerous|NanobotCompatible))*\\s*$"
+            },
+            {
+              "type": "integer"
+            }
+          ]
+        },
+        "Types": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "enum": [
+              "None",
+              "Mindless",
+              "Intellectual",
+              "Physical",
+              "Challenging",
+              "MicroPrecision",
+              "Violent",
+              "Caring",
+              "Internal",
+              "Creative",
+              "Unskilled",
+              "Dangerous",
+              "NanobotCompatible"
+            ],
+            "type": "string"
+          }
+        },
+        "EnabledByAbilities": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "EnabledByAbilitiesH": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "integer"
+          }
+        },
+        "RequireAnyAbilities": {
+          "type": "boolean"
+        },
+        "WorkSpeedStat": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "SkillSpeedCurve": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "ProvidesStats": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "$ref": "#/$defs/JobStatSource"
+          }
+        }
+      },
+      "additionalProperties": false
+    }
+  }
+}

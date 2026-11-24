@@ -1,0 +1,23 @@
+{
+    // C# implementation id.
+    // Multiple configurations can point to a single implementation.
+    "EventId" : "CapsuleCrawler",
+    // How much does this story event cost to run
+    "Points" : 4,
+    // Options: Negative, Positive, Neutral, Raid, Raid
+    "OutcomeType" : "Negative",
+    // Full list is in StoryEventFlags class
+    "EventFlags" : [
+        "OnDemand",
+        "Capsule"
+    ],
+    "MinRepeatDelayDays" : 17
+    // Full list of requirements can be found in Situation class
+    // "Require" : {
+    //     "Check" : true
+    // },
+    // Variables for the story event implementation
+    // "Properties" : [
+    //     { "Key" : "FriendlyBeings", "Bool" : true }
+    // ]
+}

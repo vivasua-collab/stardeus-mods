@@ -1,0 +1,11 @@
+{
+    "Id" : "Frontier",
+    "Difficulty" : 0.5,
+    "Shadow" : "#2A0F4A",
+    "Mid" : "#7A3FC4",
+    "Highlight" : "#E3C6FF",
+    "Strength" : 0.0,
+    "Intensity" : 1.0,
+    "BrightnessRange" : 0.6,
+    "RimStrength" : 0.19
+}

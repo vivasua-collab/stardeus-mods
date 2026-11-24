@@ -1,0 +1,23 @@
+{
+    "Id" : "Research/Economy/TradePortal",
+    "Tier" : 2,
+    "IsAbstract" : true,
+    "PreviewIcon" : "Icons/Color/Teleport",
+    "NameKey" : "objects.devices.tradeportal",
+    "Researchable" : {
+        "IsTreeNode" : true,
+        "Prerequisites" : [
+            "Research/Economy/Wallet"
+        ],
+        "DatoidCosts" : [
+            {
+                "TypeId" : "DatoidBasic",
+                "StackSize" : 7
+            },
+            {
+                "TypeId" : "DatoidTech",
+                "StackSize" : 6
+            }
+        ]
+    }
+}

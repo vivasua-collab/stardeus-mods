@@ -1,0 +1,18 @@
+// LCV: Luxury Commerce Vessel
+{
+    "ChanceWillTrade" : 1.0,
+    "CompatibleFactions" : [
+        "Player",
+        "OldEarth",
+        "Capitalist"
+    ],
+    "CompatibleClasses" : [
+        "Frigate",
+        "Corvette",
+        "Carrier",
+        "Cruiser",
+        "Titan"
+    ],
+    "MinOffensiveness" : 0.3,
+    "MaxOffensiveness" : 0.8
+}

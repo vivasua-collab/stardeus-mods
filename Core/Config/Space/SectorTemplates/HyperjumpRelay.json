@@ -1,0 +1,12 @@
+{
+    "Id" : "HyperjumpRelay",
+    "Type" : "HyperjumpRelay",
+    "HasOrbit" : true,
+    "CantBeInbound" : true,
+    "NumFactionsChance" : [
+        0.0, 0.0,
+        0.5, 0.0,
+        0.51, 1.0,
+        1.0, 1.0
+    ]
+}

@@ -1,0 +1,9 @@
+{
+    "Id" : "Iron",
+    "IconId" : "Obj/Materials/Iron",
+    "GroupId" : "Ore",
+    "InternalValue" : 4.0,
+    "EnergyOutput" : 2700.0,
+    "Rarity" : 90,
+    "MatRarity" : 0
+}

@@ -1,0 +1,7 @@
+{
+    "Id" : "UI/Btn/SpeedDisabled",
+    "AliasFor" : "UI/Text/Red",
+    // "AliasFor" : "UI/Grey/Comp-1",
+    "Alpha" : 1.0,
+    "SkipAtlas" : true
+}

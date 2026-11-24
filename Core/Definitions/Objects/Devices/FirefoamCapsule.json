@@ -1,0 +1,66 @@
+{
+    // Firefoam Capsule: early fire safety with no power and no research. It pops when a fire
+    // its foam can reach is within TriggerRadius, or by hand, and sprays foam over everything
+    // within Radius that walls do not shield. Nothing under the foam catches fire until it is
+    // cleaned or wears off after FoamDays (Docs/Architecture/Systems/Firefoam.md)
+    "ToolPath" : "Security",
+    "Layer" : "Objects",
+    "ParentId" : "BaseTile",
+    "Components" : [
+        {
+            "Component" : "TileTransform",
+            "Properties" : [
+                // a low capsule to duck behind
+                { "Key" : "CoverPercent", "Int" : 30 },
+                { "Key" : "IsRotatable", "Bool" : false }
+            ]
+        },
+        {
+            "Component" : "TileGraphics",
+            "Properties" : [
+                { "Key" : "Type", "String": "Object" },
+                { "Key" : "Graphic", "String": "Objects/Devices/FirefoamCapsule" }
+            ]
+        },
+        {
+            "Component" : "Passability",
+            "Properties" : [
+                { "Key" : "IsPassable", "Bool" : true },
+                { "Key" : "IsWalkable", "Bool" : true },
+                // easier to get over than sandbags
+                { "Key" : "Difficulty", "Float" : 0.65 },
+                { "Key" : "MoveSpeedMul", "Float" : 0.45 },
+                // walked over, never stood on
+                { "Key" : "PassThroughOnly", "Bool" : true }
+            ]
+        },
+        {
+            "Component" : "FirefoamCapsule",
+            "Properties" : [
+                // pops when a fire is this close, in tiles
+                { "Key" : "TriggerRadius", "Float" : 3 },
+                // how far the foam sprays, in tiles; walls and closed doors stop it
+                { "Key" : "Radius", "Float" : 10 },
+                // the foam wears off by itself after this many days, rolled per tile
+                { "Key" : "FoamDays", "Vector2" : { "x" : 3, "y" : 6 } },
+                { "Key" : "PopSound", "String" : "FX/FirefoamPopSFX" }
+            ]
+        },
+        { "Component" : "Reinstallable" },
+        {
+            "Component" : "Constructable",
+            "Properties" : [
+                { "Key" : "WorkAmount", "Int" : 750 },
+                {
+                    "Key" : "Contents",
+                    "RawMaterials" : [
+                        { "TypeId" : "SteelPlate", "StackSize" : 2 },
+                        { "TypeId" : "Water", "StackSize" : 1 },
+                        { "TypeId" : "Gears", "StackSize" : 1 }
+                    ]
+                }
+            ]
+        },
+        { "Component" : "TileLabel" }
+    ]
+}

@@ -1,0 +1,20 @@
+{
+    "Type" : "Stasis",
+    "SizeMin" : 100,
+    "SizeMax" : 2000,
+    "CountMin" : 5,
+    "CountMax" : 12,
+    "Chance" : 1.0,
+    "FillMin" : 0.7,
+    "FillMax" : 0.9,
+    "RequiredObjects" : [
+        "Objects/Devices/StasisArray"
+    ],
+    "CompatibleObjects" : [
+        "Objects/Devices/StasisArray",
+        "Objects/Devices/Battery",
+        "Objects/Devices/EnergyConnector"
+    ],
+    "CompatibleTemplates" : [
+    ]
+}

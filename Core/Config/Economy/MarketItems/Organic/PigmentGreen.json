@@ -1,0 +1,10 @@
+{
+    "Id" : "Obj/Materials/PigmentGreen",
+    "Type" : "CFD",
+    "Groups" : [ "Organic" ],
+    "Value" : 15.0,
+    "Rarity" : 0.25,
+    "TraderQuantity" : 500.0,
+    "MinSectorDifficulty" : 0.7,
+    "Volatility" : 0.0015
+}

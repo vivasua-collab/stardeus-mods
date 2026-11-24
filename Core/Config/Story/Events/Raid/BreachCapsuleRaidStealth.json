@@ -1,0 +1,33 @@
+{
+    // C# implementation id.
+    // Multiple configurations can point to a single implementation.
+    "EventId" : "BreachCapsuleRaid",
+    // How much does this story event cost to run
+    "Points" : 20,
+    // Options: Negative, Positive, Neutral, Raid, Raid
+    "OutcomeType" : "Raid",
+    // Full list is in StoryEventFlags class
+    "EventFlags" : [
+        "Raid",
+        "Space",
+        "CanHaveDuplicates",
+        "NoHyperspace"
+    ],
+    "MinRepeatDelayDays" : 10,
+    "SectorDifficultyChance" : [
+        0.0, 0.0,
+        0.5, 0.0,
+        0.5, 0.1,
+        1.0, 1.0
+    ],
+    // "MinRepeatDelayDays" : ,
+    // Full list of requirements can be found in Situation class
+    // "Require" : {
+    //     "Colonists" : 5
+    // },
+    // Variables for the story event implementation
+    "Properties" : [
+        // how many beings we will choose from
+        { "Key" : "Stealth", "Bool" : true }
+    ]
+}

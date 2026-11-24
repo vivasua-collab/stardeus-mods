@@ -1,0 +1,24 @@
+{
+    // C# implementation id.
+    "EventId": "ExpeditionFoundObj",
+    "Points": 50,
+    // Options: Negative, Positive, Neutral, Raid
+    "OutcomeType": "Positive",
+    // Full list is in StoryEventFlags class
+    "EventFlags": [
+        "Expedition",
+        "OnDemand",
+        "Anomaly",
+        "OncePerGame"
+    ],
+    "Properties": [
+        { "Key": "LootDefId", "String": "Obj/Upgrades/StarcredsMiningUpgrade" },
+        { "Key": "MinQuantity", "Int": 1 },
+        { "Key": "MaxQuantity", "Int": 1 },
+        { "Key": "FailureChance", "Float": 0.05 }
+    ],
+    "Require": {
+        "SectorDifficulty": 0.8,
+        "Days": 500
+    }
+}

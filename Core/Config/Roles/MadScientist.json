@@ -1,0 +1,23 @@
+{
+    "Id" : "MadScientist",
+    "LovesJobTypes" : [ "Robotics", "Crafting" ],
+    "IncapableJobTypes" : [ "Social" ],
+    "RequiresRoles" : [ "Scientist" ],
+    "Species" : [ "Human" ],
+    "RoleTypes" : [ "Smart", "Rich" ],
+    "AgePhaseIds" : [ "MidLife", "Retirement" ],
+    "AdjustsSkills" : [
+        {
+            "JobId" : "Robotics",
+            "Adjustment" : 6
+        },
+        {
+            "JobId" : "Medical",
+            "Adjustment" : 4
+        },
+        {
+            "JobId" : "Mining",
+            "Adjustment" : -1
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "Id" : "Obj/Meals/SoyBurger",
+    "Type" : "CFD",
+    "Groups" : [ "Food" ],
+    "Value" : 36.0,
+    "Rarity" : 0.5,
+    "TraderQuantity" : 20.0,
+    "MinSectorDifficulty" : 0.25,
+    "Volatility" : 0.00025
+}

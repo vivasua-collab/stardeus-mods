@@ -1,0 +1,79 @@
+{
+    "ToolPath" : "Computing",
+    "Layer" : "Objects",
+    "UseParentTexts" : true,
+    "ParentId" : "Objects/Devices/CPUModuleMini",
+    "TranslationVars" : [ "2" ],
+    "Researchable" : {
+        "Prerequisites" : [
+            "Research/Computing/CPUImproved"
+        ]
+    },
+    "Spawnable" : {
+        "Category": "Computing",
+        "Chance" : 1.0,
+        "ChanceLocked" : 0.5
+    },
+    "Components" : [
+        {
+            "Component" : "TileTransform",
+            "Properties" : [
+                { "Key" : "IsRotatable", "Bool" : true },
+                { "Key" : "CoverPercent", "Int" : 100 }
+            ]
+        },
+        {
+            "Component" : "TileGraphics",
+            "Properties" : [
+                { "Key" : "Type", "String": "Object" },
+                { "Key" : "Graphic", "String": "Objects/Devices/CPUModule" },
+                { "Key" : "HasHeight", "Bool" : true }
+            ]
+        },
+        {
+            "Component" : "CPUModule",
+            "Properties" : [
+                { "Key" : "Amount",  "Int" : 2 },
+                { "Key" : "EnergyCost", "Float" : 10 }
+            ]
+        },
+        {
+            "Component" : "HeatProducer",
+            "Properties" : [
+                { "Key" : "Rate", "Float" : 1 },
+                { "Key" : "Range", "Int" : 2 },
+                { "Key" : "CheckSameArea", "Bool" : true }
+            ]
+        },
+        {
+            "Component" : "ElectricNode",
+            "Properties" : [
+                { "Key" : "Particles_D", "String" : "ServerLargeFX" },
+                { "Key" : "Particles_U", "String" : "ServerLargeFX" },
+                { "Key" : "IsConsumerHighPriority", "Bool" : true }
+            ]
+        },
+        {
+            "Component" : "WithFuse",
+            "Properties" : [
+                { "Key" : "MalfunctionWeight", "Float": 0.075 }
+            ]
+        },
+        {
+            "Component" : "Constructable",
+            "Properties" : [
+                { "Key" : "WorkAmount", "Int" : 1400 },
+                { "Key" : "CanReplaceGroup", "String" : "CPUModule" },
+                {
+                    "Key" : "Contents",
+                    "RawMaterials" : [
+                        { "TypeId" : "TitaniumPlate", "StackSize" : 3 },
+                        { "TypeId" : "GoldWire", "StackSize" : 5 },
+                        { "TypeId" : "Microchip2", "StackSize" : 2 },
+                        { "TypeId" : "Transistor", "StackSize" : 5 }
+                    ]
+                }
+            ]
+        }
+    ]
+}

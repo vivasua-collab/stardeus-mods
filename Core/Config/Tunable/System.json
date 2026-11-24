@@ -1,0 +1,18 @@
+{
+    "Ints" : [
+        // Number of auto save files that will be created for each game (non-permadeath only)
+        { "Key" : "AutoSaveCount", "Int" : 3 },
+        // if last save was 3 minutes ago and > 12 hours passed in game, save will try to find an idle moment
+        { "Key" : "AutoSaveIntervalMinutesRealTime", "Int" : 3 },
+        { "Key" : "AutoSaveIntervalMinGameHours", "Int" : 12 },
+        // Autosave will wait for no input, but if there is constant input (i.e. noisy gamepad, this will break the wait)
+        { "Key" : "AutoSaveMaxWaitSecondsForIdle", "Int" : 60 },
+        // Maximum number of log entries stored per entity type
+        { "Key" : "LogMaxEntriesPerBeing", "Int" : 100 },
+        { "Key" : "LogMaxEntriesPerTile", "Int" : 25 },
+        { "Key" : "LogMaxEntriesPerObj", "Int" : 25 },
+        { "Key" : "LogMaxContextFreeEntries", "Int" : 300 },
+        // Log entries older than this many in-game days are dropped (0 = keep forever)
+        { "Key" : "LogMaxAgeDays", "Int" : 7 }
+    ]
+}

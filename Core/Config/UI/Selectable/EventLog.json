@@ -1,0 +1,17 @@
+{
+    "Id" : "Selectable/EventLog",
+
+    "CBColorNormal" : "UI/Panel/EventLog",
+    "CBAlphaNormal" : 0.75,
+    "CBColorHighlighted" : "UI/Panel/EventLog",
+    "CBAlphaHighlighted" : 0.85,
+    "CBColorPressed" : "UI/Panel/EventLog",
+    "CBAlphaPressed" : 1.0,
+    "CBColorSelected" : "UI/Panel/EventLog",
+    "CBAlphaSelected" : 0.75,
+    "CBColorDisabled" : "UI/Panel/EventLog",
+    "CBAlphaDisabled" : 0.05,
+
+    "CBColorMultiplier" : 1.0,
+    "CBFadeDuration" : 0.1
+}

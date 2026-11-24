@@ -1,0 +1,23 @@
+{
+    "Id" : "Research/Habitation/Emblems",
+    "Tier" : 2,
+    "IsAbstract" : true,
+    "PreviewIcon" : "Emblems/Blank",
+    "NameKey" : "research.emblems",
+    "Researchable" : {
+        "IsTreeNode" : true,
+        "Prerequisites" : [
+            "Research/Habitation/Decorations"
+        ],
+        "DatoidCosts" : [
+            {
+                "TypeId" : "DatoidBasic",
+                "StackSize" : 14
+            },
+            {
+                "TypeId" : "DatoidTech",
+                "StackSize" : 3
+            }
+        ]
+    }
+}

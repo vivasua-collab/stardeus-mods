@@ -1,0 +1,8 @@
+{
+    "Ints" : [
+        { "Key" : "NanobotsMaxVFX", "Int" : 32 }
+    ],
+    "Floats" : [
+        { "Key" : "NanobotsVFXTimeoutGameTime", "Float" : 10.0 }
+    ]
+}

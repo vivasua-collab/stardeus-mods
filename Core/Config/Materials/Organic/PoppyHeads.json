@@ -1,0 +1,12 @@
+{
+    "Id" : "PoppyHeads",
+    "IsComposite" : true,
+    "IsConsumedOnConstruct" : true,
+    "IconId" : "Obj/Materials/PoppyHeads",
+    "Property" : "Nutrient",
+    "Group" : "RawFoodInedible",
+    "GroupId" : "Plants",
+    "EnergyOutput" : 320.0,
+    "InternalValue" : 17.0,
+    "Rarity" : 7
+}

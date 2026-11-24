@@ -1,0 +1,29 @@
+{
+    "Id" : "Research/Economy/MarketPrediction",
+    "Tier" : 4,
+    "IsAbstract" : true,
+    "PreviewIcon" : "Icons/Color/StockMarket",
+    "Researchable" : {
+        "IsTreeNode" : true,
+        "Prerequisites" : [
+            "Research/Economy/MarketInsights"
+        ],
+        "UnlockEffects" : [
+            "StockPredictionUnlocked"
+        ],
+        "DatoidCosts" : [
+            {
+                "TypeId" : "DatoidEnergy",
+                "StackSize" : 6
+            },
+            {
+                "TypeId" : "DatoidNuclear",
+                "StackSize" : 5
+            },
+            {
+                "TypeId" : "DatoidQuantum",
+                "StackSize" : 10
+            }
+        ]
+    }
+}

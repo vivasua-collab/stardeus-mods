@@ -1,0 +1,106 @@
+{
+    "QuestFlags" : [ "Random", "Template" ],
+    "TitleKeys" : [
+        "quest.MineResource",
+        "quest.MineResource2",
+        "quest.MineResource3"
+    ],
+    "DescKeys" : [
+        "quest.MineResource.desc",
+        "quest.MineResource2.desc",
+        "quest.MineResource3.desc"
+    ],
+    "QuestProviders" : [
+        "Ship",
+        "SpaceStation"
+    ],
+    // These validator will check if this quest can be given right now
+    "QuestValidators" : [
+        "HasLocalDepositWithSellableMat"
+    ],
+    "Variables" : [
+        // LocalResourceDeposit var will fill this out
+        {
+            "Id" : "DeliverDeadline",
+            "Type" : "Deadline",
+            "Config" : [
+                {
+                    "Key" : "DaysCurve", "FloatSet" : [
+                        0.0, 7.0,
+                        1.0, 9.0
+                    ]
+                }
+            ]
+        },
+        {
+            "Id" : "LocalResourceDeposit",
+            "Type" : "ResourceDeposit",
+            "Config" : [
+                { "Key" : "TryCurrentSector", "Bool" : true },
+                { "Key" : "RequireSellable", "Bool" : true },
+                { "Key" : "TryResourcePlayerIsLowOn", "Bool" : true },
+                { "Key" : "DVar_MatTypeId", "String" : "MatTypeId" },
+                { "Key" : "DVar_Amount", "String" : "Amount" }
+            ]
+        },
+        {
+            "Id" : "MarketValueMul",
+            "Type" : "Float",
+            "Config" : [
+                {
+                    "Key" : "Curve", "FloatSet" : [
+                        0.0, 1.5,
+                        0.95, 2.5,
+                        1.0, 4.0
+                    ]
+                }
+            ]
+        }
+    ],
+    "Steps" : [
+        {
+            "Id" : "MineDeposit",
+            "Type" : "MineResourceDeposit",
+            "Deadline" : "DeliverDeadline",
+            "StepFlags" : [ "ActiveOnStart", "FailsQuest" ],
+            "SetOnComplete" : [
+                "MinedDeposit"
+            ],
+            "Config" : [
+                { "Key" : "Var_ResourceDeposit", "String" : "LocalResourceDeposit" },
+                { "Key" : "DVar_MatTypeId", "String" : "MatTypeId" },
+                { "Key" : "DVar_Amount", "String" : "Amount" },
+                // 1.0 is unachievable, 0.8 may be barely achievable, 0.5 should be easy but not too easy
+                { "Key" : "AmountCurve", "FloatSet" : [
+                    0.0, 0.15,
+                    0.9, 0.4,
+                    1.0, 0.5
+                ] }
+            ]
+        },
+        {
+            "Id" : "DeliverMaterial",
+            "Type" : "DeliverMaterialShip",
+            "Deadline" : "DeliverDeadline",
+            "StepFlags" : [ "CompletesQuest", "FailsQuest", "HideInactive" ],
+            "ActivateWhen" : [
+                "MinedDeposit"
+            ],
+            "Config" : [
+                { "Key" : "DVar_MatTypeId", "String" : "MatTypeId" },
+                { "Key" : "DVar_Amount", "String" : "Amount" }
+            ]
+        }
+    ],
+    "Rewards" : [
+        {
+            "Id" : "Cash",
+            "Type" : "Money_ResourceMarketValueMul",
+            "Config" : [
+                { "Key" : "DVar_MatTypeId", "String" : "MatTypeId" },
+                { "Key" : "DVar_Amount", "String" : "Amount" },
+                { "Key" : "Var_Multiplier", "String" : "MarketValueMul" }
+            ]
+        }
+    ]
+}

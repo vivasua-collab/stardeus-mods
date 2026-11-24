@@ -1,0 +1,113 @@
+{
+    "ToolPath" : "Special",
+    "Layer" : "Objects",
+    "ParentId" : "Objects/Devices/BaseDevice",
+    "Researchable" : {
+        "Prerequisites" : [ "Research/Security/Teleportation" ]
+    },
+    "Spawnable" : {
+        "Category": "RareDevice",
+        "Chance" : 1.0,
+        "ChanceLocked" : 0.5,
+        "Quantity" : {
+            "Component" : "PureRandom",
+            "Properties" : [
+                { "Key" : "MinQuantity", "Int" : 2 },
+                { "Key" : "MaxQuantity", "Int" : 3 },
+                { "Key" : "MinQuantityChance", "Float" : 0.5 },
+                { "Key" : "MaxQuantityChance", "Float" : 0.1 }
+            ]
+        }
+    },
+    "Components" : [
+        {
+            "Component" : "TileTransform",
+            "Properties" : [
+                { "Key" : "IsRotatable", "Bool" : true },
+                { "Key" : "CoverPercent", "Int" : 0 },
+                { "Key" : "SpacingCategory", "String" : "Teleporter" },
+                { "Key" : "SpacingCategoryMinGap", "Int" : 3 }
+            ]
+        },
+        {
+            "Component" : "Teleporter",
+            "Properties" : [
+                { "Key" : "EnergyCostMultiplier", "Float" : 1.0 }
+            ]
+        },
+        {
+            "Component" : "ElectricNode",
+            "Properties" : [
+                { "Key" : "IsConsumer", "Bool" : true }
+            ]
+        },
+        {
+            "Component" : "WithFuse",
+            "Properties" : [
+                { "Key" : "MalfunctionWeight", "Float": 0.5 }
+            ]
+        },
+        {
+            "Component" : "AudioSource",
+            "Properties" : [
+                { "Key" : "AmbienceClip", "String" : "Ambience/ElectricHumm01" },
+                { "Key" : "IsLinkedToEnergy", "Bool" : true },
+                { "Key" : "Rolloff", "Vector2" : { "x" : 3, "y" : 12 } }
+            ]
+        },
+        {
+            "Component" : "TileGraphics",
+            "Properties" : [
+                { "Key" : "Type", "String": "Object" },
+                { "Key" : "Graphic", "String": "Objects/Devices/Teleporter" }
+            ]
+        },
+        {
+            "Component" : "Passability",
+            "Properties" : [
+                { "Key" : "IsPassable", "Bool" : true },
+                { "Key" : "IsWalkable", "Bool" : true },
+                { "Key" : "Difficulty", "Float" : 0.0 }
+            ]
+        },
+        {
+            "Component" : "Flammable",
+            "Properties" : [
+                { "Key" : "IgnitionTemperatureCelsius", "Int" : 350 },
+                { "Key" : "FireChance", "Float" : 0.5 },
+                { "Key" : "BaseExplosionLevel", "Int" : 3 },
+                { "Key" : "FlammabilityCurve", "String" : "DeviceHigh" },
+                { "Key" : "ExplosivenessCurve", "String" : "DeviceLow" }
+            ]
+        },
+        {
+            "Component" : "VFX",
+            "Properties" : [
+                { "Key" : "Id", "String" : "VFXParticlesTeleporter" },
+                { "Key" : "Offset", "Vector2" : { "x" : 0, "y" : 0 } }
+            ]
+        },
+        {
+            "Component" : "Constructable",
+            "Properties" : [
+                { "Key" : "WorkAmount", "Int" : 800 },
+                { "Key" : "CanDragRow", "Bool": false },
+                {
+                    "Key" : "Contents",
+                    "RawMaterials" : [
+                        { "TypeId" : "TitaniumPlate", "StackSize" : 1 },
+                        { "TypeId" : "Microchip3", "StackSize" : 1 },
+                        { "TypeId" : "GoldWire", "StackSize" : 1 },
+                        { "TypeId" : "PlatinumIngot", "StackSize" : 1 }
+                    ]
+                }
+            ]
+        },
+        {
+            "Component" : "TileLabel",
+            "Properties" : [
+                { "Key" : "RequireResearch", "Bool" : false }
+            ]
+        }
+    ]
+}

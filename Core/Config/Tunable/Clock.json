@@ -1,0 +1,15 @@
+{
+    // FixedUPS must be dividable by UPS without remainder,
+    // if it won't the closest dividable number will be used.
+    // UPS = sim updates per second
+    // FixedUPS is the maximum value, anything above will be reduced to that.
+    "Ints" : [
+        // should be above >= 10 && <= 60
+        { "Key" : "FixedUPS", "Int" : 36 }
+    ],
+    "Floats" : [
+        { "Key" : "ClockSpeedNormal_UPS", "Float" : 3 },
+        { "Key" : "ClockSpeedFast1_UPS", "Float" : 9 },
+        { "Key" : "ClockSpeedFast2_UPS", "Float" : 18 }
+    ]
+}

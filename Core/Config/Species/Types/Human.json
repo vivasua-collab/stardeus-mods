@@ -1,0 +1,246 @@
+{
+    "Looks" : "Human",
+    "DefId" : "Beings/Human01",
+    "StasisWakeUpChance" : 1.0,
+    "LifeExpectancyYears" : 100,
+    "BeingValueBase" : 3000,
+    // Outlaw traders only, after Black Market research (see BeingTrade)
+    "Trade" : { "Group" : "Human", "ChanceInStock" : 0.3, "MaxInStock" : 2,
+                "LivingPremium" : 6000 },
+    "BaseCombatStrength" : 1.0,
+    "CustomMindWeight" : 5.0,
+    // we will randomize from 0 to 1, and the curve will return the age of a new being
+    "SpawnAgeCurve" : [
+        0.0, 15,
+        0.2, 20,
+        0.5, 30,
+        0.8, 40,
+        0.9, 50,
+        0.95, 80,
+        0.99, 90,
+        1.0, 100
+    ],
+    "Flags" : [ "Biological", "Humanoid" ],
+    "CombatBehavior" : "FreeWill",
+    "AgePhases" : [
+        {
+            "AgeFrom" : 0,
+            "Phase" : "Childhood"
+        },
+        {
+            "AgeFrom" : 18,
+            "Phase" : "YoungAdult"
+        },
+        {
+            "AgeFrom" : 30,
+            "Phase" : "MidLife"
+        },
+        {
+            "AgeFrom" : 70,
+            "Phase" : "Retirement"
+        }
+    ],
+    // Mental needs. They follow the MIND rather than the frame, so a mind moved into
+    // another body takes this list with it. MentalHealth belongs here for the same
+    // reason, and Fun cannot be granted without it.
+    "AddsNeeds" : [
+        "MentalHealth",
+        "Fun",
+        "Equipment",
+        "Faction"
+    ],
+    "AddsAbilities" : [
+        "Research",
+        "Craft",
+        "Pilot",
+        "Cook",
+        "Eat"
+    ],
+    "ProvidesStats" : [
+        {
+            "Component" : "FunDropRate",
+            "Properties" : [
+                { "Key" : "AmountPerHour", "Float" : 0.01 }
+            ]
+        },
+        {
+            "Component" : "FunIncreaseRate",
+            "Properties" : [
+                { "Key" : "AmountPerHour", "Float" : 0.15 }
+            ]
+        }
+    ],
+    "BloodSpriteRoot" : "Dirt/BloodSplash",
+    "HasFullName" : true,
+    "NameChanceWeights" : [ 0.9, 0.1 ],
+    "NameParts" : [
+        {
+            "Type" : "FirstName",
+            "Paths" : [ ],
+            "Chances" : [ 1.0, 0.0 ]
+        },
+        {
+            "Type" : "Nickname",
+            "Paths" : [
+                "Human/Neutral/Nick"
+            ],
+            "Chances" : [ 0.5, 1.0 ]
+        },
+        {
+            "Type" : "LastName",
+            "Paths" : [ "Human/Neutral/Last" ],
+            "Chances" : [ 1.0, 0.0 ]
+        }
+    ],
+    "Sexes" : [
+        {
+            "Type" : "M",
+            "ChanceBald" : 0.05,
+            "HairTypes" : "M",
+            "HeadTypes" : "M",
+            "BodyTypes" : "MTL",
+            "BodyTypeChances" : [ 0.7, 0.5, 0.1 ],
+            "Chance" : 0.5,
+            "NameParts" : [
+                {
+                    "Type" : "FirstName",
+                    "Paths" : [ "Human/Male/First" ]
+                },
+                {
+                    "Type" : "Nickname",
+                    "Paths" : [ "Human/Male/Nick" ]
+                }
+            ]
+        },
+        {
+            "Type" : "F",
+            "ChanceBald" : 0.005,
+            "HairTypes" : "F",
+            "HeadTypes" : "F",
+            "BodyTypes" : "FTL",
+            "BodyTypeChances" : [ 0.6, 0.6, 0.1 ],
+            "Chance" : 0.5,
+            "NameParts" : [
+                {
+                    "Type" : "FirstName",
+                    "Paths" : [ "Human/Female/First" ]
+                },
+                {
+                    "Type" : "Nickname",
+                    "Paths" : [ "Human/Female/Nick" ]
+                }
+            ]
+        }
+    ],
+    "SexualOrientations" : [
+        {
+            "Type" : "straight",
+            "Chance" : 0.95
+        },
+        {
+            "Type" : "gay",
+            "Chance" : 0.025
+        },
+        {
+            "Type" : "bisexual",
+            "Chance" : 0.03
+        },
+        {
+            "Type" : "asexual",
+            "Chance" : 0.005
+        }
+    ],
+    "SexualAttractions" : [
+        {
+            "Sex" : "M",
+            "Orientation" : "straight",
+            "AttractedTo" : "F"
+        },
+        {
+            "Sex" : "F",
+            "Orientation" : "straight",
+            "AttractedTo" : "M"
+        },
+        {
+            "Sex" : "M",
+            "Orientation" : "gay",
+            "AttractedTo" : "M"
+        },
+        {
+            "Sex" : "F",
+            "Orientation" : "gay",
+            "AttractedTo" : "F"
+        },
+        {
+            "Sex" : "M",
+            "Orientation" : "bisexual",
+            "AttractedTo" : "MF"
+        },
+        {
+            "Sex" : "F",
+            "Orientation" : "bisexual",
+            "AttractedTo" : "MF"
+        },
+        {
+            "Sex" : "M",
+            "Orientation" : "asexual",
+            "AttractedTo" : ""
+        },
+        {
+            "Sex" : "F",
+            "Orientation" : "asexual",
+            "AttractedTo" : ""
+        }
+    ],
+    "TakeDamageSounds" : [
+        "FX/Punch_Flesh_01",
+        "FX/Punch_Flesh_02",
+        "FX/Punch_Flesh_03",
+        "FX/Punch_Flesh_04",
+        "FX/Punch_Flesh_05"
+    ],
+    "InventorySlotTypes" : [
+        "Weapon",
+        "Helmet",
+        "Suit",
+        "Hat",
+        "Clothing"
+    ],
+    "BloodCapacityLiters" : 5.5,
+    "BodySize" : "Medium",
+    "BodyPartSlotTypes" : [
+        "Body",
+
+        "Head",
+        "Brain",
+        "Implant",
+
+        "Eye_L",
+        "Eye_R",
+        "Ear_L",
+        "Ear_R",
+        "Jaw",
+
+        "Lung_L",
+        "Lung_R",
+        "Heart",
+        "Shoulder_L",
+        "Shoulder_R",
+        "Arm_L",
+        "Arm_R",
+        "Hand_L",
+        "Hand_R",
+        "Intestines",
+        "Stomach",
+        "Liver",
+        "Kidney_L",
+        "Kidney_R",
+
+        "Hip_L",
+        "Hip_R",
+        "Leg_L",
+        "Leg_R",
+        "Foot_L",
+        "Foot_R"
+    ]
+}

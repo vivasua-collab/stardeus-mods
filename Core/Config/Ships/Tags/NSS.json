@@ -1,0 +1,20 @@
+// NSS: Navy Starship
+{
+    "ChanceWillTrade" : 0.25,
+    "ChancePolice" : 0.9,
+    "CompatibleFactions" : [
+        "Player",
+        "OldEarth",
+        "Adventurer",
+        "Capitalist"
+    ],
+    "CompatibleClasses" : [
+        "Battlecruiser",
+        "Frigate",
+        "Corvette",
+        "Destroyer",
+        "Dreadnought"
+    ],
+    "MinOffensiveness" : 0.5,
+    "MaxOffensiveness" : 1.0
+}

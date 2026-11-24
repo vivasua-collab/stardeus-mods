@@ -1,0 +1,11 @@
+{
+    "Id" : "Obj/Materials/CornflowerPetals",
+    "Type" : "CFD",
+    "Groups" : [ "Flora" ],
+    "Value" : 5.0,
+    // Won't show in merchant's inventory normally
+    "Rarity" : 0.001,
+    "TraderQuantity" : 10.0,
+    "MinSectorDifficulty" : 0.65,
+    "Volatility" : 0.002
+}

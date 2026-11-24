@@ -1,0 +1,115 @@
+{
+    "ToolPath" : "SpaceTravel",
+    "Layer" : "Objects",
+    "ParentId" : "Objects/Devices/BaseDevice",
+    "Researchable" : {
+        "Prerequisites" : [
+            "Research/Scanning/Telescope"
+        ]
+    },
+    "Spawnable" : {
+        "Chance" : 0.0,
+        "ChanceLocked" : 0.0
+    },
+    "Components" : [
+        {
+            "Component" : "TileTransform",
+            "Properties" : [
+                { "Key" : "CoverPercent", "Int" : 50 },
+                { "Key" : "Width", "Int" : 2 },
+                { "Key" : "Height", "Int" : 2 },
+                { "Key" : "IsRotatable", "Bool" : false }
+            ]
+        },
+        {
+            "Component" : "IndustrialEquipment",
+            "Properties" : [
+                { "Key" : "IsNoisy", "Bool" : true }
+            ]
+        },
+        {
+            "Component" : "Flammable",
+            "Properties" : [
+                { "Key" : "IgnitionTemperatureCelsius", "Int" : 350 },
+                { "Key" : "FireChance", "Float" : 0.5 },
+                { "Key" : "FlammabilityCurve", "String" : "DeviceLow" }
+            ]
+        },
+        {
+            "Component" : "TileGraphics",
+            "Properties" : [
+                { "Key" : "Type", "String": "Object" },
+                { "Key" : "Graphic", "String": "Objects/Devices/Telescope" },
+                { "Key" : "HasHeight", "Bool" : true }
+            ]
+        },
+        {
+            "Component" : "TileAnimation",
+            "Properties" : [
+                { "Key" : "Offset", "Vector2": { "x" : 0, "y" : 0.95 } },
+                { "Key" : "Size", "Vector2": { "x" : 1.9, "y" : 1.9 } },
+                { "Key" : "Direction", "Int" : 1 },
+                { "Key" : "BaseSprite", "String" : "Objects/Devices/Telescope_Base" },
+                { "Key" : "AnimSprite", "String" : "Objects/DeviceAnims/Telescope_Anim" },
+
+                { "Key" : "Speed", "Float": 1.0 },
+                { "Key" : "SpriteOrder", "String": "AboveAnyTile" },
+                { "Key" : "FramePrefix", "String": "F" },
+                { "Key" : "NumFrames", "Int": 49 },
+                { "Key" : "PingPong", "Bool": true },
+                { "Key" : "PingPongStillFrames", "Int": 12 },
+                { "Key" : "NeedsEnergy", "Bool": true }
+            ]
+        },
+        {
+            "Component" : "ElectricNode",
+            "Properties" : [
+                { "Key" : "IsConsumer", "Bool" : true }
+            ]
+        },
+        {
+            "Component" : "WithFuse",
+            "Properties" : [
+                { "Key" : "MalfunctionWeight", "Float": 0.5 }
+            ]
+        },
+        {
+            "Component" : "Passability",
+            "Properties" : [
+                { "Key" : "IsPassable", "Bool" : false },
+                { "Key" : "IsWalkable", "Bool" : false },
+                { "Key" : "Difficulty", "Float" : 1 }
+            ]
+        },
+        {
+            "Component" : "LightSource",
+            "Properties" : [
+                { "Key" : "Color", "IntSet" : [ 230, 107, 25, 128 ] },
+                { "Key" : "PulsateColor", "IntSet" : [ 230, 189, 25, 128 ] },
+                { "Key" : "FrequencyRange", "Vector2" : { "x" : 1, "y" : 5 } },
+                { "Key" : "Radius", "Float" : 5 }
+            ]
+        },
+        { "Component" : "Telescope" },
+        { "Component" : "OutdoorsCheck" },
+        {
+            "Component" : "Constructable",
+            "Properties" : [
+                { "Key" : "WorkAmount", "Int" : 2000 },
+                {
+                    "Key" : "Contents",
+                    "RawMaterials" : [
+                        { "TypeId" : "TitaniumPlate", "StackSize" : 5 },
+                        { "TypeId" : "Gears", "StackSize" : 5 },
+                        { "TypeId" : "Glass", "StackSize" : 2 },
+                        { "TypeId" : "Plastic", "StackSize" : 8 },
+                        { "TypeId" : "OpticalFiber", "StackSize" : 5 },
+                        { "TypeId" : "GoldWire", "StackSize" : 5 },
+                        { "TypeId" : "SiliconWafer", "StackSize" : 10 },
+                        { "TypeId" : "Microchip3", "StackSize" : 8 }
+                    ]
+                }
+            ]
+        }
+    ]
+}

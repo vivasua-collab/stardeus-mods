@@ -1,0 +1,10 @@
+{
+    "EventId": "ExpeditionFoundDamagedBot",
+    "Points": 0,
+    "OutcomeType": "Positive",
+    "EventFlags": [
+        "OnDemand",
+        "ColonyGrowthRobo"
+    ],
+    "MaxOngoingDays": 30
+}

@@ -1,0 +1,47 @@
+{
+    "Layer" : "FreeEntities",
+    "ParentId" : "Obj/Materials/BaseMaterial",
+    "Researchable" : {
+        "Prerequisites" : [ "Research/Robotics/Nanobots" ]
+    },
+    "Components" : [
+        {
+            "Component" : "ObjGraphics",
+            "Properties" : [
+                { "Key" : "Graphic", "String": "Obj/Materials/Nanobots" }
+            ]
+        },
+        {
+            "Component" : "ObjHealth",
+            "Properties" : [
+                { "Key" : "Max", "Int" : 300 },
+                { "Key" : "IsInvincible", "Bool" : false }
+            ]
+        },
+        {
+            "Component" : "Flammable",
+            "Properties" : [
+                { "Key" : "IgnitionTemperatureCelsius", "Int" : 300 },
+                { "Key" : "FireChance", "Float" : 0.65 },
+                { "Key" : "FlammabilityCurve", "String" : "High" }
+            ]
+        },
+        {
+            "Component" : "LightSource",
+            "Properties" : [
+                { "Key" : "NeedsEnergy", "Bool" : false },
+                { "Key" : "Color", "IntSet" : [ 3, 103, 252, 196 ] },
+                { "Key" : "PulsateColor", "IntSet" : [ 42, 2, 202, 196 ] },
+                { "Key" : "FrequencyRange", "Vector2" : { "x" : 0.4, "y" : 0.9 } },
+                { "Key" : "Radius", "Float" : 3 }
+            ]
+        },
+        {
+            "Component" : "UnstoredMat",
+            "Properties" : [
+                { "Key" : "Type", "String" : "Nanobots" },
+                { "Key" : "FixedSize", "Bool" : true }
+            ]
+        }
+    ]
+}

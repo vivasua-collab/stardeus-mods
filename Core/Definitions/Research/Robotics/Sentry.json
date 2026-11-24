@@ -1,0 +1,27 @@
+{
+    "Id" : "Research/Robotics/Sentry",
+    "Tier" : 4,
+    "IsAbstract" : true,
+    "PreviewIcon" : "Icons/Color/PreviewSentry01",
+    "NameKey" : "beings.sentry01",
+    "Researchable" : {
+        "IsTreeNode" : true,
+        "Prerequisites" : [
+            "Research/Robotics/PartsAdvanced"
+        ],
+        "DatoidCosts" : [
+            {
+                "TypeId" : "DatoidTechHigh",
+                "StackSize" : 23
+            },
+            {
+                "TypeId" : "DatoidNuclear",
+                "StackSize" : 11
+            },
+            {
+                "TypeId" : "DatoidQuantum",
+                "StackSize" : 5
+            }
+        ]
+    }
+}

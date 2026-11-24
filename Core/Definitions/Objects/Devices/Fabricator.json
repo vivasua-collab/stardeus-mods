@@ -1,0 +1,138 @@
+{
+    "ToolPath" : "Production",
+    "Layer" : "Objects",
+    "ParentId" : "Objects/Devices/BaseDevice",
+    "Researchable" : {
+        "Prerequisites" : [
+            "Research/Production/AssemblyAdvanced"
+        ]
+    },
+    "Spawnable" : {
+        "Category": "Production",
+        "Chance" : 1.0,
+        "ChanceLocked" : 0.5
+    },
+    "Components" : [
+        {
+            "Component" : "TileTransform",
+            "Properties" : [
+                { "Key" : "Width", "Int" : 2 },
+                { "Key" : "Height", "Int" : 2 },
+                { "Key" : "IsRotatable", "Bool" : true },
+                { "Key" : "OutPort", "Vector2" : { "x" : 0, "y" : -1 } },
+                { "Key" : "InPort", "Vector2" : { "x" : 0, "y" : -1 } }
+            ]
+        },
+        {
+            "Component" : "IndustrialEquipment",
+            "Properties" : [
+                { "Key" : "IsNoisy", "Bool" : true }
+            ]
+        },
+        {
+            "Component" : "Flammable",
+            "Properties" : [
+                { "Key" : "IgnitionTemperatureCelsius", "Int" : 600 },
+                { "Key" : "FireChance", "Float" : 0.5 },
+                { "Key" : "BaseExplosionLevel", "Int" : 3 },
+                { "Key" : "FlammabilityCurve", "String" : "Device" },
+                { "Key" : "ExplosivenessCurve", "String" : "Device" }
+            ]
+        },
+        {
+            "Component" : "ElectricNode",
+            "Properties" : [
+                { "Key" : "IsConsumer", "Bool" : true }
+            ]
+        },
+        {
+            "Component" : "WithFuse",
+            "Properties" : [
+                { "Key" : "MalfunctionWeight", "Float": 0.2 }
+            ]
+        },
+        {
+            "Component" : "TileGraphics",
+            "Properties" : [
+                { "Key" : "Type", "String": "Object" },
+                { "Key" : "Graphic", "String": "Objects/Devices/Fabricator" },
+                { "Key" : "HasHeight", "Bool" : true }
+            ]
+        },
+        {
+            "Component" : "HeatProducer",
+            "Properties" : [
+                { "Key" : "Rate", "Float" : 2 },
+                { "Key" : "Range", "Int" : 3 },
+                { "Key" : "CheckSameArea", "Bool" : true }
+            ]
+        },
+        {
+            "Component" : "AudioSource",
+            "Properties" : [
+                { "Key" : "AmbienceClip", "String" : "Devices/FabricatorSFX" },
+                { "Key" : "Rolloff", "Vector2" : { "x" : 4, "y" : 17 } },
+                { "Key" : "IsLinkedToEnergy", "Bool" : true }
+            ]
+        },
+        {
+            "Component" : "ExtraInfo"
+        },
+        {
+            "Component" : "MultiCrafter",
+            "Properties" : [
+                { "Key" : "UIItemIcon", "String" : "Icons/Color/Cog" },
+                { "Key" : "CraftKey", "String" : "assemble" },
+                { "Key" : "ProgressBarKey", "String" : "assembling.now" },
+                { "Key" : "CompatibleTypes", "StringSet": [
+                    "Electronics2",
+                    "Electronics3",
+                    "Robotics2",
+                    "Robotics3",
+                    "Hyperfuel2",
+                    "Wire2",
+                    "Oil",
+                    "Terraforming",
+                    "Dye"
+                ] }
+            ]
+        },
+        {
+            "Component" : "VFX",
+            "Properties" : [
+                { "Key" : "Id", "String" : "VFXParticlesFabricator" },
+                { "Key" : "Offsets", "Vector2Set" : [
+                    { "x" : 0, "y" : 1.2 },
+                    { "x" : 0.4, "y" : 0.8 },
+                    { "x" : 0, "y" : 0.4 },
+                    { "x" : -0.45, "y" : 0.8 }
+                ] }
+            ]
+        },
+        {
+            "Component" : "Passability",
+            "Properties" : [
+                { "Key" : "IsPassable", "Bool" : false },
+                { "Key" : "IsWalkable", "Bool" : false },
+                { "Key" : "Difficulty", "Float" : 1 }
+            ]
+        },
+        {
+            "Component" : "Constructable",
+            "Properties" : [
+                { "Key" : "WorkAmount", "Int" : 2400 },
+                { "Key" : "CanDragRow", "Bool" : true },
+                {
+                    "Key" : "Contents",
+                    "RawMaterials" : [
+                        { "TypeId" : "TitaniumPlate", "StackSize" : 8 },
+                        { "TypeId" : "Rubber", "StackSize" : 5 },
+                        { "TypeId" : "Gears", "StackSize" : 10 },
+                        { "TypeId" : "Microchip2", "StackSize" : 3 },
+                        { "TypeId" : "GoldWire", "StackSize" : 8 }
+                    ]
+                }
+            ]
+        }
+    ]
+}

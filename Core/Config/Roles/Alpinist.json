@@ -1,0 +1,16 @@
+{
+    "Id" : "Alpinist",
+    "Species" : [ "Human" ],
+    "AgePhaseIds" : [ "YoungAdult", "MidLife", "Retirement" ],
+    "RoleTypes" : [ ],
+    "AdjustsSkills" : [
+        {
+            "JobId" : "Melee",
+            "Adjustment" : 6
+        },
+        {
+            "JobId" : "Expedition",
+            "Adjustment" : 4
+        }
+    ]
+}

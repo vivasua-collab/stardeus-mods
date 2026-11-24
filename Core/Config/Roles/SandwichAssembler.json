@@ -1,0 +1,16 @@
+{
+    "Id" : "SandwichAssembler",
+    "Species" : [ "Human", "Robot", "Drone", "CleaningBot" ],
+    "AgePhaseIds" : [ "Childhood", "YoungAdult" ],
+    "RoleTypes" : [ "Dumb", "Poor" ],
+    "AdjustsSkills" : [
+        {
+            "JobId" : "Cooking",
+            "Adjustment" : 4
+        },
+        {
+            "JobId" : "Research",
+            "Adjustment" : -1
+        }
+    ]
+}

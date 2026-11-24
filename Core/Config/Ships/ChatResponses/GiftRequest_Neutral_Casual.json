@@ -1,0 +1,8 @@
+{
+    "ResponseType" : "Neutral",
+    "TopicType" : "GiftRequest",
+    "ToneType" : "Casual",
+    "MessageKeys" : [
+        "ship.chat.gift_req.neutral.casual.*"
+    ]
+}

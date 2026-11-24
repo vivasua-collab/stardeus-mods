@@ -1,0 +1,8 @@
+{
+    "Id" : "Panel/SubmenuArrow",
+
+    "Color" : "UI/Text/Main",
+    "Alpha" : 0.5,
+
+    "Image" : "NoAtlas/SubmenuArrow"
+}

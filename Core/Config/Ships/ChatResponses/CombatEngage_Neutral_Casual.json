@@ -1,0 +1,8 @@
+{
+    "ResponseType" : "Neutral",
+    "TopicType" : "CombatEngage",
+    "ToneType" : "Casual",
+    "MessageKeys" : [
+        "ship.chat.combat_engage.neutral.casual.*"
+    ]
+}

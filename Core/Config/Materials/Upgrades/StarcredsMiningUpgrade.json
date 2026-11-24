@@ -1,0 +1,12 @@
+{
+    "Id" : "StarcredsMiningUpgrade",
+    "DefId" : "Obj/Upgrades/StarcredsMiningUpgrade",
+    "IsComposite" : true,
+    "IsConsumedOnDestroy" : true,
+    "IconId" : "Obj/Upgrades/StarcredsMiningUpgrade",
+    "Property" : "Electronic",
+    "Group" : "Upgrade",
+    "GroupId" : "Upgrades",
+    "EnergyOutput" : 50.0,
+    "Rarity" : 1
+}

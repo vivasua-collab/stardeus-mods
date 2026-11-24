@@ -1,0 +1,9 @@
+{
+    "Chance" : 0.05,
+    "RequestMsgKeyRoot" : "sig.extortion",
+    "FulfillMsgKeyRoot" : "sig.extortion.paid",
+    "RefuseMsgKeyRoot" : "sig.extortion.refused",
+    "MoneyPercentFrom" : 0.03,
+    "MoneyPercentTo" : 0.05,
+    "IsImmediateChoice" : true
+}

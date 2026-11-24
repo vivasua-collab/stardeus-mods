@@ -1,0 +1,5 @@
+{
+    "Id" : "FluxCapacitor",
+    "Capacity" : 100,
+    "ChargeTimeMinutes" : 90
+}

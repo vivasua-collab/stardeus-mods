@@ -1,0 +1,24 @@
+{
+    // C# implementation id.
+    // Multiple configurations can point to a single implementation.
+    "EventId": "PirateShipExtort",
+    // How much does this story event cost to run
+    "Points": 10,
+    // Options: Negative, Positive, Neutral, Raid
+    "OutcomeType": "Negative",
+    // Full list is in StoryEventFlags class
+    "EventFlags": [
+        "Space",
+        "NoHyperspace",
+        "CanIgnoreRepeatDelay"
+    ],
+    "MinRepeatDelayDays": 37,
+    // How likely this event can occur given the sector difficulty
+    // sector difficulty -> chance
+    "SectorDifficultyChance": [
+        0.0, 0.0,
+        0.3, 0.0,
+        0.6, 0.3,
+        1.0, 0.8
+    ]
+}

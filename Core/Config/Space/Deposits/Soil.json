@@ -1,0 +1,25 @@
+{
+    "Id" : "Soil",
+    "IsWithDepth" : false,
+    "IsCommon" : true,
+    "MinDifficulty" : 0.0,
+    "DifficultyChance" : [
+        0.0, 0.55,
+        0.5, 0.25,
+        1.0, 0.05
+    ],
+    "UniverseQuantityChance" : [
+        0.0, 7.0,
+        1.0, 10.0
+    ],
+    "RegionQuantityChance" : [
+        0.0, 1.0,
+        0.7, 1.0,
+        0.9, 2.0,
+        1.0, 3.0
+    ],
+    "MiningDifficulty" : 22.0,
+    "CollectKey" : "verb.collect",
+    "ScanDifficulty" : 0.8,
+    "NearbySpawnChance" : 0.75
+}

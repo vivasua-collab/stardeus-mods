@@ -1,0 +1,10 @@
+{
+    "Id" : "Thrifty",
+    "IconId" : "Icons/Color/Recycling",
+    "TypeId" : "Civilized",
+    "CompatibleSpecies" : [ "Human" ],
+    "IncompatibleTraitIds" : [
+        "Fastidious"
+    ],
+    "Rarity" : 0.5
+}

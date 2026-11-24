@@ -1,0 +1,94 @@
+{
+    "ToolPath" : "Energy",
+    "Layer" : "Objects",
+    "ParentId" : "Objects/Devices/BaseDevice",
+    "Researchable" : {
+        "Prerequisites" : [ "Research/Robotics/Maintenance" ]
+    },
+    "Spawnable" : {
+        "Category": "Robotics",
+        "Chance" : 1.0,
+        "ChanceLocked" : 0.0
+    },
+    "Components" : [
+        {
+            "Component" : "TileTransform",
+            "Properties" : [
+                { "Key" : "IsRotatable", "Bool" : true },
+                { "Key" : "CoverPercent", "Int" : 0 }
+            ]
+        },
+        {
+            "Component" : "ChargeStation",
+            "Properties" : [
+                { "Key" : "ChargePerHour", "Float" : 25.0 },
+                { "Key" : "ChargeCost", "Float" : 5.0 }
+            ]
+        },
+        {
+            "Component" : "ElectricNode",
+            "Properties" : [
+                { "Key" : "IsConsumer", "Bool" : true }
+            ]
+        },
+        {
+            "Component" : "WithFuse",
+            "Properties" : [
+                { "Key" : "MalfunctionWeight", "Float": 0.15 }
+            ]
+        },
+        {
+            "Component" : "Flammable",
+            "Properties" : [
+                { "Key" : "IgnitionTemperatureCelsius", "Int" : 300 },
+                { "Key" : "FireChance", "Float" : 0.5 },
+                { "Key" : "BaseExplosionLevel", "Int" : 2 },
+                { "Key" : "FlammabilityCurve", "String" : "Device" },
+                { "Key" : "ExplosivenessCurve", "String" : "Device" }
+            ]
+        },
+        {
+            "Component" : "VFX",
+            "Properties" : [
+                { "Key" : "Id", "String" : "VFXParticlesChargeStation" }
+            ]
+        },
+        {
+            "Component" : "AudioSource",
+            "Properties" : [
+                { "Key" : "AmbienceClip", "String" : "Devices/ChargeStationSFX" },
+                { "Key" : "IsLinkedToEnergy", "Bool" : true },
+                { "Key" : "Rolloff", "Vector2" : { "x" : 3, "y" : 12 } }
+            ]
+        },
+        {
+            "Component" : "TileGraphics",
+            "Properties" : [
+                { "Key" : "Type", "String": "Object" },
+                { "Key" : "Graphic", "String": "Objects/Devices/ChargeStation" }
+            ]
+        },
+        {
+            "Component" : "Passability",
+            "Properties" : [
+                { "Key" : "IsPassable", "Bool" : true },
+                { "Key" : "IsWalkable", "Bool" : true },
+                { "Key" : "Difficulty", "Float" : 0.5 }
+            ]
+        },
+        {
+            "Component" : "Constructable",
+            "Properties" : [
+                { "Key" : "WorkAmount", "Int" : 1000 },
+                {
+                    "Key" : "Contents",
+                    "RawMaterials" : [
+                        { "TypeId" : "SteelPlate", "StackSize" : 2 },
+                        { "TypeId" : "Transistor", "StackSize" : 2 },
+                        { "TypeId" : "CopperWire", "StackSize" : 5 }
+                    ]
+                }
+            ]
+        }
+    ]
+}

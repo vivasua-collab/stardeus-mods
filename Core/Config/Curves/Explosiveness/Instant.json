@@ -1,0 +1,7 @@
+// For things that should explode on first hit. Do not use with BombComp (C42) because it has a built-in explosion on damage
+{
+    "FloatSet" : [
+        0.0, 10.0,
+        1.0, 10.0
+    ]
+}

@@ -1,0 +1,25 @@
+// ElectricConnectionFailure story event configuration (new format)
+{
+    // C# implementation id
+    "EventId": "ElectricConnectionFailure",
+    // How much does this story event cost to run
+    "Points": 15,
+    // Options: Negative, Positive, Neutral, Raid
+    "OutcomeType": "Negative",
+    // Full list is in StoryEventFlags class
+    "EventFlags": [
+        "Annoying",
+        "Punishing",
+        "Explosion",
+        "Fire",
+        "Device"
+    ],
+    // Minimum days before this event can repeat
+    "MinRepeatDelayDays": 220,
+    // Requirements for this event to be available
+    "Require": {
+        "Days": 60,
+        "Difficulty": 0.25,
+        "GridSize": 100
+    }
+}

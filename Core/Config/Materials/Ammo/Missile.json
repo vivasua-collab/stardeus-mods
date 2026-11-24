@@ -1,0 +1,11 @@
+{
+    "Id" : "Missile",
+    "IsComposite" : true,
+    "IconId" : "Obj/Ammo/Missile",
+    "DefId" : "Obj/Ammo/Missile",
+    "GroupId" : "Ammo",
+    "EnergyOutput" : 1000.0,
+    "Rarity" : 2,
+    "ExplosionLevel" : 5,
+    "ExplosivenessCurveId" : "Extreme"
+}

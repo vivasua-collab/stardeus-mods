@@ -1,0 +1,27 @@
+{
+    "Id" : "Research/LifeSupport/CloneDog",
+    "Tier" : 3,
+    "IsAbstract" : true,
+    "PreviewIcon" : "Icons/Color/DNA",
+    "Researchable" : {
+        "IsTreeNode" : true,
+        "Prerequisites" : [
+            "Research/LifeSupport/GrowingPartsBasic"
+        ],
+        "SkipCostValidation" : true,
+        "DatoidCosts" : [
+            {
+                "TypeId" : "DatoidPhyto",
+                "StackSize" : 7
+            },
+            {
+                "TypeId" : "DatoidBiotic",
+                "StackSize" : 11
+            },
+            {
+                "TypeId" : "DatoidSynthetic",
+                "StackSize" : 4
+            }
+        ]
+    }
+}

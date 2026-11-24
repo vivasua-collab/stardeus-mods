@@ -1,0 +1,13 @@
+{
+    "Type" : "Organics3",
+    "ProductDefId" : "Obj/Parts/Kidney/KidneyLarge",
+    "ProductionTimeHours" : 504,
+    "EnergyCost" : 30,
+    "IgnoreMarket" : true,
+    "Ingredients" : [
+        { "TypeId" : "Protein", "StackSize" : 5 },
+        { "TypeId" : "Water", "StackSize" : 5 },
+        { "TypeId" : "Carbon", "StackSize" : 5 },
+        { "TypeId" : "StemCells", "StackSize" : 3 }
+    ]
+}

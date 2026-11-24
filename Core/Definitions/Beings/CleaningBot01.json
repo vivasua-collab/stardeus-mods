@@ -1,0 +1,38 @@
+{
+    "Layer" : "FreeEntities",
+    "ParentId" : "Beings/BaseBeing",
+    "PreviewIcon" : "Icons/Color/PreviewCleaningBot01",
+    "Researchable" : {
+        "Prerequisites" : [ "Research/Robotics/CleaningBot" ]
+    },
+    "Components" : [
+        { "Component" : "CleaningBot" },
+        {
+            "Component" : "LightSource",
+            "Properties" : [
+                { "Key" : "Radius", "Float" : 3 },
+                { "Key" : "Color", "IntSet" : [ 191, 140, 64, 128 ] },
+                { "Key" : "NeedsEnergy", "Bool" : false }
+            ]
+        },
+        {
+            "Component" : "MobilizerVisual",
+            "Properties" : [
+                { "Key" : "IsDefaultGrounded", "Bool" : true }
+            ]
+        },
+        {
+            "Component" : "BeingNameText" ,
+            "Properties" : [
+                { "Key" : "Offset", "Vector2" : { "x" : 0, "y" : -0.33 } }
+            ]
+        },
+        { "Component" : "BotDockable" },
+        {
+            "Component" : "Disposable",
+            "Properties" : [
+                { "Key" : "IsBiological", "Bool" : false }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,38 @@
+{
+    "Layer" : "FreeEntities",
+    "ParentId" : "Obj/Eggs/BaseEgg",
+    "Spawnable" : {
+        "Chance" : 0.05,
+        "ChanceLocked" : 0.05,
+        "Quantity" : {
+            "Component" : "Curve",
+            "Properties" : [
+                { "Key" : "Keys",  "FloatSet" : [0.0, 0.8, 0.98, 1.0 ] },
+                { "Key" : "Values", "IntSet" :  [0,   0,  1,   20  ] }
+            ]
+        }
+    },
+    "Components" : [
+        {
+            "Component" : "ObjGraphics",
+            "Properties" : [
+                { "Key" : "Graphic", "String": "Obj/Eggs/Egg01_Hatched" },
+                { "Key" : "Offset", "Vector2": { "x" : 0, "y" : 0.3 } }
+            ]
+        },
+        { "Component" : "ExtraInfo" },
+        {
+            "Component" : "UnstoredMat",
+            "Properties" : [
+                { "Key" : "Type", "String" : "EggShell" }
+            ]
+        },
+        {
+            "Component" : "Flammable",
+            "Properties" : [
+                { "Key" : "IgnitionTemperatureCelsius", "Int" : 750 },
+                { "Key" : "FireChance", "Float" : 0.1 }
+            ]
+        }
+    ]
+}

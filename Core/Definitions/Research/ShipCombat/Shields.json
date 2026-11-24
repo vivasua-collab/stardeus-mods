@@ -1,0 +1,23 @@
+{
+    "Id" : "Research/ShipCombat/Shields",
+    "Tier" : 2,
+    "IsAbstract" : true,
+    "NameKey" : "noun.shields",
+    "PreviewIcon" : "Icons/Color/ForceField",
+    "Researchable" : {
+        "IsTreeNode" : true,
+        "Prerequisites" : [
+            "Research/ShipCombat/Root"
+        ],
+        "DatoidCosts" : [
+            {
+                "TypeId" : "DatoidTech",
+                "StackSize" : 6
+            },
+            {
+                "TypeId" : "DatoidEnergy",
+                "StackSize" : 3
+            }
+        ]
+    }
+}

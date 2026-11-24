@@ -1,0 +1,15 @@
+{
+    "Id" : "OperaSinger",
+    "Species" : [ "Human" ],
+    "AgePhaseIds" : [ "MidLife", "Retirement" ],
+    "RequiresRoles" : [ "Singer" ],
+    "RoleTypes" : [ "Dumb", "Poor" ],
+    "LovesJobTypes" : [ "Creative" ],
+    "IncapableJobTypes" : [ "Mining" ],
+    "AdjustsSkills" : [
+        {
+            "JobId" : "Social",
+            "Adjustment" : 4
+        }
+    ]
+}

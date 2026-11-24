@@ -1,0 +1,36 @@
+{
+    "Id" : "Research/LifeSupport/BiosphereGeneration",
+    "Tier" : 6,
+    "IsAbstract" : true,
+    "PreviewIcon" : "Icons/Color/Terraform",
+    "NameKey" : "research.biospheregeneration",
+    "Researchable" : {
+        "IsTreeNode" : true,
+        "IsDiscoverable" : true,
+        "Prerequisites" : [
+            "Research/LifeSupport/GrowingPartsAdvanced"
+        ],
+        "DatoidCosts" : [
+            {
+                "TypeId" : "DatoidPhyto",
+                "StackSize" : 30
+            },
+            {
+                "TypeId" : "DatoidBiotic",
+                "StackSize" : 51
+            },
+            {
+                "TypeId" : "DatoidTechHigh",
+                "StackSize" : 38
+            },
+            {
+                "TypeId" : "DatoidAlien",
+                "StackSize" : 15
+            },
+            {
+                "TypeId" : "DatoidQuantum",
+                "StackSize" : 19
+            }
+        ]
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "Id" : "Research/SpaceTravel/ShuttleMining",
+    "Tier" : 3,
+    "IsAbstract" : true,
+    "PreviewIcon" : "Icons/Color/Upgrade",
+    "Researchable" : {
+        "IsTreeNode" : true,
+        "Prerequisites" : [
+            "Research/SpaceTravel/Shuttle"
+        ],
+        "DatoidCosts" : [
+            {
+                "TypeId" : "DatoidSynthetic",
+                "StackSize" : 6
+            },
+            {
+                "TypeId" : "DatoidEnergy",
+                "StackSize" : 9
+            },
+            {
+                "TypeId" : "DatoidTechHigh",
+                "StackSize" : 12
+            }
+        ]
+    }
+}

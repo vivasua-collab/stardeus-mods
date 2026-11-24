@@ -1,0 +1,11 @@
+{
+    "Id" : "Obj/Materials/GoldWire",
+    "Type" : "CFD",
+    "Groups" : [ "Electronics" ],
+    "Value" : 351.0,
+    "Rarity" : 0.15,
+    "TraderQuantity" : 30.0,
+    "OnlineShopQuantity" : 25,
+    "MinSectorDifficulty" : 0.42,
+    "Volatility" : 0.0048
+}

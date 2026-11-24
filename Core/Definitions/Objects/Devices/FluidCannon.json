@@ -1,0 +1,107 @@
+{
+    "ToolPath" : "Security",
+    "Layer" : "Objects",
+    "ParentId" : "Objects/Devices/BaseDevice",
+    "Researchable" : {
+        "Prerequisites" : [ "Research/Security/FireSuppression" ]
+    },
+    "Spawnable" : {
+        "Category": "Security",
+        "Chance" : 1.0,
+        "ChanceLocked" : 0.5
+    },
+    "Components" : [
+        {
+            "Component" : "TileTransform",
+            "Properties" : [
+                { "Key" : "Width", "Int" : 2 },
+                { "Key" : "Height", "Int" : 2 },
+                { "Key" : "CoverPercent", "Int" : 75 },
+                { "Key" : "IsRotatable", "Bool" : true },
+                // { "Key" : "OutPort", "Vector2" : { "x" : 0, "y" : -1 } },
+                { "Key" : "InPort", "Vector2" : { "x" : 0, "y" : -1 } }
+            ]
+        },
+        {
+            "Component" : "Flammable",
+            "Properties" : [
+                { "Key" : "IgnitionTemperatureCelsius", "Int" : 400 },
+                { "Key" : "FireChance", "Float" : 0.5 },
+                { "Key" : "BaseExplosionLevel", "Int" : 2 },
+                { "Key" : "FlammabilityCurve", "String" : "DeviceHigh" },
+                { "Key" : "ExplosivenessCurve", "String" : "DeviceHigh" }
+            ]
+        },
+        {
+            "Component" : "ElectricNode",
+            "Properties" : [
+                { "Key" : "IsConsumer", "Bool" : true }
+            ]
+        },
+        {
+            "Component" : "WithFuse",
+            "Properties" : [
+                { "Key" : "MalfunctionWeight", "Float": 0.15 }
+            ]
+        },
+        {
+            "Component" : "TileGraphics",
+            "Properties" : [
+                { "Key" : "Type", "String": "Object" },
+                { "Key" : "Graphic", "String": "Objects/Devices/FluidCannon" },
+                { "Key" : "HasHeight", "Bool" : true }
+            ]
+        },
+        {
+            "Component" : "FluidCannon",
+            "Properties" : [
+                { "Key" : "ShotCost", "Float" : 0.5 },
+                { "Key" : "EnergyCost", "Float" : 5.0 },
+                { "Key" : "AccuracySlack", "Float" : 10.0 },
+                { "Key" : "MinutesBetweenShots", "Int" : 5 },
+                // Minutes the cannon spends spinning up after it first acquires a fire,
+                // before it starts shooting at it. Gives a freshly started fire time to
+                // grow. Re-arms once every fire is out. Does not delay shooting at
+                // hostile beings or burning colonists.
+                { "Key" : "WindupMinutes", "Int" : 10 },
+                { "Key" : "Range", "Int" : 15 }
+            ]
+        },
+        { "Component" : "ExtraInfo" },
+        {
+            "Component" : "RefillableStorage",
+            "Properties" : [
+                { "Key" : "DeviceType", "String" : "fluid.cannon" },
+                { "Key" : "ShowBurnRate", "Bool" : false },
+                { "Key" : "Purpose", "String" : "ammo" },
+                { "Key" : "Icon", "String" : "Icons/Color/Ammo" },
+                { "Key" : "MaterialCapacity", "Int" : 20 },
+                { "Key" : "PropertyFilter", "StringSet" : [ "Liquid" ] }
+            ]
+        },
+        {
+            "Component" : "Passability",
+            "Properties" : [
+                { "Key" : "IsPassable", "Bool" : false },
+                { "Key" : "IsWalkable", "Bool" : false },
+                { "Key" : "Difficulty", "Float" : 1 }
+            ]
+        },
+        {
+            "Component" : "Constructable",
+            "Properties" : [
+                { "Key" : "WorkAmount", "Int" : 2000 },
+                {
+                    "Key" : "Contents",
+                    "RawMaterials" : [
+                        { "TypeId" : "SteelPlate", "StackSize" : 6 },
+                        { "TypeId" : "Gears", "StackSize" : 4 },
+                        { "TypeId" : "CopperWire", "StackSize" : 1 },
+                        { "TypeId" : "Rubber", "StackSize" : 5 },
+                        { "TypeId" : "Microchip", "StackSize" : 1 }
+                    ]
+                }
+            ]
+        }
+    ]
+}

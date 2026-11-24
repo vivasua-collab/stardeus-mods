@@ -1,0 +1,53 @@
+{
+    "Id" : "Sentinel",
+    "FlagIcon" : "Icons/Faction/Sentinel",
+    "Friendliness" : 0,
+    "ChanceBlackMarket" : 0.0,
+    "ChancePolice" : 1.0,
+    "ChanceRandomShip" : 0.05,
+    "AI" : 1,
+    // share of its bot raiders that come as human bodies run by the bot mind (frame pilots),
+    // see FactionDef.PilotedHumanShare
+    "PilotedHumanShare" : 0.25,
+    "ShipDensityMul" : 1.0,
+    "VictoryRaidChance" : 0.25,
+    "HyperjumpRelayBaseToll" : 25000,
+    "AlwaysEnemies" : [ "Virus" ],
+    "RegionDifficultyChance" : [
+        0.0, 0.0,
+        0.8, 0.0,
+        0.9, 0.5,
+        1.0, 0.7
+    ],
+    // power difference => chance to engage in combat
+    "BraveryChance" : [
+        -1.0, 0.5,
+        -0.5, 0.75,
+        0.0, 1.0,
+        0.5, 1.0,
+        1.0, 1.0
+    ],
+    // How likely the reaction will be positive (vs negative) given the faction standing
+    // key => standing, value => chance of positive reaction
+    "AttitudePositiveReactionChance" : [
+        -1.0, 0.01,
+        -0.5, 0.1,
+        -0.25, 0.5,
+        -0.15, 0.95,
+        0.0, 1.0,
+        0.5, 1.0,
+        1.0, 1.0
+    ],
+    "GenBodyVars" : {
+        "ChanceModded" : 0.8,
+        "ChanceFreak" : 0.0,
+        "ChanceBionic" : 0.0,
+        "ChanceCustomMind" : 0.0,
+        "ChanceHighQualityParts" : 0.9,
+        "ChanceLowQualityParts" : 0.0,
+        "ChanceNonStandard" : 0.25,
+        "ChanceScarred" : 0.25,
+        "ChanceImplant" : 0.25
+    },
+    "CombatObjective" : "Raid"
+}

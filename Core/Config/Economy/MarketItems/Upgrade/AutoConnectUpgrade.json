@@ -1,0 +1,12 @@
+{
+    "Id" : "Obj/Upgrades/AutoConnectUpgrade",
+    "Type" : "CFD",
+    "Groups" : [ "Upgrade" ],
+    "Value" : 4200.0,
+    "Rarity" : 0.15,
+    "TraderQuantity" : 1.0,
+    "MaxTraderQuantity" : 1,
+    "MinSectorDifficulty" : 0.5,
+    "PlayerBuyPriceMultiplier": 5.0,
+    "Volatility" : 0.0038
+}

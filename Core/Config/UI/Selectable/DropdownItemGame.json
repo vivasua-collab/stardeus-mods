@@ -1,0 +1,18 @@
+{
+    "Id" : "Selectable/DropdownItemGame",
+
+    "CBColorNormal" : "UI/Main/Sec-1",
+    "CBColorHighlighted" : "UI/Main/Comp",
+    "CBColorPressed" : "UI/Main/Sec",
+    "CBColorSelected" : "UI/Main/Comp",
+    "CBColorDisabled" : "UI/Grey/Sec-1",
+
+    "CBAlphaNormal" : 0.9,
+    "CBAlphaHighlighted" : 0.95,
+    "CBAlphaPressed" : 1.0,
+    "CBAlphaSelected" : 0.95,
+    "CBAlphaDisabled" : 0.25,
+
+    "CBColorMultiplier" : 1.0,
+    "CBFadeDuration" : 0.1
+}

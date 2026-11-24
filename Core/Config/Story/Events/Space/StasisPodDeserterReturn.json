@@ -1,0 +1,26 @@
+{
+    // C# implementation id. Multiple configurations can point to a single implementation.
+    // Reuses the plain StasisPod arrival event, rigged to always contain a returning deserter.
+    "EventId": "StasisPod",
+    // How much does this story event cost to run
+    "Points": 5,
+    // Options: Negative, Positive, Neutral, Raid
+    "OutcomeType": "Neutral",
+    // Full list is in StoryEventFlags class
+    "EventFlags": [
+        "Space",
+        "CanHaveDuplicates",
+        "NoHyperspace",
+        "CanIgnoreRepeatDelay"
+    ],
+    "MinRepeatDelayDays": 7,
+    // How likely this event can occur given the sector difficulty
+    // sector difficulty -> chance
+    "SectorDifficultyChance": [
+        0.0, 1.0,
+        1.0, 0.25
+    ],
+    "Properties": [
+        { "Key": "RiggedEvent", "String": "StasisPod/DeserterReturns" }
+    ]
+}

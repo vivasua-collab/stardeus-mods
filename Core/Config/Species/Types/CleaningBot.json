@@ -1,0 +1,119 @@
+{
+    "Looks" : "CleaningBot",
+    "DefId" : "Beings/CleaningBot01",
+    "LifeExpectancyYears" : 20,
+    "BeingValueBase" : 1500,
+    // Only stocked while the colony is small (see BeingTrade)
+    "Trade" : { "Group" : "Worker", "ChanceInStock" : 0.01, "MaxInStock" : 1,
+                "LivingPremium" : 3000, "SellWreck" : true },
+    "BaseCombatStrength" : 0.5,
+    // Raider draw weight at raid gear tier 0 / 1 / 2 (see RaiderSpecies). The tier
+    // comes from raid points, so this - not days or sector - decides when this bot
+    // starts showing up in raids.
+    "RaidTierWeights" : [ 1.0, 0.1, 0.0 ],
+    "CustomMindWeight" : 1.0,
+    "SpawnAgeCurve" : [
+        0.0, 1,
+        0.1, 2,
+        0.2, 3,
+        0.3, 4,
+        0.4, 5,
+        0.5, 6,
+        0.6, 7,
+        0.7, 9,
+        0.8, 10,
+        0.9, 15,
+        1.0, 20
+    ],
+    "CombatBehavior" : "Fight",
+    // Floor cleaning comes from BodyCleaningBot, so it stays with the frame on mind transfer
+    "AddsAbilities" : [
+        // If a bot is transferred into a human, it should be able to eat
+        "Eat"
+    ],
+    "AddsNeeds" : [
+        "Faction",
+        "Equipment"
+    ],
+    "AgePhases" : [
+        {
+            "AgeFrom" : 0,
+            "Phase" : "Childhood"
+        },
+        {
+            "AgeFrom" : 5,
+            "Phase" : "YoungAdult"
+        },
+        {
+            "AgeFrom" : 10,
+            "Phase" : "MidLife"
+        },
+        {
+            "AgeFrom" : 15,
+            "Phase" : "Retirement"
+        }
+    ],
+    "Flags" : [ "Robotic" ],
+    "BloodSpriteRoot" : "Dirt/OilSplash",
+    "NameChanceWeights" : [
+        0.95,
+        0.05
+    ],
+    "SelectSounds" : [
+        "FX/CleaningBotSelect_01",
+        "FX/CleaningBotSelect_02",
+        "FX/CleaningBotSelect_03",
+        "FX/CleaningBotSelect_04"
+    ],
+    "TakeDamageSounds" : [
+        "FX/PunchMetal_01",
+        "FX/PunchMetal_02",
+        "FX/PunchMetal_03",
+        "FX/PunchMetal_04",
+        "FX/PunchMetal_05"
+    ],
+    "NameParts" : [
+        {
+            "Type" : "RobotPrefix",
+            "Paths" : [ "Robot/Prefix" ],
+            "Chances" : [ 0.0, 1.0 ]
+        },
+        {
+            "Type" : "RobotNamePart",
+            "Paths" : [
+                "Robot/Name",
+                "Human/Neutral/Nick",
+                "Human/Male/Nick",
+                "Human/Female/Nick"
+            ],
+            "Chances" : [ 1.0, 1.0 ]
+        },
+        {
+            "Type" : "RobotNamePart",
+            "Paths" : [
+                "Robot/Name",
+                "Human/Neutral/Nick",
+                "Human/Male/Nick",
+                "Human/Female/Nick"
+            ],
+            "Chances" : [ 0.5, 0.5 ]
+        },
+        {
+            "Type" : "RobotSuffix",
+            "Paths" : [ "Robot/Suffix" ],
+            "Chances" : [ 0.05, 0.02 ]
+        }
+    ],
+    "InventorySlotTypes" : [
+        "Weapon"
+    ],
+    "BodySize" : "Small",
+    "BodyPartSlotTypes" : [
+        "Body",
+        "Core",
+        "Implant",
+        "Eye",
+        "Mobilizer",
+        "Battery"
+    ]
+}

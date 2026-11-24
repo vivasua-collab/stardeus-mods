@@ -1,0 +1,13 @@
+{
+    "Id" : "BlackHole",
+    "Icon" : "Icons/Color/BlackHole",
+    "ParentIds" : [ "Galaxy" ],
+    "UseTypeName" : true,
+    "SizeMin" : 7,
+    "SizeMax" : 10,
+    "MinExitDist" : 25,
+    "SpawnChance" : 0,
+    "IsInteractive" : true,
+    "LocationApproxMagnitude" : 1.0,
+    "DistanceUnitsKey" : "units.km.thousands"
+}

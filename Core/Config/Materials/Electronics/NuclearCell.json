@@ -1,0 +1,12 @@
+{
+    "Id" : "NuclearCell",
+    "IsComposite" : true,
+    "IsConsumedOnDestroy" : true,
+    "IconId" : "Obj/Materials/NuclearCell",
+    "Property" : "Nuclear",
+    "GroupId" : "Electronics",
+    "EnergyOutput" : 10000.0,
+    "Rarity" : 3,
+    "ExplosionLevel" : 5,
+    "ExplosivenessCurveId" : "High"
+}

@@ -1,0 +1,31 @@
+{
+    "Id" : "Maid",
+    "LovesJobTypes" : [ ],
+    "Species" : [ "Human" ],
+    "RoleTypes" : [ "Dumb", "Poor", "Good" ],
+    "AgePhaseIds" : [ "MidLife", "Retirement" ],
+    "SexChances" : [
+        {
+            "Sex" : "F",
+            "Chance" : 1.0
+        },
+        {
+            "Sex" : "M",
+            "Chance" : 0.0
+        }
+    ],
+    "AdjustsSkills" : [
+        {
+            "JobId" : "Cooking",
+            "Adjustment" : 4
+        },
+        {
+            "JobId" : "Social",
+            "Adjustment" : 4
+        },
+        {
+            "JobId" : "Mining",
+            "Adjustment" : -1
+        }
+    ]
+}

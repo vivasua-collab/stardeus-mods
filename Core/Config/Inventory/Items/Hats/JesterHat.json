@@ -1,0 +1,29 @@
+{
+    "DefId" : "Obj/Equipment/Hats/JesterHat",
+    "SlotId" : "Hat",
+    "SpriteId" : "Beings/Hats/Human/JesterHat/JesterHat",
+    "Rarity" : 0.01,
+    // single color only
+    // "ColorGroupId" : "Clothing",
+    // Can't do that due to beards
+    // "HidesLookParts" : [
+    //     "Hair"
+    // ],
+    "AddsStatModifiers" : [
+        {
+            "Component" : "FunIncreaseRate",
+            "Properties" : [
+                { "Key" : "Value", "Float" : 0.1 },
+                { "Key" : "Type", "String" : "AddsPercent" }
+            ]
+        },
+        {
+            "Component" : "ArmorBlunt",
+            "Properties" : [
+                { "Key" : "StateMul", "Float" : 1.0 },
+                { "Key" : "Value", "Float" : 1 },
+                { "Key" : "Type", "String" : "Adds" }
+            ]
+        }
+    ]
+}

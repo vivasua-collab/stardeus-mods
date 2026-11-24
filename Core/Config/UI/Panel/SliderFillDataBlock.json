@@ -1,0 +1,10 @@
+{
+    "Id" : "Panel/SliderFillDataBlock",
+
+    "Color" : "UI/Main/Sec+1",
+    "Alpha" : 0.8,
+
+    "Image" : "UI/Panels/SliderFill",
+    "ImageType" : "Tiled",
+    "ImageBorderLBRT" : [ 8, 8, 8, 8 ]
+}

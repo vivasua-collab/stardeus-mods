@@ -1,0 +1,13 @@
+{
+    "Type": "Weapons2",
+    "Ingredients": [
+        { "TypeId" : "TitaniumPlate", "StackSize" : 2 },
+        { "TypeId" : "LeadPlate", "StackSize" : 3 },
+        { "TypeId" : "Gears", "StackSize" : 4 },
+        { "TypeId" : "OpticalFiber", "StackSize" : 1 }
+    ],
+    "IgnoreMarket" : true,
+    "ProductDefId": "Obj/Equipment/Weapons/SniperRifle01",
+    "ProductionTimeHours": 7.0,
+    "EnergyCost": 70.0
+}

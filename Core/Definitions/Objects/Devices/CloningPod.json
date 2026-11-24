@@ -1,0 +1,127 @@
+{
+    "ToolPath" : "Production",
+    "Layer" : "Objects",
+    "ParentId" : "Objects/Devices/BaseDevice",
+    "Researchable" : {
+        "Prerequisites" : [
+            "Research/LifeSupport/GeneticEngineering"
+        ]
+    },
+    "Spawnable" : {
+        "Category": "RareDevice",
+        "Chance" : 1.0,
+        "ChanceLocked" : 0.5
+    },
+    "Components" : [
+        {
+            "Component" : "TileTransform",
+            "Properties" : [
+                { "Key" : "Width", "Int" : 2 },
+                { "Key" : "Height", "Int" : 2 },
+                { "Key" : "IsRotatable", "Bool" : true },
+                { "Key" : "CoverPercent", "Int" : 80 },
+                // { "Key" : "WorkSpot", "Vector2" : { "x" : 0, "y" : -1 } }
+                { "Key" : "InPort", "Vector2" : { "x" : 0, "y" : -1 } },
+                { "Key" : "OutPort", "Vector2" : { "x" : 0, "y" : -1 } }
+            ]
+        },
+        {
+            "Component" : "ElectricNode",
+            "Properties" : [
+                { "Key" : "Particles", "String" : "CloningPodFX" },
+                { "Key" : "IsConsumer", "Bool" : true }
+            ]
+        },
+        {
+            "Component" : "WithFuse",
+            "Properties" : [
+                { "Key" : "MalfunctionWeight", "Float": 0.1 }
+            ]
+        },
+        {
+            "Component" : "IndustrialEquipment",
+            "Properties" : [
+                { "Key" : "IsNoisy", "Bool" : false }
+            ]
+        },
+        {
+            "Component" : "TileGraphics",
+            "Properties" : [
+                { "Key" : "Type", "String": "Object" },
+                { "Key" : "Graphic", "String": "Objects/Devices/CloningPod" },
+                { "Key" : "HasHeight", "Bool" : true }
+            ]
+        },
+        {
+            "Component" : "TileAnimation",
+            "Properties" : [
+                { "Key" : "Offset", "Vector2": { "x" : 0.0, "y" : 0.68 } },
+                { "Key" : "Size", "Vector2": { "x" : 1.47, "y" : 1.47 } },
+                { "Key" : "Direction", "Int" : 1 },
+                { "Key" : "BaseSprite", "String": "Objects/Devices/CloningPod_Base" },
+                { "Key" : "AnimSprite", "String" : "Objects/DeviceAnims/CloningPod_Anim" },
+                { "Key" : "CopyAnimSprite", "Bool" : false },
+                { "Key" : "Speed", "Float": 1.0 },
+                { "Key" : "SpriteOrder", "String": "AboveAnyTile" },
+                { "Key" : "FramePrefix", "String": "F" },
+                { "Key" : "NumFrames", "Int": 50 },
+                { "Key" : "NeedsEnergy", "Bool": true }
+            ]
+        },
+        {
+            "Component" : "Flammable",
+            "Properties" : [
+                { "Key" : "IgnitionTemperatureCelsius", "Int" : 400 },
+                { "Key" : "FireChance", "Float" : 0.5 },
+                { "Key" : "BaseExplosionLevel", "Int" : 1 },
+                { "Key" : "FlammabilityCurve", "String" : "Device" },
+                { "Key" : "ExplosivenessCurve", "String" : "DeviceLow" }
+            ]
+        },
+        {
+            "Component" : "ExtraInfo"
+        },
+        {
+            "Component" : "MultiCrafter",
+            "Properties" : [
+                { "Key" : "UIItemIcon", "String" : "Icons/Color/Cloning" },
+                { "Key" : "CraftKey", "String" : "clone" },
+                { "Key" : "MaxBatchSize", "Int" : 1 },
+                { "Key" : "ProgressBarKey", "String" : "cloning.bar" },
+                { "Key" : "NoOperatorQualityCurve", "String" : "Crafting/CloningPodQuality" },
+                { "Key" : "NoOperatorQualityResearch", "String" : "Research/LifeSupport/TissueEngineering" },
+                { "Key" : "NoOperatorQualityCurveResearched", "String" : "Crafting/CloningPodQualityResearched" },
+                { "Key" : "CompatibleTypes", "StringSet": [
+                    "Human", "Animal",
+                    "Organics1",
+                    "Organics2",
+                    "Organics3"
+                ] }
+            ]
+        },
+        {
+            "Component" : "Passability",
+            "Properties" : [
+                { "Key" : "IsPassable", "Bool" : false },
+                { "Key" : "IsWalkable", "Bool" : false },
+                { "Key" : "Difficulty", "Float" : 1 }
+            ]
+        },
+        {
+            "Component" : "Constructable",
+            "Properties" : [
+                { "Key" : "WorkAmount", "Int" : 2000 },
+                {
+                    "Key" : "Contents",
+                    "RawMaterials" : [
+                        { "TypeId" : "TitaniumPlate", "StackSize" : 5 },
+                        { "TypeId" : "Glass", "StackSize" : 10 },
+                        { "TypeId" : "Rubber", "StackSize" : 10 },
+                        { "TypeId" : "Plastic", "StackSize" : 5 },
+                        { "TypeId" : "Microchip2", "StackSize" : 3 }
+                    ]
+                }
+            ]
+        }
+    ]
+}

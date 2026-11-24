@@ -1,0 +1,22 @@
+{
+    "Id" : "Research/Production/MaterialProcessing",
+    "Tier" : 2,
+    "IsAbstract" : true,
+    "PreviewIcon" : "Icons/Color/Loading",
+    "Researchable" : {
+        "IsTreeNode" : true,
+        "Prerequisites" : [
+            "Research/Production/Recycling"
+        ],
+        "DatoidCosts" : [
+            {
+                "TypeId" : "DatoidBasic",
+                "StackSize" : 16
+            },
+            {
+                "TypeId" : "DatoidTech",
+                "StackSize" : 6
+            }
+        ]
+    }
+}

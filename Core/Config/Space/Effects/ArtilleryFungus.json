@@ -1,0 +1,20 @@
+{
+    "Id" : "ArtilleryFungus",
+    "MinDifficulty" : 0.2,
+    "IsBiological" : true,
+    "DifficultyChance" : [
+        0.0, 0.0,
+        0.2, 0.0,
+        0.21, 0.6,
+        1.0, 0.3
+    ],
+    "UniverseQuantityChance" : [
+        0.0, 5.0,
+        1.0, 7.0
+    ],
+    "RegionQuantityChance" : [
+        0.0, 1.0,
+        0.7, 1.0,
+        1.0, 2.0
+    ]
+}

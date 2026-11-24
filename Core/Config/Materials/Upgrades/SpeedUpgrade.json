@@ -1,0 +1,12 @@
+{
+    "Id" : "SpeedUpgrade",
+    "DefId" : "Obj/Upgrades/SpeedUpgrade",
+    "IsComposite" : true,
+    "IsConsumedOnDestroy" : true,
+    "IconId" : "Obj/Upgrades/SpeedUpgrade",
+    "Property" : "Electronic",
+    "Group" : "Upgrade",
+    "GroupId" : "Upgrades",
+    "EnergyOutput" : 50.0,
+    "Rarity" : 1
+}

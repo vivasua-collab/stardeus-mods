@@ -1,0 +1,30 @@
+{
+    "Id" : "Research/Energy/SolarEfficient",
+    "Tier" : 4,
+    "IsAbstract" : true,
+    "PreviewIcon" : "Objects/Devices/SolarPanel",
+    "Researchable" : {
+        "IsTreeNode" : true,
+        "Prerequisites" : [
+            "Research/Energy/SolarImproved"
+        ],
+        "DatoidCosts" : [
+            {
+                "TypeId" : "DatoidBiotic",
+                "StackSize" : 14
+            },
+            {
+                "TypeId" : "DatoidSynthetic",
+                "StackSize" : 10
+            },
+            {
+                "TypeId" : "DatoidEnergy",
+                "StackSize" : 11
+            },
+            {
+                "TypeId" : "DatoidAlien",
+                "StackSize" : 4
+            }
+        ]
+    }
+}

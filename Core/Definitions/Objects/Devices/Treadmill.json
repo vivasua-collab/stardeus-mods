@@ -1,0 +1,145 @@
+{
+    "ToolPath" : "Entertainment",
+    "Layer" : "Objects",
+    "ParentId" : "Objects/Devices/BaseDevice",
+    "Researchable" : {
+        "Prerequisites" : [ "Research/Entertainment/Treadmill" ]
+    },
+    "Spawnable" : {
+        "Category": "Fun",
+        "Chance" : 1.0,
+        "ChanceLocked" : 0.5
+    },
+    "Components" : [
+        {
+            "Component" : "TileTransform",
+            "Properties" : [
+                { "Key" : "IsRotatable", "Bool" : true },
+                { "Key" : "CoverPercent", "Int" : 0 },
+                { "Key" : "Width", "Int" : 2 },
+                { "Key" : "WorkSpot", "Vector2" : { "x" : 0, "y" : 0 } }
+            ]
+        },
+        {
+            "Component" : "TileGraphics",
+            "Properties" : [
+                { "Key" : "Type", "String": "Object" },
+                { "Key" : "Graphic", "String": "Objects/Devices/Treadmill" }
+            ]
+        },
+        {
+            "Component" : "TileAnimation",
+            "Properties" : [
+                {
+                    "Key": "Offsets",
+                    "Vector2Set": [
+                        { "x": -0.142, "y": 0.0476 },
+                        { "x": 0.0, "y": 0.19 },
+                        { "x": 0.158, "y": 0.0476 },
+                        { "x": 0.0, "y": -0.079}
+                    ]
+                },
+                {
+                    "Key": "Rotations",
+                    "StringSet": [
+                        // Down
+                        "D",
+                        // Left
+                        "L",
+                        // Up
+                        "U",
+                        // Right
+                        "R"
+                    ]
+                },
+                { "Key" : "Size", "Vector2": { "x" : 1.4, "y" : 1.4 } },
+                { "Key" : "Direction", "Int" : 1 },
+                { "Key" : "BaseSprite", "String": "Objects/Devices/Treadmill" },
+                { "Key" : "AnimSprite", "String" : "Objects/DeviceAnims/Treadmill_Anim" },
+                // Since two devices use same animation (Mini oxygen pump and regular one)
+                // we need to copy the sprite, otherwise resizing it to a different scale will
+                // resize it for both devices
+                { "Key" : "CopyAnimSprite", "Bool" : true },
+                { "Key" : "Speed", "Float": 1.0 },
+                { "Key" : "SpriteOrder", "String": "InBetweenTile" },
+                { "Key" : "FramePrefix", "String": "F" },
+                { "Key" : "NumFrames", "Int": 4 },
+                { "Key" : "NeedsEnergy", "Bool": true }
+            ]
+        },
+        { "Component" : "SafetyCheck" },
+        {
+            "Component" : "Flammable",
+            "Properties" : [
+                { "Key" : "IgnitionTemperatureCelsius", "Int" : 300 },
+                { "Key" : "FireChance", "Float" : 0.5 }
+            ]
+        },
+        {
+            "Component" : "ElectricNode",
+            "Properties" : [
+                { "Key" : "ShowZeroProduction", "Bool": false },
+                { "Key" : "IsProducer", "Bool" : true }
+            ]
+        },
+        {
+            "Component" : "WithFuse",
+            "Properties" : [
+                { "Key" : "MalfunctionWeight", "Float": 0.25 }
+            ]
+        },
+        {
+            "Component" : "Treadmill",
+            "Properties" : [
+                { "Key" : "RequiresSafeArea", "Bool" : false },
+                { "Key" : "DownRotation", "String": "Right" },
+                { "Key" : "WalkPositionOffsets", "Vector2Set" : [
+                    { "x" : 0, "y" : 0.25 },
+                    { "x" : 0, "y" : 0.15 },
+                    { "x" : 0, "y" : 0.25 },
+                    { "x" : 0, "y" : 0.15 }
+                ] }
+            ]
+        },
+        {
+            "Component" : "AudioSource",
+            "Properties" : [
+                { "Key" : "AmbienceClip", "String" : "Devices/TreadmillSFX" },
+                { "Key" : "Rolloff", "Vector2" : { "x" : 3, "y" : 6 } },
+                { "Key" : "IsLinkedToEnergy", "Bool" : true }
+            ]
+        },
+        {
+            "Component" : "Passability",
+            "Properties" : [
+                { "Key" : "IsPassable", "Bool" : true },
+                { "Key" : "IsWalkable", "Bool" : true },
+                { "Key" : "Difficulty", "Float" : 0.2 }
+            ]
+        },
+        {
+            "Component" : "LightSource",
+            "Properties" : [
+                { "Key" : "Radius", "Float" : 3 },
+                { "Key" : "NeedsEnergy", "Bool" : false },
+                { "Key" : "Color", "IntSet" : [ 140, 217, 171, 128 ] }
+            ]
+        },
+        {
+            "Component" : "Constructable",
+            "Properties" : [
+                { "Key" : "WorkAmount", "Int" : 800 },
+                {
+                    "Key" : "Contents",
+                    "RawMaterials" : [
+                        { "TypeId" : "Plastic", "StackSize" : 1 },
+                        { "TypeId" : "CarbonFiber", "StackSize" : 1 },
+                        { "TypeId" : "Gears", "StackSize" : 2 },
+                        { "TypeId" : "CopperWire", "StackSize" : 1 },
+                        { "TypeId" : "Transistor", "StackSize" : 1 }
+                    ]
+                }
+            ]
+        }
+    ]
+}

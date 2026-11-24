@@ -1,0 +1,118 @@
+{
+    "ToolPath" : "Production",
+    "Layer" : "Objects",
+    "ParentId" : "Objects/Devices/BaseDevice",
+    "Researchable" : {
+        "Prerequisites" : [
+            "Research/LifeSupport/DeathCare"
+        ]
+    },
+    "Spawnable" : {
+        "Category": "Junk",
+        "Chance" : 1.0,
+        "ChanceLocked" : 0.5
+    },
+    "Components" : [
+        {
+            "Component" : "TileTransform",
+            "Properties" : [
+                { "Key" : "Width", "Int" : 1 },
+                { "Key" : "Height", "Int" : 1 },
+                { "Key" : "IsRotatable", "Bool" : true },
+                { "Key" : "CoverPercent", "Int" : 85 },
+                // { "Key" : "WorkSpot", "Vector2" : { "x" : 0, "y" : -1 } }
+                { "Key" : "OutPort", "Vector2" : { "x" : 0, "y" : -1 } },
+                { "Key" : "InPort", "Vector2" : { "x" : 0, "y" : -1 } }
+            ]
+        },
+        {
+            "Component" : "ElectricNode",
+            "Properties" : [
+                { "Key" : "IsConsumer", "Bool" : true }
+            ]
+        },
+        {
+            "Component" : "WithFuse",
+            "Properties" : [
+                { "Key" : "MalfunctionWeight", "Float": 0.05 }
+            ]
+        },
+        {
+            "Component" : "MatStorage",
+            "Properties" : [
+                { "Key" : "Groups", "StringSet" : [ "Ice" ] },
+                { "Key" : "MaxCapacity", "Int" : 250 },
+                { "Key" : "StorageType", "String": "TakeOnly" },
+                { "Key" : "IsPublic", "Bool" : true },
+                { "Key" : "ShowFulnessBar", "Bool" : true },
+                { "Key" : "DisableExplosivenessProvider", "Bool" : true }
+            ]
+        },
+        {
+            "Component" : "Flammable",
+            "Properties" : [
+                { "Key" : "IgnitionTemperatureCelsius", "Int" : 350 },
+                { "Key" : "FireChance", "Float" : 0.1 },
+                { "Key" : "BaseExplosionLevel", "Int" : 1 },
+                { "Key" : "FlammabilityCurve", "String" : "DeviceLow" },
+                { "Key" : "ExplosivenessCurve", "String" : "DeviceLow" }
+            ]
+        },
+        {
+            "Component" : "AudioSource",
+            "Properties" : [
+                { "Key" : "AmbienceClip", "String" : "Ambience/DeviceHumm13" },
+                { "Key" : "Rolloff", "Vector2" : { "x" : 3, "y" : 12 } },
+                { "Key" : "IsLinkedToEnergy", "Bool" : true }
+            ]
+        },
+        {
+            "Component" : "TileGraphics",
+            "Properties" : [
+                { "Key" : "Type", "String": "Object" },
+                { "Key" : "Graphic", "String": "Objects/Devices/IceMaker" },
+                { "Key" : "RotateGraphic", "Bool" : false },
+                { "Key" : "HasHeight", "Bool" : true }
+            ]
+        },
+        {
+            "Component" : "ExtraInfo"
+        },
+        {
+            "Component" : "MultiCrafter",
+            "Properties" : [
+                { "Key" : "IdleWarnDefault", "Bool" : false },
+                { "Key" : "UIItemIcon", "String" : "Icons/Color/Cog" },
+                { "Key" : "CraftKey", "String" : "verb.freeze" },
+                { "Key" : "ProgressBarKey", "String" : "processing.bar" },
+                { "Key" : "IsOperatorRequired", "Bool" : false },
+                { "Key" : "CompatibleTypes", "StringSet": [
+                    "Ice"
+                ] }
+            ]
+        },
+        {
+            "Component" : "Passability",
+            "Properties" : [
+                { "Key" : "IsPassable", "Bool" : false },
+                { "Key" : "IsWalkable", "Bool" : false },
+                { "Key" : "Difficulty", "Float" : 1 }
+            ]
+        },
+        {
+            "Component" : "Constructable",
+            "Properties" : [
+                { "Key" : "WorkAmount", "Int" : 800 },
+                {
+                    "Key" : "Contents",
+                    "RawMaterials" : [
+                        { "TypeId" : "SteelPlate", "StackSize" : 1 },
+                        { "TypeId" : "Rubber", "StackSize" : 1 },
+                        { "TypeId" : "Transistor", "StackSize" : 2 },
+                        { "TypeId" : "CopperWire", "StackSize" : 5 }
+                    ]
+                }
+            ]
+        }
+    ]
+}

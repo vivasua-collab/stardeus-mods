@@ -1,0 +1,23 @@
+{
+    "Id" : "PaperBoy",
+    "Species" : [ "Human" ],
+    "LovesJobTypes" : [ "Expedition" ],
+    "AgePhaseIds" : [ "Childhood" ],
+    "RoleTypes" : [ "Good", "Poor" ],
+    "SexChances" : [
+        {
+            "Sex" : "M",
+            "Chance" : 1.0
+        }
+    ],
+    "AdjustsSkills" : [
+        {
+            "JobId" : "Expedition",
+            "Adjustment" : 5
+        },
+        {
+            "JobId" : "Social",
+            "Adjustment" : 2
+        }
+    ]
+}

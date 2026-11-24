@@ -1,0 +1,43 @@
+{
+    "Id" : "RocketPod",
+
+    "ProjectileVFX" : "AttackShipRocketVFX",
+    "ShotSoundFX" : "FX/RocketLaunchSFX",
+    "ShotSoundVol" : 1.0,
+
+    // TODO figure out units
+    "ProjectileSpeed" : 50.0,
+    // time before charging for the first shot
+    "WindupTimeMinutes" : 135,
+    // charge time in seconds real time at 1x speed before each shot
+    "ChargeTimeMinutes" : 90,
+    // time while animation of weapon firing is playing, and UI element will show firing state
+    "FiringTimeMinutes" : 15,
+
+    // flux generated for the shooter
+    "SoftFluxPerShot" : 0,
+    "HardFluxPerShot" : 250,
+
+    // Missiles go through shields
+    "SoftFluxPerShieldHit" : 0,
+    "HardFluxPerShieldHit" : 0,
+
+    // Missiles always penetrate shields
+    "ShieldPenetrateChance" : 1.0,
+
+    // Chance this weapon's own aim succeeds. Vs a ship it only picks the specifically
+    // targeted device over the hull (whether the shot connects at all is the target's
+    // Evade). Vs asteroids/meteors/capsules, and for point defense intercepting a
+    // missile, it is the full hit chance.
+    "Accuracy" : 0.85,
+
+    // will shake the shield on hit for that many seconds
+    "ShieldShakeAmt" : 1.0,
+
+    "Damage" : 500,
+    "AmmoCapacity" : 6,
+    "CreatesExplosion" : true,
+    "ExplosionRadius" : 3,
+    "DamageTypeId" : "Explosive",
+    "WeaponTypeId" : "Missile"
+}

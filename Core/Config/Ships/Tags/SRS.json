@@ -1,0 +1,19 @@
+// SRS: Strike Recon Ship
+{
+    "ChanceWillTrade" : 0.1,
+    "ChancePolice" : 0.6,
+    "CompatibleFactions" : [
+        "Player",
+        "Pirate",
+        "Virus",
+        "Scavenger"
+    ],
+    "CompatibleClasses" : [
+        "Fighter",
+        "Corvette",
+        "Frigate",
+        "Cruiser"
+    ],
+    "MinOffensiveness" : 0.3,
+    "MaxOffensiveness" : 0.6
+}

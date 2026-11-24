@@ -1,0 +1,11 @@
+{
+    "Type": "Weapons1",
+    "Ingredients": [
+        { "TypeId" : "SteelPlate", "StackSize" : 1 },
+        { "TypeId" : "Wood", "StackSize" : 1 }
+    ],
+    "IgnoreMarket" : true,
+    "ProductDefId": "Obj/Equipment/Weapons/Knife01",
+    "ProductionTimeHours": 3.0,
+    "EnergyCost": 20.0
+}

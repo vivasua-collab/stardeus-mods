@@ -1,0 +1,49 @@
+{
+    "Layer" : "Walls",
+    "ParentId" : "Structure/Walls/BaseWall",
+    "Researchable" : {
+        "Prerequisites" : [
+            "Research/Construction/StructureArmored"
+        ]
+    },
+    "Components" : [
+        {
+            "Component" : "TileGraphics",
+            "Properties" : [
+                { "Key" : "Graphic", "String" : "Structure/Walls/WallArmored01" }
+            ]
+        },
+        {
+            "Component" : "Damageable",
+            "Properties" : [
+                { "Key" : "Max", "Int" : 600 }
+            ]
+        },
+        {
+            "Component" : "Flammable",
+            "Properties" : [
+                { "Key" : "FireChance", "Float" : 0.001 }
+            ]
+        },
+        {
+            "Component" : "HullIntegrity",
+            "Properties" : [
+                { "Key" : "MaxInsulation", "Float" : 0.999 }
+            ]
+        },
+        {
+            "Component" : "Constructable",
+            "Properties" : [
+                { "Key" : "WorkAmount", "Int" : 475 },
+                {
+                    "Key" : "Contents",
+                    "RawMaterials" : [
+                        { "TypeId" : "LeadPlate", "StackSize" : 7 },
+                        { "TypeId" : "TitaniumPlate", "StackSize" : 3 },
+                        { "TypeId" : "CarbonFiber", "StackSize" : 3 }
+                    ]
+                }
+            ]
+        }
+    ]
+}

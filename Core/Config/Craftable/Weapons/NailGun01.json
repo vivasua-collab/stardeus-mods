@@ -1,0 +1,11 @@
+{
+    "Type": "Weapons1",
+    "IgnoreMarket" : true,
+    "Ingredients": [
+        { "TypeId" : "SteelPlate", "StackSize" : 1 },
+        { "TypeId" : "Gears", "StackSize" : 3 }
+    ],
+    "ProductDefId": "Obj/Equipment/Weapons/NailGun01",
+    "ProductionTimeHours": 4.0,
+    "EnergyCost": 25.0
+}

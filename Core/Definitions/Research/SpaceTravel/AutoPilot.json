@@ -1,0 +1,27 @@
+{
+    "Id" : "Research/SpaceTravel/AutoPilot",
+    "Tier" : 4,
+    "IsAbstract" : true,
+    "PreviewIcon" : "Icons/Color/Upgrade",
+    "NameKey" : "research.autopilot",
+    "Researchable" : {
+        "IsTreeNode" : true,
+        "Prerequisites" : [
+            "Research/SpaceTravel/MiningAutomation"
+        ],
+        "DatoidCosts" : [
+            {
+                "TypeId" : "DatoidTechHigh",
+                "StackSize" : 15
+            },
+            {
+                "TypeId" : "DatoidBiotic",
+                "StackSize" : 20
+            },
+            {
+                "TypeId" : "DatoidNuclear",
+                "StackSize" : 3
+            }
+        ]
+    }
+}

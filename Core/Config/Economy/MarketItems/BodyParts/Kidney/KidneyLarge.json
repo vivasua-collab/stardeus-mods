@@ -1,0 +1,9 @@
+{
+    "Id" : "Obj/Parts/Kidney/KidneyLarge",
+    "Type" : "CFD",
+    "Groups" : [ "BodyPart", "BlackMarket" ],
+    "Value" : 350.0,
+    "Rarity" : 0.1,
+    "MinSectorDifficulty" : 0.6,
+    "Volatility" : 0.00131
+}

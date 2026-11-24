@@ -1,0 +1,15 @@
+{
+    "Type": "Upgrades",
+    "Ingredients": [
+        { "TypeId" : "Microchip", "StackSize" : 5 },
+        { "TypeId" : "BatteryCell", "StackSize" : 3 },
+        { "TypeId" : "Plastic", "StackSize" : 1 },
+        { "TypeId" : "SiliconWafer", "StackSize" : 10 },
+        { "TypeId" : "Transistor", "StackSize" : 10 },
+        { "TypeId" : "CopperWire", "StackSize" : 2 }
+    ],
+    "IgnoreMarket" : true,
+    "ProductDefId": "Obj/Upgrades/AutoConnectUpgrade",
+    "ProductionTimeHours": 12.0,
+    "EnergyCost": 50.0
+}

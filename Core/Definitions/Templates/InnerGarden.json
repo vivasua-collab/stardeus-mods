@@ -1,0 +1,141 @@
+{
+    "SkipToolListing": true,
+    "Layer": "Objects",
+    "Components": [
+        {
+            "Component": "TileTransform",
+            "Properties": [
+                {
+                    "Key": "Width",
+                    "Int": 5
+                },
+                {
+                    "Key": "Height",
+                    "Int": 5
+                }
+            ]
+        },
+        {
+            "Component": "Passability"
+        },
+        {
+            "Component": "TileGraphics",
+            "Properties": [
+                {
+                    "Key": "Graphic",
+                    "String": "Icons/White/Square"
+                }
+            ]
+        },
+        {
+            "Component": "Template",
+            "Properties": [
+                {
+                    "Key": "Chance",
+                    "Float": 0.6
+                },
+                {
+                    "Key": "MinInstances",
+                    "Int": 1
+                },
+                {
+                    "Key": "MaxInstances",
+                    "Int": 4
+                },
+                {
+                    "Key": "Definitions",
+                    "StringSet": [
+                        "Objects/Devices/PlanterMini",
+                        "Objects/Devices/Heater",
+                        "Objects/Devices/PlanterMini",
+                        "Objects/Devices/PlanterMini",
+                        "Objects/Devices/PlanterMini",
+                        "Objects/Devices/PlanterMini",
+                        "Objects/Devices/OxygenPump",
+                        "Objects/Devices/PlanterMini",
+                        "Objects/Devices/PlanterMini",
+                        "Objects/Devices/PlanterMini",
+                        "Objects/Devices/PlanterMini",
+                        "Objects/Devices/Heater",
+                        "Objects/Devices/PlanterMini"
+                    ]
+                },
+                {
+                    "Key": "Positions",
+                    "Vector2Set": [
+                        {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        {
+                            "x": 0.0,
+                            "y": 2.0
+                        },
+                        {
+                            "x": 0.0,
+                            "y": 4.0
+                        },
+                        {
+                            "x": 1.0,
+                            "y": 0.0
+                        },
+                        {
+                            "x": 1.0,
+                            "y": 4.0
+                        },
+                        {
+                            "x": 2.0,
+                            "y": 0.0
+                        },
+                        {
+                            "x": 2.0,
+                            "y": 2.0
+                        },
+                        {
+                            "x": 2.0,
+                            "y": 4.0
+                        },
+                        {
+                            "x": 3.0,
+                            "y": 0.0
+                        },
+                        {
+                            "x": 3.0,
+                            "y": 4.0
+                        },
+                        {
+                            "x": 4.0,
+                            "y": 0.0
+                        },
+                        {
+                            "x": 4.0,
+                            "y": 2.0
+                        },
+                        {
+                            "x": 4.0,
+                            "y": 4.0
+                        }
+                    ]
+                },
+                {
+                    "Key": "Rotations",
+                    "StringSet": [
+                        "D",
+                        "D",
+                        "D",
+                        "D",
+                        "D",
+                        "D",
+                        "D",
+                        "D",
+                        "D",
+                        "D",
+                        "D",
+                        "D",
+                        "D"
+                    ]
+                }
+            ]
+        }
+    ]
+}

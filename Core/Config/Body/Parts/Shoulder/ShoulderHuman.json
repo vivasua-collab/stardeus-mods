@@ -1,0 +1,9 @@
+{
+    "SlotTypeId" : "Shoulder",
+    "Compatibility" : "Biological",
+    "Tier" : 2,
+    "ResistanceBase" : 6.0,
+    "TargetSpecies" : [ "Human" ],
+    "CompatibleSpeciesFlags" : [ "Humanoid" ],
+    "CompatibleBodySizes" : [ "Medium", "Large" ]
+}

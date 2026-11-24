@@ -1,0 +1,16 @@
+{
+    "Id" : "FieldSurveyor",
+    "Species" : [ "Human", "Robot", "Drone", "Sentry" ],
+    "AgePhaseIds" : [ "YoungAdult", "MidLife", "Retirement" ],
+    "RoleTypes" : [ ],
+    "AdjustsSkills" : [
+        {
+            "JobId" : "Mining",
+            "Adjustment" : 4
+        },
+        {
+            "JobId" : "Expedition",
+            "Adjustment" : 4
+        }
+    ]
+}

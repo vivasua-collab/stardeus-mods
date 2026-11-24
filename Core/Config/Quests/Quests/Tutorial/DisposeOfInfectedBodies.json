@@ -1,0 +1,73 @@
+{
+    "QuestFlags" : [ "Tutorial", "AutoAdd", "Unique" ],
+    "TitleKey" : "quest.DisposeOfDeadBodies",
+    "DescKey" : "quest.DisposeOfDeadBodies.desc",
+    "QuestProviders" : [
+        "ShipComputer"
+    ],
+    // Part of the colonist branch, after food: the starting protein covers the first week, and
+    // a colonist starving while the extractor is researched is worse than a late disposal.
+    // The accepted trade-off is that infected bodies left too long burst into crawlers.
+    // Not scenario-locked: any scenario can receive infected corpses (a dropped stasis pod
+    // brings dead travelers), so the validator holds the quest until one is actually aboard,
+    // wherever it came from.
+    "Require" : {
+        "Days" : 7
+    },
+    "QuestValidators" : [ "HasInfectedCorpse" ],
+    "AvailableWhen" : [
+        "ReadyForTutorialQuests",
+        "HasFoodProduction"
+    ],
+    "SetOnComplete" : [ "HasDisposedOfInfected" ],
+    "SetOnFail" : [ "HasDisposedOfInfected" ],
+    "Variables" : [
+        {
+            "Id" : "DisposeDeadline",
+            "Type" : "Deadline",
+            "Config" : [
+                { "Key" : "Days", "Int" : 14 }
+            ]
+        }
+    ],
+    "Steps" : [
+        {
+            "Id": "ResearchBiochemicalExtraction",
+            "Type" : "UnlockResearch",
+            "StepFlags" : [ "ActiveOnStart" ],
+            "Config" : [
+                { "Key" : "Research", "String" : "Research/Production/BiochemicalExtraction" }
+            ],
+            "SetOnComplete" : [
+                "UnlockedBiochemicalExtraction"
+            ]
+        },
+        {
+            "Id": "HaveNutrientExtractor",
+            "Type" : "HaveOnGrid",
+            "Config" : [
+                { "Key" : "Definition", "String" : "Objects/Devices/NutrientExtractor" },
+                { "Key" : "Count", "Int" : 1 }
+            ],
+            "ActivateWhen" : [
+                "UnlockedBiochemicalExtraction"
+            ],
+            "SetOnComplete" : [
+                "HasNutrientExtractor"
+            ]
+        },
+        {
+            "Id": "DisposeOfInfected",
+            "StepFlags" : [ "CompletesQuest", "FailsQuest" ],
+            "Type" : "DisposeOfInfected",
+            "Deadline" : "DisposeDeadline",
+            "ActivateWhen" : [
+                "HasNutrientExtractor"
+            ],
+            "Config" : [
+                { "Key" : "Product", "String" : "Obj/Materials/Gears" },
+                { "Key" : "Count", "Int" : 5 }
+            ]
+        }
+    ]
+}

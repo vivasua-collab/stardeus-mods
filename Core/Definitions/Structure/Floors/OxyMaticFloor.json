@@ -1,0 +1,113 @@
+{
+    "ToolPath" : "Atmosphere",
+    "Layer" : "Floor",
+    "ParentId" : "Structure/Floors/Floor01",
+    "Researchable" : {
+        "Prerequisites" : [
+            "Research/LifeSupport/OxygenAdvanced"
+        ]
+    },
+    "Components" : [
+        {
+            "Component" : "TileTransform",
+            "Properties" : [
+                { "Key" : "PlacementType", "String": "Single" },
+                { "Key" : "InPort", "Vector2" : { "x" : 0, "y" : 0 } }
+            ]
+        },
+        {
+            "Component" : "Flammable",
+            "Properties" : [
+                { "Key" : "FireChance", "Float" : 0.7 },
+                { "Key" : "SpreadIntoChance", "Float" : 0.4 },
+                { "Key" : "BaseExplosionLevel", "Int" : 3 },
+                { "Key" : "FlammabilityCurve", "String" : "DeviceHigh" },
+                { "Key" : "ExplosivenessCurve", "String" : "DeviceHigh" }
+            ]
+        },
+        {
+            "Component" : "TileGraphics",
+            "Properties" : [
+                {
+                    "Key" : "Graphic",
+                    "String": "Structure/Floors/OxyMaticFloor"
+                }
+            ]
+        },
+        {
+            "Component" : "TileAnimation",
+            "Properties" : [
+                { "Key" : "Offset", "Vector2": { "x" : 0.0, "y" : 0.0 } },
+                { "Key" : "Size", "Vector2": { "x" : 0.8, "y" : 0.8 } },
+                { "Key" : "Direction", "Int" : 1 },
+                { "Key" : "BaseSprite", "String": "Structure/Floors/OxyMaticFloor" },
+                { "Key" : "AnimSprite", "String" : "Objects/DeviceAnims/OxyMaticFloor_Anim" },
+                { "Key" : "Speed", "Float": 1.0 },
+                { "Key" : "FramePrefix", "String": "F" },
+                { "Key" : "SpriteOrder", "String": "AboveSolidFloor" },
+                { "Key" : "NumFrames", "Int": 4 },
+                { "Key" : "NeedsEnergy", "Bool": true }
+            ]
+        },
+        {
+            "Component" : "OxygenProducer",
+            "Properties" : [
+                { "Key" : "Rate", "Float" : 0.08 },
+                { "Key" : "Range", "Int" : 3 },
+                { "Key" : "DisplayRange", "Int" : 20 },
+                { "Key" : "Effectiveness", "Int" : 3 },
+                { "Key" : "FuelPerDay", "Float" : 0.33 },
+                { "Key" : "EnergyCost", "Float": 10 }
+            ]
+        },
+        { "Component" : "ExtraInfo" },
+        {
+            "Component" : "RefillableStorage",
+            "Properties" : [
+                { "Key" : "DeviceType", "String" : "oxygen.pump" },
+                { "Key" : "Purpose", "String" : "fuel" },
+                { "Key" : "BarColor", "String" : "5390C6FF" },
+                { "Key" : "LockedMaterial", "String" : "Water" },
+                { "Key" : "Icon", "String" : "Obj/Materials/Water" },
+                { "Key" : "MaterialCapacity", "Int" : 3 }
+            ]
+        },
+        {
+            "Component" : "OutdoorsCheck",
+            "Properties" : [
+                { "Key" : "MustBeIndoors", "Bool" : true }
+            ]
+        },
+        {
+            "Component" : "ElectricNode",
+            "Properties" : [
+                { "Key" : "Particles", "String" : "OxygenPumpFX" },
+                { "Key" : "IsConsumer", "Bool" : true }
+            ]
+        },
+        { "Component" : "Upgrades" },
+        {
+            "Component" : "WithFuse",
+            "Properties" : [
+                { "Key" : "MalfunctionWeight", "Float": 0.25 }
+            ]
+        },
+        {
+            "Component" : "Constructable",
+            "Properties" : [
+                { "Key" : "CanReplaceSameLayer", "Bool": true },
+                { "Key" : "CanDragRow", "Bool": false },
+                { "Key" : "WorkAmount", "Int" : 1600 },
+                {
+                    "Key" : "Contents",
+                    "RawMaterials" : [
+                        { "TypeId" : "TitaniumPlate", "StackSize" : 2 },
+                        { "TypeId" : "Gears", "StackSize" : 1 },
+                        { "TypeId" : "Rubber", "StackSize" : 1 },
+                        { "TypeId" : "Microchip", "StackSize" : 1 }
+                    ]
+                }
+            ]
+        }
+    ]
+}

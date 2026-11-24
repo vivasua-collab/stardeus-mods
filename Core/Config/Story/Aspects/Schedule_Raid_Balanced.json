@@ -1,0 +1,24 @@
+{
+    // C# implementation id.
+    // Multiple configurations can point to a single implementation.
+    "AspectId" : "Schedule",
+    // Variables for the schedule on / off. No InitialDelayDaysCurve: RaidStoryAspect opens
+    // this window itself when its own cooldown (Raid_Balanced) expires.
+    "Properties" : [
+        { "Key" : "Outcome", "String" : "Raid" },
+        {
+            "Key" : "DaysCurve_On",
+            "FloatSet" : [
+                0.0, 5.0,
+                1.0, 7.0
+            ]
+        },
+        {
+            "Key" : "DaysCurve_Off",
+            "FloatSet" : [
+                0.0, 6.0,
+                1.0, 8.0
+            ]
+        }
+    ]
+}

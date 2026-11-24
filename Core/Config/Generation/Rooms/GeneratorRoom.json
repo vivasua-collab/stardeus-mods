@@ -1,0 +1,24 @@
+{
+    "Type" : "GeneratorRoom",
+    "SizeMin" : 70,
+    "SizeMax" : 300,
+    "CountMin" : 2,
+    "CountMax" : 5,
+    "Chance" : 1.0,
+    "FillMin" : 0.4,
+    "FillMax" : 0.6,
+    "CompatibleObjects" : [
+        "Objects/Devices/Battery",
+        "Objects/Devices/MatterReactorMini",
+        "Objects/Devices/MatterReactor",
+        "Objects/Devices/EnergyConnector",
+        "Objects/Devices/Heater",
+        "Objects/Devices/OxygenPump"
+    ],
+    "CompatibleTemplates" : [
+        "Templates/EnergyGen01",
+        "Templates/EnergyGen02",
+        "Templates/EnergyGen03",
+        "Templates/EnergyGen04"
+    ]
+}

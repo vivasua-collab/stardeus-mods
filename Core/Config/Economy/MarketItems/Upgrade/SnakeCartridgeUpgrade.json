@@ -1,0 +1,12 @@
+{
+    "Id" : "Obj/Upgrades/SnakeCartridgeUpgrade",
+    "Type" : "CFD",
+    "Groups" : [ "Upgrade", "RareUpgrade" ],
+    "Value" : 15000.0,
+    "Rarity" : 0.35,
+    "TraderQuantity" : 1.0,
+    "MaxTraderQuantity" : 1,
+    "MinSectorDifficulty" : 0.0,
+    "PlayerSellPriceMultiplier": 0.8,
+    "Volatility" : 0.002
+}

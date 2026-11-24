@@ -1,0 +1,11 @@
+{
+    "Type": "Food",
+    "Ingredients": [
+        { "TypeId" : "Protein", "StackSize" : 1 },
+        { "TypeId" : "Water", "StackSize" : 1 }
+    ],
+    "IgnoreMarket" : true,
+    "ProductDefId": "Obj/Meals/SurvivalMeal",
+    "ProductionTimeHours": 1.5,
+    "EnergyCost": 5.0
+}

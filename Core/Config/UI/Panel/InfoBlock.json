@@ -1,0 +1,10 @@
+{
+    "Id" : "Panel/InfoBlock",
+
+    "Color" : "UI/Main/Sec-2",
+    "Alpha" : 0.95,
+
+    "Image" : "UI/Buttons/IconButtonBG",
+    "ImageType" : "Sliced",
+    "ImageBorderLBRT" : [ 8, 8, 8, 8 ]
+}

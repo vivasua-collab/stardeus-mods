@@ -1,0 +1,8 @@
+{
+    "Floats" : [
+        { "Key" : "TelescopeScanTimeDays", "Float" : 14 },
+        // Duration days is set separately in terraforming config jsons for each type
+        // this is just a multiplier on top of that
+        { "Key" : "TerraformSpeed", "Float" : 1.0 }
+    ]
+}

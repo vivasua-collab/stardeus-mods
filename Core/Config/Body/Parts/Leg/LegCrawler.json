@@ -1,0 +1,24 @@
+{
+    "SlotTypeId" : "Leg",
+    "NameKey" : "bodypart.Appendage.LegCrawler",
+    "DescKey" : "bodypart.Appendage.LegCrawler.desc",
+    "Compatibility" : "Biological",
+    "TargetSpecies" : [ "Crawler" ],
+    "CompatibleSpeciesFlags" : [ "Animal" ],
+    "CompatibleBodySizes" : [ "Small", "Medium" ],
+    "PartFlags" : [ "Biological" ],
+    "ResistanceBase" : 3.0,
+    "AddsAbilities" : [
+        "Move"
+    ],
+    "ProvidesStats" : [
+        {
+            "Component" : "MoveSpeed",
+            "Properties" : [
+                { "Key" : "CompoundLimit", "Float" : 0.44 },
+                { "Key" : "AmountPerMinute", "Float" : 0.055 },
+                { "Key" : "StateMul", "Float" : 1.0 }
+            ]
+        }
+    ]
+}

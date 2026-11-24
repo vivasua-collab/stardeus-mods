@@ -1,0 +1,5 @@
+{
+    "Id" : "Hyperspace",
+    "MinExitDist" : 30,
+    "DistanceUnitsKey" : "units.lightyears.billions"
+}

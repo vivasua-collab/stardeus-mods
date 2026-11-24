@@ -1,0 +1,8 @@
+{
+    // Sight -> dodge chance added. 8 points per 100% Sight, capped at 140%, 2% per point
+    "FloatSet" : [
+        0.0, -0.16,
+        1.0, 0.0,
+        1.4, 0.064
+    ]
+}

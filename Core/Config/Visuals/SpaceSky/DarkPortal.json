@@ -1,0 +1,14 @@
+{
+    "Id" : "DarkPortal",
+    "Templates" : [
+        "DarkPortal"
+    ],
+    "Shadow" : "#0F2A0A",
+    "Mid" : "#6BC23A",
+    "Highlight" : "#D07CFF",
+    "Strength" : 0.95,
+    "Intensity" : 1.3,
+    "BrightnessRange" : 0.6,
+    "RimStrength" : 0.22,
+    "AmbientStorm" : "DarkPortalFlashes"
+}

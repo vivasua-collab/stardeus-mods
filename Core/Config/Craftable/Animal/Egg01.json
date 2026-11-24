@@ -1,0 +1,21 @@
+{
+    "Type": "Animal",
+    "Ingredients": [
+        { "TypeId" : "Protein", "StackSize" : 10 },
+        { "TypeId" : "Carbon", "StackSize" : 10 },
+        { "TypeId" : "Water", "StackSize" : 8 },
+        { "TypeId" : "StemCells", "StackSize" : 20 }
+    ],
+    "DisposableOutput": [
+        { "TypeId" : "Protein", "StackSize" : 3 },
+        { "TypeId" : "CrawlerGoo", "StackSize" : 3 },
+        { "TypeId" : "EggShell", "StackSize" : 1 },
+        { "TypeId" : "Water", "StackSize" : 2 },
+        { "TypeId" : "StemCells", "StackSize" : 2 }
+    ],
+    "IgnoreMarket" : true,
+    "OutputMultiplier" : 1,
+    "ProductDefId": "Obj/Eggs/Egg01",
+    "ProductionTimeHours": 18.0,
+    "EnergyCost": 150.0
+}

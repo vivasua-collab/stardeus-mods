@@ -1,0 +1,6 @@
+{
+    "Id" : "Crawler",
+    "FlagIcon" : "Icons/Color/PreviewCrawler01",
+    "IsInternal" : true,
+    "CombatObjective" : "Survive"
+}

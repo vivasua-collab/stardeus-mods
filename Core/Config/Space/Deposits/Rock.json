@@ -1,0 +1,33 @@
+{
+    "Id" : "Rock",
+    // won't apply anyway
+    // "IsCommon" : true,
+    "IsWithDepth" : true,
+    // "MinDifficulty" : 0.0,
+    // "DifficultyChance" : [
+    //     0.0, 0.2,
+    //     0.5, 0.8,
+    //     1.0, 0.2
+    // ],
+    // "UniverseQuantityChance" : [
+    //     0.0, 10.0,
+    //     1.0, 14.0
+    // ],
+    // "RegionQuantityChance" : [
+    //     0.0, 1.0,
+    //     0.7, 2.0,
+    //     0.9, 3.0,
+    //     1.0, 3.0
+    // ],
+    "InitialDepthChance" : [
+        0.0, 0.0,
+        0.5, 0.3,
+        0.85, 0.5,
+        1.0, 0.6
+    ],
+    "MiningDifficulty" : 16.0,
+    "CollectKey" : "verb.mine",
+    // can't scan for rock, it's everywhere already
+    "ScanDifficulty" : -1.0,
+    "NearbySpawnChance" : 0.0
+}

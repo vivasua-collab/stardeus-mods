@@ -1,0 +1,144 @@
+{
+    "ToolPath" : "SpaceTravel",
+    "Layer" : "Objects",
+    "ParentId" : "Objects/Devices/BaseDevice",
+    "Researchable" : {
+        "Prerequisites" : [
+            "Research/SpaceTravel/PropulsionFusion"
+        ]
+    },
+    "Spawnable" : {
+        "Category": "Engine",
+        "Chance" : 0.1,
+        "ChanceLocked" : 0.0
+    },
+    "Components" : [
+        {
+            "Component" : "TileTransform",
+            "Properties" : [
+                { "Key" : "IsRotatable", "Bool" : true },
+                { "Key" : "CoverPercent", "Int" : 0 },
+                // { "Key" : "WorkSpot", "Vector2" : { "x" : 1, "y" : 3 } },
+                // { "Key" : "OutPort", "Vector2" : { "x" : 1, "y" : -1 } },
+                { "Key" : "InPort", "Vector2" : { "x" : 1, "y" : 3 } },
+                { "Key" : "Width", "Int" : 3 },
+                { "Key" : "Height", "Int" : 3 }
+            ]
+        },
+        {
+            "Component" : "IndustrialEquipment",
+            "Properties" : [
+                { "Key" : "IsNoisy", "Bool" : true }
+            ]
+        },
+        {
+            "Component" : "Damageable",
+            "Properties" : [
+                { "Key" : "Max", "Int" : 250 }
+            ]
+        },
+        {
+            "Component" : "Reinstallable",
+            "Properties" : [
+                { "Key" : "IsAdvanced", "Bool" : true }
+            ]
+        },
+        {
+            "Component" : "Hyperdrive",
+            "Properties" : [
+                { "Key" : "ChargeTimeHours", "Float" : 2.0 }
+            ]
+        },
+        { "Component" : "ExtraInfo" },
+        {
+            "Component" : "RefillableStorage",
+            "Properties" : [
+                { "Key" : "DeviceType", "String" : "engine" },
+                { "Key" : "Purpose", "String" : "fuel" },
+                // { "Key" : "BarColor", "String" : "5390C6FF" },
+                { "Key" : "LockedMaterial", "String" : "FusionCell" },
+                { "Key" : "ShowBurnRate", "Bool" : false },
+                { "Key" : "Icon", "String" : "Obj/Materials/FusionCell" },
+                { "Key" : "MaterialCapacity", "Int" : 2 }
+            ]
+        },
+        {
+            "Component" : "TileGraphics",
+            "Properties" : [
+                { "Key" : "Type", "String": "Object" },
+                { "Key" : "Graphic", "String": "Objects/Devices/FusionDrive" }
+            ]
+        },
+        {
+            "Component" : "ElectricNode",
+            "Properties" : [
+                { "Key" : "IsConsumer", "Bool" : true }
+            ]
+        },
+        {
+            "Component" : "WithFuse",
+            "Properties" : [
+                { "Key" : "MalfunctionWeight", "Float": 0.25 },
+                // Has special event (EngineFailure)
+                { "Key" : "CanHaveGenericMalfunction", "Bool": false }
+            ]
+        },
+        {
+            "Component" : "Flammable",
+            "Properties" : [
+                { "Key" : "IgnitionTemperatureCelsius", "Int" : 0 },
+                { "Key" : "BaseExplosionLevel", "Int" : 4 },
+                { "Key" : "FlammabilityCurve", "String" : "DeviceHigh" },
+                { "Key" : "ExplosivenessCurve", "String" : "DeviceHigh" }
+            ]
+        },
+        {
+            "Component" : "Passability",
+            "Properties" : [
+                { "Key" : "IsPassable", "Bool" : true },
+                { "Key" : "IsWalkable", "Bool" : false },
+                { "Key" : "Difficulty", "Float" : 0.9 }
+            ]
+        },
+        {
+            "Component" : "AudioSource",
+            "Properties" : [
+                { "Key" : "AmbienceClip", "String" : "Ambience/EngineNoise" },
+                { "Key" : "Rolloff", "Vector2" : { "x" : 25, "y" : 100 } },
+                { "Key" : "IsLinkedToEnergy", "Bool" : true }
+            ]
+        },
+        {
+            "Component" : "ShipEngine",
+            "Properties" : [
+                { "Key" : "Power", "Float" : 50 },
+                { "Key" : "EnergyCost", "Float" : 50 },
+                { "Key" : "FlameSize", "Vector2" : { "x" : 3, "y" : 30 } },
+                { "Key" : "WorksIn", "StringSet" : [ "Region" ] },
+                { "Key" : "LegacyEmissionEffect", "String" : "ShipEngineFX" }
+            ]
+        },
+        {
+            "Component" : "ShipCombatEngine",
+            "Properties" : [
+                { "Key" : "ShipEngineId" , "String" : "FusionDrive" }
+            ]
+        },
+        {
+            "Component" : "Constructable",
+            "Properties" : [
+                { "Key" : "Placement", "String" : "InSpaceAttached" },
+                { "Key" : "WorkAmount", "Int" : 2000 },
+                {
+                    "Key" : "Contents",
+                    "RawMaterials" : [
+                        { "TypeId" : "TitaniumPlate", "StackSize" : 8 },
+                        { "TypeId" : "CopperWire", "StackSize" : 5 },
+                        { "TypeId" : "Gears", "StackSize" : 3 },
+                        { "TypeId" : "Microchip", "StackSize" : 1 }
+                    ]
+                }
+            ]
+        }
+    ]
+}

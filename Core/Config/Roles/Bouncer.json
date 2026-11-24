@@ -1,0 +1,29 @@
+{
+    "Id" : "Bouncer",
+    "Species" : [ "Human" ],
+    "AgePhaseIds" : [ "YoungAdult", "MidLife", "Retirement" ],
+    "RoleTypes" : [ "Dumb", "Poor" ],
+    "IncompatibleTraitIds" : [ "Pacifist" ],
+    "LovesJobTypes" : [ "Melee" ],
+    "BodyTypes" : "ML",
+    "SexChances" : [
+        {
+            "Sex" : "M",
+            "Chance" : 0.90
+        },
+        {
+            "Sex" : "F",
+            "Chance" : 0.10
+        }
+    ],
+    "AdjustsSkills" : [
+        {
+            "JobId" : "Melee",
+            "Adjustment" : 6
+        },
+        {
+            "JobId" : "Social",
+            "Adjustment" : -1
+        }
+    ]
+}

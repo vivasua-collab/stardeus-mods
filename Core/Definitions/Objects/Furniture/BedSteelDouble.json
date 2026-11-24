@@ -1,0 +1,30 @@
+{
+    "BuildGroup" : "BedDouble",
+    "Layer" : "Objects",
+    "ParentId" : "Objects/Furniture/BaseBedDouble",
+    "Spawnable" : {
+        "Category": "Furniture",
+        "Chance" : 1.0,
+        "ChanceLocked" : 0.5
+    },
+    "Components" : [
+        {
+            "Component" : "TileGraphics",
+            "Properties" : [
+                { "Key" : "Graphic", "String": "Objects/Furniture/BedSteelDouble" }
+            ]
+        },
+        {
+            "Component" : "Constructable",
+            "Properties" : [
+                {
+                    "Key" : "Contents",
+                    "RawMaterials" : [
+                        { "TypeId" : "SteelPlate", "StackSize" : 4 },
+                        { "TypeId" : "CarbonFiber", "StackSize" : 2 }
+                    ]
+                }
+            ]
+        }
+    ]
+}

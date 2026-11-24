@@ -1,0 +1,11 @@
+{
+    // sanity level -> skill multiplier
+    // 1.0 at resting sanity (difficulty baselines are 0.30-0.50), so skill decides quality
+    "FloatSet" : [
+        0.0, 0.6,
+        0.2, 0.8,
+        0.35, 1.0,
+        0.6, 1.05,
+        1.0, 1.1
+    ]
+}

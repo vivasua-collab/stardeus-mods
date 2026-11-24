@@ -1,0 +1,31 @@
+{
+    // C# implementation id.
+    // Multiple configurations can point to a single implementation.
+    "AspectId" : "EventPicker",
+    "Properties" : [
+        { "Key" : "Outcome", "String" : "Positive" },
+        {
+            "Key" : "SeenDaysAgoWeightCurve",
+            "String" : "StoryPicker/SeenDaysAgoWeight"
+        },
+        {
+            "Key" : "StartDaysAgoWeightCurve",
+            "String" : "StoryPicker/StartDaysAgoWeight"
+        },
+        {
+            "Key" : "SeenCountWeightCurve",
+            "String" : "StoryPicker/SeenCountWeight"
+        },
+        {
+            // if an event is fired when schedule allows it, cooldown will
+            // not fire any more events for this schedule for given amount of
+            // hours
+            "Key" : "ScheduleCooldownHoursCurve",
+            // random value => hours
+            "FloatSet" : [
+                0.0, 12.0,
+                1.0, 24.0
+            ]
+        }
+    ]
+}

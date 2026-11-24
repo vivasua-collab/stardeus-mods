@@ -1,0 +1,21 @@
+// MSV: Multi-role Support Vessel
+{
+    "ChanceWillTrade" : 0.5,
+    "ChancePolice" : 0.3,
+    "CompatibleFactions" : [
+        "Player",
+        "OldEarth",
+        "Capitalist",
+        "Adventurer",
+        "Scavenger"
+    ],
+    "CompatibleClasses" : [
+        "Frigate",
+        "Cruiser",
+        "Corvette",
+        "Carrier",
+        "Unclassified"
+    ],
+    "MinOffensiveness" : 0.2,
+    "MaxOffensiveness" : 0.6
+}

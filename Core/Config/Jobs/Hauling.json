@@ -1,0 +1,7 @@
+{
+    "Id" : "Hauling",
+    "Importance" : 1.0,
+    "IconId" : "Icons/Color/Haul",
+    "EnabledByAbilities" : [ "Carry" ],
+    "Types" : [ "Physical", "Mindless", "Unskilled", "NanobotCompatible" ]
+}

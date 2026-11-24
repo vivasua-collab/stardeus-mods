@@ -1,0 +1,69 @@
+{
+    "Id" : "Orbotron",
+    "StartingSkillCurves" : [
+        {
+            // A combat bot: built to fight, well above the neutral level 5
+            "Jobs" : [ "Melee", "Shooting" ],
+            "LevelCurve" : [
+                0.0, 7.0,
+                0.33, 7.0,
+                0.34, 8.0,
+                0.66, 8.0,
+                0.67, 9.0,
+                1.0, 9.0
+            ]
+        },
+        {
+            "Jobs" : [ "Construction", "Demolition", "Repairs", "Mining" ],
+            "LevelCurve" : [
+                0.0, 3.0,
+                0.3, 3.0,
+                0.31, 4.0,
+                0.9, 4.0,
+                0.91, 5.0,
+                1.0, 5.0
+            ]
+        },
+        {
+            "Jobs" : [ "Social" ],
+            "LevelCurve" : [
+                0.0, 0.0,
+                1.0, 0.0
+            ]
+        },
+        {
+            "LevelCurve" : [
+                0.0, 0.0,
+                0.3, 0.0,
+                0.31, 1.0,
+                0.9, 1.0,
+                0.91, 2.0,
+                1.0, 2.0
+            ]
+        }
+    ],
+    "AgeSkillCurves" : [
+        {
+            "LevelCurve" : [
+                0.0, 0.0,
+                1.0, 0.5
+            ]
+        }
+    ],
+    "StartingJobs" : [
+        { "Job" : "Construction" },
+        { "Job" : "Demolition" },
+        { "Job" : "Expedition" },
+        { "Job" : "Firefighting" },
+        { "Job" : "Hauling" },
+        { "Job" : "Melee" },
+        { "Job" : "Mining" },
+        { "Job" : "Repairs" },
+        { "Job" : "Robotics" },
+        { "Job" : "Rescue" },
+        { "Job" : "Research" },
+        { "Job" : "Shooting" },
+        { "Job" : "Social" },
+        { "Job" : "Task" }
+    ]
+}

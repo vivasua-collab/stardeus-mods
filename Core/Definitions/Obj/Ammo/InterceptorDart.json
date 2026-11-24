@@ -1,0 +1,38 @@
+{
+    "Layer" : "FreeEntities",
+    "ParentId" : "Obj/Materials/BaseMaterial",
+    "Researchable" : {
+        "Prerequisites" : [ "Research/ShipCombat/PointDefense" ]
+    },
+    "Components" : [
+        {
+            "Component" : "ObjGraphics",
+            "Properties" : [
+                { "Key" : "Graphic", "String": "Obj/Ammo/InterceptorDart" }
+            ]
+        },
+        {
+            "Component" : "ObjHealth",
+            "Properties" : [
+                { "Key" : "Max", "Int" : 50 },
+                { "Key" : "IsInvincible", "Bool" : false }
+            ]
+        },
+        {
+            "Component" : "Flammable",
+            "Properties" : [
+                { "Key" : "IsTemperatureResistant", "Bool" : false },
+                { "Key" : "IgnitionTemperatureCelsius", "Int" : 200 },
+                { "Key" : "FireChance", "Float" : 1.25 },
+                { "Key" : "FlammabilityCurve", "String" : "High" }
+            ]
+        },
+        {
+            "Component" : "UnstoredMat",
+            "Properties" : [
+                { "Key" : "Type", "String" : "InterceptorDart" },
+                { "Key" : "FixedSize", "Bool" : true }
+            ]
+        }
+    ]
+}

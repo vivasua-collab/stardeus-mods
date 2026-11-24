@@ -1,0 +1,16 @@
+{
+    "Id" : "Fastidious",
+    "IconId" : "Icons/Color/Clothing",
+    "TypeId" : "Civilized",
+    "CompatibleSpecies" : [ "Human" ],
+    "IncompatibleTraitIds" : [
+        "Thrifty"
+    ],
+    "AdjustsSkills" : [
+        {
+            "JobId" : "Cleaning",
+            "Adjustment" : 1
+        }
+    ],
+    "Rarity" : 0.5
+}

@@ -1,0 +1,83 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Stardeus ShipCombatFluxStrategyDef",
+  "description": "Generated from C# by Game/Generate JSON Schemas, do not edit by hand",
+  "$ref": "#/$defs/ShipCombatFluxStrategyDef",
+  "$defs": {
+    "ShipCombatFluxStrategyDef": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "IsBlunder": {
+          "type": "boolean"
+        },
+        "ShootFluxThreshold": {
+          "type": "number"
+        },
+        "ToleratedFluxTotal": {
+          "type": "number"
+        },
+        "ToleratedFluxHard": {
+          "type": "number"
+        },
+        "VentFluxStopHard": {
+          "type": "number"
+        },
+        "VentFluxStopTotal": {
+          "type": "number"
+        },
+        "Strength": {
+          "type": "number"
+        },
+        "Id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "IdH": {
+          "type": "integer"
+        },
+        "FactionChanceKeys": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "FactionChanceVals": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "number"
+          }
+        },
+        "MinOffensiveness": {
+          "type": "number"
+        },
+        "MaxOffensiveness": {
+          "type": "number"
+        },
+        "StrengthDifferenceChance": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "number"
+          }
+        }
+      },
+      "additionalProperties": false
+    }
+  }
+}

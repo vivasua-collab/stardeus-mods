@@ -1,0 +1,12 @@
+{
+    // Sector difficulty -> credits worth of one expedition market loot (ExpeditionFoundMarketItem),
+    // times the event's LootValueMul. Risk drives reward, not the player's wealth: a wallet-based
+    // budget fed raids (priced on wealth) with ever bigger loot. No single item worth more than
+    // the budget can drop. Sector 0 keeps the old 3k floor; the late game tops out at 25k
+    // instead of 50k. See Docs/Architecture/Systems/MarketLoot.md.
+    "FloatSet" : [
+        0.0, 3000.0,
+        0.5, 8000.0,
+        1.0, 25000.0
+    ]
+}

@@ -1,0 +1,11 @@
+{
+    "Id" : "CargoCopter",
+    "Probability" : 1.0,
+    "StarmapSizeMul" : 2.0,
+    "OrderDist" : -30,
+    "StarfieldSizeMul" : 0.1,
+    "Sprite" : "Objects/Devices/CargoCopter_Flying",
+    "IsConstantSizeInStarmap" : false,
+    "CanRotate" : false,
+    "KeepUprightInStarfield" : true
+}

@@ -1,0 +1,11 @@
+{
+    "Id" : "Obj/Equipment/Weapons/Vibroblade01",
+    "Type" : "CFD",
+    "Groups" : [ "Weapon" ],
+    "Value" : 7900.0,
+    "Rarity" : 0.35,
+    "TraderQuantity" : 1.0,
+    "MaxTraderQuantity" : 5,
+    "MinSectorDifficulty" : 0.85,
+    "Volatility" : 0.003
+}

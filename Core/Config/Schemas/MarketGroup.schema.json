@@ -1,0 +1,47 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Stardeus MarketGroup",
+  "description": "Generated from C# by Game/Generate JSON Schemas, do not edit by hand",
+  "$ref": "#/$defs/MarketGroup",
+  "$defs": {
+    "MarketGroup": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "Id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "NameT": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "IdH": {
+          "type": "integer"
+        },
+        "Rarity": {
+          "type": "number"
+        },
+        "TraderQuantity": {
+          "type": "number"
+        },
+        "MaxTraderQuantity": {
+          "type": "integer"
+        },
+        "Volatility": {
+          "type": "number"
+        },
+        "RecessionEffect": {
+          "type": "number"
+        }
+      },
+      "additionalProperties": false
+    }
+  }
+}

@@ -1,0 +1,156 @@
+{
+    "Ints" : [
+        // How frequently you can give gifts to the same NPC space ship
+        { "Key" : "GiftIntervalHours", "Int" : 72 },
+        // how many options to give when offering a gift
+        { "Key" : "GiftPackageOptions", "Int" : 3 },
+        // how many options to give when asking for fuel
+        { "Key" : "FuelPackageOptions", "Int" : 3 },
+        // how often the NPC relation simulation runs
+        { "Key" : "DiplomacySimIntervalHours", "Int" : 24 },
+        // length of a "diplomatic era" - how often NPC drift targets are re-derived
+        { "Key" : "DiplomacyEraHours", "Int" : 1080 },
+        // two in-game weeks between alliance proposals to the same faction
+        { "Key" : "AllianceProposalCooldownHours", "Int" : 336 },
+        // longer lockout after the player breaks an alliance
+        { "Key" : "AllianceBreakCooldownHours", "Int" : 720 }
+    ],
+    "Floats" : [
+        // legacy positive gift change, including favorable top-package rejection
+        { "Key" : "GiftMaxFactionAttitudeChange", "Float" : 0.05 },
+        // how much % a faction attitude can change when we offer a bad gift
+        { "Key" : "GiftMinFactionAttitudeChange", "Float" : -0.02 },
+        // mutual attitude at or below which two factions become enemies
+        { "Key" : "RelationEnemyThreshold", "Float" : -0.75 },
+        // mutual attitude at or above which two factions stop being enemies
+        { "Key" : "RelationEnemyClearThreshold", "Float" : -0.25 },
+        // mutual attitude at or below which an existing alliance dissolves
+        { "Key" : "AllianceBreakThreshold", "Float" : -0.25 },
+        // NPC-only. The player's odds come from the AllianceAcceptanceChance curve
+        { "Key" : "NPCAllianceFormThreshold", "Float" : 0.75 },
+        // per-step roll once mutual is above the threshold. Tuned so it adds a few
+        // days of delay rather than acting as a second gate
+        { "Key" : "NPCAllianceFormChance", "Float" : 0.25 },
+        // how far an era target may sit from the configured baseline
+        { "Key" : "DiplomacyEraSpread", "Float" : 0.4 },
+        // max attitude movement per simulation step; 0 disables NPC drift entirely.
+        // step * stepsPerEra caps travel per era (0.01 * 45 = 0.45 vs a 0.80 full
+        // swing), so this value IS the smoothing. Raising it buys alliance formation
+        // reliability at the cost of larger realized attitude swings
+        { "Key" : "NPCAttitudeStepPerSim", "Float" : 0.01 },
+        // standing hit when the player breaks an alliance
+        { "Key" : "AllianceBreakStandingPenalty", "Float" : -0.25 },
+        // small standing hit when a faction turns down an alliance proposal, so
+        // repeatedly asking is not free
+        { "Key" : "AllianceRejectStandingPenalty", "Float" : -0.01 },
+        // chance an enemy-of-our-enemy joins the player's fight. Rolled once per ship
+        // per combat from a deterministic seed, so a refusal sticks for that fight
+        { "Key" : "ShipCombatCommonEnemyJoinChance", "Float" : 0.25 },
+        // base chance a same-faction/allied/police ship reinforces the player's
+        // opponents. Multiplied by Difficulty.SoftLevel (0.1/0.5/1.0/2.0/~3.0) before
+        // use, so it scales 0.025/0.125/0.25/0.50/0.75 across Peaceful..Impossible.
+        // Rolled once per ship per combat from a deterministic seed, same as above
+        { "Key" : "ShipCombatEnemyJoinChance", "Float" : 0.25 },
+        // allied traders keep this fraction of their markup. Multiplicative, so a buy
+        // price can never drop below market no matter how the markup curve rolled
+        { "Key" : "AllianceTraderMarkupMul", "Float" : 0.4 },
+        // standing swing when the PLAYER defeats a ship, applied to every faction that
+        // is Enemy / Allied with the victim's faction
+        { "Key" : "KillEnemyOfFactionAttitudeBonus", "Float" : 0.02 },
+        { "Key" : "KillAllyOfFactionAttitudePenalty", "Float" : -0.03 },
+        // standing hit with a guest's faction when the player attacks the calm guest and
+        // its people aboard turn hostile. As much as breaking an alliance
+        { "Key" : "AttackGuestStandingPenalty", "Float" : -0.25 }
+    ],
+    "FloatSets" : [
+        {
+            // How likely an NPC ship will accept other ship's surrender
+            // given their attitude towards that ship's faction
+            "Key" : "NPCShipSurrenderAccept_AttitudeChance",
+            "FloatSet" : [
+                -1.0, 0.75,
+                -0.5, 0.85,
+                -0.1, 0.9,
+                0.0, 0.95,
+                0.5, 1.0,
+                1.0, 1.0
+            ]
+        },
+        {
+            // How likely an NPC ship will give you fuel depending on their
+            // attitude towards you
+            "Key" : "NPCShipGiveFuel_AttitudeChance",
+            "FloatSet" : [
+                -1.0, 0.0,
+                -0.1, 0.03,
+                0.0, 0.25,
+                0.5, 0.33,
+                1.0, 0.9
+            ]
+        },
+        {
+            // How likely an NPC ship will trade given the attitude
+            // towards another ship
+            "Key" : "NPCShipTrade_AttitudeChance",
+            // attitude -> chance
+            // attitude goes from -1.0 to 1.0, chance goes from 0.0 to 1.0
+            "FloatSet" : [
+                -1.0, 0.1,
+                -0.5, 0.25,
+                -0.25, 0.75,
+                0.0, 1.0,
+                1.0, 1.0
+            ]
+        },
+        {
+            // How likely an NPC ship will accept a gift offer
+            // (not the actual gift package!)
+            // towards another ship
+            "Key" : "NPCShipGift_AttitudeChance",
+            // attitude -> chance
+            // attitude goes from -1.0 to 1.0, chance goes from 0.0 to 1.0
+            "FloatSet" : [
+                -1.0, 0.25,
+                -0.5, 0.5,
+                -0.25, 0.85,
+                0.0, 1.0,
+                1.0, 1.0
+            ]
+        },
+        {
+            // How many hours will an NPC ship with current attitude wait
+            // for the player to respond to a hail
+            "Key" : "NPCShipHailTimeoutHours_AttitudeChance",
+            "FloatSet" : [
+                -1.0, 2.0,
+                0.0, 4.0,
+                1.0, 12.0
+            ]
+        },
+        {
+            // for accepting a gift
+            "Key" : "AttitudeGiftChanceMul",
+            "FloatSet" : [
+                -1.0, 0.85,
+                0.0, 1.0,
+                1.0, 1.1
+            ]
+        },
+        {
+            // if you own 1000 uranium, uranium will be less valuable for you
+            // as a gift compared to something like plastic which you have only 10 of
+            // while plastic alone is cheaper than uranium
+            "Key" : "GiftMatValueOwnershipMul",
+            "FloatSet" : [
+                0.0, 10,
+                1.0, 10,
+                10.0, 5,
+                50.0, 3,
+                100.0, 1,
+                500.0, 0.5,
+                1000.0, 0.25,
+                10000.0, 0.1
+            ]
+        }
+    ]
+}

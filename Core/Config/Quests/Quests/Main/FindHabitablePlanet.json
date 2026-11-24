@@ -1,0 +1,47 @@
+{
+    "QuestFlags" : [ "Main", "AutoAdd", "Unique" ],
+    "TitleKey" : "quest.FindHabitablePlanet",
+    "DescKey" : "quest.FindHabitablePlanet.desc",
+    "QuestProviders" : [
+        "ShipComputer"
+    ],
+    "AvailableWhen" : [
+        "HasTelescopeResearch"
+    ],
+    "SetOnComplete" : [ "HasFoundHabitablePlanet" ],
+    "Steps" : [
+        {
+            "Id": "ResearchTelescope",
+            "Type" : "UnlockResearch",
+            "StepFlags" : [ "ActiveOnStart" ],
+            "Config" : [
+                { "Key" : "Research", "String" : "Research/Scanning/Telescope" }
+            ],
+            "SetOnComplete" : [
+                "UnlockedTelescope"
+            ]
+        },
+        {
+            "Id": "BuildTelescope",
+            "Type" : "HaveOnGrid",
+            "Config" : [
+                { "Key" : "Definition", "String" : "Objects/Devices/Telescope" },
+                { "Key" : "Count", "Int" : 1 }
+            ],
+            "ActivateWhen" : [
+                "UnlockedTelescope"
+            ],
+            "SetOnComplete" : [
+                "HasTelescope"
+            ]
+        },
+        {
+            "Id": "FindHabitablePlanet",
+            "Type" : "FindHabitablePlanet",
+            "StepFlags": [ "CompletesQuest" ],
+            "ActivateWhen" : [
+                "HasTelescope"
+            ]
+        }
+    ]
+}

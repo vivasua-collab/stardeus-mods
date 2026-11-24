@@ -1,0 +1,16 @@
+{
+    "Id" : "Research/Security/DefensiveGear",
+    "Tier" : 1,
+    "IsAbstract" : true,
+    "PreviewIcon" : "Obj/Weapons/RiotShield01/RiotShield01",
+    "Researchable" : {
+        "IsTreeNode" : true,
+        "Prerequisites" : [
+            "Research/Security/WeaponsBasic"
+        ],
+        "DatoidCosts" : [
+            { "TypeId" : "DatoidBasic", "StackSize" : 9 },
+            { "TypeId" : "DatoidTech",  "StackSize" : 2 }
+        ]
+    }
+}

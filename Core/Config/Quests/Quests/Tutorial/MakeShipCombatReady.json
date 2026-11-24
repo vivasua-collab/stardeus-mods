@@ -1,0 +1,105 @@
+{
+    "QuestFlags" : [ "Tutorial", "AutoAdd", "Unique" ],
+    "TitleKey" : "quest.MakeShipCombatReady",
+    "DescKey" : "quest.MakeShipCombatReady.desc",
+    "QuestProviders" : [
+        "ShipComputer"
+    ],
+    "Require" : {
+        "Days" : 20
+    },
+    "AvailableWhen" : [
+        "IsFlightReady",
+        "HasApproachedDerelict",
+        "HadExpedition"
+    ],
+    "CompleteWhen" : [
+        "HasShields",
+        "HasWeapons",
+        "HasBattleStation",
+        "BattleStationAssigned"
+    ],
+    "SetOnComplete" : [ "IsCombatReady" ],
+    "SetOnFail" : [ "IsCombatReady" ],
+    "Steps" : [
+        {
+            "Id": "ResearchShields",
+            "Type" : "UnlockResearch",
+            "StepFlags" : [ "ActiveOnStart" ],
+            "Config" : [
+                { "Key" : "Research", "String" : "Research/ShipCombat/Shields" }
+            ],
+            "SetOnComplete" : [
+                "UnlockedShields"
+            ]
+        },
+        {
+            "Id": "ResearchWeapons",
+            "Type" : "UnlockResearch",
+            "StepFlags" : [ "ActiveOnStart" ],
+            "Config" : [
+                { "Key" : "Research", "String" : "Research/ShipCombat/WeaponsBallistic" }
+            ],
+            "SetOnComplete" : [
+                "UnlockedWeapons"
+            ]
+        },
+        {
+            "Id": "HaveShield",
+            "Type" : "HaveOnGrid",
+            "TooltipKey" : "quest.MakeShipCombatReady.shield.emitter.tip",
+            "Config" : [
+                { "Key" : "Definition", "String" : "Objects/Devices/ShieldEmitter" },
+                { "Key" : "Count", "Int" : 1 }
+            ],
+            "ActivateWhen" : [
+                "UnlockedShields"
+            ],
+            "SetOnComplete" : [
+                "HasShields"
+            ]
+        },
+        {
+            "Id": "HaveWeapons",
+            "Type" : "HaveOnGrid",
+            "TooltipKey" : "quest.MakeShipCombatReady.shredder.cannon.tip",
+            "Config" : [
+                { "Key" : "Definition", "String" : "Objects/Devices/ShredderCannon" },
+                { "Key" : "Count", "Int" : 2 }
+            ],
+            "ActivateWhen" : [
+                "UnlockedWeapons"
+            ],
+            "SetOnComplete" : [
+                "HasWeapons"
+            ]
+        },
+        {
+            "Id": "HaveBattleStation",
+            "Type" : "HaveOnGrid",
+            "Config" : [
+                { "Key" : "Definition", "String" : "Objects/Devices/BattleStation" },
+                { "Key" : "Count", "Int" : 1 }
+            ],
+            "ActivateWhen" : [
+                "UnlockedWeapons"
+            ],
+            "SetOnComplete" : [
+                "HasBattleStation"
+            ]
+        },
+        {
+            "Id": "AssignBattleStation",
+            "Type" : "AssignBattleStation",
+            "TitleKey" : "quest.MakeShipCombatReady.assign.battlestation",
+            "DescKey" : "quest.MakeShipCombatReady.assign.battlestation.tip",
+            "ActivateWhen" : [
+                "HasWeapons",
+                "HasBattleStation"
+            ],
+            "SetOnComplete" : [
+                "BattleStationAssigned"
+            ]
+        }
+    ]
+}

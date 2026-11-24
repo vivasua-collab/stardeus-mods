@@ -1,0 +1,12 @@
+{
+    "SpeciesType" : "Mindjar",
+    "IsDefault" : true,
+    "Parts" : [
+        { "Slot" : "Body", "Part" : "Body/BodyMindjar" },
+        { "Slot" : "Eye", "Part" : "Eye/MiniOptics" },
+        { "Slot" : "Mobilizer", "Part" : "Mobilizer/MiniTracks" },
+        { "Slot" : "Battery", "Part" : "Battery/MiniCell" },
+        { "Slot" : "Implant", "Empty" : true },
+        { "Slot" : "Brain", "Part" : "Brain/BrainHuman" }
+    ]
+}

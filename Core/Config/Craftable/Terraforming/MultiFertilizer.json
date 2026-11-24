@@ -1,0 +1,14 @@
+{
+    "Type": "Terraforming",
+    "Ingredients": [
+        { "TypeId" : "Edenium", "StackSize" : 1 },
+        { "TypeId" : "PlantFiber", "StackSize" : 2 },
+        { "TypeId" : "Protein", "StackSize" : 3 },
+        { "TypeId" : "Soil", "StackSize" : 2 },
+        { "TypeId" : "Ashes", "StackSize" : 3 },
+        { "TypeId" : "StemCells", "StackSize" : 10 }
+    ],
+    "ProductDefId": "Obj/Materials/MultiFertilizer",
+    "ProductionTimeHours": 4.0,
+    "EnergyCost": 50.0
+}

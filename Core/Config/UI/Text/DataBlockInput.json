@@ -1,0 +1,9 @@
+{
+    "Id" : "Text/DataBlockInput",
+
+    "Color" : "UI/Text/Main",
+    "Alpha" : 1,
+
+    "TextFontSize" : 20,
+    "TextMarginLTRB" : [ 12, 0, 12, 0 ]
+}

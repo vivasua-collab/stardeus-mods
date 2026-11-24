@@ -1,0 +1,16 @@
+{
+    "Id" : "Astronomer",
+    "Species" : [ "Human" ],
+    "AgePhaseIds" : [ "YoungAdult", "MidLife", "Retirement" ],
+    "RoleTypes" : [ ],
+    "AdjustsSkills" : [
+        {
+            "JobId" : "Research",
+            "Adjustment" : 4
+        },
+        {
+            "JobId" : "Expedition",
+            "Adjustment" : 2
+        }
+    ]
+}

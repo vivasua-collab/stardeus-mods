@@ -1,0 +1,13 @@
+{
+    "Type": "Terraforming",
+    "Ingredients": [
+        { "TypeId" : "Terranite", "StackSize" : 1 },
+        { "TypeId" : "Soil", "StackSize" : 10 },
+        { "TypeId" : "Water", "StackSize" : 2 },
+        { "TypeId" : "PlantFiber", "StackSize" : 5 },
+        { "TypeId" : "StemCells", "StackSize" : 10 }
+    ],
+    "ProductDefId": "Obj/Materials/OrganicTurf",
+    "ProductionTimeHours": 4.0,
+    "EnergyCost": 50.0
+}

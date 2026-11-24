@@ -1,0 +1,82 @@
+{
+    "ToolPath" : "Energy",
+    "Layer" : "Objects",
+    "ParentId" : "Objects/Devices/SolarPanel",
+    "NameKey": "objects.devices.solarpanelarray",
+    "DescKey": "objects.devices.solarpanel.desc",
+    "Researchable" : {
+        "Prerequisites" : [ "Research/Energy/SolarEfficient" ]
+    },
+    "TranslationVars" : [ "50" ],
+    "Spawnable" : {
+        "Category": "SolarPanel",
+        "Chance" : 1.0,
+        "ChanceLocked" : 0.5,
+        "Quantity" : {
+            "Component" : "Curve",
+            "Properties" : [
+                { "Key" : "Keys",  "FloatSet" : [0.0, 0.8, 0.95, 1.0 ] },
+                { "Key" : "Values", "IntSet" :  [1,   2,   2,    3  ] }
+            ]
+        }
+    },
+    "Components" : [
+        {
+            "Component" : "TileTransform",
+            "Properties" : [
+                { "Key" : "Width", "Int" : 3 },
+                { "Key" : "Height", "Int" : 3 }
+            ]
+        },
+        {
+            "Component" : "ElectricNode",
+            "Properties" : [
+                { "Key" : "Particles", "String" : "PanelSparkle9FX" },
+                { "Key" : "IsProducer", "Bool" : true }
+            ]
+        },
+        {
+            "Component" : "WithFuse",
+            "Properties" : [
+                { "Key" : "MalfunctionWeight", "Float": 0.25 }
+            ]
+        },
+        {
+            "Component" : "SolarPanel",
+            "Properties" : [
+                { "Key" : "PowerOutput", "Float": 50 }
+            ]
+        },
+        {
+            "Component" : "LightSource",
+            "Properties" : [
+                { "Key" : "Radius", "Float" : 9 }
+            ]
+        },
+        {
+            "Component" : "TileGraphics",
+            "Properties" : [
+                { "Key" : "Graphic", "String": "Objects/Devices/SolarPanelArray2" }
+            ]
+        },
+        {
+            "Component" : "Constructable",
+            "Properties" : [
+                { "Key" : "Placement", "String" : "InSpaceAttachedChained" },
+                { "Key" : "PlacementGroup", "String" : "SolarPanel" },
+                { "Key" : "WorkAmount", "Int" : 2500 },
+                {
+                    "Key" : "Contents",
+                    "RawMaterials" : [
+                        { "TypeId" : "Plastic", "StackSize" : 2 },
+                        { "TypeId" : "SiliconWafer", "StackSize" : 9 },
+                        { "TypeId" : "Microchip3", "StackSize" : 1 },
+                        { "TypeId" : "GoldWire", "StackSize" : 3 },
+                        { "TypeId" : "BatteryCell", "StackSize" : 3 },
+                        { "TypeId" : "Glass", "StackSize" : 9 }
+                    ]
+                }
+            ]
+        }
+    ]
+}

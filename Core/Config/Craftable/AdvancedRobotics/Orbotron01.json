@@ -1,0 +1,15 @@
+{
+    "Type": "Robotics3",
+    "Ingredients": [
+        { "TypeId" : "TitaniumPlate", "StackSize" : 3 },
+        { "TypeId" : "Gears", "StackSize" : 10 },
+        { "TypeId" : "LeadPlate", "StackSize" : 3 },
+        { "TypeId" : "SiliconWafer", "StackSize" : 3 },
+        { "TypeId" : "Transistor", "StackSize" : 10 },
+        { "TypeId" : "Microchip", "StackSize" : 8 },
+        { "TypeId" : "CopperWire", "StackSize" : 5 }
+    ],
+    "ProductDefId": "Beings/Orbotron01",
+    "ProductionTimeHours": 720.0,
+    "EnergyCost": 200.0
+}

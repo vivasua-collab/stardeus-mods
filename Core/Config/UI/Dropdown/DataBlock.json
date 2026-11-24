@@ -1,0 +1,25 @@
+{
+    "Id" : "Dropdown/DataBlock",
+
+    "ChildrenKeys" : [
+        "PanelBackground",
+        "PanelArrow",
+        "PanelArrowItem",
+        "SelectableDropdown",
+        "SelectableItem",
+        "TextMain",
+        "TextItem",
+        "ActiveOverlay"
+    ],
+
+    "ChildrenIds" : [
+        "Panel/ColorlessIconButton",
+        "Panel/DropdownArrow",
+        "Panel/DropdownArrowItem",
+        "Selectable/Default",
+        "Selectable/DropdownItemGame",
+        "Text/DataBlock",
+        "Text/DataBlock",
+        "Overlay/Icon"
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "Id" : "Obj/Equipment/Weapons/Machete01",
+    "Type" : "CFD",
+    "Groups" : [ "Weapon" ],
+    "Value" : 180.0,
+    "Rarity" : 0.8,
+    "TraderQuantity" : 2.0,
+    "MaxTraderQuantity" : 5,
+    "Volatility" : 0.0012
+}

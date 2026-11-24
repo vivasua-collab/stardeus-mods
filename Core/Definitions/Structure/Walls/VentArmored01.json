@@ -1,0 +1,47 @@
+{
+    "Layer" : "Walls",
+    "ParentId" : "Structure/Walls/BaseVent",
+    "Researchable" : {
+        "Prerequisites" : [
+            "Research/Construction/StructureArmored"
+        ]
+    },
+    "Components" : [
+        {
+            "Component" : "TileGraphics",
+            "Properties" : [
+                { "Key" : "Graphic", "String" : "Structure/Walls/VentArmored01/VentArmored01" }
+            ]
+        },
+        {
+            "Component" : "Damageable",
+            "Properties" : [
+                { "Key" : "Max", "Int" : 500 }
+            ]
+        },
+        {
+            "Component" : "Flammable",
+            "Properties" : [
+                { "Key" : "FireChance", "Float" : 0.4 },
+                { "Key" : "FireDamageResistance", "Float" : 0.5 }
+            ]
+        },
+        {
+            "Component" : "Constructable",
+            "Properties" : [
+                { "Key" : "WorkAmount", "Int" : 570 },
+                {
+                    "Key" : "Contents",
+                    "RawMaterials" : [
+                        { "TypeId" : "LeadPlate", "StackSize" : 3 },
+                        { "TypeId" : "TitaniumPlate", "StackSize" : 2 },
+                        { "TypeId" : "CarbonFiber", "StackSize" : 1 },
+                        { "TypeId" : "CopperWire", "StackSize" : 1 },
+                        { "TypeId" : "Gears", "StackSize" : 1 },
+                        { "TypeId" : "Transistor", "StackSize" : 1 }
+                    ]
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,40 @@
+{
+    "Layer" : "Walls",
+    "ParentId" : "Structure/Walls/BaseWallSocket",
+    "TranslationVars" : [ "32", "8" ],
+    "DescKey": "structure.walls.wallsocket01.desc",
+    "Components" : [
+        {
+            "Component" : "TileGraphics",
+            "Properties" : [
+                { "Key" : "Graphic", "String" : "Structure/Walls/WallSocket02/WallSocket02" }
+            ]
+        },
+        {
+            "Component" : "Damageable",
+            "Properties" : [
+                { "Key" : "Max", "Int" : 50 }
+            ]
+        },
+        {
+            "Component" : "HullIntegrity",
+            "Properties" : [
+                { "Key" : "MaxInsulation", "Float" : 0.25 },
+                { "Key" : "MaxAirtight", "Float" : 1 }
+            ]
+        },
+        {
+            "Component" : "Constructable",
+            "Properties" : [
+                {
+                    "Key" : "Contents",
+                    "RawMaterials" : [
+                        { "TypeId" : "SteelPlate", "StackSize" : 1 },
+                        { "TypeId" : "CopperWire", "StackSize" : 1 },
+                        { "TypeId" : "Transistor", "StackSize" : 1 }
+                    ]
+                }
+            ]
+        }
+    ]
+}

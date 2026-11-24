@@ -1,0 +1,28 @@
+{
+    "Layer" : "FreeEntities",
+    "ParentId" : "Obj/Upgrades/BaseUpgrade",
+    "Researchable" : {
+        "Prerequisites" : [ "Research/Production/EnergyEfficiency" ]
+    },
+    "Components" : [
+        {
+            "Component" : "ObjGraphics",
+            "Properties" : [
+                { "Key" : "Graphic", "String": "Obj/Upgrades/EnergyEfficiencyUpgrade" }
+            ]
+        },
+        {
+            "Component" : "LightSource",
+            "Properties" : [
+                { "Key" : "Color", "IntSet" : [ 122, 204, 102, 196 ] },
+                { "Key" : "PulsateColor", "IntSet" : [ 71, 153, 51, 128 ] }
+            ]
+        },
+        {
+            "Component" : "UnstoredMat",
+            "Properties" : [
+                { "Key" : "Type", "String" : "EnergyEfficiencyUpgrade" }
+            ]
+        }
+    ]
+}

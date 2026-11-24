@@ -1,0 +1,56 @@
+{
+    "ToolPath" : "Floors",
+    "Layer" : "Floors",
+    "ParentId" : "Structure/BaseStructure",
+    "IsAbstract" : true,
+    "Components" : [
+        {
+            "Component" : "TileTransform",
+            "Properties" : [
+                { "Key" : "PlacementType", "String": "Rect" }
+            ]
+        },
+        {
+            "Component" : "TileGraphics",
+            "Properties" : [
+                { "Key" : "Foundation", "String": "Structure/Foundations/Plates" }
+            ]
+        },
+        {
+            "Component" : "Flammable",
+            "Properties" : [
+                { "Key" : "FireDamageResistance", "Float" : 0.8 },
+                { "Key" : "SpreadIntoChance", "Float" : 0.15 }
+            ]
+        },
+        {
+            "Component" : "Damageable",
+            "Properties" : [
+                { "Key" : "Max", "Int" : 200 }
+            ]
+        },
+        {
+            "Component" : "Passability",
+            "Properties" : [
+                { "Key" : "IsPassable", "Bool" : true },
+                { "Key" : "IsWalkable", "Bool" : true },
+                { "Key" : "Difficulty", "Float" : 0 }
+            ]
+        },
+        {
+            "Component" : "Constructable",
+            "Properties" : [
+                { "Key" : "WorkAmount", "Int" : 50 },
+                { "Key" : "CanReplaceSameLayer", "Bool": true },
+                { "Key" : "Placement", "String" : "InSpace" },
+                { "Key" : "FlyingOnly", "Bool" : false },
+                {
+                    "Key" : "Contents",
+                    "RawMaterials" : [
+                        { "TypeId" : "SteelPlate", "StackSize" : 2 }
+                    ]
+                }
+            ]
+        }
+    ]
+}

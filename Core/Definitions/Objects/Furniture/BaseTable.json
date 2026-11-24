@@ -1,0 +1,42 @@
+{
+    "ToolPath" : "Furniture/Tables",
+    "Layer" : "Objects",
+    "ParentId" : "Objects/Furniture/BaseFurniture",
+    "IsAbstract" : true,
+    "Components" : [
+        {
+            "Component" : "TileTransform",
+            "Properties" : [
+                { "Key" : "ValidRotations", "String" : "DR" },
+                { "Key" : "CoverPercent", "Int" : 33 },
+                { "Key" : "Width", "Int" : 2 }
+            ]
+        },
+        { "Component" : "SafetyCheck" },
+        {
+            "Component" : "Surface",
+            "Properties" : [
+                { "Key" : "IsMakeshift", "Bool" : false },
+                { "Key" : "IsMultislot", "Bool" : true }
+            ]
+        },
+        {
+            "Component" : "Passability",
+            "Properties" : [
+                { "Key" : "Difficulty", "Float" : 0.7 }
+            ]
+        },
+        {
+            "Component" : "TileGraphics",
+            "Properties" : [
+                { "Key" : "Type", "String": "Object" }
+            ]
+        },
+        {
+            "Component" : "Constructable",
+            "Properties" : [
+                { "Key" : "WorkAmount", "Int" : 375 }
+            ]
+        }
+    ]
+}

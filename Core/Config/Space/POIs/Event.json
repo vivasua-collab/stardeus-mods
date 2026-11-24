@@ -1,0 +1,19 @@
+{
+    "Id" : "Event",
+    "Type" : "PlanetPOI",
+    "MinDifficulty" : 0.0,
+    "DifficultyChance" : [
+        0.0, 1.0,
+        1.0, 1.0
+    ],
+    "UniverseQuantityChance" : [
+        0.0, 100.0,
+        1.0, 60.0
+    ],
+    "RegionQuantityChance" : [
+        0.0, 1.0,
+        0.3, 1.0,
+        0.7, 3.0,
+        1.0, 4.0
+    ]
+}

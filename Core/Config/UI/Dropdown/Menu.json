@@ -1,0 +1,25 @@
+{
+    "Id" : "Dropdown/Menu",
+
+    "ChildrenKeys" : [
+        "PanelBackground",
+        "PanelArrow",
+        "PanelArrowItem",
+        "SelectableDropdown",
+        "SelectableItem",
+        "TextMain",
+        "TextItem",
+        "ActiveOverlay"
+    ],
+
+    "ChildrenIds" : [
+        "Panel/ColorlessButton",
+        "Panel/DropdownArrow",
+        "Panel/DropdownArrowItem",
+        "Selectable/MainMenuButton",
+        "Selectable/DropdownItem",
+        "Text/Dropdown",
+        "Text/DropdownItem",
+        "Overlay/ButtonMenu"
+    ]
+}

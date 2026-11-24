@@ -1,0 +1,10 @@
+{
+    "Id" : "Obj/Materials/NuclearCell",
+    "Type" : "CFD",
+    "Groups" : [ "Energy" ],
+    "Value" : 4361.0,
+    "Rarity" : 0.05,
+    "TraderQuantity" : 1.0,
+    "MinSectorDifficulty" : 0.75,
+    "Volatility" : 0.009
+}

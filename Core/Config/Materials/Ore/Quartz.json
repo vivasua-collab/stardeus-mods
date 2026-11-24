@@ -1,0 +1,10 @@
+{
+    "Id" : "Quartz",
+    "IsComposite" : false,
+    "IconId" : "Obj/Materials/Quartz",
+    "GroupId" : "Ore",
+    "InternalValue" : 11.0,
+    "EnergyOutput" : 350.0,
+    "Rarity" : 55,
+    "MatRarity" : 1
+}

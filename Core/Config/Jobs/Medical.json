@@ -1,0 +1,8 @@
+{
+    "Id" : "Medical",
+    "SkillSpeedCurve" : "Skills/SpeedMedical",
+    "Importance" : 3.0,
+    "IconId" : "Icons/Color/Health",
+    "Types" : [ "Caring", "Intellectual", "NanobotCompatible" ],
+    "WorkSpeedStat" : "ManualWorkSpeed"
+}

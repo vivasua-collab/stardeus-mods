@@ -1,0 +1,21 @@
+{
+    "Id" : "Trapper",
+    "RoleTypes" : [ ],
+    "Species" : [ "Human" ],
+    "AgePhaseIds" : [ "YoungAdult", "MidLife", "Retirement" ],
+    "LovesJobTypes" : [ "Firefighting" ],
+    "AdjustsSkills" : [
+        {
+            "JobId" : "Cooking",
+            "Adjustment" : 4
+        },
+        {
+            "JobId" : "Crafting",
+            "Adjustment" : 2
+        },
+        {
+            "JobId" : "Expedition",
+            "Adjustment" : 2
+        }
+    ]
+}

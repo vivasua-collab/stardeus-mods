@@ -1,0 +1,102 @@
+{
+    "ToolPath" : "Security",
+    "Layer" : "Objects",
+    "ParentId" : "Objects/Devices/BaseDevice",
+    "Researchable" : {
+        "Prerequisites" : [ "Research/Security/Turrets" ]
+    },
+    "Components" : [
+        {
+            "Component" : "TileTransform",
+            "Properties" : [
+                { "Key" : "Width", "Int" : 1 },
+                { "Key" : "Height", "Int" : 1 },
+                { "Key" : "CoverPercent", "Int" : 50 },
+                { "Key" : "IsRotatable", "Bool" : false }
+            ]
+        },
+        {
+            "Component" : "IndustrialEquipment",
+            "Properties" : [
+                { "Key" : "IsNoisy", "Bool" : true }
+            ]
+        },
+        {
+            "Component" : "ElectricNode",
+            "Properties" : [
+                { "Key" : "IsConsumerLowPriority", "Bool": true }
+            ]
+        },
+        {
+            "Component" : "WithFuse",
+            "Properties" : [
+                { "Key" : "MalfunctionWeight", "Float": 0.8 }
+            ]
+        },
+        {
+            "Component" : "Flammable",
+            "Properties" : [
+                { "Key" : "IgnitionTemperatureCelsius", "Int" : 500 },
+                { "Key" : "FireChance", "Float" : 0.6 },
+                { "Key" : "BaseExplosionLevel", "Int" : 2 },
+                { "Key" : "FlammabilityCurve", "String" : "DeviceHigh" },
+                { "Key" : "ExplosivenessCurve", "String" : "DeviceHigh" }
+            ]
+        },
+        {
+            "Component" : "RotatingTurret",
+            "Properties" : [
+                { "Key" : "EnergyCost", "Float" : 20.0 },
+                { "Key" : "HeadOffset", "Vector2": { "x" : 0.0, "y" : 0.25 } },
+                { "Key" : "TopOffset", "Vector2": { "x" : 0.0, "y" : 0.0 } },
+                { "Key" : "HasTopSprite", "Bool" : false },
+                { "Key" : "ShotFX", "String": "AttackMachineGunVFX" },
+                { "Key" : "ShotSound", "String": "FX/MiniTurretSFX" },
+                { "Key" : "IsLoud", "Bool": false },
+                { "Key" : "ShotSoundVol", "Float": 1.0 },
+                { "Key" : "ShotFXDuration", "Float" : 3.0 }
+            ]
+        },
+        {
+            "Component" : "AntiPersonnelTurret",
+            "Properties" : [
+                // a tile past every gun but the Sniper Rifle: raiders shoot a turret from
+                // anywhere within their own reach, so one that outranges it is never hit back
+                { "Key" : "Range", "Float" : 16.0 },
+                { "Key" : "MinutesBetweenShots", "Float" : 15.0 },
+                { "Key" : "MaxAccuracy", "Float" : 0.85 },
+                { "Key" : "DPS", "Float" : 1.0 }
+            ]
+        },
+        {
+            "Component" : "TileGraphics",
+            "Properties" : [
+                { "Key" : "Type", "String": "Object" },
+                { "Key" : "Graphic", "String": "Objects/Devices/MiniTurret" },
+                { "Key" : "HasHeight", "Bool" : false }
+            ]
+        },
+        {
+            "Component" : "Passability",
+            "Properties" : [
+                { "Key" : "IsPassable", "Bool" : false },
+                { "Key" : "IsWalkable", "Bool" : false },
+                { "Key" : "Difficulty", "Float" : 1 }
+            ]
+        },
+        {
+            "Component" : "Constructable",
+            "Properties" : [
+                { "Key" : "WorkAmount", "Int" : 1400 },
+                {
+                    "Key" : "Contents",
+                    "RawMaterials" : [
+                        { "TypeId" : "TitaniumPlate", "StackSize" : 5 },
+                        { "TypeId" : "Gears", "StackSize" : 3 },
+                        { "TypeId" : "Microchip", "StackSize" : 2 }
+                    ]
+                }
+            ]
+        }
+    ]
+}

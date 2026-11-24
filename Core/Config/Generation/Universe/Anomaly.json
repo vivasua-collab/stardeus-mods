@@ -1,0 +1,17 @@
+{
+    "Id" : "Anomaly",
+    "Icon" : "Icons/Color/Warning",
+    "SizeMin" : 1,
+    "SizeMax" : 1,
+    "IsDynamic" : true,
+    "CanBeExplored" : true,
+    "IsConsumable" : true,
+    "CanHaveCustomIcon" : false,
+    "UseTypeName" : true,
+    "IsScannable" : false,
+    "CanBeOwned" : false,
+    "IsOnSurface" : true,
+    "IsInteractive" : true,
+    "StarfieldSortOrder" : 1,
+    "IsIconMarker" : true
+}

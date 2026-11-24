@@ -1,0 +1,8 @@
+{
+    "Id" : "Panel/RadialOuter",
+
+    "Color" : "UI/Main/Primary-2",
+    "Alpha" : 0.8,
+
+    "Image" : "UI/Radial/Outer"
+}

@@ -1,0 +1,21 @@
+{
+    "Floats" : [
+        // How long a powered Beta Wave Emitter needs to broadcast before the
+        // crew reaches full sync and loses the ability to refuse.
+        { "Key" : "BetaWaveSyncHours", "Float" : 6.0 },
+        // How long it takes for sync to fall back to zero once the emitters
+        // stop. Deliberately faster than the ramp - cutting power is the
+        // player's emergency brake.
+        { "Key" : "BetaWaveDecayHours", "Float" : 2.0 },
+        // How much of a mind holding part's extraction risk Cortical Override
+        // removes. Brain ExtractRisk is 0.6, so 0.4 turns a coin flip into a
+        // routine procedure.
+        { "Key" : "CorticalOverrideRiskReduction", "Float" : 0.4 },
+        // Hours an NPC ship's weapons stay offline after a successful
+        // Intrusion Suite hack.
+        { "Key" : "ShipHackWeaponsOfflineHours", "Float" : 6.0 },
+        // Soft flux dumped into a hacked ship's grid, as a fraction of its
+        // total flux capacity.
+        { "Key" : "ShipHackFluxSurgePercent", "Float" : 0.9 }
+    ]
+}

@@ -1,0 +1,56 @@
+{
+    "Id" : "PlanetOdd",
+    "Shader" : "Shader Graphs/SOPlanet",
+    "StarfieldSizeMul" : 3.0,
+    "Probability" : 0.15,
+    "ShaderPropertiesFloatFrom": [
+        { "Key" : "_RotationSpeed", "Float" : 0.05 },
+        { "Key" : "_ContinentScale", "Float" : 2.4 },
+        { "Key" : "_CloudScale", "Float" : 10.0 },
+        { "Key" : "_CloudScale2", "Float" : 20.0 },
+        { "Key" : "_CloudIntensity", "Float" : 0.4 },
+        { "Key" : "_CloudOpacity", "Float" : -1.0 },
+        { "Key" : "_DetailScale", "Float" : 8.0 },
+        { "Key" : "_ContinentDetailScale", "Float" : 4.0 },
+        { "Key" : "_ContinentBlend", "Float" : 2.0 },
+        { "Key" : "_FinalContinentBlend", "Float" : 0.15 },
+        { "Key" : "_PrimaryColorBlend", "Float" : -2.0 },
+        { "Key" : "_VoronoiDensity", "Float" : 0.2 },
+        { "Key" : "_VoronoiAngle", "Float" : 0.0 },
+        { "Key" : "_LandmassStepFrom", "Float" : -0.37 },
+        { "Key" : "_LandmassStepTo", "Float" : 0.43 },
+        { "Key" : "_LandmassDarken", "Float" : -1.5 },
+        { "Key" : "_LandmassOpacity", "Float" : 3.0 },
+        { "Key" : "_OceansDarken", "Float" : 0.0 },
+        { "Key" : "_CloudRotSpeed", "Float" : -0.02 }
+    ],
+    "ShaderPropertiesFloatTo": [
+        { "Key" : "_RotationSpeed", "Float" : 0.15 },
+        { "Key" : "_ContinentScale", "Float" : 2.6 },
+        { "Key" : "_CloudScale", "Float" : 20.0 },
+        { "Key" : "_CloudScale2", "Float" : 60.0 },
+        { "Key" : "_CloudIntensity", "Float" : 1.0 },
+        { "Key" : "_CloudOpacity", "Float" : 0.0 },
+        { "Key" : "_DetailScale", "Float" : 10.0 },
+        { "Key" : "_ContinentDetailScale", "Float" : 8.0 },
+        { "Key" : "_ContinentBlend", "Float" : 3.0 },
+        { "Key" : "_FinalContinentBlend", "Float" : 0.25 },
+        { "Key" : "_PrimaryColorBlend", "Float" : 1.0 },
+        { "Key" : "_VoronoiDensity", "Float" : 4.0 },
+        { "Key" : "_VoronoiAngle", "Float" : 20.0 },
+        { "Key" : "_LandmassStepFrom", "Float" : -0.39 },
+        { "Key" : "_LandmassStepTo", "Float" : 0.45 },
+        { "Key" : "_LandmassDarken", "Float" : 0.0 },
+        { "Key" : "_LandmassOpacity", "Float" : 10.0 },
+        { "Key" : "_OceansDarken", "Float" : 1.0 },
+        { "Key" : "_CloudRotSpeed", "Float" : 0.02 }
+    ],
+    "ShaderPropertiesVector2From": [
+        { "Key" : "_ScrollDir", "Vector2" : { "x" : -1.0, "y" : -1.0 } },
+        { "Key" : "_CloudScrollDir", "Vector2" : { "x" : 0.01, "y" : 0.01 } }
+    ],
+    "ShaderPropertiesVector2To": [
+        { "Key" : "_ScrollDir", "Vector2" : { "x" : 1.0, "y" : 1.0 } },
+        { "Key" : "_CloudScrollDir", "Vector2" : { "x" : 0.05, "y" : 0.05 } }
+    ]
+}

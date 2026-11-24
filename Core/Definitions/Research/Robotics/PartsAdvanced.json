@@ -1,0 +1,27 @@
+{
+    "Id" : "Research/Robotics/PartsAdvanced",
+    "Tier" : 4,
+    "IsAbstract" : true,
+    "PreviewIcon" : "Obj/BodyParts/Robotic3",
+    "Researchable" : {
+        "IsTreeNode" : true,
+        "Prerequisites" : [
+            "Research/Robotics/PartsImproved",
+            "Research/Robotics/Nanobots"
+        ],
+        "DatoidCosts" : [
+            {
+                "TypeId" : "DatoidNuclear",
+                "StackSize" : 9
+            },
+            {
+                "TypeId" : "DatoidAlien",
+                "StackSize" : 10
+            },
+            {
+                "TypeId" : "DatoidQuantum",
+                "StackSize" : 6
+            }
+        ]
+    }
+}

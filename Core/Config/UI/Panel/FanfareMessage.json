@@ -1,0 +1,9 @@
+{
+    "Id" : "Panel/FanfareMessage",
+
+    "Alpha" : 0.5,
+    "Color" : "00070D",
+
+    "Image" : "NoAtlas/WhiteSquare",
+    "ImageType" : "Simple"
+}

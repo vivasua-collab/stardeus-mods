@@ -1,0 +1,9 @@
+{
+    "Id" : "Overlay/Button",
+
+    "Color" : "UI/Btn/OverlayActive",
+
+    "Image" : "UI/Buttons/ActiveOverlay",
+    "ImageType" : "Sliced",
+    "ImageBorderLBRT" : [ 12, 12, 12, 12 ]
+}

@@ -1,0 +1,13 @@
+{
+    "Id" : "ShipDerelict",
+    "Icon" : "Icons/Color/Warning",
+    "IsDynamic" : true,
+    "UseTypeName" : true,
+    "SpawnChance" : 0.0,
+    "CanBeOwned" : false,
+    "IsConsumable" : true,
+    "IsInteractive" : true,
+    "IsOnSurface" : false,
+    "LocationApproxMagnitude" : 2.0,
+    "StarfieldSortOrder" : 1
+}

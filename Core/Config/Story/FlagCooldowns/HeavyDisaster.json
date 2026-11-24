@@ -1,0 +1,10 @@
+{
+    "FlagName": "HeavyDisaster",
+    // Difficulty -> cooldown days. Flat below Balanced (1.0): easier difficulties change how hard events hit, not how often they come
+    "CooldownDaysDifficultyCurve": [
+        0.0, 40.0,
+        1.0, 40.0,
+        2.0, 25.0,
+        5.0, 15.0
+    ]
+}

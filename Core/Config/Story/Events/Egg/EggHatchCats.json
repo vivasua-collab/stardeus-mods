@@ -1,0 +1,20 @@
+{
+    // C# implementation id.
+    // Multiple configurations can point to a single implementation.
+    "EventId": "EggHatchCats",
+    // How much does this story event cost to run
+    "Points": 10,
+    // Options: Negative, Positive, Neutral, Raid
+    "OutcomeType": "Positive",
+    // Full list is in StoryEventFlags class
+    "EventFlags": [
+        "OnDemand",
+        "Egg",
+        "ColonyGrowthBio"
+    ],
+    // Full list of requirements can be found in Situation class
+    "Require": {
+        "Days": 3
+    },
+    "MinRepeatDelayDays" : 400
+}

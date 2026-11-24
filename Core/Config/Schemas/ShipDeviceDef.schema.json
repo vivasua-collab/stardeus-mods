@@ -1,0 +1,89 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Stardeus ShipDeviceDef",
+  "description": "Generated from C# by Game/Generate JSON Schemas, do not edit by hand",
+  "$ref": "#/$defs/ShipDeviceDef",
+  "$defs": {
+    "ShipDeviceDef": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "Id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "IdH": {
+          "type": "integer"
+        },
+        "DefId": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "ZoneSpriteId": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "ZoneSpriteId_D": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "ZoneSpriteId_U": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "ZoneSpriteId_L": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "ZoneSpriteId_R": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "ZoneSpriteScale": {
+          "type": "number"
+        },
+        "Rarity": {
+          "type": "number"
+        },
+        "TargetTypeId": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "EnergyCostPassive": {
+          "type": "number"
+        },
+        "EnergyCostActive": {
+          "type": "number"
+        },
+        "HP": {
+          "type": "integer"
+        },
+        "Tier": {
+          "type": "integer"
+        },
+        "ClassPoints": {
+          "type": "integer"
+        }
+      },
+      "additionalProperties": false
+    }
+  }
+}

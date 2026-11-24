@@ -1,0 +1,28 @@
+{
+    "Id" : "DarkMatter",
+    "IsWithDepth" : true,
+    "IsBiological" : false,
+    "MinDifficulty" : 0.9,
+    "DifficultyChance" : [
+        0.0, 0.0,
+        0.9, 0.0,
+        0.95, 0.5,
+        1.0, 1.0
+    ],
+    "UniverseQuantityChance" : [
+        0.0, 2.0,
+        1.0, 2.0
+    ],
+    "RegionQuantityChance" : [
+        0.0, 1.0,
+        1.0, 1.0
+    ],
+    "InitialDepthChance" : [
+        0.0, 0.9,
+        1.0, 0.11
+    ],
+    "MiningDifficulty" : 1290.0,
+    "CollectKey" : "verb.mine",
+    "ScanDifficulty" : 20.0,
+    "NearbySpawnChance" : 0.05
+}

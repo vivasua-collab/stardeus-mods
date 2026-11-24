@@ -1,0 +1,42 @@
+{
+    "BuildGroup" : "TableLarge",
+    "Layer" : "Objects",
+    "ParentId" : "Objects/Furniture/BaseTable",
+    "Spawnable" : {
+        "Category": "Furniture",
+        "Chance" : 1.0,
+        "ChanceLocked" : 0.5
+    },
+    "Components" : [
+        {
+            "Component" : "TileTransform",
+            "Properties" : [
+                { "Key" : "Width", "Int" : 3 }
+            ]
+        },
+        {
+            "Component" : "TileGraphics",
+            "Properties" : [
+                { "Key" : "Graphic", "String": "Objects/Furniture/TableWood1x3" }
+            ]
+        },
+        {
+            "Component" : "Flammable",
+            "Properties" : [
+                { "Key" : "FireChance", "Float" : 1.5 }
+            ]
+        },
+        {
+            "Component" : "Constructable",
+            "Properties" : [
+                { "Key" : "WorkAmount", "Int" : 565 },
+                {
+                    "Key" : "Contents",
+                    "RawMaterials" : [
+                        { "TypeId" : "Wood", "StackSize" : 3 }
+                    ]
+                }
+            ]
+        }
+    ]
+}

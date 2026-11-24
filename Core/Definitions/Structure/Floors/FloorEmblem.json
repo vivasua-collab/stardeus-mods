@@ -1,0 +1,41 @@
+{
+    "ToolPath" : "Floors/FloorSpecial",
+    "Layer" : "Floor",
+    "ParentId" : "Structure/Floors/BaseFloor",
+    "Researchable" : {
+        "Prerequisites" : [
+            "Research/Construction/EmblemFloors"
+        ]
+    },
+    "Components" : [
+        {
+            "Component" : "TileTransform",
+            "Properties" : [
+                { "Key" : "IsRotatable", "Bool" : true }
+            ]
+        },
+        {
+            "Component" : "TileGraphics",
+            "Properties" : [
+                { "Key" : "Shader", "String": "TransparentFloorTile" },
+                {
+                    "Key" : "Graphic",
+                    "String": "Emblems/Blank"
+                }
+            ]
+        },
+        { "Component" : "Emblem" },
+        {
+            "Component" : "Constructable",
+            "Properties" : [
+                { "Key" : "WorkAmount", "Int" : 150 },
+                {
+                    "Key" : "Contents",
+                    "RawMaterials" : [
+                        { "TypeId" : "SteelPlate", "StackSize" : 2 }
+                    ]
+                }
+            ]
+        }
+    ]
+}

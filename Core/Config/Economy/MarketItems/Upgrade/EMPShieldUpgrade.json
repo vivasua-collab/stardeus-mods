@@ -1,0 +1,12 @@
+{
+    "Id" : "Obj/Upgrades/EMPShieldUpgrade",
+    "Type" : "CFD",
+    "Groups" : [ "Upgrade" ],
+    "Value" : 5500.0,
+    "Rarity" : 0.06,
+    "TraderQuantity" : 1.0,
+    "MaxTraderQuantity" : 2,
+    "MinSectorDifficulty" : 0.5,
+    "PlayerSellPriceMultiplier": 0.5,
+    "Volatility" : 0.0043
+}

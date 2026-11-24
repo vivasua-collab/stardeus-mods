@@ -1,0 +1,9 @@
+// how much time to wait after a social event has happened before we try
+// to start looking for an opportunity to start a new social event
+{
+    // rand value => delay hours
+    "FloatSet" : [
+        0.0, 8.0,
+        1.0, 16.0
+    ]
+}

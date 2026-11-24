@@ -1,0 +1,45 @@
+{
+    "Layer" : "Walls",
+    "ParentId" : "Structure/Walls/BaseVent",
+    "DescKey": "structure.walls.vent01.desc",
+    "Researchable" : {
+        "Prerequisites" : [
+            "Research/Construction/Habitation"
+        ]
+    },
+    "Components" : [
+        {
+            "Component" : "TileGraphics",
+            "Properties" : [
+                { "Key" : "Graphic", "String" : "Structure/Walls/Vent02/Vent02" }
+            ]
+        },
+        {
+            "Component" : "HullIntegrity",
+            "Properties" : [
+                { "Key" : "MaxInsulation", "Float" : 0.25 },
+                { "Key" : "MaxAirtight", "Float" : 1 }
+            ]
+        },
+        {
+            "Component" : "Damageable",
+            "Properties" : [
+                { "Key" : "Max", "Int" : 50 }
+            ]
+        },
+        {
+            "Component" : "Constructable",
+            "Properties" : [
+                {
+                    "Key" : "Contents",
+                    "RawMaterials" : [
+                        { "TypeId" : "SteelPlate", "StackSize" : 1 },
+                        { "TypeId" : "CopperWire", "StackSize" : 1 },
+                        { "TypeId" : "Gears", "StackSize" : 1 },
+                        { "TypeId" : "Transistor", "StackSize" : 1 }
+                    ]
+                }
+            ]
+        }
+    ]
+}

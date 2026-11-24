@@ -1,0 +1,10 @@
+{
+    "Type": "DatoidTechHigh",
+    "Ingredients": [
+        { "TypeId" : "Microchip", "StackSize" : 1 },
+        { "TypeId" : "OpticalFiber", "StackSize" : 1 }
+    ],
+    "ProductDefId": "Obj/Datoids/DatoidTechHigh",
+    "ProductionTimeHours": 2.0,
+    "EnergyCost": 75.0
+}

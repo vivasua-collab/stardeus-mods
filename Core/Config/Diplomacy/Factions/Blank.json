@@ -1,0 +1,6 @@
+{
+    "Id" : "Blank",
+    "FlagIcon" : "Icons/Faction/AntiPlayer",
+    "IsBlank" : true,
+    "IsInternal" : true
+}

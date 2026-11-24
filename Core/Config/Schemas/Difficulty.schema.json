@@ -1,0 +1,146 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Stardeus Difficulty",
+  "description": "Generated from C# by Game/Generate JSON Schemas, do not edit by hand",
+  "$ref": "#/$defs/Difficulty",
+  "$defs": {
+    "Difficulty": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "Id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "Level": {
+          "type": "number"
+        },
+        "Reduction": {
+          "type": "number"
+        },
+        "Increment": {
+          "type": "number"
+        },
+        "SoftLevel": {
+          "type": "number"
+        },
+        "StoryScheduleModifiers": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "$ref": "#/$defs/StoryScheduleModifier"
+          }
+        },
+        "StartingResources": {
+          "type": "number"
+        },
+        "PlanetResources": {
+          "type": "number"
+        },
+        "DefaultDestructionLevel": {
+          "type": "number"
+        },
+        "DatoidCostScale": {
+          "type": "number"
+        },
+        "SanityDropRate": {
+          "type": "number"
+        },
+        "SanityBaseline": {
+          "type": "number"
+        },
+        "BreachCapsuleSpeed": {
+          "type": "number"
+        },
+        "FireBoostMinutes": {
+          "type": "integer"
+        },
+        "FireBoostGrowthMul": {
+          "type": "number"
+        },
+        "FireBoostSpreadMul": {
+          "type": "number"
+        },
+        "FireBoostFirefightingMul": {
+          "type": "number"
+        },
+        "FireBoostSpreadThreshold": {
+          "type": "number"
+        },
+        "FireChanceScale": {
+          "type": "number"
+        },
+        "WantedTensionMultiplier": {
+          "type": "number"
+        },
+        "NPCShipShootHesitationMin": {
+          "type": "number"
+        },
+        "NPCShipShootHesitationMax": {
+          "type": "number"
+        },
+        "NPCShipStrengthChance": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "number"
+          }
+        },
+        "MinDeepScansPerLocation": {
+          "type": "integer"
+        },
+        "MaxDeepScansPerLocation": {
+          "type": "integer"
+        },
+        "ShipCombatDifficulty": {
+          "type": "number"
+        },
+        "QuestShipStrengthMul": {
+          "type": "number"
+        },
+        "AllowMajorThreats": {
+          "type": "boolean"
+        },
+        "FirstRaidWaitsForRepairStationDays": {
+          "type": "number"
+        },
+        "AdaptationEffect": {
+          "type": "number"
+        },
+        "AdaptationGrowthOverZero": {
+          "type": "number"
+        }
+      },
+      "additionalProperties": false
+    },
+    "StoryScheduleModifier": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "Schedule": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "PointAllowanceMul": {
+          "type": "number"
+        },
+        "CooldownMul": {
+          "type": "number"
+        }
+      },
+      "additionalProperties": false
+    }
+  }
+}

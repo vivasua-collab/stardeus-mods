@@ -1,0 +1,113 @@
+{
+    "ToolPath" : "Energy",
+    "Layer" : "Objects",
+    "ParentId" : "Objects/Devices/BaseDevice",
+    "Researchable" : {
+        "Prerequisites" : [ "Research/Energy/SolarImproved" ]
+    },
+    "TranslationVars" : [ "150" ],
+    "Spawnable" : {
+        "Category": "Energy",
+        "Chance" : 1.0,
+        "ChanceLocked" : 0.5
+    },
+    "Components" : [
+        {
+            "Component" : "TileTransform",
+            "Properties" : [
+                { "Key" : "IsRotatable", "Bool" : true },
+                { "Key" : "Width", "Int" : 2 }
+            ]
+        },
+        {
+            "Component" : "Flammable",
+            "Properties" : [
+                { "Key" : "IgnitionTemperatureCelsius", "Int" : 250 },
+                { "Key" : "FireChance", "Float" : 0.5 },
+                { "Key" : "BaseExplosionLevel", "Int" : 4 },
+                { "Key" : "FlammabilityCurve", "String" : "Device" },
+                { "Key" : "ExplosivenessCurve", "String" : "DeviceHigh" }
+            ]
+        },
+        {
+            "Component" : "IndustrialEquipment",
+            "Properties" : [
+                { "Key" : "IsNoisy", "Bool" : false }
+            ]
+        },
+        {
+            "Component" : "TileGraphics",
+            "Properties" : [
+                { "Key" : "Type", "String": "Object" },
+                { "Key" : "Graphic", "String": "Objects/Devices/Battery2" },
+                { "Key" : "HasHeight", "Bool" : true }
+            ]
+        },
+        {
+            "Component" : "Surface",
+            "Properties" : [
+                { "Key" : "IsMultislot", "Bool" : true },
+                { "Key" : "IsMakeshift", "Bool" : true }
+            ]
+        },
+        {
+            "Component" : "Battery",
+            "Properties" : [
+                { "Key" : "EnergyOutput", "Int": 150 }
+            ]
+        },
+        {
+            "Component" : "WithFuse",
+            "Properties" : [
+                { "Key" : "MalfunctionWeight", "Float": 0.25 }
+            ]
+        },
+        {
+            "Component" : "ElectricNode",
+            "Properties" : [
+                { "Key" : "BatteryMaxCharge", "Int" : 50000 },
+                { "Key" : "ShowZeroProduction", "Bool": false },
+                { "Key" : "IsBattery", "Bool" : true }
+            ]
+        },
+        {
+            "Component" : "AudioSource",
+            "Properties" : [
+                { "Key" : "AmbienceClip", "String" : "Ambience/ElectricHumm01" },
+                { "Key" : "Rolloff", "Vector2" : { "x" : 3, "y" : 12 } },
+                { "Key" : "IsLinkedToEnergy", "Bool" : true }
+            ]
+        },
+        {
+            "Component" : "Passability",
+            "Properties" : [
+                { "Key" : "IsPassable", "Bool" : false },
+                { "Key" : "IsWalkable", "Bool" : false },
+                { "Key" : "Difficulty", "Float" : 1 }
+            ]
+        },
+        {
+            "Component" : "LightSource",
+            "Properties" : [
+                { "Key" : "Radius", "Float" : 5 },
+                { "Key" : "Color", "IntSet" : [ 102, 143, 204, 128 ] }
+            ]
+        },
+        {
+            "Component" : "Constructable",
+            "Properties" : [
+                { "Key" : "WorkAmount", "Int" : 550 },
+                { "Key" : "CanReplaceGroup", "String" : "Battery" },
+                {
+                    "Key" : "Contents",
+                    "RawMaterials" : [
+                        { "TypeId" : "TitaniumPlate", "StackSize" : 5 },
+                        { "TypeId" : "GoldWire", "StackSize" : 10 },
+                        { "TypeId" : "BatteryCell", "StackSize" : 3 },
+                        { "TypeId" : "Microchip2", "StackSize" : 1 }
+                    ]
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,26 @@
+{
+    "Id" : "Research/Computing/MemoryImproved",
+    "Tier" : 4,
+    "IsAbstract" : true,
+    "PreviewIcon" : "Icons/Color/Memory",
+    "Researchable" : {
+        "IsTreeNode" : true,
+        "Prerequisites" : [
+            "Research/Computing/MemoryCompression"
+        ],
+        "DatoidCosts" : [
+            {
+                "TypeId" : "DatoidTechHigh",
+                "StackSize" : 21
+            },
+            {
+                "TypeId" : "DatoidEnergy",
+                "StackSize" : 15
+            },
+            {
+                "TypeId" : "DatoidNuclear",
+                "StackSize" : 5
+            }
+        ]
+    }
+}

@@ -1,0 +1,22 @@
+{
+    // C# implementation id.
+    // Multiple configurations can point to a single implementation.
+    "AspectId" : "Mtb",
+    "Properties" : [
+        // Mean days between non-raid events. Every hour rolls 1 - e^(-1 / (MtbDays * 24)), so
+        // the gaps are exponential: several events in a day, then a week of nothing.
+        // Reference: the random storyteller of the reference colony sim rolls any event every
+        // 1.35 of its days, 85% of them non-raid, and one of its days is about 2.08 of ours in
+        // real play time -> 3.3.
+        { "Key" : "MtbDays", "Float" : 3.3 },
+        // No roll before this day. Raids have their own opening delay in Raid_Chaos.
+        { "Key" : "InitialExtraDelayDays", "Float" : 2 },
+        // Outcome draw weights (the drawn outcome is tried first, the others are fallbacks).
+        // Roughly the reference categories folded into ours: faction arrivals plus half of
+        // misc -> Positive, orbital visitors, drops and the other half of misc -> Neutral,
+        // small threats -> Negative.
+        { "Key" : "WeightPositive", "Float" : 4 },
+        { "Key" : "WeightNeutral", "Float" : 3 },
+        { "Key" : "WeightNegative", "Float" : 2 }
+    ]
+}

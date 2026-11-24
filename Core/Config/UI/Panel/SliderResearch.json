@@ -1,0 +1,10 @@
+{
+    "Id" : "Panel/SliderResearch",
+
+    "Color" : "UI/Slider/Background",
+    "Alpha" : 0.8,
+
+    "Image" : "UI/Buttons/IconButtonBG",
+    "ImageType" : "Tiled",
+    "ImageBorderLBRT" : [ 12, 12, 12, 12 ]
+}

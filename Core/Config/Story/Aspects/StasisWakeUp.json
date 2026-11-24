@@ -1,0 +1,37 @@
+{
+    // C# implementation id.
+    // Multiple configurations can point to a single implementation.
+    "AspectId" : "StasisWakeUp",
+    "Properties" : [
+        { "Key" : "StoryEventId", "String" : "OnDemand/StasisWakeUp" },
+        // No wake-up at all for the first stretch of a new game, in every scenario. The
+        // colonist that comes out first should walk into a heated, pressurised room the
+        // player has already built, not into a hull breach - so this outlasts the
+        // ConnectToStasisArray / EncloseStasisArray / MakeStasisAreaSurvivable chain.
+        // This is when the wake-up announces itself; the person actually comes out half a
+        // day later (StasisWakeUpWarning), which is why it is 7 and not the 8 it took
+        // before the warning existed.
+        { "Key" : "InitialExtraDelayDays", "Float" : 7.0 },
+        // Rolled once per game: grace x Range(1 - jitter, 1 + jitter), so 7 days becomes
+        // day 6-8. On a ship that starts with nobody biological aboard this decides the
+        // first wake-up outright, and a fixed day 7 every run reads as a script - unless the
+        // tutorial chain runs: then the first wake-up waits for MadeStasisSurvivable instead,
+        // up to twice the grace (StasisWakeUpStoryAspect.FirstWakeupTick).
+        { "Key" : "InitialExtraDelayJitter", "Float" : 0.125 },
+        // Days between wake-ups = BaseGrowthDays / PopulationIntent(population) * jitter.
+        // The curves are the whole opinion the story system has about colony size; see
+        // Config/Curves/Story/PopulationIntent.json for the ladder they produce.
+        { "Key" : "PopulationIntentCurve", "String" : "Story/PopulationIntent" },
+        // Minimum intent for biological growth while the crew is small, so a bot fleet
+        // slows colonist arrivals without stopping them.
+        { "Key" : "ColonistFloorCurve", "String" : "Story/ColonistFloor" },
+        { "Key" : "BaseGrowthDays", "Float" : 20.0 },
+        // Rolled interval = mean x Range(1 - jitter, 1 + jitter), once per wake-up, so the
+        // next one lands in a window rather than on a day the player can count to.
+        { "Key" : "GrowthJitter", "Float" : 0.3 },
+        // No biological growth of any kind within this many days of the colonist count
+        // changing, up or down: a joiner cannot land on the heels of a wake-up and a death
+        // is not replaced the same day.
+        { "Key" : "MinDaysBetweenGrowth", "Float" : 10.0 }
+    ]
+}

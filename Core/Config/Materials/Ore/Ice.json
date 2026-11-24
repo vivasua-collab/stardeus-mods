@@ -1,0 +1,12 @@
+{
+    "Id" : "Ice",
+    "IsComposite" : true,
+    "IgnoreMarket" : true,
+    "IconId" : "Obj/Materials/Ice",
+    "GroupId" : "Ore",
+    "Group" : "Ice",
+    "InternalValue" : 6.0,
+    "EnergyOutput" : 1600.0,
+    "Rarity" : 80,
+    "MatRarity" : 0
+}

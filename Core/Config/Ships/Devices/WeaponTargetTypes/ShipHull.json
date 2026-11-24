@@ -1,0 +1,13 @@
+{
+    "Id" : "ShipHull",
+    "GroupId" : "Ship_Hull",
+    "GroupNameKey" : "noun.ship",
+    "NameKey" : "noun.ship.hull",
+    "Icon" : "Icons/Color/SpaceShip",
+    "DefaultTargetByWeaponTypes" : [
+        "Ballistic",
+        "Missile",
+        "Laser",
+        "Plasma"
+    ]
+}

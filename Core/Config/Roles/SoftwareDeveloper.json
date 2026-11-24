@@ -1,0 +1,22 @@
+{
+    "Id" : "SoftwareDeveloper",
+    "Species" : [ "Human" ],
+    "AgePhaseIds" : [ "YoungAdult", "MidLife", "Retirement" ],
+    "RoleTypes" : [ "Smart", "Rich" ],
+    "LovesJobTypes" : [ "Research", "Crafting" ],
+    "IncapableJobTypes" : [ "Cooking" ],
+    "AdjustsSkills" : [
+        {
+            "JobId" : "Research",
+            "Adjustment" : 4
+        },
+        {
+            "JobId" : "Crafting",
+            "Adjustment" : 2
+        },
+        {
+            "JobId" : "Melee",
+            "Adjustment" : -1
+        }
+    ]
+}

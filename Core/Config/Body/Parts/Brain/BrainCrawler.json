@@ -1,0 +1,11 @@
+{
+    "SlotTypeId" : "Brain",
+    "Compatibility" : "Biological",
+    "TargetSpecies" : [ "Crawler" ],
+    "PartFlags" : [ "HoldsMind", "SupportsMindTransfer" ],
+    "ResistanceBase" : 2.0,
+    "AddsAbilities" : [
+        "FaceHug"
+    ],
+    "Tier" : 2
+}

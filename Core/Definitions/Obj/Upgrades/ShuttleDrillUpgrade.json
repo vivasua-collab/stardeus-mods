@@ -1,0 +1,28 @@
+{
+    "Layer" : "FreeEntities",
+    "ParentId" : "Obj/Upgrades/BaseUpgrade",
+    "Researchable" : {
+        "Prerequisites" : [ "Research/SpaceTravel/ShuttleMining" ]
+    },
+    "Components" : [
+        {
+            "Component" : "ObjGraphics",
+            "Properties" : [
+                { "Key" : "Graphic", "String": "Obj/Upgrades/ShuttleDrillUpgrade" },
+                { "Key" : "Scale", "Float": 1 }
+            ]
+        },
+        {
+            "Component" : "UnstoredMat",
+            "Properties" : [
+                { "Key" : "Type", "String" : "ShuttleDrillUpgrade" }
+            ]
+        },
+        {
+            "Component" : "Flammable",
+            "Properties" : [
+                { "Key" : "IsTemperatureResistant", "Bool" : true }
+            ]
+        }
+    ]
+}

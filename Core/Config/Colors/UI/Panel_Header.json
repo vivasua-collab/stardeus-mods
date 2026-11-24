@@ -1,0 +1,9 @@
+{
+    "Id" : "UI/Panel/Header",
+    "AliasFor" : "UI/Main/Primary-1",
+    // Btn_Normal - 100 sat low value
+    // "Hex" : "05002E",
+    //"Hex" : "2E2035",
+    "Alpha" : 1.0,
+    "SkipAtlas" : true
+}

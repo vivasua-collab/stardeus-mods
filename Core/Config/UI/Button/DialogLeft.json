@@ -1,0 +1,17 @@
+{
+    "Id" : "Button/DialogLeft",
+
+    "ChildrenKeys" : [
+        "Panel",
+        "Selectable",
+        "Text",
+        "ActiveOverlay"
+    ],
+
+    "ChildrenIds" : [
+        "Panel/ColorlessPanel_HighPPU",
+        "Selectable/Dialog",
+        "Text/DialogButton",
+        "Overlay/Panel_HighPPU"
+    ]
+}

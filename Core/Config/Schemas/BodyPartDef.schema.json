@@ -1,0 +1,521 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Stardeus BodyPartDef",
+  "description": "Generated from C# by Game/Generate JSON Schemas, do not edit by hand",
+  "$ref": "#/$defs/BodyPartDef",
+  "$defs": {
+    "BodyPartDef": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "NameT": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "DescT": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "NameKey": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "DescKey": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "Id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "IdH": {
+          "type": "integer"
+        },
+        "DefId": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "Flags": {
+          "anyOf": [
+            {
+              "type": "string",
+              "pattern": "^\\s*(None|Removable|Internal|Limb|Essential|Biological|HoldsMind|Indestructible|Optional|SupportsMindTransfer|SupportsMLBooth|NeverGenerate)(\\s*,\\s*(None|Removable|Internal|Limb|Essential|Biological|HoldsMind|Indestructible|Optional|SupportsMindTransfer|SupportsMLBooth|NeverGenerate))*\\s*$"
+            },
+            {
+              "type": "integer"
+            }
+          ]
+        },
+        "SlotTypeId": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "Compatibility": {
+          "enum": [
+            "TargetSpecies",
+            "Robotic",
+            "Biological",
+            "Any"
+          ],
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "Tier": {
+          "type": "integer"
+        },
+        "CombatStrengthBonus": {
+          "type": "number"
+        },
+        "PartCompatibility": {
+          "anyOf": [
+            {
+              "type": "string",
+              "enum": [
+                "TargetSpecies",
+                "Robotic",
+                "Biological",
+                "Any"
+              ]
+            },
+            {
+              "type": "integer"
+            }
+          ]
+        },
+        "CompatibleBodySizes": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "CompatibleSizes": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "anyOf": [
+              {
+                "type": "string",
+                "enum": [
+                  "Small",
+                  "Medium",
+                  "Large"
+                ]
+              },
+              {
+                "type": "integer"
+              }
+            ]
+          }
+        },
+        "CompatibleSpeciesFlags": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "enum": [
+              "None",
+              "Biological",
+              "Robotic",
+              "IsNegative",
+              "Humanoid",
+              "Animal",
+              "Pet",
+              "Wild",
+              "Flying"
+            ],
+            "type": "string"
+          }
+        },
+        "CompatibleStatFlags": {
+          "anyOf": [
+            {
+              "type": "string",
+              "pattern": "^\\s*(None|Biological|Robotic|IsNegative|Humanoid|Animal|Pet|Wild|Flying)(\\s*,\\s*(None|Biological|Robotic|IsNegative|Humanoid|Animal|Pet|Wild|Flying))*\\s*$"
+            },
+            {
+              "type": "integer"
+            }
+          ]
+        },
+        "TargetSpecies": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "AddsAbilities": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "AddsNeeds": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "ResistanceBase": {
+          "type": "number"
+        },
+        "Resistances": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "$ref": "#/$defs/DamageResistance"
+          }
+        },
+        "DamageResistances": {
+          "type": [
+            "object",
+            "null"
+          ],
+          "additionalProperties": {
+            "type": "number"
+          },
+          "propertyNames": {
+            "enum": [
+              "None",
+              "Blunt",
+              "Sharp",
+              "Piercing",
+              "Energy",
+              "Explosive",
+              "Structural",
+              "Acid",
+              "Heat",
+              "Cold",
+              "Water",
+              "Organ",
+              "Malnutrition",
+              "Decay",
+              "Toxin"
+            ]
+          }
+        },
+        "AddsStatModifiers": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "$ref": "#/$defs/ComponentConfig"
+          }
+        },
+        "ProvidesStats": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "$ref": "#/$defs/ComponentConfig"
+          }
+        },
+        "StatSources": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "$ref": "#/$defs/StatSourceData"
+          }
+        },
+        "AddsAttackMethods": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "$ref": "#/$defs/ComponentConfig"
+          }
+        },
+        "PartFlags": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "enum": [
+              "None",
+              "Removable",
+              "Internal",
+              "Limb",
+              "Essential",
+              "Biological",
+              "HoldsMind",
+              "Indestructible",
+              "Optional",
+              "SupportsMindTransfer",
+              "SupportsMLBooth",
+              "NeverGenerate"
+            ],
+            "type": "string"
+          }
+        },
+        "LooksPart": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "LooksSprite": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "additionalProperties": false
+    },
+    "ComponentConfig": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "Component": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "Properties": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "$ref": "#/$defs/SerializableProperty"
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "DamageResistance": {
+      "type": "object",
+      "properties": {
+        "DamageType": {
+          "enum": [
+            "None",
+            "Blunt",
+            "Sharp",
+            "Piercing",
+            "Energy",
+            "Explosive",
+            "Structural",
+            "Acid",
+            "Heat",
+            "Cold",
+            "Water",
+            "Organ",
+            "Malnutrition",
+            "Decay",
+            "Toxin"
+          ],
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "Resistance": {
+          "type": "number"
+        }
+      },
+      "additionalProperties": false
+    },
+    "Mat": {
+      "type": "object",
+      "properties": {
+        "TypeId": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "StackSize": {
+          "type": "integer"
+        },
+        "MaxStackSize": {
+          "type": "integer"
+        }
+      },
+      "additionalProperties": false
+    },
+    "SerializableProperty": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "Key": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "String": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "Int": {
+          "type": "integer"
+        },
+        "Float": {
+          "type": "number"
+        },
+        "Vector2": {
+          "$ref": "#/$defs/Vector2"
+        },
+        "PosIdx": {
+          "type": "integer"
+        },
+        "Bool": {
+          "type": "boolean"
+        },
+        "BoolSet": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "boolean"
+          }
+        },
+        "IntSet": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "integer"
+          }
+        },
+        "FloatSet": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "number"
+          }
+        },
+        "StringSet": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "Vector2Set": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "$ref": "#/$defs/Vector2"
+          }
+        },
+        "RawMaterials": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "$ref": "#/$defs/Mat"
+          }
+        },
+        "IsUsed": {
+          "type": "boolean"
+        }
+      },
+      "additionalProperties": false
+    },
+    "StatSourceData": {
+      "type": "object",
+      "properties": {
+        "StatId": {
+          "type": "integer"
+        },
+        "CompoundLimit": {
+          "type": "number"
+        },
+        "StateMul": {
+          "type": "number"
+        },
+        "QualityMul": {
+          "type": "number"
+        },
+        "Amount": {
+          "type": "number"
+        }
+      },
+      "additionalProperties": false
+    },
+    "Vector2": {
+      "type": "object",
+      "properties": {
+        "x": {
+          "type": "number"
+        },
+        "y": {
+          "type": "number"
+        }
+      },
+      "additionalProperties": false
+    }
+  }
+}

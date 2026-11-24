@@ -1,0 +1,31 @@
+{
+    // Threat wealth (millions) -> raid strength points.
+    // Wealth is the primary driver of raid size, and must stay the *larger* term against
+    // FriendlyPoints from the mid game on: hoarding materials and expanding the ship is what
+    // should make raids harder, not headcount (which the player grows anyway, and which bots
+    // make cheap). Close to linear in wealth up to the mid game on purpose: since raiders and
+    // defenders are both priced with durability (StrengthOf), colony combat strength tracks
+    // wealth almost linearly across the recorded ladder (1M -> 68, 3.3M -> 128, 5.6M -> 225,
+    // 53M -> 1218, roughly 60 x wealth^0.75). Targets: ~35-50% of colony strength in the mid
+    // game, ~45-55% late (below the popular colony sim's "about equal", because raiders fight
+    // inside the ship with no killbox geometry to soak them).
+    // Flatter from 8M on since raid adaptation (RaidAdaptation, October 2026): a run without
+    // losses grows raid points to ~1.42x by day 340, and the colonies past 20M are all that
+    // old, so the late saves of the Wealth Balance ladder had risen to a 89% median of their
+    // strength. At 20M and above the curve is ~0.55x of the one before, which puts the late
+    // median back near 50%; the mid game below 8M is unchanged. MaxRaidPoints (1000) is the
+    // ceiling. See Docs/Architecture/Systems/RaidScaling.md.
+    "FloatSet" : [
+        0.0,    2.55,
+        1.0,    10.2,
+        3.0,    25.5,
+        8.0,    61.9,
+        10.0,   71.0,
+        20.0,   92.0,
+        30.0,   117.0,
+        50.0,   168.0,
+        100.0,  230.0,
+        300.0,  332.0,
+        1000.0, 420.0
+    ]
+}

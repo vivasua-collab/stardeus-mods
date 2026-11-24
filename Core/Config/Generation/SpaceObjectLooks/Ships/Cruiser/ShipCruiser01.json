@@ -1,0 +1,15 @@
+{
+    "Id" : "ShipCruiser01",
+    "Probability" : 1.0,
+    "StarmapSizeMul" : 0.40,
+    "StarfieldSizeMul" : 0.20,
+    "IsConstantSizeInStarmap" : false,
+    "OrderDist" : -50,
+    "Sprite" : "SpaceObjects/Ships/ShipCruiser01_D",
+    "CanRotate" : true,
+    "KeepUprightInStarfield" : true,
+    "Sprite_L" : "SpaceObjects/Ships/ShipCruiser01_L",
+    "Sprite_R" : "SpaceObjects/Ships/ShipCruiser01_R",
+    "Sprite_U" : "SpaceObjects/Ships/ShipCruiser01_U",
+    "Sprite_D" : "SpaceObjects/Ships/ShipCruiser01_D"
+}

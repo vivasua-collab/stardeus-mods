@@ -1,0 +1,25 @@
+{
+    // C# implementation id.
+    // Multiple configurations can point to a single implementation.
+    "EventId" : "DerelictShipWithPentagram",
+    // How much does this story event cost to run
+    "Points" : 20,
+    // Options: Negative, Positive, Neutral, Raid, Raid
+    "OutcomeType" : "Neutral",
+    // Full list is in StoryEventFlags class
+    "EventFlags" : [
+        "OnDemand",
+        "DerelictShip"
+    ],
+    "Rarity" : 0.3,
+    "MinRepeatDelayDays" : 50,
+    // Full list of requirements can be found in Situation class
+    "Require" : {
+        "SectorDifficulty" : 0.8
+    }
+    // Variables for the story event implementation
+    // "Properties" : [
+    //     // how many beings we will choose from
+    //     { "Key" : "RiggedEvent", "String" : "Capsule/StorageCapsuleRaid" }
+    // ]
+}

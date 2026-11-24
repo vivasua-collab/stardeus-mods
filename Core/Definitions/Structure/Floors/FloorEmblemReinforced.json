@@ -1,0 +1,49 @@
+{
+    "ToolPath" : "Floors/FloorSpecial",
+    "Layer" : "Floor",
+    "ParentId" : "Structure/Floors/BaseFloor",
+    "Researchable" : {
+        "Prerequisites" : [
+            "Research/Construction/EmblemFloorsReinforced"
+        ]
+    },
+    "Components" : [
+        {
+            "Component" : "TileGraphics",
+            "Properties" : [
+                { "Key" : "Shader", "String": "TransparentFloorTile" },
+                {
+                    "Key" : "Graphic",
+                    "String": "Emblems/Blank"
+                },
+                { "Key" : "Foundation", "String": "Structure/Foundations/Reinforced" }
+            ]
+        },
+        { "Component" : "Emblem" },
+        {
+            "Component" : "Damageable",
+            "Properties" : [
+                { "Key" : "Max", "Int" : 300 }
+            ]
+        },
+        {
+            "Component" : "Flammable",
+            "Properties" : [
+                { "Key" : "FireChance", "Float" : 0.25 }
+            ]
+        },
+        {
+            "Component" : "Constructable",
+            "Properties" : [
+                { "Key" : "WorkAmount", "Int" : 665 },
+                {
+                    "Key" : "Contents",
+                    "RawMaterials" : [
+                        { "TypeId" : "SteelPlate", "StackSize" : 2 },
+                        { "TypeId" : "TitaniumPlate", "StackSize" : 1 }
+                    ]
+                }
+            ]
+        }
+    ]
+}

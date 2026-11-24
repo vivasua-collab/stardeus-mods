@@ -1,0 +1,11 @@
+{
+    "Id" : "Obj/Equipment/Weapons/StunBaton01",
+    "Type" : "CFD",
+    "Groups" : [ "Weapon" ],
+    "Value" : 900.0,
+    "Rarity" : 0.7,
+    "TraderQuantity" : 1.5,
+    "MaxTraderQuantity" : 5,
+    "MinSectorDifficulty" : 0.75,
+    "Volatility" : 0.0018
+}

@@ -1,0 +1,26 @@
+{
+    "EventId": "ExpeditionFoundMarketItem",
+    "Points": 10,
+    // Options: Negative, Positive, Neutral, Raid
+    "OutcomeType": "Positive",
+    "EventFlags": [
+        "OnDemand",
+        "Expedition"
+    ],
+    "Properties" : [
+        {
+            "Key" : "MarketGroups",
+            "StringSet" : [
+                "Energy",
+                "Electronics",
+                "Robotics",
+                "BlackMarket",
+                "Equipment",
+                "Upgrade"
+            ]
+        },
+        { "Key": "FailureChance", "Float": 0.05 },
+        // Multiplies the Economy/ExpeditionLootValue budget (anomalies pay more than POIs)
+        { "Key": "LootValueMul", "Float": 1.5 }
+    ]
+}

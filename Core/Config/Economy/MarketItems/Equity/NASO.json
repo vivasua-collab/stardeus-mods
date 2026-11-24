@@ -1,0 +1,7 @@
+{
+    "Id" : "NASO",
+    "Type" : "Equity",
+    "Groups" : [ "Energy", "Weapon" ],
+    "Value" : 250.0,
+    "Volatility" : 0.0581
+}

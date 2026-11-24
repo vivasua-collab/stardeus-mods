@@ -1,0 +1,11 @@
+{
+    "Id" : "Obj/Materials/Plastic",
+    "Type" : "CFD",
+    "Groups" : [ "Material" ],
+    "Value" : 115.0,
+    "Rarity" : 0.23,
+    "TraderQuantity" : 20.0,
+    "OnlineShopQuantity" : 50,
+    "MinSectorDifficulty" : 0.4,
+    "Volatility" : 0.0023
+}

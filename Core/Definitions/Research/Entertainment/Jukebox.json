@@ -1,0 +1,23 @@
+{
+    "Id" : "Research/Entertainment/Jukebox",
+    "Tier" : 2,
+    "IsAbstract" : true,
+    "PreviewIcon" : "Icons/Color/SoundOn",
+    "NameKey" : "objects.devices.jukebox",
+    "Researchable" : {
+        "IsTreeNode" : true,
+        "Prerequisites" : [
+            "Research/Entertainment/ArcadeCabinet"
+        ],
+        "DatoidCosts" : [
+            {
+                "TypeId" : "DatoidBasic",
+                "StackSize" : 10
+            },
+            {
+                "TypeId" : "DatoidTech",
+                "StackSize" : 5
+            }
+        ]
+    }
+}

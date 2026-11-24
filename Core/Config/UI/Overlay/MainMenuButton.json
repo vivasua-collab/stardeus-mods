@@ -1,0 +1,9 @@
+{
+    "Id" : "Overlay/MainMenuButton",
+
+    "Color" : "UI/Btn/OverlayMainMenu",
+
+    "Image" : "UI/Buttons/ActiveOverlayPopup",
+    "ImageType" : "Sliced",
+    "ImageBorderLBRT" : [ 12, 12, 28, 28 ]
+}

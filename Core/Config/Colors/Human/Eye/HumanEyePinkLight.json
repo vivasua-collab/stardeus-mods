@@ -1,0 +1,6 @@
+{
+    "Id" : "HumanEyePinkLight",
+    "Data" : [209, 148, 160, 255],
+    "Groups" : [ "Human.Eye" ],
+    "Weight" : 0.1
+}

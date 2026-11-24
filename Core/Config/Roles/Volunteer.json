@@ -1,0 +1,21 @@
+{
+    "Id" : "Volunteer",
+    "Species" : [ "Human" ],
+    "RoleTypes" : [ "Poor", "Good" ],
+    "AgePhaseIds" : [ "YoungAdult", "MidLife", "Retirement" ],
+    "LovesJobTypes" : [ "Caring" ],
+    "AdjustsSkills" : [
+        {
+            "JobId" : "Social",
+            "Adjustment" : 6
+        },
+        {
+            "JobId" : "Cleaning",
+            "Adjustment" : 2
+        },
+        {
+            "JobId" : "Shooting",
+            "Adjustment" : -1
+        }
+    ]
+}

@@ -1,0 +1,134 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Stardeus MarketItem",
+  "description": "Generated from C# by Game/Generate JSON Schemas, do not edit by hand",
+  "$ref": "#/$defs/MarketItem",
+  "$defs": {
+    "MarketItem": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "Type": {
+          "enum": [
+            "CFD",
+            "Equity"
+          ],
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "AssetType": {
+          "anyOf": [
+            {
+              "type": "string",
+              "enum": [
+                "CFD",
+                "Equity"
+              ]
+            },
+            {
+              "type": "integer"
+            }
+          ]
+        },
+        "Id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "IdH": {
+          "type": "integer"
+        },
+        "Groups": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "GroupsH": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "integer"
+          }
+        },
+        "ProductOf": {
+          "type": [
+            "object",
+            "null"
+          ],
+          "additionalProperties": {
+            "type": "number"
+          }
+        },
+        "Value": {
+          "type": "number"
+        },
+        "PlayerBuyPriceMultiplier": {
+          "type": "number"
+        },
+        "PlayerSellPriceMultiplier": {
+          "type": "number"
+        },
+        "TraderQuantity": {
+          "type": "number"
+        },
+        "MaxTraderQuantity": {
+          "type": "integer"
+        },
+        "IsBlackMarket": {
+          "type": "boolean"
+        },
+        "OnlineShopQuantity": {
+          "type": "integer"
+        },
+        "CustomChanceInStock": {
+          "type": "number"
+        },
+        "Rarity": {
+          "type": "number"
+        },
+        "MinSectorDifficulty": {
+          "type": "number"
+        },
+        "NoRandomLoot": {
+          "type": "boolean"
+        },
+        "Icon": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "Name": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "SearchName": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "Volatility": {
+          "type": "number"
+        }
+      },
+      "additionalProperties": false
+    }
+  }
+}

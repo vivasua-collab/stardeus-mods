@@ -1,0 +1,27 @@
+{
+    "Id" : "Busboy",
+    "LovesJobTypes" : [ ],
+    "Species" : [ "Human" ],
+    "RoleTypes" : [ "Poor" ],
+    "AgePhaseIds" : [ "Childhood", "YoungAdult" ],
+    "SexChances" : [
+        {
+            "Sex" : "M",
+            "Chance" : 1.0
+        },
+        {
+            "Sex" : "F",
+            "Chance" : 0.0
+        }
+    ],
+    "AdjustsSkills" : [
+        {
+            "JobId" : "Cooking",
+            "Adjustment" : 2
+        },
+        {
+            "JobId" : "Expedition",
+            "Adjustment" : 4
+        }
+    ]
+}

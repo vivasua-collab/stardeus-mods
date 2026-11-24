@@ -1,0 +1,10 @@
+{
+    "Id" : "Obj/Materials/Protein",
+    "Type" : "CFD",
+    "Groups" : [ "Organic", "Food" ],
+    "Value" : 89.0,
+    "Rarity" : 0.4,
+    "TraderQuantity" : 50.0,
+    "OnlineShopQuantity" : 50,
+    "Volatility" : 0.005
+}

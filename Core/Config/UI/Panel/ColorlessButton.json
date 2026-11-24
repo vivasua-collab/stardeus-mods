@@ -1,0 +1,11 @@
+{
+    "Id" : "Panel/ColorlessButton",
+
+    // Colors are defined through Selectable color blocks
+    "Color" : "FFFFFF",
+    "Alpha" : 1,
+
+    "Image" : "UI/Buttons/ButtonBG",
+    "ImageType" : "Sliced",
+    "ImageBorderLBRT" : [ 12, 12, 12, 12 ]
+}

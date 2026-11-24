@@ -1,0 +1,7 @@
+{
+    "Id" : "UI/Starmap/PlayerMarker",
+    "AliasFor" : "UI/Grey/Comp",
+    // "Hex" : "BC3FC0",
+    "Alpha" : 1.0,
+    "SkipAtlas" : true
+}

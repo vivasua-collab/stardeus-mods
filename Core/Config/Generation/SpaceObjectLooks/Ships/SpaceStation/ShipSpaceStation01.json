@@ -1,0 +1,13 @@
+{
+
+    "Id" : "ShipSpaceStation01",
+    "Probability" : 1.0,
+    "StarmapSizeMul" : 1.0,
+    "StarfieldSizeMul" : 0.5,
+    // ships have -50, but -20 was in original space station,
+    "OrderDist" : -20,
+    "KeepUprightInStarfield" : true,
+    // was false in original space station
+    "IsConstantSizeInStarmap" : false,
+    "Sprite" : "SpaceObjects/Stations/SpaceStation01"
+}

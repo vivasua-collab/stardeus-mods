@@ -1,0 +1,89 @@
+{
+    "SkipToolListing": true,
+    "Layer": "Objects",
+    "Components": [
+        {
+            "Component": "Passability"
+        },
+        {
+            "Component": "TileTransform",
+            "Properties": [
+                {
+                    "Key": "Width",
+                    "Int": 2
+                }
+            ]
+        },
+        {
+            "Component": "TileGraphics",
+            "Properties": [
+                {
+                    "Key": "Graphic",
+                    "String": "Objects/Furniture/TableWood1x2_D"
+                }
+            ]
+        },
+        {
+            "Component": "Template",
+            "Properties": [
+                {
+                    "Key": "Definitions",
+                    "StringSet": [
+                        "Objects/Furniture/TableWood1x2",
+                        "Objects/Furniture/ChairWood",
+                        "Objects/Furniture/ChairWood",
+                        "Objects/Furniture/ChairWood",
+                        "Objects/Furniture/ChairWood",
+                        "Objects/Furniture/ChairWood",
+                        "Objects/Furniture/ChairWood"
+                    ]
+                },
+                {
+                    "Key": "Positions",
+                    "Vector2Set": [
+                        {
+                            "x": 0,
+                            "y": 0
+                        },
+                        {
+                            "x": 0,
+                            "y": 1
+                        },
+                        {
+                            "x": 1,
+                            "y": 1
+                        },
+                        {
+                            "x": 2,
+                            "y": 0
+                        },
+                        {
+                            "x": 1,
+                            "y": -1
+                        },
+                        {
+                            "x": 0,
+                            "y": -1
+                        },
+                        {
+                            "x": -1,
+                            "y": 0
+                        }
+                    ]
+                },
+                {
+                    "Key": "Rotations",
+                    "StringSet": [
+                        "D",
+                        "D",
+                        "D",
+                        "L",
+                        "U",
+                        "U",
+                        "R"
+                    ]
+                }
+            ]
+        }
+    ]
+}

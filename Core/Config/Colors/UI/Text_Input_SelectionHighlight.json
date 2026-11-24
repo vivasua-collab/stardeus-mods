@@ -1,0 +1,7 @@
+{
+    "Id" : "UI/Text/Input/SelectionHighlight",
+    "AliasFor" : "UI/Main/Comp-2",
+    // "Hex" : "453D4D",
+    "Alpha" : 1.0,
+    "SkipAtlas" : true
+}

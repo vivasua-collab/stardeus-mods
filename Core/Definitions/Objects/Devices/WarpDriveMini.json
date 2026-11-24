@@ -1,0 +1,163 @@
+{
+    "ToolPath" : "SpaceTravel",
+    "Layer" : "Objects",
+    "ParentId" : "Objects/Devices/BaseDevice",
+    "Researchable" : {
+        "Prerequisites" : [
+            "Research/SpaceTravel/WarpDrive"
+        ]
+    },
+    "Spawnable" : {
+        "Category": "Warp",
+        "SkipOwned": 1,
+        "Chance" : 0.1,
+        "ChanceLocked" : 0.0
+    },
+    "Components" : [
+        {
+            "Component" : "TileTransform",
+            "Properties" : [
+                { "Key" : "IsRotatable", "Bool" : true },
+                { "Key" : "CoverPercent", "Int" : 0 },
+                // { "Key" : "WorkSpot", "Vector2" : { "x" : 1, "y" : 3 } },
+                // { "Key" : "OutPort", "Vector2" : { "x" : 1, "y" : -1 } },
+                { "Key" : "InPort", "Vector2" : { "x" : 0, "y" : -1 } },
+                { "Key" : "Width", "Int" : 2 },
+                { "Key" : "Height", "Int" : 2 }
+            ]
+        },
+        {
+            "Component" : "IndustrialEquipment",
+            "Properties" : [
+                { "Key" : "IsNoisy", "Bool" : true }
+            ]
+        },
+        {
+            "Component" : "Damageable",
+            "Properties" : [
+                { "Key" : "Max", "Int" : 250 }
+            ]
+        },
+        {
+            "Component" : "Reinstallable",
+            "Properties" : [
+                { "Key" : "IsAdvanced", "Bool" : true }
+            ]
+        },
+        {
+            "Component" : "Hyperdrive",
+            "Properties" : [
+                { "Key" : "IsWarp", "Bool" : true },
+                { "Key" : "ChargeTimeHours", "Float" : 3.0 }
+            ]
+        },
+        { "Component" : "OutdoorsCheck" },
+        { "Component" : "ExtraInfo" },
+        {
+            "Component" : "RefillableStorage",
+            "Properties" : [
+                { "Key" : "DeviceType", "String" : "engine" },
+                { "Key" : "Purpose", "String" : "fuel" },
+                // { "Key" : "BarColor", "String" : "5390C6FF" },
+                { "Key" : "LockedMaterial", "String" : "FusionCell" },
+                { "Key" : "ShowBurnRate", "Bool" : false },
+                { "Key" : "Icon", "String" : "Obj/Materials/FusionCell" },
+                { "Key" : "MaterialCapacity", "Int" : 3 }
+            ]
+        },
+        {
+            "Component" : "HeatProducer",
+            "Properties" : [
+                { "Key" : "Rate", "Float" : 5 },
+                { "Key" : "Range", "Int" : 2 },
+                { "Key" : "CheckSameArea", "Bool" : true }
+            ]
+        },
+        {
+            "Component" : "VFX",
+            "Properties" : [
+                { "Key" : "Id", "String" : "VFXParticlesQuantumBarrier" },
+                { "Key" : "IsLinkedToEnergy", "Bool" : true },
+                { "Key" : "MinEnergy", "Float" : 10.0 },
+                { "Key" : "Offset", "Vector2" : { "x" : 0.0, "y" : 0 } }
+            ]
+        },
+        {
+            "Component" : "TileGraphics",
+            "Properties" : [
+                { "Key" : "Type", "String": "Object" },
+                { "Key" : "Graphic", "String": "Objects/Devices/WarpDriveMini" },
+                { "Key" : "HasHeight", "Bool": true }
+            ]
+        },
+        {
+            "Component" : "ElectricNode",
+            "Properties" : [
+                { "Key" : "IsConsumer", "Bool" : true }
+            ]
+        },
+        {
+            "Component" : "WithFuse",
+            "Properties" : [
+                { "Key" : "MalfunctionWeight", "Float": 0.25 },
+                // Has special event (EngineFailure)
+                { "Key" : "CanHaveGenericMalfunction", "Bool": false }
+            ]
+        },
+        {
+            "Component" : "Flammable",
+            "Properties" : [
+                { "Key" : "IgnitionTemperatureCelsius", "Int" : 0 },
+                { "Key" : "FireChance", "Float" : 0.5 },
+                { "Key" : "BaseExplosionLevel", "Int" : 5 },
+                { "Key" : "FlammabilityCurve", "String" : "DeviceHigh" },
+                { "Key" : "ExplosivenessCurve", "String" : "DeviceHigh" }
+            ]
+        },
+        {
+            "Component" : "Passability",
+            "Properties" : [
+                { "Key" : "IsPassable", "Bool" : false },
+                { "Key" : "IsWalkable", "Bool" : false },
+                { "Key" : "Difficulty", "Float" : 1.0 }
+            ]
+        },
+        {
+            "Component" : "AudioSource",
+            "Properties" : [
+                { "Key" : "AmbienceClip", "String" : "Ambience/EngineNoise" },
+                { "Key" : "Rolloff", "Vector2" : { "x" : 25, "y" : 100 } },
+                { "Key" : "IsLinkedToEnergy", "Bool" : true }
+            ]
+        },
+        {
+            "Component" : "ShipEngine",
+            "Properties" : [
+                { "Key" : "EnergyCost", "Float" : 100 },
+                { "Key" : "WorksIn", "StringSet" : [ "Region" ] }
+            ]
+        },
+        {
+            "Component" : "ShipCombatEngine",
+            "Properties" : [
+                { "Key" : "ShipEngineId" , "String" : "WarpDriveMini" }
+            ]
+        },
+        {
+            "Component" : "Constructable",
+            "Properties" : [
+                { "Key" : "WorkAmount", "Int" : 2000 },
+                {
+                    "Key" : "Contents",
+                    "RawMaterials" : [
+                        { "TypeId" : "TitaniumPlate", "StackSize" : 4 },
+                        { "TypeId" : "Glass", "StackSize" : 4 },
+                        { "TypeId" : "OpticalFiber", "StackSize" : 3 },
+                        { "TypeId" : "Microchip2", "StackSize" : 1 },
+                        { "TypeId" : "NuclearCell", "StackSize" : 1 }
+                    ]
+                }
+            ]
+        }
+    ]
+}

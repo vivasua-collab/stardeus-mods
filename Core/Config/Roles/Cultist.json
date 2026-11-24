@@ -1,0 +1,19 @@
+{
+    "Id" : "Cultist",
+    "Species" : [ "Human" ],
+    "RoleTypes" : [ "Dumb", "Poor" ],
+    "AdjustsSkills" : [
+        {
+            "JobId" : "Cleaning",
+            "Adjustment" : 4
+        },
+        {
+            "JobId" : "Medical",
+            "Adjustment" : 2
+        },
+        {
+            "JobId" : "Research",
+            "Adjustment" : -1
+        }
+    ]
+}

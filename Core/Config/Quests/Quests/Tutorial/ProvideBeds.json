@@ -1,0 +1,29 @@
+{
+    "QuestFlags" : [ "Tutorial", "AutoAdd", "Unique" ],
+    "TitleKey" : "quest.ProvideBeds",
+    "DescKey" : "quest.ProvideBeds.desc",
+    "QuestProviders" : [
+        "ShipComputer"
+    ],
+    // Head of the colonist branch, in every scenario. Beds come before food: sleep runs out
+    // within a day, starting protein lasts a week, and Furniture needs no research, so this is
+    // a one-build lesson. Offered as soon as the stasis room is survivable, not when the first
+    // colonist is already out: the same bool releases New Beginning's first wake-up, so the
+    // player builds the bed during the wake-up notice instead of after somebody slept on the
+    // floor. A ship that already has a bed for everyone passes the step on creation
+    // (pre-check), so the chain moves on without showing it.
+    "AvailableWhen" : [
+        "ReadyForTutorialQuests",
+        "MadeStasisSurvivable"
+    ],
+    "SetOnComplete" : [ "HasBeds" ],
+    // if tutorial quest gets abandoned, we still want to move on with the other tutorials
+    "SetOnFail" : [ "HasBeds" ],
+    "Steps" : [
+        {
+            "Id": "BedForEveryColonist",
+            "Type" : "BedForEveryColonist",
+            "StepFlags" : [ "ActiveOnStart", "CompletesQuest" ]
+        }
+    ]
+}

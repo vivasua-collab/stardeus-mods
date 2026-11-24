@@ -1,0 +1,66 @@
+{
+    "QuestFlags" : [ "Random", "Template", "Signal" ],
+    "Weight" : 0.5,
+    "TitleKey": "noun.signal.offer",
+    "DescKey": "noun.signal.offer.desc",
+    "QuestProviders" : [ "Signal" ],
+    "QuestValidators" : [ "HasActiveTradePortal" ],
+    "Variables" : [
+        {
+            "Id" : "Deadline",
+            "Type" : "Deadline",
+            "Config" : [
+                { "Key" : "DaysCurve", "FloatSet" : [ 0.0, 30.0, 1.0, 14.0 ] },
+                { "Key" : "DifficultyInput", "String" : "Sector" },
+                { "Key" : "DeadlineMult", "FloatSet" : [ 0.5, 2.0 ] }
+            ]
+        },
+        {
+            "Id" : "Request",
+            "Type" : "MarketItem",
+            "Config" : [
+                { "Key" : "MarketGroups", "StringSet" : [ "Upgrade" ] },
+                { "Key" : "Quantity", "Int" : 1 },
+                { "Key" : "DVar_DefId", "String" : "ReqDefId" },
+                { "Key" : "DVar_Amount", "String" : "ReqQty" }
+            ]
+        },
+        {
+            "Id" : "Reward",
+            "Type" : "MarketItem",
+            "Config" : [
+                { "Key" : "MarketGroups", "StringSet" : [ "Upgrade" ] },
+                { "Key" : "Var_Exclude", "String" : "Request" },
+                { "Key" : "Var_MatchValueOf", "String" : "Request" },
+                { "Key" : "PercentFrom", "Float" : 3.0 },
+                { "Key" : "PercentTo", "Float" : 5.0 },
+                { "Key" : "DVar_DefId", "String" : "RewDefId" },
+                { "Key" : "DVar_Amount", "String" : "RewQty" }
+            ]
+        }
+    ],
+    "Steps" : [
+        {
+            "Id" : "Deliver",
+            "Type" : "DeliverViaTradePortal",
+            "StepFlags" : [ "ActiveOnStart", "CompletesQuest", "FailsQuest" ],
+            "Deadline" : "Deadline",
+            "Config" : [
+                { "Key" : "DVar_DefId", "String" : "ReqDefId" },
+                { "Key" : "DVar_Amount", "String" : "ReqQty" },
+                { "Key" : "RequestMsgKeys", "StringSet" : [ "sig.ask.obj.clear.reward.*" ] },
+                { "Key" : "RequestMsgArgs", "StringSet" : [ "Def:ReqDefId", "Def:RewDefId" ] }
+            ]
+        }
+    ],
+    "Rewards" : [
+        {
+            "Id" : "Item",
+            "Type" : "EntityAtTradePortal",
+            "Config" : [
+                { "Key" : "DVar_DefId", "String" : "RewDefId" },
+                { "Key" : "DVar_Amount", "String" : "RewQty" }
+            ]
+        }
+    ]
+}

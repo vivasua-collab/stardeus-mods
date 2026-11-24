@@ -1,0 +1,10 @@
+{
+    "Type" : "Ore",
+    "Ingredients" : [
+        { "TypeId" : "Iron", "StackSize" : 1 }
+    ],
+    "OutputMultiplier" : 5,
+    "ProductDefId" : "Obj/Materials/SteelPlate",
+    "ProductionTimeHours" : 1,
+    "EnergyCost" : 10
+}

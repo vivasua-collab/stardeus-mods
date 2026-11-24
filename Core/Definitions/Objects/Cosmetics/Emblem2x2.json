@@ -1,0 +1,36 @@
+{
+    "Layer" : "Objects",
+    "ParentId" : "Objects/Cosmetics/Emblem1x1",
+    "Components" : [
+        {
+            "Component" : "TileTransform",
+            "Properties" : [
+                { "Key" : "CoverPercent", "Int" : 0 },
+                { "Key" : "Width", "Int" : 2 },
+                { "Key" : "Height", "Int" : 2 },
+                { "Key" : "IsRotatable", "Bool" : false }
+            ]
+        },
+        {
+            "Component" : "Admirable",
+            "Properties" : [
+                { "Key" : "Amount", "Int" : 1 },
+                { "Key" : "Multiplier", "Float" : 0.1 },
+                { "Key" : "Chance", "Float" : 0.25 }
+            ]
+        },
+        {
+            "Component" : "Constructable",
+            "Properties" : [
+                { "Key" : "WorkAmount", "Int" : 1400 },
+                {
+                    "Key" : "Contents",
+                    "RawMaterials" : [
+                        { "TypeId" : "SteelPlate", "StackSize" : 4 },
+                        { "TypeId" : "CarbonFiber", "StackSize" : 4 }
+                    ]
+                }
+            ]
+        }
+    ]
+}

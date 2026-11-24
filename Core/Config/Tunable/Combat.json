@@ -1,0 +1,106 @@
+{
+    "Floats" : [
+        { "Key" : "FriendlyFightMaxDurationHours", "Float" : 6.0 },
+        { "Key" : "FriendlyFightStallTimeoutHours", "Float" : 3.0 },
+        { "Key" : "BreachCapsuleSpeedMul", "Float" : 1.0 },
+        { "Key" : "AccuracyBonusAfterEachMiss", "Float" : 0.1 },
+        // Skill XP per tick of an attack's cycle (charge + cooldown), paid per attack at a
+        // target that can fight back, hit or miss: fast and slow weapons train at the same rate
+        // per hour of fighting, and Melee a little faster than Shooting
+        { "Key" : "CombatShootingXpPerCycleTick", "Float" : 118.0 },
+        // Melee weapons have no accuracy: a melee hit lands by the attacker's MeleeAccuracy.
+        // Weapon choice, attack priority and raid pricing weigh melee attacks by this typical
+        // hit chance instead (a skill 5 fighter's 65%)
+        { "Key" : "CombatMeleeReferenceHitChance", "Float" : 0.65 },
+        // Distance at which ShootingAccuracy (skill, Sight, Dexterity) applies as it is; a shot
+        // raises the stat to distance / this, as accuracy per tile of range. Closer shots depend
+        // less on the shooter, longer ones more
+        { "Key" : "CombatSkillReferenceDistance", "Float" : 12.0 },
+        { "Key" : "CombatMeleeXpPerCycleTick", "Float" : 139.0 },
+        // Most of a hit chance that cover can take away. Below 1, so full cover (100) never
+        // makes a unit that can still shoot back impossible to hit
+        { "Key" : "CombatMaxCoverReduction", "Float" : 0.9 },
+        // A shot flies on (StrayShot): the chance a standing being on its way takes it, times
+        // its body size (full from 12 tiles of the shooter, none within 5), a tenth of that
+        // for a lying being, 0.4 of it for a friendly one, and how much of a cover object's
+        // CoverPercent counts when it is not right by where the shot lands
+        { "Key" : "CombatStrayShotInterceptChance", "Float" : 0.4 },
+        { "Key" : "CombatStrayShotDownedMul", "Float" : 0.1 },
+        { "Key" : "CombatStrayShotFriendlyMul", "Float" : 0.4 },
+        { "Key" : "CombatStrayShotObjectInterceptMul", "Float" : 0.15 },
+        // Share of a stray shot's damage a wall or a door takes, so misses do not breach the ship
+        { "Key" : "CombatStrayShotWallDamageMul", "Float" : 0.25 },
+        // Highest chance to dodge a melee hit (MeleeDodge stat)
+        { "Key" : "CombatMaxMeleeDodge", "Float" : 0.5 },
+        // Scales a weapon's FatalHitChanceMul when a hit would destroy a part the being cannot
+        // live without (body, head, heart), so fights end mostly in downs rather than deaths
+        { "Key" : "CombatVitalPartDestroyMul", "Float" : 0.5 },
+        // How long after a fight starts its attackers still go after ship weapons (turrets
+        // that never fire at beings, often out on the hull where no colonist can reach them).
+        // Past it they leave those alone, so a raid cannot stall for half a day on a weapon
+        // platform
+        { "Key" : "CombatShipWeaponAttackHours", "Float" : 4.0 },
+        // A hostile fight whose every enemy is stranded (a walker on an island with neither
+        // the ship nor anyone of ours) ends this long after the last contact: they can never
+        // get to us (CombatAlerts)
+        { "Key" : "CombatStrandedEndMinutes", "Float" : 30.0 },
+        // Any hostile fight ends after this long without contact between our side and an
+        // enemy while no enemy comes any closer to the ship, for enemies that cannot carry on
+        // in ways the stranded test misses
+        { "Key" : "CombatNoContactEndHours", "Float" : 6.0 },
+        { "Key" : "CombatCooldownMultiplier", "Float" : 1.5 },
+        { "Key" : "CombatChargeMultiplier", "Float" : 1.25 },
+        { "Key" : "CombatMeleeEscapeHpThreshold", "Float" : 0.25 },
+        // A colonist below this vitality breaks off a hostile fight and goes to heal, and
+        // comes back once it is this much plus the margin (CombatUnit.IsRetreating)
+        { "Key" : "CombatRetreatVitality", "Float" : 0.4 },
+        { "Key" : "CombatRetreatRecoverMargin", "Float" : 0.15 },
+        // A human this close (tiles, in sight) directs friendly bots: their hit chance is
+        // multiplied (CombatUnit.IsCommanded)
+        { "Key" : "CombatCommandRadius", "Float" : 6.0 },
+        { "Key" : "CombatCommandAccuracyMul", "Float" : 1.15 },
+        { "Key" : "CombatEnemyFleeHpThreshold", "Float" : 0.35 },
+        { "Key" : "CombatEnemyRouteThreshold", "Float" : 0.50 },
+        { "Key" : "CombatEnemyRoutFleeChance", "Float" : 0.50 },
+        { "Key" : "CombatSuppressionThreshold", "Float" : 0.35 },
+        { "Key" : "CombatSuppressionPerHit", "Float" : 0.4 },
+        { "Key" : "CombatSuppressionPerNearMiss", "Float" : 0.2 },
+        { "Key" : "CombatSuppressionPerMeleeHit", "Float" : 0.15 },
+        { "Key" : "CombatSuppressionDecayMinutes", "Float" : 30.0 },
+        { "Key" : "CombatSuppressedAttackChance", "Float" : 0.50 },
+        { "Key" : "CombatStunSuppressionAmount", "Float" : 0.2 },
+        { "Key" : "CombatStunSuppressionExtraMinutes", "Float" : 15.0 },
+        { "Key" : "CombatSuppressedMoveSpeedMul", "Float" : 0.25 },
+        { "Key" : "CombatSkipMeleeAttackWhileMovingChance", "Float" : 0.50 },
+        { "Key" : "CombatMeleeNoTargetWaitMinutes", "Float" : 5.0 },
+        { "Key" : "CombatRangedNoTargetWaitMinutes", "Float" : 20.0 },
+        // A drafted shooter's hold order (fire from where it stands) is dropped once its target
+        // stayed out of reach this long, so the shooter fires at whoever else it can hit
+        { "Key" : "CombatHoldOrderLeashMinutes", "Float" : 1.0 },
+        // An undrafted melee crew member answers enemies within this many tiles: it walks over
+        // and hits them, then goes back to work. Shooters fire at what they can hit from where
+        // they stand, and nobody goes looking further
+        { "Key" : "CombatMeleeResponseRadius", "Float" : 8.0 },
+        // A crew member set to flee (or Free Will without a usable weapon) runs from an enemy
+        // in sight within this many tiles, and works otherwise
+        { "Key" : "CombatFleeRadius", "Float" : 12.0 },
+        { "Key" : "CombatRangedTooCloseDist", "Float" : 2.5 },
+        { "Key" : "CombatTargetReevalMinMinutes", "Float" : 5.0 },
+        { "Key" : "CombatTargetReevalMaxMinutes", "Float" : 15.0 },
+        { "Key" : "AutoRepairDangerRadius", "Float" : 10.0 }
+    ],
+    "Ints" : [
+        { "Key" : "CombatRangedRepositionMaxTiles", "Int" : 5 },
+        { "Key" : "CombatMeleeRepositionMaxTiles", "Int" : 4 }
+    ],
+    "FloatSets" : [
+        {
+            "Key" : "TurretAccuracyCurve",
+            "FloatSet" : [
+                0.0, 0.6,
+                0.5, 1.0,
+                1.0, 0.25
+            ]
+        }
+    ]
+}

@@ -1,0 +1,16 @@
+{
+    "Id" : "MarineBiologist",
+    "Species" : [ "Human", "Robot" ],
+    "AgePhaseIds" : [ "YoungAdult", "MidLife", "Retirement" ],
+    "RoleTypes" : [ ],
+    "AdjustsSkills" : [
+        {
+            "JobId" : "Plants",
+            "Adjustment" : 4
+        },
+        {
+            "JobId" : "Firefighting",
+            "Adjustment" : -1
+        }
+    ]
+}

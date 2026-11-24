@@ -1,0 +1,24 @@
+{
+    "Layer" : "FreeEntities",
+    "ParentId" : "Beings/BaseBeing",
+    "PreviewIcon" : "Icons/Color/PreviewHuman01",
+    "Researchable" : {
+        "Prerequisites" : [ "Research/LifeSupport/CloneHuman" ]
+    },
+    "Components" : [
+        {
+            "Component" : "BeingNameText" ,
+            "Properties" : [
+                { "Key" : "Offset", "Vector2" : { "x" : 0, "y" : -0.5 } },
+                { "Key" : "SpeechOffset", "Float" : 0.5 }
+            ]
+        },
+        { "Component" : "BedUser" },
+        {
+            "Component" : "Disposable",
+            "Properties" : [
+                { "Key" : "IsBiological", "Bool" : true }
+            ]
+        }
+    ]
+}

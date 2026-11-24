@@ -1,0 +1,16 @@
+{
+    "Type" : "Robotics3",
+    "ProductDefId" : "Obj/Parts/Mobilizer/MiniJet",
+    "ProductionTimeHours" : 240,
+    "EnergyCost" : 50,
+    "IgnoreMarket" : true,
+    "Ingredients" : [
+        { "TypeId" : "TitaniumPlate", "StackSize" : 1 },
+        { "TypeId" : "Transistor", "StackSize" : 5 },
+        { "TypeId" : "Microchip", "StackSize" : 1 },
+        { "TypeId" : "NuclearCell", "StackSize" : 1 }
+    ],
+    "DisposableOutput" : [
+        { "TypeId" : "ScrapMetal", "StackSize" : 1 }
+    ]
+}

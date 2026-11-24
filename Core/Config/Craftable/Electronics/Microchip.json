@@ -1,0 +1,12 @@
+{
+    "Type": "Electronics",
+    "Ingredients": [
+        { "TypeId" : "Transistor", "StackSize" : 5 },
+        { "TypeId" : "SiliconWafer", "StackSize" : 2 },
+        { "TypeId" : "Plastic", "StackSize" : 1 }
+    ],
+    "IgnoreMarket" : true,
+    "ProductDefId": "Obj/Materials/Microchip",
+    "ProductionTimeHours": 2.0,
+    "EnergyCost": 20.0
+}

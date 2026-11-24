@@ -1,0 +1,12 @@
+{
+    "Id" : "Pumpkin",
+    "IsComposite" : true,
+    "IsConsumedOnConstruct" : true,
+    "IconId" : "Obj/Materials/Pumpkin",
+    "Property" : "Nutrient",
+    "Group" : "RawFood",
+    "GroupId" : "Plants",
+    "EnergyOutput" : 240.0,
+    "InternalValue" : 25.0,
+    "Rarity" : 7
+}

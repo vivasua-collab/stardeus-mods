@@ -1,0 +1,8 @@
+{
+    "Id" : "ShipHyperTrail",
+    "Icon" : "Icons/Color/Traffic",
+    "IsDynamic" : true,
+    "IsInteractive" : true,
+    "SpawnChance" : 0.0,
+    "StarfieldSortOrder" : 2
+}

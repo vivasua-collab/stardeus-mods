@@ -1,0 +1,327 @@
+{
+    "SkipToolListing": true,
+    "Layer": "Objects",
+    "Components": [
+        {
+            "Component": "TileTransform",
+            "Properties": [
+                {
+                    "Key": "Width",
+                    "Int": 8
+                },
+                {
+                    "Key": "Height",
+                    "Int": 9
+                }
+            ]
+        },
+        {
+            "Component": "Passability"
+        },
+        {
+            "Component": "TileGraphics",
+            "Properties": [
+                {
+                    "Key": "Graphic",
+                    "String": "Icons/White/Square"
+                }
+            ]
+        },
+        {
+            "Component": "Template",
+            "Properties": [
+                {
+                    "Key": "Chance",
+                    "Float": 0.9
+                },
+                {
+                    "Key": "MinInstances",
+                    "Int": 3
+                },
+                {
+                    "Key": "MaxInstances",
+                    "Int": 8
+                },
+                {
+                    "Key": "Definitions",
+                    "StringSet": [
+                        "Structure/Walls/Wall01",
+                        "Structure/Walls/Wall01",
+                        "Structure/Walls/Wall01",
+                        "Structure/Walls/Wall01",
+                        "Structure/Walls/Wall01",
+                        "Structure/Walls/Wall01",
+                        "Structure/Walls/Wall01",
+                        "Structure/Walls/Wall01",
+                        "Structure/Walls/Wall01",
+                        "Structure/Walls/Wall01",
+                        "Objects/Devices/Heater",
+                        "Objects/Furniture/TableWood1x3",
+                        "Objects/Devices/Shower",
+                        "Structure/Walls/Wall01",
+                        "Structure/Walls/Wall01",
+                        "Objects/Devices/OxygenPump",
+                        "Objects/Furniture/ChairWood",
+                        "Objects/Furniture/ChairWood",
+                        "Objects/Furniture/ChairWood",
+                        "Objects/Devices/Toilet",
+                        "Structure/Walls/Wall01",
+                        "Structure/Walls/Wall01",
+                        "Structure/Floors/Floor01Lit",
+                        "Structure/Walls/Wall01",
+                        "Structure/Doors/Door01",
+                        "Structure/Walls/Wall01",
+                        "Structure/Walls/Wall01",
+                        "Objects/Furniture/BedWood",
+                        "Objects/Furniture/BedWood",
+                        "Objects/Furniture/BedWood",
+                        "Objects/Furniture/BedWood",
+                        "Objects/Furniture/BedWood",
+                        "Structure/Walls/Wall01",
+                        "Structure/Walls/Wall01",
+                        "Structure/Walls/Wall01",
+                        "Structure/Walls/Wall01",
+                        "Structure/Walls/Wall01",
+                        "Structure/Walls/Wall01",
+                        "Structure/Walls/Wall01",
+                        "Structure/Walls/Wall01",
+                        "Structure/Walls/Wall01",
+                        "Structure/Walls/Wall01",
+                        "Structure/Walls/Wall01",
+                        "Structure/Walls/Wall01"
+                    ]
+                },
+                {
+                    "Key": "Positions",
+                    "Vector2Set": [
+                        {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        {
+                            "x": 0.0,
+                            "y": 1.0
+                        },
+                        {
+                            "x": 0.0,
+                            "y": 2.0
+                        },
+                        {
+                            "x": 0.0,
+                            "y": 3.0
+                        },
+                        {
+                            "x": 0.0,
+                            "y": 4.0
+                        },
+                        {
+                            "x": 0.0,
+                            "y": 5.0
+                        },
+                        {
+                            "x": 0.0,
+                            "y": 6.0
+                        },
+                        {
+                            "x": 0.0,
+                            "y": 7.0
+                        },
+                        {
+                            "x": 0.0,
+                            "y": 8.0
+                        },
+                        {
+                            "x": 1.0,
+                            "y": 0.0
+                        },
+                        {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        {
+                            "x": 1.0,
+                            "y": 3.0
+                        },
+                        {
+                            "x": 1.0,
+                            "y": 7.0
+                        },
+                        {
+                            "x": 1.0,
+                            "y": 8.0
+                        },
+                        {
+                            "x": 2.0,
+                            "y": 0.0
+                        },
+                        {
+                            "x": 2.0,
+                            "y": 1.0
+                        },
+                        {
+                            "x": 2.0,
+                            "y": 3.0
+                        },
+                        {
+                            "x": 2.0,
+                            "y": 4.0
+                        },
+                        {
+                            "x": 2.0,
+                            "y": 5.0
+                        },
+                        {
+                            "x": 2.0,
+                            "y": 7.0
+                        },
+                        {
+                            "x": 2.0,
+                            "y": 8.0
+                        },
+                        {
+                            "x": 3.0,
+                            "y": 0.0
+                        },
+                        {
+                            "x": 3.0,
+                            "y": 4.0
+                        },
+                        {
+                            "x": 3.0,
+                            "y": 8.0
+                        },
+                        {
+                            "x": 4.0,
+                            "y": 0.0
+                        },
+                        {
+                            "x": 4.0,
+                            "y": 8.0
+                        },
+                        {
+                            "x": 5.0,
+                            "y": 0.0
+                        },
+                        {
+                            "x": 5.0,
+                            "y": 3.0
+                        },
+                        {
+                            "x": 5.0,
+                            "y": 4.0
+                        },
+                        {
+                            "x": 5.0,
+                            "y": 5.0
+                        },
+                        {
+                            "x": 5.0,
+                            "y": 6.0
+                        },
+                        {
+                            "x": 5.0,
+                            "y": 7.0
+                        },
+                        {
+                            "x": 5.0,
+                            "y": 8.0
+                        },
+                        {
+                            "x": 6.0,
+                            "y": 0.0
+                        },
+                        {
+                            "x": 6.0,
+                            "y": 8.0
+                        },
+                        {
+                            "x": 7.0,
+                            "y": 0.0
+                        },
+                        {
+                            "x": 7.0,
+                            "y": 1.0
+                        },
+                        {
+                            "x": 7.0,
+                            "y": 2.0
+                        },
+                        {
+                            "x": 7.0,
+                            "y": 3.0
+                        },
+                        {
+                            "x": 7.0,
+                            "y": 4.0
+                        },
+                        {
+                            "x": 7.0,
+                            "y": 5.0
+                        },
+                        {
+                            "x": 7.0,
+                            "y": 6.0
+                        },
+                        {
+                            "x": 7.0,
+                            "y": 7.0
+                        },
+                        {
+                            "x": 7.0,
+                            "y": 8.0
+                        }
+                    ]
+                },
+                {
+                    "Key": "Rotations",
+                    "StringSet": [
+                        "D",
+                        "D",
+                        "D",
+                        "D",
+                        "D",
+                        "D",
+                        "D",
+                        "D",
+                        "D",
+                        "D",
+                        "D",
+                        "R",
+                        "D",
+                        "D",
+                        "D",
+                        "D",
+                        "L",
+                        "L",
+                        "L",
+                        "D",
+                        "D",
+                        "D",
+                        "D",
+                        "D",
+                        "D",
+                        "D",
+                        "D",
+                        "L",
+                        "L",
+                        "L",
+                        "L",
+                        "L",
+                        "D",
+                        "D",
+                        "D",
+                        "D",
+                        "D",
+                        "D",
+                        "D",
+                        "D",
+                        "D",
+                        "D",
+                        "D",
+                        "D"
+                    ]
+                }
+            ]
+        }
+    ]
+}

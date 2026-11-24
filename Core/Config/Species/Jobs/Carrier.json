@@ -1,0 +1,41 @@
+{
+    "Id" : "Carrier",
+    "StartingSkillCurves" : [
+        {
+            // No life story behind an animal's fighting: it starts near the neutral level 5
+            "Jobs" : [ "Melee" ],
+            "LevelCurve" : [
+                0.0, 4.0,
+                0.5, 4.0,
+                0.51, 5.0,
+                1.0, 5.0
+            ]
+        },
+        {
+            "LevelCurve" : [
+                0.0, 0.0,
+                0.5, 0.0,
+                0.51, 1.0,
+                0.95, 1.0,
+                0.96, 2.0,
+                1.0, 2.0
+            ]
+        }
+    ],
+    "AgeSkillCurves" : [
+        {
+            "LevelCurve" : [
+                0.0, 0.0,
+                1.0, 0.3
+            ]
+        }
+    ],
+    "StartingJobs" : [
+        { "Job" : "Expedition" },
+        { "Job" : "Firefighting" },
+        { "Job" : "Hauling" },
+        { "Job" : "Melee" },
+        { "Job" : "Rescue" },
+        { "Job" : "Task" }
+    ]
+}

@@ -1,0 +1,23 @@
+{
+    "Layer" : "FreeEntities",
+    "ParentId" : "Obj/Upgrades/BaseUpgrade",
+    "Spawnable" : {
+        "Chance" : 0.03,
+        "ChanceLocked" : 0.03
+    },
+    "Components" : [
+        {
+            "Component" : "ObjGraphics",
+            "Properties" : [
+                { "Key" : "Graphic", "String": "Obj/Upgrades/GameCartridgeUpgrade" },
+                { "Key" : "Scale", "Float": 0.5 }
+            ]
+        },
+        {
+            "Component" : "UnstoredMat",
+            "Properties" : [
+                { "Key" : "Type", "String" : "StackerCartridgeUpgrade" }
+            ]
+        }
+    ]
+}

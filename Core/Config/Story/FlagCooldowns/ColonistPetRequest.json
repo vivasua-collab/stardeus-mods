@@ -1,0 +1,10 @@
+{
+    "FlagName": "ColonistPetRequest",
+    // Difficulty -> cooldown days. Flat below Balanced (1.0): easier difficulties change how hard events hit, not how often they come
+    "CooldownDaysDifficultyCurve": [
+        0.0, 80.0,
+        1.0, 80.0,
+        2.0, 80.0,
+        5.0, 80.0
+    ]
+}

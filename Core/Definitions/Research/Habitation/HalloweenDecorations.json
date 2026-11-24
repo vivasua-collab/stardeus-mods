@@ -1,0 +1,23 @@
+{
+    "Id" : "Research/Habitation/HalloweenDecorations",
+    "Tier" : 2,
+    "IsAbstract" : true,
+    "PreviewIcon" : "Objects/Cosmetics/PumpkinHead01_D",
+    "Seasonal" : { "FromMonth" : 10, "FromDay" : 1, "ToMonth" : 11, "ToDay" : 7 },
+    "Researchable" : {
+        "IsTreeNode" : true,
+        "Prerequisites" : [
+            "Research/Habitation/Decorations"
+        ],
+        "DatoidCosts" : [
+            {
+                "TypeId" : "DatoidTech",
+                "StackSize" : 8
+            },
+            {
+                "TypeId" : "DatoidBiotic",
+                "StackSize" : 3
+            }
+        ]
+    }
+}

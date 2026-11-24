@@ -1,0 +1,21 @@
+{
+    "Id" : "GameDeveloper",
+    "Species" : [ "Human" ],
+    "RoleTypes" : [ "Smart" ],
+    "LovesJobTypes" : [ "Creative" ],
+    "AgePhaseIds" : [ "YoungAdult", "MidLife", "Retirement" ],
+    "AdjustsSkills" : [
+        {
+            "JobId" : "Robotics",
+            "Adjustment" : 8
+        },
+        {
+            "JobId" : "Mining",
+            "Adjustment" : -1
+        },
+        {
+            "JobId" : "Social",
+            "Adjustment" : -1
+        }
+    ]
+}

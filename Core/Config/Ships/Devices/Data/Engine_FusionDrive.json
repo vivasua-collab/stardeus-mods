@@ -1,0 +1,26 @@
+{
+    "Id" : "Engine_FusionDrive",
+    "DefId" : "Objects/Devices/FusionDrive",
+    "Tier" : 2,
+    "ClassPoints" : 1,
+
+    // if it would only have one rotation:
+    // "ZoneSpriteId" : "Objects/Devices/ShredderCannon_ZoneView",
+
+    // if it has multiple rotations:
+    "ZoneSpriteId_D" : "Objects/Devices/FusionDrive_U",
+    "ZoneSpriteId_L" : "Objects/Devices/FusionDrive_R",
+    "ZoneSpriteId_U" : "Objects/Devices/FusionDrive_D",
+    "ZoneSpriteId_R" : "Objects/Devices/FusionDrive_L",
+
+    "ZoneSpriteScale" : 0.2,
+
+    "HP" : 250,
+
+    // common device
+    "Rarity" : 1.0,
+
+    "TargetTypeId" : "ShipEngine_Hyperdrive",
+    "EnergyCostPassive": 0,
+    "EnergyCostActive": 0
+}

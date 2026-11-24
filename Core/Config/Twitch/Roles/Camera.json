@@ -1,0 +1,10 @@
+{
+    "Id" : "Camera",
+    "AlwaysAddFor" : [
+        "Broadcaster",
+        "Moderator",
+        "VIP",
+        "Subscriber"
+    ],
+    "AddAtReputation" : 3000
+}

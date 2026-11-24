@@ -1,0 +1,12 @@
+{
+    "Id" : "FuseUpgrade",
+    "DefId" : "Obj/Upgrades/FuseUpgrade",
+    "IsComposite" : true,
+    "IsConsumedOnDestroy" : true,
+    "IconId" : "Obj/Upgrades/FuseUpgrade",
+    "Property" : "Electronic",
+    "Group" : "Upgrade",
+    "GroupId" : "Upgrades",
+    "EnergyOutput" : 50.0,
+    "Rarity" : 1
+}

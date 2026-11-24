@@ -1,0 +1,11 @@
+{
+    "Type": "Oil",
+    "Ingredients": [
+        { "TypeId" : "Carbon", "StackSize" : 10 },
+        { "TypeId" : "Petroleum", "StackSize" : 1 }
+    ],
+    "OutputMultiplier" : 6,
+    "ProductDefId": "Obj/Materials/Rubber",
+    "ProductionTimeHours": 3.0,
+    "EnergyCost": 30.0
+}

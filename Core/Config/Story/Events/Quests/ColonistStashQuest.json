@@ -1,0 +1,9 @@
+{
+    "EventId": "ColonistStashQuest",
+    "Points": 15,
+    "OutcomeType": "Positive",
+    "EventFlags": [
+        "ColonistRequest"
+    ],
+    "MinRepeatDelayDays": 60
+}

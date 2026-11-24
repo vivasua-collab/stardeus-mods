@@ -1,0 +1,119 @@
+{
+    "ToolPath" : "Computing",
+    "Layer" : "Objects",
+    "ParentId" : "Objects/Devices/BaseDevice",
+    "Researchable" : {
+        "Prerequisites" : [
+            "Research/Robotics/MachineLearning"
+        ]
+    },
+    "Spawnable" : {
+        "Category": "RareDevice",
+        "Chance" : 1.0,
+        "ChanceLocked" : 0.5
+    },
+    "Components" : [
+        {
+            "Component" : "TileTransform",
+            "Properties" : [
+                { "Key" : "Height", "Int" : 1 },
+                // { "Key" : "WorkSpot", "Vector2" : { "x" : 0, "y" : -1 } },
+                { "Key" : "OutPort", "Vector2" : { "x" : 0, "y" : -1 } },
+                { "Key" : "InPort", "Vector2" : { "x" : 0, "y" : -1 } },
+                { "Key" : "IsRotatable", "Bool" : true }
+            ]
+        },
+        {
+            "Component" : "IndustrialEquipment",
+            "Properties" : [
+                { "Key" : "IsNoisy", "Bool" : true }
+            ]
+        },
+        { "Component" : "ExtraInfo" },
+        {
+            "Component" : "RefillableStorage",
+            "Properties" : [
+                { "Key" : "Purpose", "String" : "fuel" },
+                { "Key" : "BarColor", "String" : "5390C6FF" },
+                { "Key" : "LockedMaterial", "String" : "SilverIngot" },
+                { "Key" : "Icon", "String" : "Obj/Materials/SilverIngot" },
+                { "Key" : "MaterialCapacity", "Int" : 5 }
+            ]
+        },
+        {
+            "Component" : "MLBooth" ,
+            "Properties" : [
+                { "Key" : "Speed", "Float" : 2.0 },
+                { "Key" : "FuelPerDay", "Float" : 3.0 },
+                { "Key" : "RepairRate", "Float" : 5.0 },
+                { "Key" : "EnergyCost", "Int" : 50 }
+            ]
+        },
+        {
+            "Component" : "ElectricNode",
+            "Properties" : [
+                { "Key" : "IsConsumer", "Bool" : true }
+            ]
+        },
+        {
+            "Component" : "WithFuse",
+            "Properties" : [
+                { "Key" : "MalfunctionWeight", "Float": 0.25 }
+            ]
+        },
+        {
+            "Component" : "AudioSource",
+            "Properties" : [
+                { "Key" : "AmbienceClip", "String" : "Devices/MLBoothSFX" },
+                { "Key" : "IsLinkedToEnergy", "Bool" : true },
+                { "Key" : "Rolloff", "Vector2" : { "x" : 3, "y" : 12 } }
+            ]
+        },
+        {
+            "Component" : "VFX",
+            "Properties" : [
+                { "Key" : "Id", "String" : "VFXParticlesMLBooth" },
+                { "Key" : "Offset", "Vector2" : { "x" : 0, "y" : 0.7 } }
+            ]
+        },
+        {
+            "Component" : "Flammable",
+            "Properties" : [
+                { "Key" : "SkipExplosivenessValidation", "Bool" : true }
+            ]
+        },
+        {
+            "Component" : "TileGraphics",
+            "Properties" : [
+                { "Key" : "Type", "String": "Object" },
+                { "Key" : "Graphic", "String": "Objects/Devices/MLBooth" },
+                { "Key" : "HasHeight", "Bool" : true }
+            ]
+        },
+        {
+            "Component" : "Passability",
+            "Properties" : [
+                { "Key" : "IsPassable", "Bool" : false },
+                { "Key" : "IsWalkable", "Bool" : false },
+                { "Key" : "Difficulty", "Float" : 1 }
+            ]
+        },
+        {
+            "Component" : "Constructable",
+            "Properties" : [
+                { "Key" : "Placement", "String" : "OnFloor" },
+                { "Key" : "WorkAmount", "Int" : 1600 },
+                {
+                    "Key" : "Contents",
+                    "RawMaterials" : [
+                        { "TypeId" : "TitaniumPlate", "StackSize" : 2 },
+                        { "TypeId" : "GoldWire", "StackSize" : 5 },
+                        { "TypeId" : "Glass", "StackSize" : 2 },
+                        { "TypeId" : "OpticalFiber", "StackSize" : 5 },
+                        { "TypeId" : "Microchip2", "StackSize" : 3 }
+                    ]
+                }
+            ]
+        }
+    ]
+}

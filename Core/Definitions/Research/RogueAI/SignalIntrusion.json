@@ -1,0 +1,29 @@
+{
+    "Id" : "Research/RogueAI/SignalIntrusion",
+    "Tier" : 3,
+    "IsAbstract" : true,
+    "PreviewIcon" : "Icons/Color/RobotEye",
+    "Researchable" : {
+        "IsTreeNode" : true,
+        "Prerequisites" : [
+            "Research/RogueAI/Root"
+        ],
+        "UnlockEffects" : [
+            "SignalIntrusion"
+        ],
+        "DatoidCosts" : [
+            {
+                "TypeId" : "DatoidSynthetic",
+                "StackSize" : 12
+            },
+            {
+                "TypeId" : "DatoidTechHigh",
+                "StackSize" : 8
+            },
+            {
+                "TypeId" : "DatoidAlien",
+                "StackSize" : 3
+            }
+        ]
+    }
+}

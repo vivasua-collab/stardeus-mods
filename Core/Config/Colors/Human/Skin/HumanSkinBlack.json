@@ -1,0 +1,6 @@
+{
+    "Id" : "HumanSkinBlack",
+    "Data" : [154, 89, 25, 255],
+    "Groups" : [ "Human.Skin" ],
+    "Weight" : 0.5
+}

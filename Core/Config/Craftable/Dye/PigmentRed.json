@@ -1,0 +1,11 @@
+{
+    "Type": "Dye",
+    "Ingredients": [
+        { "TypeId" : "PoppyPetals", "StackSize" : 5 },
+        { "TypeId" : "Water", "StackSize" : 1 }
+    ],
+    "OutputMultiplier" : 5,
+    "ProductDefId": "Obj/Materials/PigmentRed",
+    "ProductionTimeHours": 1.0,
+    "EnergyCost": 10.0
+}

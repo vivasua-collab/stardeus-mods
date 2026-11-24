@@ -1,0 +1,18 @@
+{
+    "Id" : "Research/Production/Electronics",
+    "Tier" : 1,
+    "IsAbstract" : true,
+    "PreviewIcon" : "Icons/Color/Microchip",
+    "Researchable" : {
+        "IsTreeNode" : true,
+        "Prerequisites" : [
+            "Research/Production/Assembly"
+        ],
+        "DatoidCosts" : [
+            {
+                "TypeId" : "DatoidBasic",
+                "StackSize" : 9
+            }
+        ]
+    }
+}

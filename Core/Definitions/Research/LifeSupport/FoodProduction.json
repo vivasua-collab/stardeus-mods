@@ -1,0 +1,18 @@
+{
+    "Id" : "Research/LifeSupport/FoodProduction",
+    "Tier" : 1,
+    "IsAbstract" : true,
+    "PreviewIcon" : "Icons/Color/Food",
+    "Researchable" : {
+        "IsTreeNode" : true,
+        "Prerequisites" : [
+            "Research/LifeSupport/Root"
+        ],
+        "DatoidCosts" : [
+            {
+                "TypeId" : "DatoidBasic",
+                "StackSize" : 12
+            }
+        ]
+    }
+}

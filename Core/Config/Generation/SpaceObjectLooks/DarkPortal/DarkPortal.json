@@ -1,0 +1,7 @@
+{
+    "Id" : "DarkPortal",
+    "Probability" : 1.0,
+    "StarmapSizeMul" : 1.5,
+    "Shader" : "Shader Graphs/SODarkPortal",
+    "StarfieldSizeMul" : 0.6
+}

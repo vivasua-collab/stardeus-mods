@@ -1,0 +1,24 @@
+{
+    "Layer" : "FreeEntities",
+    "ParentId" : "Obj/Equipment/BaseEquipment",
+    "Researchable" : {
+        "Prerequisites" : [ "Research/Production/Weaving" ]
+    },
+    "Components" : [
+        {
+            "Component" : "StorableObj",
+            "Properties" : [
+                { "Key" : "Group", "String" : "Clothing" }
+            ]
+        },
+        { "Component" : "SafetyCheck" },
+        {
+            "Component" : "ObjGraphics",
+            "Properties" : [
+                { "Key" : "Graphic", "String": "Beings/Clothing/Human/Tracksuit01/Tracksuit01" },
+                { "Key" : "Scale", "Float" : 0.6 }
+
+            ]
+        }
+    ]
+}

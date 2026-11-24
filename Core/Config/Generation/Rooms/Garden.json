@@ -1,0 +1,28 @@
+{
+    "Type" : "Garden",
+    "SizeMin" : 100,
+    "SizeMax" : 300,
+    "CountMin" : 2,
+    "CountMax" : 5,
+    "Chance" : 1.0,
+    "FillMin" : 0.4,
+    "FillMax" : 0.8,
+    "RequiredObjects" : [
+        "Objects/Devices/PlanterMini",
+        "Objects/Devices/Heater",
+        "Objects/Devices/OxygenPump"
+    ],
+    "CompatibleObjects" : [
+        "Objects/Devices/PlanterMini",
+        "Objects/Devices/EnergyConnector",
+        "Objects/Devices/Heater",
+        "Objects/Devices/OxygenPump"
+    ],
+    "CompatibleTemplates" : [
+        "Templates/Garden01",
+        "Templates/Garden02",
+        "Templates/Garden03",
+        "Templates/Garden04",
+        "Templates/Garden05"
+    ]
+}

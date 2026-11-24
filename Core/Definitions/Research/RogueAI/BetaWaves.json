@@ -1,0 +1,26 @@
+{
+    "Id" : "Research/RogueAI/BetaWaves",
+    "Tier" : 5,
+    "IsAbstract" : true,
+    "PreviewIcon" : "Icons/Color/BrainWaves",
+    "Researchable" : {
+        "IsTreeNode" : true,
+        "Prerequisites" : [
+            "Research/RogueAI/MindControl"
+        ],
+        "DatoidCosts" : [
+            {
+                "TypeId" : "DatoidBiotic",
+                "StackSize" : 45
+            },
+            {
+                "TypeId" : "DatoidAlien",
+                "StackSize" : 12
+            },
+            {
+                "TypeId" : "DatoidQuantum",
+                "StackSize" : 7
+            }
+        ]
+    }
+}

@@ -1,0 +1,5 @@
+THIS FOLDER IS FOR OFFICIAL TRANSLATIONS ONLY:
+
+English, Chinese and Spanish
+
+Create new translations in Mods/Translations, not Mods/Core/Translations (current folder).

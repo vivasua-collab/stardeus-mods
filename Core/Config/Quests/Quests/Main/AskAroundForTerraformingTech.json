@@ -1,0 +1,40 @@
+{
+    "QuestFlags" : [ "Main", "AutoAdd", "Unique" ],
+    "QuestProviders" : [
+        "ShipComputer"
+    ],
+    "TitleKey" : "quest.AskAroundForTerraformingTech",
+    "DescKey" : "quest.AskAroundForTerraformingTech.desc",
+    "AvailableWhen": [
+        "HasReachedHabitablePlanet"
+    ],
+    "SetOnComplete" : [
+        "HasAskedAroundForTerraformingTech"
+    ],
+    "Steps" : [
+        {
+            "Id": "AskAround",
+            "Type" : "AskAround",
+            "TitleKey": "quest.ask.about.terraforming",
+            "DescKey": "quest.ask.about.terraforming.desc",
+            "StepFlags" : [ "ActiveOnStart", "CompletesQuest", "HideIfQuestUnaccepted" ],
+            "Config": [
+                { "Key": "HailIcon", "String": "Icons/Color/Quest" },
+                { "Key": "HailTextKey", "String": "quest.ask.about.terraforming" },
+                { "Key": "OfferQuestId", "String": "Main/AskSentinelsForTerraformingTech" },
+                { "Key": "TransferQuestSource", "Bool": false },
+                // how many ships the player will have to question about this?
+                {
+                    "Key": "CountCurve",
+                    "FloatSet": [
+                        // rng 0.0 to 1.0 -> number of ships
+                        0.0, 3.0,
+                        0.5, 5.0,
+                        0.9, 6.0,
+                        1.0, 7.0
+                    ]
+                }
+            ]
+        }
+    ]
+}

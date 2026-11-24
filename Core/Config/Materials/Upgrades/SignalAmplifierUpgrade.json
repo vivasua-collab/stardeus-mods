@@ -1,0 +1,15 @@
+{
+    "Id" : "SignalAmplifierUpgrade",
+    "DefId" : "Obj/Upgrades/SignalAmplifierUpgrade",
+    "IsComposite" : true,
+    "IsConsumedOnDestroy" : true,
+    "IconId" : "Obj/Upgrades/SignalAmplifierUpgrade",
+    "Property" : "Electronic",
+    "Group" : "Upgrade",
+    "GroupId" : "Upgrades",
+    "EnergyOutput" : 50.0,
+    // Explicit, because the only recipe for this is IgnoreMarket and
+    // ResearchEvaluator.ValueOfCraftables skips those when deriving a composite's value.
+    "InternalValue" : 40000,
+    "Rarity" : 1
+}

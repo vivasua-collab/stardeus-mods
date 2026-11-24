@@ -1,0 +1,10 @@
+{
+    "Type": "Mechanical",
+    "Ingredients": [
+        { "TypeId" : "SteelPlate", "StackSize" : 1 }
+    ],
+    "OutputMultiplier" : 5,
+    "ProductDefId": "Obj/Materials/Gears",
+    "ProductionTimeHours": 2.0,
+    "EnergyCost": 5.0
+}

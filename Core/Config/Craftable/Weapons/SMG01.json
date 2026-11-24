@@ -1,0 +1,13 @@
+{
+    "Type": "Weapons2",
+    "Ingredients": [
+        { "TypeId" : "TitaniumPlate", "StackSize" : 1 },
+        { "TypeId" : "LeadPlate", "StackSize" : 1 },
+        { "TypeId" : "Gears", "StackSize" : 4 },
+        { "TypeId" : "Transistor", "StackSize" : 5 }
+    ],
+    "IgnoreMarket" : true,
+    "ProductDefId": "Obj/Equipment/Weapons/SMG01",
+    "ProductionTimeHours": 5.0,
+    "EnergyCost": 40.0
+}

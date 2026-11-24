@@ -1,0 +1,17 @@
+{
+    "Id" : "TreeHouseOwner",
+    "Species" : [ "Human" ],
+    "LovesJobTypes" : [ "Construction" ],
+    "AgePhaseIds" : [ "Childhood" ],
+    "RoleTypes" : [ "Rich" ],
+    "AdjustsSkills" : [
+        {
+            "JobId" : "Construction",
+            "Adjustment" : 5
+        },
+        {
+            "JobId" : "Crafting",
+            "Adjustment" : 2
+        }
+    ]
+}

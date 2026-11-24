@@ -1,0 +1,43 @@
+{
+    // C# implementation id.
+    // Multiple configurations can point to a single implementation.
+    "EventId" : "CleaningIncident",
+    // How much does this story event cost to run
+    "Points" : 10,
+    // Options: Negative, Positive, Neutral, Raid
+    "OutcomeType" : "Negative",
+    // Full list is in StoryEventFlags class
+    "EventFlags" : [
+        "Being",
+        "Device",
+        "Funny",
+        "Annoying",
+        "WaitsForCondition"
+    ],
+    "MinRepeatDelayDays" : 90,
+    // Full list of requirements can be found in Situation class
+    "Require" : {
+        "Colonists" : 5
+    },
+    // Variables for the story event implementation
+    "Properties" : [
+        { "Key" : "MinDirtPercent", "Float" : 0.5 },
+        {
+            "Key" : "SkillFailChanceCurve",
+            "FloatSet" : [
+                0, 1,
+                5, 0.33,
+                10, 0.1,
+                255, 0
+            ]
+        },
+        {
+            "Key" : "SizeDistanceCurve",
+            "FloatSet" : [
+                1, 3.5,
+                1.5, 2,
+                2, 0.5
+            ]
+        }
+    ]
+}

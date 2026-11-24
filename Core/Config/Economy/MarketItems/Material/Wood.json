@@ -1,0 +1,10 @@
+{
+    "Id" : "Obj/Materials/Wood",
+    "Type" : "CFD",
+    "Groups" : [ "Material", "Flora" ],
+    "Value" : 270.0,
+    "Rarity" : 0.2,
+    "TraderQuantity" : 50.0,
+    "MinSectorDifficulty" : 0.6,
+    "Volatility" : 0.0027
+}

@@ -1,0 +1,29 @@
+{
+    "Layer" : "FreeEntities",
+    "ParentId" : "Beings/BaseBeing",
+    "PreviewIcon" : "Icons/Color/PreviewCrawler01",
+    "Researchable" : {
+        "Prerequisites" : [ "Research/LifeSupport/CloneCrawler" ]
+    },
+    "Components" : [
+        {
+            "Component" : "BeingNameText" ,
+            "Properties" : [
+                { "Key" : "Offset", "Vector2" : { "x" : 0, "y" : -0.45 } }
+            ]
+        },
+        {
+            "Component" : "Flammable",
+            "Properties" : [
+                { "Key" : "SpreadIntoChance", "Float" : 0.5 },
+                { "Key" : "FireChance", "Float" : 0.5 }
+            ]
+        },
+        {
+            "Component" : "Disposable",
+            "Properties" : [
+                { "Key" : "IsBiological", "Bool" : true }
+            ]
+        }
+    ]
+}

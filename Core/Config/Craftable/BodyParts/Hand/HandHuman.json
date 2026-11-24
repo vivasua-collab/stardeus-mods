@@ -1,0 +1,13 @@
+{
+    "Type" : "Organics3",
+    "ProductDefId" : "Obj/Parts/Hand/HandHuman",
+    "ProductionTimeHours" : 504,
+    "EnergyCost" : 50,
+    "IgnoreMarket" : true,
+    "Ingredients" : [
+        { "TypeId" : "Protein", "StackSize" : 5 },
+        { "TypeId" : "Water", "StackSize" : 5 },
+        { "TypeId" : "Carbon", "StackSize" : 5 },
+        { "TypeId" : "StemCells", "StackSize" : 5 }
+    ]
+}

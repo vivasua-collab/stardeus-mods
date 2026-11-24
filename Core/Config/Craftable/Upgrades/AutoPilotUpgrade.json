@@ -1,0 +1,14 @@
+{
+    "Type": "Upgrades",
+    "Ingredients": [
+        { "TypeId" : "Microchip2", "StackSize" : 3 },
+        { "TypeId" : "NuclearCell", "StackSize" : 1 },
+        { "TypeId" : "OpticalFiber", "StackSize" : 2 },
+        { "TypeId" : "Plastic", "StackSize" : 1 },
+        { "TypeId" : "Transistor", "StackSize" : 5 }
+    ],
+    "IgnoreMarket" : true,
+    "ProductDefId": "Obj/Upgrades/AutoPilotUpgrade",
+    "ProductionTimeHours": 24.0,
+    "EnergyCost": 50.0
+}

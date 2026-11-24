@@ -1,0 +1,9 @@
+{
+    "Id" : "Overlay/Popup",
+
+    "Color" : "UI/Btn/OverlayActive",
+
+    "Image" : "UI/Buttons/ActiveOverlayPopup",
+    "ImageType" : "Sliced",
+    "ImageBorderLBRT" : [ 12, 12, 28, 28 ]
+}

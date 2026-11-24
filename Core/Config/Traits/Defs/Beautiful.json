@@ -1,0 +1,11 @@
+{
+    "Id" : "Beautiful",
+    "IconId" : "Icons/Color/Sparkles",
+    "TypeId" : "BiologicalFunction",
+    "CompatibleSex" : "F",
+    "TraitFlagIds" : [ "BodyBound" ],
+    "IncompatibleTraitIds" : [
+        "Ugly"
+    ],
+    "Rarity" : 0.25
+}

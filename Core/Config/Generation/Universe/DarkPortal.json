@@ -1,0 +1,12 @@
+{
+    "Id" : "DarkPortal",
+    "Icon" : "Icons/Color/Question",
+    "UseTypeName" : true,
+    "SizeMin" : 10,
+    "SizeMax" : 10,
+    "MinExitDist" : 25,
+    "SpawnChance" : 0,
+    "IsInteractive" : true,
+    "LocationApproxMagnitude" : 1.0,
+    "DistanceUnitsKey" : "units.km.thousands"
+}

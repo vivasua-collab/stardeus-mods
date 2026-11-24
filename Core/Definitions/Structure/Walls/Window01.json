@@ -1,0 +1,14 @@
+{
+    "Layer" : "Walls",
+    "ParentId" : "Structure/Walls/BaseWindow",
+    "TranslationVars" : [ "32", "6" ],
+    "Components" : [
+        {
+            "Component" : "TileGraphics",
+            "Properties" : [
+                { "Key" : "Graphic", "String" : "Structure/Walls/Window01/Window01" },
+                { "Key" : "Shader", "String": "ReflectedWallTile" }
+            ]
+        }
+    ]
+}

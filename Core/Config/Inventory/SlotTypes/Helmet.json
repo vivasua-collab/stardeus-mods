@@ -1,0 +1,6 @@
+{
+    "Id" : "Helmet",
+    "Worn" : true,
+    "LookPart" : "Hat",
+    "Order" : 5
+}

@@ -1,0 +1,79 @@
+{
+    "ToolPath" : "Computing",
+    "Layer" : "Objects",
+    "ParentId" : "Objects/Devices/GPUModuleMini",
+    "TranslationVars" : [ "2" ],
+    "Researchable" : {
+        "Prerequisites" : [
+            "Research/Computing/GPUImproved"
+        ]
+    },
+    "Spawnable" : {
+        "Category": "Computing",
+        "Chance" : 1.0,
+        "ChanceLocked" : 0.5
+    },
+    "Components" : [
+        {
+            "Component" : "TileTransform",
+            "Properties" : [
+                { "Key" : "IsRotatable", "Bool" : true },
+                { "Key" : "CoverPercent", "Int" : 100 }
+            ]
+        },
+        {
+            "Component" : "TileGraphics",
+            "Properties" : [
+                { "Key" : "Type", "String": "Object" },
+                { "Key" : "Graphic", "String": "Objects/Devices/GPUModule" },
+                { "Key" : "HasHeight", "Bool" : true }
+            ]
+        },
+        {
+            "Component" : "GPUModule",
+            "Properties" : [
+                { "Key" : "Amount",  "Int" : 2 },
+                { "Key" : "EnergyCost", "Float" : 180 }
+            ]
+        },
+        {
+            "Component" : "HeatProducer",
+            "Properties" : [
+                { "Key" : "Rate", "Float" : 2 },
+                { "Key" : "Range", "Int" : 2 },
+                { "Key" : "CheckSameArea", "Bool" : true }
+            ]
+        },
+        {
+            "Component" : "ElectricNode",
+            "Properties" : [
+                { "Key" : "Particles_D", "String" : "ServerLargeFX" },
+                { "Key" : "Particles_U", "String" : "ServerLargeFX" },
+                { "Key" : "IsConsumer", "Bool" : true }
+            ]
+        },
+        {
+            "Component" : "WithFuse",
+            "Properties" : [
+                { "Key" : "MalfunctionWeight", "Float": 0.5 }
+            ]
+        },
+        {
+            "Component" : "Constructable",
+            "Properties" : [
+                { "Key" : "WorkAmount", "Int" : 2000 },
+                { "Key" : "CanReplaceGroup", "String" : "GPUModule" },
+                {
+                    "Key" : "Contents",
+                    "RawMaterials" : [
+                        { "TypeId" : "TitaniumPlate", "StackSize" : 3 },
+                        { "TypeId" : "GoldWire", "StackSize" : 8 },
+                        { "TypeId" : "Microchip3", "StackSize" : 5 },
+                        { "TypeId" : "Transistor", "StackSize" : 50 },
+                        { "TypeId" : "OpticalFiber", "StackSize" : 10 }
+                    ]
+                }
+            ]
+        }
+    ]
+}

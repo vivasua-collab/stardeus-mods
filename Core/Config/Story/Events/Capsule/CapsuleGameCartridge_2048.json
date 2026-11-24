@@ -1,0 +1,24 @@
+{
+    // C# implementation id.
+    // Multiple configurations can point to a single implementation.
+    "EventId" : "CapsuleObj",
+    // How much does this story event cost to run
+    "Points" : 25,
+    // Options: Negative, Positive, Neutral, Raid, Raid
+    "OutcomeType" : "Positive",
+    // Full list is in StoryEventFlags class
+    "EventFlags" : [
+        "OnDemand",
+        "Capsule"
+    ],
+    "MinRepeatDelayDays" : 320,
+    // Full list of requirements can be found in Situation class
+    "Require" : {
+        "Days" : 90,
+        "SectorDifficulty" : 0.5
+    },
+    // Variables for the story event implementation
+    "Properties" : [
+        { "Key" : "LootDefId", "String" : "Obj/Upgrades/Game2048CartridgeUpgrade" }
+    ]
+}

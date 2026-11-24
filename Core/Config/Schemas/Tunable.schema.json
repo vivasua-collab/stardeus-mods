@@ -1,0 +1,206 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Stardeus Tunable",
+  "description": "Generated from C# by Game/Generate JSON Schemas, do not edit by hand",
+  "$ref": "#/$defs/Tunable",
+  "$defs": {
+    "Mat": {
+      "type": "object",
+      "properties": {
+        "TypeId": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "StackSize": {
+          "type": "integer"
+        },
+        "MaxStackSize": {
+          "type": "integer"
+        }
+      },
+      "additionalProperties": false
+    },
+    "SerializableProperty": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "Key": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "String": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "Int": {
+          "type": "integer"
+        },
+        "Float": {
+          "type": "number"
+        },
+        "Vector2": {
+          "$ref": "#/$defs/Vector2"
+        },
+        "PosIdx": {
+          "type": "integer"
+        },
+        "Bool": {
+          "type": "boolean"
+        },
+        "BoolSet": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "boolean"
+          }
+        },
+        "IntSet": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "integer"
+          }
+        },
+        "FloatSet": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "number"
+          }
+        },
+        "StringSet": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "Vector2Set": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "$ref": "#/$defs/Vector2"
+          }
+        },
+        "RawMaterials": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "$ref": "#/$defs/Mat"
+          }
+        },
+        "IsUsed": {
+          "type": "boolean"
+        }
+      },
+      "additionalProperties": false
+    },
+    "Tunable": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "Floats": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "$ref": "#/$defs/SerializableProperty"
+          }
+        },
+        "Ints": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "$ref": "#/$defs/SerializableProperty"
+          }
+        },
+        "IntSets": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "$ref": "#/$defs/SerializableProperty"
+          }
+        },
+        "FloatSets": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "$ref": "#/$defs/SerializableProperty"
+          }
+        },
+        "StringSets": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "$ref": "#/$defs/SerializableProperty"
+          }
+        },
+        "Bools": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "$ref": "#/$defs/SerializableProperty"
+          }
+        },
+        "Strings": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "$ref": "#/$defs/SerializableProperty"
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "Vector2": {
+      "type": "object",
+      "properties": {
+        "x": {
+          "type": "number"
+        },
+        "y": {
+          "type": "number"
+        }
+      },
+      "additionalProperties": false
+    }
+  }
+}

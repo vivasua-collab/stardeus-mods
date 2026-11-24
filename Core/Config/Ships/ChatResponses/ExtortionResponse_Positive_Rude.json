@@ -1,0 +1,9 @@
+{
+    "ResponseType" : "Positive",
+    "TopicType" : "ExtortionResponse",
+    "ToneType" : "Rude",
+    "MessageKeys" : [
+        "ship.chat.extort_res.positive.rude.*",
+        "ship.chat.surrender_req.neutral.rude.*"
+    ]
+}

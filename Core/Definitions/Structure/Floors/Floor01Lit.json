@@ -1,0 +1,68 @@
+{
+    "BuildGroup" : "FloorLit",
+    "ToolPath" : "Lights/FloorLit",
+    "Layer" : "Floor",
+    "ParentId" : "Structure/Floors/Floor01",
+    "Researchable" : {
+        "Prerequisites" : [
+            "Research/Construction/Lighting"
+        ]
+    },
+    "Components" : [
+        {
+            "Component" : "TileTransform",
+            "Properties" : [
+                { "Key" : "PlacementType", "String": "Single" }
+            ]
+        },
+        {
+            "Component" : "LightSource",
+            "Properties" : [
+                { "Key" : "IsCustomizable", "Bool": true },
+                { "Key" : "IsMainLight", "Bool": true },
+                { "Key" : "Radius", "Float" : 10 },
+                { "Key" : "Glow", "Float" : 1 },
+                { "Key" : "EnergyCost", "Float" : 0.25 }
+            ]
+        },
+        {
+            "Component" : "TileGraphics",
+            "Properties" : [
+                {
+                    "Key" : "Graphic",
+                    "String": "Structure/Floors/Floor01Lit"
+                }
+            ]
+        },
+        {
+            "Component" : "Flammable",
+            "Properties" : [
+                { "Key" : "FireChance", "Float" : 0.1 },
+                { "Key" : "FlammabilityCurve", "String" : "DeviceLow" }
+            ]
+        },
+        { "Component" : "TileLabel" },
+        {
+            "Component" : "ElectricNode",
+            "Properties" : [
+                { "Key" : "IsConsumerLowPriority", "Bool" : true }
+            ]
+        },
+        {
+            "Component" : "Constructable",
+            "Properties" : [
+                { "Key" : "CanReplaceSameLayer", "Bool": true },
+                { "Key" : "CanDragRow", "Bool": false },
+                { "Key" : "WorkAmount", "Int" : 60 },
+                {
+                    "Key" : "Contents",
+                    "RawMaterials" : [
+                        { "TypeId" : "SteelPlate", "StackSize" : 2 },
+                        { "TypeId" : "Glass", "StackSize" : 1 },
+                        { "TypeId" : "CopperWire", "StackSize" : 1 }
+                    ]
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,23 @@
+{
+    "SlotTypeId" : "Arm",
+    "Compatibility" : "Biological",
+    "TargetSpecies" : [ "Cat" ],
+    "CompatibleSpeciesFlags" : [ "Animal" ],
+    "CompatibleBodySizes" : [ "Small", "Medium" ],
+    "PartFlags" : [ "Biological" ],
+    "ResistanceBase" : 4.0,
+    "Tier" : 1,
+    "AddsAbilities" : [
+        "Move"
+    ],
+    "ProvidesStats" : [
+        {
+            "Component" : "MoveSpeed",
+            "Properties" : [
+                { "Key" : "CompoundLimit", "Float" : 0.88 },
+                { "Key" : "AmountPerMinute", "Float" : 0.22 },
+                { "Key" : "StateMul", "Float" : 1.0 }
+            ]
+        }
+    ]
+}

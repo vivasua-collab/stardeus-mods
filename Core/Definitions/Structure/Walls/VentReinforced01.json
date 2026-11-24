@@ -1,0 +1,46 @@
+{
+    "Layer" : "Walls",
+    "ParentId" : "Structure/Walls/BaseVent",
+    "Researchable" : {
+        "Prerequisites" : [
+            "Research/Construction/StructureReinforced"
+        ]
+    },
+    "Components" : [
+        {
+            "Component" : "TileGraphics",
+            "Properties" : [
+                { "Key" : "Graphic", "String" : "Structure/Walls/VentReinforced01/VentReinforced01" }
+            ]
+        },
+        {
+            "Component" : "Damageable",
+            "Properties" : [
+                { "Key" : "Max", "Int" : 300 }
+            ]
+        },
+        {
+            "Component" : "Flammable",
+            "Properties" : [
+                { "Key" : "FireChance", "Float" : 0.4 },
+                { "Key" : "FireDamageResistance", "Float" : 0.5 }
+            ]
+        },
+        {
+            "Component" : "Constructable",
+            "Properties" : [
+                { "Key" : "WorkAmount", "Int" : 190 },
+                {
+                    "Key" : "Contents",
+                    "RawMaterials" : [
+                        { "TypeId" : "SteelPlate", "StackSize" : 2 },
+                        { "TypeId" : "TitaniumPlate", "StackSize" : 2 },
+                        { "TypeId" : "CopperWire", "StackSize" : 1 },
+                        { "TypeId" : "Gears", "StackSize" : 1 },
+                        { "TypeId" : "Transistor", "StackSize" : 1 }
+                    ]
+                }
+            ]
+        }
+    ]
+}

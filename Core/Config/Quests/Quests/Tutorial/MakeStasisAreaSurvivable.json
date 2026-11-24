@@ -1,0 +1,116 @@
+{
+    "QuestFlags" : [ "Tutorial", "AutoAdd", "Unique" ],
+    "TitleKey" : "quest.MakeStasisAreaSurvivable",
+    "DescKey" : "quest.MakeStasisAreaSurvivable.desc",
+    "QuestProviders" : [
+        "ShipComputer"
+    ],
+    // Needs research (AtmosphereControl); the research tutorial sits right after production,
+    // well before the stasis run, so by now the harvester exists and only the enclosure gates.
+    "AvailableWhen" : [
+        "ReadyForTutorialQuests",
+        "EnclosedStasis"
+    ],
+    "CompleteWhen" : [
+        "HasHeatedArea",
+        "HasOxygenatedArea"
+    ],
+    "OnStartTutorialId": "BaseBuilding/CreatingAtmosphere",
+    "OnStartTutorialDelay": 10,
+
+    "SetOnComplete" : [ "MadeStasisSurvivable" ],
+    // if tutorial quest gets abandoned, we still want to move on with the other tutorials
+    "SetOnFail" : [ "MadeStasisSurvivable" ],
+    "Steps" : [
+        {
+            "Id": "RequireStasisArray",
+            "Type" : "RequireDeviceToExist",
+            "StepFlags" : [ "ActiveOnStart", "Secret", "FailsQuest" ],
+            "Config" : [
+                { "Key" : "Definition", "String" : "Objects/Devices/StasisArray" }
+            ]
+        },
+        {
+            // New Beginning starts with AtmosphereControl locked, so this is real research
+            // there, and EstablishResearch only made one datoid. Completes and hides where
+            // the node is already unlocked.
+            "Id": "HaveAtmoControlDatoids",
+            "Type" : "HaveResearchDatoids",
+            "StepFlags" : [ "ActiveOnStart" ],
+            "Config" : [
+                { "Key" : "Research", "String" : "Research/LifeSupport/AtmosphereControl" },
+                { "Key" : "MatType", "String" : "DatoidBasic" }
+            ],
+            "SetOnComplete" : [
+                "HasAtmoControlDatoids"
+            ]
+        },
+        {
+            "Id": "ResearchAtmoControl",
+            "Type" : "UnlockResearch",
+            "Config" : [
+                { "Key" : "Research", "String" : "Research/LifeSupport/AtmosphereControl" }
+            ],
+            "ActivateWhen" : [
+                "HasAtmoControlDatoids"
+            ],
+            "SetOnComplete" : [
+                "UnlockedAtmoControl"
+            ]
+        },
+        {
+            "Id": "HaveOxygenPumps",
+            "Type" : "HaveOnGrid",
+            "Config" : [
+                { "Key" : "Definition", "String" : "Objects/Devices/OxygenPumpMini" },
+                { "Key" : "Count", "Int" : 2 }
+            ],
+            "ActivateWhen" : [
+                "UnlockedAtmoControl"
+            ],
+            "SetOnComplete" : [
+                "HasOxygenPumps"
+            ]
+        },
+        {
+            "Id": "HaveHeaters",
+            "Type" : "HaveOnGrid",
+            "Config" : [
+                { "Key" : "Definition", "String" : "Objects/Devices/HeaterMini" },
+                { "Key" : "Count", "Int" : 2 }
+            ],
+            "SetOnComplete" : [
+                "HasHeaters"
+            ],
+            "ActivateWhen" : [
+                "UnlockedAtmoControl"
+            ]
+        },
+        {
+            "Id": "OxygenateArea",
+            "Type" : "OxygenateArea",
+            "Config" : [
+                { "Key" : "Definition", "String" : "Objects/Devices/StasisArray" }
+            ],
+            "ActivateWhen" : [
+                "HasOxygenPumps"
+            ],
+            "SetOnComplete" : [
+                "HasOxygenatedArea"
+            ]
+        },
+        {
+            "Id": "HeatArea",
+            "Type" : "HeatArea",
+            "Config" : [
+                { "Key" : "Definition", "String" : "Objects/Devices/StasisArray" }
+            ],
+            "ActivateWhen" : [
+                "HasHeaters"
+            ],
+            "SetOnComplete" : [
+                "HasHeatedArea"
+            ]
+        }
+    ]
+}

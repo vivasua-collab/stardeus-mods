@@ -1,0 +1,7 @@
+{
+    "Id" : "DogPerson",
+    "IconId" : "Icons/Color/PreviewDog01",
+    "TypeId" : "Mental",
+    "CompatibleSpecies" : [ "Human" ],
+    "Rarity" : 0.5
+}

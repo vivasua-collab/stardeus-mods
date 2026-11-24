@@ -1,0 +1,10 @@
+{
+    "Id" : "AntiPlayer",
+    "IsPlayer" : false,
+    "IsAntiPlayer" : true,
+    "FlagIcon" : "Icons/Faction/AntiPlayer",
+    "Friendliness" : 0,
+    "AI" : 0.0,
+    "ShipDensityMul" : 1.0,
+    "CombatObjective" : "Survive"
+}

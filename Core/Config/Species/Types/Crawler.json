@@ -1,0 +1,67 @@
+{
+    "Looks" : "Crawler",
+    "DefId" : "Beings/Crawler01",
+    "ForcedFaction" : "Crawler",
+    "LifeExpectancyYears" : 5,
+    "BeingValueBase" : 1000,
+    "BaseCombatStrength" : 0.5,
+    // negative - never spawn as custom mind
+    "CustomMindWeight" : -1.0,
+    "SpawnAgeCurve" : [
+        0.0, 1,
+        0.5, 2,
+        1.0, 5
+    ],
+    "CombatBehavior" : "Fight",
+    "AgePhases" : [
+        {
+            "AgeFrom" : 0,
+            "Phase" : "Childhood"
+        },
+        {
+            "AgeFrom" : 3,
+            "Phase" : "YoungAdult"
+        },
+        {
+            "AgeFrom" : 7,
+            "Phase" : "MidLife"
+        },
+        {
+            "AgeFrom" : 15,
+            "Phase" : "Retirement"
+        }
+    ],
+    "Flags" : [ "Biological", "Animal", "Wild" ],
+    "BloodSpriteRoot" : "Dirt/AlienBloodSplash",
+    "BloodCapacityLiters" : 0.6,
+    "BodySize" : "Small",
+    // Eight legs share the Leg slot type with two-legged species.
+    // Without this override nearly every hit would land on a leg.
+    // The brain hangs off the Body instead of a small Head, so at its default size of 0.6 it
+    // would take ~15% of all hits. 0.05 puts it on par with a human's (~2%).
+    "BodyPartSlotSizes" : { "Leg" : 0.05, "Brain" : 0.05 },
+    "TakeDamageSounds" : [
+        "FX/Punch_Flesh_01",
+        "FX/Punch_Flesh_02",
+        "FX/Punch_Flesh_03",
+        "FX/Punch_Flesh_04",
+        "FX/Punch_Flesh_05"
+    ],
+    "BodyPartSlotTypes" : [
+        "Body",
+        "Implant",
+        "Jaw",
+        "Brain",
+        "Heart",
+        "Stomach",
+        "Intestines",
+        "Leg_L1",
+        "Leg_L2",
+        "Leg_L3",
+        "Leg_L4",
+        "Leg_R1",
+        "Leg_R2",
+        "Leg_R3",
+        "Leg_R4"
+    ]
+}

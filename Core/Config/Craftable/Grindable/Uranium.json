@@ -1,0 +1,11 @@
+{
+    "Type": "Grindable",
+    "IgnoreMarket" : true,
+    "Ingredients": [
+        { "TypeId" : "Rock", "StackSize" : 70 }
+    ],
+    "OutputMultiplier" : 1,
+    "ProductDefId": "Obj/Materials/Uranium",
+    "ProductionTimeHours": 8,
+    "EnergyCost": 40.0
+}

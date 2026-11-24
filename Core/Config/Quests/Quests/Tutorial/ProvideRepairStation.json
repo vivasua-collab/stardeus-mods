@@ -1,0 +1,27 @@
+{
+    "QuestFlags" : [ "Tutorial", "AutoAdd", "Unique" ],
+    "TitleKey" : "quest.ProvideRepairStation",
+    "DescKey" : "quest.ProvideRepairStation.desc",
+    "QuestProviders" : [
+        "ShipComputer"
+    ],
+    // Straight after the stasis area is livable: raiders can damage a bot well before the
+    // radar and flight, so repairs come before either. Nothing here needs smelting.
+    "AvailableWhen" : [
+        "ReadyForTutorialQuests",
+        "MadeStasisSurvivable"
+    ],
+    "SetOnComplete" : [ "HasRepairStation" ],
+    // if tutorial quest gets abandoned, we still want to move on with the other tutorials
+    "SetOnFail" : [ "HasRepairStation" ],
+    "Steps" : [
+        {
+            "Id": "HaveRepairStation",
+            "Type" : "HaveOnGrid",
+            "StepFlags" : [ "ActiveOnStart", "CompletesQuest" ],
+            "Config" : [
+                { "Key" : "Definition", "String" : "Objects/Devices/RepairStation" }
+            ]
+        }
+    ]
+}

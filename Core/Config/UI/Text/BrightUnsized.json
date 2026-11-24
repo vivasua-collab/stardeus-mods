@@ -1,0 +1,7 @@
+{
+    "Id" : "Text/BrightUnsized",
+
+    "TextSkipAutoScale" : true,
+    "Color" : "UI/Text/Main",
+    "Alpha" : 1
+}

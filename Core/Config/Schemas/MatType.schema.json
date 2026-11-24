@@ -1,0 +1,134 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Stardeus MatType",
+  "description": "Generated from C# by Game/Generate JSON Schemas, do not edit by hand",
+  "$ref": "#/$defs/MatType",
+  "$defs": {
+    "Color": {
+      "type": "object",
+      "properties": {
+        "r": {
+          "type": "number"
+        },
+        "g": {
+          "type": "number"
+        },
+        "b": {
+          "type": "number"
+        },
+        "a": {
+          "type": "number"
+        }
+      },
+      "additionalProperties": false
+    },
+    "MatType": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "Id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "DefId": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "IsComposite": {
+          "type": "boolean"
+        },
+        "IsConsumedOnConstruct": {
+          "type": "boolean"
+        },
+        "IsConsumedOnDestroy": {
+          "type": "boolean"
+        },
+        "ConvertToMatOnDestroyId": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "ConvertToMatOnDestroyChance": {
+          "type": "number"
+        },
+        "IconTint": {
+          "$ref": "#/$defs/Color"
+        },
+        "IgnoreMarket": {
+          "type": "boolean"
+        },
+        "InternalValue": {
+          "type": "number"
+        },
+        "GroupNameKey": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "ExplosionLevel": {
+          "type": "integer"
+        },
+        "ExplosivenessCurveId": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "IconId": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "Property": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "Group": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "GroupH": {
+          "type": "integer"
+        },
+        "GroupId": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "ProcessableDefId": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "Rarity": {
+          "type": "number"
+        },
+        "EnergyOutput": {
+          "type": "number"
+        },
+        "CollectorCost": {
+          "type": "number"
+        },
+        "MatRarity": {
+          "type": "integer"
+        }
+      },
+      "additionalProperties": false
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+    "Id" : "Research/LifeSupport/CoolingAdvanced",
+    "Tier" : 4,
+    "IsAbstract" : true,
+    "PreviewIcon" : "Icons/Color/Snowflake",
+    "Researchable" : {
+        "IsTreeNode" : true,
+        "Prerequisites" : [
+            "Research/LifeSupport/HeatingAdvanced"
+        ],
+        "DatoidCosts" : [
+            {
+                "TypeId" : "DatoidSynthetic",
+                "StackSize" : 10
+            },
+            {
+                "TypeId" : "DatoidEnergy",
+                "StackSize" : 14
+            },
+            {
+                "TypeId" : "DatoidTechHigh",
+                "StackSize" : 12
+            }
+        ]
+    }
+}

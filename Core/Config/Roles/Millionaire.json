@@ -1,0 +1,18 @@
+{
+    "Id" : "Millionaire",
+    "Species" : [ "Human" ],
+    "AgePhaseIds" : [ "YoungAdult", "MidLife", "Retirement" ],
+    "IncapableJobTypes" : [ "Mining" ],
+    "RoleTypes" : [ "Rich", "Once" ],
+    "NotAfterRoles" : [ "Homeless" ],
+    "AdjustsSkills" : [
+        {
+            "JobId" : "Social",
+            "Adjustment" : 2
+        },
+        {
+            "JobId" : "Crafting",
+            "Adjustment" : 4
+        }
+    ]
+}

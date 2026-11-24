@@ -1,0 +1,19 @@
+// TAV: Tactical Assault Vessel
+{
+    "ChanceWillTrade" : 0.1,
+    "ChancePolice" : 1.0,
+    "CompatibleFactions" : [
+        "Player",
+        "Pirate",
+        "OldEarth",
+        "Capitalist"
+    ],
+    "CompatibleClasses" : [
+        "Battlecruiser",
+        "Battleship",
+        "Destroyer",
+        "Dreadnought"
+    ],
+    "MinOffensiveness" : 0.7,
+    "MaxOffensiveness" : 1.0
+}

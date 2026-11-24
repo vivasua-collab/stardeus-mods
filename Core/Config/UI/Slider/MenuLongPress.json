@@ -1,0 +1,13 @@
+{
+    "Id" : "Slider/MenuLongPress",
+
+    "ChildrenKeys" : [
+        "PanelFillArea",
+        "PanelFill"
+    ],
+
+    "ChildrenIds" : [
+        "Panel/SliderMenuLongPress",
+        "Panel/SliderFillLongPress"
+    ]
+}

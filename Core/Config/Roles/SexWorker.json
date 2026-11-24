@@ -1,0 +1,20 @@
+{
+    "Id" : "SexWorker",
+    "Species" : [ "Human", "Robot", "CleaningBot" ],
+    "AgePhaseIds" : [ "YoungAdult", "MidLife", "Retirement" ],
+    "RoleTypes" : [ "Dumb" ],
+    "AdjustsSkills" : [
+        {
+            "JobId" : "Social",
+            "Adjustment" : 4
+        },
+        {
+            "JobId" : "Medical",
+            "Adjustment" : 2
+        },
+        {
+            "JobId" : "Construction",
+            "Adjustment" : -1
+        }
+    ]
+}

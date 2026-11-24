@@ -1,0 +1,13 @@
+{
+    "Id" : "ShipCapacitor",
+    "GroupId" : "ShipDevice_2_Defense",
+    "GroupNameKey" : "noun.ship",
+    "NameKey" : "noun.flux.capacitors",
+    "Icon" : "Icons/Color/Flux",
+    "DefaultTargetByWeaponTypes" : [
+        "Ballistic",
+        "Missile",
+        "Laser",
+        "Plasma"
+    ]
+}

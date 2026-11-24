@@ -1,0 +1,8 @@
+{
+    "Id" : "Text/PHash",
+
+    "TextFontSize" : 18,
+    "TextSkipAutoScale" : true,
+    "Color" : "UI/Text/Main",
+    "Alpha" : 0.33
+}

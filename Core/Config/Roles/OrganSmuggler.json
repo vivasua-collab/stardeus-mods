@@ -1,0 +1,16 @@
+{
+    "Id" : "OrganSmuggler",
+    "Species" : [ "Human", "Robot" ],
+    "AgePhaseIds" : [ "MidLife", "Retirement" ],
+    "RoleTypes" : [ "Rich", "Evil" ],
+    "AdjustsSkills" : [
+        {
+            "JobId" : "Medical",
+            "Adjustment" : 6
+        },
+        {
+            "JobId" : "Social",
+            "Adjustment" : -2
+        }
+    ]
+}

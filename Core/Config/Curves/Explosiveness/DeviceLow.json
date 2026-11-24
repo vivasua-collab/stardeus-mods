@@ -1,0 +1,10 @@
+// For things like connector. Key is health or wear, value is chance to explode when taking damage
+{
+    "FloatSet" : [
+        0.0, 0.005,
+        0.25, 0.002,
+        0.10, 0.001,
+        0.11, 0.0,
+        1.0, 0.0
+    ]
+}

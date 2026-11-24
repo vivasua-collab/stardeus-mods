@@ -1,0 +1,13 @@
+{
+    "Id" : "ShipWeapon_PointDefense",
+    "GroupId" : "ShipDevice_2_Defense",
+    "GroupNameKey" : "noun.ship",
+    "NameKey" : "research.shipcombat.pointdefense",
+    "Icon" : "Icons/Color/Shield",
+    "DefaultTargetByWeaponTypes" : [
+        "Ballistic",
+        "Missile",
+        "Laser",
+        "Plasma"
+    ]
+}

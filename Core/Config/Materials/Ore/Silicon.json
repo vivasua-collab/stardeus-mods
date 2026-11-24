@@ -1,0 +1,9 @@
+{
+    "Id" : "Silicon",
+    "IconId" : "Obj/Materials/Silicon",
+    "GroupId" : "Ore",
+    "InternalValue" : 19.0,
+    "EnergyOutput" : 740.0,
+    "Rarity" : 60,
+    "MatRarity" : 1
+}

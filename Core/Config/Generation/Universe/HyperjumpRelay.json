@@ -1,0 +1,13 @@
+{
+    "Id" : "HyperjumpRelay",
+    "Icon" : "Icons/Color/Teleport",
+    "ParentIds" : [ "Galaxy" ],
+    "UseTypeName" : true,
+    "IsInteractive" : true,
+    "LocationApproxMagnitude" : 9.0,
+    "SizeMin" : 1,
+    "SizeMax" : 1,
+    "MinExitDist" : 25,
+    "SpawnChance" : 0,
+    "DistanceUnitsKey" : "units.km.thousands"
+}

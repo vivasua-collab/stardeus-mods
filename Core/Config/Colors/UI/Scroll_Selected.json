@@ -1,0 +1,7 @@
+{
+    "Id" : "UI/Scroll/Selected",
+    "AliasFor" : "UI/Main/Comp",
+    // "Hex" : "703399",
+    "Alpha" : 1.0,
+    "SkipAtlas" : true
+}

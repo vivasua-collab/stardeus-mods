@@ -1,0 +1,21 @@
+
+{
+    // C# implementation id
+    "EventId": "BeingBatteryDischarge",
+    // How much does this story event cost to run
+    "Points": 12,
+    // Options: Negative, Positive, Neutral, Raid
+    "OutcomeType": "Negative",
+    // Full list is in StoryEventFlags class
+    "EventFlags": [
+        "Being",
+        "Annoying"
+    ],
+    // Minimum days before this event can repeat
+    "MinRepeatDelayDays": 45,
+    // Requirements for this event to be available
+    "Require": {
+        "Days": 15,
+        "Workers": 4
+    }
+}

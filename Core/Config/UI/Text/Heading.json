@@ -1,0 +1,10 @@
+{
+    "Id" : "Text/Heading",
+
+    "Color" : "UI/Text/Main",
+    "Alpha" : 1,
+
+    "TextFontSize" : 30,
+    // "TextFontStyles" : [ "UpperCase" ],
+    "TextOverflowMode" : "Ellipsis"
+}

@@ -1,0 +1,14 @@
+{
+    "Id" : "ShelterAnimal",
+    "Species" : [ "Dog", "Cat" ],
+    "AdjustsSkills" : [
+        {
+            "JobId" : "Melee",
+            "Adjustment" : 4
+        },
+        {
+            "JobId" : "Social",
+            "Adjustment" : -1
+        }
+    ]
+}

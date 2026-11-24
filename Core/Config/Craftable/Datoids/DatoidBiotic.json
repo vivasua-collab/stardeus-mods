@@ -1,0 +1,10 @@
+{
+    "Type": "DatoidBiotic",
+    "Ingredients": [
+        { "TypeId" : "Protein", "StackSize" : 1 },
+        { "TypeId" : "StemCells", "StackSize" : 1 }
+    ],
+    "ProductDefId": "Obj/Datoids/DatoidBiotic",
+    "ProductionTimeHours": 2.0,
+    "EnergyCost": 25.0
+}

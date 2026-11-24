@@ -1,0 +1,9 @@
+{
+    "Id" : "Panel/QuickSearchPage",
+
+    "Color" : "UI/Panel/Main",
+
+    "Image" : "UI/Buttons/ButtonBG",
+    "ImageType" : "Sliced",
+    "ImageBorderLBRT" : [ 12, 12, 12, 12 ]
+}

@@ -1,0 +1,10 @@
+{
+    "Id" : "Obj/Materials/Flour",
+    "Type" : "CFD",
+    "Groups" : [ "Food" ],
+    "Value" : 18.0,
+    "Rarity" : 0.3,
+    "TraderQuantity" : 200.0,
+    "MinSectorDifficulty" : 0.55,
+    "Volatility" : 0.00031
+}

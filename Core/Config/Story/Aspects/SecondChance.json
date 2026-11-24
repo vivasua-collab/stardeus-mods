@@ -1,0 +1,15 @@
+{
+    // C# implementation id.
+    // Multiple configurations can point to a single implementation.
+    "AspectId" : "SecondChance",
+    "Properties" : [
+        { "Key" : "StoryEventId", "String" : "OnDemand/SecondChancePod" },
+        // How long after the ship AI notices it has no working crew the rescue pod lands.
+        // Long enough that a bot on emergency recharge, or a colonist who was only briefly
+        // down, resolves the crisis by itself and the beacon stands down unused.
+        { "Key" : "RescueDelayHours", "Float" : 24.0 },
+        // A second chance, not a labor supply. Long enough that losing the rescue crew too
+        // is a real ending rather than a pause.
+        { "Key" : "RescueCooldownDays", "Float" : 100.0 }
+    ]
+}

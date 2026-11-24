@@ -1,0 +1,61 @@
+{
+    "Id" : "Adventurer",
+    "AttitudeChances" : [
+        {
+            "FactionId" : "Player",
+            "Chance" : [
+                0.0, 0.0,
+                1.0, 0.1
+            ]
+        },
+        {
+            "FactionId" : "Scavenger",
+            "Chance" : [
+                0.0, -0.2,
+                1.0, -0.3
+            ]
+        },
+        {
+            "FactionId" : "Capitalist",
+            "Chance" : [
+                0.0, -0.2,
+                1.0, 0.2
+            ]
+        },
+        {
+            // Raised so the pair can reach the NPC alliance threshold through era drift
+            "FactionId" : "OldEarth",
+            "Chance" : [
+                0.0, 0.35,
+                1.0, 0.55
+            ]
+        },
+        {
+            "FactionId" : "Pirate",
+            "Chance" : [
+                0.0, -0.1,
+                1.0, -0.2
+            ]
+        },
+        {
+            "FactionId" : "Virus",
+            "Chance" : [
+                0.0, -0.2,
+                1.0, -0.3
+            ]
+        },
+        {
+            "FactionId" : "Sentinel",
+            "Chance" : [
+                0.0, 0.0,
+                1.0, 0.1
+            ]
+        }
+    ],
+    "DefaultAttitude" : {
+        "Chance" : [
+            0.0, -0.1,
+            1.0, 0.1
+        ]
+    }
+}

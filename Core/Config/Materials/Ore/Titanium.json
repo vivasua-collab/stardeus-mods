@@ -1,0 +1,9 @@
+{
+    "Id" : "Titanium",
+    "IconId" : "Obj/Materials/Titanium",
+    "GroupId" : "Ore",
+    "InternalValue" : 7.0,
+    "EnergyOutput" : 2800.0,
+    "Rarity" : 72,
+    "MatRarity" : 1
+}

@@ -1,0 +1,278 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Stardeus SOLooks",
+  "description": "Generated from C# by Game/Generate JSON Schemas, do not edit by hand",
+  "$ref": "#/$defs/SOLooks",
+  "$defs": {
+    "Mat": {
+      "type": "object",
+      "properties": {
+        "TypeId": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "StackSize": {
+          "type": "integer"
+        },
+        "MaxStackSize": {
+          "type": "integer"
+        }
+      },
+      "additionalProperties": false
+    },
+    "SOLooks": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "Id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "IsForTerraformable": {
+          "type": "boolean"
+        },
+        "Probability": {
+          "type": "number"
+        },
+        "Shader": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "SkewFrom": {
+          "type": "number"
+        },
+        "SkewTo": {
+          "type": "number"
+        },
+        "ScaleRand": {
+          "type": "number"
+        },
+        "OrderDist": {
+          "type": "number"
+        },
+        "StarmapSizeMul": {
+          "type": "number"
+        },
+        "StarfieldSizeMul": {
+          "type": "number"
+        },
+        "IsConstantSizeInStarmap": {
+          "type": "boolean"
+        },
+        "Sprite": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "CanRotate": {
+          "type": "boolean"
+        },
+        "KeepUprightInStarfield": {
+          "type": "boolean"
+        },
+        "RandomRotation": {
+          "type": "boolean"
+        },
+        "RandomRotationZ": {
+          "type": "boolean"
+        },
+        "FixedStarmapSize": {
+          "type": "number"
+        },
+        "Sprite_L": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "Sprite_R": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "Sprite_U": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "Sprite_D": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "AnimateRotationSpeed": {
+          "type": "number"
+        },
+        "VisualEffect": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "VisualEffectSize_Starmap": {
+          "type": "number"
+        },
+        "VisualEffectSize_Starfield": {
+          "type": "number"
+        },
+        "ShaderPropertiesFloatFrom": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "$ref": "#/$defs/SerializableProperty"
+          }
+        },
+        "ShaderPropertiesFloatTo": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "$ref": "#/$defs/SerializableProperty"
+          }
+        },
+        "ShaderPropertiesVector2From": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "$ref": "#/$defs/SerializableProperty"
+          }
+        },
+        "ShaderPropertiesVector2To": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "$ref": "#/$defs/SerializableProperty"
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "SerializableProperty": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "Key": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "String": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "Int": {
+          "type": "integer"
+        },
+        "Float": {
+          "type": "number"
+        },
+        "Vector2": {
+          "$ref": "#/$defs/Vector2"
+        },
+        "PosIdx": {
+          "type": "integer"
+        },
+        "Bool": {
+          "type": "boolean"
+        },
+        "BoolSet": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "boolean"
+          }
+        },
+        "IntSet": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "integer"
+          }
+        },
+        "FloatSet": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "number"
+          }
+        },
+        "StringSet": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "Vector2Set": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "$ref": "#/$defs/Vector2"
+          }
+        },
+        "RawMaterials": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "$ref": "#/$defs/Mat"
+          }
+        },
+        "IsUsed": {
+          "type": "boolean"
+        }
+      },
+      "additionalProperties": false
+    },
+    "Vector2": {
+      "type": "object",
+      "properties": {
+        "x": {
+          "type": "number"
+        },
+        "y": {
+          "type": "number"
+        }
+      },
+      "additionalProperties": false
+    }
+  }
+}

@@ -1,0 +1,137 @@
+{
+    "QuestFlags": [
+        "Random",
+        "Template",
+        "Signal"
+    ],
+    "Weight": 0.210970464,
+    "TitleKey": "noun.signal.offer",
+    "DescKey": "noun.signal.offer.desc",
+    "QuestProviders": [
+        "Signal"
+    ],
+    "QuestValidators": [
+        "HasActiveTradePortal"
+    ],
+    "Variables": [
+        {
+            "Id": "Deadline",
+            "Type": "Deadline",
+            "Config": [
+                {
+                    "Key": "DaysCurve",
+                    "FloatSet": [
+                        0,
+                        30,
+                        1,
+                        14
+                    ]
+                },
+                {
+                    "Key": "DifficultyInput",
+                    "String": "Sector"
+                },
+                {
+                    "Key": "DeadlineMult",
+                    "FloatSet": [
+                        0.5,
+                        2.0
+                    ]
+                }
+            ]
+        },
+        {
+            "Id": "Reward",
+            "Type": "MarketItem",
+            "Config": [
+                {
+                    "Key": "MarketGroups",
+                    "StringSet": [
+                        "Material",
+                        "Ore",
+                        "Food",
+                        "Energy",
+                        "Electronics"
+                    ]
+                },
+                {
+                    "Key": "QuantityFrom",
+                    "Int": 10
+                },
+                {
+                    "Key": "QuantityTo",
+                    "Int": 20
+                },
+                {
+                    "Key": "PercentFrom",
+                    "Float": 0.5
+                },
+                {
+                    "Key": "PercentTo",
+                    "Float": 0.7
+                },
+                {
+                    "Key": "DVar_DefId",
+                    "String": "RewDefId"
+                },
+                {
+                    "Key": "DVar_Amount",
+                    "String": "RewQty"
+                },
+                {
+                    "Key": "DVar_Money",
+                    "String": "ReqMoney"
+                }
+            ]
+        }
+    ],
+    "Steps": [
+        {
+            "Id": "Pay",
+            "Type": "PayMoneyViaTradePortal",
+            "StepFlags": [
+                "ActiveOnStart",
+                "CompletesQuest",
+                "FailsQuest"
+            ],
+            "Deadline": "Deadline",
+            "Config": [
+                {
+                    "Key": "DVar_Money",
+                    "String": "ReqMoney"
+                },
+                {
+                    "Key": "RequestMsgKeys",
+                    "StringSet": [
+                        "sig.ask.money.unclear.reward.object.*"
+                    ]
+                },
+                {
+                    "Key": "RequestMsgArgs",
+                    "StringSet": [
+                        "Money:ReqMoney"
+                    ]
+                }
+            ]
+        }
+    ],
+    "Rewards": [
+        {
+            "Id": "Item",
+            "Type": "EntityAtTradePortal",
+            "RewardFlags": [
+                "Surprise"
+            ],
+            "Config": [
+                {
+                    "Key": "DVar_DefId",
+                    "String": "RewDefId"
+                },
+                {
+                    "Key": "DVar_Amount",
+                    "String": "RewQty"
+                }
+            ]
+        }
+    ]
+}

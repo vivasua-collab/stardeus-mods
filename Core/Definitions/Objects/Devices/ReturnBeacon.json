@@ -1,0 +1,81 @@
+{
+    "ToolPath" : "SpaceTravel",
+    "Layer" : "Objects",
+    "ParentId" : "Objects/Devices/BaseDevice",
+    "NameKey" : "noun.return.beacon",
+    "Researchable" : {
+        "Prerequisites" : [ "Research/SpaceTravel/ReturnBeacon" ]
+    },
+    "Spawnable" : {
+        "Category": "RareDevice",
+        "Chance" : 0.2,
+        "ChanceLocked" : 0.05
+    },
+    "Components" : [
+        {
+            "Component" : "TileTransform",
+            "Properties" : [
+                { "Key" : "Width", "Int" : 2 },
+                { "Key" : "Height", "Int" : 2 },
+                { "Key" : "CoverPercent", "Int" : 100 },
+                { "Key" : "IsRotatable", "Bool" : false }
+            ]
+        },
+        {
+            "Component" : "Flammable",
+            "Properties" : [
+                { "Key" : "IgnitionTemperatureCelsius", "Int" : 800 },
+                { "Key" : "FireChance", "Float" : 0.5 },
+                { "Key" : "BaseExplosionLevel", "Int" : 3 },
+                { "Key" : "FlammabilityCurve", "String" : "Device" },
+                { "Key" : "ExplosivenessCurve", "String" : "Device" }
+            ]
+        },
+        { "Component" : "ReturnBeacon" },
+        {
+            "Component" : "IndustrialEquipment",
+            "Properties" : [
+                { "Key" : "IsNoisy", "Bool" : false }
+            ]
+        },
+        {
+            "Component" : "LightSource",
+            "Properties" : [
+                { "Key" : "Color", "IntSet" : [ 213, 121, 236, 128 ] },
+                { "Key" : "NeedsEnergy", "Bool" : false },
+                { "Key" : "Radius", "Float" : 4 }
+            ]
+        },
+        {
+            "Component" : "Passability",
+            "Properties" : [
+                { "Key" : "IsPassable", "Bool" : false },
+                { "Key" : "IsWalkable", "Bool" : false },
+                { "Key" : "Difficulty", "Float" : 1 }
+            ]
+        },
+        { "Component" : "OutdoorsCheck" },
+        {
+            "Component" : "TileGraphics",
+            "Properties" : [
+                { "Key" : "Graphic", "String": "Objects/Devices/ReturnBeacon" },
+                { "Key" : "HasHeight", "Bool": true }
+            ]
+        },
+        {
+            "Component" : "Constructable",
+            "Properties" : [
+                { "Key" : "WorkAmount", "Int" : 2000 },
+                {
+                    "Key" : "Contents",
+                    "RawMaterials" : [
+                        { "TypeId" : "TitaniumPlate", "StackSize" : 15 },
+                        { "TypeId" : "Glass", "StackSize" : 5 },
+                        { "TypeId" : "BatteryCell", "StackSize" : 5 },
+                        { "TypeId" : "Microchip2", "StackSize" : 1 }
+                    ]
+                }
+            ]
+        }
+    ]
+}

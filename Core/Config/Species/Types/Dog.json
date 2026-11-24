@@ -1,0 +1,233 @@
+{
+    "Looks" : "Dog",
+    "DefId" : "Beings/Dog01",
+    "StasisWakeUpChance" : 0.05,
+    "LifeExpectancyYears" : 20,
+    "BeingValueBase" : 500,
+    "Trade" : { "Group" : "Pet", "ChanceInStock" : 0.05, "MaxInStock" : 1,
+                "LivingPremium" : 1500 },
+    "BaseCombatStrength" : 0.25,
+    "CustomMindWeight" : 1.5,
+    "SpawnAgeCurve" : [
+        0.0, 1,
+        0.1, 1.5,
+        0.2, 2.0,
+        0.3, 2.5,
+        0.4, 3,
+        0.5, 5,
+        0.6, 7,
+        0.7, 10,
+        0.8, 13,
+        0.9, 15,
+        1.0, 20
+    ],
+    "CombatBehavior" : "FreeWill",
+    // Mental needs. They follow the MIND rather than the frame, so a mind moved into
+    // another body takes this list with it. MentalHealth belongs here for the same
+    // reason, and Fun cannot be granted without it.
+    // Pets can reach fewer fun sources, so repetition wears them down more slowly
+    "FunRepetitionCurve" : "Beings/FunRepetition_NoveltyAnimal",
+    "AddsNeeds" : [
+        "MentalHealth",
+        "Fun",
+        "Faction"
+    ],
+    "AddsAbilities" : [
+        "AnimalEat"
+    ],
+    "ProvidesStats" : [
+        {
+            "Component" : "FunDropRate",
+            "Properties" : [
+                { "Key" : "AmountPerHour", "Float" : 0.01 }
+            ]
+        },
+        {
+            "Component" : "FunIncreaseRate",
+            "Properties" : [
+                { "Key" : "AmountPerHour", "Float" : 0.15 }
+            ]
+        }
+    ],
+    "AgePhases" : [
+        {
+            "AgeFrom" : 0,
+            "Phase" : "Childhood"
+        },
+        {
+            "AgeFrom" : 3,
+            "Phase" : "YoungAdult"
+        },
+        {
+            "AgeFrom" : 7,
+            "Phase" : "MidLife"
+        },
+        {
+            "AgeFrom" : 15,
+            "Phase" : "Retirement"
+        }
+    ],
+    "Flags" : [ "Biological", "Animal", "Pet" ],
+    "BloodSpriteRoot" : "Dirt/BloodSplash",
+    "NameChanceWeights" : [ 1.0 ],
+    "NameParts" : [
+        {
+            "Type" : "PetName",
+            "Paths" : [
+                "Dog/Neutral"
+            ],
+            "Chances" : [ 1.0 ]
+        },
+        {
+            "Type" : "PetName",
+            "Paths" : [
+                "Dog/Neutral"
+            ],
+            "Chances" : [ 0.1 ]
+        }
+    ],
+    "Sexes" : [
+        {
+            "Type" : "M",
+            "Chance" : 0.5,
+            "NameParts" : [
+                {
+                    "Type" : "PetName",
+                    "Paths" : [ "Dog/Male" ]
+                },
+                {
+                    "Type" : "PetName",
+                    "Paths" : [ "Dog/Male" ]
+                }
+            ]
+        },
+        {
+            "Type" : "F",
+            "Chance" : 0.5,
+            "NameParts" : [
+                {
+                    "Type" : "PetName",
+                    "Paths" : [ "Dog/Female" ]
+                },
+                {
+                    "Type" : "PetName",
+                    "Paths" : [ "Dog/Female" ]
+                }
+            ]
+        }
+    ],
+    "SexualOrientations" : [
+        {
+            "Type" : "straight",
+            "Chance" : 0.99
+        },
+        {
+            "Type" : "gay",
+            "Chance" : 0.025
+        },
+        {
+            "Type" : "bisexual",
+            "Chance" : 0.025
+        },
+        {
+            "Type" : "asexual",
+            "Chance" : 0.0001
+        }
+    ],
+    "SexualAttractions" : [
+        {
+            "Sex" : "M",
+            "Orientation" : "straight",
+            "AttractedTo" : "F"
+        },
+        {
+            "Sex" : "F",
+            "Orientation" : "straight",
+            "AttractedTo" : "M"
+        },
+        {
+            "Sex" : "M",
+            "Orientation" : "gay",
+            "AttractedTo" : "M"
+        },
+        {
+            "Sex" : "F",
+            "Orientation" : "gay",
+            "AttractedTo" : "F"
+        },
+        {
+            "Sex" : "M",
+            "Orientation" : "bisexual",
+            "AttractedTo" : "MF"
+        },
+        {
+            "Sex" : "F",
+            "Orientation" : "bisexual",
+            "AttractedTo" : "MF"
+        },
+        {
+            "Sex" : "M",
+            "Orientation" : "asexual",
+            "AttractedTo" : ""
+        },
+        {
+            "Sex" : "F",
+            "Orientation" : "asexual",
+            "AttractedTo" : ""
+        }
+    ],
+    "AttackSounds" : [
+        "FX/Dog_Bark_01",
+        "FX/Dog_Bark_02",
+        "FX/Dog_Bark_01",
+        "FX/Dog_Growl_01",
+        "FX/Dog_Growl_02",
+        "FX/Dog_Growl_01"
+    ],
+    "PainSounds" : [
+        "FX/Dog_Whimper_01",
+        "FX/Dog_Whimper_02",
+        "FX/Dog_Whimper_01"
+    ],
+    "TakeDamageSounds" : [
+        "FX/Punch_Flesh_01",
+        "FX/Punch_Flesh_02",
+        "FX/Punch_Flesh_03",
+        "FX/Punch_Flesh_04",
+        "FX/Punch_Flesh_05"
+    ],
+    "BloodCapacityLiters" : 0.8,
+    "BodySize" : "Small",
+    "BodyPartSlotTypes" : [
+        "Body",
+        "Head",
+        "Brain",
+        "Implant",
+        "Eye_L",
+        "Eye_R",
+        "Ear_L",
+        "Ear_R",
+        "Jaw",
+        "Lung_L",
+        "Lung_R",
+        "Heart",
+        "Stomach",
+        "Liver",
+        "Kidney_L",
+        "Kidney_R",
+        "Intestines",
+        "Shoulder_L",
+        "Shoulder_R",
+        "Arm_L",
+        "Arm_R",
+        "Hand_L",
+        "Hand_R",
+        "Hip_L",
+        "Hip_R",
+        "Leg_L",
+        "Leg_R",
+        "Foot_L",
+        "Foot_R",
+        "Tail"
+    ]
+}

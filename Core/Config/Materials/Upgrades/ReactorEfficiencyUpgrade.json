@@ -1,0 +1,12 @@
+{
+    "Id" : "ReactorEfficiencyUpgrade",
+    "DefId" : "Obj/Upgrades/ReactorEfficiencyUpgrade",
+    "IsComposite" : true,
+    "IsConsumedOnDestroy" : true,
+    "IconId" : "Obj/Upgrades/ReactorEfficiencyUpgrade",
+    "Property" : "Electronic",
+    "Group" : "Upgrade",
+    "GroupId" : "Upgrades",
+    "EnergyOutput" : 50.0,
+    "Rarity" : 1
+}

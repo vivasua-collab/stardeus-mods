@@ -1,0 +1,67 @@
+{
+    "SlotTypeId" : "Body",
+    "Compatibility" : "TargetSpecies",
+    "TargetSpecies" : [ "Mindjar" ],
+    "PartFlags" : [ "Indestructible" ],
+    "ResistanceBase" : 5.0,
+    "Resistances" : [
+        { "DamageType" : "Energy", "Resistance" : 2.0 }
+    ],
+    "AddsAbilities" : [
+    ],
+    "AddsStatModifiers" : [
+        {
+            "Component" : "AIAlignment",
+            "Properties" : [
+                { "Key" : "Value", "Float" : 1.0 },
+                { "Key" : "Type", "String" : "Sets" }
+            ]
+        }
+    ],
+    "AddsNeeds" : [
+        "Electricity",
+        "Maintenance",
+        "Temperature"
+    ],
+    "ProvidesStats" : [
+        {
+            "Component" : "TempMax",
+            "Properties" : [
+                { "Key" : "StateMul", "Float" : 0.0 },
+                { "Key" : "QualityMul", "Float" : 0.1 },
+                { "Key" : "TemperatureCelsius", "Float" : 250.0 }
+            ]
+        },
+        {
+            "Component" : "BatteryConsumption",
+            "Properties" : [
+                { "Key" : "AmountPerDay", "Float" : 50 },
+                { "Key" : "QualityMul", "Float" : 0.1 }
+            ]
+        },
+        {
+            "Component" : "ArmorSharp",
+            "Properties" : [
+                { "Key" : "Amount", "Float" : 0.2 }
+            ]
+        },
+        {
+            "Component" : "ArmorPiercing",
+            "Properties" : [
+                { "Key" : "Amount", "Float" : 0.2 }
+            ]
+        },
+        {
+            "Component" : "ArmorBlunt",
+            "Properties" : [
+                { "Key" : "Amount", "Float" : 0.2 }
+            ]
+        },
+        {
+            "Component" : "ArmorEnergy",
+            "Properties" : [
+                { "Key" : "Amount", "Float" : 0.1 }
+            ]
+        }
+    ]
+}

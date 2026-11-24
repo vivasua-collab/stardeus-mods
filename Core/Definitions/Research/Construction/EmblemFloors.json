@@ -1,0 +1,23 @@
+{
+    "Id" : "Research/Construction/EmblemFloors",
+    "Tier" : 2,
+    "IsAbstract" : true,
+    "BuildGroup": "EmblemFloors",
+    "PreviewIcon" : "Emblems/Blank",
+    "Researchable" : {
+        "IsTreeNode" : true,
+        "Prerequisites" : [
+            "Research/Construction/Habitation"
+        ],
+        "DatoidCosts" : [
+            {
+                "TypeId" : "DatoidBasic",
+                "StackSize" : 10
+            },
+            {
+                "TypeId" : "DatoidTech",
+                "StackSize" : 5
+            }
+        ]
+    }
+}

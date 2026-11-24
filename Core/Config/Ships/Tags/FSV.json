@@ -1,0 +1,20 @@
+// FSV: Frontier Star Vessel
+{
+    "ChanceWillTrade" : 0.9,
+    "ChancePolice" : 0.5,
+    "CompatibleFactions" : [
+        "Player",
+        "OldEarth",
+        "Adventurer",
+        "Scavenger",
+        "Capitalist"
+    ],
+    "CompatibleClasses" : [
+        "Fighter",
+        "Frigate",
+        "Corvette",
+        "Cruiser"
+    ],
+    "MinOffensiveness" : 0.0,
+    "MaxOffensiveness" : 0.5
+}

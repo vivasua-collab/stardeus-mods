@@ -1,0 +1,18 @@
+{
+    "Id" : "Ablutophobic",
+    "IconId" : "Icons/Color/Shower",
+    "TypeId" : "Civilized",
+    "IncompatibleTraitIds" : [
+        "Showerer"
+    ],
+    "AddsStatModifiers" : [
+        {
+            "Component" : "HygieneReliefRate",
+            "Properties" : [
+                { "Key" : "Value", "Float" : 1.0 },
+                { "Key" : "Type", "String" : "AddsPercent" }
+            ]
+        }
+    ],
+    "Rarity" : 0.5
+}

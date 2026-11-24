@@ -1,0 +1,23 @@
+{
+    "Id" : "ScoutCampManager",
+    "LovesJobTypes" : [ "Expedition", "Shooting" ],
+    "Species" : [ "Human" ],
+    "IncompatibleTraitIds" : [ "Pacifist" ],
+    "AgePhaseIds" : [ "YoungAdult", "MidLife" ],
+    "AdjustsSkills" : [
+        {
+            "JobId" : "Expedition",
+            "Adjustment" : 4
+        },
+        {
+            "JobId" : "Social",
+            "Adjustment" : 4
+        }
+    ],
+    "AddsTraits" : [
+        {
+            "TraitId" : "CleaningOcd",
+            "Chance" : 0.15
+        }
+    ]
+}

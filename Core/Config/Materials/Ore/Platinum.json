@@ -1,0 +1,10 @@
+{
+    "Id" : "Platinum",
+    "IconId" : "Obj/Materials/Platinum",
+    "GroupId" : "Ore",
+    "InternalValue" : 24.0,
+    "EnergyOutput" : 1180.0,
+    "CollectorCost" : 1000,
+    "Rarity" : 15,
+    "MatRarity" : 3
+}

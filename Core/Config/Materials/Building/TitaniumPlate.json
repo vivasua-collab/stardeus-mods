@@ -1,0 +1,9 @@
+{
+    "Id" : "TitaniumPlate",
+    "IsComposite" : true,
+    "IconId" : "Obj/Materials/TitaniumPlate",
+    // Double from what Titanium outputs
+    "EnergyOutput" : 840.0,
+    "GroupId" : "Plates",
+    "Rarity" : 50
+}

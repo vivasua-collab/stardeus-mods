@@ -1,0 +1,12 @@
+{
+    "Type" : "Waste",
+    "Ingredients" : [
+        { "TypeId" : "Biowaste", "StackSize" : 1 }
+    ],
+    "IgnoreMarket" : true,
+    "OutputMultiplier" : 2,
+    "ListOrder" : 10,
+    "ProductDefId" : "Obj/Materials/Water",
+    "ProductionTimeHours" : 2.0,
+    "EnergyCost" : 10
+}

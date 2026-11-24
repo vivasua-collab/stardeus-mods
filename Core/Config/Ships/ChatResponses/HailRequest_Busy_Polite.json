@@ -1,0 +1,8 @@
+{
+    "ResponseType" : "Busy",
+    "TopicType" : "HailRequest",
+    "ToneType" : "Polite",
+    "MessageKeys" : [
+        "ship.chat.busy.polite.*"
+    ]
+}

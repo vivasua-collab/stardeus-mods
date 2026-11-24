@@ -1,0 +1,26 @@
+{
+    "Id" : "Weapon_GaussStriker",
+    "DefId" : "Objects/Devices/GaussStriker",
+    "Tier" : 4,
+    "ClassPoints" : 7,
+
+    // if it would only have one rotation:
+    // "ZoneSpriteId" : "Objects/Devices/ShredderCannon_ZoneView",
+
+    // if it has multiple rotations:
+    "ZoneSpriteId_D" : "Objects/Devices/GaussStriker_ZoneView_D",
+    "ZoneSpriteId_L" : "Objects/Devices/GaussStriker_ZoneView_L",
+    "ZoneSpriteId_U" : "Objects/Devices/GaussStriker_ZoneView_U",
+    "ZoneSpriteId_R" : "Objects/Devices/GaussStriker_ZoneView_R",
+
+    // "ZoneSpriteScale" : 0.5,
+
+    "HP" : 400,
+
+    // common device
+    "Rarity" : 0.25,
+
+    "TargetTypeId" : "ShipWeapon_Plasma",
+    "EnergyCostPassive": 10,
+    "EnergyCostActive": 200
+}

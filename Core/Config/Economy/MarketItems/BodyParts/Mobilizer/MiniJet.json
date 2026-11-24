@@ -1,0 +1,9 @@
+{
+    "Id" : "Obj/Parts/Mobilizer/MiniJet",
+    "Type" : "CFD",
+    "Groups" : [ "BodyPart", "Robotics" ],
+    "Value" : 800.0,
+    "Rarity" : 0.1,
+    "MinSectorDifficulty" : 0.65,
+    "Volatility" : 0.00167
+}

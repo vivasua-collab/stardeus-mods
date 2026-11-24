@@ -1,0 +1,11 @@
+{
+    "Id" : "Aerolith",
+    "IsComposite" : true,
+    "IconId" : "Obj/Materials/Aerolith",
+    "GroupId" : "Ore",
+    "EnergyOutput" : 3000.0,
+    "Rarity" : 1,
+    "MatRarity" : 4,
+    "ExplosionLevel" : 3,
+    "ExplosivenessCurveId" : "Device"
+}

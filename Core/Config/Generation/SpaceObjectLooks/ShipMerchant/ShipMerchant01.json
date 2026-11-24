@@ -1,0 +1,14 @@
+{
+    "Id" : "ShipMerchant01",
+    "Probability" : 1.0,
+    "StarmapSizeMul" : 1.0,
+    "StarfieldSizeMul" : 0.5,
+    "OrderDist" : -50,
+    "Sprite" : "SpaceObjects/Ships/ShipMerchant01_D",
+    "CanRotate" : true,
+    "KeepUprightInStarfield" : true,
+    "Sprite_L" : "SpaceObjects/Ships/ShipMerchant01_L",
+    "Sprite_R" : "SpaceObjects/Ships/ShipMerchant01_R",
+    "Sprite_U" : "SpaceObjects/Ships/ShipMerchant01_U",
+    "Sprite_D" : "SpaceObjects/Ships/ShipMerchant01_D"
+}

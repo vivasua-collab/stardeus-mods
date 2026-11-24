@@ -1,0 +1,23 @@
+// DamagedStructureCollapse story event configuration (new format)
+{
+    // C# implementation id
+    "EventId": "DamagedStructureCollapse",
+    // Not a story pick: StructureCollapseSys starts it when neglected damage gives way, more
+    // often the more damage is left unrepaired, and the opening's curated beat starts it once.
+    // So it costs no points, and has no Neglect flag, which would put device fires and
+    // explosions on cooldown after every collapse
+    "Points": 0,
+    // Options: Negative, Positive, Neutral, Raid
+    "OutcomeType": "Negative",
+    // Full list is in StoryEventFlags class
+    "EventFlags": [
+        "OnDemand"
+    ],
+    // Requirements for this event to be available, checked by both starters. Require is never
+    // bypassed, so it must stay something an early ship meets: GridSize 50 once kept the
+    // opening's collapse from ever firing (grid of 23 nodes on day 10). No collapses on Peaceful
+    "Require": {
+        "Days": 1,
+        "Difficulty": 0.25
+    }
+}

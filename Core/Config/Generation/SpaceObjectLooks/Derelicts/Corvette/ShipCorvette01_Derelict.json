@@ -1,0 +1,16 @@
+{
+    "Id" : "ShipCorvette01_Derelict",
+    "Probability" : 1.0,
+    "StarmapSizeMul" : 0.34,
+    "StarfieldSizeMul" : 0.17,
+    "IsConstantSizeInStarmap" : true,
+    "RandomRotation" : true,
+    "OrderDist" : -40,
+    "Sprite" : "SpaceObjects/Derelicts/ShipCorvette01_Derelict_D",
+    "CanRotate" : false,
+    "KeepUprightInStarfield" : true,
+    "Sprite_L" : "SpaceObjects/Derelicts/ShipCorvette01_Derelict_L",
+    "Sprite_R" : "SpaceObjects/Derelicts/ShipCorvette01_Derelict_R",
+    "Sprite_U" : "SpaceObjects/Derelicts/ShipCorvette01_Derelict_U",
+    "Sprite_D" : "SpaceObjects/Derelicts/ShipCorvette01_Derelict_D"
+}

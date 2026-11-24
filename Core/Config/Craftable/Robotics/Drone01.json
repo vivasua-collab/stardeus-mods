@@ -1,0 +1,14 @@
+{
+    "Type": "Robotics2",
+    "Ingredients": [
+        { "TypeId" : "TitaniumPlate", "StackSize" : 3 },
+        { "TypeId" : "Gears", "StackSize" : 5 },
+        { "TypeId" : "SiliconWafer", "StackSize" : 4 },
+        { "TypeId" : "Transistor", "StackSize" : 6 },
+        { "TypeId" : "Microchip", "StackSize" : 1 },
+        { "TypeId" : "CopperWire", "StackSize" : 5 }
+    ],
+    "ProductDefId": "Beings/Drone01",
+    "ProductionTimeHours": 504.0,
+    "EnergyCost": 50.0
+}

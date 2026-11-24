@@ -1,0 +1,6 @@
+{
+    "Id" : "SpaceBiome5",
+    "Data" : [255, 75, 10, 255],
+    "IsGeneric" : false,
+    "Groups" : [ "SpaceBiome" ]
+}

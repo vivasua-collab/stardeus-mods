@@ -1,0 +1,26 @@
+{
+    "BehaviorId" : "Sector_Idle",
+
+    "OriginDifficultyChance" : [
+        0.0, 1.0,
+        1.0, 1.0
+    ],
+
+    "RequiresEngines" : false,
+
+    // "DefaultFactionChance" : 1.0,
+
+    "ClassChanceKey" : [
+        "Fighter",
+        "Frigate",
+        "Corvette",
+        "Cruiser"
+    ],
+    "ClassChanceValue" : [
+        0.1,
+        0.3,
+        0.2,
+        0.4
+    ],
+    "DefaultClassChance" : 0.5
+}

@@ -1,0 +1,10 @@
+// INF: Infected Network Frame (hacked ships)
+{
+    "ChanceWillTrade" : 0.3,
+    "CompatibleFactions" : [
+        "Virus"
+    ],
+    // any class goes
+    "MinOffensiveness" : 0.0,
+    "MaxOffensiveness" : 1.0
+}

@@ -1,0 +1,8 @@
+{
+    "Id" : "Carbon",
+    "IconId" : "Obj/Materials/Carbon",
+    "GroupId" : "Components",
+    "InternalValue" : 5.0,
+    "EnergyOutput" : 40.0,
+    "Rarity" : 150
+}

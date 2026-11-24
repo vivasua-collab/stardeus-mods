@@ -1,0 +1,15 @@
+{
+    "Type": "Disposable",
+    "DisposableOutput": [
+        { "TypeId" : "Microchip3", "StackSize" : 10 },
+        { "TypeId" : "NuclearCell", "StackSize" : 5 },
+        { "TypeId" : "SpeedUpgrade", "StackSize" : 5 },
+        { "TypeId" : "SiliconWafer", "StackSize" : 10 },
+        { "TypeId" : "Transistor", "StackSize" : 20 },
+        { "TypeId" : "CopperWire", "StackSize" : 5 }
+    ],
+    "IgnoreMarket" : true,
+    "ProductDefId": "Obj/Upgrades/StarcredsMiningUpgrade",
+    "ProductionTimeHours": 2.0,
+    "EnergyCost": 50.0
+}

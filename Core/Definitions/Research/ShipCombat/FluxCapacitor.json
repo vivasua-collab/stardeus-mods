@@ -1,0 +1,23 @@
+{
+    "Id" : "Research/ShipCombat/FluxCapacitor",
+    "Tier" : 3,
+    "IsAbstract" : true,
+    "NameKey" : "noun.flux.capacitor",
+    "PreviewIcon" : "Icons/Color/Flux",
+    "Researchable" : {
+        "IsTreeNode" : true,
+        "Prerequisites" : [
+            "Research/ShipCombat/Shields"
+        ],
+        "DatoidCosts" : [
+            {
+                "TypeId" : "DatoidTech",
+                "StackSize" : 22
+            },
+            {
+                "TypeId" : "DatoidEnergy",
+                "StackSize" : 5
+            }
+        ]
+    }
+}

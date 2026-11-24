@@ -1,0 +1,13 @@
+{
+    "Type": "Clothing",
+    "ColorGroupId": "Suit",
+    "Ingredients": [
+        { "TypeId" : "CarbonFiber", "StackSize" : 10 },
+        { "TypeId" : "Rubber", "StackSize" : 10 },
+        { "TypeId" : "Plastic", "StackSize" : 10 }
+    ],
+    "IgnoreMarket" : true,
+    "ProductDefId": "Obj/Equipment/Clothing/SpaceSuit01",
+    "ProductionTimeHours": 8.0,
+    "EnergyCost": 50.0
+}

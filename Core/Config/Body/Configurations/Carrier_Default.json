@@ -1,0 +1,19 @@
+{
+    "SpeciesType" : "Carrier",
+    "IsDefault" : true,
+    "Parts" : [
+        { "Slot" : "Body", "Part" : "Body/BodyCarrier" },
+        { "Slot" : "Shoulder_L", "Part" : "Shoulder/ArmSocket" },
+        { "Slot" : "Shoulder_R", "Part" : "Shoulder/ArmSocket" },
+        { "Slot" : "Arm_L", "Part" : "Arm/ServoArm" },
+        { "Slot" : "Arm_R", "Part" : "Arm/ServoArm" },
+        { "Slot" : "Hand_L", "Part" : "Hand/Grappler" },
+        { "Slot" : "Hand_R", "Part" : "Hand/Grappler" },
+        { "Slot" : "Eye", "Part" : "Eye/MiniOptics" },
+        { "Slot" : "Mobilizer_L", "Part" : "Mobilizer/MiniJet" },
+        { "Slot" : "Mobilizer_R", "Part" : "Mobilizer/MiniJet" },
+        { "Slot" : "Battery", "Part" : "Battery/MiniCell" },
+        { "Slot" : "Implant", "Empty" : true },
+        { "Slot" : "Core", "Part" : "Core/LiteCore" }
+    ]
+}

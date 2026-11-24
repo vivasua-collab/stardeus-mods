@@ -1,0 +1,10 @@
+{
+    "Id" : "Obj/Materials/Silicon",
+    "Type" : "CFD",
+    "Groups" : [ "Ore", "Electronics" ],
+    "Value" : 91.0,
+    "Rarity" : 0.1,
+    "TraderQuantity" : 100.0,
+    "OnlineShopQuantity" : 30,
+    "Volatility" : 0.0027
+}

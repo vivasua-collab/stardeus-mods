@@ -1,0 +1,7 @@
+{
+    "Id" : "UI/Text/Faint",
+    "AliasFor" : "UI/White/Sec",
+    // "Hex" : "A585AD",
+    "Alpha" : 0.5,
+    "SkipAtlas" : true
+}

@@ -1,0 +1,119 @@
+{
+    "ToolPath" : "Security",
+    "Layer" : "Objects",
+    "ParentId" : "Objects/Devices/BaseDevice",
+    "Researchable" : {
+        "Prerequisites" : [
+            "Research/Security/TractorBeam"
+        ]
+    },
+    "Spawnable" : {
+        "Category": "RareDevice",
+        "TierDiff" : -1,
+        "Chance" : 0.9,
+        "ChanceLocked" : 0.4
+    },
+    "Components" : [
+        {
+            "Component" : "TileTransform",
+            "Properties" : [
+                { "Key" : "Width", "Int" : 2 },
+                { "Key" : "Height", "Int" : 2 },
+                { "Key" : "CoverPercent", "Int" : 50 }
+            ]
+        },
+        {
+            "Component" : "IndustrialEquipment",
+            "Properties" : [
+                { "Key" : "IsNoisy", "Bool" : true }
+            ]
+        },
+        {
+            "Component" : "Flammable",
+            "Properties" : [
+                { "Key" : "IgnitionTemperatureCelsius", "Int" : 500 },
+                { "Key" : "FireChance", "Float" : 0.5 },
+                { "Key" : "BaseExplosionLevel", "Int" : 6 },
+                { "Key" : "FlammabilityCurve", "String" : "DeviceHigh" },
+                { "Key" : "ExplosivenessCurve", "String" : "DeviceHigh" }
+            ]
+        },
+        {
+            "Component" : "Reinstallable",
+            "Properties" : [
+                { "Key" : "IsAdvanced", "Bool" : true }
+            ]
+        },
+        {
+            "Component" : "VFX",
+            "Properties" : [
+                { "Key" : "Id", "String" : "VFXParticlesTractorBeam" },
+                { "Key" : "Offset", "Vector2" : { "x" : 0.0, "y" : 0.7 } },
+                { "Key" : "Offsets", "Vector2Set" : [] }
+            ]
+        },
+        {
+            "Component" : "TileGraphics",
+            "Properties" : [
+                { "Key" : "Type", "String": "Object" },
+                { "Key" : "Graphic", "String": "Objects/Devices/TractorBeam" },
+                { "Key" : "HasHeight", "Bool" : true }
+            ]
+        },
+        {
+            "Component" : "AudioSource",
+            "Properties" : [
+                { "Key" : "AmbienceClip", "String" : "Devices/TractorBeamSFX" },
+                { "Key" : "IsLinkedToEnergy", "Bool" : true },
+                { "Key" : "Rolloff", "Vector2" : { "x" : 10, "y" : 40 } }
+            ]
+        },
+        { "Component" : "TractorBeam" },
+        {
+            "Component" : "ElectricNode",
+            "Properties" : [
+                { "Key" : "IsConsumer", "Bool" : true }
+            ]
+        },
+        {
+            "Component" : "WithFuse",
+            "Properties" : [
+                { "Key" : "MalfunctionWeight", "Float": 0.6 }
+            ]
+        },
+        { "Component" : "OutdoorsCheck" },
+        {
+            "Component" : "Passability",
+            "Properties" : [
+                { "Key" : "IsPassable", "Bool" : false },
+                { "Key" : "IsWalkable", "Bool" : false },
+                { "Key" : "Difficulty", "Float" : 1 }
+            ]
+        },
+        {
+            "Component" : "LightSource",
+            "Properties" : [
+                { "Key" : "Color", "IntSet" : [ 221, 174, 85, 128 ] },
+                { "Key" : "PulsateColor", "IntSet" : [ 221, 174, 85, 192 ] },
+                { "Key" : "FrequencyRange", "Vector2" : { "x" : 0.4, "y" : 1.5 } },
+                { "Key" : "Radius", "Float" : 5 }
+            ]
+        },
+        {
+            "Component" : "Constructable",
+            "Properties" : [
+                { "Key" : "WorkAmount", "Int" : 2400 },
+                {
+                    "Key" : "Contents",
+                    "RawMaterials" : [
+                        { "TypeId" : "TitaniumPlate", "StackSize" : 8 },
+                        { "TypeId" : "Gears", "StackSize" : 8 },
+                        { "TypeId" : "GoldWire", "StackSize" : 8 },
+                        { "TypeId" : "Microchip2", "StackSize" : 5 },
+                        { "TypeId" : "NuclearCell", "StackSize" : 1 }
+                    ]
+                }
+            ]
+        }
+    ]
+}

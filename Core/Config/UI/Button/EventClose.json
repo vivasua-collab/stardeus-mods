@@ -1,0 +1,18 @@
+{
+    "Id" : "Button/EventClose",
+
+    "ChildrenKeys" : [
+        "Panel",
+        "Selectable",
+        "Text",
+        "ActiveOverlay"
+    ],
+
+    "ChildrenIds" : [
+        "Panel/ColorlessIconButton",
+        "Selectable/EventClose",
+        "Text/IconButton",
+        "Overlay/Icon"
+    ]
+
+}

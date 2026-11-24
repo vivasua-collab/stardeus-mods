@@ -1,0 +1,111 @@
+{
+    "ToolPath" : "Food",
+    "Layer" : "Objects",
+    "ParentId" : "Objects/Devices/BaseDevice",
+    "Researchable" : {
+        "Prerequisites" : [
+            "Research/Habitation/StorageKitchenImproved"
+        ]
+    },
+    "Spawnable" : {
+        "Category": "Food",
+        "Chance" : 1.0,
+        "ChanceLocked" : 0.5
+    },
+    "Components" : [
+        {
+            "Component" : "TileTransform",
+            "Properties" : [
+                // { "Key" : "WorkSpot", "Vector2" : { "x" : 0, "y" : -1 } },
+                { "Key" : "OutPort", "Vector2" : { "x" : 0, "y" : -1 } },
+                { "Key" : "InPort", "Vector2" : { "x" : 0, "y" : -1 } },
+                { "Key" : "IsRotatable", "Bool" : true },
+                { "Key" : "Width", "Int" : 2 },
+                { "Key" : "Height", "Int" : 2 }
+            ]
+        },
+        {
+            "Component" : "TileGraphics",
+            "Properties" : [
+                { "Key" : "Type", "String": "Object" },
+                { "Key" : "Graphic", "String": "Objects/Devices/Freezer" },
+                { "Key" : "HasHeight", "Bool" : true }
+            ]
+        },
+        {
+            "Component" : "IndustrialEquipment",
+            "Properties" : [
+                { "Key" : "IsNoisy", "Bool" : true }
+            ]
+        },
+        {
+            "Component" : "Flammable",
+            "Properties" : [
+                { "Key" : "IgnitionTemperatureCelsius", "Int" : 400 },
+                { "Key" : "FireChance", "Float" : 0.5 },
+                { "Key" : "BaseExplosionLevel", "Int" : 1 },
+                { "Key" : "FlammabilityCurve", "String" : "Device" },
+                { "Key" : "ExplosivenessCurve", "String" : "DeviceLow" }
+            ]
+        },
+        {
+            "Component" : "ElectricNode",
+            "Properties" : [
+                { "Key" : "IsConsumer", "Bool" : true }
+            ]
+        },
+        {
+            "Component" : "WithFuse",
+            "Properties" : [
+                { "Key" : "MalfunctionWeight", "Float": 0.1 }
+            ]
+        },
+        { "Component" : "SafetyCheck" },
+        {
+            "Component" : "PoweredStorage",
+            "Properties" : [
+                { "Key" : "EnergyCostBase", "Float" : 5.0 },
+                { "Key" : "EnergyCostPerItem", "Float" : 0.005 }
+            ]
+        },
+        {
+            "Component" : "Passability",
+            "Properties" : [
+                { "Key" : "IsPassable", "Bool" : false },
+                { "Key" : "IsWalkable", "Bool" : false },
+                { "Key" : "Difficulty", "Float" : 1 }
+            ]
+        },
+        {
+            "Component" : "MatStorage",
+            "Properties" : [
+                { "Key" : "Groups", "StringSet" : [ "Food", "RawFood", "StemCells", "Ice" ] },
+                { "Key" : "MaxCapacity", "Int" : 1000 },
+                { "Key" : "IsPublic", "Bool" : true },
+                { "Key" : "ShowFulnessBar", "Bool" : true }
+            ]
+        },
+        {
+            "Component" : "MatHaulTarget",
+            "Properties" : [
+                { "Key" : "NeedsElectricity", "Bool" : true }
+            ]
+        },
+        {
+            "Component" : "Constructable",
+            "Properties" : [
+                { "Key" : "WorkAmount", "Int" : 1400 },
+                {
+                    "Key" : "Contents",
+                    "RawMaterials" : [
+                        { "TypeId" : "TitaniumPlate", "StackSize" : 4 },
+                        { "TypeId" : "Plastic", "StackSize" : 1 },
+                        { "TypeId" : "Glass", "StackSize" : 1 },
+                        { "TypeId" : "Transistor", "StackSize" : 1 },
+                        { "TypeId" : "CopperWire", "StackSize" : 3 }
+                    ]
+                }
+            ]
+        }
+    ]
+}

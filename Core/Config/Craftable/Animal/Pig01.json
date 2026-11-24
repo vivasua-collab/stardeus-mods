@@ -1,0 +1,18 @@
+{
+    "Type": "Animal",
+    "Ingredients": [
+        { "TypeId" : "Protein", "StackSize" : 15 },
+        { "TypeId" : "Carbon", "StackSize" : 6 },
+        { "TypeId" : "Water", "StackSize" : 14 },
+        { "TypeId" : "StemCells", "StackSize" : 120 }
+    ],
+    "DisposableOutput": [
+        { "TypeId" : "Protein", "StackSize" : 5 },
+        { "TypeId" : "Leather", "StackSize" : 2 },
+        { "TypeId" : "Water", "StackSize" : 2 },
+        { "TypeId" : "StemCells", "StackSize" : 1 }
+    ],
+    "ProductDefId": "Beings/Pig01",
+    "ProductionTimeHours": 720.0,
+    "EnergyCost": 25.0
+}

@@ -1,0 +1,10 @@
+{
+    "Id" : "Obj/Materials/Coffee",
+    "Type" : "CFD",
+    "Groups" : [ "Food", "Organic" ],
+    "Value" : 42.0,
+    "Rarity" : 0.4,
+    "Volatility" : 0.00048,
+    "TraderQuantity" : 100.0,
+    "MinSectorDifficulty" : 0.45
+}

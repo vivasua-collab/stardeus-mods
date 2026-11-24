@@ -1,0 +1,13 @@
+{
+    "Type" : "Ammo",
+    "Ingredients" : [
+        { "TypeId" : "Petroleum", "StackSize" : 2 },
+        { "TypeId" : "Microchip2", "StackSize" : 1 },
+        { "TypeId" : "TitaniumPlate", "StackSize" : 1 },
+        { "TypeId" : "LeadPlate", "StackSize" : 1 }
+    ],
+    "IgnoreMarket" : true,
+    "ProductDefId" : "Obj/Ammo/Missile",
+    "ProductionTimeHours" : 4,
+    "EnergyCost" : 30
+}

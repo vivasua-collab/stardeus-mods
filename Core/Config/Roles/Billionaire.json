@@ -1,0 +1,19 @@
+{
+    "Id" : "Billionaire",
+    "Species" : [ "Human" ],
+    "AgePhaseIds" : [ "MidLife", "Retirement" ],
+    "LovesJobTypes" : [ "Social" ],
+    "IncapableJobTypes" : [ "Mining" ],
+    "RoleTypes" : [ "Rich", "Once" ],
+    "RequiresRoles" : [ "Millionaire" ],
+    "AdjustsSkills" : [
+        {
+            "JobId" : "Social",
+            "Adjustment" : 6
+        },
+        {
+            "JobId" : "Research",
+            "Adjustment" : 10
+        }
+    ]
+}

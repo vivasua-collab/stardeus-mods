@@ -1,0 +1,16 @@
+{
+    "Id" : "Sociopath",
+    "IconId" : "Icons/Color/ThumbsDown",
+    "TypeId" : "Mental",
+    "Rarity" : 0.5,
+    "AdjustsSkills" : [
+        {
+            "JobId" : "Social",
+            "Adjustment" : -1
+        },
+        {
+            "JobId" : "Medical",
+            "Adjustment" : 2
+        }
+    ]
+}

@@ -1,0 +1,119 @@
+{
+    "ToolPath" : "Food",
+    "Layer" : "Objects",
+    "ParentId" : "Objects/Devices/BaseDevice",
+    "Researchable" : {
+        "Prerequisites" : [
+            "Research/LifeSupport/Coffee"
+        ]
+    },
+    "Spawnable" : {
+        "Category": "Food",
+        "Chance" : 1.0,
+        "ChanceLocked" : 0.5
+    },
+    "Components" : [
+        {
+            "Component" : "TileTransform",
+            "Properties" : [
+                { "Key" : "Width", "Int" : 1 },
+                { "Key" : "Height", "Int" : 1 },
+                { "Key" : "IsRotatable", "Bool" : true },
+                { "Key" : "CoverPercent", "Int" : 80 },
+                { "Key" : "WorkSpot", "Vector2" : { "x" : 0, "y" : -1 } },
+                { "Key" : "InPort", "Vector2" : { "x" : -1, "y" : -1 } },
+                { "Key" : "OutPort", "Vector2" : { "x" : -1, "y" : -1 } }
+            ]
+        },
+        {
+            "Component" : "ElectricNode",
+            "Properties" : [
+                { "Key" : "IsConsumer", "Bool" : true }
+            ]
+        },
+        {
+            "Component" : "WithFuse",
+            "Properties" : [
+                { "Key" : "MalfunctionWeight", "Float": 0.2 }
+            ]
+        },
+        {
+            "Component" : "Flammable",
+            "Properties" : [
+                { "Key" : "IgnitionTemperatureCelsius", "Int" : 350 },
+                { "Key" : "FireChance", "Float" : 0.6 },
+                { "Key" : "BaseExplosionLevel", "Int" : 1 },
+                { "Key" : "FlammabilityCurve", "String" : "DeviceLow" },
+                { "Key" : "ExplosivenessCurve", "String" : "Device" }
+            ]
+        },
+        { "Component" : "SafetyCheck" },
+        {
+            "Component" : "AudioSource",
+            "Properties" : [
+                { "Key" : "AmbienceClip", "String" : "Ambience/DeviceOperating04" },
+                { "Key" : "Rolloff", "Vector2" : { "x" : 3, "y" : 12 } },
+                { "Key" : "IsLinkedToEnergy", "Bool" : true }
+            ]
+        },
+        {
+            "Component" : "TileGraphics",
+            "Properties" : [
+                { "Key" : "Type", "String": "Object" },
+                { "Key" : "Graphic", "String": "Objects/Devices/CoffeeMaker" },
+                { "Key" : "HasHeight", "Bool" : true }
+            ]
+        },
+        {
+            "Component" : "ExtraInfo"
+        },
+        {
+            "Component" : "MultiCrafter",
+            "Properties" : [
+                { "Key" : "IdleWarnDefault", "Bool" : false },
+                { "Key" : "UIItemIcon", "String" : "Icons/Color/Cog" },
+                { "Key" : "CraftKey", "String" : "brew" },
+                { "Key" : "ProgressBarKey", "String" : "brewing.bar" },
+                { "Key" : "IsOperatorRequired", "Bool" : true },
+                { "Key" : "CompatibleTypes", "StringSet": [
+                    "Coffee"
+                ] }
+            ]
+        },
+        {
+            "Component" : "OperatableDevice",
+            "Properties" : [
+                { "Key" : "JobType", "String" : "Cooking" },
+                { "Key" : "OperatorOffsets", "Vector2Set" : [
+                    { "x" : 0.15, "y" : -0.42 },
+                    { "x" : -0.67, "y" : 0.27 },
+                    { "x" : -0.13, "y" : 1.4 },
+                    { "x" : 0.69, "y" : 0.33 }
+                ] }
+            ]
+        },
+        {
+            "Component" : "Passability",
+            "Properties" : [
+                { "Key" : "IsPassable", "Bool" : false },
+                { "Key" : "IsWalkable", "Bool" : false },
+                { "Key" : "Difficulty", "Float" : 1 }
+            ]
+        },
+        {
+            "Component" : "Constructable",
+            "Properties" : [
+                { "Key" : "WorkAmount", "Int" : 800 },
+                {
+                    "Key" : "Contents",
+                    "RawMaterials" : [
+                        { "TypeId" : "SteelPlate", "StackSize" : 1 },
+                        { "TypeId" : "Glass", "StackSize" : 1 },
+                        { "TypeId" : "Transistor", "StackSize" : 1 },
+                        { "TypeId" : "CopperWire", "StackSize" : 1 }
+                    ]
+                }
+            ]
+        }
+    ]
+}

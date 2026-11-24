@@ -1,0 +1,30 @@
+{
+    "Id" : "Research/Computing/GPUImproved",
+    "Tier" : 6,
+    "IsAbstract" : true,
+    "PreviewIcon" : "Icons/Color/GPU",
+    "Researchable" : {
+        "IsTreeNode" : true,
+        "Prerequisites" : [
+            "Research/Computing/HighAvailabilityImproved"
+        ],
+        "DatoidCosts" : [
+            {
+                "TypeId" : "DatoidEnergy",
+                "StackSize" : 24
+            },
+            {
+                "TypeId" : "DatoidTechHigh",
+                "StackSize" : 19
+            },
+            {
+                "TypeId" : "DatoidAlien",
+                "StackSize" : 18
+            },
+            {
+                "TypeId" : "DatoidQuantum",
+                "StackSize" : 16
+            }
+        ]
+    }
+}

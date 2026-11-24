@@ -1,0 +1,9 @@
+{
+    "Id" : "Overlay/PopupLongPress",
+
+    "Color" : "UI/Btn/OverlayActive",
+
+    "Image" : "UI/Buttons/ActiveOverlayPopupLongPress",
+    "ImageType" : "Sliced",
+    "ImageBorderLBRT" : [ 24, 12, 28, 28 ]
+}

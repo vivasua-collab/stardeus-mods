@@ -1,0 +1,12 @@
+{
+    "Id" : "Curious",
+    "IconId" : "Icons/Color/Magnifier",
+    "TypeId" : "Mental",
+    "Rarity" : 0.5,
+    "AdjustsSkills" : [
+        {
+            "JobId" : "Expedition",
+            "Adjustment" : 1
+        }
+    ]
+}

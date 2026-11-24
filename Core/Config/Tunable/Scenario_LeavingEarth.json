@@ -1,0 +1,63 @@
+{
+    "Ints" : [
+        { "Key" : "LeavingEarth_SteelPlate", "Int" : 3000 },
+        { "Key" : "LeavingEarth_TitaniumPlate", "Int" : 1500 },
+        { "Key" : "LeavingEarth_CopperPlate", "Int" : 500 },
+        { "Key" : "LeavingEarth_Glass", "Int" : 250 },
+        { "Key" : "LeavingEarth_Carbon", "Int" : 200 },
+        { "Key" : "LeavingEarth_BatteryCell", "Int" : 150 },
+        { "Key" : "LeavingEarth_Water", "Int" : 500 },
+        // The food tutorial's Survival Meal needs Protein, and nothing makes it this early
+        { "Key" : "LeavingEarth_Protein", "Int" : 50 },
+        { "Key" : "LeavingEarth_Rock", "Int" : 200 },
+        { "Key" : "LeavingEarth_SurvivalMeal", "Int" : 300 },
+        { "Key" : "LeavingEarth_Soil", "Int" : 100 },
+        { "Key" : "LeavingEarth_CarbonFiber", "Int" : 200 },
+        { "Key" : "LeavingEarth_Microchip", "Int" : 100 },
+        { "Key" : "LeavingEarth_Microchip2", "Int" : 50 },
+        { "Key" : "LeavingEarth_Microchip3", "Int" : 25 },
+        { "Key" : "LeavingEarth_SiliconWafer", "Int" : 200 },
+        { "Key" : "LeavingEarth_Transistor", "Int" : 500 },
+        { "Key" : "LeavingEarth_Plastic", "Int" : 200 },
+        { "Key" : "LeavingEarth_Rubber", "Int" : 200 },
+        { "Key" : "LeavingEarth_FusionCell", "Int" : 50 },
+        { "Key" : "LeavingEarth_Phasium", "Int" : 10 },
+        { "Key" : "LeavingEarth_OpticalFiber", "Int" : 100 },
+        { "Key" : "LeavingEarth_CopperWire", "Int" : 500 },
+        { "Key" : "LeavingEarth_Gears", "Int" : 500 },
+        { "Key" : "LeavingEarth_DatoidBasic", "Int" : 100 },
+        { "Key" : "LeavingEarth_DatoidTech", "Int" : 50 },
+        { "Key" : "LeavingEarth_DatoidEnergy", "Int" : 25 },
+        { "Key" : "LeavingEarth_DatoidSynthetic", "Int" : 25 },
+        { "Key" : "LeavingEarth_DatoidPhyto", "Int" : 25 },
+        { "Key" : "LeavingEarth_DatoidBiotic", "Int" : 25 }
+    ],
+    "StringSets" : [
+        {
+            "Key" : "LeavingEarth_UnlockedResearch",
+            "StringSet" : [
+                "Research/Energy/ConnectorImproved",
+                "Research/Construction/RelocationAdvanced",
+                // Tutorial/EstablishProduction is the second quest of the game, before the
+                // research tutorial; its Crafting Station sits behind this node, so it must
+                // hold whatever the Basic Tech modifier says.
+                "Research/Production/Assembly"
+            ]
+        },
+        {
+            "Key" : "LeavingEarth_Objs",
+            // Kept even empty: gen stages take rng forks in order, so dropping this stage
+            // would move what every later stage places
+            "StringSet" : []
+        },
+        {
+            "Key" : "LeavingEarth_StartingWeapons",
+            // Equipped on the starting crew (StartingCrewWeapons), not dropped on the floor
+            "StringSet" : [
+                "Obj/Equipment/Weapons/Handgun01",
+                "Obj/Equipment/Weapons/Knife01"
+            ]
+        }
+    ]
+
+}

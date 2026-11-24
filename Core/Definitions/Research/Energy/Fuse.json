@@ -1,0 +1,23 @@
+{
+    "Id" : "Research/Energy/Fuse",
+    "Tier" : 2,
+    "IsAbstract" : true,
+    "PreviewIcon" : "Obj/Upgrades/FuseUpgrade",
+    "NameKey" : "obj.upgrades.fuseupgrade",
+    "Researchable" : {
+        "IsTreeNode" : true,
+        "Prerequisites" : [
+            "Research/Energy/ReactorEfficiency"
+        ],
+        "DatoidCosts" : [
+            {
+                "TypeId" : "DatoidTech",
+                "StackSize" : 7
+            },
+            {
+                "TypeId" : "DatoidEnergy",
+                "StackSize" : 5
+            }
+        ]
+    }
+}

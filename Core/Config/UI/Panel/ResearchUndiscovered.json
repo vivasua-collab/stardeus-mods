@@ -1,0 +1,9 @@
+{
+    "Id" : "Panel/ResearchUndiscovered",
+
+    "Color" : "UI/Research/Panel/Undiscovered",
+
+    "Image" : "UI/Panels/PopupBG",
+    "ImageType" : "Sliced",
+    "ImageBorderLBRT" : [ 12, 12, 28, 28 ]
+}

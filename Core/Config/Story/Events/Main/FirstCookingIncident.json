@@ -1,0 +1,35 @@
+{
+    // The scripted first kitchen fire of the opening (Curated_Balanced starts it once the
+    // cooking station is configured). Same C# event as CookingIncident, tuned to be a lesson
+    // rather than a disaster: it waits for the third meal, always happens, starts without
+    // the fire boost and never sets the cook alight
+    "EventId": "CookingIncident",
+    // Scripted, so it does not spend the Negative budget
+    "Points": 0,
+    "OutcomeType": "Negative",
+    "EventFlags": [
+        "OnDemand",
+        "OncePerGame",
+        "Being",
+        "Device",
+        "Fire",
+        "WaitsForCondition"
+    ],
+    // Same as the regular cooking incident: no kitchen fires on Peaceful
+    "Require": {
+        "Difficulty": 0.25
+    },
+    "Properties": [
+        // Guaranteed, whatever the cook's skill
+        {
+            "Key": "SkillFailChanceCurve",
+            "FloatSet": [
+                0, 1,
+                255, 1
+            ]
+        },
+        { "Key": "DishesBeforeFire", "Int": 3 },
+        { "Key": "Unboosted", "Bool": true },
+        { "Key": "IgnitesCook", "Bool": false }
+    ]
+}

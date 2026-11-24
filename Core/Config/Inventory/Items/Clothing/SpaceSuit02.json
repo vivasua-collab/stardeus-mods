@@ -1,0 +1,84 @@
+{
+    "DefId" : "Obj/Equipment/Clothing/SpaceSuit02",
+    "SlotId" : "Suit",
+    "SpriteId" : "Beings/Clothing/Human/SpaceSuit02/[BODY_TYPE]/[BODY_TYPE]SpaceSuit02",
+    "ColorGroupId" : "Suit",
+    "Rarity" : 0.5,
+    "CombatStrengthBonus" : 2.0,
+    "SpawnRequirements" : {
+        "Days" : 100,
+        "Friendlies" : 8,
+        "SectorDifficulty" : 0.55
+    },
+    "LooksShowFlags" : [
+        "SlotEmpty",
+        "Combat"
+    ],
+    "LooksHideFlags" : [
+        "SafeEnv"
+    ],
+    "HidesLookParts" : [
+        // "Body"
+    ],
+    "AddsAbilities" : [
+        "Fly"
+    ],
+    "ProvidesStats" : [
+        {
+            "Component" : "SpaceSuitIntegrity",
+            "Properties" : [
+                { "Key" : "StateMul", "Float" : 0.0 },
+                { "Key" : "Amount", "Float" : 0.90 },
+                { "Key" : "CompoundLimit", "Float" : 1.0 }
+            ]
+        }
+    ],
+    "AddsStatModifiers" : [
+        {
+            "Component" : "TempMin",
+            "Properties" : [
+                { "Key" : "Value", "Float" : -50 },
+                { "Key" : "Type", "String" : "Adds" }
+            ]
+        },
+        {
+            "Component" : "TempMax",
+            "Properties" : [
+                { "Key" : "Value", "Float" : 200.0 },
+                { "Key" : "Type", "String" : "Adds" }
+            ]
+        },
+        {
+            "Component" : "ArmorSharp",
+            "Properties" : [
+                { "Key" : "StateMul", "Float" : 1.0 },
+                { "Key" : "Value", "Float" : 6 },
+                { "Key" : "Type", "String" : "Adds" }
+            ]
+        },
+        {
+            "Component" : "ArmorPiercing",
+            "Properties" : [
+                { "Key" : "StateMul", "Float" : 1.0 },
+                { "Key" : "Value", "Float" : 5 },
+                { "Key" : "Type", "String" : "Adds" }
+            ]
+        },
+        {
+            "Component" : "ArmorBlunt",
+            "Properties" : [
+                { "Key" : "StateMul", "Float" : 1.0 },
+                { "Key" : "Value", "Float" : 6 },
+                { "Key" : "Type", "String" : "Adds" }
+            ]
+        },
+        {
+            "Component" : "ArmorEnergy",
+            "Properties" : [
+                { "Key" : "StateMul", "Float" : 1.0 },
+                { "Key" : "Value", "Float" : 6 },
+                { "Key" : "Type", "String" : "Adds" }
+            ]
+        }
+    ]
+}

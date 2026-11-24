@@ -1,0 +1,9 @@
+{
+    "Id" : "Cooking",
+    "SkillSpeedCurve" : "Skills/SpeedMedical",
+    "Importance" : 1.5,
+    "EnabledByAbilities" : [ "Manipulate", "Cook" ],
+    "IconId" : "Icons/Color/Chef",
+    "Types" : [ "Physical" ],
+    "WorkSpeedStat" : "ManualWorkSpeed"
+}

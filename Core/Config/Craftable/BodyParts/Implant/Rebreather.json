@@ -1,0 +1,13 @@
+{
+    "Type" : "Robotics2",
+    "ProductDefId" : "Obj/Parts/Implant/Rebreather",
+    "ProductionTimeHours" : 96,
+    "EnergyCost" : 20,
+    "IgnoreMarket" : true,
+    "Ingredients" : [
+        { "TypeId" : "Plastic", "StackSize" : 2 },
+        { "TypeId" : "Rubber", "StackSize" : 2 },
+        { "TypeId" : "Transistor", "StackSize" : 3 },
+        { "TypeId" : "SilverIngot", "StackSize" : 1 }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "Id" : "SiliconWafer",
+    "IsComposite" : true,
+    "IsConsumedOnDestroy" : true,
+    "IconId" : "Obj/Materials/SiliconWafer",
+    "Property" : "Electronics",
+    "GroupId" : "Electronics",
+    "EnergyOutput" : 100.0,
+    "Rarity" : 5
+}

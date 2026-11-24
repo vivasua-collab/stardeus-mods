@@ -1,0 +1,179 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Stardeus FactionDef",
+  "description": "Generated from C# by Game/Generate JSON Schemas, do not edit by hand",
+  "$ref": "#/$defs/FactionDef",
+  "$defs": {
+    "FactionDef": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "CombatObjective": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "ChanceTradeWithOutlaw": {
+          "type": "number"
+        },
+        "ChancePolice": {
+          "type": "number"
+        },
+        "ChanceRandomShip": {
+          "type": "number"
+        },
+        "GenBodyVars": {
+          "$ref": "#/$defs/GenBeingBodyVars"
+        },
+        "RaidStrengthMul": {
+          "type": "number"
+        },
+        "HyperjumpRelayBaseToll": {
+          "type": "integer"
+        },
+        "RegionDifficultyChance": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "number"
+          }
+        },
+        "BraveryChance": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "number"
+          }
+        },
+        "AttitudePositiveReactionChance": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "number"
+          }
+        },
+        "ShipDensityMul": {
+          "type": "number"
+        },
+        "NameKey": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "Id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "IdH": {
+          "type": "integer"
+        },
+        "IsInternal": {
+          "type": "boolean"
+        },
+        "IsPlayer": {
+          "type": "boolean"
+        },
+        "IsAntiPlayer": {
+          "type": "boolean"
+        },
+        "IsBlank": {
+          "type": "boolean"
+        },
+        "NeverAllies": {
+          "type": "boolean"
+        },
+        "IgnoresAsimovLaws": {
+          "type": "boolean"
+        },
+        "AlwaysEnemies": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "FlagIcon": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "ChanceBlackMarket": {
+          "type": "number"
+        },
+        "TradesPeople": {
+          "type": "boolean"
+        },
+        "IsOutlaw": {
+          "type": "boolean"
+        },
+        "Rarity": {
+          "type": "number"
+        },
+        "Friendliness": {
+          "type": "number"
+        },
+        "AI": {
+          "type": "number"
+        },
+        "PilotedHumanShare": {
+          "type": "number"
+        },
+        "VictoryRaidChance": {
+          "type": "number"
+        }
+      },
+      "additionalProperties": false
+    },
+    "GenBeingBodyVars": {
+      "type": "object",
+      "properties": {
+        "ChanceModded": {
+          "type": "number"
+        },
+        "ChanceScarred": {
+          "type": "number"
+        },
+        "ChanceBionic": {
+          "type": "number"
+        },
+        "ChanceNonStandard": {
+          "type": "number"
+        },
+        "ChanceHighQualityParts": {
+          "type": "number"
+        },
+        "ChanceLowQualityParts": {
+          "type": "number"
+        },
+        "ChanceFreak": {
+          "type": "number"
+        },
+        "ChanceCustomMind": {
+          "type": "number"
+        },
+        "ChanceImplant": {
+          "type": "number"
+        }
+      },
+      "additionalProperties": false
+    }
+  }
+}

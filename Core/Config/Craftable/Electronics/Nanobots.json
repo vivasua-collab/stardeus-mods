@@ -1,0 +1,10 @@
+{
+    "Type" : "Robotics3",
+    "Ingredients" : [
+        { "TypeId" : "SilverIngot", "StackSize" : 1 },
+        { "TypeId" : "OpticalFiber", "StackSize" : 1 }
+    ],
+    "ProductDefId" : "Obj/Materials/Nanobots",
+    "ProductionTimeHours" : 4,
+    "EnergyCost" : 25
+}

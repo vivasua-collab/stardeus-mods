@@ -1,0 +1,68 @@
+{
+    "ToolPath" : "Energy",
+    "Layer" : "Walls",
+    "ParentId" : "Structure/BaseStructure",
+    "IsAbstract" : true,
+    "Researchable" : {
+        "Prerequisites" : [ "Research/Energy/ConnectorWall" ]
+    },
+    "Components" : [
+        {
+            "Component" : "TileTransform",
+            "Properties" : [
+                { "Key" : "PlacementType", "String": "Single" },
+                { "Key" : "ValidRotations", "String" : "DR" }
+            ]
+        },
+        {
+            "Component" : "ElectricNode",
+            "Properties" : [
+                { "Key" : "IsSwitchable", "Bool" : false },
+                { "Key" : "IsConnector", "Bool" : true },
+                { "Key" : "MaxConnections", "Int" : 32 },
+                { "Key" : "ConnectorRange", "Int" : 8 }
+            ]
+        },
+        { "Component" : "Upgrades" },
+        { "Component" : "Reinstallable" },
+        {
+            "Component" : "WithFuse",
+            "Properties" : [
+                { "Key" : "MalfunctionWeight", "Float": 0.2 },
+                // Has special event
+                { "Key" : "CanHaveGenericMalfunction", "Bool": false }
+            ]
+        },
+        {
+            "Component" : "Flammable",
+            "Properties" : [
+                { "Key" : "FireChance", "Float" : 0.5 },
+                { "Key" : "FireDamageResistance", "Float" : 0.5 }
+            ]
+        },
+        {
+            "Component" : "HullIntegrity",
+            "Properties" : [
+                { "Key" : "MaxInsulation", "Float" : 0.995 },
+                { "Key" : "MaxAirtight", "Float" : 1 }
+            ]
+        },
+        { "Component" : "TileLabel" },
+        {
+            "Component" : "Constructable",
+            "Properties" : [
+                { "Key" : "WorkAmount", "Int" : 115 },
+                { "Key" : "Placement", "String" : "OnFloor" },
+                { "Key" : "CanReplaceSameLayer", "Bool": true },
+                {
+                    "Key" : "Contents",
+                    "RawMaterials" : [
+                        { "TypeId" : "SteelPlate", "StackSize" : 2 },
+                        { "TypeId" : "CopperWire", "StackSize" : 1 },
+                        { "TypeId" : "Transistor", "StackSize" : 1 }
+                    ]
+                }
+            ]
+        }
+    ]
+}

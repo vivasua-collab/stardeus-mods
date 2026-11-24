@@ -1,0 +1,112 @@
+{
+    "ToolPath" : "Security",
+    "Layer" : "Objects",
+    "ParentId" : "Objects/Devices/BaseDevice",
+    "NameKey" : "noun.flux.vent",
+    "Researchable" : {
+        "Prerequisites" : [
+            "Research/ShipCombat/FluxCapacitor"
+        ]
+    },
+    "Spawnable" : {
+        "Category": "RareDevice",
+        "TierDiff" : -1,
+        "Chance" : 1.0,
+        "ChanceLocked" : 0.5
+    },
+    "Components" : [
+        {
+            "Component" : "TileTransform",
+            "Properties" : [
+                { "Key" : "Width", "Int" : 1 },
+                { "Key" : "Height", "Int" : 1 },
+                { "Key" : "CoverPercent", "Int" : 10 },
+                { "Key" : "IsRotatable", "Bool" : false }
+            ]
+        },
+        {
+            "Component" : "Damageable",
+            "Properties" : [
+                { "Key" : "Max", "Int": 150 }
+            ]
+        },
+        {
+            "Component" : "Reinstallable",
+            "Properties" : [
+                { "Key" : "IsAdvanced", "Bool" : false }
+            ]
+        },
+        {
+            "Component" : "ElectricNode",
+            "Properties" : [
+                { "Key" : "IsConsumer", "Bool" : true }
+            ]
+        },
+        {
+            "Component" : "WithFuse",
+            "Properties" : [
+                { "Key" : "MalfunctionWeight", "Float": 0.2 }
+            ]
+        },
+        { "Component" : "OutdoorsCheck" },
+        {
+            "Component" : "TileGraphics",
+            "Properties" : [
+                { "Key" : "Type", "String": "Object" },
+                { "Key" : "Graphic", "String": "Objects/Devices/FluxVent_Closed" },
+                { "Key" : "HasHeight", "Bool" : false }
+            ]
+        },
+        {
+            "Component" : "TileAnimation",
+            "Properties" : [
+                { "Key" : "Offset", "Vector2": { "x" : 0.0, "y" : 0.0 } },
+                { "Key" : "Size", "Vector2": { "x" : 1.0, "y" : 1.0 } },
+                { "Key" : "AutoRegister", "Bool" : false },
+                { "Key" : "BaseSprite", "String" : "Objects/Devices/FluxVent_Closed" },
+                { "Key" : "AnimSprite", "String" : "Objects/DeviceAnims/FluxVent_Anim" },
+                { "Key" : "NumFrames", "Int" : 3 },
+                { "Key" : "Speed", "Float" : 1.0 },
+                { "Key" : "NeedsEnergy", "Bool" : false }
+            ]
+        },
+        {
+            "Component" : "ShipVent",
+            "Properties" : [
+                { "Key" : "ShipVentId" , "String" : "FluxVent" }
+            ]
+        },
+        {
+            "Component" : "Flammable",
+            "Properties" : [
+                { "Key" : "IgnitionTemperatureCelsius", "Int" : 500 },
+                { "Key" : "FireChance", "Float" : 0.25 },
+                { "Key" : "BaseExplosionLevel", "Int" : 3 },
+                { "Key" : "FlammabilityCurve", "String" : "Device" },
+                { "Key" : "ExplosivenessCurve", "String" : "Device" }
+            ]
+        },
+        {
+            "Component" : "Passability",
+            "Properties" : [
+                { "Key" : "IsPassable", "Bool" : false },
+                { "Key" : "IsWalkable", "Bool" : false },
+                { "Key" : "Difficulty", "Float" : 1 }
+            ]
+        },
+        {
+            "Component" : "Constructable",
+            "Properties" : [
+                { "Key" : "WorkAmount", "Int" : 1200 },
+                {
+                    "Key" : "Contents",
+                    "RawMaterials" : [
+                        { "TypeId" : "TitaniumPlate", "StackSize" : 2 },
+                        { "TypeId" : "Gears", "StackSize" : 1 },
+                        { "TypeId" : "Transistor", "StackSize" : 1 }
+                    ]
+                }
+            ]
+        }
+    ]
+}

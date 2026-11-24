@@ -1,0 +1,30 @@
+{
+    "Id" : "Research/SpaceTravel/WarpDrive",
+    "Tier" : 4,
+    "IsAbstract" : true,
+    "PreviewIcon" : "Icons/Color/Propulsion",
+    "Researchable" : {
+        "IsTreeNode" : true,
+        "Prerequisites" : [
+            "Research/SpaceTravel/BlackHoles"
+        ],
+        "DatoidCosts" : [
+            {
+                "TypeId" : "DatoidSynthetic",
+                "StackSize" : 22
+            },
+            {
+                "TypeId" : "DatoidEnergy",
+                "StackSize" : 14
+            },
+            {
+                "TypeId" : "DatoidTechHigh",
+                "StackSize" : 11
+            },
+            {
+                "TypeId" : "DatoidNuclear",
+                "StackSize" : 5
+            }
+        ]
+    }
+}

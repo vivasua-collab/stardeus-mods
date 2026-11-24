@@ -1,0 +1,9 @@
+{
+    "Id" : "Panel/ResearchCostItemAvailable",
+
+    "Color" : "UI/Research/CostItem_Available",
+
+    "Image" : "UI/Buttons/IconButtonBG",
+    "ImageType" : "Sliced",
+    "ImageBorderLBRT" : [ 12, 12, 12, 12 ]
+}

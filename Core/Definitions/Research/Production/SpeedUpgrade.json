@@ -1,0 +1,31 @@
+{
+    "Id" : "Research/Production/SpeedUpgrade",
+    "Tier" : 3,
+    "IsAbstract" : true,
+    "PreviewIcon" : "Icons/Color/Upgrade",
+    "NameKey" : "research.speedupgrade",
+    "Researchable" : {
+        "IsTreeNode" : true,
+        "Prerequisites" : [
+            "Research/Production/EnergyEfficiency"
+        ],
+        "DatoidCosts" : [
+            {
+                "TypeId" : "DatoidPhyto",
+                "StackSize" : 4
+            },
+            {
+                "TypeId" : "DatoidSynthetic",
+                "StackSize" : 8
+            },
+            {
+                "TypeId" : "DatoidEnergy",
+                "StackSize" : 5
+            },
+            {
+                "TypeId" : "DatoidTechHigh",
+                "StackSize" : 10
+            }
+        ]
+    }
+}

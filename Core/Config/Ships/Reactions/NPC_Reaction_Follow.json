@@ -1,0 +1,25 @@
+{
+    "ReactionId" : "Follow",
+
+    "AttitudeMul" : [
+        -1.0, 0.05,
+        0.0, 0.025,
+        1.0, 0.05
+    ],
+
+    "RegionDifficultyMul" : [
+        0.0, 1.0,
+        1.0, 1.0
+    ],
+
+    "FactionChanceKey" : [
+        "Virus",
+        "Pirate"
+    ],
+    "FactionChanceValue" : [
+        1.0,
+        1.0
+    ],
+    "DefaultFactionChance" : 0.0,
+    "DefaultClassChance" : 1.0
+}

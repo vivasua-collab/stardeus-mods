@@ -1,0 +1,12 @@
+{
+    "Type" : "Refineable",
+    "IgnoreMarket" : true,
+    "Ingredients" : [
+        { "TypeId" : "CrudeOil", "StackSize" : 1 }
+    ],
+    "ProductDefId" : "Obj/Materials/Carbon",
+    "ProductionTimeHours" : 3.0,
+    "OutputMultiplier" : 10,
+    "ListOrder" : 10,
+    "EnergyCost" : 20
+}

@@ -1,0 +1,119 @@
+{
+    "Looks" : "Orbotron",
+    "DefId" : "Beings/Orbotron01",
+    "LifeExpectancyYears" : 200,
+    "BeingValueBase" : 9000,
+    "BaseCombatStrength" : 3.5,
+    // Raider draw weight at raid gear tier 0 / 1 / 2 (see RaiderSpecies). The tier
+    // comes from raid points, so this - not days or sector - decides when this bot
+    // starts showing up in raids.
+    "RaidTierWeights" : [ 0.0, 0.0, 0.7 ],
+    "CustomMindWeight" : 0.5,
+    "SpawnAgeCurve" : [
+        0.0, 1,
+        0.1, 10,
+        0.2, 25,
+        0.3, 40,
+        0.4, 50,
+        0.5, 60,
+        0.6, 70,
+        0.7, 90,
+        0.8, 100,
+        0.9, 150,
+        1.0, 200
+    ],
+    "CombatBehavior" : "Fight",
+    "AddsAbilities" : [
+        // If a bot is transferred into a human, it should be able to eat
+        "Eat"
+    ],
+    "AddsNeeds" : [
+        "Faction",
+        "Equipment"
+    ],
+    "AgePhases" : [
+        {
+            "AgeFrom" : 0,
+            "Phase" : "Childhood"
+        },
+        {
+            "AgeFrom" : 25,
+            "Phase" : "YoungAdult"
+        },
+        {
+            "AgeFrom" : 50,
+            "Phase" : "MidLife"
+        },
+        {
+            "AgeFrom" : 150,
+            "Phase" : "Retirement"
+        }
+    ],
+    "Flags" : [ "Robotic", "Flying" ],
+    "BloodSpriteRoot" : "Dirt/OilSplash",
+    "NameChanceWeights" : [
+        0.95,
+        0.05
+    ],
+    "SelectSounds" : [
+        "FX/SentrySelect_01",
+        "FX/SentrySelect_02",
+        "FX/SentrySelect_03",
+        "FX/SentrySelect_04"
+    ],
+    "TakeDamageSounds" : [
+        "FX/PunchMetal_01",
+        "FX/PunchMetal_02",
+        "FX/PunchMetal_03",
+        "FX/PunchMetal_04",
+        "FX/PunchMetal_05"
+    ],
+    "NameParts" : [
+        {
+            "Type" : "RobotPrefix",
+            "Paths" : [ "Robot/Prefix" ],
+            "Chances" : [ 0.0, 1.0 ]
+        },
+        {
+            "Type" : "RobotNamePart",
+            "Paths" : [
+                "Robot/Name"
+            ],
+            "Chances" : [ 1.0, 1.0 ]
+        },
+        {
+            "Type" : "RobotNamePart",
+            "Paths" : [
+                "Robot/Name"
+            ],
+            "Chances" : [ 0.5, 0.5 ]
+        },
+        {
+            "Type" : "RobotSuffix",
+            "Paths" : [ "Robot/Suffix" ],
+            "Chances" : [ 0.05, 0.02 ]
+        }
+    ],
+    "InventorySlotTypes" : [
+        "Weapon"
+    ],
+    "BodySize" : "Medium",
+    "BodyPartSlotTypes" : [
+        "Body",
+        "Core",
+        "Implant",
+        "Eye_L",
+        "Eye_R",
+        "Shoulder_L",
+        "Shoulder_R",
+        "Arm_L",
+        "Arm_R",
+        "Hand_L",
+        "Hand_R",
+        "Mobilizer_L",
+        "Mobilizer_R",
+        "Battery_1",
+        "Battery_2",
+        "Battery_3"
+    ]
+}

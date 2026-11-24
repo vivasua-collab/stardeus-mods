@@ -1,0 +1,14 @@
+{
+    // C# implementation id
+    "EventId": "Stalking",
+    // How much does this story event cost to run
+    "Points": 2,
+    // Options: Negative, Positive, Neutral, Raid
+    "OutcomeType": "Neutral",
+    // Full list is in StoryEventFlags class
+    "EventFlags": [
+        "OnDemand",
+        "Social"
+    ],
+    "MinRepeatDelayDays" : 3
+}

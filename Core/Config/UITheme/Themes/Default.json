@@ -1,0 +1,1431 @@
+{
+    // This is the official Stardeus UI theme.
+    //
+    // When developing your own custom themes, you can use these in-game tools:
+    // 1. Open console with ~
+    // 2. "theme debug" console command will open a debug window
+    // 3. "theme reload" console command will apply the theme changes
+    //    from the JSON file without restart.
+    //
+    // TIP: When making your own theme, don't copy everything from this file,
+    // only copy things you want to override.
+    // You will most likely want to change some of the colors in "Colors" block.
+    // See other themes as examples.
+    "Name": "Default",
+    "Colors": {
+        "White": "#DEDEDE",
+        "Black": "#252525",
+        "Bright": "#B6ACEF",
+
+        // Overriding the colors in this block in custom themes isn't recommended
+        "GreenDark": "#013B11",
+        "Green": "#5EB509",
+        "Red": "#F95858",
+        "Blue": "#3363CB",
+        "Yellow": "#E1CB73",
+        "Grey": "#DEDEDE80",
+
+        // Alert levels, military style (notification hub ring, minigame overlays).
+        // Custom themes should retune these to fit their palette.
+        "AlertRed": "#DA343B",
+        "AlertAmber": "#F07B1F",
+        "AlertYellow": "#DFBB29",
+        "AlertWhite": "White",
+        "AlertGreen": "Green",
+
+        "MiniExpeditionBackground": "PanelHeader",
+        "MiniChartBackground": "PanelHeader",
+        "ChartBackground": "PanelHeader",
+        "ChartText": "#DEDEDEAA",
+        "ChartGradient": "#DEDEDE20",
+        "ChartGrid": "#FFFFFF14",
+        "ChartLine": "Green",
+        "ChartBlue": "Blue",
+        "ChartRed": "PanelRed",
+        "ChartGreen": "GreenDark",
+        "ChartWhite": "White",
+        "ChartYellow": "Accent",
+        "ChartOrange": "Accent-L30+S10",
+
+        "PanelRed": "#DA343B",
+        "ButtonRed": "PanelRed-S20-L20",
+
+        "PanelHeader": "#18032A",
+        "PanelTop": "#342243",
+        "PanelContent": "#2C275D",
+        "PanelFooter": "#280546",
+
+        "ButtonSlot": "#221A4B",
+        "ButtonPanel": "#24157E",
+
+        "Accent": "#DFBB29",
+        "Accent2": "Blue+L30+S25",
+        "Accent3": "PanelTop+L30",
+
+        "ShipCombatFluxSoft": "#AF840D",
+        "ShipCombatFluxHard": "#EBB622",
+        // "ShipCombatFluxHard": "#BE941C",
+        "ShipCombatWeapon": "PanelContent-A50",
+        "ShipCombatHP": "Green",
+        "ShipCombatShields": "Blue",
+
+        "Button1": "PanelFooter",
+        // "Button2": "#241A62",
+        "Button2": "ButtonPanel",
+        "Button3": "GreenDark",
+        "ProgressFill": "PanelFooter+L10",
+        "ButtonAccent": "Accent",
+
+        "ButtonPanelFancy": "ButtonPanel",
+        // works better for darker backgrounds
+        "ButtonPanelFancy2": "ButtonPanel-S20+L5",
+
+        "InputHighlight": "#666666",
+
+        "ResearchAvailable": "PanelContent",
+        "ResearchUnlocked": "PanelTop",
+        "ResearchUnlockedLine": "White-A40",
+        "ResearchUnlockableLine": "Green",
+        "ResearchLocked": "PanelContent-L20",
+        "ResearchLockedLine": "White-A75",
+        "ResearchNotDiscovered": "Black",
+        "ResearchTierLine_Unlocked": "Button3-A75",
+        "ResearchTierLine_Locked": "PanelRed-A75",
+
+        "HyperspaceProgressBG" : "#18032A",
+        "HyperspaceProgressStripe" : "#DEDEDE",
+        "HyperspaceProgressBarBG" : "White",
+        "HyperspaceProgressBarFill" : "Accent",
+
+        "StarmapRing" : "#C1D7D720",
+        "StarmapExitRing" : "#C1D7D730",
+        "StarmapMarker" : "StarmapRing",
+        "StarmapMarker_Hyperspace" : "Accent",
+
+        "PauseFrame": "Accent",
+
+        // Camera focus flash and link outline over the map. Not Accent: the magenta
+        // stands out against the ship better than the UI accent does.
+        "FocusFlash": "#DF20AFC0"
+    },
+    "Images": {
+        "Default": {
+            "Color": "PanelContent",
+            "Image": null
+        },
+        "MiniExpeditionBG": {
+            "Color": "MiniExpeditionBackground",
+            "Image": "UI/Panels/PanelRectShadowInner",
+            "ImageType": "Sliced",
+            "ImagePPUMultiplier": 2,
+            "ImageBorderLBRT": [ 16, 16, 16, 16 ]
+        },
+        "NotificationDot": {
+            "Color": "Accent",
+            "Image": "UI/Misc/NotificationDot"
+        },
+        "DragReorderHorizontal": {
+            "Color": "White",
+            "Image": "UI/Misc/DragReorderHorizontal"
+        },
+        "ButtonCorner": {
+            "Color": "White",
+            "Image": "UI/Misc/Corner"
+        },
+        "PIPCamera": {
+            "Color": "#FFFFFF",
+            "Alpha": 1.0,
+            "Image": "UI/Panels/PIPCamera"
+        },
+        "TopBar": {
+            "Color": "Button2",
+            "Image": null
+        },
+        "ColorOnly_White": {
+            "Color": "White",
+            // this will keep the original image and settings, only color will get applied
+            "Image": "-"
+        },
+        // Text background used in main button tooltips
+        "TextBG": {
+            "Color": "#060606",
+            "Alpha": 0.33,
+            "Image": null
+        },
+        "ResearchBG": {
+            "Color": "#060606",
+            "Alpha": 0.8,
+            "Image": null
+        },
+        "ModalBG": {
+            "Color": "#060606",
+            "Alpha": 0.8,
+            "Image": null
+        },
+        "StarmapArea": {
+            "Color": "#000000",
+            "Alpha": 0.5,
+            "Image": "UI/Panels/StarmapArea"
+        },
+        "TooltipAccent": {
+            "Color": "Accent",
+            "Alpha": 1.0,
+            "Image": "UI/Panels/PanelRounded",
+            "ImageType": "Sliced",
+            "ImagePPUMultiplier": 4,
+            "ImageBorderLBRT": [ 64, 64, 64, 64 ]
+        },
+        "TooltipHeader": {
+            "Color": "PanelHeader",
+            "Alpha": 0.5,
+            "Image": "UI/Panels/PanelRoundedTop",
+            "ImageType": "Sliced",
+            "ImagePPUMultiplier": 4,
+            "ImageBorderLBRT": [ 64, 64, 64, 64 ]
+        },
+        "TooltipBody": {
+            "Color": "Black",
+            "Image": "UI/Panels/PanelRoundedShadow",
+            "ImageType": "Sliced",
+            "ImagePPUMultiplier": 4,
+            "ImageBorderLBRT": [ 64, 64, 64, 64 ]
+        },
+        "TooltipRectBody": {
+            "Color": "Black",
+            "Image": "UI/Panels/PanelRectShadow",
+            "ImageType": "Sliced",
+            "ImagePPUMultiplier": 4,
+            "ImageBorderLBRT": [ 48, 48, 48, 48 ]
+        },
+        "InputField": {
+            "Color": "#FFFFFF",
+            "Image": "UI/Panels/PanelRectShadowInner",
+            "ImageType": "Sliced",
+            "ImagePPUMultiplier": 2,
+            "ImageBorderLBRT": [ 16, 16, 16, 16 ]
+        },
+        "ButtonPanel": {
+            "Color": "ButtonPanel",
+            "Image": null
+        },
+        "JobMatrixCheckbox": {
+            "Color": "PanelFooter",
+            "Image": "UI/Buttons/EfficientCheckbox"
+        },
+        "JobMatrixCheckbox_Disabled": {
+            "Color": "PanelFooter",
+            "Alpha": 0.25,
+            "Image": null
+        },
+        "AppButton": {
+            "Color": "#FFFFFF",
+            "Image": "UI/Buttons/AppButton"
+        },
+        "ButtonX": {
+            "Color": "White",
+            "Image": "UI/Buttons/Close"
+        },
+        "ButtonXBlack": {
+            "Color": "Black",
+            "Image": "UI/Buttons/Close"
+        },
+        "ButtonXRed": {
+            "Color": "Red",
+            "Image": "UI/Buttons/Close"
+        },
+        "IconBG1": {
+            "Color": "ButtonPanel",
+            "Alpha": 0.6,
+            "Image": null
+        },
+        "ContentBG1": {
+            "Color": "ButtonPanel",
+            "Alpha": 0.35,
+            "Image": null
+        },
+        "IconBG2": {
+            "Color": "PanelFooter",
+            "Alpha": 0.6,
+            "Image": null
+        },
+        "ContentBG2": {
+            "Color": "PanelFooter",
+            "Alpha": 0.25,
+            "Image": null
+        },
+        "WhiteSquare": {
+            "Color": "#FFFFFF",
+            "Image": null
+        },
+        "PanelAlert": {
+            "Color": "AlertRed",
+            "Image": null
+        },
+        "PanelAlertDarker": {
+            "Color": "ButtonRed",
+            "Image": null
+        },
+        "SettingsScrollMask": {
+            "Color": "White",
+            "Alpha": 0.1,
+            "Image": "UI/Panels/ScrollMaskVertical",
+            "ImageType": "Sliced",
+            "ImagePPUMultiplier": 4,
+            "ImageBorderLBRT": [ 12, 56, 12, 56 ]
+        },
+        "ContentScrollMask": {
+            "Color": "PanelContent",
+            "Image": "UI/Panels/ScrollMaskVertical",
+            "ImageType": "Sliced",
+            "ImagePPUMultiplier": 4,
+            "ImageBorderLBRT": [ 12, 56, 12, 56 ]
+        },
+        "TooltipScrollMask": {
+            "Color": "Black",
+            "Image": "UI/Panels/ScrollMaskVerticalTop",
+            "ImageType": "Sliced",
+            "ImagePPUMultiplier": 4,
+            "ImageBorderLBRT": [ 12, 56, 12, 56 ]
+        },
+        "TabActiveOverlay": {
+            "Color": "Black",
+            "Image": "UI/Buttons/TabActiveOverlay",
+            "ImageType": "Sliced",
+            "ImageBorderLBRT": [ 32, 0, 0, 32 ],
+            "ImagePPUMultiplier": 3
+        },
+        "BarSeparator": {
+            "Color": "#000000",
+            "Alpha": 0.5,
+            "Image": null
+        },
+        "Separator": {
+            "Color": "White",
+            "Alpha": 0.3,
+            "Image": null
+        },
+        "ArrowLine": {
+            "Color": "White",
+            "Alpha": 0.5,
+            "Image": null
+        },
+        "ArrowRightSliced": {
+            "Color": "White",
+            "Alpha": 0.5,
+            "ImageType": "Sliced",
+            "Image": "UI/Misc/ArrowRightSliced",
+            "ImageBorderLBRT": [ 4, 0, 20, 0 ],
+            "ImagePPUMultiplier": 2
+        },
+        "BeingGroupButtonBG": {
+            "Color": "ButtonPanel",
+            "Image": null
+        },
+        "MainMenuSideButton": {
+            "Color": "PanelFooter",
+            "Alpha": 0.25,
+            "Image": null
+        },
+        "PanelFooter": {
+            "Color": "PanelFooter",
+            "Image": null
+        },
+        "MainMenuGradient": {
+            "Color": "PanelContent",
+            "Image": "UI/Panels/MainMenuGradient",
+            "ImageType": "Sliced",
+            "ImageBorderLBRT": [ 8, 8, 8, 8 ]
+        },
+        "TabPanelItemBG": {
+            "Color": "PanelFooter",
+            "Alpha": 0.2,
+            "Image": null
+        },
+        "FooterItemBG": {
+            "Color": "PanelContent",
+            "Alpha": 0.2,
+            "Image": null
+        },
+        "TabPanelButtons": {
+            "Color": "PanelFooter",
+            "Alpha": 0.6,
+            "Image": null
+        },
+        "TabPanelContent": {
+            "Color": "White",
+            "Alpha": 0.1,
+            "Image": null
+        },
+        "PanelContent": {
+            "Color": "PanelContent",
+            "Image": null
+        },
+        "PanelRed": {
+            "Color": "PanelRed",
+            "Image": null
+        },
+        "EntityWarningOverlay": {
+            "Color": "PanelContent",
+            "Alpha": 0.8,
+            "Image": null
+        },
+        "BeingAvatar": {
+            "Color": "PanelFooter",
+            "Image": null
+        },
+        "ArrowDiagonal": {
+            "Color": "Black",
+            "Image": "UI/Misc/ArrowDiagonal"
+        },
+        "PanelContentTopBorder": {
+            "Color": "PanelContent",
+            "Image": "UI/Panels/GradientTop",
+            "ImageType": "Sliced",
+            "ImagePPUMultiplier": 2,
+            "ImageBorderLBRT": [ 2, 0, 2, 0 ]
+        },
+        "PanelBody": {
+            "Color": "PanelTop",
+            "Image": "UI/Panels/PanelRectShadow",
+            "ImageType": "Sliced",
+            "ImageBorderLBRT": [ 48, 48, 48, 48 ],
+            "ImagePPUMultiplier": 4
+        },
+        "TopBarBody": {
+            "Color": "Button2",
+            "Image": "UI/Panels/PanelRectShadow",
+            "ImageType": "Sliced",
+            "ImageBorderLBRT": [ 48, 48, 48, 48 ],
+            "ImagePPUMultiplier": 4
+        },
+        "PanelFooterBody": {
+            "Color": "PanelFooter",
+            "Image": "UI/Panels/PanelRectShadow",
+            "ImageType": "Sliced",
+            "ImageBorderLBRT": [ 48, 48, 48, 48 ],
+            "ImagePPUMultiplier": 4
+        },
+        "ContentBG2Body": {
+            "Color": "PanelFooter",
+            "Alpha": 0.25,
+            "Image": "UI/Panels/PanelRectShadow",
+            "ImageType": "Sliced",
+            "ImageBorderLBRT": [ 48, 48, 48, 48 ],
+            "ImagePPUMultiplier": 4
+        },
+        "ModalBody": {
+            "Color": "#060606",
+            "Alpha": 0.8,
+            "Image": "UI/Panels/PanelRectShadow",
+            "ImageType": "Sliced",
+            "ImageBorderLBRT": [ 48, 48, 48, 48 ],
+            "ImagePPUMultiplier": 4
+        },
+        "TabPanelBody": {
+            "Color": "PanelContent",
+            "Image": "UI/Panels/PanelRectShadow",
+            "ImageType": "Sliced",
+            "ImageBorderLBRT": [ 48, 48, 48, 48 ],
+            "ImagePPUMultiplier": 4
+        },
+        "Border2px": {
+            "Color": "Accent",
+            "Image": "UI/Buttons/Border2px",
+            "ImageType": "Sliced",
+            "ImageBorderLBRT": [ 4, 4, 4, 4 ]
+        },
+        "BorderHalf2px": {
+            "Color": "Accent",
+            "Image": "UI/Buttons/BorderHalf2px",
+            "ImageType": "Sliced",
+            "ImageBorderLBRT": [ 4, 4, 4, 4 ]
+        },
+        "Border4px": {
+            "Color": "Accent",
+            "Image": "UI/Buttons/Border4px",
+            "ImageType": "Sliced",
+            "ImageBorderLBRT": [ 6, 6, 6, 6 ]
+        },
+        "InventoryBG": {
+            "Color": "PanelContent",
+            "Alpha": 0.85,
+            "Image": null
+        },
+        "PanelReflective": {
+            "Color": "White",
+            "Image": "UI/Panels/PanelReflective",
+            "ImageType": "Sliced",
+            "ImagePPUMultiplier": 4,
+            "ImageBorderLBRT": [ 150, 0, 4, 0 ]
+        },
+        "PanelRedFade": {
+            "Color": "PanelRed",
+            "Alpha": 0.5,
+            "Image": "UI/Panels/RTLGradient",
+            "ImageType": "Sliced",
+            "ImagePPUMultiplier": 2,
+            "ImageBorderLBRT": [ 2, 2, 2, 2 ]
+        },
+        "PanelFanfareFlash": {
+            "Color": "Accent",
+            "Alpha": 1.0,
+            "Image": "UI/Panels/FanfareGradient",
+            "ImageType": "Sliced",
+            "ImagePPUMultiplier": 2,
+            "ImageBorderLBRT": [ 2, 2, 2, 2 ]
+        },
+        "PanelFanfare": {
+            "Color": "PanelHeader",
+            "Alpha": 0.85,
+            "Image": "UI/Panels/FanfareGradient",
+            "ImageType": "Sliced",
+            "ImagePPUMultiplier": 2,
+            "ImageBorderLBRT": [ 2, 2, 2, 2 ]
+        },
+        "PanelError": {
+            "Color": "#060606",
+            "Alpha": 0.75,
+            "Image": null
+        },
+        "PanelTransparent": {
+            "Color": "PanelContent",
+            "Alpha": 0.75,
+            "Image": null
+        },
+        "BeingSanityBG": {
+            "Color": "Black",
+            "Alpha": 0.5,
+            "Image": null
+        },
+        "ScrollBG": {
+            "Color": "Black",
+            "Alpha": 0.5,
+            "Image": null
+        },
+        "ScrollBGInverse": {
+            "Color": "White",
+            "Alpha": 0.5,
+            "Image": null
+        },
+        "ScrollHandle": {
+            "Color": "White",
+            "Alpha": 0.5,
+            "Image": null
+        },
+        "ScrollHandleInverse": {
+            "Color": "Black",
+            "Alpha": 0.5,
+            "Image": null
+        },
+
+
+        // Used for bottom bar button group gradients
+        "PanelGradientVertical": {
+            "Color": "Black",
+            "Alpha": 0.5,
+            "Image": "UI/Panels/GradientVertical",
+            "ImageType": "Sliced",
+            "ImageBorderLBRT": [ 1, 1, 1, 1 ]
+        },
+        // Used for bottom bar button group gradients
+        "BottomBarPopupGradient": {
+            "Color": "Black",
+            "Alpha": 1.0,
+            "Image": "UI/Panels/GradientVertical",
+            "ImageType": "Sliced",
+            "ImageBorderLBRT": [ 1, 1, 1, 1 ]
+        },
+        // Used for bottom bar button group gradients
+        "BottomBarConnectArrow": {
+            "Color": "Black",
+            "Alpha": 1.0,
+            "Image": "UI/Panels/ConnectArrow"
+        },
+        "SelectedItemArrow": {
+            "Color": "White",
+            "Alpha": 1.0,
+            "Image": "UI/Panels/SelectedItemArrow"
+        },
+        // Gradient version
+        // "ButtonFancy": {
+        //     // hardcoded because it will be tinted by selectable
+        //     "Color": "#FFFFFF",
+        //     "Image": "UI/Buttons/Gradient",
+        //     "ImageType": "Sliced",
+        //     "ImageBorderLBRT": [ 1, 1, 1, 1 ]
+        // },
+        // Underlined version
+        "ButtonFancy": {
+            // hardcoded because it will be tinted by selectable
+            "Color": "#FFFFFF",
+            "Image": "UI/Buttons/Underlined",
+            "ImageType": "Sliced",
+            "ImagePPUMultiplier": 4,
+            "ImageBorderLBRT": [ 4, 4, 4, 4 ]
+        },
+        "ProgressBar": {
+            // hardcoded because it will be tinted by selectable
+            "Color": "PanelHeader",
+            "Image": null
+        },
+        "ProgressBarFill": {
+            "Color": "ProgressFill",
+            "Image": "UI/Panels/GradientHorizontal",
+            "ImageType": "Sliced",
+            "ImageBorderLBRT": [ 1, 1, 1, 1 ]
+        },
+        "ProgressBarFill_StarmapProgress": {
+            "Color": "Green",
+            "Image": "UI/Panels/GradientHorizontal",
+            "ImageType": "Sliced",
+            "ImageBorderLBRT": [ 1, 1, 1, 1 ]
+        },
+        "ProgressBarFill_Alternative": {
+            "Color": "PanelContent",
+            "Image": "UI/Panels/GradientHorizontal",
+            "ImageType": "Sliced",
+            "ImageBorderLBRT": [ 1, 1, 1, 1 ]
+        },
+        "ProgressBarFill_Bright": {
+            "Color": "Bright",
+            "Image": "UI/Panels/GradientHorizontal",
+            "ImageType": "Sliced",
+            "ImageBorderLBRT": [ 1, 1, 1, 1 ]
+        },
+        "ProgressBarFill_Green": {
+            "Color": "GreenDark",
+            "Image": "UI/Panels/GradientHorizontal",
+            "ImageType": "Sliced",
+            "ImageBorderLBRT": [ 1, 1, 1, 1 ]
+        },
+        "ProgressBarFill_Accent": {
+            "Color": "Accent",
+            "Image": "UI/Panels/GradientHorizontal",
+            "ImageType": "Sliced",
+            "ImageBorderLBRT": [ 1, 1, 1, 1 ]
+        },
+        "NotificationHubBG": {
+            "Color": "ButtonPanel",
+            "Image": null
+        },
+        "Button": {
+            // hardcoded because it will be tinted by selectable
+            "Color": "#FFFFFF",
+            "Image": null
+        },
+        "ButtonBottomBar": {
+            // hardcoded because it will be tinted by selectable
+            "Color": "#FFFFFF",
+            "Image": "UI/Buttons/BottomBar",
+            "ImagePPUMultiplier": 2,
+            "ImageType": "Sliced",
+            "ImageBorderLBRT": [ 0, 0, 24, 24 ]
+        },
+        "IconButton": {
+            // hardcoded because it will be tinted by selectable
+            "Color": "#FFFFFF",
+            "Image": null
+        },
+        "DropdownFrame": {
+            "Color": "White",
+            "Alpha": 0.3,
+            "ImageType": "Sliced",
+            "Image": "UI/Buttons/Border2px",
+            "ImagePPUMultiplier": 2,
+            "ImageBorderLBRT": [ 4, 4, 4, 4 ]
+        },
+        "DropdownArrow": {
+            "Color": "Bright",
+            "Image": "UI/Panels/DropdownArrow"
+        },
+        "DropdownArrowInverse": {
+            "Color": "Black",
+            "Image": "UI/Panels/DropdownArrow"
+        },
+        "DropdownArrowItem": {
+            "Color": "Accent",
+            "Image": null
+            //"UI/Panels/DropdownArrowItem"
+        },
+        "PanelHeader": {
+            "Color": "PanelHeader",
+            "Image": null
+        },
+        "DragHandle": {
+            "Color": "White",
+            "Alpha": 0.5,
+            "Image": "UI/Misc/DragHandle"
+        },
+        "ButtonClose": {
+            "Color": "#FFFFFF",
+            "Alpha": 0.5,
+            "Image": "UI/Buttons/Close"
+        },
+        "ButtonRemove": {
+            "Color": "White",
+            "Alpha": 0.5,
+            "Image": "UI/Buttons/Close"
+        },
+        "ButtonClearInput": {
+            "Color": "Black",
+            "Alpha": 0.5,
+            "Image": "UI/Buttons/Close"
+        },
+        "DropdownBG": {
+            "Color": "PanelFooter",
+            "Alpha": 0.4,
+            "Image": null
+        },
+        "PanelDropdown": {
+            "Color": "PanelFooter",
+            // "Alpha": 0.4,
+            "Image": null
+        },
+        "PanelAccent": {
+            "Color": "Accent",
+            "Image": null
+        },
+        "HeaderTriangleLeft": {
+            "Color": "PanelContent",
+            "Image": "UI/Buttons/TriangleLeft"
+        },
+        "HeaderTriangleRight": {
+            "Color": "PanelContent",
+            "Image": "UI/Buttons/TriangleRight"
+        },
+        "QuestTriangleRight": {
+            "Color": "White",
+            "Alpha": 0.3,
+            "Image": "UI/Buttons/TriangleRight"
+        },
+        "PanelBlack": {
+            "Color": "Black",
+            "Image": "UI/Panels/PanelRectShadow",
+            "ImageType": "Sliced",
+            "ImagePPUMultiplier": 4,
+            "ImageBorderLBRT": [ 48, 48, 48, 48 ]
+        },
+        "Slider": {
+            "Color": "Black",
+            "Image": null
+        },
+        "SliderHandle": {
+            "Color": "Accent",
+            "Image": null
+        },
+        "SliderRim": {
+            "Color": "PanelHeader",
+            "Alpha": 0.6,
+            "Image": "UI/Buttons/Border2px",
+            "ImageType": "Sliced",
+            "ImagePPUMultiplier": 2,
+            "ImageBorderLBRT": [ 4, 4, 4, 4 ]
+        },
+        "CheckboxRim": {
+            "Color": "White",
+            "Alpha": 0.2,
+            "Image": "UI/Buttons/Border2px",
+            "ImageType": "Sliced",
+            "ImagePPUMultiplier": 2,
+            "ImageBorderLBRT": [ 4, 4, 4, 4 ]
+        },
+        "CheckboxCheck": {
+            "Color": "#FFFFFF",
+            "Image": "UI/Buttons/Checkmark"
+        }
+    },
+    "SelectableFadeTime": 0.1,
+    "Selectables": {
+        "Button1": {
+            "Colors": {
+                "Normal": "Button1",
+                "Highlighted": "Button1+L5",
+                "Pressed": "Button1+L10",
+                "Selected": "Button1+L5",
+                "Disabled": "Button1-S80"
+            }
+        },
+        "PanelFooter": {
+            "Colors": {
+                "Normal": "PanelFooter",
+                "Highlighted": "PanelFooter+L5",
+                "Pressed": "PanelFooter+L10",
+                "Selected": "PanelFooter+L5",
+                "Disabled": "PanelFooter-S80"
+            }
+        },
+        "MainMenu": {
+            "Colors": {
+                "Normal": "PanelFooter",
+                "Highlighted": "PanelContent+L20-A50",
+                "Pressed": "PanelContent+L15-A75",
+                "Selected": "PanelContent+L20-A50",
+                "Disabled": "PanelFooter-S80"
+            },
+            "Alpha": 0.25
+        },
+        "MainMenu2": {
+            "Colors": {
+                "Normal": "PanelContent-A100",
+                "Highlighted": "PanelContent+L20-A50",
+                "Pressed": "PanelContent+L15-A75",
+                "Selected": "PanelContent+L20-A50",
+                "Disabled": "PanelContent-A100"
+            }
+        },
+        "ButtonContent": {
+            "Colors": {
+                "Normal": "PanelFooter",
+                "Highlighted": "PanelFooter+L5",
+                "Pressed": "PanelFooter+L10",
+                "Selected": "PanelFooter+L5",
+                "Disabled": "PanelFooter-S80"
+            },
+            "Alpha": 0.4
+        },
+        "Button2": {
+            "Colors": {
+                "Normal": "Button2",
+                "Highlighted": "Button2+L5",
+                "Pressed": "Button2+L10",
+                "Selected": "Button2+L5",
+                "Disabled": "Button2-S80"
+            }
+        },
+        "Button2_Bright": {
+            "Colors": {
+                "Normal": "Button2+L10",
+                "Highlighted": "Button2+L15",
+                "Pressed": "Button2+L20",
+                "Selected": "Button2+L15",
+                "Disabled": "Button2-S80"
+            }
+        },
+        "Button3": {
+            "Colors": {
+                "Normal": "Button3",
+                "Highlighted": "Button3+L5",
+                "Pressed": "Button3+L10",
+                "Selected": "Button3+L5",
+                "Disabled": "Button3-S80"
+            }
+        },
+        "Red": {
+            "Colors": {
+                "Normal": "ButtonRed",
+                "Highlighted": "ButtonRed+L5",
+                "Pressed": "ButtonRed+L10",
+                "Selected": "ButtonRed+L5",
+                "Disabled": "ButtonRed-S80"
+            }
+        },
+        "ButtonPanel": {
+            "Colors": {
+                "Normal": "ButtonPanelFancy",
+                "Highlighted": "ButtonPanelFancy+L5",
+                "Pressed": "ButtonPanelFancy+L10",
+                "Selected": "ButtonPanelFancy+L5",
+                "Disabled": "ButtonPanelFancy-S80"
+            }
+        },
+        "ButtonPanel2": {
+            "Colors": {
+                "Normal": "ButtonPanelFancy2",
+                "Highlighted": "ButtonPanelFancy2+L5",
+                "Pressed": "ButtonPanelFancy2+L10",
+                "Selected": "ButtonPanelFancy2+L5",
+                "Disabled": "ButtonPanelFancy2-S80"
+            }
+        },
+        "Disabled": {
+            "Colors": {
+                "Normal": "Black",
+                "Highlighted": "Black",
+                "Pressed": "Black",
+                "Selected": "Black",
+                "Disabled": "Black"
+            }
+        },
+        "Accent": {
+            "Colors": {
+                "Normal": "Accent",
+                "Highlighted": "Accent+L5",
+                "Pressed": "Accent+L10",
+                "Selected": "Accent+L5",
+                "Disabled": "White-A55"
+            }
+        },
+        "AccentStatic": {
+            "Colors": {
+                "Normal": "Accent",
+                "Highlighted": "Accent",
+                "Pressed": "Accent",
+                "Selected": "Accent",
+                "Disabled": "White-A55"
+            }
+        },
+        "White": {
+            "Colors": {
+                "Normal": "#FFFFFF",
+                "Highlighted": "#FFFFFF80",
+                "Pressed": "#FFFFFFAA",
+                "Selected": "#FFFFFF80",
+                "Disabled": "#FFFFFF20"
+            }
+        },
+        "Input": {
+            "Colors": {
+                "Normal": "Bright",
+                "Highlighted": "Bright+L10",
+                "Pressed": "Bright+L10",
+                "Selected": "Bright+L10",
+                "Disabled": "Bright-S20-L50"
+            },
+            "Alpha": 0.85
+        },
+        "DropdownItem": {
+            "Colors": {
+                "Normal": "#FFFFFF00",
+                "Highlighted": "White-A80",
+                "Pressed": "White-A75",
+                "Selected": "White-A80",
+                // "Disabled": "Black-S50"
+                "Disabled": "White-A55"
+            }
+        }
+    },
+    "Texts": {
+        "Unsized": {
+            "Color": "White",
+            "IgnoreFontScaleUp": true,
+            "KeepFontStyle": true
+        },
+        "UnsizedInverse": {
+            "Color": "Black",
+            "IgnoreFontScaleUp": true,
+            "KeepFontStyle": true
+        },
+        // Research tree tile names: one size for all, smaller only when a name does not fit
+        "ResearchTileName": {
+            "Color": "White",
+            "FontSize": 56,
+            "FontSizeMin": 36,
+            "AutoSize": true,
+            "IgnoreFontScaleUp": true,
+            "FontStyle": [ "Bold" ],
+            "LineSpacing": -40,
+            "OverflowMode": "Ellipsis"
+        },
+        "HugeLabel": {
+            "Color": "White",
+            "Alpha": 0.5,
+            "IgnoreFontScaleUp": true,
+            "FontSize": 150
+        },
+        "ChartLabel": {
+            "Color": "ChartText",
+            "IgnoreFontScaleUp": true,
+            "FontSize": 16
+        },
+        "ResearchTierLabel": {
+            "Color": "Accent",
+            "Alpha": 0.25,
+            "IgnoreFontScaleUp": true,
+            "KeepFontStyle": true
+        },
+        "ErrorMessage": {
+            "Color": "Accent",
+            "IgnoreFontScaleUp": true,
+            "FontSize": 28
+        },
+        "FanfareMessage": {
+            "Color": "White",
+            "IgnoreFontScaleUp": true,
+            "FontSize": 24
+            // "FontStyle": [ "Bold" ]
+        },
+        "ScreenBlockMessage": {
+            "Color": "White",
+            "IgnoreFontScaleUp": true,
+            "FontSize": 28
+        },
+        "ButtonMainMenu": {
+            "Color": "White",
+            "IgnoreFontScaleUp": true,
+            "FontStyle": [ "Bold" ],
+            "FontSize": 36
+        },
+        "ButtonMainMenu_Active": {
+            "Color": "Black",
+            "IgnoreFontScaleUp": true,
+            "FontStyle": [ "Bold" ],
+            "FontSize": 36
+        },
+        "ButtonMainMenu2": {
+            "Color": "White",
+            "IgnoreFontScaleUp": true,
+            "FontStyle": [ "Bold" ],
+            "FontSize": 28
+        },
+        "ButtonMainMenu2_Active": {
+            "Color": "Black",
+            "IgnoreFontScaleUp": true,
+            "FontStyle": [ "Bold" ],
+            "FontSize": 28
+        },
+        "ButtonMainMenu3": {
+            "Color": "White",
+            "IgnoreFontScaleUp": true,
+            "FontStyle": [ "Bold" ],
+            "FontSize": 32
+        },
+        "IssueCount": {
+            "Color": "White",
+            "IgnoreFontScaleUp": true,
+            "FontStyle": [ "Bold" ],
+            "FontSize": 36
+        },
+        "IssuesText": {
+            "Color": "White",
+            "LineSpacing": -15,
+            "IgnoreFontScaleUp": true
+        },
+        "Default": {
+            "Color": "White",
+            "FontSize": 16
+        },
+        "DefaultCondensed": {
+            "Color": "White",
+            "FontSize": 16,
+            "LineSpacing": -30
+        },
+        "DefaultFixed": {
+            "Color": "White",
+            "FontSize": 16,
+            "LineSpacing": -30,
+            "IgnoreFontScaleUp": true
+        },
+        "ShortcutGlyph": {
+            "Color": "White",
+            "Alpha": 0.45,
+            "FontSize": 16
+        },
+        "DefaultBold": {
+            "Color": "White",
+            "FontSize": 16,
+            "FontStyle": [ "Bold" ]
+        },
+        "DefaultBoldInverse": {
+            "Color": "Black",
+            "FontSize": 16,
+            "FontStyle": [ "Bold" ]
+        },
+        // TODO remove?
+        "DefaultAutoSize": {
+            "Color": "White",
+            "FontSize": 16,
+            "FontSizeMin": 14,
+            "AutoSize": true,
+            "LineSpacing": -44
+        },
+        "WhiteTransparentUnsized": {
+            "Color": "White",
+            "Alpha": 0.3,
+            "IgnoreFontScaleUp": true,
+            "KeepFontStyle": true
+        },
+        "Grey": {
+            "Color": "White",
+            "Alpha": 0.6,
+            "FontSize": 16
+        },
+        "GreySmall": {
+            "Color": "White",
+            "Alpha": 0.6,
+            "FontSize": 14
+        },
+        "Tab": {
+            "Color": "White",
+            "FontSize": 16,
+            "FontStyle": [ "Bold"],
+            "OverflowMode": "Overflow"
+        },
+        "Tab_Active": {
+            "Color": "Black",
+            "FontSize": 16,
+            "FontStyle": [ "Bold"],
+            "OverflowMode": "Overflow"
+        },
+        "Dark": {
+            "Color": "Black",
+            "FontSize": 16
+        },
+        "DarkBold": {
+            "Color": "Black",
+            "FontSize": 16,
+            "FontStyle": [ "Bold"]
+        },
+        "Quests": {
+            "Color": "White",
+            "FontSize": 16
+        },
+        "Label": {
+            "Color": "White",
+            "FontSize": 16
+        },
+        "LabelFixed": {
+            "Color": "White",
+            "FontSize": 14,
+            "LineSpacing": -40,
+            "IgnoreFontScaleUp": true
+        },
+        "Badge": {
+            "Color": "Black",
+            "FontSize": 14,
+            "FontStyle": [ "Bold" ],
+            "IgnoreFontScaleUp": true
+        },
+        "SmallLabel": {
+            "Color": "White",
+            "LineSpacing": -40,
+            "FontSize": 14
+        },
+        "SmallLabelGrey": {
+            "Color": "Grey",
+            "FontSize": 14,
+            "IgnoreFontScaleUp": true
+        },
+        "TabVertical": {
+            "Color": "White",
+            "FontSize": 20,
+            "FontStyle": [ "Bold" ]
+        },
+        "TabVertical_Active": {
+            "Color": "Black",
+            "FontSize": 20,
+            "FontStyle": [ "Bold" ]
+        },
+        "PanelHeader": {
+            "Color": "White",
+            "IgnoreFontScaleUp": true,
+            "FontSize": 20,
+            "FontStyle": [ "Bold" ]
+        },
+        "PanelHeaderLight": {
+            "Color": "White",
+            "IgnoreFontScaleUp": true,
+            "FontSize": 20
+        },
+        "Header": {
+            "Color": "White",
+            "IgnoreFontScaleUp": true,
+            "LineSpacing": -40,
+            "FontStyle": [ "Bold" ],
+            "FontSize": 24
+        },
+        "HeaderLight": {
+            "Color": "White",
+            "IgnoreFontScaleUp": true,
+            "FontSize": 24
+        },
+        "EntityHeaderAuto": {
+            "Color": "White",
+            "FontSize": 28,
+            "FontSizeMin": 18,
+            "AutoSize": true,
+            "LineSpacing": -30,
+            "IgnoreFontScaleUp": true,
+            "FontStyle": [ "Bold" ]
+        },
+        "EntityHeader": {
+            "Color": "White",
+            "FontSize": 28,
+            "LineSpacing": -30,
+            "IgnoreFontScaleUp": true,
+            "FontStyle": [ "Bold" ]
+        },
+        "EntityHeaderSmall": {
+            "Color": "White",
+            "FontSize": 24,
+            "LineSpacing": -40,
+            "IgnoreFontScaleUp": true,
+            "FontStyle": [ "Bold" ]
+        },
+        "EntityContent": {
+            "Color": "White",
+            "FontSize": 16,
+            "FontSizeMin": 14,
+            "AutoSize": true
+        },
+        "HeaderInverse": {
+            "Color": "Black",
+            "IgnoreFontScaleUp": true,
+            "FontSize": 20
+        },
+        "Input": {
+            "Color": "Black",
+            "FontSize": 16
+        },
+        "InputLarge": {
+            "Color": "Black",
+            "IgnoreFontScaleUp": true,
+            "FontSize": 20
+        },
+        "InputHeader": {
+            "Color": "White",
+            "FontSize": 16
+        },
+        "InputPlaceholder": {
+            "Color": "Black",
+            "FontSize": 14,
+            "FontStyle": [ "Italic" ]
+        },
+        "InputLargePlaceholder": {
+            "Color": "Black",
+            "FontStyle": [ "Italic" ],
+            "IgnoreFontScaleUp": true,
+            "FontSize": 20
+        }
+    },
+    "Buttons": {
+        "Default": {
+            "Image": "ButtonFancy",
+            "Selectable": "ButtonPanel",
+            "Text": "DefaultCondensed"
+        },
+        "Button1": {
+            "Image": "IconButton",
+            "Selectable": "Button1",
+            "Text": "DefaultCondensed"
+        },
+        "Button2": {
+            "Image": "IconButton",
+            "Selectable": "Button2",
+            "Text": "DefaultCondensed"
+        },
+        "Red": {
+            "Image": "ButtonFancy",
+            "Selectable": "Red",
+            "Text": "Unsized"
+        },
+        "Delete": {
+            "Image": "ButtonFancy",
+            "Selectable": "Red",
+            "Text": "DefaultBold"
+        },
+        "Panel": {
+            "Image": "ButtonFancy",
+            "Selectable": "ButtonPanel",
+            "Text": "DefaultCondensed"
+        },
+        "Panel2": {
+            "Image": "ButtonFancy",
+            "Selectable": "ButtonPanel2",
+            "Text": "DefaultCondensed"
+        },
+        "PanelHeader": {
+            "Image": "ButtonFancy",
+            "Selectable": "Button1",
+            "Text": "Unsized"
+        },
+        "PanelConfirm_Unsized": {
+            "Image": "ButtonFancy",
+            "Selectable": "Accent",
+            "Text": "UnsizedInverse"
+        },
+        "PanelConfirm": {
+            "Image": "ButtonFancy",
+            "Selectable": "Accent",
+            "Text": "DefaultBoldInverse"
+        },
+        "Accent": {
+            "Image": "WhiteSquare",
+            "Selectable": "Accent",
+            "Text": "DarkBold"
+        },
+        "MainMenu_Active": {
+            "Image": "WhiteSquare",
+            "Selectable": "MainMenu",
+            "Text": "ButtonMainMenu_Active"
+        },
+        "MainMenu": {
+            "Image": "WhiteSquare",
+            "Selectable": "MainMenu",
+            "Text": "ButtonMainMenu"
+        },
+        "MainMenuSub": {
+            "Image": "WhiteSquare",
+            "Selectable": "MainMenu",
+            "Text": "PanelHeader"
+        },
+        "MainMenu2": {
+            "Image": "WhiteSquare",
+            "Selectable": "MainMenu2",
+            "Text": "ButtonMainMenu2"
+        },
+        "MainMenu2_Active": {
+            "Image": "WhiteSquare",
+            "Selectable": "MainMenu2",
+            "Text": "ButtonMainMenu2_Active"
+        },
+        "MainMenu3": {
+            "Image": "WhiteSquare",
+            "Selectable": "MainMenu2",
+            "Text": "ButtonMainMenu3"
+        },
+        "MainMenuSide": {
+            "Image": "WhiteSquare",
+            "Selectable": "MainMenu",
+            "Text": "Default"
+        },
+        "PopoutItem": {
+            "Image": "WhiteSquare",
+            "Selectable": "DropdownItem",
+            "Text": "Default"
+        },
+        "Tab": {
+            "Image": "WhiteSquare",
+            "Selectable": "Button1",
+            "Text": "Tab"
+        },
+        "Tab2": {
+            "Image": "WhiteSquare",
+            "Selectable": "PanelFooter",
+            "Text": "Tab"
+        },
+        "Tab_Active": {
+            "Image": "WhiteSquare",
+            "ImageActive": "TabActiveOverlay",
+            "Selectable": "AccentStatic",
+            "Text": "Tab_Active"
+        },
+        "TabVertical": {
+            "Image": "WhiteSquare",
+            "Selectable": "Button1",
+            "Text": "TabVertical"
+        },
+        "TabVertical_Active": {
+            "Image": "WhiteSquare",
+            "ImageActive": "TabActiveOverlay",
+            "Selectable": "AccentStatic",
+            "Text": "TabVertical_Active"
+        },
+        "FixedWidget": {
+            "Image": "IconButton",
+            "Selectable": "Button2",
+            "Text": "Header"
+        },
+        "BottomBarSub": {
+            "Image": "ButtonBottomBar",
+            "Selectable": "Button1",
+            "Text": "DefaultCondensed"
+        },
+        "BottomBar": {
+            "Image": "ButtonBottomBar",
+            "Selectable": "Button1",
+            "Text": "LabelFixed"
+        },
+        "BottomBar_Disabled": {
+            "Image": "ButtonBottomBar",
+            "Selectable": "Disabled",
+            "Text": "LabelFixed"
+        },
+        "BottomBar2": {
+            "Image": "ButtonBottomBar",
+            "Selectable": "Button2",
+            "Text": "LabelFixed"
+        },
+        "BottomBar3": {
+            "Image": "ButtonBottomBar",
+            "Selectable": "Button3",
+            "Text": "LabelFixed"
+        },
+        "Content": {
+            "Image": "WhiteSquare",
+            "Selectable": "ButtonContent",
+            "Text": "DefaultCondensed"
+        },
+        "ContentFooter": {
+            "Image": "WhiteSquare",
+            "Selectable": "ButtonPanel",
+            "Text": "DefaultCondensed"
+        },
+        "X": {
+            "Image": "WhiteSquare",
+            "Selectable": "Accent"
+        }
+    },
+    "Dropdowns": {
+        "Default": {
+            "ImageBackground": "PanelDropdown",
+            "ImageArrow": "DropdownArrow",
+            "ImageBackgroundItem": null,
+            "ImageArrowItem": "DropdownArrowItem",
+            "SelectableDropdown": "Button1",
+            "SelectableItem": "DropdownItem",
+            "Text": "Default",
+            "TextItem": "Default"
+        },
+        "Bold": {
+            "ImageBackground": "PanelDropdown",
+            "ImageArrow": "DropdownArrow",
+            "ImageBackgroundItem": null,
+            "ImageArrowItem": "DropdownArrowItem",
+            "SelectableDropdown": "Button1",
+            "SelectableItem": "DropdownItem",
+            "Text": "PanelHeader",
+            "TextItem": "Default"
+        }
+    },
+    "Sliders": {
+        "Default": {
+            "Selectable": "Accent",
+            "ImageBackground": "Slider",
+            "ImageRim": "SliderRim",
+            "ImageFill": "ProgressBarFill",
+            "ImageHandle": null
+        },
+        "Accent": {
+            "Selectable": "Accent",
+            "ImageBackground": "Slider",
+            "ImageRim": "SliderRim",
+            "ImageFill": "ProgressBarFill_Accent",
+            "ImageHandle": null
+        },
+        "StarmapProgress": {
+            "Selectable": "Accent",
+            "ImageBackground": "Slider",
+            "ImageRim": "SliderRim",
+            "ImageFill": "ProgressBarFill_StarmapProgress",
+            "ImageHandle": null
+        }
+    },
+    "Scrollbars": {
+        "Default": {
+            "ImageHandle": "ScrollHandle",
+            "ImageScroll": "ScrollBG",
+            "Selectable": "White"
+        },
+        "Inverse": {
+            "ImageHandle": "ScrollHandleInverse",
+            "ImageScroll": "ScrollBGInverse",
+            "Selectable": "White"
+        }
+    },
+    "Inputs": {
+        "Default": {
+            "HighlightColor": "InputHighlight",
+            "Image": "InputField",
+            "Selectable": "Input",
+            "TextInput": "Input",
+            "TextPlaceholder": "InputPlaceholder"
+        },
+        "QuickSearch": {
+            "HighlightColor": "InputHighlight",
+            "Image": "InputField",
+            "Selectable": "Input",
+            "TextInput": "InputLarge",
+            "TextPlaceholder": "InputLargePlaceholder"
+        }
+    }
+}

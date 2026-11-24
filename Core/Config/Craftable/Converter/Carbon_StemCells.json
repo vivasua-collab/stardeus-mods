@@ -1,0 +1,11 @@
+{
+    "Type" : "Converter",
+    "Ingredients" : [
+        { "TypeId" : "StemCells", "StackSize" : 10 }
+    ],
+    "ListOrder" : 110,
+    "IgnoreMarket" : true,
+    "ProductDefId" : "Obj/Materials/Carbon",
+    "ProductionTimeHours" : 1,
+    "EnergyCost" : 10
+}

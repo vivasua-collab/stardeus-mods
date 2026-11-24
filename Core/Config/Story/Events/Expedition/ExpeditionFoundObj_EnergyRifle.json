@@ -1,0 +1,21 @@
+{
+    // C# implementation id.
+    "EventId": "ExpeditionFoundObj",
+    "Points": 15,
+    // Options: Negative, Positive, Neutral, Raid
+    "OutcomeType": "Positive",
+    // Full list is in StoryEventFlags class
+    "EventFlags": [
+        "Expedition",
+        "OnDemand"
+    ],
+    "Properties": [
+        { "Key": "LootDefId", "String": "Obj/Equipment/Weapons/EnergyRifle01" },
+        { "Key": "MinQuantity", "Int": 1 },
+        { "Key": "MaxQuantity", "Int": 1 },
+        { "Key": "FailureChance", "Float": 0.15 }
+    ],
+    "Require": {
+        "SectorDifficulty": 0.7
+    }
+}

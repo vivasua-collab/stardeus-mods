@@ -1,0 +1,19 @@
+{
+    "Id" : "Input/QuickSearch",
+
+    "Color" : "UI/Text/Input/SelectionHighlight",
+
+    "ChildrenKeys" : [
+        "Panel",
+        "Selectable",
+        "Text",
+        "ActiveOverlay"
+    ],
+
+    "ChildrenIds" : [
+        "Panel/QuickSearch",
+        "Selectable/Default",
+        "Text/Input",
+        "Overlay/QuickSearch"
+    ]
+}

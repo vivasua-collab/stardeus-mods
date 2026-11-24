@@ -1,0 +1,26 @@
+{
+    // C# implementation id.
+    // Multiple configurations can point to a single implementation.
+    "EventId" : "SpawnDerelictShip",
+    // How much does this story event cost to run
+    "Points" : 15,
+    // Options: Negative, Positive, Neutral, Raid
+    "OutcomeType" : "Positive",
+    // Full list is in StoryEventFlags class
+    "EventFlags" : [
+        "Space",
+        "CanHaveDuplicates",
+        "NoHyperspace"
+    ],
+    "Require" : {
+        "ExpeditionsCompleted" : 1
+    },
+    "MinRepeatDelayDays" : 275,
+    // How likely this event can occur given the sector difficulty
+    // sector difficulty -> chance
+    "SectorDifficultyChance" : [
+        0.0, 0.5,
+        0.5, 1.0,
+        1.0, 0.5
+    ]
+}

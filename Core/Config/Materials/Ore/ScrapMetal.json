@@ -1,0 +1,11 @@
+{
+    "Id" : "ScrapMetal",
+    "IconId" : "Obj/Materials/ScrapMetal",
+    "GroupId" : "Ore",
+    "InternalValue" : 2.0,
+    "EnergyOutput" : 510.0,
+    "Rarity" : 100,
+    "MatRarity" : 0,
+    "IsComposite" : true,
+    "IgnoreMarket" : true
+}

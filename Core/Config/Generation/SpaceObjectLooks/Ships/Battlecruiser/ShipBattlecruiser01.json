@@ -1,0 +1,15 @@
+{
+    "Id" : "ShipBattlecruiser01",
+    "Probability" : 1.0,
+    "StarmapSizeMul" : 0.42,
+    "StarfieldSizeMul" : 0.21,
+    "IsConstantSizeInStarmap" : false,
+    "OrderDist" : -50,
+    "Sprite" : "SpaceObjects/Ships/ShipBattlecruiser01_D",
+    "CanRotate" : true,
+    "KeepUprightInStarfield" : true,
+    "Sprite_L" : "SpaceObjects/Ships/ShipBattlecruiser01_L",
+    "Sprite_R" : "SpaceObjects/Ships/ShipBattlecruiser01_R",
+    "Sprite_U" : "SpaceObjects/Ships/ShipBattlecruiser01_U",
+    "Sprite_D" : "SpaceObjects/Ships/ShipBattlecruiser01_D"
+}

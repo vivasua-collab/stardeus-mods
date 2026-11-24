@@ -1,0 +1,12 @@
+{
+    "Id" : "AutoPilotUpgrade",
+    "DefId" : "Obj/Upgrades/AutoPilotUpgrade",
+    "IsComposite" : true,
+    "IsConsumedOnDestroy" : true,
+    "IconId" : "Obj/Upgrades/AutoPilotUpgrade",
+    "Property" : "Electronic",
+    "Group" : "Upgrade",
+    "GroupId" : "Upgrades",
+    "EnergyOutput" : 50.0,
+    "Rarity" : 1
+}

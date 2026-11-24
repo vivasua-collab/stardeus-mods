@@ -1,0 +1,17 @@
+{
+    // We will make this reaction always available, but it will check
+    // for probability in the code
+    "ReactionId" : "AvoidHostileShips",
+
+    "AttitudeMul" : [
+        -1.0, 1.0,
+        1.0, 1.0
+    ],
+    "RegionDifficultyMul" : [
+        0.0, 1.0,
+        1.0, 1.0
+    ],
+
+    "DefaultFactionChance" : 1.0,
+    "DefaultClassChance" : 1.0
+}

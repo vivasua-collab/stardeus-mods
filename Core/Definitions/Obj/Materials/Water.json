@@ -1,0 +1,29 @@
+{
+    "Layer" : "FreeEntities",
+    "ParentId" : "Obj/Materials/BaseMaterial",
+    "Components" : [
+        {
+            "Component" : "ObjGraphics",
+            "Properties" : [
+                { "Key" : "Shader", "String": "Obj" },
+                { "Key" : "Scale", "Float": 0.5 },
+                { "Key" : "Graphic", "String": "Obj/Materials/Water" }
+            ]
+        },
+        {
+            "Component" : "Flammable",
+            "Properties" : [
+                { "Key" : "IsTemperatureResistant", "Bool" : true },
+                { "Key" : "FireDamageResistance", "Float" : 0.8 },
+                { "Key" : "FireChance", "Float" : 0.0 }
+            ]
+        },
+        {
+            "Component" : "UnstoredMat",
+            "Properties" : [
+                { "Key" : "Type", "String" : "Water" },
+                { "Key" : "FixedSize", "Bool" : true }
+            ]
+        }
+    ]
+}

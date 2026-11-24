@@ -1,0 +1,73 @@
+{
+    "SlotTypeId" : "Body",
+    "Compatibility" : "TargetSpecies",
+    "TargetSpecies" : [ "Robot" ],
+    "PartFlags" : [ "Indestructible" ],
+    "ResistanceBase" : 16.0,
+    "Resistances" : [
+        { "DamageType" : "Energy", "Resistance" : 10.0 }
+    ],
+    "AddsNeeds" : [
+        "Electricity",
+        "Maintenance",
+        "Temperature"
+    ],
+    "AddsAttackMethods" : [
+        {
+            "Component" : "BodySlam",
+            "Properties" : [
+                { "Key" : "AttackAction", "String" : "Melee" },
+                { "Key" : "DPS", "Float" : 1.83 },
+                { "Key" : "AttackType", "String" : "Blunt" },
+                { "Key" : "ChargeSec", "Float" : 4.0 },
+                { "Key" : "CooldownSec", "Float" : 3.0 },
+                { "Key" : "MoveSpeedMul", "Float" : 0.05 },
+                { "Key" : "StunChanceBio", "Float" : 0.22 },
+                { "Key" : "StunChanceRobo", "Float" : 0.32 },
+                { "Key" : "BleedChance", "Float" : 0.1 },
+                { "Key" : "FatalHitChanceMul", "Float" : 0.0 },
+                { "Key" : "InternalHitChanceMul", "Float" : 0.0 }
+            ]
+        }
+    ],
+    "ProvidesStats" : [
+        {
+            "Component" : "TempMax",
+            "Properties" : [
+                { "Key" : "TemperatureCelsius", "Float" : 600.0 },
+                { "Key" : "QualityMul", "Float" : 0.1 }
+            ]
+        },
+        {
+            "Component" : "BatteryConsumption",
+            "Properties" : [
+                { "Key" : "AmountPerDay", "Float" : 50 },
+                { "Key" : "QualityMul", "Float" : 0.1 }
+            ]
+        },
+        {
+            "Component" : "ArmorSharp",
+            "Properties" : [
+                { "Key" : "Amount", "Float" : 2.0 }
+            ]
+        },
+        {
+            "Component" : "ArmorPiercing",
+            "Properties" : [
+                { "Key" : "Amount", "Float" : 2.0 }
+            ]
+        },
+        {
+            "Component" : "ArmorBlunt",
+            "Properties" : [
+                { "Key" : "Amount", "Float" : 2.0 }
+            ]
+        },
+        {
+            "Component" : "ArmorEnergy",
+            "Properties" : [
+                { "Key" : "Amount", "Float" : 0.5 }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,11 @@
+{
+    "EventId" : "ColonistRevengeHuntQuest",
+    "Points" : 15,
+    "OutcomeType" : "Positive",
+    "EventFlags" : [ "ColonistRequest" ],
+    "MinRepeatDelayDays" : 50,
+    "Require" : {
+        "Days" : 40,
+        "Colonists" : 2
+    }
+}

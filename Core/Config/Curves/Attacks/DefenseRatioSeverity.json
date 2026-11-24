@@ -1,0 +1,21 @@
+{
+    // How far a hit raises a wound's severity, from the hit's damage over the part's defense
+    // (its resistance plus the being's armor). The value is rounded up with the chance of its
+    // fraction, then clamped to 1-6. A ratio keeps armor relevant against every weapon (twice
+    // the defense, half the ratio), while a weak part like an eye still breaks under a light
+    // weapon. Slightly convex, so armor cuts heavy hits more than proportionally.
+    "FloatSet" : [
+        0, 0,
+        0.5, 0.24,
+        1, 0.56,
+        1.5, 0.93,
+        2, 1.33,
+        2.5, 1.76,
+        3, 2.21,
+        4, 3.17,
+        5, 4.19,
+        6, 5.26,
+        7, 6.38,
+        8, 7.53
+    ]
+}

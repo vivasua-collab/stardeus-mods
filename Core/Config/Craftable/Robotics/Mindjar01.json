@@ -1,0 +1,13 @@
+{
+    "Type": "Robotics1",
+    "Ingredients": [
+        { "TypeId" : "TitaniumPlate", "StackSize" : 1 },
+        { "TypeId" : "SiliconWafer", "StackSize" : 2 },
+        { "TypeId" : "Transistor", "StackSize" : 5 },
+        { "TypeId" : "Microchip", "StackSize" : 1 },
+        { "TypeId" : "CopperWire", "StackSize" : 3 }
+    ],
+    "ProductDefId": "Beings/Mindjar01",
+    "ProductionTimeHours": 168.0,
+    "EnergyCost": 20.0
+}

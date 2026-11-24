@@ -1,0 +1,10 @@
+{
+    "AttachedTo" : "Head",
+    "PartFlags" : [ "Removable" ],
+    "Size" : 0.1,
+    "ExtractRisk" : 0.4,
+    "ImplantRisk" : 0.1,
+    "FatalityRisk" : 0.1,
+    "RejectionRisk" : 0.15,
+    "SurgicalFatigue" : 0.10
+}

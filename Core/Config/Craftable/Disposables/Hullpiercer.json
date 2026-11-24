@@ -1,0 +1,10 @@
+{
+    "Type": "Disposable",
+    "DisposableOutput": [
+        { "TypeId" : "TitaniumPlate", "StackSize" : 3 },
+        { "TypeId" : "LeadPlate", "StackSize" : 2 }
+    ],
+    "ProductDefId": "Obj/Containers/Hullpiercer",
+    "ProductionTimeHours": 0.5,
+    "EnergyCost": 10.0
+}

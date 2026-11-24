@@ -1,0 +1,5 @@
+{
+    "Id" : "Rescue",
+    "IconId" : "Icons/Color/Bell",
+    "Types" : [ "Physical", "Unskilled" ]
+}

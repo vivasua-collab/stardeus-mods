@@ -1,0 +1,11 @@
+{
+    "Id" : "Hostile",
+    "Difficulty" : 0.75,
+    "Shadow" : "#4A1A06",
+    "Mid" : "#D9622A",
+    "Highlight" : "#FFC27A",
+    "Strength" : 0.95,
+    "Intensity" : 1.3,
+    "BrightnessRange" : 0.6,
+    "RimStrength" : 0.2
+}

@@ -1,0 +1,6 @@
+{
+    "Id" : "Misc/CombatFlash",
+    "Hex" : "#EC5555",
+    "Alpha" : 1.0,
+    "SkipAtlas" : true
+}

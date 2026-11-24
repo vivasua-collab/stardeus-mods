@@ -1,0 +1,7 @@
+{
+    "Id" : "UI/Research/Panel/Active",
+    // "Hex" : "65CC52",
+    "Hex" : "53CC3D",
+    "Alpha" : 1,
+    "SkipAtlas" : true
+}

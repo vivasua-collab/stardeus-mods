@@ -1,0 +1,81 @@
+{
+    "ToolPath" : "Furniture/Decorations",
+    "Layer" : "Objects",
+    "ParentId" : "Objects/Devices/BaseDevice",
+    "Researchable" : {
+        "Prerequisites" : [ "Research/Habitation/Sign" ]
+    },
+    "Spawnable" : {
+        "Category": "Junk",
+        "Chance" : 1.0,
+        "ChanceLocked" : 0.5
+    },
+    "Components" : [
+        {
+            "Component" : "TileTransform",
+            "Properties" : [
+                { "Key" : "CoverPercent", "Int" : 50 },
+                { "Key" : "Width", "Int" : 1 },
+                { "Key" : "Height", "Int" : 1 },
+                { "Key" : "IsRotatable", "Bool" : false }
+            ]
+        },
+        {
+            "Component" : "Admirable",
+            "Properties" : [
+                { "Key" : "Amount", "Int" : 1 },
+                { "Key" : "Multiplier", "Float" : 0.05 },
+                { "Key" : "Chance", "Float" : 0.1 }
+            ]
+        },
+        {
+            "Component" : "TileGraphics",
+            "Properties" : [
+                { "Key" : "Type", "String": "Object" },
+                { "Key" : "Graphic", "String": "Objects/Furniture/Sign" }
+            ]
+        },
+        {
+            "Component" : "Passability",
+            "Properties" : [
+                { "Key" : "IsPassable", "Bool" : true },
+                { "Key" : "IsWalkable", "Bool" : true },
+                { "Key" : "Difficulty", "Float" : 0.7 }
+            ]
+        },
+        {
+            "Component" : "Flammable",
+            "Properties" : [
+                { "Key" : "BaseExplosionLevel", "Int" : 1 },
+                { "Key" : "FlammabilityCurve", "String" : "DeviceHigh" },
+                { "Key" : "ExplosivenessCurve", "String" : "Device" }
+            ]
+        },
+        {
+            "Component" : "Constructable",
+            "Properties" : [
+                { "Key" : "WorkAmount", "Int" : 500 },
+                { "Key" : "CanDragRow", "Bool" : true },
+                {
+                    "Key" : "Contents",
+                    "RawMaterials" : [
+                        { "TypeId" : "SteelPlate", "StackSize" : 1 },
+                        { "TypeId" : "Glass", "StackSize" : 1 },
+                        { "TypeId" : "BatteryCell", "StackSize" : 1 },
+                        { "TypeId" : "Transistor", "StackSize" : 1 },
+                        { "TypeId" : "CopperWire", "StackSize" : 1 }
+                    ]
+                }
+            ]
+        },
+        {
+            "Component" : "TileLabel",
+            "Properties" : [
+                { "Key" : "RequireResearch", "Bool" : false },
+                { "Key" : "Label", "String" : "Sign" },
+                { "Key" : "OffsetY", "Float" : 0.15 },
+                { "Key" : "Size", "Float" : 3 }
+            ]
+        }
+    ]
+}

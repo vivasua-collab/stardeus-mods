@@ -1,0 +1,9 @@
+{
+    // random value -> duration hours
+    "FloatSet" : [
+        0.0, 3.0,
+        0.5, 4.0,
+        0.95, 6.0,
+        1.0, 12.0
+    ]
+}

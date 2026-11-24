@@ -1,0 +1,7 @@
+{
+    "Id" : "OpenEyedSleeper",
+    "IconId" : "Icons/White/Eye",
+    "TypeId" : "BiologicalFunction",
+    "Rarity" : 0.25,
+    "CompatibleSpecies" : [ "Human" ]
+}

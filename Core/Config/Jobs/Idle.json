@@ -1,0 +1,5 @@
+{
+    "Id" : "Idle",
+    "IconId" : "Icons/Color/Time",
+    "Types" : [ "Internal", "Unskilled" ]
+}

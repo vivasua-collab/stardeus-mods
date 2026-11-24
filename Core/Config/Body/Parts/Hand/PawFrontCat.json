@@ -1,0 +1,27 @@
+{
+    "SlotTypeId" : "Hand",
+    "Compatibility" : "Biological",
+    "TargetSpecies" : [ "Cat" ],
+    "Tier" : 1,
+    "ResistanceBase" : 5.0,
+    "AddsAbilities" : [
+    ],
+    "AddsAttackMethods" : [
+        {
+            "Component" : "Scratch",
+            "Properties" : [
+                { "Key" : "AttackAction", "String" : "Melee" },
+                { "Key" : "DPS", "Float" : 2.62 },
+                { "Key" : "AttackType", "String" : "Sharp" },
+                { "Key" : "ChargeSec", "Float" : 2.0 },
+                { "Key" : "CooldownSec", "Float" : 3.0 },
+                { "Key" : "MoveSpeedMul", "Float" : 0.05 },
+                { "Key" : "StunChanceBio", "Float" : 0.46 },
+                { "Key" : "StunChanceRobo", "Float" : 0.0 },
+                { "Key" : "BleedChance", "Float" : 1.0 },
+                { "Key" : "FatalHitChanceMul", "Float" : 0.0 },
+                { "Key" : "InternalHitChanceMul", "Float" : 0.0 }
+            ]
+        }
+    ]
+}

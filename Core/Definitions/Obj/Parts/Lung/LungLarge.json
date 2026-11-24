@@ -1,0 +1,22 @@
+{
+    "Layer" : "FreeEntities",
+    "ParentId" : "Obj/Parts/BasePartOrganic",
+    "NameKey" : "bodypart.Lung.LungLarge",
+    "Researchable" : {
+        "Prerequisites" : [ "Research/LifeSupport/GrowingPartsAdvanced" ]
+    },
+    "Components" : [
+        {
+            "Component" : "ObjGraphics",
+            "Properties" : [
+                { "Key" : "Graphic", "String": "Obj/BodyParts/Organic3" }
+            ]
+        },
+        {
+            "Component" : "BodyPart",
+            "Properties" : [
+                { "Key" : "BodyPartDefId", "String" : "Lung/LungLarge" }
+            ]
+        }
+    ]
+}

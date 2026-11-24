@@ -1,0 +1,9 @@
+{
+    "Id" : "BioEnrichedWater",
+    "IsComposite" : true,
+    "IconId" : "Obj/Materials/BioEnrichedWater",
+    "Property" : "Liquid",
+    "GroupId" : "Terraforming",
+    "EnergyOutput" : 3000.0,
+    "Rarity" : 1
+}

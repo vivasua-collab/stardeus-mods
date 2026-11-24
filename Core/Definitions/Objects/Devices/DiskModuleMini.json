@@ -1,0 +1,91 @@
+{
+    "ToolPath" : "Computing",
+    "Layer" : "Objects",
+    "ParentId" : "Objects/Devices/BaseDevice",
+    "NameKey" : "objects.devices.diskmodule",
+    "DescKey" : "objects.devices.diskmodule.desc",
+    "Researchable" : {
+        "Prerequisites" : [
+            "Research/Computing/Research"
+        ]
+    },
+    "TranslationVars" : [ "8" ],
+    "Spawnable" : {
+        "Category": "Computing",
+        "Chance" : 1.0,
+        "ChanceLocked" : 0.5
+    },
+    "Components" : [
+        {
+            "Component" : "TileTransform",
+            "Properties" : [
+                { "Key" : "IsRotatable", "Bool" : true },
+                { "Key" : "CoverPercent", "Int" : 33 }
+            ]
+        },
+        {
+            "Component" : "TileGraphics",
+            "Properties" : [
+                { "Key" : "Type", "String": "Object" },
+                { "Key" : "Graphic", "String": "Objects/Devices/DiskModuleMini" },
+                { "Key" : "HasHeight", "Bool" : true }
+            ]
+        },
+        {
+            "Component" : "DiskModule",
+            "Properties" : [
+                { "Key" : "Amount",  "Int" : 8 },
+                { "Key" : "EnergyCost", "Float" : 0.25 }
+            ]
+        },
+        {
+            "Component" : "WithFuse",
+            "Properties" : [
+                { "Key" : "MalfunctionWeight", "Float": 0.025 }
+            ]
+        },
+        {
+            "Component" : "Flammable",
+            "Properties" : [
+                { "Key" : "IgnitionTemperatureCelsius", "Int" : 350 },
+                { "Key" : "FireChance", "Float" : 0.5 },
+                { "Key" : "BaseExplosionLevel", "Int" : 1 },
+                { "Key" : "FlammabilityCurve", "String" : "DeviceHigh" },
+                { "Key" : "ExplosivenessCurve", "String" : "DeviceLow" }
+            ]
+        },
+        {
+            "Component" : "ElectricNode",
+            "Properties" : [
+                { "Key" : "Particles_D", "String" : "ServerSmallFX" },
+                { "Key" : "Particles_U", "String" : "ServerSmallFX" },
+                { "Key" : "ParticlesEmitChance", "Float" : 0.5 },
+                { "Key" : "IsConsumer", "Bool" : true }
+            ]
+        },
+        {
+            "Component" : "Passability",
+            "Properties" : [
+                { "Key" : "IsPassable", "Bool" : false },
+                { "Key" : "IsWalkable", "Bool" : false },
+                { "Key" : "Difficulty", "Float" : 1 }
+            ]
+        },
+        {
+            "Component" : "Constructable",
+            "Properties" : [
+                { "Key" : "WorkAmount", "Int" : 1000 },
+                { "Key" : "CanReplaceGroup", "String" : "DiskModule" },
+                { "Key" : "CanDragRow", "Bool" : true },
+                {
+                    "Key" : "Contents",
+                    "RawMaterials" : [
+                        { "TypeId" : "SteelPlate", "StackSize" : 2 },
+                        { "TypeId" : "Transistor", "StackSize" : 3 },
+                        { "TypeId" : "CopperWire", "StackSize" : 3 }
+                    ]
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,6 @@
+{
+    "Id" : "UI/Icon_SelectedDim",
+    "AliasFor" : "UI/Saturated/Comp",
+    "Alpha" : 0.7,
+    "SkipAtlas" : true
+}

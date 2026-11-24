@@ -1,0 +1,13 @@
+{
+    "Id" : "Uranium",
+    "IconId" : "Obj/Materials/Uranium",
+    "GroupId" : "Ore",
+    "Property" : "Nuclear",
+    "InternalValue" : 35.0,
+    "EnergyOutput" : 2000.0,
+    "CollectorCost" : 4000,
+    "Rarity" : 35,
+    "MatRarity" : 2,
+    "ExplosionLevel" : 6,
+    "ExplosivenessCurveId" : "High"
+}

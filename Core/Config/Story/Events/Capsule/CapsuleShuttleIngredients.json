@@ -1,0 +1,16 @@
+{
+    // C# implementation id.
+    // Multiple configurations can point to a single implementation.
+    "EventId" : "CapsuleShuttleIngredients",
+    // How much does this story event cost to run
+    "Points" : 3,
+    // Options: Negative, Positive, Neutral, Raid, Raid
+    "OutcomeType" : "Positive",
+    // Full list is in StoryEventFlags class
+    "EventFlags" : [
+        "OnDemand",
+        "CanIgnoreRepeatDelay",
+        "Capsule"
+    ],
+    "MinRepeatDelayDays" : 5
+}

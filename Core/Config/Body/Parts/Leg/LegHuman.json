@@ -1,0 +1,23 @@
+{
+    "SlotTypeId" : "Leg",
+    "Compatibility" : "Biological",
+    "TargetSpecies" : [ "Human" ],
+    "CompatibleSpeciesFlags" : [ "Humanoid" ],
+    "CompatibleBodySizes" : [ "Medium", "Large" ],
+    "Tier" : 2,
+    "ResistanceBase" : 7.0,
+    "AddsAbilities" : [
+        "Move"
+    ],
+    "ProvidesStats" : [
+        {
+            "Component" : "MoveSpeed",
+            "Properties" : [
+                // 2 legs + 2 feet add up to 0.5
+                { "Key" : "CompoundLimit", "Float" : 0.55 },
+                { "Key" : "AmountPerMinute", "Float" : 0.1375 },
+                { "Key" : "StateMul", "Float" : 1.0 }
+            ]
+        }
+    ]
+}

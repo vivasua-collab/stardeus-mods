@@ -1,0 +1,12 @@
+{
+    "Type": "Electronics3",
+    "Ingredients": [
+        { "TypeId" : "EnrichedUranium", "StackSize" : 1 },
+        { "TypeId" : "Microchip", "StackSize" : 1 },
+        { "TypeId" : "LeadPlate", "StackSize" : 1 }
+    ],
+    "IgnoreMarket" : true,
+    "ProductDefId": "Obj/Materials/NuclearCell",
+    "ProductionTimeHours": 6.0,
+    "EnergyCost": 300.0
+}

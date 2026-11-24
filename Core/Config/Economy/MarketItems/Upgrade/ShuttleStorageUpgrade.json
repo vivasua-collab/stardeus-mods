@@ -1,0 +1,12 @@
+{
+    "Id" : "Obj/Upgrades/ShuttleStorageUpgrade",
+    "Type" : "CFD",
+    "Groups" : [ "Upgrade" ],
+    "Value" : 1500.0,
+    "Rarity" : 0.15,
+    "TraderQuantity" : 1.0,
+    "MaxTraderQuantity" : 1,
+    "MinSectorDifficulty" : 0.7,
+    "PlayerBuyPriceMultiplier": 5.0,
+    "Volatility" : 0.0031
+}

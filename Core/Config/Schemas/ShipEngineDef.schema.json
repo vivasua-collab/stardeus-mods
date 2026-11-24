@@ -1,0 +1,60 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Stardeus ShipEngineDef",
+  "description": "Generated from C# by Game/Generate JSON Schemas, do not edit by hand",
+  "$ref": "#/$defs/ShipEngineDef",
+  "$defs": {
+    "ShipEngineDef": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "Id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "IdH": {
+          "type": "integer"
+        },
+        "DeviceId": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "EngineType": {
+          "anyOf": [
+            {
+              "type": "string",
+              "enum": [
+                "Undefined",
+                "Thruster",
+                "HyperdriveShort",
+                "HyperdriveLong"
+              ]
+            },
+            {
+              "type": "integer"
+            }
+          ]
+        },
+        "EngineTypeId": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "ChargeTimeMinutes": {
+          "type": "integer"
+        },
+        "Evade": {
+          "type": "number"
+        }
+      },
+      "additionalProperties": false
+    }
+  }
+}

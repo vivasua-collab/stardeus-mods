@@ -1,0 +1,74 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Stardeus SpaceSkyDef",
+  "description": "Generated from C# by Game/Generate JSON Schemas, do not edit by hand",
+  "$ref": "#/$defs/SpaceSkyDef",
+  "$defs": {
+    "SpaceSkyDef": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "Id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "Difficulty": {
+          "type": "number"
+        },
+        "Templates": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "Shadow": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "Mid": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "Highlight": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "Strength": {
+          "type": "number"
+        },
+        "Intensity": {
+          "type": "number"
+        },
+        "BrightnessRange": {
+          "type": "number"
+        },
+        "RimStrength": {
+          "type": "number"
+        },
+        "AmbientStorm": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "additionalProperties": false
+    }
+  }
+}

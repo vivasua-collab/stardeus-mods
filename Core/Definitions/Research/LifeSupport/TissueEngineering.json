@@ -1,0 +1,29 @@
+{
+    "Id" : "Research/LifeSupport/TissueEngineering",
+    "Tier" : 4,
+    "IsAbstract" : true,
+    "PreviewIcon" : "Icons/Color/DNA",
+    "Researchable" : {
+        "IsTreeNode" : true,
+        "Prerequisites" : [
+            "Research/LifeSupport/GrowingPartsImproved"
+        ],
+        "DatoidCosts" : [
+            {
+                "TypeId" : "DatoidBiotic",
+                "StackSize" : 24
+            },
+            {
+                "TypeId" : "DatoidSynthetic",
+                "StackSize" : 20
+            },
+            {
+                "TypeId" : "DatoidAlien",
+                "StackSize" : 5
+            }
+        ],
+        "UnlockEffects" : [
+            "ClonedOrganQuality"
+        ]
+    }
+}

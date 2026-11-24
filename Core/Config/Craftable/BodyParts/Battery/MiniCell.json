@@ -1,0 +1,12 @@
+{
+    "Type" : "Robotics2",
+    "ProductDefId" : "Obj/Parts/Battery/MiniCell",
+    "ProductionTimeHours" : 168.0,
+    "EnergyCost" : 50,
+    "IgnoreMarket" : true,
+    "Ingredients" : [
+        { "TypeId" : "Microchip", "StackSize" : 2 },
+        { "TypeId" : "CopperWire", "StackSize" : 5 },
+        { "TypeId" : "NuclearCell", "StackSize" : 1 }
+    ]
+}

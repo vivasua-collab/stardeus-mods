@@ -1,0 +1,14 @@
+{
+    // C# implementation id
+    "EventId": "Stabbing",
+    // How much does this story event cost to run
+    "Points": 6,
+    // Options: Negative, Positive, Neutral, Raid
+    "OutcomeType": "Negative",
+    // Full list is in StoryEventFlags class
+    "EventFlags": [
+        "OnDemand",
+        "Social"
+    ],
+    "MinRepeatDelayDays" : 45
+}

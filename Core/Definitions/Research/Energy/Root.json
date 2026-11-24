@@ -1,0 +1,10 @@
+{
+    "Id" : "Research/Energy/Root",
+    "Tier" : 0,
+    "IsAbstract" : true,
+    "PreviewIcon" : "Icons/Color/Energy",
+    "NameKey" : "research.energy",
+    "Researchable" : {
+        "IsTreeNode" : true
+    }
+}

@@ -1,0 +1,15 @@
+{
+    "Id" : "ShipFighter01",
+    "Probability" : 1.0,
+    "StarmapSizeMul" : 0.32,
+    "StarfieldSizeMul" : 0.16,
+    "IsConstantSizeInStarmap" : false,
+    "OrderDist" : -50,
+    "Sprite" : "SpaceObjects/Ships/ShipFighter01_D",
+    "CanRotate" : true,
+    "KeepUprightInStarfield" : true,
+    "Sprite_L" : "SpaceObjects/Ships/ShipFighter01_L",
+    "Sprite_R" : "SpaceObjects/Ships/ShipFighter01_R",
+    "Sprite_U" : "SpaceObjects/Ships/ShipFighter01_U",
+    "Sprite_D" : "SpaceObjects/Ships/ShipFighter01_D"
+}

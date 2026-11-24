@@ -1,0 +1,12 @@
+{
+    // Locks onto whoever it started shooting at and stays there until that ship
+    // is out of the fight. The plain, sensible default.
+    "Mode" : "Sticky",
+
+    "MinOffensiveness" : 0.0,
+    "MaxOffensiveness" : 1.0,
+    "StrengthDifferenceChance" : [
+        -1.0, 0.5,
+        1.0, 0.5
+    ]
+}

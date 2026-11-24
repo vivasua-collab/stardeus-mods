@@ -1,0 +1,159 @@
+{
+    "ToolPath" : "SpaceTravel",
+    "Layer" : "Objects",
+    "ParentId" : "Objects/Devices/BaseDevice",
+    "Researchable" : {
+        "Prerequisites" : [
+            "Research/SpaceTravel/PropulsionFTL"
+        ]
+    },
+    "Spawnable" : {
+        "Category": "Engine",
+        "Chance" : 0.002,
+        "ChanceLocked" : 0.0
+    },
+    "Components" : [
+        {
+            "Component" : "TileTransform",
+            "Properties" : [
+                { "Key" : "IsRotatable", "Bool" : true },
+                { "Key" : "CoverPercent", "Int" : 0 },
+                // { "Key" : "WorkSpot", "Vector2" : { "x" : 1, "y" : 3 } },
+                // { "Key" : "OutPort", "Vector2" : { "x" : 0, "y" : -1 } },
+                { "Key" : "InPort", "Vector2" : { "x" : 1, "y" : 3 } },
+                { "Key" : "Width", "Int" : 3 },
+                { "Key" : "Height", "Int" : 3 }
+            ]
+        },
+        {
+            "Component" : "IndustrialEquipment",
+            "Properties" : [
+                { "Key" : "IsNoisy", "Bool" : true }
+            ]
+        },
+        {
+            "Component" : "Damageable",
+            "Properties" : [
+                { "Key" : "Max", "Int" : 500 }
+            ]
+        },
+        {
+            "Component" : "TileGraphics",
+            "Properties" : [
+                { "Key" : "Type", "String": "Object" },
+                { "Key" : "Graphic", "String": "Objects/Devices/FTLDrive" }
+            ]
+        },
+        {
+            "Component" : "ElectricNode",
+            "Properties" : [
+                { "Key" : "IsConsumer", "Bool" : true }
+            ]
+        },
+        {
+            "Component" : "WithFuse",
+            "Properties" : [
+                { "Key" : "MalfunctionWeight", "Float": 0.5 },
+                // Has special event (EngineFailure)
+                { "Key" : "CanHaveGenericMalfunction", "Bool": false }
+            ]
+        },
+        {
+            "Component" : "Passability",
+            "Properties" : [
+                { "Key" : "IsPassable", "Bool" : true },
+                { "Key" : "IsWalkable", "Bool" : false },
+                { "Key" : "Difficulty", "Float" : 0.9 }
+            ]
+        },
+        {
+            "Component" : "Flammable",
+            "Properties" : [
+                { "Key" : "IgnitionTemperatureCelsius", "Int" : 0 },
+                { "Key" : "FireChance", "Float" : 0.5 },
+                { "Key" : "BaseExplosionLevel", "Int" : 6 },
+                { "Key" : "FlammabilityCurve", "String" : "DeviceHigh" },
+                { "Key" : "ExplosivenessCurve", "String" : "DeviceHigh" }
+            ]
+        },
+        {
+            "Component" : "AudioSource",
+            "Properties" : [
+                { "Key" : "AmbienceClip", "String" : "Ambience/EngineNoise" },
+                { "Key" : "Rolloff", "Vector2" : { "x" : 25, "y" : 100 } },
+                { "Key" : "IsLinkedToEnergy", "Bool" : true }
+            ]
+        },
+        {
+            "Component" : "Hyperdrive",
+            "Properties" : [
+                { "Key" : "ChargeTimeHours", "Float" : 4.0 }
+            ]
+        },
+        { "Component" : "ExtraInfo" },
+        {
+            "Component" : "RefillableStorage",
+            "Properties" : [
+                { "Key" : "DeviceType", "String" : "engine" },
+                { "Key" : "Purpose", "String" : "fuel" },
+                // { "Key" : "BarColor", "String" : "5390C6FF" },
+                { "Key" : "LockedMaterial", "String" : "FusionCellHeavy" },
+                { "Key" : "ShowBurnRate", "Bool" : false },
+                { "Key" : "Icon", "String" : "Obj/Materials/FusionCellHeavy" },
+                { "Key" : "MaterialCapacity", "Int" : 2 }
+            ]
+        },
+        {
+            "Component" : "ShipEngine",
+            "Properties" : [
+                { "Key" : "Power", "Float" : 100 },
+                { "Key" : "EnergyCost", "Float" : 500 },
+                { "Key" : "FlameSize", "Vector2" : { "x" : 3, "y" : 50 } },
+                { "Key" : "WorksIn", "StringSet" : [ "Universe" ] }
+            ]
+        },
+        {
+            "Component" : "ShipCombatEngine",
+            "Properties" : [
+                { "Key" : "ShipEngineId" , "String" : "FTLDrive" }
+            ]
+        },
+        {
+            // "Don't try to fix the lingering firefly visual effect,
+            // it's going to require serious changes to the vfx system,
+            // and it's not worth it
+            "Component" : "VFX",
+            "Properties" : [
+                { "Key" : "IsCosmetic", "Bool" : false },
+                { "Key" : "IsLinkedToThrust", "Bool" : true },
+                { "Key" : "Id_U", "String" : "VFXParticlesFTLDriveU" },
+                { "Key" : "Id_D", "String" : "VFXParticlesFTLDriveD" },
+                { "Key" : "Id_L", "String" : "VFXParticlesFTLDriveL" },
+                { "Key" : "Id_R", "String" : "VFXParticlesFTLDriveR" },
+                { "Key" : "Offsets", "Vector2Set" : [
+                    { "x" : 0, "y" : -3 },
+                    { "x" : -3, "y" : 0 },
+                    { "x" : 0, "y" : 4 },
+                    { "x" : 3, "y" : 0 }
+                ] }
+            ]
+        },
+        {
+            "Component" : "Constructable",
+            "Properties" : [
+                { "Key" : "Placement", "String" : "InSpaceAttached" },
+                { "Key" : "WorkAmount", "Int" : 3000 },
+                {
+                    "Key" : "Contents",
+                    "RawMaterials" : [
+                        { "TypeId" : "TitaniumPlate", "StackSize" : 15 },
+                        { "TypeId" : "GoldWire", "StackSize" : 5 },
+                        { "TypeId" : "OpticalFiber", "StackSize" : 5 },
+                        { "TypeId" : "Microchip3", "StackSize" : 3 },
+                        { "TypeId" : "NuclearCell", "StackSize" : 1 }
+                    ]
+                }
+            ]
+        }
+    ]
+}

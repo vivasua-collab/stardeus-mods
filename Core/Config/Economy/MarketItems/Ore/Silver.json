@@ -1,0 +1,11 @@
+{
+    "Id" : "Obj/Materials/Silver",
+    "Type" : "CFD",
+    "Groups" : [ "Ore" ],
+    "Value" : 360.0,
+    "Rarity" : 0.06,
+    "TraderQuantity" : 3.0,
+    "OnlineShopQuantity" : 20,
+    "MinSectorDifficulty" : 0.41,
+    "Volatility" : 0.0019
+}

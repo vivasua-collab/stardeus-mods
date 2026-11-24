@@ -1,0 +1,7 @@
+{
+    "Id" : "Text/ResearchName",
+    "TextSkipAutoScale" : true,
+
+    "Color" : "UI/Text/Dark",
+    "TextOverflowMode" : "Ellipsis"
+}

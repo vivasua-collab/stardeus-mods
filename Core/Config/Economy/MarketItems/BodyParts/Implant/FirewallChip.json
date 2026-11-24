@@ -1,0 +1,9 @@
+{
+    "Id" : "Obj/Parts/Implant/FirewallChip",
+    "Type" : "CFD",
+    "Groups" : [ "BodyPart", "Robotics" ],
+    "Value" : 1200.0,
+    "Rarity" : 0.33,
+    "MinSectorDifficulty" : 0.4,
+    "Volatility" : 0.00237
+}

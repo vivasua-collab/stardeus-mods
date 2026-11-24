@@ -1,0 +1,75 @@
+// Fighter Class: Small, fast, one or two crew, dogfighting, scouting.
+{
+    "Id" : "Fighter",
+    // Fighter ships are smallest, so if something can be called a ship, it can
+    // be a fighter. So we'll have it start at as little as 50 tiles
+    "MinSize" : 50,
+    "MaxSize" : 1000,
+    "UnlockPrice" : 3000,
+    "DerelictSizeMin" : 0.05,
+    "DerelictSizeMax" : 0.1,
+    "DerelictWidthMin" : 0.5,
+    "DerelictWidthMax" : 0.6,
+    "MinEnergy" : 200,
+    "NPCDeviceRepairHealthPerHour" : 300,
+
+    "WeaponsTier" : 1,
+    "MaxClassPoints" : 22,
+    "MaxPointDefense" : 0,
+
+    "MaxShields" : 1,
+    "MinShields" : 0,
+
+    "Visual_EngineCurvatureSign" : 1,
+    "Visual_EnginesPerRow" : 4,
+    "Visual_EngineDensity" : 0.25,
+    "Visual_DeviceMaxScale" : 1.0,
+
+    "CombatMotionHover" : 1.0,
+    "CombatMotionRotation" : 3.0,
+    "CombatMotionSpeed" : 1.0,
+    "ViewZoneWidth" : [
+        0.0, 0.5,
+        1.0, 0.75
+    ],
+
+    "CombatBreachCapsuleChance" : 0.00,
+    "NoShieldsChance" : 0.85,
+
+    "BaseEvasion" : 0.15,
+
+    "FluxBonus" : 210,
+    "MaxFluxCapacity" : 500,
+    "MaxFluxVents" : 2,
+
+    "HPBonus" : 200,
+
+    "FluxSoftVentPerHour" : 110,
+
+    // NPC fighters will be around 300
+    "NPCSizeRange" : [
+        0.0, 150,
+        0.1, 200,
+        0.5, 300,
+        0.9, 400,
+        1.0, 500
+    ],
+    "NumThrustersChance" : [
+        0.0, 1.0,
+        1.0, 2.0
+    ],
+    "NumShortRangeDrivesChance" : [
+        0.0, 1.0,
+        1.0, 1.0
+    ],
+    "NumLongRangeDrivesChance" : [
+        0.0, 0.0,
+        1.0, 0.0
+    ],
+    "Rarity" : 0.4,
+    "OriginDifficultyChance" : [
+        0.0, 1.0,
+        0.7, 0.5,
+        1.0, 0.5
+    ]
+}

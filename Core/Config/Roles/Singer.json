@@ -1,0 +1,16 @@
+{
+    "Id" : "Singer",
+    "Species" : [ "Human" ],
+    "AgePhaseIds" : [ "YoungAdult", "MidLife", "Retirement" ],
+    "RoleTypes" : [ "Dumb", "Poor" ],
+    "AdjustsSkills" : [
+        {
+            "JobId" : "Social",
+            "Adjustment" : 4
+        },
+        {
+            "JobId" : "Mining",
+            "Adjustment" : -1
+        }
+    ]
+}

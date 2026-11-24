@@ -1,0 +1,10 @@
+{
+    "Id" : "Obj/Materials/Quartz",
+    "Type" : "CFD",
+    "Groups" : [ "Ore" ],
+    "Value" : 35.0,
+    "Rarity" : 0.1,
+    "TraderQuantity" : 300.0,
+    "OnlineShopQuantity" : 50,
+    "Volatility" : 0.0024
+}

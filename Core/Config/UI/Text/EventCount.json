@@ -1,0 +1,9 @@
+{
+    "Id" : "Text/EventCount",
+
+    "Color" : "UI/Text/Main",
+    "Alpha" : 1,
+
+    "TextFontSize" : 18,
+    "TextOverflowMode" : "Overflow"
+}

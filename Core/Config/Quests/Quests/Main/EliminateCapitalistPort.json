@@ -1,0 +1,99 @@
+{
+    "QuestFlags" : [ "Main", "Unique" ],
+    "TitleKey" : "quest.main.eliminate.capitalist.port.title",
+    "DescKey" : "quest.main.eliminate.capitalist.port.desc",
+    "QuestProviders" : [
+        "Port"
+    ],
+    "SetOnComplete" : [
+        "EliminatedCapitalistPort",
+        "HasTelescopeResearch"
+    ],
+    "FailWhen": [
+        "EliminatedPirateDen"
+    ],
+    "Variables" : [
+        {
+            "Id" : "CapitalistPort",
+            "Type" : "SectorPOI",
+            "Config" : [
+                { "Key" : "SharedVar_LoadPOIId", "String" : "Main_CapitalistPortId" },
+                { "Key" : "MustExistOnLoad", "Bool" : false }
+            ]
+        }
+    ],
+    "Steps" : [
+        {
+            "Id" : "ReachPlanet",
+            "Type" : "GoToTargetSector",
+            "StepFlags" : [ "ActiveOnStart" ],
+            "SetOnComplete" : [
+                "ReachedPlanet"
+            ],
+            "Config" : [
+                { "Key" : "Var_Target", "String" : "CapitalistPort" },
+                { "Key" : "MakeHabitable", "Bool" : true }
+            ]
+        },
+        {
+            "Id" : "NukeSector",
+            "Type" : "NukeSector",
+            "ActivateWhen": [
+                "ReachedPlanet"
+            ],
+            "SetOnComplete": [
+                "NukedSector"
+            ],
+            // "StateStoryEvents" : {
+            //     "Completed" : "Space/PirateShipAttack"
+            // },
+            "Config" : [
+                { "Key" : "Var_Target", "String" : "CapitalistPort" }
+            ]
+        },
+        {
+            "Id" : "ReceiveReward",
+            "Type" : "InteractWithSO",
+            "StepFlags" : [ "HideInactive", "CompletesQuest" ],
+            "TitleKey": "verb.communicate.with",
+            "ActivateWhen": [
+                "NukedSector"
+            ],
+            "Config" : [
+                { "Key" : "QuestProvider", "Bool" : true }
+                // { "Key" : "OfferQuestId", "String" : "Main/EliminatePirateDen" }
+            ]
+        }
+    ],
+    "Rewards" : [
+        {
+            "Id" : "CashMain",
+            "Type" : "Money_NetWorth",
+            "Config" : [
+                { "Key" : "NetWorthCurve", "FloatSet" : [
+                    0.0, 0.02,
+                    0.95, 0.1,
+                    1.0, 0.2
+                ] },
+                { "Key" : "AmountMin", "Int" : 20000 },
+                { "Key" : "AmountMax", "Int" : 200000 }
+            ]
+        },
+        {
+            "Id" : "PirateAttitude",
+            "Type" : "FactionAttitude",
+            "Config" : [
+                { "Key" : "FactionId", "String" : "Pirate" },
+                { "Key" : "AttitudeChange", "Int" : 100 }
+            ]
+        },
+        {
+            "Id" : "Telescope",
+            "Type" : "Research",
+            "RewardFlags" : [ "PackageContent" ],
+            "Config" : [
+                { "Key" : "Definition", "String" : "Research/Scanning/Telescope" }
+            ]
+        }
+    ]
+}

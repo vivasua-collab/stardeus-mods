@@ -1,0 +1,74 @@
+{
+    "Name": "Dark",
+    "Colors": {
+        "White": "#F5F5F5",
+        "Black": "#000000",
+        "Bright": "#C2A78E",
+
+        "PanelHeader": "#0D0D0D",
+        "PanelTop": "#303030",
+        "PanelContent": "#222222",
+        "PanelFooter": "#151515",
+
+        "ButtonPanel": "#333333",
+        "ButtonPanelFancy": "#505050",
+
+        "Accent": "#CE9D29",
+
+        "AlertYellow": "Accent",
+
+        "Button1": "#404040",
+        "Button2": "#262626",
+        "Button3": "#262626",
+        "InputHighlight": "#555555"
+    },
+    // Default's "-S80" disabled states do nothing on greys (no saturation to remove),
+    // and its alpha-blended list items vanish on dark bodies
+    "Selectables": {
+        "Button1": {
+            "Colors": {
+                "Normal": "Button1",
+                "Highlighted": "Button1+L5",
+                "Pressed": "Button1+L10",
+                "Selected": "Button1+L5",
+                "Disabled": "Button1-A60"
+            }
+        },
+        "Button2": {
+            "Colors": {
+                "Normal": "Button2",
+                "Highlighted": "Button2+L5",
+                "Pressed": "Button2+L10",
+                "Selected": "Button2+L5",
+                "Disabled": "Button2-A60"
+            }
+        },
+        "ButtonPanel": {
+            "Colors": {
+                "Normal": "ButtonPanelFancy",
+                "Highlighted": "ButtonPanelFancy+L5",
+                "Pressed": "ButtonPanelFancy+L10",
+                "Selected": "ButtonPanelFancy+L5",
+                "Disabled": "ButtonPanelFancy-A60"
+            }
+        },
+        "ButtonPanel2": {
+            "Colors": {
+                "Normal": "ButtonPanelFancy2",
+                "Highlighted": "ButtonPanelFancy2+L5",
+                "Pressed": "ButtonPanelFancy2+L10",
+                "Selected": "ButtonPanelFancy2+L5",
+                "Disabled": "ButtonPanelFancy2-A60"
+            }
+        },
+        "ButtonContent": {
+            "Colors": {
+                "Normal": "#FFFFFF0A",
+                "Highlighted": "#FFFFFF1F",
+                "Pressed": "#FFFFFF2E",
+                "Selected": "#FFFFFF1F",
+                "Disabled": "#FFFFFF00"
+            }
+        }
+    }
+}

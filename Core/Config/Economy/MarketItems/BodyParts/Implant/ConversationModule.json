@@ -1,0 +1,9 @@
+{
+    "Id" : "Obj/Parts/Implant/ConversationModule",
+    "Type" : "CFD",
+    "Groups" : [ "BodyPart", "Robotics" ],
+    "Value" : 650.0,
+    "Rarity" : 0.5,
+    "MinSectorDifficulty" : 0.0,
+    "Volatility" : 0.00444
+}

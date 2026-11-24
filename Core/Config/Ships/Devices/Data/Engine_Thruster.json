@@ -1,0 +1,26 @@
+{
+    "Id" : "Engine_Thruster",
+    "DefId" : "Objects/Devices/Thruster",
+    "Tier" : 1,
+    "ClassPoints" : 1,
+
+    // if it would only have one rotation:
+    // "ZoneSpriteId" : "Objects/Devices/ShredderCannon_ZoneView",
+
+    // if it has multiple rotations:
+    "ZoneSpriteId_D" : "Objects/Devices/Thruster_U",
+    "ZoneSpriteId_L" : "Objects/Devices/Thruster_R",
+    "ZoneSpriteId_U" : "Objects/Devices/Thruster_D",
+    "ZoneSpriteId_R" : "Objects/Devices/Thruster_L",
+
+    "ZoneSpriteScale" : 0.5,
+
+    "HP" : 100,
+
+    // common device
+    "Rarity" : 1.0,
+
+    "TargetTypeId" : "ShipEngine_Thruster",
+    "EnergyCostPassive": 0,
+    "EnergyCostActive": 15
+}

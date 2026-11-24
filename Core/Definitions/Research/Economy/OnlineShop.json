@@ -1,0 +1,25 @@
+{
+    "Id" : "Research/Economy/OnlineShop",
+    "Tier" : 1,
+    "IsAbstract" : true,
+    "PreviewIcon" : "Icons/Color/Trade",
+    "Researchable" : {
+        "IsTreeNode" : true,
+        "Prerequisites" : [
+            "Research/Economy/Wallet"
+        ],
+        "UnlockEffects" : [
+            "OnlineShopUnlocked"
+        ],
+        "DatoidCosts" : [
+            {
+                "TypeId" : "DatoidBasic",
+                "StackSize" : 5
+            },
+            {
+                "TypeId" : "DatoidTech",
+                "StackSize" : 3
+            }
+        ]
+    }
+}

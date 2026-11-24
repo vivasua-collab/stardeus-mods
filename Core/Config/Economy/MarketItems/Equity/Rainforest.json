@@ -1,0 +1,7 @@
+{
+    "Id" : "Rainforest",
+    "Type" : "Equity",
+    "Groups" : [ "Material", "Equipment", "Food" ],
+    "Value" : 6800.0,
+    "Volatility" : 0.0581
+}

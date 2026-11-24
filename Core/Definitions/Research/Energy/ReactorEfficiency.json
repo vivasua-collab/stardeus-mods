@@ -1,0 +1,22 @@
+{
+    "Id" : "Research/Energy/ReactorEfficiency",
+    "Tier" : 2,
+    "IsAbstract" : true,
+    "PreviewIcon" : "Icons/Color/Energy",
+    "Researchable" : {
+        "IsTreeNode" : true,
+        "Prerequisites" : [
+            "Research/Energy/Reactor"
+        ],
+        "DatoidCosts" : [
+            {
+                "TypeId" : "DatoidBasic",
+                "StackSize" : 18
+            },
+            {
+                "TypeId" : "DatoidTech",
+                "StackSize" : 7
+            }
+        ]
+    }
+}

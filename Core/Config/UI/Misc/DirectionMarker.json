@@ -1,0 +1,8 @@
+{
+    "Id" : "Misc/DirectionMarker",
+
+    "Color" : "FFFFFF",
+    "Alpha" : 0.9,
+
+    "Image" : "UI/Misc/DirectionMarker"
+}

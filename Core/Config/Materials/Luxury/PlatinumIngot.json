@@ -1,0 +1,8 @@
+{
+    "Id" : "PlatinumIngot",
+    "IsComposite" : true,
+    "IconId" : "Obj/Materials/PlatinumIngot",
+    "EnergyOutput" : 1570.0,
+    "GroupId" : "Plates",
+    "Rarity" : 15
+}

@@ -1,0 +1,11 @@
+{
+    "Id" : "ShipHyperTrail01",
+    "Probability" : 1.0,
+    "IsConstantSizeInStarmap" : false,
+    "StarmapSizeMul" : 2.0,
+    "StarfieldSizeMul" : 0.25,
+    "Sprite" : "NoAtlas/Transparent",
+    "VisualEffect" : "VFXShipHyperTrail",
+    "VisualEffectSize_Starmap" : 200.0,
+    "VisualEffectSize_Starfield" : 10.0
+}

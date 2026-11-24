@@ -1,0 +1,17 @@
+{
+    // NumRaids survived -> multiplier on raid points (0..1).
+    // Keeps the first few raids small; reaches full strength after ~5 raids and stays there.
+    // Held flat past raid 5 (was 1.5 at raid 100): wealth and headcount already both grow
+    // across a run, so a third progression multiplier keyed on raids-survived double-counted
+    // the same growth - it was silently applying up to 1.5x on top of everything else by the
+    // late game. Popular colony sim's equivalent ramp only eases the opening too.
+    "FloatSet" : [
+        0,  0.20,
+        1,  0.35,
+        2,  0.50,
+        3,  0.65,
+        4,  0.80,
+        5,  1.00,
+        100, 1.00
+    ]
+}

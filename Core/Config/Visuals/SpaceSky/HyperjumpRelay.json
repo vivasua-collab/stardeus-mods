@@ -1,0 +1,7 @@
+{
+    "Id" : "HyperjumpRelay",
+    "Templates" : [
+        "HyperjumpRelay"
+    ],
+    "AmbientStorm" : "RelayFlashes"
+}

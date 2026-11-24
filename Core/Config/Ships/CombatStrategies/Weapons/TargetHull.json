@@ -1,0 +1,17 @@
+{
+    "TargetPriorityKeys" : [
+        "ShipHull"
+    ],
+    "TargetPriorityVals" : [
+        4
+    ],
+
+    "MinOffensiveness" : 0.0,
+    "MaxOffensiveness" : 0.5,
+    "StrengthDifferenceChance" : [
+        -1.0, 0.5,
+        0.0, 1.0,
+        0.5, 0.5,
+        1.0, 0.1
+    ]
+}

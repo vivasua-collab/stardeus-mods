@@ -1,0 +1,17 @@
+{
+    "Id" : "ServiceAnimal",
+    "LovesJobTypes" : [ ],
+    "IncompatibleTraitIds" : [ "Pacifist" ],
+    "Species" : [ "Dog", "Cat", "Pig" ],
+    "RoleTypes" : [ "Good" ],
+    "AdjustsSkills" : [
+        {
+            "JobId" : "Social",
+            "Adjustment" : 2
+        },
+        {
+            "JobId" : "Melee",
+            "Adjustment" : 4
+        }
+    ]
+}

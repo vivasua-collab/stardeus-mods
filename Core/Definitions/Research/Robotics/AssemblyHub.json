@@ -1,0 +1,22 @@
+{
+    "Id" : "Research/Robotics/AssemblyHub",
+    "Tier" : 2,
+    "IsAbstract" : true,
+    "PreviewIcon" : "Icons/Color/Cog",
+    "Researchable" : {
+        "IsTreeNode" : true,
+        "Prerequisites" : [
+            "Research/Robotics/Docking"
+        ],
+        "DatoidCosts" : [
+            {
+                "TypeId" : "DatoidBasic",
+                "StackSize" : 21
+            },
+            {
+                "TypeId" : "DatoidTech",
+                "StackSize" : 9
+            }
+        ]
+    }
+}

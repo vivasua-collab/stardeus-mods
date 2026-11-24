@@ -1,0 +1,10 @@
+{
+    "Id" : "Panel/TextBG",
+
+    "Color" : "1E0E28",
+    "Alpha" : 0.65,
+
+    "Image" : "UI/Buttons/IconButtonBG",
+    "ImageType" : "Sliced",
+    "ImageBorderLBRT" : [ 8, 8, 8, 8 ]
+}

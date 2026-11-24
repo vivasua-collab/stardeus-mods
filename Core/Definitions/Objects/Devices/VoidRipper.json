@@ -1,0 +1,147 @@
+{
+    "ToolPath" : "SpaceTravel",
+    "Layer" : "Objects",
+    "ParentId" : "Objects/Devices/BaseDevice",
+    "Researchable" : {
+        "Prerequisites" : [
+            "Research/SpaceTravel/BlackHoles"
+        ]
+    },
+    "Spawnable" : {
+        "Category": "Warp",
+        "SkipOwned": 1,
+        "Chance" : 1.0,
+        "ChanceLocked" : 0.0
+    },
+    "Components" : [
+        {
+            "Component" : "TileTransform",
+            "Properties" : [
+                { "Key" : "Width", "Int" : 3 },
+                { "Key" : "Height", "Int" : 3 },
+                { "Key" : "CoverPercent", "Int" : 50 },
+                // { "Key" : "WorkSpot", "Vector2" : { "x" : 1, "y" : -1 } },
+                { "Key" : "OutPort", "Vector2" : { "x" : 1, "y" : -1 } },
+                // { "Key" : "InPort", "Vector2" : { "x" : 0, "y" : -1 } }
+                { "Key" : "IsRotatable", "Bool" : true }
+            ]
+        },
+        {
+            "Component" : "IndustrialEquipment",
+            "Properties" : [
+                { "Key" : "IsNoisy", "Bool" : true }
+            ]
+        },
+        {
+            "Component" : "ElectricNode",
+            "Properties" : [
+                { "Key" : "IsConsumerLowPriority", "Bool" : true }
+            ]
+        },
+        {
+            "Component" : "WithFuse",
+            "Properties" : [
+                { "Key" : "MalfunctionWeight", "Float": 0.75 }
+            ]
+        },
+        {
+            "Component" : "Reinstallable",
+            "Properties" : [
+                { "Key" : "IsAdvanced", "Bool" : true }
+            ]
+        },
+        { "Component" : "VoidRipper" },
+        {
+            "Component" : "Admirable",
+            "Properties" : [
+                { "Key" : "Amount", "Int" : 1 },
+                { "Key" : "Multiplier", "Float" : 0.1 },
+                { "Key" : "Chance", "Float" : 0.2 }
+            ]
+        },
+        {
+            "Component" : "TileGraphics",
+            "Properties" : [
+                { "Key" : "Type", "String": "Object" },
+                { "Key" : "Graphic", "String": "Objects/Devices/VoidRipper" },
+                { "Key" : "RotateGraphic", "Bool" : false },
+                { "Key" : "HasHeight", "Bool" : true }
+            ]
+        },
+        {
+            "Component" : "TileAnimation",
+            "Properties" : [
+                { "Key" : "Offset", "Vector2": { "x" : 0.0, "y" : 1.15 } },
+                { "Key" : "Size", "Vector2": { "x" : 2.5, "y" : 2.5 } },
+                { "Key" : "Direction", "Int" : 1 },
+                { "Key" : "BaseSprite", "String": "Objects/Devices/VoidRipper_Base" },
+                { "Key" : "AnimSprite", "String" : "Objects/DeviceAnims/VoidRipper_Anim" },
+                { "Key" : "CopyAnimSprite", "Bool" : false },
+                { "Key" : "Speed", "Float": 1.0 },
+                { "Key" : "SpriteOrder", "String": "AboveAnyTile" },
+                { "Key" : "FramePrefix", "String": "F" },
+                { "Key" : "NumFrames", "Int": 49 },
+                { "Key" : "NeedsEnergy", "Bool": false }
+            ]
+        },
+        {
+            "Component" : "Flammable",
+            "Properties" : [
+                { "Key" : "IgnitionTemperatureCelsius", "Int" : 300 },
+                { "Key" : "FireChance", "Float" : 0.5 },
+                { "Key" : "BaseExplosionLevel", "Int" : 8 },
+                { "Key" : "FlammabilityCurve", "String" : "DeviceHigh" },
+                { "Key" : "ExplosivenessCurve", "String" : "DeviceHigh" }
+            ]
+        },
+        {
+            "Component" : "LightSource",
+            "Properties" : [
+                { "Key" : "Color", "IntSet" : [ 189, 64, 191, 192 ] },
+                { "Key" : "PulsateColor", "IntSet" : [ 189, 64, 191, 128 ] },
+                { "Key" : "FrequencyRange", "Vector2" : { "x" : 1, "y" : 1.5 } },
+                { "Key" : "Radius", "Float" : 8 }
+            ]
+        },
+        {
+            "Component" : "AudioSource",
+            "Properties" : [
+                { "Key" : "AmbienceClip", "String" : "Ambience/DeviceOperating06" },
+                { "Key" : "Rolloff", "Vector2" : { "x" : 4, "y" : 17 } },
+                { "Key" : "IsLinkedToEnergy", "Bool" : true }
+            ]
+        },
+        {
+            "Component" : "VFX",
+            "Properties" : [
+                { "Key" : "Id", "String" : "VFXParticlesVoidRipper" },
+                { "Key" : "IsLinkedToEnergy", "Bool" : false },
+                { "Key" : "Offset", "Vector2" : { "x" : 0.0, "y" : 0 } }
+            ]
+        },
+        {
+            "Component" : "Passability",
+            "Properties" : [
+                { "Key" : "IsPassable", "Bool" : false },
+                { "Key" : "IsWalkable", "Bool" : false },
+                { "Key" : "Difficulty", "Float" : 1 }
+            ]
+        },
+        {
+            "Component" : "Constructable",
+            "Properties" : [
+                { "Key" : "WorkAmount", "Int" : 2400 },
+                {
+                    "Key" : "Contents",
+                    "RawMaterials" : [
+                        { "TypeId" : "TitaniumPlate", "StackSize" : 8 },
+                        { "TypeId" : "OpticalFiber", "StackSize" : 6 },
+                        { "TypeId" : "Microchip2", "StackSize" : 3 },
+                        { "TypeId" : "GoldWire", "StackSize" : 3 },
+                        { "TypeId" : "NuclearCell", "StackSize" : 1 }
+                    ]
+                }
+            ]
+        }
+    ]
+}

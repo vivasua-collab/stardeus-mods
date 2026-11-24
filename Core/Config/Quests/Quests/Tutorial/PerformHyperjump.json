@@ -1,0 +1,60 @@
+{
+    "QuestFlags" : [ "Tutorial", "AutoAdd", "Unique" ],
+    "TitleKey" : "quest.PerformHyperjump",
+    "DescKey" : "quest.PerformHyperjump.desc",
+    "QuestProviders" : [
+        "ShipComputer"
+    ],
+    "Require" : {
+        "Days" : 15
+    },
+    "AvailableWhen" : [
+        "ReadyForTutorialQuests",
+        "IsFlightReady",
+        "HadExpedition",
+        "HasApproachedDerelict"
+    ],
+    "BoundTutorialIds": [
+        "SpaceTravel/Hyperjump"
+    ],
+    "SetOnComplete" : [ "HasHyperjumped" ],
+    "SetOnFail" : [ "HasHyperjumped" ],
+    "Steps" : [
+        {
+            "Id": "ResearchPropulsionFusion",
+            "Type" : "UnlockResearch",
+            "StepFlags" : [ "ActiveOnStart" ],
+            "Config" : [
+                { "Key" : "Research", "String" : "Research/SpaceTravel/PropulsionFusion" }
+            ],
+            "SetOnComplete" : [
+                "UnlockedPropulsionFusion"
+            ]
+        },
+        {
+            "Id": "HaveFusionDrive",
+            "Type" : "HaveOnGrid",
+            "Config" : [
+                { "Key" : "Definition", "String" : "Objects/Devices/FusionDrive" },
+                { "Key" : "Count", "Int" : 1 }
+            ],
+            "ActivateWhen" : [
+                "UnlockedPropulsionFusion"
+            ],
+            "SetOnComplete" : [
+                "HasFusionDrive"
+            ]
+        },
+        {
+            "Id": "MoveInHyperspace",
+            "Type" : "MoveInHyperspace",
+            "StepFlags": [ "CompletesQuest" ],
+            "ActivateWhen" : [
+                "HasFusionDrive"
+            ],
+            "Config" : [
+                { "Key" : "StarmapLayer", "String" : "Region" }
+            ]
+        }
+    ]
+}

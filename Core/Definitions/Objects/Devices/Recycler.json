@@ -1,0 +1,134 @@
+{
+    "ToolPath" : "Production",
+    "Layer" : "Objects",
+    "ParentId" : "Objects/Devices/BaseDevice",
+    "Researchable" : {
+        "Prerequisites" : [
+            "Research/Production/Recycling"
+        ]
+    },
+    "Spawnable" : {
+        "Category": "Production",
+        "Chance" : 0.9,
+        "ChanceLocked" : 0.4
+    },
+    "Components" : [
+        {
+            "Component" : "TileTransform",
+            "Properties" : [
+                { "Key" : "Width", "Int" : 3 },
+                { "Key" : "Height", "Int" : 3 },
+                { "Key" : "CoverPercent", "Int" : 75 },
+                { "Key" : "WorkSpot", "Vector2" : { "x" : 1, "y" : -1 } },
+                { "Key" : "OutPort", "Vector2" : { "x" : 1, "y" : -1 } },
+                { "Key" : "InPort", "Vector2" : { "x" : 1, "y" : -1 } }
+            ]
+        },
+        {
+            "Component" : "IndustrialEquipment",
+            "Properties" : [
+                { "Key" : "IsNoisy", "Bool" : true }
+            ]
+        },
+        {
+            "Component" : "ElectricNode",
+            "Properties" : [
+                { "Key" : "IsConsumer", "Bool" : true }
+            ]
+        },
+        {
+            "Component" : "WithFuse",
+            "Properties" : [
+                { "Key" : "MalfunctionWeight", "Float": 0.15 }
+            ]
+        },
+        {
+            "Component" : "VFX",
+            "Properties" : [
+                { "Key" : "Id", "String" : "VFXParticlesRecycler" },
+                { "Key" : "Offsets", "Vector2Set" : [
+                    { "x" : -0.36, "y" : 1.59 },
+                    { "x" : 0.34, "y" : 1.59 },
+                    { "x" : 0.36, "y" : 1 },
+                    { "x" : -0.35, "y" : 0.97 }
+                ] }
+            ]
+        },
+        {
+            "Component" : "HeatProducer",
+            "Properties" : [
+                { "Key" : "Rate", "Float" : 1 },
+                { "Key" : "Range", "Int" : 3 },
+                { "Key" : "CheckSameArea", "Bool" : true }
+            ]
+        },
+        {
+            "Component" : "Flammable",
+            "Properties" : [
+                { "Key" : "IgnitionTemperatureCelsius", "Int" : 500 },
+                { "Key" : "FireChance", "Float" : 0.5 },
+                { "Key" : "BaseExplosionLevel", "Int" : 2 },
+                { "Key" : "FlammabilityCurve", "String" : "Device" },
+                { "Key" : "ExplosivenessCurve", "String" : "DeviceLow" }
+            ]
+        },
+        { "Component" : "ExtraInfo" },
+        {
+            "Component" : "MultiCrafter",
+            "Properties" : [
+                { "Key" : "IdleWarnDefault", "Bool" : false },
+                { "Key" : "UIItemIcon", "String" : "Icons/Color/Recycling" },
+                { "Key" : "CraftKey", "String" : "verb.produce" },
+                { "Key" : "ProgressBarKey", "String" : "processing.bar" },
+                { "Key" : "CompatibleTypes", "StringSet" : [ "Waste", "Organic" ] }
+            ]
+        },
+        {
+            "Component" : "AudioSource",
+            "Properties" : [
+                { "Key" : "AmbienceClip", "String" : "Ambience/RecyclerHumm01" },
+                { "Key" : "Rolloff", "Vector2" : { "x" : 3, "y" : 15 } },
+                { "Key" : "IsLinkedToEnergy", "Bool" : true }
+            ]
+        },
+        {
+            "Component" : "LightSource",
+            "Properties" : [
+                { "Key" : "Radius", "Float" : 8 },
+                { "Key" : "Color", "IntSet" : [ 71, 153, 51, 128 ] }
+            ]
+        },
+        {
+            "Component" : "TileGraphics",
+            "Properties" : [
+                { "Key" : "Type", "String": "Object" },
+                { "Key" : "Graphic", "String": "Objects/Devices/Recycler" },
+                { "Key" : "HasHeight", "Bool" : true }
+            ]
+        },
+        {
+            "Component" : "Passability",
+            "Properties" : [
+                { "Key" : "IsPassable", "Bool" : false },
+                { "Key" : "IsWalkable", "Bool" : false },
+                { "Key" : "Difficulty", "Float" : 1 }
+            ]
+        },
+        {
+            "Component" : "Constructable",
+            "Properties" : [
+                { "Key" : "WorkAmount", "Int" : 1600 },
+                {
+                    "Key" : "Contents",
+                    "RawMaterials" : [
+                        { "TypeId" : "SteelPlate", "StackSize" : 4 },
+                        { "TypeId" : "Glass", "StackSize" : 2 },
+                        { "TypeId" : "Rubber", "StackSize" : 1 },
+                        { "TypeId" : "Microchip", "StackSize" : 1 },
+                        { "TypeId" : "CopperWire", "StackSize" : 1 }
+                    ]
+                }
+            ]
+        }
+    ]
+}

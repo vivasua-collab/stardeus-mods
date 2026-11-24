@@ -1,0 +1,21 @@
+{
+    "EventId": "ExpeditionFoundDamagedBot",
+    "Points": 20,
+    "OutcomeType": "Positive",
+    "EventFlags": [
+        "OnDemand",
+        "Expedition",
+        "ColonyGrowthRobo"
+    ],
+    "Properties": [
+        { "Key": "SpeciesId", "String": "Sentry" },
+        { "Key": "FailureChance", "Float": 0.17 }
+    ],
+    "MinRepeatDelayDays": 250,
+    "Require": {
+        "Days": 200,
+        "Friendlies": 12,
+        "SectorDifficulty": 0.6,
+        "ColonySizeDiff": 1
+    }
+}

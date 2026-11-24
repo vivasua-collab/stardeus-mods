@@ -1,0 +1,25 @@
+{
+    "Layer" : "Objects",
+    "ParentId" : "Objects/Cosmetics/Chess/ChessPawnW",
+    "DescKey" : "objects.cosmetics.chess.piece.desc",
+    "Spawnable" : {
+        "Category" : "Chess",
+        "SkipOwned" : 2,
+        "Chance" : 0.3,
+        "ChanceLocked" : 0.3
+    },
+    "Components" : [
+        {
+            "Component" : "TileGraphics",
+            "Properties" : [
+                { "Key" : "Graphic", "String": "Objects/Cosmetics/Chess/ChessRookB" }
+            ]
+        },
+        {
+            "Component" : "Admirable",
+            "Properties" : [
+                { "Key" : "FunSubject", "String" : "fun.subject.chessrook" }
+            ]
+        }
+    ]
+}

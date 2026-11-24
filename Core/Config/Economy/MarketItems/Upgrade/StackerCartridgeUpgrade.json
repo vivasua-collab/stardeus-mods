@@ -1,0 +1,12 @@
+{
+    "Id" : "Obj/Upgrades/StackerCartridgeUpgrade",
+    "Type" : "CFD",
+    "Groups" : [ "Upgrade", "RareUpgrade" ],
+    "Value" : 82000.0,
+    "Rarity" : 0.15,
+    "TraderQuantity" : 1.0,
+    "MaxTraderQuantity" : 1,
+    "MinSectorDifficulty" : 0.5,
+    "PlayerSellPriceMultiplier": 0.7,
+    "Volatility" : 0.0025
+}

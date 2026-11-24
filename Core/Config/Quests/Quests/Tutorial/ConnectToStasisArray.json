@@ -1,0 +1,157 @@
+{
+    "QuestFlags" : [ "Tutorial", "AutoAdd", "Unique" ],
+    "TitleKey" : "quest.ConnectToStasisArray",
+    "DescKey" : "quest.ConnectToStasisArray.desc",
+    "QuestProviders" : [
+        "ShipComputer"
+    ],
+    // Gated on research, not on the survivor area: that quest now sits in slot two, and
+    // keying off its bool would pull the stasis run forward next to production.
+    "AvailableWhen" : [
+        "ReadyForTutorialQuests",
+        "HasEstablishedResearch"
+    ],
+    // In scenarios without a survivor area this is the quest that teaches unifying the
+    // grid, so it has to advertise the page ConnectToSurvivorArea advertises elsewhere.
+    // Where both quests run, this one asks second and is dropped as already seen.
+    // OnStartTutorialId is implicitly bound, so it only counts down while tracked.
+    "OnStartTutorialId": "Electricity/UnifyingGrid",
+    "OnStartTutorialDelay": 10,
+    "SetOnComplete" : [ "ConnectedToStasis" ],
+    // if tutorial quest gets abandoned, we still want to move on with the other tutorials
+    "SetOnFail" : [ "ConnectedToStasis" ],
+    "Steps" : [
+        {
+            "Id": "RequireStasisArray",
+            "Type" : "RequireDeviceToExist",
+            "StepFlags" : [ "ActiveOnStart", "Secret", "FailsQuest" ],
+            "Config" : [
+                { "Key" : "Definition", "String" : "Objects/Devices/StasisArray" }
+            ]
+        },
+        {
+            // New Beginning starts with Winch locked, so on a split ship this is real
+            // research. Hides with the winch steps when the array shares the computer's
+            // island, and where Winch is already unlocked.
+            "Id": "HaveWinchDatoids",
+            "Type" : "HaveResearchDatoids",
+            "StepFlags" : [ "ActiveOnStart", "Optional" ],
+            "Config" : [
+                { "Key" : "Research", "String" : "Research/Construction/Winch" },
+                { "Key" : "MatType", "String" : "DatoidBasic" }
+            ],
+            "SetOnComplete" : [
+                "HasWinchDatoids"
+            ],
+            "CompleteAndHideWhen" : [
+                "MergeIslandsHidden"
+            ]
+        },
+        {
+            "Id": "ResearchWinch",
+            "Type" : "UnlockResearch",
+            "StepFlags" : [ "Optional", "HideInactive" ],
+            "Config" : [
+                { "Key" : "Research", "String" : "Research/Construction/Winch" }
+            ],
+            "ActivateWhen" : [
+                "HasWinchDatoids"
+            ],
+            "SetOnComplete" : [
+                "UnlockedWinch"
+            ],
+            "CompleteAndHideWhen" : [
+                "MergeIslandsHidden"
+            ]
+        },
+        {
+            "Id": "HaveWinchHook",
+            "Type" : "HaveOnGrid",
+            "StepFlags" : [ "Optional", "HideInactive" ],
+            "ActivateWhen" : [
+                "UnlockedWinch"
+            ],
+            "SetOnComplete" : [
+                "HasWinchHook"
+            ],
+            "CompleteAndHideWhen" : [
+                "MergeIslandsHidden"
+            ],
+            "CompleteWhen" : [
+                "IslandsConnected"
+            ],
+            "Config" : [
+                { "Key" : "Definition", "String" : "Objects/Devices/WinchHook" },
+                { "Key" : "Count", "Int" : 1 }
+            ]
+        },
+        {
+            "Id": "BuildWinchAnchor",
+            "Type" : "BuildTile",
+            "StepFlags" : [ "Optional", "HideInactive" ],
+            "ActivateWhen" : [
+                "UnlockedWinch"
+            ],
+            "SetOnComplete" : [
+                "HasWinchAnchor"
+            ],
+            "CompleteAndHideWhen" : [
+                "MergeIslandsHidden"
+            ],
+            "CompleteWhen" : [
+                "IslandsConnected"
+            ],
+            "Config" : [
+                { "Key" : "Definition", "String" : "Objects/Devices/WinchAnchor" },
+                { "Key" : "Count", "Int" : 1 }
+            ]
+        },
+        {
+            "Id": "ReelInStasisArray",
+            "Type" : "Info",
+            "StepFlags" : [ "Optional", "HideInactive" ],
+            "TitleKey" : "quest.ConnectToStasisArray.reel.in",
+            "DescKey" : "quest.ConnectToStasisArray.reel.in.tip",
+            "ActivateWhen" : [
+                "HasWinchHook",
+                "HasWinchAnchor"
+            ],
+            "CompleteAndHideWhen" : [
+                "MergeIslandsHidden"
+            ],
+            "CompleteWhen" : [
+                "IslandsConnected"
+            ]
+        },
+        {
+            "Id": "MergeIslandsCPUStasisArray",
+            "Type" : "MergeIslandsCPUStasisArray",
+            "StepFlags" : [ "ActiveOnStart", "Optional" ],
+            "SetOnHide" : [
+                "MergeIslandsHidden"
+            ],
+            "SetOnComplete" : [
+                "IslandsConnected"
+            ]
+        },
+        {
+            "Id": "BuildChainOfConnectors",
+            "Type" : "Info",
+            "TitleKey" : "quest.step.chain.connectors",
+            "DescKey" : "quest.ConnectToStasisArray.connectors.tip",
+            "StepFlags" : [ "ActiveOnStart", "Optional" ]
+        },
+        {
+            "Id": "ConnectStasisArray",
+            "Type" : "HaveOnGrid",
+            "StepFlags" : [ "ActiveOnStart", "CompletesQuest" ],
+            "TitleKey" : "quest.step.connect.to",
+            // blank DescKey should kill the tooltip
+            "DescKey" : "",
+            "Config" : [
+                { "Key" : "Definition", "String" : "Objects/Devices/StasisArray" },
+                { "Key" : "Count", "Int" : 1 }
+            ]
+        }
+    ]
+}

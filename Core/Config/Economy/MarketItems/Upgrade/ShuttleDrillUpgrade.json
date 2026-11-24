@@ -1,0 +1,12 @@
+{
+    "Id" : "Obj/Upgrades/ShuttleDrillUpgrade",
+    "Type" : "CFD",
+    "Groups" : [ "Upgrade" ],
+    "Value" : 2500.0,
+    "Rarity" : 0.2,
+    "TraderQuantity" : 1.0,
+    "MaxTraderQuantity" : 1,
+    "MinSectorDifficulty" : 0.65,
+    "PlayerBuyPriceMultiplier": 5.0,
+    "Volatility" : 0.0023
+}

@@ -1,0 +1,10 @@
+{
+    "Id" : "Caoutchouc",
+    "IsComposite" : true,
+    "IconId" : "Obj/Materials/Caoutchouc",
+    "Property" : "Solid",
+    "GroupId" : "Plants",
+    "InternalValue" : 23.0,
+    "EnergyOutput" : 615.0,
+    "Rarity" : 30
+}

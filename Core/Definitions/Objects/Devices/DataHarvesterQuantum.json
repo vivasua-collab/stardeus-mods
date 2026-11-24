@@ -1,0 +1,137 @@
+{
+    "ToolPath" : "Computing",
+    "Layer" : "Objects",
+    "ParentId" : "Objects/Devices/BaseDevice",
+    "Researchable" : {
+        "Prerequisites" : [
+            "Research/Computing/ResearchQuantum"
+        ]
+    },
+    "Spawnable" : {
+        "Category": "Research",
+        "Chance" : 1.0,
+        "ChanceLocked" : 0.05
+    },
+    "Components" : [
+        {
+            "Component" : "TileTransform",
+            "Properties" : [
+                { "Key" : "Width", "Int" : 2 },
+                { "Key" : "Height", "Int" : 2 },
+                { "Key" : "OutPort", "Vector2" : { "x" : 0, "y" : -1 } },
+                { "Key" : "InPort", "Vector2" : { "x" : 0, "y" : -1 } },
+                { "Key" : "IsRotatable", "Bool" : true }
+            ]
+        },
+        {
+            "Component" : "IndustrialEquipment",
+            "Properties" : [
+                { "Key" : "IsNoisy", "Bool" : true }
+            ]
+        },
+        {
+            "Component" : "ElectricNode",
+            "Properties" : [
+                { "Key" : "IsConsumer", "Bool" : true }
+            ]
+        },
+        {
+            "Component" : "WithFuse",
+            "Properties" : [
+                { "Key" : "MalfunctionWeight", "Float": 0.25 }
+            ]
+        },
+        {
+            "Component" : "Flammable",
+            "Properties" : [
+                { "Key" : "IgnitionTemperatureCelsius", "Int" : 350 },
+                { "Key" : "FireChance", "Float" : 0.6 },
+                { "Key" : "BaseExplosionLevel", "Int" : 5 },
+                { "Key" : "FlammabilityCurve", "String" : "DeviceHigh" },
+                { "Key" : "ExplosivenessCurve", "String" : "DeviceLow" }
+            ]
+        },
+        { "Component" : "ExtraInfo" },
+        {
+            "Component" : "MultiCrafter",
+            "Properties" : [
+                { "Key" : "UIItemIcon", "String" : "Icons/Color/Research" },
+                { "Key" : "CraftKey", "String" : "verb.produce" },
+                { "Key" : "ProgressBarKey", "String" : "producing.now" },
+                { "Key" : "SpeedMultiplier", "Float" : 1.0 },
+                { "Key" : "AutoHaulProduct", "Bool" : true },
+                { "Key" : "CompatibleTypes", "StringSet": [
+                    "DatoidNuclear",
+                    "DatoidQuantum",
+                    "DatoidAlien"
+                ] }
+            ]
+        },
+        {
+            "Component" : "TileGraphics",
+            "Properties" : [
+                { "Key" : "Type", "String": "Object" },
+                { "Key" : "Graphic", "String": "Objects/Devices/DataHarvesterQuantum" },
+                { "Key" : "RotateGraphic", "Bool" : false },
+                { "Key" : "HasHeight", "Bool" : true }
+            ]
+        },
+        {
+            "Component" : "TileAnimation",
+            "Properties" : [
+                { "Key" : "Offset", "Vector2": { "x" : 0.0, "y" : 0.285 } },
+                { "Key" : "Size", "Vector2": { "x" : 1.7, "y" : 1.7 } },
+                { "Key" : "BaseSprite", "String": "Objects/Devices/DataHarvesterQuantum_Base" },
+                { "Key" : "AnimSprite", "String" : "Objects/DeviceAnims/DataHarvesterQuantum_Anim" },
+                { "Key" : "CopyAnimSprite", "Bool" : false },
+                { "Key" : "Speed", "Float": 1.0 },
+                { "Key" : "SpriteOrder", "String": "BelowObjTile" },
+                { "Key" : "FramePrefix", "String": "F" },
+                { "Key" : "NumFrames", "Int": 24 },
+                { "Key" : "PingPong", "Bool": true },
+                { "Key" : "PingPongStillFrames", "Int": 4 },
+                { "Key" : "NeedsEnergy", "Bool": true }
+            ]
+        },
+        {
+            "Component" : "AudioSource",
+            "Properties" : [
+                { "Key" : "AmbienceClip", "String" : "Devices/StasisArraySFX" },
+                { "Key" : "Rolloff", "Vector2" : { "x" : 3, "y" : 15 } },
+                { "Key" : "IsLinkedToEnergy", "Bool" : true }
+            ]
+        },
+        {
+            "Component" : "VFX",
+            "Properties" : [
+                { "Key" : "Id", "String" : "VFXParticlesDataHarvesterQuantum" },
+                { "Key" : "Offset", "Vector2" : { "x" : 0, "y" : 0.35 } }
+            ]
+        },
+        {
+            "Component" : "Passability",
+            "Properties" : [
+                { "Key" : "IsPassable", "Bool" : false },
+                { "Key" : "IsWalkable", "Bool" : false },
+                { "Key" : "Difficulty", "Float" : 1 }
+            ]
+        },
+        {
+            "Component" : "Constructable",
+            "Properties" : [
+                { "Key" : "WorkAmount", "Int" : 2400 },
+                { "Key" : "CanDragRow", "Bool" : true },
+                {
+                    "Key" : "Contents",
+                    "RawMaterials" : [
+                        { "TypeId" : "TitaniumPlate", "StackSize" : 5 },
+                        { "TypeId" : "Glass", "StackSize" : 3 },
+                        { "TypeId" : "OpticalFiber", "StackSize" : 5 },
+                        { "TypeId" : "Microchip3", "StackSize" : 4 },
+                        { "TypeId" : "NuclearCell", "StackSize" : 1 }
+                    ]
+                }
+            ]
+        }
+    ]
+}

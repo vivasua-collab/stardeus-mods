@@ -1,0 +1,55 @@
+{
+    // Sandbags: cheap cover to fight from. CoverUtils counts cover close to the
+    // shooter for less, so firing over one's own sandbag does not give it to the enemy.
+    "ToolPath" : "Security",
+    "Layer" : "Objects",
+    "ParentId" : "BaseTile",
+    "NameKey" : "objects.defense.sandbag",
+    "Components" : [
+        {
+            "Component" : "TileTransform",
+            "Properties" : [
+                { "Key" : "IsRotatable", "Bool" : true },
+                // blocks up to 55% of a shot, a wall 75% (CoverUtils.FullCoverBlock)
+                { "Key" : "CoverPercent", "Int" : 55 }
+            ]
+        },
+        {
+            "Component" : "TileGraphics",
+            "Properties" : [
+                { "Key" : "Type", "String": "Object" },
+                // rendered from sandbag_gen.py: a pile that rises a little into the tile behind
+                { "Key" : "Graphic", "String": "Objects/Defenses/Sandbags01" },
+                { "Key" : "HasHeight", "Bool" : true }
+            ]
+        },
+        {
+            "Component" : "Passability",
+            "Properties" : [
+                { "Key" : "IsPassable", "Bool" : true },
+                { "Key" : "IsWalkable", "Bool" : true },
+                // the pathfinder goes around it when it can
+                { "Key" : "Difficulty", "Float" : 0.9 },
+                // and crossing it is a scramble
+                { "Key" : "MoveSpeedMul", "Float" : 0.35 },
+                // walked over, never stood on
+                { "Key" : "PassThroughOnly", "Bool" : true }
+            ]
+        },
+        { "Component" : "Reinstallable" },
+        {
+            "Component" : "Constructable",
+            "Properties" : [
+                { "Key" : "WorkAmount", "Int" : 300 },
+                { "Key" : "CanDragRow", "Bool" : true },
+                {
+                    "Key" : "Contents",
+                    "RawMaterials" : [
+                        { "TypeId" : "Soil", "StackSize" : 5 }
+                    ]
+                }
+            ]
+        },
+        { "Component" : "TileLabel" }
+    ]
+}

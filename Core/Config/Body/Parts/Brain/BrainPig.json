@@ -1,0 +1,11 @@
+{
+    "SlotTypeId" : "Brain",
+    "Compatibility" : "Biological",
+    "TargetSpecies" : [ "Pig" ],
+    "PartFlags" : [ "HoldsMind", "SupportsMindTransfer" ],
+    "AddsAbilities" : [
+        "DumbLabor"
+    ],
+    "ResistanceBase" : 2.0,
+    "Tier" : 2
+}

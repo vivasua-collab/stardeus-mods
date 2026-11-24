@@ -1,0 +1,15 @@
+{
+    // Raid adaptation days -> raid point multiplier (before Difficulty.AdaptationEffect eases
+    // it toward 1). Raids start a little gentler, grow over a run without losses, and fall
+    // after crew losses, then recover (see AdaptationGrowth.json, AdaptationLossDeath.json).
+    // The popular colony sim's curve with the adaptation days doubled, since one of our days
+    // is about half of its days of play. Adaptation runs from -120 to 200 (RaidAdaptation),
+    // so the top of the curve is about 1.47.
+    "FloatSet" : [
+        -60.0,  0.4,
+        0.0,    0.8,
+        60.0,   1.0,
+        120.0,  1.2,
+        240.0,  1.6
+    ]
+}

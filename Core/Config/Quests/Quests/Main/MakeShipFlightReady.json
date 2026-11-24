@@ -1,0 +1,106 @@
+{
+    "QuestFlags" : [ "Main", "AutoAdd", "Unique" ],
+    "TitleKey" : "quest.MakeShipFlightReady",
+    "DescKey" : "quest.MakeShipFlightReady.desc",
+    "QuestProviders" : [
+        "ShipComputer"
+    ],
+    // Offered together with the first expedition: the shuttle works in-sector without flight,
+    // and flight needs nothing the expedition brings back, so the player can make flight the
+    // priority. Flight is what opens other sectors and the derelict.
+    "AvailableWhen" : [
+        "ReadyForTutorialQuests",
+        "HasRadar"
+    ],
+    "SetOnComplete" : [ "IsFlightReady" ],
+    "Steps" : [
+        {
+            "Id": "HaveOneSection",
+            "Type" : "HaveOneSection",
+            "StepFlags" : [ "ActiveOnStart" ],
+            "SetOnComplete" : [
+                "HasOneSection"
+            ]
+        },
+        {
+            // New Beginning starts with Bridge and Propulsion locked, and they cost Tech
+            // Datoids, which no earlier quest there makes (Smelting teaches them after the
+            // first expedition). Without this step the node only reads "Locked". Completes
+            // and hides where Bridge is already unlocked.
+            "Id": "HaveBridgeTechDatoids",
+            "Type" : "HaveResearchDatoids",
+            "StepFlags" : [ "ActiveOnStart" ],
+            "Config" : [
+                { "Key" : "Research", "String" : "Research/SpaceTravel/Bridge" },
+                { "Key" : "MatType", "String" : "DatoidTech" }
+            ],
+            "SetOnComplete" : [
+                "HasBridgeTechDatoids"
+            ]
+        },
+        {
+            "Id": "ResearchSpaceTravel",
+            "Type" : "UnlockResearch",
+            "Config" : [
+                { "Key" : "Research", "String" : "Research/SpaceTravel/Bridge" }
+            ],
+            "ActivateWhen" : [
+                "HasBridgeTechDatoids"
+            ],
+            "SetOnComplete" : [
+                "UnlockedSpaceTravel"
+            ]
+        },
+        {
+            "Id": "ResearchPropulsion",
+            "Type" : "UnlockResearch",
+            "Config" : [
+                { "Key" : "Research", "String" : "Research/SpaceTravel/Propulsion" }
+            ],
+            "ActivateWhen" : [
+                "UnlockedSpaceTravel"
+            ],
+            "SetOnComplete" : [
+                "UnlockedPropulsion"
+            ]
+        },
+        {
+            "Id": "HaveBridge",
+            "Type" : "HaveOnGrid",
+            "Config" : [
+                { "Key" : "Definition", "String" : "Objects/Devices/BridgeControls" },
+                { "Key" : "Count", "Int" : 1 }
+            ],
+            "ActivateWhen" : [
+                "UnlockedSpaceTravel"
+            ],
+            "SetOnComplete" : [
+                "HasBridge"
+            ]
+        },
+        {
+            "Id": "HaveThruster",
+            "Type" : "HaveOnGrid",
+            "TooltipKey" : "quest.MakeShipFlightReady.thruster.tip",
+            "Config" : [
+                { "Key" : "Definition", "String" : "Objects/Devices/Thruster" },
+                { "Key" : "Count", "Int" : 2 }
+            ],
+            "ActivateWhen" : [
+                "UnlockedPropulsion"
+            ],
+            "SetOnComplete" : [
+                "HasThrusters"
+            ]
+        },
+        {
+            "Id": "MakeShipFlightReady",
+            "Type" : "MakeShipFlightReady",
+            "StepFlags" : [ "CompletesQuest" ],
+            "ActivateWhen" : [
+                "HasBridge",
+                "HasThrusters"
+            ]
+        }
+    ]
+}

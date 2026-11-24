@@ -1,0 +1,7 @@
+{
+    "SlotTypeId" : "Liver",
+    "Compatibility" : "Biological",
+    "Tier" : 3,
+    "ResistanceBase" : 5.0,
+    "CompatibleBodySizes" : [ "Medium", "Large" ]
+}

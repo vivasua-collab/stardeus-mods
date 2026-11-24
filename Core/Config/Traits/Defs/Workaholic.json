@@ -1,0 +1,18 @@
+{
+    "Id" : "Workaholic",
+    "IconId" : "Icons/Color/Briefcase",
+    "TypeId" : "Intellectual",
+    "Rarity" : 0.5,
+    "IncompatibleTraitIds" : [
+        "Lazy"
+    ],
+    "LovesJobTypes" : [
+        "Construction", "Research", "Crafting"
+    ],
+    "AdjustsSkills" : [
+        {
+            "JobId" : "Social",
+            "Adjustment" : -3
+        }
+    ]
+}

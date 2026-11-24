@@ -1,0 +1,22 @@
+{
+    "Layer" : "FreeEntities",
+    "ParentId" : "Obj/Parts/BasePartRobotic",
+    "NameKey" : "bodypart.Implant.Rebreather",
+    "Researchable" : {
+        "Prerequisites" : [ "Research/LifeSupport/GrowingPartsImproved" ]
+    },
+    "Components" : [
+        {
+            "Component" : "ObjGraphics",
+            "Properties" : [
+                { "Key" : "Graphic", "String": "Obj/BodyParts/Robotic2" }
+            ]
+        },
+        {
+            "Component" : "BodyPart",
+            "Properties" : [
+                { "Key" : "BodyPartDefId", "String" : "Implant/Rebreather" }
+            ]
+        }
+    ]
+}

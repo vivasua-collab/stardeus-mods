@@ -1,0 +1,9 @@
+{
+    "Id" : "Panel/TutorialMask",
+
+    "Alpha" : 0.5,
+    "Color" : "000000",
+
+    "Image" : "NoAtlas/WhiteSquare",
+    "ImageType" : "Simple"
+}

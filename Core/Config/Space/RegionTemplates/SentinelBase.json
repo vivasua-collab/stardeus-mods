@@ -1,0 +1,23 @@
+{
+    "Id" : "SentinelBase",
+    "ForceFaction" : "Sentinel",
+    "DifficultyChance" : [
+        0.0, 0.0,
+        0.4, 0.0,
+        0.5, 1.0,
+        0.75, 1.0,
+        0.8, 0.0,
+        1.0, 0.0
+    ],
+    "QuantityChance" : [
+        0.0, 1.0,
+        1.0, 1.0
+    ],
+    "ForbiddenNeighbors" : [
+        "VirusBase"
+    ],
+    "ForceSectors" : [
+        "Star",
+        "HyperjumpRelay"
+    ]
+}

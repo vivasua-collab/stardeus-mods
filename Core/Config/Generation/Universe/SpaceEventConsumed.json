@@ -1,0 +1,7 @@
+{
+    "Id" : "SpaceEventConsumed",
+    "NameKey" : "space.object.Space",
+    "MinDistanceBetweenSubObjects" : 4.5,
+    "MinExitDist" : 15,
+    "Icon" : "Icons/Color/DestinationGrey"
+}

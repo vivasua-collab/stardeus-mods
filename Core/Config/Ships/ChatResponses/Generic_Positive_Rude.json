@@ -1,0 +1,8 @@
+{
+    "ResponseType" : "Positive",
+    "TopicType" : "Generic",
+    "ToneType" : "Rude",
+    "MessageKeys" : [
+        "ship.chat.positive.rude.*"
+    ]
+}

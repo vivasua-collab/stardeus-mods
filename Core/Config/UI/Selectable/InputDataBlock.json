@@ -1,0 +1,18 @@
+{
+    "Id" : "Selectable/InputDataBlock",
+
+    "CBColorNormal" : "UI/Main/Primary-2",
+    "CBColorHighlighted" : "UI/Main/Primary-2",
+    "CBColorPressed" : "UI/Main/Primary-2",
+    "CBColorSelected" : "UI/Main/Primary-2",
+    "CBColorDisabled" : "UI/Grey/Primary-1",
+
+    "CBAlphaNormal" : 1.0,
+    "CBAlphaHighlighted" : 0.5,
+    "CBAlphaPressed" : 0.5,
+    "CBAlphaSelected" : 0.8,
+    "CBAlphaDisabled" : 1.0,
+
+    "CBColorMultiplier" : 1.0,
+    "CBFadeDuration" : 0.1
+}

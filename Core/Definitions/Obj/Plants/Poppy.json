@@ -1,0 +1,32 @@
+{
+    "Layer" : "FreeEntities",
+    "ParentId" : "Obj/Plants/BasePlant",
+    "Researchable" : {
+        "Prerequisites" : [ "Research/Habitation/Decorations" ]
+    },
+    "Components" : [
+        {
+            "Component" : "ObjGraphics",
+            "Properties" : [
+                { "Key" : "Graphic", "String": "Obj/Plants/Poppy/Poppy" }
+            ]
+        },
+        {
+            "Component" : "Plant",
+            "Properties" : [
+                { "Key" : "Size", "String" : "Small" },
+                {
+                    "Key" : "HarvestOutput",
+                    "RawMaterials" : [
+                        { "TypeId" : "PoppyHeads", "StackSize" : 1 },
+                        { "TypeId" : "PoppyPetals", "StackSize" : 1 }
+                    ]
+                },
+                { "Key" : "WaterUsePerDay", "Float" : 0.2 },
+                { "Key" : "WorkAmount", "Int" : 25 },
+                { "Key" : "GrowthRate", "Float" : 0.9 },
+                { "Key" : "GrowthAfterHarvest", "Float" : 0.05 }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,156 @@
+{
+    "ToolPath" : "Production",
+    "Layer" : "Objects",
+    "ParentId" : "Objects/Devices/BaseDevice",
+    "Researchable" : {
+        "Prerequisites" : [
+            "Research/Production/AssemblyImproved"
+        ]
+    },
+    "Spawnable" : {
+        "Category": "Production",
+        "Chance" : 1.0,
+        "ChanceLocked" : 0.5
+    },
+    "Components" : [
+        {
+            "Component" : "TileTransform",
+            "Properties" : [
+                { "Key" : "Width", "Int" : 2 },
+                { "Key" : "Height", "Int" : 1 },
+                { "Key" : "IsRotatable", "Bool" : true },
+                { "Key" : "InPort", "Vector2" : { "x" : 0, "y" : -1 } },
+                { "Key" : "OutPort", "Vector2" : { "x" : 0, "y" : -1 } }
+            ]
+        },
+        {
+            "Component" : "Flammable",
+            "Properties" : [
+                { "Key" : "IgnitionTemperatureCelsius", "Int" : 250 },
+                { "Key" : "FireChance", "Float" : 0.6 },
+                { "Key" : "BaseExplosionLevel", "Int" : 2 },
+                { "Key" : "FlammabilityCurve", "String" : "Device" },
+                { "Key" : "ExplosivenessCurve", "String" : "Device" }
+            ]
+        },
+        {
+            "Component" : "ElectricNode",
+            "Properties" : [
+                { "Key" : "Particles_D", "String" : "AssemblerFX" },
+                { "Key" : "Particles_U", "String" : "AssemblerFX" },
+                { "Key" : "IsConsumer", "Bool" : true }
+            ]
+        },
+        {
+            "Component" : "IndustrialEquipment",
+            "Properties" : [
+                { "Key" : "IsNoisy", "Bool" : true }
+            ]
+        },
+        {
+            "Component" : "WithFuse",
+            "Properties" : [
+                { "Key" : "MalfunctionWeight", "Float": 0.05 }
+            ]
+        },
+        {
+            "Component" : "TileGraphics",
+            "Properties" : [
+                { "Key" : "Type", "String": "Object" },
+                { "Key" : "Graphic", "String": "Objects/Devices/Assembler" },
+                { "Key" : "HasHeight", "Bool" : true }
+            ]
+        },
+        {
+            "Component" : "TileAnimation",
+            "Properties" : [
+                {
+                    "Key" : "BaseSprites",
+                    "StringSet": [
+                        // down
+                        "Objects/Devices/Assembler_Base",
+                        // left
+                        "Objects/Devices/Assembler",
+                        // up
+                        "Objects/Devices/Assembler_Base",
+                        // right
+                        "Objects/Devices/Assembler"
+                    ]
+                },
+                {
+                    "Key" : "SkipRotations", "StringSet" : [ "L", "R" ]
+                },
+                {
+                    "Key": "Offset",
+                    "Vector2" : { "x": 0.0, "y": 0.06 }
+                },
+                { "Key" : "Size", "Vector2": { "x" : 0.9, "y" : 0.9 } },
+                { "Key" : "Direction", "Int" : 1 },
+                { "Key" : "AnimSprite", "String" : "Objects/DeviceAnims/Assembler_Anim" },
+                // Since two devices use same animation (Mini oxygen pump and regular one)
+                // we need to copy the sprite, otherwise resizing it to a different scale will
+                // resize it for both devices
+                { "Key" : "CopyAnimSprite", "Bool" : true },
+                { "Key" : "Speed", "Float": 0.85 },
+                { "Key" : "SpriteOrder", "String": "BelowObjTile" },
+                { "Key" : "FramePrefix", "String": "F" },
+                { "Key" : "NumFrames", "Int": 24 },
+                { "Key" : "PingPong", "Bool": true },
+                { "Key" : "PingPongStillFrames", "Int": 4 },
+                { "Key" : "NeedsEnergy", "Bool": true }
+            ]
+        },
+        {
+            "Component" : "AudioSource",
+            "Properties" : [
+                { "Key" : "AmbienceClip", "String" : "Devices/AssemblerSFX" },
+                { "Key" : "Rolloff", "Vector2" : { "x" : 3, "y" : 15 } },
+                { "Key" : "IsLinkedToEnergy", "Bool" : true }
+            ]
+        },
+        { "Component" : "ExtraInfo" },
+        {
+            "Component" : "MultiCrafter",
+            "Properties" : [
+                { "Key" : "UIItemIcon", "String" : "Icons/Color/Cog" },
+                { "Key" : "CraftKey", "String" : "assemble" },
+                { "Key" : "DefaultPriority", "Int" : 3 },
+                { "Key" : "ProgressBarKey", "String" : "assembling.now" },
+                { "Key" : "SpeedMultiplier", "Float" : 1.0 },
+                { "Key" : "CompatibleTypes", "StringSet": [
+                    "Mechanical",
+                    "Robotics1",
+                    "Robotics2",
+                    "Electronics",
+                    "Hyperfuel",
+                    "Wire"
+                ] }
+            ]
+        },
+        {
+            "Component" : "Passability",
+            "Properties" : [
+                { "Key" : "IsPassable", "Bool" : false },
+                { "Key" : "IsWalkable", "Bool" : false },
+                { "Key" : "Difficulty", "Float" : 1 }
+            ]
+        },
+        {
+            "Component" : "Constructable",
+            "Properties" : [
+                { "Key" : "WorkAmount", "Int" : 1500 },
+                { "Key" : "CanDragRow", "Bool" : true },
+                {
+                    "Key" : "Contents",
+                    "RawMaterials" : [
+                        { "TypeId" : "TitaniumPlate", "StackSize" : 3 },
+                        { "TypeId" : "Gears", "StackSize" : 5 },
+                        { "TypeId" : "OpticalFiber", "StackSize" : 1 },
+                        { "TypeId" : "Microchip", "StackSize" : 1 },
+                        { "TypeId" : "GoldWire", "StackSize" : 5 }
+                    ]
+                }
+            ]
+        }
+    ]
+}

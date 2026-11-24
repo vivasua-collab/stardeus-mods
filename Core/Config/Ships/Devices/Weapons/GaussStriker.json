@@ -1,0 +1,43 @@
+{
+    "Id" : "GaussStriker",
+
+    "ProjectileVFX" : "AttackShipPlasmaVFX",
+    "ShotSoundFX" : "FX/GaussStrikerSFX",
+    "ShotSoundVol" : 1.0,
+
+    // TODO figure out units
+    "ProjectileSpeed" : 400.0,
+    // time before charging for the first shot
+    "WindupTimeMinutes" : 90,
+    // charge time in seconds real time at 1x speed before each shot
+    "ChargeTimeMinutes" : 120,
+    // time while animation of weapon firing is playing, and UI element will show firing state
+    "FiringTimeMinutes" : 10,
+
+    // flux generated for the shooter
+    "SoftFluxPerShot" : 500,
+    "HardFluxPerShot" : 25,
+
+    // When we hit an enemy with shield up, this is how much flux we will generate
+    // for the enemy
+    "SoftFluxPerShieldHit" : 0,
+    "HardFluxPerShieldHit" : 1000,
+
+    // Ballistic weapons do not penetrate shields at all
+    "ShieldPenetrateChance" : 0.0,
+
+    // Chance this weapon's own aim succeeds. Vs a ship it only picks the specifically
+    // targeted device over the hull (whether the shot connects at all is the target's
+    // Evade). Vs asteroids/meteors/capsules, and for point defense intercepting a
+    // missile, it is the full hit chance.
+    "Accuracy" : 0.90,
+
+    // will shake the shield on hit for that many seconds
+    "ShieldShakeAmt" : 3.0,
+
+    "Damage" : 1000,
+    "CreatesExplosion" : true,
+    "ExplosionRadius" : 7.0,
+    "DamageTypeId" : "Energy",
+    "WeaponTypeId" : "Plasma"
+}

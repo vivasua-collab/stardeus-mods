@@ -1,0 +1,12 @@
+{
+    "Type" : "Organics1",
+    "ProductDefId" : "Obj/Parts/Shoulder/ShoulderDog",
+    "ProductionTimeHours" : 168,
+    "EnergyCost" : 10,
+    "IgnoreMarket" : true,
+    "Ingredients" : [
+        { "TypeId" : "Protein", "StackSize" : 1 },
+        { "TypeId" : "Water", "StackSize" : 1 },
+        { "TypeId" : "StemCells", "StackSize" : 1 }
+    ]
+}

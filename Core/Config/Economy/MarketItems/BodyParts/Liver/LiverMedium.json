@@ -1,0 +1,9 @@
+{
+    "Id" : "Obj/Parts/Liver/LiverMedium",
+    "Type" : "CFD",
+    "Groups" : [ "BodyPart", "BlackMarket" ],
+    "Value" : 250.0,
+    "Rarity" : 0.1,
+    "MinSectorDifficulty" : 0.45,
+    "Volatility" : 0.00136
+}

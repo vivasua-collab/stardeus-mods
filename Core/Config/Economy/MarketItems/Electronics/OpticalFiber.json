@@ -1,0 +1,11 @@
+{
+    "Id" : "Obj/Materials/OpticalFiber",
+    "Type" : "CFD",
+    "Groups" : [ "Electronics" ],
+    "Value" : 150.0,
+    "Rarity" : 0.1,
+    "TraderQuantity" : 25.0,
+    "OnlineShopQuantity" : 10,
+    "MinSectorDifficulty" : 0.45,
+    "Volatility" : 0.0025
+}

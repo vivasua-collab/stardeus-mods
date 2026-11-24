@@ -1,0 +1,11 @@
+{
+    "Id" : "Deadly",
+    "Difficulty" : 1.0,
+    "Shadow" : "#3A0505",
+    "Mid" : "#D41A10",
+    "Highlight" : "#FF7040",
+    "Strength" : 1.0,
+    "Intensity" : 1.4,
+    "BrightnessRange" : 0.6,
+    "RimStrength" : 0.22
+}

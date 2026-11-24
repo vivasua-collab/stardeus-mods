@@ -1,0 +1,8 @@
+{
+    "Id" : "SilverIngot",
+    "IsComposite" : true,
+    "IconId" : "Obj/Materials/SilverIngot",
+    "EnergyOutput" : 925.0,
+    "GroupId" : "Plates",
+    "Rarity" : 30
+}

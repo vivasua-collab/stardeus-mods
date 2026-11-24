@@ -1,0 +1,35 @@
+{
+    "IsAbstract" : true,
+    "Layer" : "FreeEntities",
+    "ParentId" : "Obj/BaseObj",
+    "Components" : [
+        {
+            "Component" : "ObjHealth",
+            "Properties" : [
+                { "Key" : "Max", "Int" : 20 }
+            ]
+        },
+        { "Component" : "ObjQuality" },
+        { "Component" : "InventoryItem" },
+        {
+            "Component" : "Disposable",
+            "Properties" : [
+                { "Key" : "IsBiological", "Bool" : false }
+            ]
+        },
+        {
+            "Component" : "Flammable",
+            "Properties" : [
+                { "Key" : "IgnitionTemperatureCelsius", "Int" : 200 },
+                { "Key" : "FireChance", "Float" : 0.95 }
+            ]
+        },
+        {
+            "Component" : "ObjGraphics",
+            "Properties" : [
+                { "Key" : "Shader", "String" : "ObjFlat" },
+                { "Key" : "SelectableScale", "Float": 0.7 }
+            ]
+        }
+    ]
+}

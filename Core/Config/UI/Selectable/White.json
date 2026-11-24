@@ -1,0 +1,18 @@
+{
+    "Id" : "Selectable/White",
+
+    "CBColorNormal" : "FFFFFF",
+    "CBColorHighlighted" : "F5F5F5",
+    "CBColorPressed" : "C8C8C8",
+    "CBColorSelected" : "F5F5F5",
+    "CBColorDisabled" : "C8C8C8",
+
+    "CBAlphaNormal" : 1.0,
+    "CBAlphaHighlighted" : 1.0,
+    "CBAlphaPressed" : 1.0,
+    "CBAlphaSelected" : 1.0,
+    "CBAlphaDisabled" : 0.5,
+
+    "CBColorMultiplier" : 1.0,
+    "CBFadeDuration" : 0.1
+}

@@ -1,0 +1,26 @@
+{
+    "Id" : "Research/LifeSupport/PlanterImproved",
+    "Tier" : 2,
+    "IsAbstract" : true,
+    "PreviewIcon" : "Icons/Color/Leaf",
+    "Researchable" : {
+        "IsTreeNode" : true,
+        "Prerequisites" : [
+            "Research/LifeSupport/FoodProduction"
+        ],
+        "DatoidCosts" : [
+            {
+                "TypeId" : "DatoidBasic",
+                "StackSize" : 9
+            },
+            {
+                "TypeId" : "DatoidPhyto",
+                "StackSize" : 5
+            },
+            {
+                "TypeId" : "DatoidTech",
+                "StackSize" : 2
+            }
+        ]
+    }
+}

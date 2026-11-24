@@ -1,0 +1,19 @@
+{
+    "ToneType" : "Rude",
+    "FactionChanceKey" : [
+        "Pirate",
+        "Scavenger",
+        "Virus"
+    ],
+    "FactionChanceValue" : [
+        1.0,
+        1.0,
+        0.5
+    ],
+    "DefaultFactionChance" : 0.0,
+    "AttitudeChance" : [
+        -1.0, 1.0,
+        0.5, 0.7,
+        1.0, 0.5
+    ]
+}

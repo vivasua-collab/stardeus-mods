@@ -1,0 +1,11 @@
+{
+    "Id" : "Rock",
+    "IsComposite" : true,
+    "IconId" : "Obj/Materials/Rock",
+    "ProcessableDefId" : "Obj/Materials/Rock",
+    "GroupId" : "Ore",
+    "InternalValue" : 7.0,
+    "EnergyOutput" : 740.0,
+    "Rarity" : 75,
+    "MatRarity" : 0
+}

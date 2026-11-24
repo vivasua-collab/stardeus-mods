@@ -1,0 +1,75 @@
+{
+    "DefId" : "Obj/Equipment/Hats/SpaceHelmet01",
+    "SlotId" : "Helmet",
+    "SpriteId" : "Beings/Hats/Human/SpaceHelmet01/SpaceHelmet01",
+    "ColorGroupId" : "Suit",
+    "Rarity" : 1.0,
+    "CombatStrengthBonus" : 0.25,
+    "LooksShowFlags" : [
+        "Combat"
+    ],
+    "LooksHideFlags" : [
+        "SafeEnv"
+    ],
+    "HidesLookParts" : [
+        "Hair"
+    ],
+    "ProvidesStats" : [
+        {
+            "Component" : "SpaceSuitIntegrity",
+            "Properties" : [
+                { "Key" : "StateMul", "Float" : 0.0 },
+                { "Key" : "Amount", "Float" : 0.10 },
+                { "Key" : "CompoundLimit", "Float" : 1.0 }
+            ]
+        }
+    ],
+    "AddsStatModifiers" : [
+        {
+            "Component" : "TempMin",
+            "Properties" : [
+                { "Key" : "Value", "Float" : -10 },
+                { "Key" : "Type", "String" : "Adds" }
+            ]
+        },
+        {
+            "Component" : "TempMax",
+            "Properties" : [
+                { "Key" : "Value", "Float" : 15.0 },
+                { "Key" : "Type", "String" : "Adds" }
+            ]
+        },
+        {
+            "Component" : "ArmorSharp",
+            "Properties" : [
+                { "Key" : "StateMul", "Float" : 1.0 },
+                { "Key" : "Value", "Float" : 2 },
+                { "Key" : "Type", "String" : "Adds" }
+            ]
+        },
+        {
+            "Component" : "ArmorBlunt",
+            "Properties" : [
+                { "Key" : "StateMul", "Float" : 1.0 },
+                { "Key" : "Value", "Float" : 2 },
+                { "Key" : "Type", "String" : "Adds" }
+            ]
+        },
+        {
+            "Component" : "ArmorPiercing",
+            "Properties" : [
+                { "Key" : "StateMul", "Float" : 1.0 },
+                { "Key" : "Value", "Float" : 1 },
+                { "Key" : "Type", "String" : "Adds" }
+            ]
+        },
+        {
+            "Component" : "ArmorEnergy",
+            "Properties" : [
+                { "Key" : "StateMul", "Float" : 1.0 },
+                { "Key" : "Value", "Float" : 1 },
+                { "Key" : "Type", "String" : "Adds" }
+            ]
+        }
+    ]
+}

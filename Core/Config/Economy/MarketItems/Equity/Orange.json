@@ -1,0 +1,7 @@
+{
+    "Id" : "Orange",
+    "Type" : "Equity",
+    "Groups" : [ "Electronics", "Software" ],
+    "Value" : 175.0,
+    "Volatility" : 0.0181
+}

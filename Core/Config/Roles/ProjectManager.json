@@ -1,0 +1,14 @@
+{
+    "Id" : "ProjectManager",
+    "Species" : [ "Human" ],
+    "AgePhaseIds" : [ "YoungAdult", "MidLife", "Retirement" ],
+    "RoleTypes" : [ ],
+    "LovesJobTypes" : [ "Social" ],
+    "IncapableJobTypes" : [ "Construction", "Crafting" ],
+    "AdjustsSkills" : [
+        {
+            "JobId" : "Social",
+            "Adjustment" : 6
+        }
+    ]
+}

@@ -1,0 +1,31 @@
+{
+    "Layer" : "FreeEntities",
+    "ParentId" : "Obj/Materials/BaseMaterial",
+    "Researchable" : {
+        "Prerequisites" : [ "Research/Production/AssemblyAdvanced" ]
+    },
+    "Components" : [
+        {
+            "Component" : "ObjGraphics",
+            "Properties" : [
+                { "Key" : "Graphic", "String": "Obj/Materials/Microchip3" },
+                { "Key" : "Scale", "Float": 0.5 }
+            ]
+        },
+        {
+            "Component" : "Flammable",
+            "Properties" : [
+                { "Key" : "IsTemperatureResistant", "Bool" : false },
+                { "Key" : "IgnitionTemperatureCelsius", "Int" : 250 },
+                { "Key" : "FireChance", "Float" : 0.3 }
+            ]
+        },
+        {
+            "Component" : "UnstoredMat",
+            "Properties" : [
+                { "Key" : "Type", "String" : "Microchip3" },
+                { "Key" : "FixedSize", "Bool" : true }
+            ]
+        }
+    ]
+}

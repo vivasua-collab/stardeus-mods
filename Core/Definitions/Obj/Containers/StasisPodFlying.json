@@ -1,0 +1,54 @@
+{
+    "Layer" : "FreeEntities",
+    "IgnoreMarket" : true,
+    "ParentId" : "Obj/BaseObj",
+    "NameKey": "objects.devices.stasispod",
+    "DescKey": "objects.devices.stasispod.desc",
+    "Components" : [
+        {
+            "Component" : "ObjGraphics",
+            "Properties" : [
+                { "Key" : "Graphic", "String": "Objects/Devices/StasisPod_Flying_D" },
+                { "Key" : "Shader", "String" : "ObjAbove" },
+                // { "Key" : "Renderer", "String" : "VFXRendererObjAbove" },
+                { "Key" : "Scale", "Float" : 2 },
+                { "Key" : "HasShadow", "Bool" : true },
+                { "Key" : "IsAnimated", "Bool" : true },
+                { "Key" : "DoNotCull", "Bool" : true }
+            ]
+        },
+        {
+            "Component" : "ObjHealth",
+            "Properties" : [
+                { "Key" : "Max", "Int" : 1000 }
+            ]
+        },
+        {
+            "Component" : "Flammable",
+            "Properties" : [
+                { "Key" : "IsTemperatureResistant", "Bool": true }
+            ]
+        },
+        {
+            "Component" : "ParticleTrail",
+            "Properties" : [
+                { "Key" : "Particles", "String" : "SlowSmokeTrailFX" },
+                { "Key" : "ParticlesOffset", "Vector2" : { "x" : 0, "y" : 0 } },
+                { "Key" : "InheritScale", "Bool" : true },
+                { "Key" : "DestroyDelay", "Float" : 20 }
+            ]
+        },
+        {
+            "Component" : "Movable",
+            "Properties" : [
+                { "Key" : "IsForbidden", "Bool" : true }
+            ]
+        },
+        {
+            "Component" : "StasisPodFlying",
+            "Properties" : [
+                { "Key" : "ImpactExplosionLevel", "Int" : 4 }
+            ]
+        }
+    ]
+}

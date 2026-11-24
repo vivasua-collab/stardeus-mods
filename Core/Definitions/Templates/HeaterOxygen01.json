@@ -1,0 +1,79 @@
+{
+    "SkipToolListing": true,
+    "Layer": "Objects",
+    "Components": [
+        {
+            "Component": "TileTransform",
+            "Properties": [
+                {
+                    "Key": "Width",
+                    "Int": 1
+                },
+                {
+                    "Key": "Height",
+                    "Int": 2
+                }
+            ]
+        },
+        {
+            "Component": "Passability"
+        },
+        {
+            "Component": "TileGraphics",
+            "Properties": [
+                {
+                    "Key": "Graphic",
+                    "String": "Icons/White/Square"
+                }
+            ]
+        },
+        {
+            "Component": "Template",
+            "Properties": [
+                {
+                    "Key": "PlaceInTheMiddle",
+                    "Bool": true
+                },
+                {
+                    "Key": "Chance",
+                    "Float": 0.800000011920929
+                },
+                {
+                    "Key": "MinInstances",
+                    "Int": 1
+                },
+                {
+                    "Key": "MaxInstances",
+                    "Int": 5
+                },
+                {
+                    "Key": "Definitions",
+                    "StringSet": [
+                        "Objects/Devices/OxygenPump",
+                        "Objects/Devices/Heater"
+                    ]
+                },
+                {
+                    "Key": "Positions",
+                    "Vector2Set": [
+                        {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        {
+                            "x": 0.0,
+                            "y": 1.0
+                        }
+                    ]
+                },
+                {
+                    "Key": "Rotations",
+                    "StringSet": [
+                        "D",
+                        "D"
+                    ]
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,26 @@
+{
+    "Id" : "Research/Production/RemoteMining",
+    "Tier" : 3,
+    "IsAbstract" : true,
+    "PreviewIcon" : "Icons/Color/Drill",
+    "Researchable" : {
+        "IsTreeNode" : true,
+        "Prerequisites" : [
+            "Research/Production/Smelting"
+        ],
+        "DatoidCosts" : [
+            {
+                "TypeId" : "DatoidPhyto",
+                "StackSize" : 6
+            },
+            {
+                "TypeId" : "DatoidEnergy",
+                "StackSize" : 7
+            },
+            {
+                "TypeId" : "DatoidTechHigh",
+                "StackSize" : 8
+            }
+        ]
+    }
+}

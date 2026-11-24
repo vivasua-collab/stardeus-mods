@@ -1,0 +1,90 @@
+{
+    "ToolPath" : "Computing",
+    "Layer" : "Objects",
+    "ParentId" : "Objects/Devices/BaseDevice",
+    "TranslationVars" : [ "1" ],
+    "Researchable" : {
+        "Prerequisites" : [
+            "Research/Computing/CPU"
+        ]
+    },
+    "Spawnable" : {
+        "Category": "Computing",
+        "Chance" : 1.0,
+        "ChanceLocked" : 0.5
+    },
+    "Components" : [
+        {
+            "Component" : "TileTransform",
+            "Properties" : [
+                { "Key" : "IsRotatable", "Bool" : true },
+                { "Key" : "CoverPercent", "Int" : 33 }
+            ]
+        },
+        {
+            "Component" : "Flammable",
+            "Properties" : [
+                { "Key" : "IgnitionTemperatureCelsius", "Int" : 350 },
+                { "Key" : "FireChance", "Float" : 0.75 },
+                { "Key" : "BaseExplosionLevel", "Int" : 1 },
+                { "Key" : "FlammabilityCurve", "String" : "DeviceHigh" },
+                { "Key" : "ExplosivenessCurve", "String" : "DeviceLow" }
+            ]
+        },
+        {
+            "Component" : "TileGraphics",
+            "Properties" : [
+                { "Key" : "Type", "String": "Object" },
+                { "Key" : "Graphic", "String" : "Objects/Devices/CPUModuleMini" },
+                { "Key" : "HasHeight", "Bool" : true }
+            ]
+        },
+        {
+            "Component" : "CPUModule",
+            "Properties" : [
+                { "Key" : "Amount",  "Int" : 1 },
+                { "Key" : "EnergyCost", "Float" : 3 }
+            ]
+        },
+        {
+            "Component" : "ElectricNode",
+            "Properties" : [
+                { "Key" : "Particles_D", "String" : "ServerSmallFX" },
+                { "Key" : "Particles_U", "String" : "ServerSmallFX" },
+                { "Key" : "ParticlesEmitChance", "Float" : 0.5 },
+                { "Key" : "IsConsumerHighPriority", "Bool" : true }
+            ]
+        },
+        {
+            "Component" : "WithFuse",
+            "Properties" : [
+                { "Key" : "MalfunctionWeight", "Float": 0.05 }
+            ]
+        },
+        {
+            "Component" : "Passability",
+            "Properties" : [
+                { "Key" : "IsPassable", "Bool" : false },
+                { "Key" : "IsWalkable", "Bool" : false },
+                { "Key" : "Difficulty", "Float" : 1 }
+            ]
+        },
+        {
+            "Component" : "Constructable",
+            "Properties" : [
+                { "Key" : "WorkAmount", "Int" : 1000 },
+                { "Key" : "CanReplaceGroup", "String" : "CPUModule" },
+                { "Key" : "CanDragRow", "Bool" : true },
+                {
+                    "Key" : "Contents",
+                    "RawMaterials" : [
+                        { "TypeId" : "TitaniumPlate", "StackSize" : 2 },
+                        { "TypeId" : "CopperWire", "StackSize" : 3 },
+                        { "TypeId" : "Microchip", "StackSize" : 1 },
+                        { "TypeId" : "Transistor", "StackSize" : 3 }
+                    ]
+                }
+            ]
+        }
+    ]
+}

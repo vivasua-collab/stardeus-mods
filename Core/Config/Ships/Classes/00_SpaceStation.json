@@ -1,0 +1,74 @@
+// Space Station - special class, no engines
+{
+    "Id" : "SpaceStation",
+    "UnlockPrice" : 150000,
+
+    "MinSize": 1000,
+    "MaxSize": 0,
+    "DerelictSizeMin" : 0.5,
+    "DerelictSizeMax" : 1.0,
+    "DerelictWidthMin" : 1.0,
+    "DerelictWidthMax" : 1.0,
+    "MinEnergy" : 500,
+    "NPCDeviceRepairHealthPerHour" : 1800,
+
+    "WeaponsTier" : 4,
+    "MaxClassPoints" : 200,
+    "MaxPointDefense" : 8,
+
+    "MaxShields" : 6,
+    "MinShields" : 2,
+
+    // Irrelevant for space stations, but kept for consistency
+    "Visual_EngineCurvatureSign" : 1,
+    "Visual_EnginesPerRow" : 1,
+    "Visual_EngineDensity" : 0.01,
+    "Visual_DeviceMaxScale" : 4.0,
+
+    "CombatMotionHover" : 5.0,
+    "CombatMotionRotation" : 1.0,
+    "CombatMotionSpeed" : 0.5,
+
+    "FluxSoftVentPerHour" : 1450,
+
+    "FluxBonus" : 3100,
+    "MaxFluxCapacity" : 9000,
+    "MaxFluxVents" : 32,
+    "HPBonus" : 25000,
+    "NPCHPBonus" : 650,
+
+    "BaseEvasion" : 0.0,
+
+    "ViewZoneWidth" : [
+        0.0, 0.5,
+        0.5, 1.0,
+        1.0, 0.5
+    ],
+
+    "CombatBreachCapsuleChance" : 0.15,
+
+    "NPCSizeRange" : [
+        0.0, 10000,
+        0.5, 25000,
+        0.9, 35000,
+        1.0, 50000
+    ],
+    "NumThrustersChance" : [
+        0.0, 0.0,
+        1.0, 0.0
+    ],
+    "NumShortRangeDrivesChance" : [
+        0.0, 0.0,
+        1.0, 0.0
+    ],
+    "NumLongRangeDrivesChance" : [
+        0.0, 0.0,
+        1.0, 0.0
+    ],
+    // never spawn space stations as random ship
+    "Rarity" : -1.0,
+    "OriginDifficultyChance" : [
+        0.0, 0.0,
+        1.0, 0.0
+    ]
+}

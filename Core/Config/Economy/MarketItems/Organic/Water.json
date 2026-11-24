@@ -1,0 +1,12 @@
+{
+    "Id" : "Obj/Materials/Water",
+    "Type" : "CFD",
+    "Groups" : [ "Organic" ],
+    "Value" : 30.0,
+    "Rarity" : 0.6,
+    "TraderQuantity" : 500.0,
+    // If this is 0, it will still generate in stock but with default chance through market groups
+    "CustomChanceInStock" : 0.95,
+    "OnlineShopQuantity" : 200,
+    "Volatility" : 0.003
+}

@@ -1,0 +1,34 @@
+{
+    "Layer" : "FreeEntities",
+    "ParentId" : "Obj/Plants/BasePlant",
+    "Researchable" : {
+        "Prerequisites" : [
+            "Research/LifeSupport/FoodProduction"
+        ]
+    },
+    "Components" : [
+        {
+            "Component" : "ObjGraphics",
+            "Properties" : [
+                { "Key" : "Graphic", "String": "Obj/Plants/Wheat/Wheat" }
+            ]
+        },
+        {
+            "Component" : "Plant",
+            "Properties" : [
+                { "Key" : "Size", "String" : "Medium" },
+                {
+                    "Key" : "HarvestOutput",
+                    "RawMaterials" : [
+                        { "TypeId" : "Grain", "StackSize" : 1 },
+                        { "TypeId" : "PlantFiber", "StackSize" : 1 }
+                    ]
+                },
+                { "Key" : "WaterUsePerDay", "Float" : 0.1 },
+                { "Key" : "WorkAmount", "Int" : 30 },
+                { "Key" : "GrowthRate", "Float" : 1.0 },
+                { "Key" : "GrowthAfterHarvest", "Float" : 0.05 }
+            ]
+        }
+    ]
+}

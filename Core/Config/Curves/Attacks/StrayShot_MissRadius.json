@@ -1,0 +1,13 @@
+{
+    // the shooter's aim (ShotOdds.Aim, 0-1) -> how far from the target a wild miss lands at
+    // most, in tiles (StrayShot). The miss lands between 1 tile and this, at random.
+    // A decent shot misses close by, only a hopeless one sprays its shots around.
+    "FloatSet" : [
+        0.02, 10.0,
+        0.04, 8.0,
+        0.07, 6.0,
+        0.11, 4.0,
+        0.22, 2.0,
+        1.0, 1.0
+    ]
+}

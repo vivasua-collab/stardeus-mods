@@ -1,0 +1,23 @@
+{
+    "DefId" : "Obj/Equipment/Clothing/Uniform03",
+    "SlotId" : "Clothing",
+    "SpriteId" : "Beings/Clothing/Human/Uniform03/[BODY_TYPE]/[BODY_TYPE]Uniform03",
+    "ColorGroupId" : "Clothing",
+    "Rarity" : 1.0,
+    "AddsStatModifiers" : [
+        {
+            "Component" : "TempMin",
+            "Properties" : [
+                { "Key" : "Value", "Float" : -15.0 },
+                { "Key" : "Type", "String" : "Adds" }
+            ]
+        },
+        {
+            "Component" : "TempMax",
+            "Properties" : [
+                { "Key" : "Value", "Float" : -5.0 },
+                { "Key" : "Type", "String" : "Adds" }
+            ]
+        }
+    ]
+}

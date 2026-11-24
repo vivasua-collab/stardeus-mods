@@ -1,0 +1,48 @@
+{
+    "Layer" : "Walls",
+    "ParentId" : "Structure/Walls/BaseWall",
+    "Researchable" : {
+        "Prerequisites" : [
+            "Research/Construction/StructureReinforced"
+        ]
+    },
+    "Components" : [
+        {
+            "Component" : "TileGraphics",
+            "Properties" : [
+                { "Key" : "Graphic", "String" : "Structure/Walls/WallReinforced01" }
+            ]
+        },
+        {
+            "Component" : "Damageable",
+            "Properties" : [
+                { "Key" : "Max", "Int" : 300 }
+            ]
+        },
+        {
+            "Component" : "HullIntegrity",
+            "Properties" : [
+                { "Key" : "MaxInsulation", "Float" : 0.998 }
+            ]
+        },
+        {
+            "Component" : "Flammable",
+            "Properties" : [
+                { "Key" : "FireChance", "Float" : 0.005 }
+            ]
+        },
+        {
+            "Component" : "Constructable",
+            "Properties" : [
+                { "Key" : "WorkAmount", "Int" : 150 },
+                {
+                    "Key" : "Contents",
+                    "RawMaterials" : [
+                        { "TypeId" : "SteelPlate", "StackSize" : 3 },
+                        { "TypeId" : "TitaniumPlate", "StackSize" : 2 }
+                    ]
+                }
+            ]
+        }
+    ]
+}

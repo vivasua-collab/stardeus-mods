@@ -1,0 +1,26 @@
+{
+    "Id" : "PlantFiber",
+    "IsWithDepth" : false,
+    "IsCommon" : true,
+    "IsBiological" : true,
+    "MinDifficulty" : 0.0,
+    "DifficultyChance" : [
+        0.0, 0.4,
+        0.5, 0.2,
+        1.0, 0.1
+    ],
+    "UniverseQuantityChance" : [
+        0.0, 14.0,
+        1.0, 17.0
+    ],
+    "RegionQuantityChance" : [
+        0.0, 1.0,
+        0.7, 2.0,
+        0.9, 2.0,
+        1.0, 3.0
+    ],
+    "MiningDifficulty" : 12.0,
+    "CollectKey" : "verb.collect",
+    "ScanDifficulty" : -1.0,
+    "NearbySpawnChance" : 0.0
+}

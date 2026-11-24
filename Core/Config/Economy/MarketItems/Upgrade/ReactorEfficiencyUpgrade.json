@@ -1,0 +1,12 @@
+{
+    "Id" : "Obj/Upgrades/ReactorEfficiencyUpgrade",
+    "Type" : "CFD",
+    "Groups" : [ "Upgrade" ],
+    "Value" : 2410.0,
+    "Rarity" : 0.3,
+    "TraderQuantity" : 1.0,
+    "MaxTraderQuantity" : 5,
+    "MinSectorDifficulty" : 0.35,
+    "PlayerBuyPriceMultiplier": 2.0,
+    "Volatility" : 0.0018
+}

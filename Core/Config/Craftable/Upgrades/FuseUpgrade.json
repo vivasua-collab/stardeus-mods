@@ -1,0 +1,12 @@
+{
+    "Type": "Electronics",
+    "Ingredients": [
+        { "TypeId" : "Transistor", "StackSize" : 1 },
+        { "TypeId" : "GoldWire", "StackSize" : 1 },
+        { "TypeId" : "Glass", "StackSize" : 1 }
+    ],
+    "IgnoreMarket" : true,
+    "ProductDefId": "Obj/Upgrades/FuseUpgrade",
+    "ProductionTimeHours": 2.0,
+    "EnergyCost": 25.0
+}

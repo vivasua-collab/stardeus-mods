@@ -1,0 +1,38 @@
+{
+    "Type" : "Lab",
+    "SizeMin" : 50,
+    "SizeMax" : 350,
+    "CountMin" : 1,
+    "CountMax" : 4,
+    "Chance" : 1.0,
+    "FillMin" : 0.3,
+    "FillMax" : 0.5,
+    "RequiredObjects" : [
+        "Objects/Devices/Assembler",
+        "Objects/Devices/EnergyConnector"
+    ],
+    "CompatibleObjects" : [
+        "Objects/Devices/MemoryModule",
+        "Objects/Devices/MemoryModuleMini",
+        "Objects/Devices/StorageModule",
+        "Objects/Devices/StorageModuleMini",
+        "Objects/Devices/Assembler",
+        "Objects/Devices/Battery",
+        "Objects/Devices/Radar",
+        "Objects/Devices/Communicator",
+        "Objects/Devices/Heater",
+        "Objects/Devices/OxygenPump",
+        "Objects/Devices/EnergyConnector"
+    ],
+    "CompatibleTemplates" : [
+        "Templates/Printers01",
+        "Templates/Printers02",
+        "Templates/Printers03",
+        "Templates/StorageArray01",
+        "Templates/StorageArray02",
+        "Templates/StorageArray03",
+        "Templates/MemoryArray01",
+        "Templates/MemoryArray02",
+        "Templates/MemoryArray03"
+    ]
+}

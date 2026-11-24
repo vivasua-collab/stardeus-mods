@@ -1,0 +1,22 @@
+// ESV: Exploration & Survey Vessel
+{
+    "ChanceWillTrade" : 0.8,
+    "ChancePolice" : 0.0,
+    "CompatibleFactions" : [
+        "Player",
+        "OldEarth",
+        "Adventurer",
+        "Scavenger",
+        "Capitalist",
+        "Sentinel"
+    ],
+    "CompatibleClasses" : [
+        "Frigate",
+        "Corvette",
+        "Cruiser",
+        "Carrier",
+        "Unclassified"
+    ],
+    "MinOffensiveness" : 0.0,
+    "MaxOffensiveness" : 0.5
+}

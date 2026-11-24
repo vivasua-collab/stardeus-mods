@@ -1,0 +1,15 @@
+{
+    "FlagName": "ColonyGrowthBio",
+    // Normally when a cooldown already exists, if new cooldown is longer,
+    // it will extend the existing cooldown. If this is set to true,
+    // the existing cooldown will remain untouched unless it's already
+    // expired.
+    "DoNotExtend" : true,
+    // Difficulty -> cooldown days. Flat below Balanced (1.0): easier difficulties change how hard events hit, not how often they come
+    "CooldownDaysDifficultyCurve": [
+        0.0, 75.0,
+        1.0, 75.0,
+        2.0, 75.0,
+        5.0, 75.0
+    ]
+}

@@ -1,0 +1,69 @@
+{
+    "Layer" : "FreeEntities",
+    "ParentId" : "Obj/BaseObj",
+    "Researchable" : {
+        "Prerequisites" : [ "Research/Security/Explosives" ]
+    },
+    "Spawnable" : {
+        "TierDiff" : 1,
+        "Chance" : 1.0,
+        "ChanceLocked" : 0.5,
+        "Quantity" : {
+            "Component" : "Curve",
+            "Properties" : [
+                { "Key" : "Keys",  "FloatSet" : [0.0, 0.5, 0.9, 1.0 ] },
+                { "Key" : "Values", "IntSet" :  [1,   2,  3,   10  ] }
+            ]
+        }
+    },
+    "Components" : [
+        {
+            "Component" : "ObjHealth",
+            "Properties" : [
+                { "Key" : "Max", "Int" : 10 }
+            ]
+        },
+        {
+            "Component" : "LightSource",
+            "Properties" : [
+                { "Key" : "IsOn" , "Bool" : false },
+                { "Key" : "NeedsEnergy", "Bool" : false },
+                { "Key" : "Color", "IntSet" : [ 236, 19, 19, 192 ] },
+                { "Key" : "PulsateColor", "IntSet" : [ 236, 19, 19, 128 ] },
+                { "Key" : "FrequencyRange", "Vector2" : { "x" : 1, "y" : 5 } },
+                { "Key" : "Radius", "Float" : 2 }
+            ]
+        },
+        {
+            "Component" : "Flammable",
+            "Properties" : [
+                { "Key" : "IsTemperatureResistant", "Bool" : false },
+                { "Key" : "FireDamageResistance", "Float" : 0.1 },
+                { "Key" : "FireChance", "Float" : 1.0 },
+                { "Key" : "IgnitionTemperatureCelsius", "Int" : 120 },
+                { "Key" : "FlammabilityCurve", "String" : "Instant" }
+            ]
+        },
+        {
+            "Component" : "StorableObj",
+            "Properties" : [
+                { "Key" : "Group", "String" : "Weapon" }
+            ]
+        },
+        {
+            "Component" : "ObjGraphics",
+            "Properties" : [
+                { "Key" : "Graphic", "String": "Obj/Misc/C42" }
+            ]
+        },
+        {
+            "Component" : "Bomb",
+            "Properties" : [
+                { "Key" : "PreDetonateSound", "String" : "FX/C42SFX" },
+                { "Key" : "ExplosionLevel", "Int" : 5 },
+                { "Key" : "DetonateDelay", "Float" : 10 }
+            ]
+        }
+    ]
+}
+

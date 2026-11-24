@@ -1,0 +1,15 @@
+{
+    "Id" : "ShipFrigate01",
+    "Probability" : 1.0,
+    "StarmapSizeMul" : 0.36,
+    "StarfieldSizeMul" : 0.18,
+    "IsConstantSizeInStarmap" : false,
+    "OrderDist" : -50,
+    "Sprite" : "SpaceObjects/Ships/ShipFrigate01_D",
+    "CanRotate" : true,
+    "KeepUprightInStarfield" : true,
+    "Sprite_L" : "SpaceObjects/Ships/ShipFrigate01_L",
+    "Sprite_R" : "SpaceObjects/Ships/ShipFrigate01_R",
+    "Sprite_U" : "SpaceObjects/Ships/ShipFrigate01_U",
+    "Sprite_D" : "SpaceObjects/Ships/ShipFrigate01_D"
+}

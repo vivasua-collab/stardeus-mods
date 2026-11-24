@@ -1,0 +1,11 @@
+{
+    "Id" : "Asteroid",
+    "Icon" : "Obj/Asteroids/Asteroid01",
+    "NameKey" : "asteroid",
+    "SizeMin" : 1.5,
+    "SizeMax" : 4,
+    "SpawnChance" : 0.0,
+    "LocationApproxMagnitude" : 2.0,
+    "CanBeOwned" : false,
+    "CanBeExplored" : false
+}

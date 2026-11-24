@@ -1,0 +1,36 @@
+{
+    "SlotTypeId" : "Implant",
+    "Compatibility" : "Any",
+    "ResistanceBase" : 8.0,
+    "Tier" : 2,
+    "AddsStatModifiers" : [
+        {
+            "Component" : "Fun",
+            "Properties" : [
+                { "Key" : "Value", "Float" : 0.55 },
+                { "Key" : "Type", "String" : "Min" }
+            ]
+        },
+        {
+            "Component" : "FunDropRate",
+            "Properties" : [
+                { "Key" : "Value", "Float" : 0.0 },
+                { "Key" : "Type", "String" : "Sets" }
+            ]
+        },
+        {
+            "Component" : "FunIncreaseRate",
+            "Properties" : [
+                { "Key" : "Value", "Float" : 0.5 },
+                { "Key" : "Type", "String" : "AddsPercent" }
+            ]
+        },
+        {
+            "Component" : "DepressionTendency",
+            "Properties" : [
+                { "Key" : "Value", "Float" : 0.0 },
+                { "Key" : "Type", "String" : "Sets" }
+            ]
+        }
+    ]
+}

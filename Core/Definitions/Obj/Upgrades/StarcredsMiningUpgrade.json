@@ -1,0 +1,24 @@
+{
+    "Layer" : "FreeEntities",
+    "ParentId" : "Obj/Upgrades/BaseUpgrade",
+    "Spawnable" : {
+        "TierDiff" : -1,
+        "Chance" : 0.25,
+        "ChanceLocked" : 0.00
+    },
+    "Components" : [
+        {
+            "Component" : "ObjGraphics",
+            "Properties" : [
+                { "Key" : "Graphic", "String": "Obj/Upgrades/StarcredsMiningUpgrade" },
+                { "Key" : "Scale", "Float": 0.5 }
+            ]
+        },
+        {
+            "Component" : "UnstoredMat",
+            "Properties" : [
+                { "Key" : "Type", "String" : "StarcredsMiningUpgrade" }
+            ]
+        }
+    ]
+}

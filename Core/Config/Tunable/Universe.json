@@ -1,0 +1,13 @@
+{
+    "Ints" : [
+        // Affects the number of regions that get spawned in the universe map
+        // Warning: setting these to values to anything above ~30 will cause exponentially slower map generation times!
+        // Warning: some resources will be extremely rare and almost impossible to find if the universe is much bigger!
+        { "Key" : "UniverseWidth", "Int" : 20 },
+        { "Key" : "UniverseHeight", "Int" : 10 },
+        // Affects the number of sectors that get spawned in the region map
+        // Warning: setting these to values to anything above ~30 will cause exponentially slower map generation times!
+        { "Key" : "UniverseRegionWidth", "Int" : 15 },
+        { "Key" : "UniverseRegionHeight", "Int" : 15 }
+    ]
+}

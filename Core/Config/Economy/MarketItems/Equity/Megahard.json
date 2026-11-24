@@ -1,0 +1,7 @@
+{
+    "Id" : "Megahard",
+    "Type" : "Equity",
+    "Groups" : [ "Software" ],
+    "Value" : 82.0,
+    "Volatility" : 0.0210
+}

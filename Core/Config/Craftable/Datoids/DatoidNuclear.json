@@ -1,0 +1,10 @@
+{
+    "Type": "DatoidNuclear",
+    "Ingredients": [
+        { "TypeId" : "EnrichedUranium", "StackSize" : 1 },
+        { "TypeId" : "LeadPlate", "StackSize" : 1 }
+    ],
+    "ProductDefId": "Obj/Datoids/DatoidNuclear",
+    "ProductionTimeHours": 2.0,
+    "EnergyCost": 100.0
+}

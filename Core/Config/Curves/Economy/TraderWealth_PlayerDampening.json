@@ -1,0 +1,11 @@
+{
+    // Dampens trader cash generation as the player's wallet grows, so that
+    // a growing fraction of traders end up with less cash than the player.
+    // x = normalized player richness (log scale from TraderWealthParityCash to $1M)
+    // y = cash multiplier applied to the trader's WealthFactor
+    "FloatSet" : [
+        0.0, 0.66,
+        0.5, 0.45,
+        1.0, 0.30
+    ]
+}

@@ -1,0 +1,7 @@
+{
+    "Id" : "UI/Chart/BG",
+    "AliasFor" : "UI/Main/Primary-2",
+    // "Hex" : "0F0619",
+    "Alpha" : 0.9,
+    "SkipAtlas" : true
+}

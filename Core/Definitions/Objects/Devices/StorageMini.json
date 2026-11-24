@@ -1,0 +1,86 @@
+{
+    "ToolPath" : "Facilities",
+    "Layer" : "Objects",
+    "ParentId" : "Objects/Devices/BaseDevice",
+    "NameKey" : "objects.devices.storage",
+    "TranslationVars" : [ "500" ],
+    "Researchable" : {
+        "Prerequisites" : [
+            "Research/Construction/StorageMini"
+        ]
+    },
+    "Spawnable" : {
+        "Category": "Storage",
+        "Chance" : 1.0,
+        "ChanceLocked" : 0.5
+    },
+    "Components" : [
+        {
+            "Component" : "TileTransform",
+            "Properties" : [
+                { "Key" : "Width", "Int" : 2 },
+                { "Key" : "Height", "Int" : 2 },
+                { "Key" : "IsRotatable", "Bool" : true },
+                // { "Key" : "WorkSpot", "Vector2" : { "x" : 0, "y" : -1 } }
+                { "Key" : "OutPort", "Vector2" : { "x" : 0, "y" : -1 } },
+                { "Key" : "InPort", "Vector2" : { "x" : 0, "y" : -1 } }
+            ]
+        },
+        {
+            "Component" : "TileGraphics",
+            "Properties" : [
+                { "Key" : "Type", "String": "Object" },
+                { "Key" : "Graphic", "String": "Objects/Devices/StorageMini" },
+                { "Key" : "HasHeight", "Bool": true }
+            ]
+        },
+        {
+            "Component" : "Flammable",
+            "Properties" : [
+                { "Key" : "IgnitionTemperatureCelsius", "Int" : 300 },
+                { "Key" : "FireChance", "Float" : 0.6 },
+                { "Key" : "BaseExplosionLevel", "Int" : 0 },
+                { "Key" : "ExplosivenessCurve", "String" : "DeviceLow" }
+            ]
+        },
+        {
+            "Component" : "Passability",
+            "Properties" : [
+                { "Key" : "IsPassable", "Bool" : false },
+                { "Key" : "IsWalkable", "Bool" : false },
+                { "Key" : "Difficulty", "Float" : 1 }
+            ]
+        },
+        {
+            "Component" : "MatStorage",
+            "Properties" : [
+                { "Key" : "MaxCapacity", "Int" : 500 },
+                { "Key" : "IsPublic", "Bool" : true },
+                { "Key" : "ShowFulnessBar", "Bool" : true }
+            ]
+        },
+        {
+            "Component" : "MatHaulTarget",
+            "Properties" : [
+                { "Key" : "AutoHaul", "Bool" : true },
+                { "Key" : "Priority", "Int" : 3 },
+                { "Key" : "Mode", "String" : "AllowAll" }
+            ]
+        },
+        {
+            "Component" : "Constructable",
+            "Properties" : [
+                { "Key" : "Placement", "String" : "OnFloor" },
+                { "Key" : "WorkAmount", "Int" : 1600 },
+                { "Key" : "CanDragRow", "Bool" : true },
+                {
+                    "Key" : "Contents",
+                    "RawMaterials" : [
+                        { "TypeId" : "SteelPlate", "StackSize" : 4 },
+                        { "TypeId" : "Gears", "StackSize" : 1 }
+                    ]
+                }
+            ]
+        }
+    ]
+}

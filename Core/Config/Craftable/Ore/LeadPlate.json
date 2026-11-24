@@ -1,0 +1,11 @@
+{
+    "Type" : "Ore",
+    "Ingredients" : [
+        { "TypeId" : "Lead", "StackSize" : 1 },
+        { "TypeId" : "Carbon", "StackSize" : 3 }
+    ],
+    "OutputMultiplier" : 2,
+    "ProductDefId" : "Obj/Materials/LeadPlate",
+    "ProductionTimeHours" : 3,
+    "EnergyCost" : 40
+}

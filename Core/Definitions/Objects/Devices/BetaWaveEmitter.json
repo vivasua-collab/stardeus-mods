@@ -1,0 +1,110 @@
+{
+    "ToolPath" : "Security",
+    "Layer" : "Objects",
+    "ParentId" : "Objects/Devices/BaseDevice",
+    "DescKey" : "beta.wave.emitter.desc",
+    "Researchable" : {
+        "Prerequisites" : [ "Research/RogueAI/BetaWaves" ]
+    },
+    "Components" : [
+        {
+            "Component" : "TileTransform",
+            "Properties" : [
+                { "Key" : "IsRotatable", "Bool" : false },
+                { "Key" : "CoverPercent", "Int" : 75 }
+            ]
+        },
+        {
+            "Component" : "ElectricNode",
+            "Properties" : [
+                { "Key" : "IsConsumer", "Bool" : true }
+            ]
+        },
+        {
+            "Component" : "WithFuse",
+            "Properties" : [
+                { "Key" : "MalfunctionWeight", "Float": 0.5 }
+            ]
+        },
+        {
+            "Component" : "BetaWaveEmitter",
+            "Properties" : [
+                { "Key" : "EnergyCost", "Float" : 400 }
+            ]
+        },
+        {
+            "Component" : "Flammable",
+            "Properties" : [
+                { "Key" : "IgnitionTemperatureCelsius", "Int" : 300 },
+                { "Key" : "FireChance", "Float" : 0.5 },
+                { "Key" : "BaseExplosionLevel", "Int" : 1 },
+                { "Key" : "FlammabilityCurve", "String" : "Device" },
+                { "Key" : "ExplosivenessCurve", "String" : "Device" }
+            ]
+        },
+        {
+            "Component" : "OutdoorsCheck",
+            "Properties" : [
+                { "Key" : "MustBeIndoors", "Bool" : true }
+            ]
+        },
+        { "Component" : "ExtraInfo" },
+        {
+            "Component" : "AudioSource",
+            "Properties" : [
+                { "Key" : "AmbienceClip", "String" : "Ambience/DeviceOperating06" },
+                { "Key" : "IsLinkedToEnergy", "Bool" : true },
+                { "Key" : "Rolloff", "Vector2" : { "x" : 3, "y" : 12 } }
+            ]
+        },
+        {
+            "Component" : "TileGraphics",
+            "Properties" : [
+                { "Key" : "Type", "String": "Object" },
+                { "Key" : "Graphic", "String": "Objects/Devices/BetaWaveEmitter" },
+                { "Key" : "HasHeight", "Bool" : true }
+            ]
+        },
+        {
+            "Component" : "TileAnimation",
+            "Properties" : [
+                { "Key" : "Offset", "Vector2": { "x" : 0.0, "y" : 0.7 } },
+                { "Key" : "Size", "Vector2": { "x" : 1.0, "y" : 1.0 } },
+                { "Key" : "Direction", "Int" : 1 },
+                { "Key" : "BaseSprite", "String": "Objects/Devices/BetaWaveEmitter_Base" },
+                { "Key" : "AnimSprite", "String" : "Objects/DeviceAnims/BetaWaveEmitter_Anim" },
+                { "Key" : "CopyAnimSprite", "Bool" : false },
+                { "Key" : "Speed", "Float": 1.0 },
+                { "Key" : "PingPong", "Bool": true },
+                { "Key" : "SpriteOrder", "String": "AboveAnyTile" },
+                { "Key" : "FramePrefix", "String": "F" },
+                { "Key" : "NumFrames", "Int": 24 },
+                { "Key" : "NeedsEnergy", "Bool": true }
+            ]
+        },
+        {
+            "Component" : "Passability",
+            "Properties" : [
+                { "Key" : "IsPassable", "Bool" : false },
+                { "Key" : "IsWalkable", "Bool" : false },
+                { "Key" : "Difficulty", "Float" : 1 }
+            ]
+        },
+        {
+            "Component" : "Constructable",
+            "Properties" : [
+                { "Key" : "WorkAmount", "Int" : 5000 },
+                {
+                    "Key" : "Contents",
+                    "RawMaterials" : [
+                        { "TypeId" : "TitaniumPlate", "StackSize" : 8 },
+                        { "TypeId" : "Microchip3", "StackSize" : 8 },
+                        { "TypeId" : "GoldWire", "StackSize" : 12 },
+                        { "TypeId" : "OpticalFiber", "StackSize" : 10 },
+                        { "TypeId" : "PlatinumIngot", "StackSize" : 6 }
+                    ]
+                }
+            ]
+        }
+    ]
+}

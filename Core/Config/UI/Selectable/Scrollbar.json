@@ -1,0 +1,12 @@
+{
+    "Id" : "Selectable/Scrollbar",
+
+    "CBColorNormal" : "UI/Scroll/Normal",
+    "CBColorHighlighted" : "UI/Scroll/Highlighted",
+    "CBColorPressed" : "UI/Scroll/Pressed",
+    "CBColorSelected" : "UI/Scroll/Selected",
+    "CBColorDisabled" : "UI/Grey/Sec-1",
+
+    "CBColorMultiplier" : 1.0,
+    "CBFadeDuration" : 0.1
+}

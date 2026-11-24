@@ -1,0 +1,13 @@
+{
+    "Type": "Terraforming",
+    "Ingredients": [
+        { "TypeId" : "Hydronium", "StackSize" : 1 },
+        { "TypeId" : "Water", "StackSize" : 3 },
+        { "TypeId" : "Carbon", "StackSize" : 2 },
+        { "TypeId" : "PlantFiber", "StackSize" : 5 },
+        { "TypeId" : "StemCells", "StackSize" : 10 }
+    ],
+    "ProductDefId": "Obj/Materials/BioEnrichedWater",
+    "ProductionTimeHours": 4.0,
+    "EnergyCost": 50.0
+}

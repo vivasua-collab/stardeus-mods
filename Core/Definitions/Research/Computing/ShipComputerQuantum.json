@@ -1,0 +1,31 @@
+{
+    "Id" : "Research/Computing/ShipComputerQuantum",
+    "Tier" : 5,
+    "IsAbstract" : true,
+    "PreviewIcon" : "Objects/Devices/QuantumShipComputer_D",
+    "NameKey" : "objects.devices.quantumshipcomputer",
+    "Researchable" : {
+        "IsTreeNode" : true,
+        "Prerequisites" : [
+            "Research/Computing/GPUImproved"
+        ],
+        "DatoidCosts" : [
+            {
+                "TypeId" : "DatoidTechHigh",
+                "StackSize" : 14
+            },
+            {
+                "TypeId" : "DatoidNuclear",
+                "StackSize" : 19
+            },
+            {
+                "TypeId" : "DatoidAlien",
+                "StackSize" : 20
+            },
+            {
+                "TypeId" : "DatoidQuantum",
+                "StackSize" : 24
+            }
+        ]
+    }
+}

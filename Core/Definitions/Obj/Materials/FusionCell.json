@@ -1,0 +1,47 @@
+{
+    "Layer" : "FreeEntities",
+    "ParentId" : "Obj/Materials/BaseMaterial",
+    "Researchable" : {
+        "Prerequisites" : [ "Research/SpaceTravel/PropulsionFusion" ]
+    },
+    "Components" : [
+        {
+            "Component" : "ObjGraphics",
+            "Properties" : [
+                { "Key" : "Graphic", "String": "Obj/Materials/FusionCell" }
+            ]
+        },
+        {
+            "Component" : "ObjHealth",
+            "Properties" : [
+                { "Key" : "Max", "Int" : 300 },
+                { "Key" : "IsInvincible", "Bool" : false }
+            ]
+        },
+        {
+            "Component" : "Flammable",
+            "Properties" : [
+                { "Key" : "IgnitionTemperatureCelsius", "Int" : 300 },
+                { "Key" : "FireChance", "Float" : 0.65 },
+                { "Key" : "FlammabilityCurve", "String" : "High" }
+            ]
+        },
+        {
+            "Component" : "LightSource",
+            "Properties" : [
+                { "Key" : "NeedsEnergy", "Bool" : false },
+                { "Key" : "Color", "IntSet" : [ 184, 20, 118, 196 ] },
+                { "Key" : "PulsateColor", "IntSet" : [ 138, 15, 89, 128 ] },
+                { "Key" : "FrequencyRange", "Vector2" : { "x" : 0.4, "y" : 0.9 } },
+                { "Key" : "Radius", "Float" : 3 }
+            ]
+        },
+        {
+            "Component" : "UnstoredMat",
+            "Properties" : [
+                { "Key" : "Type", "String" : "FusionCell" },
+                { "Key" : "FixedSize", "Bool" : true }
+            ]
+        }
+    ]
+}

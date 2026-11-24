@@ -1,0 +1,13 @@
+{
+    "EventId": "ColonistDeviceQuest",
+    "Points": 5,
+    "OutcomeType": "Positive",
+    "EventFlags": [
+        "ColonistRequest"
+    ],
+    "MinRepeatDelayDays": 15,
+    // Full list of requirements can be found in Situation class
+    "Require" : {
+        "Colonists" : 3
+    }
+}

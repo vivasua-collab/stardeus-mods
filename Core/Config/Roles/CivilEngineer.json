@@ -1,0 +1,17 @@
+{
+    "Id" : "CivilEngineer",
+    "LovesJobTypes" : [ "Construction" ],
+    "RoleTypes" : [ "Smart", "Rich" ],
+    "Species" : [ "Human" ],
+    "AgePhaseIds" : [ "YoungAdult", "MidLife", "Retirement" ],
+    "AdjustsSkills" : [
+        {
+            "JobId" : "Construction",
+            "Adjustment" : 4
+        },
+        {
+            "JobId" : "Research",
+            "Adjustment" : 2
+        }
+    ]
+}

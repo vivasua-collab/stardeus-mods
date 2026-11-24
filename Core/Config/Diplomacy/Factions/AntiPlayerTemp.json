@@ -1,0 +1,9 @@
+{
+    "Id" : "AntiPlayerTemp",
+    "IsPlayer" : false,
+    "IsInternal" : true,
+    "FlagIcon" : "Icons/Faction/AntiPlayer",
+    "Friendliness" : 0,
+    "AI" : 0.0,
+    "CombatObjective" : "Survive"
+}

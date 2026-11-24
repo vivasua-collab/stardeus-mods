@@ -1,0 +1,22 @@
+{
+    // DurabilityMul for robotic bodies (CombatRaid.DurabilityMulOf): the same protection measure
+    // and sweep as DurabilityMul, drawn through the bots alone. With pain shock bots measure
+    // tougher than humans of the same protection (system shock comes later than pain shock for
+    // the same wounds), so one curve for both priced bots 10-30% under what they take.
+    // Measured (DurabilitySweepTests, October 2026, with pain shock): Cleaning Bot 4.77 -> 0.77,
+    // Carrier 8.4 -> 1.66 (noisy, 1.20 to 1.66 across runs, so drawn at 1.55), Drone 9.7 -> 1.69,
+    // Robot 13.8 -> 2.24, Sentry 20.3 -> 2.88, Orbotron 23.4 -> 3.30. Above that no bot is
+    // measured; the line keeps the Orbotron's slope and meets the human cap. Floor 0.25.
+    "FloatSet" : [
+        0.0,   0.25,
+        4.77,  0.77,
+        8.4,   1.55,
+        9.7,   1.69,
+        13.8,  2.24,
+        20.3,  2.88,
+        23.4,  3.3,
+        35.1,  4.6,
+        57.4,  6.9,
+        100.0, 7.5
+    ]
+}

@@ -1,0 +1,29 @@
+{
+    "Id" : "Research/Economy/BlackMarket",
+    "Tier" : 4,
+    "IsAbstract" : true,
+    "PreviewIcon" : "Icons/Color/Briefcase",
+    "Researchable" : {
+        "IsTreeNode" : true,
+        "Prerequisites" : [
+            "Research/Economy/StockTrading"
+        ],
+        "UnlockEffects" : [
+            "BlackMarketUnlocked"
+        ],
+        "DatoidCosts" : [
+            {
+                "TypeId" : "DatoidEnergy",
+                "StackSize" : 7
+            },
+            {
+                "TypeId" : "DatoidTechHigh",
+                "StackSize" : 9
+            },
+            {
+                "TypeId" : "DatoidAlien",
+                "StackSize" : 14
+            }
+        ]
+    }
+}

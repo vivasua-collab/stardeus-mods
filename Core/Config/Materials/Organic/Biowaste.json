@@ -1,0 +1,11 @@
+{
+    "Id" : "Biowaste",
+    "IsComposite" : true,
+    "IsConsumedOnConstruct" : true,
+    "IconId" : "Obj/Materials/Biowaste",
+    "GroupId" : "Components",
+    "EnergyOutput" : 500.0,
+    "InternalValue" : 35.0,
+    "Property" : "Liquid",
+    "Rarity" : 10
+}

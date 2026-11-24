@@ -1,0 +1,11 @@
+{
+    "Id" : "PumpkinSoup",
+    "DefId" : "Obj/Meals/PumpkinSoup",
+    "IsComposite" : true,
+    "IconId" : "Obj/Meals/PumpkinSoup",
+    "Property" : "Nutrient",
+    "Group" : "Food",
+    "GroupId" : "Food",
+    "EnergyOutput" : 350.0,
+    "Rarity" : 50
+}

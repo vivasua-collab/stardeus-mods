@@ -1,0 +1,23 @@
+{
+    "Layer" : "FreeEntities",
+    "IgnoreMarket" : true,
+    "ParentId" : "Obj/Parts/BasePartOrganic",
+    "NameKey" : "bodypart.Jaw.JawCat",
+    "Researchable" : {
+        "Prerequisites" : [ "Research/LifeSupport/GrowingPartsImproved" ]
+    },
+    "Components" : [
+        {
+            "Component" : "ObjGraphics",
+            "Properties" : [
+                { "Key" : "Graphic", "String": "Obj/BodyParts/Organic2" }
+            ]
+        },
+        {
+            "Component" : "BodyPart",
+            "Properties" : [
+                { "Key" : "BodyPartDefId", "String" : "Jaw/JawCat" }
+            ]
+        }
+    ]
+}

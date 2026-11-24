@@ -1,0 +1,106 @@
+{
+    "ToolPath" : "SpaceTravel",
+    "Layer" : "Objects",
+    "ParentId" : "Objects/Devices/BaseDevice",
+    "Researchable" : {
+        "Prerequisites" : [
+            "Research/Scanning/Communications"
+        ]
+    },
+    "Spawnable" : {
+        "Category": "Comms",
+        "SkipOwned": 1,
+        "Chance" : 1.0,
+        "ChanceLocked" : 0.0
+    },
+    "Components" : [
+        {
+            "Component" : "TileTransform",
+            "Properties" : [
+                { "Key" : "Width", "Int" : 2 },
+                { "Key" : "Height", "Int" : 1 },
+                { "Key" : "CoverPercent", "Int" : 75 },
+                { "Key" : "WorkSpot", "Vector2" : { "x" : 1, "y" : -1 } }
+            ]
+        },
+        { "Component" : "SafetyCheck" },
+        {
+            "Component" : "Surface",
+            "Properties" : [
+                { "Key" : "IsMultislot", "Bool" : true },
+                { "Key" : "IsMakeshift", "Bool" : true }
+            ]
+        },
+        {
+            "Component" : "TileGraphics",
+            "Properties" : [
+                { "Key" : "Type", "String": "Object" },
+                { "Key" : "Graphic", "String": "Objects/Devices/Communicator" },
+                { "Key" : "HasHeight", "Bool" : true }
+            ]
+        },
+        {
+            "Component" : "Passability",
+            "Properties" : [
+                { "Key" : "IsPassable", "Bool" : false },
+                { "Key" : "IsWalkable", "Bool" : false },
+                { "Key" : "Difficulty", "Float" : 1 }
+            ]
+        },
+        {
+            "Component" : "Flammable",
+            "Properties" : [
+                { "Key" : "IgnitionTemperatureCelsius", "Int" : 350 },
+                { "Key" : "FireChance", "Float" : 0.5 },
+                { "Key" : "FlammabilityCurve", "String" : "DeviceLow" }
+            ]
+        },
+        {
+            "Component" : "ElectricNode",
+            "Properties" : [
+                { "Key" : "Particles_D", "String" : "CommunicatorFX_D" },
+                { "Key" : "Particles_U", "String" : "CommunicatorFX_U" },
+                { "Key" : "IsConsumer", "Bool" : true }
+            ]
+        },
+        {
+            "Component" : "WithFuse",
+            "Properties" : [
+                { "Key" : "MalfunctionWeight", "Float": 0.1 }
+            ]
+        },
+        { "Component" : "Communicator" },
+        {
+            "Component" : "OperatableDevice",
+            "Properties" : [
+                { "Key" : "JobType", "String" : "Social" },
+                { "Key" : "AnimationType", "String" : "Strafe" },
+                { "Key" : "DefaultPriority", "Int" : 4 },
+                { "Key" : "CanKeepOperator", "Bool" : true },
+                { "Key" : "RequiredAbilities", "StringSet" : [ "Manipulate", "Intelligence", "Vocalize", "Hear" ] },
+                { "Key" : "OperatorOffsets", "Vector2Set" : [
+                    { "x" : 0.3, "y" : -0.22 },
+                    { "x" : -0.65, "y" : -0.5 },
+                    { "x" : -0.34, "y" : 0.97 },
+                    { "x" : 0.58, "y" : 0.5 }
+                ] }
+            ]
+        },
+        {
+            "Component" : "Constructable",
+            "Properties" : [
+                { "Key" : "WorkAmount", "Int" : 1100 },
+                {
+                    "Key" : "Contents",
+                    "RawMaterials" : [
+                        { "TypeId" : "SteelPlate", "StackSize" : 2 },
+                        { "TypeId" : "Glass", "StackSize" : 3 },
+                        { "TypeId" : "CopperWire", "StackSize" : 1 },
+                        { "TypeId" : "OpticalFiber", "StackSize" : 1 },
+                        { "TypeId" : "Microchip", "StackSize" : 1 }
+                    ]
+                }
+            ]
+        }
+    ]
+}

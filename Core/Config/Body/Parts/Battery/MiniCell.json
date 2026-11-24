@@ -1,0 +1,22 @@
+{
+    "SlotTypeId" : "Battery",
+    "Compatibility" : "Robotic",
+    "Tier" : 2,
+    "ResistanceBase" : 8.0,
+    "Resistances" : [
+        { "DamageType" : "Energy", "Resistance" : 6.0 }
+    ],
+    "AddsAbilities" : [
+        "Recharge"
+    ],
+    "ProvidesStats" : [
+        {
+            "Component" : "BatteryCapacity",
+            "Properties" : [
+                { "Key" : "CompoundLimit", "Float" : 300.0 },
+                { "Key" : "Amount", "Float" : 100.0 },
+                { "Key" : "StateMul", "Float" : 1.0 }
+            ]
+        }
+    ]
+}

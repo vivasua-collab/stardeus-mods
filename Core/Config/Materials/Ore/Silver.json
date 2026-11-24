@@ -1,0 +1,10 @@
+{
+    "Id" : "Silver",
+    "IconId" : "Obj/Materials/Silver",
+    "GroupId" : "Ore",
+    "InternalValue" : 14.0,
+    "EnergyOutput" : 1310.0,
+    "CollectorCost" : 250,
+    "Rarity" : 40,
+    "MatRarity" : 2
+}

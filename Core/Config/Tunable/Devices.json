@@ -1,0 +1,9 @@
+{
+    "Floats" : [
+        // How many tiles we can paint with one pigment material
+        { "Key" : "PainterPigmentEfficiency", "Float" : 250 },
+        // Heat output will be multiplied by this
+        { "Key" : "ShipComputerHeatRate", "Float" : 1.0 }
+    ]
+
+}

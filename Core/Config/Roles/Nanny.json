@@ -1,0 +1,19 @@
+{
+    "Id" : "Nanny",
+    "Species" : [ "Human", "Carrier", "CleaningBot" ],
+    "RoleTypes" : [ "Dumb", "Poor", "Good" ],
+    "LovesJobTypes" : [ "Caring" ],
+    "AgePhaseIds" : [ "YoungAdult", "MidLife", "Retirement" ],
+    "IncapableJobTypes" : [ "Research", "Construction" ],
+    "NotAfterRoles" : [ "Researcher" ],
+    "AdjustsSkills" : [
+        {
+            "JobId" : "Cooking",
+            "Adjustment" : 2
+        },
+        {
+            "JobId" : "Cleaning",
+            "Adjustment" : 4
+        }
+    ]
+}

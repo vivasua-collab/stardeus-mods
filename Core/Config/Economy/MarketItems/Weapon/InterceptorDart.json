@@ -1,0 +1,9 @@
+{
+    "Id" : "Obj/Ammo/InterceptorDart",
+    "Type" : "CFD",
+    "Groups" : [ "Weapon" ],
+    "Value" : 1100.0,
+    "TraderQuantity" : 25.0,
+    "Rarity" : 0.4,
+    "Volatility" : 0.0031
+}

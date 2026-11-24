@@ -1,0 +1,23 @@
+{
+    "Id" : "Research/Construction/Storage",
+    "Tier" : 2,
+    "IsAbstract" : true,
+    "PreviewIcon" : "Icons/Color/Haul",
+    "NameKey" : "storage",
+    "Researchable" : {
+        "IsTreeNode" : true,
+        "Prerequisites" : [
+            "Research/Construction/StorageMini"
+        ],
+        "DatoidCosts" : [
+            {
+                "TypeId" : "DatoidBasic",
+                "StackSize" : 12
+            },
+            {
+                "TypeId" : "DatoidTech",
+                "StackSize" : 5
+            }
+        ]
+    }
+}

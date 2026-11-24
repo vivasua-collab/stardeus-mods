@@ -1,0 +1,23 @@
+{
+    "Id" : "Research/Production/Smelting",
+    "Tier" : 2,
+    "IsAbstract" : true,
+    "PreviewIcon" : "Icons/Color/Loading",
+    "NameKey" : "research.smelting",
+    "Researchable" : {
+        "IsTreeNode" : true,
+        "Prerequisites" : [
+            "Research/Production/Assembly"
+        ],
+        "DatoidCosts" : [
+            {
+                "TypeId" : "DatoidBasic",
+                "StackSize" : 12
+            },
+            {
+                "TypeId" : "DatoidTech",
+                "StackSize" : 7
+            }
+        ]
+    }
+}

@@ -1,0 +1,8 @@
+{
+    "Id" : "Panel/DropdownArrowItem",
+
+    "Color" : "UI/Text/Main",
+    "Alpha" : 1,
+
+    "Image" : "UI/Panels/DropdownArrowItem"
+}

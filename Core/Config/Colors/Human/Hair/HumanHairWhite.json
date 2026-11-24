@@ -1,0 +1,5 @@
+{
+    "Id" : "HumanHairWhite",
+    "Data" : [201, 201, 201, 255],
+    "Groups" : [ "Human.Hair" ]
+}

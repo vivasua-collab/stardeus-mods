@@ -1,0 +1,23 @@
+{
+    "Layer" : "FreeEntities",
+    "IgnoreMarket" : true,
+    "ParentId" : "Obj/Parts/BasePartOrganic",
+    "NameKey" : "bodypart.Leg.LegRearPig",
+    "Researchable" : {
+        "Prerequisites" : [ "Research/LifeSupport/GrowingPartsBasic" ]
+    },
+    "Components" : [
+        {
+            "Component" : "ObjGraphics",
+            "Properties" : [
+                { "Key" : "Graphic", "String": "Obj/BodyParts/Organic1" }
+            ]
+        },
+        {
+            "Component" : "BodyPart",
+            "Properties" : [
+                { "Key" : "BodyPartDefId", "String" : "Leg/LegRearPig" }
+            ]
+        }
+    ]
+}

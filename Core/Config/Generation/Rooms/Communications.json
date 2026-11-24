@@ -1,0 +1,30 @@
+{
+    "Type" : "Communications",
+    "SizeMin" : 150,
+    "SizeMax" : 350,
+    "CountMin" : 1,
+    "CountMax" : 4,
+    "Chance" : 1.0,
+    "FillMin" : 0.4,
+    "FillMax" : 0.8,
+    "CompatibleObjects" : [
+        "Objects/Devices/MemoryModule",
+        "Objects/Devices/StorageModule",
+        "Objects/Devices/Assembler",
+        "Objects/Devices/Battery",
+        "Objects/Devices/Radar",
+        "Objects/Devices/Communicator",
+        "Objects/Devices/Heater",
+        "Objects/Devices/OxygenPump",
+        "Objects/Devices/EnergyConnector"
+    ],
+    "CompatibleTemplates" : [
+        "Templates/Radars01",
+        "Templates/Radars02",
+        "Templates/Radars03",
+        "Templates/Communicators01",
+        "Templates/Communicators02",
+        "Templates/StorageArray01",
+        "Templates/MemoryArray01"
+    ]
+}

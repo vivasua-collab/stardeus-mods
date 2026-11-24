@@ -1,0 +1,50 @@
+{
+    "BehaviorId" : "Region_RandomWalk",
+
+    "OriginDifficultyChance" : [
+        0.0, 1.0,
+        1.0, 0.2
+    ],
+
+    "RequiresEngines" : true,
+
+    "FactionChanceKey" : [
+        "Virus",
+        "Sentinel",
+        "Pirate",
+        "Scavenger",
+        "Adventurer",
+        "OldEarth",
+        "Capitalist"
+    ],
+    "FactionChanceValue" : [
+        0.8,
+        0.7,
+        0.5,
+        0.9,
+        1.2,
+        0.5,
+        0.8
+    ],
+    "DefaultFactionChance" : 0.5,
+
+    "ClassChanceKey" : [
+        "Fighter",
+        "Frigate",
+        "Corvette",
+        "Cruiser",
+        "Battlecruiser",
+        "Battleship",
+        "Dreadnought"
+    ],
+    "ClassChanceValue" : [
+        0.2,
+        0.3,
+        0.3,
+        0.4,
+        0.3,
+        0.2,
+        0.1
+    ],
+    "DefaultClassChance" : 0.0
+}

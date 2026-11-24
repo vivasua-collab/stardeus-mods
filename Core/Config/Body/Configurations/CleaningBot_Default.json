@@ -1,0 +1,12 @@
+{
+    "SpeciesType" : "CleaningBot",
+    "IsDefault" : true,
+    "Parts" : [
+        { "Slot" : "Body", "Part" : "Body/BodyCleaningBot" },
+        { "Slot" : "Eye", "Part" : "Eye/MiniOptics" },
+        { "Slot" : "Mobilizer", "Part" : "Mobilizer/MiniTracks" },
+        { "Slot" : "Battery", "Part" : "Battery/MiniCell" },
+        { "Slot" : "Implant", "Empty" : true },
+        { "Slot" : "Core", "Part" : "Core/DumbCore" }
+    ]
+}

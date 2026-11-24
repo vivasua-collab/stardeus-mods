@@ -1,0 +1,10 @@
+{
+    "Type": "Grindable",
+    "Ingredients": [
+        { "TypeId" : "Log", "StackSize" : 1 }
+    ],
+    "OutputMultiplier" : 2,
+    "ProductDefId": "Obj/Materials/Wood",
+    "ProductionTimeHours": 2,
+    "EnergyCost": 5.0
+}

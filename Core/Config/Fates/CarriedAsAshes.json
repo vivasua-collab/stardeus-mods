@@ -1,0 +1,7 @@
+// Colonists who died on the way and whose ashes are aboard in an urn. Never rolled
+// (Chance 0): ColonistFate.ForUrns fills it from the urns that are actually there.
+{
+    "RemoveColonist" : true,
+    "IsDead" : true,
+    "Chance" : 0.0
+}

@@ -1,0 +1,21 @@
+{
+    "Id" : "SpaceStation",
+    "Icon" : "SpaceObjects/Stations/SpaceStation01",
+    "IsDynamic" : true,
+    "CanBeOwned" : true,
+    "CanBeExplored" : false,
+    "StarfieldSortOrder" : 2,
+    "HasTrader" : true,
+    "IsInteractive" : true,
+    "IsAutoVisited" : true,
+    "IsOnSurface" : false,
+    "LocationApproxMagnitude" : 3.0,
+    "NameChanceWeights" : [ 1.0 ],
+    "NameParts" : [
+        {
+            "Type" : "SOName",
+            "Paths" : [ "Space/Object/Name" ],
+            "Chances" : [ 1.0 ]
+        }
+    ]
+}

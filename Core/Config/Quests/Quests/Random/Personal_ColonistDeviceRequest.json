@@ -1,0 +1,70 @@
+{
+    "QuestFlags" : [ "Random", "Template" ],
+    "TitleKey" : "quest.colonist.device.title",
+    "DescKey" : "quest.colonist.device.desc",
+    "QuestProviders" : [ "Colonist" ],
+    "CompatibleFactions" : [ "Player" ],
+    "Variables" : [
+        {
+            "Id" : "BuildDeadline",
+            "Type" : "Deadline",
+            "Config" : [
+                {
+                    "Key" : "DaysCurve", "FloatSet" : [
+                        0.0, 3.0,
+                        1.0, 7.0
+                    ]
+                }
+            ]
+        },
+        {
+            "Id" : "Device",
+            "Type" : "DeviceDef",
+            "Config" : [
+                { "Key" : "MaxTier", "Int" : 4 },
+                { "Key" : "UnlockedWeight", "Int" : 4 },
+                { "Key" : "LockedWeight", "Int" : 1 }
+            ]
+        }
+    ],
+    "Steps" : [
+        {
+            "Id" : "BuildDevice",
+            "Type" : "BuildAndMakeFunctional",
+            "StepFlags" : [ "ActiveOnStart", "CompletesQuest", "FailsQuest" ],
+            "Deadline" : "BuildDeadline",
+            "Config" : [
+                { "Key" : "Var_Definition", "String" : "Device" },
+                { "Key" : "Count", "Int" : 1 }
+            ]
+        }
+    ],
+    "Rewards" : [
+        {
+            "Id" : "GiverHappy",
+            "Type" : "ColonistMood",
+            "Config" : [
+                { "Key" : "Magnitude", "Int" : 10 },
+                { "Key" : "DurationHours", "Float" : 24.0 },
+                { "Key" : "ReasonKey", "String" : "mood.colonist.device.built" }
+            ]
+        },
+        {
+            "Id" : "GiverTrusts",
+            "Type" : "ColonistTrust",
+            "Config" : [
+                { "Key" : "Magnitude", "Int" : 15 },
+                { "Key" : "DurationHours", "Float" : 2880.0 }
+            ]
+        },
+        {
+            "Id" : "GiverDisappointed",
+            "Type" : "ColonistTrust",
+            "RewardFlags" : [ "Penalty" ],
+            "Config" : [
+                { "Key" : "Magnitude", "Int" : -5 },
+                { "Key" : "DurationHours", "Float" : 720.0 }
+            ]
+        }
+    ]
+}

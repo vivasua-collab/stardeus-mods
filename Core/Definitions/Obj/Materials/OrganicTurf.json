@@ -1,0 +1,41 @@
+{
+    "Layer" : "FreeEntities",
+    "ParentId" : "Obj/Materials/BaseMaterial",
+    "Researchable" : {
+        "Prerequisites" : [ "Research/LifeSupport/TerrainGeneration" ]
+    },
+    "Components" : [
+        {
+            "Component" : "ObjGraphics",
+            "Properties" : [
+                { "Key" : "Shader", "String": "Obj" },
+                { "Key" : "Graphic", "String": "Obj/Materials/OrganicTurf" }
+            ]
+        },
+        {
+            "Component" : "Flammable",
+            "Properties" : [
+                { "Key" : "IsTemperatureResistant", "Bool" : true },
+                { "Key" : "IgnitionTemperatureCelsius", "Int" : 250 },
+                { "Key" : "FireChance", "Float" : 0.6 }
+            ]
+        },
+        {
+            "Component" : "UnstoredMat",
+            "Properties" : [
+                { "Key" : "Type", "String" : "OrganicTurf" },
+                { "Key" : "FixedSize", "Bool" : true }
+            ]
+        },
+        {
+            "Component" : "LightSource",
+            "Properties" : [
+                { "Key" : "NeedsEnergy", "Bool" : false },
+                { "Key" : "Color", "IntSet" : [ 191, 64, 64, 128 ] },
+                { "Key" : "PulsateColor", "IntSet" : [ 230, 179, 179, 128 ] },
+                { "Key" : "FrequencyRange", "Vector2" : { "x" : 0.4, "y" : 0.9 } },
+                { "Key" : "Radius", "Float" : 3 }
+            ]
+        }
+    ]
+}

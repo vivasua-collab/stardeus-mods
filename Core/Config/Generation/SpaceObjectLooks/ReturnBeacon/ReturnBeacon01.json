@@ -1,0 +1,11 @@
+{
+    "Id" : "ReturnBeacon01",
+    "Probability" : 1.0,
+    "IsConstantSizeInStarmap" : false,
+    "StarmapSizeMul" : 2.0,
+    "StarfieldSizeMul" : 0.25,
+    "Sprite" : "SpaceObjects/Misc/ReturnBeacon01",
+    "VisualEffect" : "VFXReturnBeacon",
+    "VisualEffectSize_Starmap" : 300.0,
+    "VisualEffectSize_Starfield" : 10.0
+}

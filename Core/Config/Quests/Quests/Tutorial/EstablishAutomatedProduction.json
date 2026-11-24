@@ -1,0 +1,79 @@
+{
+    // Assembler variant of EstablishProduction, a fallback for a starting crew in which nobody
+    // can run the operator-required Crafting Station (the Crafting job needs the Manipulate
+    // and Craft abilities; a stock robot has them via its Manipulator hand, so in practice
+    // this only fires for a crew without one). The Assembler runs itself.
+    //
+    // CrewCannotCraft is what selects between the two; the scenario intro sets it after
+    // checking the actual crew. The twin quest carries the matching
+    // "RemoveIf": [ "CrewCannotCraft" ], and this one is simply never available anywhere
+    // that bool is unset - which also means its SetOnComplete can never leak into another
+    // scenario the way a ForScenarios filter would.
+    "QuestFlags" : [ "Tutorial", "AutoAdd", "Unique" ],
+    "TitleKey" : "quest.EstablishProduction",
+    "DescKey" : "quest.EstablishProduction.desc",
+    "QuestProviders" : [
+        "ShipComputer"
+    ],
+    // Straight after ConnectToSurvivorArea, exactly where the manual variant sits (the two
+    // must keep identical gates, or RemoveIf can no longer pick between them cleanly): the
+    // Assembler is built from starting stock and needs no research and no operator. The rest
+    // of the tutorial spine (research onward) keys off HasEstablishedProduction and is the
+    // same in every scenario.
+    "AvailableWhen" : [
+        "ReadyForTutorialQuests",
+        "HasConnectedToSurvivorArea",
+        "CrewCannotCraft"
+    ],
+    "SetOnComplete" : [ "HasEstablishedProduction" ],
+    "SetOnFail" : [ "HasEstablishedProduction" ],
+    "BoundTutorialIds": [ "Resources/ConfigureCrafter" ],
+    "Steps" : [
+        // No research step: Research/Production/AssemblyImproved is pre-unlocked by the
+        // scenario, because it costs DatoidTech that is out of reach on day 3.
+        {
+            "Id": "HaveAssembler",
+            "Type" : "HaveOnGrid",
+            "StepFlags" : [ "ActiveOnStart" ],
+            "Config" : [
+                { "Key" : "Definition", "String" : "Objects/Devices/Assembler" },
+                { "Key" : "Count", "Int" : 1 }
+            ],
+            "SetOnComplete" : [
+                "HasAssembler"
+            ]
+        },
+        {
+            "Id": "ConfigureAssembler",
+            "Type" : "ConfigureCrafter",
+            "ActivateWhen" : [
+                "HasAssembler"
+            ],
+            "SetOnComplete" : [
+                "HasConfiguredAssembler"
+            ],
+            "Config" : [
+                {
+                    "Key" : "Crafter",
+                    "String" : "Objects/Devices/Assembler"
+                },
+                {
+                    "Key" : "Product",
+                    "String" : "Obj/Materials/Gears"
+                }
+            ]
+        },
+        {
+            "Id": "ProduceGears",
+            "StepFlags" : [ "CompletesQuest" ],
+            "Type" : "Produce",
+            "ActivateWhen" : [
+                "HasConfiguredAssembler"
+            ],
+            "Config" : [
+                { "Key" : "Product", "String" : "Obj/Materials/Gears" },
+                { "Key" : "Count", "Int" : 5 }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,12 @@
+{
+    "Id" : "CommsOperator",
+    "Species" : [ "Human", "Robot" ],
+    "AgePhaseIds" : [ "YoungAdult", "MidLife", "Retirement" ],
+    "LovesJobTypes" : [ "Social" ],
+    "AdjustsSkills" : [
+        {
+            "JobId" : "Social",
+            "Adjustment" : 6
+        }
+    ]
+}

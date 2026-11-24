@@ -1,0 +1,9 @@
+{
+    "Id" : "Obj/Materials/SiliconWafer",
+    "Type" : "CFD",
+    "Groups" : [ "Electronics" ],
+    "Value" : 14.0,
+    "Rarity" : 0.25,
+    "TraderQuantity" : 100.0,
+    "Volatility" : 0.0015
+}

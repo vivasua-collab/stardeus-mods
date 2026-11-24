@@ -1,0 +1,46 @@
+{
+    // C# implementation id.
+    // Multiple configurations can point to a single implementation.
+    "EventId" : "SoftSurgeStorm",
+    // How much does this story event cost to run
+    "Points" : 5,
+    // Options: Negative, Positive, Neutral, Raid
+    "OutcomeType" : "Positive",
+    // Full list is in StoryEventFlags class
+    "EventFlags" : [
+        "Space",
+        "SpaceStorm",
+        "CooldownOnStart",
+        "NoHyperspace",
+        "CanIgnoreRepeatDelay"
+    ],
+    "MaxOngoingDays" : 10,
+    "MinRepeatDelayDays" : 27,
+    // How likely this event can occur given the sector difficulty
+    // sector difficulty -> chance
+    "SectorDifficultyChance" : [
+        0.0, 0.5,
+        0.5, 1.0,
+        1.0, 0.75
+    ],
+    "Properties": [
+        { "Key": "DurationDaysMin", "Float" : 2.0 },
+        { "Key": "DurationDaysMax", "Float" : 4.0 },
+        { "Key": "Particles", "String" : "ParticleStorm" },
+        // HDR - values can go above 1.0
+        { "Key": "ParticleColor", "FloatSet" : [
+            1.595032,
+            0.2252297,
+            3.584905,
+            1.0
+        ]},
+        { "Key": "ParticlePlayRate", "Float" : 0.2 },
+        { "Key": "ParticleVelocity", "Float" : 0.25 },
+        { "Key": "ParticleSize", "Float" : 6.0 },
+        { "Key": "ParticleTurbulenceIntensity", "Float" : 2.0 },
+        { "Key": "ParticleTurbulenceDrag", "Float" : 0.5 },
+        { "Key": "ParticleTurbulenceFrequency", "Float" : 0.75 },
+        { "Key": "ParticleSphereAttractionForce", "Float" : 15.0 },
+        { "Key": "ParticleSphereAttractionStickDist", "Float" : 75.0 }
+    ]
+}

@@ -1,0 +1,22 @@
+{
+    "Id" : "Research/Production/AssemblyAdvanced",
+    "Tier" : 3,
+    "IsAbstract" : true,
+    "PreviewIcon" : "Icons/Color/Cog",
+    "Researchable" : {
+        "IsTreeNode" : true,
+        "Prerequisites" : [
+            "Research/Production/AssemblyImproved"
+        ],
+        "DatoidCosts" : [
+            {
+                "TypeId" : "DatoidSynthetic",
+                "StackSize" : 6
+            },
+            {
+                "TypeId" : "DatoidTechHigh",
+                "StackSize" : 11
+            }
+        ]
+    }
+}

@@ -1,0 +1,7 @@
+{
+    "Id" : "UI/Slider/Background",
+    // Hex same as scroll/background
+    "AliasFor" : "UI/Grey/Sec-1",
+    "Alpha" : 0.9,
+    "SkipAtlas" : true
+}

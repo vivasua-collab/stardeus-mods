@@ -1,0 +1,9 @@
+{
+    "Id" : "CopperWire",
+    "IsComposite" : true,
+    "IsConsumedOnDestroy" : true,
+    "IconId" : "Obj/Materials/CopperWire",
+    "GroupId" : "Electronics",
+    "EnergyOutput" : 58.0,
+    "Rarity" : 40
+}

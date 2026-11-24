@@ -1,0 +1,7 @@
+{
+    "Id" : "DerelictZone",
+    "Icon" : "Icons/Color/Starmap",
+    "NameKey" : "space.object.ShipDerelict",
+    "MinExitDist" : 25,
+    "DistanceUnitsKey" : "units.km.thousands"
+}

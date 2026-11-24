@@ -1,0 +1,11 @@
+{
+    "Type" : "Organic",
+    "Ingredients" : [
+        { "TypeId" : "Ice", "StackSize" : 1 }
+    ],
+    "IgnoreMarket" : true,
+    "OutputMultiplier" : 5,
+    "ProductDefId" : "Obj/Materials/Water",
+    "ProductionTimeHours" : 1.0,
+    "EnergyCost" : 5
+}

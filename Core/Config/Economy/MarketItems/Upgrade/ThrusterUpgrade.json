@@ -1,0 +1,10 @@
+{
+    "Id" : "Obj/Upgrades/ThrusterUpgrade",
+    "Type" : "CFD",
+    "Groups" : [ "Upgrade" ],
+    "Value" : 1500.0,
+    "Rarity" : 0.3,
+    "TraderQuantity" : 1.0,
+    "MaxTraderQuantity" : 10,
+    "Volatility" : 0.0031
+}

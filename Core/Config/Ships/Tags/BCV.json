@@ -1,0 +1,16 @@
+// BCV: Battle Command Vessel
+{
+    "ChanceWillTrade" : 0.1,
+    "ChancePolice" : 0.8,
+    // empty = all
+    "CompatibleFactions" : [ ],
+    "CompatibleClasses" : [
+        "Battlecruiser",
+        "Battleship",
+        "Destroyer",
+        "Dreadnought",
+        "Titan"
+    ],
+    "MinOffensiveness" : 0.8,
+    "MaxOffensiveness" : 1.0
+}

@@ -1,0 +1,14 @@
+{
+    "Type": "Robotics1",
+    "Ingredients": [
+        { "TypeId" : "TitaniumPlate", "StackSize" : 1 },
+        { "TypeId" : "Gears", "StackSize" : 2 },
+        { "TypeId" : "SiliconWafer", "StackSize" : 1 },
+        { "TypeId" : "Transistor", "StackSize" : 2 },
+        { "TypeId" : "Microchip", "StackSize" : 1 },
+        { "TypeId" : "CopperWire", "StackSize" : 3 }
+    ],
+    "ProductDefId": "Beings/CleaningBot01",
+    "ProductionTimeHours": 168.0,
+    "EnergyCost": 25.0
+}

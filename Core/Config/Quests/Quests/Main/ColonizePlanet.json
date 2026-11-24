@@ -1,0 +1,168 @@
+{
+    "QuestFlags" : [ "Main", "AutoAdd", "Unique" ],
+    "TitleKey" : "quest.ColonizePlanet",
+    "DescKey" : "quest.ColonizePlanet.desc",
+    "QuestProviders" : [
+        "ShipComputer"
+    ],
+    "AvailableWhen" : [
+        "HasTerraformingAtmo",
+        "HasTerraformingOcean",
+        "HasTerraformingTerrain",
+        "HasTerraformingBio"
+    ],
+    "FailWhen" : [
+        "UsedDarkPortal",
+        "EnabledElysium"
+    ],
+    "SetOnComplete" : [
+        "HasColonizedPlanet",
+        "ReachedEndGame"
+    ],
+    "SetOnFail" : [ "ReachedEndGame" ],
+    "Variables": [
+        {
+            "Id" : "HabitablePlanet",
+            "Type" : "ExistingSpaceObject",
+            "Config": [
+                { "Key": "LoadSOId", "String" : "HabitablePlanetId" }
+            ]
+        }
+    ],
+    "Steps" : [
+        {
+            "Id": "HaveTerraformerAqua",
+            "Type" : "HaveOnGrid",
+            "StepFlags" : [ "ActiveOnStart" ],
+            "Config" : [
+                { "Key" : "Definition", "String" : "Objects/Devices/TerraformerAqua" },
+                { "Key" : "Count", "Int" : 1 }
+            ],
+            "SetOnComplete" : [
+                "HasTerraformerAqua"
+            ]
+        },
+        {
+            "Id": "HaveTerraformerAtmo",
+            "Type" : "HaveOnGrid",
+            "StepFlags" : [ "ActiveOnStart" ],
+            "Config" : [
+                { "Key" : "Definition", "String" : "Objects/Devices/TerraformerAtmo" },
+                { "Key" : "Count", "Int" : 1 }
+            ],
+            "SetOnComplete" : [
+                "HasTerraformerAtmo"
+            ]
+        },
+        {
+            "Id": "HaveTerraformerBio",
+            "Type" : "HaveOnGrid",
+            "StepFlags" : [ "ActiveOnStart" ],
+            "Config" : [
+                { "Key" : "Definition", "String" : "Objects/Devices/TerraformerBio" },
+                { "Key" : "Count", "Int" : 1 }
+            ],
+            "SetOnComplete" : [
+                "HasTerraformerBio"
+            ]
+        },
+        {
+            "Id": "HaveTerraformerTerrain",
+            "Type" : "HaveOnGrid",
+            "StepFlags" : [ "ActiveOnStart" ],
+            "Config" : [
+                { "Key" : "Definition", "String" : "Objects/Devices/TerraformerTerrain" },
+                { "Key" : "Count", "Int" : 1 }
+            ],
+            "SetOnComplete" : [
+                "HasTerraformerTerrain"
+            ]
+        },
+        {
+            "Id": "HaveTerraformControls",
+            "Type" : "HaveOnGrid",
+            "StepFlags" : [ "ActiveOnStart" ],
+            "Config" : [
+                { "Key" : "Definition", "String" : "Objects/Devices/TerraformControls" },
+                { "Key" : "Count", "Int" : 1 }
+            ],
+            "SetOnComplete" : [
+                "HasTerraformControls"
+            ]
+        },
+        {
+            "Id": "TerraformAqua",
+            "Type" : "Terraform",
+            "Config" : [
+                { "Key" : "TerraformType", "String" : "Oceans" },
+                { "Key" : "Var_Target", "String" : "HabitablePlanet" }
+            ],
+            "ActivateWhen" : [
+                "HasTerraformControls",
+                "HasTerraformerAqua"
+            ],
+            "SetOnComplete" : [
+                "TerraformedAqua"
+            ]
+        },
+        {
+            "Id": "TerraformAtmo",
+            "Type" : "Terraform",
+            "Config" : [
+                { "Key" : "TerraformType", "String" : "Atmosphere" },
+                { "Key" : "Var_Target", "String" : "HabitablePlanet" }
+            ],
+            "ActivateWhen" : [
+                "HasTerraformControls",
+                "HasTerraformerAtmo"
+            ],
+            "SetOnComplete" : [
+                "TerraformedAtmo"
+            ]
+        },
+        {
+            "Id": "TerraformTerra",
+            "Type" : "Terraform",
+            "Config" : [
+                { "Key" : "TerraformType", "String" : "Terrain" },
+                { "Key" : "Var_Target", "String" : "HabitablePlanet" }
+            ],
+            "ActivateWhen" : [
+                "HasTerraformControls",
+                "HasTerraformerTerrain"
+            ],
+            "SetOnComplete" : [
+                "TerraformedTerra"
+            ]
+        },
+        {
+            "Id": "TerraformBio",
+            "Type" : "Terraform",
+            "Config" : [
+                { "Key" : "TerraformType", "String" : "Biosphere" },
+                { "Key" : "Var_Target", "String" : "HabitablePlanet" }
+            ],
+            "ActivateWhen" : [
+                "HasTerraformControls",
+                "HasTerraformerBio"
+            ],
+            "SetOnComplete" : [
+                "TerraformedBio"
+            ]
+        },
+        {
+            "Id": "ColonizePlanet",
+            "Type" : "ColonizePlanet",
+            "StepFlags" : [ "CompletesQuest" ],
+            "Config" : [
+                { "Key" : "Var_Target", "String" : "HabitablePlanet" }
+            ],
+            "ActivateWhen" : [
+                "TerraformedAqua",
+                "TerraformedAtmo",
+                "TerraformedTerra",
+                "TerraformedBio"
+            ]
+        }
+    ]
+}

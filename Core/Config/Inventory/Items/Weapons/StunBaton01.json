@@ -1,0 +1,38 @@
+{
+    "DefId" : "Obj/Equipment/Weapons/StunBaton01",
+    "SlotId" : "Weapon",
+    "SpriteId" : "Obj/Weapons/StunBaton01/StunBaton01",
+    "Rarity" : 0.55,
+    // its stuns are worth something on top of its damage when beings pick a weapon
+    // (WeaponScore): above a knife, below a machete
+    "CombatStrengthBonus" : 0.75,
+    "SpawnRequirements" : {
+        "Days" : 30,
+        "Friendlies" : 11,
+        "SectorDifficulty" : 0.75
+    },
+    "LooksShowFlags" : [
+        "Combat"
+    ],
+    "AddsAttackMethods" : [
+        {
+            "Component" : "Shock",
+            "Properties" : [
+                { "Key" : "AttackAction", "String" : "Melee" },
+                { "Key" : "DPS", "Float" : 2.6 },
+                { "Key" : "AttackType", "String" : "Energy" },
+                { "Key" : "ChargeSec", "Float" : 3.0 },
+                { "Key" : "CooldownSec", "Float" : 3.0 },
+                { "Key" : "MoveSpeedMul", "Float" : 0.05 },
+                { "Key" : "StunChanceBio", "Float" : 1.00 },
+                { "Key" : "StunChanceRobo", "Float" : 1.00 },
+                { "Key" : "BleedChance", "Float" : 0.05 },
+                { "Key" : "ArmorPenetration", "Float" : 0.1 },
+                { "Key" : "ChargeVFX", "String" : "ChargeEnergyVFX" },
+                { "Key" : "AttackVFX", "String" : "AttackEnergyVFX" },
+                { "Key" : "FatalHitChanceMul", "Float" : 0.15 },
+                { "Key" : "InternalHitChanceMul", "Float" : 0.3 }
+            ]
+        }
+    ]
+}

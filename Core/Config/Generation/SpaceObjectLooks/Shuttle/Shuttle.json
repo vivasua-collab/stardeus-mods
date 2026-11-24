@@ -1,0 +1,15 @@
+{
+    "Id" : "Shuttle",
+    "Probability" : 1.0,
+    "StarmapSizeMul" : 2.0,
+    "OrderDist" : -35,
+    "StarfieldSizeMul" : 0.1,
+    "Sprite" : "Objects/Devices/ShuttleFlying_L",
+    "CanRotate" : true,
+    "KeepUprightInStarfield" : true,
+    "IsConstantSizeInStarmap" : false,
+    "Sprite_L" : "Objects/Devices/ShuttleFlying_L",
+    "Sprite_R" : "Objects/Devices/ShuttleFlying_R",
+    "Sprite_U" : "Objects/Devices/ShuttleFlying_U",
+    "Sprite_D" : "Objects/Devices/ShuttleFlying_D"
+}

@@ -1,0 +1,17 @@
+{
+    "Id" : "BugCollector",
+    "Species" : [ "Human" ],
+    "LovesJobTypes" : [ "Expedition" ],
+    "AgePhaseIds" : [ "Childhood" ],
+    "RoleTypes" : [ ],
+    "AdjustsSkills" : [
+        {
+            "JobId" : "Expedition",
+            "Adjustment" : 3
+        },
+        {
+            "JobId" : "Crafting",
+            "Adjustment" : 2
+        }
+    ]
+}

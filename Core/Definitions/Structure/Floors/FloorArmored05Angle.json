@@ -1,0 +1,14 @@
+{
+    "BuildGroup" : "FloorArmoredAngle",
+    "Layer" : "Floor",
+    "ParentId" : "Structure/Floors/FloorArmored01Angle",
+    "UseParentTexts" : true,
+    "Components" : [
+        {
+            "Component" : "TileGraphics",
+            "Properties" : [
+                { "Key" : "Graphic", "String": "Structure/Floors/FloorArmored05Angle" }
+            ]
+        }
+    ]
+}

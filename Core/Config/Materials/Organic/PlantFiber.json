@@ -1,0 +1,13 @@
+{
+    "Id" : "PlantFiber",
+    "IsComposite" : true,
+    "IsConsumedOnConstruct" : true,
+    "IconId" : "Obj/Materials/PlantFiber",
+    "Property" : "Nutrient",
+    "Group" : "RawFood",
+    "GroupId" : "FoodIngredients",
+    "InternalValue" : 3.0,
+    "EnergyOutput" : 120.0,
+    "MatRarity" : 2,
+    "Rarity" : 60
+}

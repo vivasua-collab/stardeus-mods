@@ -1,0 +1,61 @@
+{
+    "ToolPath" : "Walls",
+    "IsAbstract" : true,
+    "ParentId" : "Structure/BaseStructure",
+    "Components" : [
+        {
+            "Component" : "TileTransform",
+            "Properties" : [
+                { "Key" : "ValidRotations", "String" : "DR" }
+            ]
+        },
+        { "Component" : "Reinstallable" },
+        {
+            "Component" : "Admirable",
+            "Properties" : [
+                // mood bonus
+                { "Key" : "Amount", "Int" : 1 },
+                // fun multiplier
+                { "Key" : "Multiplier", "Float" : 0.1 },
+                { "Key" : "Chance", "Float" : 0.1 },
+                { "Key" : "IsWindow", "Bool" : true }
+            ]
+        },
+        {
+            "Component" : "Flammable",
+            "Properties" : [
+                { "Key" : "FireChance", "Float" : 0.1 },
+                { "Key" : "SpreadIntoChance", "Float" : 0.25 }
+            ]
+        },
+        {
+            "Component" : "HullIntegrity",
+            "Properties" : [
+                { "Key" : "MaxInsulation", "Float" : 0.995 },
+                { "Key" : "MaxAirtight", "Float" : 1 }
+            ]
+        },
+        {
+            "Component" : "Damageable",
+            "Properties" : [
+                { "Key" : "Max", "Int" : 50 }
+            ]
+        },
+        {
+            "Component" : "Constructable",
+            "Properties" : [
+                { "Key" : "Placement", "String" : "OnFloor" },
+                { "Key" : "CanReplaceSameLayer", "Bool": true },
+                { "Key" : "CanDragRow", "Bool" : true },
+                { "Key" : "WorkAmount", "Int" : 95 },
+                {
+                    "Key" : "Contents",
+                    "RawMaterials" : [
+                        { "TypeId" : "SteelPlate", "StackSize" : 1 },
+                        { "TypeId" : "Glass", "StackSize" : 1 }
+                    ]
+                }
+            ]
+        }
+    ]
+}

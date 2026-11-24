@@ -1,0 +1,10 @@
+{
+    "Id" : "Obj/Upgrades/FuseUpgrade",
+    "Type" : "CFD",
+    "Groups" : [ "Upgrade", "Electronics" ],
+    "Value" : 500.0,
+    "Rarity" : 0.5,
+    "TraderQuantity" : 5.0,
+    "MinSectorDifficulty" : 0.25,
+    "Volatility" : 0.0014
+}

@@ -1,0 +1,10 @@
+{
+    "Id" : "CrawlerGoo",
+    "IsComposite" : true,
+    "IconId" : "Obj/Materials/CrawlerGoo",
+    "GroupId" : "Components",
+    "EnergyOutput" : 72.0,
+    "InternalValue" : 120.0,
+    "IgnoreMarket" : true,
+    "Rarity" : 5
+}

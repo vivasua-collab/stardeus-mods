@@ -1,0 +1,10 @@
+{
+    "Type" : "Ore",
+    "Ingredients" : [
+        { "TypeId" : "Quartz", "StackSize" : 1 }
+    ],
+    "OutputMultiplier" : 3,
+    "ProductDefId" : "Obj/Materials/Glass",
+    "ProductionTimeHours" : 1.0,
+    "EnergyCost" : 15
+}

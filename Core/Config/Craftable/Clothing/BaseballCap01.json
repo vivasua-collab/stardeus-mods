@@ -1,0 +1,12 @@
+{
+    "Type": "Clothing",
+    "ColorGroupId": "Clothing",
+    "Ingredients": [
+        { "TypeId" : "PlantFiber", "StackSize" : 1 },
+        { "TypeId" : "CarbonFiber", "StackSize" : 1 }
+    ],
+    "IgnoreMarket" : true,
+    "ProductDefId": "Obj/Equipment/Hats/BaseballCap01",
+    "ProductionTimeHours": 2.0,
+    "EnergyCost": 5.0
+}

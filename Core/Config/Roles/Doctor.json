@@ -1,0 +1,18 @@
+{
+    "Id" : "Doctor",
+    "Species" : [ "Human", "Robot" ],
+    "AgePhaseIds" : [ "MidLife", "Retirement" ],
+    "LovesJobTypes" : [ "Medical" ],
+    "IncapableJobTypes" : [ "Firefighting", "Melee" ],
+    "RoleTypes" : [ "Smart", "Rich", "Good" ],
+    "AdjustsSkills" : [
+        {
+            "JobId" : "Medical",
+            "Adjustment" : 6
+        },
+        {
+            "JobId" : "Research",
+            "Adjustment" : 4
+        }
+    ]
+}

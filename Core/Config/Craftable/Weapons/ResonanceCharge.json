@@ -1,0 +1,13 @@
+{
+    "Type": "Weapons1",
+    "Ingredients": [
+        { "TypeId" : "TitaniumPlate", "StackSize" : 5 },
+        { "TypeId" : "Gears", "StackSize" : 5 },
+        { "TypeId" : "BatteryCell", "StackSize" : 3 },
+        { "TypeId" : "Microchip", "StackSize" : 1 }
+    ],
+    "IgnoreMarket" : true,
+    "ProductDefId": "Obj/Misc/ResonanceCharge",
+    "ProductionTimeHours": 4.0,
+    "EnergyCost": 50.0
+}

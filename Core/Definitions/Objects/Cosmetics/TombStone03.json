@@ -1,0 +1,16 @@
+{
+    "BuildGroup" : "TombStone",
+    "Layer" : "Objects",
+    "ParentId" : "Objects/Cosmetics/TombStone01",
+    "UseParentTexts" : true,
+    "Components" : [
+        {
+            "Component" : "TileGraphics",
+            "Properties" : [
+                { "Key" : "AliasLR", "Bool" : false },
+                { "Key" : "AliasUD", "Bool" : false },
+                { "Key" : "Graphic", "String": "Objects/Cosmetics/TombStone03" }
+            ]
+        }
+    ]
+}

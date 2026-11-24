@@ -1,0 +1,80 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Stardeus RoomConfig",
+  "description": "Generated from C# by Game/Generate JSON Schemas, do not edit by hand",
+  "$ref": "#/$defs/RoomConfig",
+  "$defs": {
+    "RoomConfig": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "Type": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "SizeMin": {
+          "type": "integer"
+        },
+        "SizeMax": {
+          "type": "integer"
+        },
+        "CountMin": {
+          "type": "integer"
+        },
+        "CountMax": {
+          "type": "integer"
+        },
+        "FillMin": {
+          "type": "number"
+        },
+        "FillMax": {
+          "type": "number"
+        },
+        "Chance": {
+          "type": "number"
+        },
+        "RequiredObjects": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "CompatibleObjects": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "CompatibleTemplates": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        }
+      },
+      "additionalProperties": false
+    }
+  }
+}

@@ -1,0 +1,11 @@
+{
+    "Id" : "Obj/Materials/Lithium",
+    "Type" : "CFD",
+    "Groups" : [ "Ore", "Electronics" ],
+    "Value" : 63.0,
+    "Rarity" : 0.1,
+    "TraderQuantity" : 30.0,
+    "OnlineShopQuantity" : 30,
+    "MinSectorDifficulty" : 0.21,
+    "Volatility" : 0.0028
+}

@@ -1,0 +1,15 @@
+{
+    "Id" : "BreachCapsule",
+    "GroupId" : "Threats",
+    "GroupNameKey" : "group.other",
+    "NameKey" : "obj.containers.breachcapsuleflying",
+    "NonShipTarget" : true,
+    "Icon" : "Objects/Devices/BreachCapsule_Flying",
+    "DefaultTargetByWeaponTypes" : [
+        "Ballistic",
+        "PointDefense",
+        "Missile",
+        "Laser",
+        "Plasma"
+    ]
+}

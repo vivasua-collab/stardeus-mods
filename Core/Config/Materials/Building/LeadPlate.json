@@ -1,0 +1,8 @@
+{
+    "Id" : "LeadPlate",
+    "IsComposite" : true,
+    "IconId" : "Obj/Materials/LeadPlate",
+    "EnergyOutput" : 1700.0,
+    "GroupId" : "Plates",
+    "Rarity" : 30
+}

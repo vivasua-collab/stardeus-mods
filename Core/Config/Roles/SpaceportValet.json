@@ -1,0 +1,17 @@
+{
+    "Id" : "SpaceportValet",
+    "LovesJobTypes" : [ "Piloting" ],
+    "RoleTypes" : [ ],
+    "Species" : [ "Human", "Robot", "Drone" ],
+    "AgePhaseIds" : [ "YoungAdult", "MidLife", "Retirement" ],
+    "AdjustsSkills" : [
+        {
+            "JobId" : "Piloting",
+            "Adjustment" : 4
+        },
+        {
+            "JobId" : "Social",
+            "Adjustment" : 2
+        }
+    ]
+}

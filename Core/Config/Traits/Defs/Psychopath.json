@@ -1,0 +1,12 @@
+{
+    "Id" : "Psychopath",
+    "IconId" : "Icons/Color/Skull",
+    "TypeId" : "Mental",
+    "Rarity" : 0.05,
+    "AdjustsSkills" : [
+        {
+            "JobId" : "Social",
+            "Adjustment" : -2
+        }
+    ]
+}

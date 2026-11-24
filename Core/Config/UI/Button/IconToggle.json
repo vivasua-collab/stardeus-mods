@@ -1,0 +1,20 @@
+{
+    "Id" : "Button/IconToggle",
+
+    "ChildrenKeys" : [
+        "Panel",
+        "Selectable",
+        "Text",
+        "ActiveOverlay",
+        "SelectedOverlay"
+    ],
+
+    "ChildrenIds" : [
+        "Panel/ColorlessIconButton",
+        "Selectable/Default",
+        "Text/Unstyled",
+        "Overlay/Icon",
+        "Overlay/IconSelected"
+    ]
+
+}

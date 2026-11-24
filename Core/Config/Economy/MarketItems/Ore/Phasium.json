@@ -1,0 +1,10 @@
+{
+    "Id" : "Obj/Materials/Phasium",
+    "Type" : "CFD",
+    "Groups" : [ "Hyperfuel", "Ore" ],
+    "Value" : 180.0,
+    "Rarity" : 0.04,
+    "TraderQuantity" : 5.0,
+    "OnlineShopQuantity" : 20,
+    "Volatility" : 0.0012
+}

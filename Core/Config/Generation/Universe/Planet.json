@@ -1,0 +1,48 @@
+{
+    "Id" : "Planet",
+    "Icon" : "Icons/Color/Planet",
+    "ParentIds" : [
+        "Sector"
+    ],
+    "SizeMin" : 0.5,
+    "SizeMax" : 2,
+    "SpawnChance" : 1.0,
+    "CanBeExplored" : false,
+    "IsScannable" : true,
+    "IsTerraformable" : true,
+    "CanBeOwned" : true,
+    "MinExitDist" : 25,
+
+    "ShuttleReachDist" : 5000,
+
+    "MinDistanceBetweenSubObjects" : 3.0,
+    "DistanceUnitsKey" : "units.km.thousands",
+    "NameChanceWeights" : [
+        0.95,
+        0.05
+    ],
+    "CustomNames" : "Space/Planet/Custom",
+    "NameParts" : [
+        {
+            "Type" : "Prefix",
+            "NonUnique" : true,
+            "Paths" : [ "Space/Object/Prefix" ],
+            "Chances" : [ 0.0, 1.0 ]
+        },
+        {
+            "Type" : "SOName",
+            "Paths" : [ "Space/Object/Name" ],
+            "Chances" : [ 1.0, 1.0 ]
+        },
+        {
+            "Type" : "SOName",
+            "Paths" : [ "Space/Object/Name" ],
+            "Chances" : [ 0.1, 0.01 ]
+        },
+        {
+            "Type" : "PlanetSuffix",
+            "Paths" : [ "Space/Object/Suffix" ],
+            "Chances" : [ 0.05, 0.01 ]
+        }
+    ]
+}

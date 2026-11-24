@@ -1,0 +1,9 @@
+{
+    "Id" : "Pacifist",
+    "IconId" : "Icons/Color/Peace",
+    "TypeId" : "Intellectual",
+    "Rarity" : 0.5,
+    "IncapableJobTypes" : [
+        "Violent"
+    ]
+}

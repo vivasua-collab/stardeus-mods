@@ -1,0 +1,9 @@
+{
+    "Id" : "Construction",
+    "SkillSpeedCurve" : "Skills/SpeedConstruction",
+    "Importance" : 3.0,
+    "EnabledByAbilities" : [ "Build", "SkilledLabor" ],
+    "IconId" : "Icons/Color/Hammer",
+    "Types" : [ "Physical", "NanobotCompatible" ],
+    "WorkSpeedStat" : "ManualWorkSpeed"
+}

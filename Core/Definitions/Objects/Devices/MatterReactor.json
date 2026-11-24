@@ -1,0 +1,102 @@
+{
+    "ToolPath" : "Energy",
+    "Layer" : "Objects",
+    "ParentId" : "Objects/Devices/MatterReactorMini",
+    "Researchable" : {
+        "Prerequisites" : [ "Research/Energy/ReactorImproved" ]
+    },
+    "TranslationVars" : [ "150" ],
+    "Spawnable" : {
+        "Category" : "Reactor",
+        "Chance" : 1.0,
+        "ChanceLocked" : 0.5
+    },
+    "Components" : [
+        {
+            "Component" : "TileTransform",
+            "Properties" : [
+                { "Key" : "Width", "Int" : 2 },
+                { "Key" : "Height", "Int" : 2 },
+                { "Key" : "CoverPercent", "Int" : 85 },
+                // { "Key" : "WorkSpot", "Vector2" : { "x" : 0, "y" : -1 } },
+                // { "Key" : "OutPort", "Vector2" : { "x" : 0, "y" : -1 } },
+                { "Key" : "InPort", "Vector2" : { "x" : 0, "y" : -1 } },
+                { "Key" : "IsRotatable", "Bool" : true }
+            ]
+        },
+        {
+            "Component" : "AudioSource",
+            "Properties" : [
+                { "Key" : "AmbienceClip", "String" : "Devices/MatterReactorSFX" },
+                { "Key" : "Rolloff", "Vector2" : { "x" : 3, "y" : 12 } },
+                { "Key" : "IsLinkedToEnergy", "Bool" : true }
+            ]
+        },
+        {
+            "Component" : "VFX",
+            "Properties" : [
+                // Removing the derived property from Mini reactor - null won't work but empty string will!
+                { "Key" : "Id", "String" : "" },
+                { "Key" : "Id_U", "String" : "VFXParticlesMatterReactorUD" },
+                { "Key" : "Id_D", "String" : "VFXParticlesMatterReactorUD" },
+                { "Key" : "Id_L", "String" : "VFXParticlesMatterReactorLR" },
+                { "Key" : "Id_R", "String" : "VFXParticlesMatterReactorLR" },
+                { "Key" : "Offsets", "Vector2Set" : [] }
+            ]
+        },
+        {
+            "Component" : "LightSource",
+            "Properties" : [
+                { "Key" : "Radius", "Float" : 6 }
+            ]
+        },
+        {
+            "Component" : "MatterReactor",
+            "Properties" : [
+                { "Key" : "MaxRate", "Int" : 150 },
+                { "Key" : "Efficiency", "Float" : 1.5 }
+            ]
+        },
+        {
+            "Component" : "WithFuse",
+            "Properties" : [
+                { "Key" : "MalfunctionWeight", "Float": 0.15 },
+                // matter reactor has it's own MatterReactorMalfunctionStoryEvent
+                { "Key" : "CanHaveGenericMalfunction", "Bool" : false }
+            ]
+        },
+        {
+            "Component" : "RefillableStorage",
+            "Properties" : [
+                { "Key" : "MaterialCapacity", "Int" : 25 }
+            ]
+        },
+        {
+            "Component" : "TileGraphics",
+            "Properties" : [
+                { "Key" : "Graphic", "String": "Objects/Devices/MatterReactor" }
+            ]
+        },
+        {
+            "Component" : "Damageable",
+            "Properties" : [
+                { "Key" : "Max", "Int" : 400 }
+            ]
+        },
+        {
+            "Component" : "Constructable",
+            "Properties" : [
+                { "Key" : "WorkAmount", "Int" : 5000 },
+                {
+                    "Key" : "Contents",
+                    "RawMaterials" : [
+                        { "TypeId" : "TitaniumPlate", "StackSize" : 8 },
+                        { "TypeId" : "GoldWire", "StackSize" : 10 },
+                        { "TypeId" : "BatteryCell", "StackSize" : 4 },
+                        { "TypeId" : "Microchip2", "StackSize" : 1 }
+                    ]
+                }
+            ]
+        }
+    ]
+}

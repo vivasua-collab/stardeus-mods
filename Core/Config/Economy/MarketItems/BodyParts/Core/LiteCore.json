@@ -1,0 +1,12 @@
+{
+    "Id" : "Obj/Parts/Core/LiteCore",
+    "Type" : "CFD",
+    "Groups" : [ "BodyPart", "Robotics" ],
+    "Value" : 25000.0,
+    "PlayerBuyPriceMultiplier" : 2.0,
+    "PlayerSellPriceMultiplier" : 0.2,
+    "Rarity" : 0.3,
+    "MinSectorDifficulty" : 0.5,
+    "TraderQuantity" : 2.0,
+    "Volatility" : 0.00172
+}

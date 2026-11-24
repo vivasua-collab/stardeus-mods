@@ -1,0 +1,10 @@
+{
+    "Id" : "Obj/Meals/PumpkinSoup",
+    "Type" : "CFD",
+    "Groups" : [ "Food" ],
+    "Value" : 48.0,
+    "Rarity" : 0.3,
+    "TraderQuantity" : 15.0,
+    "MinSectorDifficulty" : 0.35,
+    "Volatility" : 0.00027
+}

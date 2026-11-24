@@ -1,0 +1,387 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Stardeus TraitDef",
+  "description": "Generated from C# by Game/Generate JSON Schemas, do not edit by hand",
+  "$ref": "#/$defs/TraitDef",
+  "$defs": {
+    "ComponentConfig": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "Component": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "Properties": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "$ref": "#/$defs/SerializableProperty"
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "Mat": {
+      "type": "object",
+      "properties": {
+        "TypeId": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "StackSize": {
+          "type": "integer"
+        },
+        "MaxStackSize": {
+          "type": "integer"
+        }
+      },
+      "additionalProperties": false
+    },
+    "SerializableProperty": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "Key": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "String": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "Int": {
+          "type": "integer"
+        },
+        "Float": {
+          "type": "number"
+        },
+        "Vector2": {
+          "$ref": "#/$defs/Vector2"
+        },
+        "PosIdx": {
+          "type": "integer"
+        },
+        "Bool": {
+          "type": "boolean"
+        },
+        "BoolSet": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "boolean"
+          }
+        },
+        "IntSet": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "integer"
+          }
+        },
+        "FloatSet": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "number"
+          }
+        },
+        "StringSet": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "Vector2Set": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "$ref": "#/$defs/Vector2"
+          }
+        },
+        "RawMaterials": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "$ref": "#/$defs/Mat"
+          }
+        },
+        "IsUsed": {
+          "type": "boolean"
+        }
+      },
+      "additionalProperties": false
+    },
+    "SkillAdjustment": {
+      "type": "object",
+      "properties": {
+        "JobId": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "Adjustment": {
+          "type": "integer"
+        }
+      },
+      "additionalProperties": false
+    },
+    "StatSourceData": {
+      "type": "object",
+      "properties": {
+        "StatId": {
+          "type": "integer"
+        },
+        "CompoundLimit": {
+          "type": "number"
+        },
+        "StateMul": {
+          "type": "number"
+        },
+        "QualityMul": {
+          "type": "number"
+        },
+        "Amount": {
+          "type": "number"
+        }
+      },
+      "additionalProperties": false
+    },
+    "TraitDef": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "NameT": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "DescT": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "Id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "IdH": {
+          "type": "integer"
+        },
+        "IconId": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "Flags": {
+          "anyOf": [
+            {
+              "type": "string",
+              "pattern": "^\\s*(None|RoleOnly|BodyBound)(\\s*,\\s*(None|RoleOnly|BodyBound))*\\s*$"
+            },
+            {
+              "type": "integer"
+            }
+          ]
+        },
+        "TypeId": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "BodyTypes": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "CompatibleSpecies": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "CompatibleSex": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "AddsAbilities": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "AddsNeeds": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "TraitFlagIds": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "enum": [
+              "None",
+              "RoleOnly",
+              "BodyBound"
+            ],
+            "type": "string"
+          }
+        },
+        "IncapableJobTypes": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "LovesJobTypes": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "Rarity": {
+          "type": "number"
+        },
+        "IncompatibleTraitIds": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "StatSources": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "$ref": "#/$defs/StatSourceData"
+          }
+        },
+        "AddsStatModifiers": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "$ref": "#/$defs/ComponentConfig"
+          }
+        },
+        "AdjustsSkills": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "$ref": "#/$defs/SkillAdjustment"
+          }
+        },
+        "Modifiers": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "Vector2": {
+      "type": "object",
+      "properties": {
+        "x": {
+          "type": "number"
+        },
+        "y": {
+          "type": "number"
+        }
+      },
+      "additionalProperties": false
+    }
+  }
+}

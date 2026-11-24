@@ -1,0 +1,13 @@
+{
+    "Id" : "Obj/Materials/FusionCellHeavy",
+    "Type" : "CFD",
+    "Groups" : [ "Hyperfuel" ],
+    "Value" : 2900.0,
+    "TraderQuantity" : 1.0,
+    "Rarity" : 0.95,
+    // If this is 0, it will still generate in stock but with default chance through market groups
+    "CustomChanceInStock" : 0.15,
+    "OnlineShopQuantity" : 5,
+    "MinSectorDifficulty" : 0.75,
+    "Volatility" : 0.0032
+}

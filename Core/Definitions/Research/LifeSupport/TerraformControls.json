@@ -1,0 +1,32 @@
+{
+    "Id" : "Research/LifeSupport/TerraformControls",
+    "Tier" : 6,
+    "IsAbstract" : true,
+    "PreviewIcon" : "Icons/Color/Terraform",
+    "NameKey" : "objects.devices.terraformcontrols",
+    "Researchable" : {
+        "IsTreeNode" : true,
+        "IsDiscoverable" : true,
+        "Prerequisites" : [
+            "Research/LifeSupport/GrowingPartsAdvanced"
+        ],
+        "DatoidCosts" : [
+            {
+                "TypeId" : "DatoidPhyto",
+                "StackSize" : 34
+            },
+            {
+                "TypeId" : "DatoidBiotic",
+                "StackSize" : 26
+            },
+            {
+                "TypeId" : "DatoidNuclear",
+                "StackSize" : 20
+            },
+            {
+                "TypeId" : "DatoidAlien",
+                "StackSize" : 15
+            }
+        ]
+    }
+}

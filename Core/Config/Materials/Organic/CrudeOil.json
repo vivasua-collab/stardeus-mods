@@ -1,0 +1,14 @@
+{
+    "Id" : "CrudeOil",
+    "IsComposite" : true,
+    "IsConsumedOnConstruct" : true,
+    "IconId" : "Obj/Materials/CrudeOil",
+    "Property" : "Liquid",
+    "GroupId" : "Ore",
+    "InternalValue" : 55.0,
+    "EnergyOutput" : 900.0,
+    "Rarity" : 55,
+    "MatRarity" : 1,
+    "ExplosionLevel" : 3,
+    "ExplosivenessCurveId" : "High"
+}

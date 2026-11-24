@@ -1,0 +1,81 @@
+{
+    "ToolPath" : "Facilities",
+    "Layer" : "Objects",
+    "ParentId" : "Objects/Devices/BaseDevice",
+    "Researchable" : {
+        "Prerequisites" : [ "Research/SpaceTravel/MiningAutomation" ]
+    },
+    "Spawnable" : {
+        "Category": "Mining",
+        "Chance" : 1.0,
+        "ChanceLocked" : 0.0
+    },
+    "Components" : [
+        {
+            "Component" : "TileTransform",
+            "Properties" : [
+                { "Key" : "Width", "Int" : 2 },
+                { "Key" : "Height", "Int" : 2 },
+                { "Key" : "CoverPercent", "Int" : 50 },
+                { "Key" : "IsRotatable", "Bool" : true }
+            ]
+        },
+        {
+            "Component" : "Flammable",
+            "Properties" : [
+                { "Key" : "IgnitionTemperatureCelsius", "Int" : 800 },
+                { "Key" : "FireChance", "Float" : 0.5 },
+                { "Key" : "BaseExplosionLevel", "Int" : 6 },
+                { "Key" : "FlammabilityCurve", "String" : "Device" },
+                { "Key" : "ExplosivenessCurve", "String" : "Device" }
+            ]
+        },
+        { "Component" : "ResourceMiner" },
+        {
+            "Component" : "IndustrialEquipment",
+            "Properties" : [
+                { "Key" : "IsNoisy", "Bool" : false }
+            ]
+        },
+        {
+            "Component" : "LightSource",
+            "Properties" : [
+                { "Key" : "Color", "IntSet" : [ 205, 50, 50, 128 ] },
+                { "Key" : "NeedsEnergy", "Bool" : false },
+                { "Key" : "Radius", "Float" : 3 }
+            ]
+        },
+        {
+            "Component" : "Passability",
+            "Properties" : [
+                { "Key" : "IsPassable", "Bool" : false },
+                { "Key" : "IsWalkable", "Bool" : false },
+                { "Key" : "Difficulty", "Float" : 1 }
+            ]
+        },
+        { "Component" : "OutdoorsCheck" },
+        {
+            "Component" : "TileGraphics",
+            "Properties" : [
+                { "Key" : "Graphic", "String": "Objects/Devices/AutodrillRig" },
+                { "Key" : "HasHeight", "Bool": true }
+            ]
+        },
+        {
+            "Component" : "Constructable",
+            "Properties" : [
+                { "Key" : "WorkAmount", "Int" : 2000 },
+                {
+                    "Key" : "Contents",
+                    "RawMaterials" : [
+                        { "TypeId" : "TitaniumPlate", "StackSize" : 15 },
+                        { "TypeId" : "LeadPlate", "StackSize" : 5 },
+                        { "TypeId" : "Gears", "StackSize" : 5 },
+                        { "TypeId" : "NuclearCell", "StackSize" : 1 },
+                        { "TypeId" : "Microchip3", "StackSize" : 1 }
+                    ]
+                }
+            ]
+        }
+    ]
+}

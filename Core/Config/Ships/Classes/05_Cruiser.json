@@ -1,0 +1,77 @@
+// Cruiser Class: Larger, well-rounded, can act as a fleet command or heavy hitter.
+{
+    "Id" : "Cruiser",
+    "RequiredClassId" : "Destroyer",
+    "UnlockPrice" : 75000,
+
+    "MinSize": 1000,
+    "MaxSize": 2200,
+    "DerelictSizeMin" : 0.3,
+    "DerelictSizeMax" : 0.5,
+    "DerelictWidthMin" : 0.5,
+    "DerelictWidthMax" : 0.8,
+    "MinEnergy" : 2000,
+    "NPCDeviceRepairHealthPerHour" : 850,
+
+    "WeaponsTier" : 3,
+    "MaxClassPoints" : 75,
+    "MaxPointDefense" : 2,
+
+    "MaxShields" : 2,
+    "MinShields" : 1,
+
+    "Visual_EngineCurvatureSign" : -1,
+    "Visual_EnginesPerRow" : 12,
+    "Visual_EngineDensity" : 0.2,
+    "Visual_DeviceMaxScale" : 2.0,
+
+    "CombatMotionHover" : 2.0,
+    "CombatMotionRotation" : 2.0,
+    "CombatMotionSpeed" : 0.6,
+
+    "FluxSoftVentPerHour" : 480,
+
+    "FluxBonus" : 640,
+    "MaxFluxCapacity" : 2500,
+    "MaxFluxVents" : 8,
+    "HPBonus" : 2000,
+    "NPCHPBonus" : 1500,
+    "ViewScale" : 2.15,
+
+    "BaseEvasion" : 0.08,
+
+    "ViewZoneWidth" : [
+        0.0, 0.3,
+        0.3, 0.7,
+        0.7, 1.0,
+        1.0, 0.4
+    ],
+
+    "CombatBreachCapsuleChance" : 0.02,
+
+    "NPCSizeRange" : [
+        0.0, 1100,
+        0.5, 1500,
+        1.0, 2200
+    ],
+
+    "NumThrustersChance" : [
+        0.0, 2.0,
+        1.0, 6.0
+    ],
+    "NumShortRangeDrivesChance" : [
+        0.0, 2.0,
+        1.0, 3.0
+    ],
+    "NumLongRangeDrivesChance" : [
+        0.0, 0.0,
+        1.0, 1.0
+    ],
+    "Rarity" : 0.6,
+    "OriginDifficultyChance" : [
+        0.0, 0.0,
+        0.4, 0.0,
+        0.6, 1.0,
+        1.0, 1.0
+    ]
+}

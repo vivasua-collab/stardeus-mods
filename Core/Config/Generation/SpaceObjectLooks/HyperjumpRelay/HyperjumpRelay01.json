@@ -1,0 +1,9 @@
+{
+    "Id" : "HyperjumpRelay01",
+    "Probability" : 1.0,
+    "StarmapSizeMul" : 25.0,
+    "StarfieldSizeMul" : 1.0,
+    "KeepUprightInStarfield" : true,
+    "IsConstantSizeInStarmap" : false,
+    "Sprite" : "SpaceObjects/Misc/HyperjumpRelay01"
+}

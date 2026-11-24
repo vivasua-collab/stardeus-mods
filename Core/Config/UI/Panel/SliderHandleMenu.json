@@ -1,0 +1,10 @@
+{
+    "Id" : "Panel/SliderHandleMenu",
+
+    "Color" : "UI/Scroll/Selected",
+    "Alpha" : 1,
+
+    "Image" : "UI/Buttons/IconButtonBG",
+    "ImageType" : "Sliced",
+    "ImageBorderLBRT" : [ 8, 8, 8, 8 ]
+}

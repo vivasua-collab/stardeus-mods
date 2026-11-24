@@ -1,0 +1,19 @@
+{
+    "Id" : "PoliceOfficer",
+    "LovesJobTypes" : [ "Shooting", "Melee" ],
+    "IncompatibleTraitIds" : [ "Pacifist" ],
+    "AgePhaseIds" : [ "YoungAdult", "MidLife", "Retirement" ],
+    "Species" : [ "Human", "Robot", "Drone", "Sentry", "Orbotron" ],
+    "RoleTypes" : [ "Dumb" ],
+    "IncapableJobTypes" : [ "Crafting", "Research" ],
+    "AdjustsSkills" : [
+        {
+            "JobId" : "Shooting",
+            "Adjustment" : 6
+        },
+        {
+            "JobId" : "Melee",
+            "Adjustment" : 4
+        }
+    ]
+}

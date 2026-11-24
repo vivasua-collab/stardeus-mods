@@ -1,0 +1,166 @@
+{
+    "SortOrderAdjustment": 6,
+    "BaseOffset": -0.6,
+    "BarOffset": { "x": 0, "y": -0.2 },
+    "PreviewScale": 1.1,
+
+    // surgery preview parameters
+    "BodyPreviewRot": "D",
+    "HeadPreviewRot": "D",
+    "BodyPreviewYShift": 0,
+    "BodyPreviewScaleMul": 0.65,
+    // end surgery preview parameters
+
+    "PreviewOffset": { "x": 0.0, "y": -0.3 },
+    "SelectOffset": { "x": 0, "y": 0.2 },
+    "SelectSize": { "x": 0.9, "y": 1.15 },
+    "CarryOffset": { "x": 0, "y": 0.7 },
+    "BubbleOffset": { "x": 0.5, "y": 0.8 },
+    "WeaponOffsets": [
+        { "x": -0.3, "y": 0 },
+        { "x": -0.2, "y": 0.4 },
+        { "x": 0.3, "y": 0.3 },
+        { "x": 0.2, "y": -0.1 }
+    ],
+    "CarriedObjSortOrders": [
+        "Shadow",
+        "Shadow",
+        "Shadow",
+        "Shadow"
+    ],
+    "CarryZOffsets": [
+        -0.5,
+        -0.5,
+        -0.5,
+        -0.5
+    ],
+    "BodyPartSlotViewOffsets" : {
+        // Organs tab
+        "Core": { "x": -270, "y": -50},
+        "Eye_L": { "x": 170, "y": -250},
+        "Eye_R": { "x": -170, "y": -250},
+        "Implant": { "x": 270, "y": -50},
+        "Battery_1": { "x": -170, "y": 170 },
+        "Battery_2": { "x": 170, "y": 170 },
+        // Body tab
+        "Body": { "x": 0, "y": 270 },
+        "Shoulder_L": { "x": 270, "y": 0 },
+        "Shoulder_R": { "x": -270, "y": 0 },
+        "Arm_L": { "x": 215, "y": -170 },
+        "Arm_R": { "x": -215, "y": -170 },
+        "Hand_L": { "x": 100, "y": -300 },
+        "Hand_R": { "x": -100, "y": -300 },
+        "Mobilizer_L": { "x": 215, "y": 170 },
+        "Mobilizer_R": { "x": -215, "y": 170 }
+    },
+    "BodyPartSlotLines": {
+        // Organs tab
+        "Core": [
+            { "x": -270, "y": -50 },
+            { "x": -150, "y": -50 },
+            { "x": -4, "y": -27 }
+        ],
+        "Eye_L": [
+            { "x": 170, "y": -233 },
+            { "x": 170, "y": -170 },
+            { "x": 28, "y": -122 }
+        ],
+        "Eye_R": [
+            { "x": -170, "y": -233 },
+            { "x": -170, "y": -170 },
+            { "x": 11, "y": -122 }
+        ],
+        "Implant": [
+            { "x": 270, "y": -50 },
+            { "x": 42, "y": -50 }
+        ],
+        "Battery_1": [
+            { "x": -170, "y": 150 },
+            { "x": -170, "y": 62 },
+            { "x": -53, "y": 7 }
+        ],
+        "Battery_2": [
+            { "x": 170, "y": 150 },
+            { "x": 170, "y": 62 },
+            { "x": 53, "y": 7 }
+        ],
+        // Body tab
+        "Body": [
+            { "x": 0, "y": 230 },
+            { "x": 0, "y": 40 }
+        ],
+        "Shoulder_L": [
+            { "x": 270, "y": 0 },
+            { "x": 270, "y": -65 },
+            { "x": 64, "y": -107 }
+        ],
+        "Shoulder_R": [
+            { "x": -270, "y": 0 },
+            { "x": -270, "y": -65 },
+            { "x": -64, "y": -107 }
+        ],
+        "Arm_L": [
+            { "x": 200, "y": -170 },
+            { "x": 110, "y": -170 },
+            { "x": 58, "y": -113 }
+        ],
+        "Arm_R": [
+            { "x": -200, "y": -170 },
+            { "x": -110, "y": -170 },
+            { "x": -58, "y": -113 }
+        ],
+        "Hand_L": [
+            { "x": 100, "y": -270 },
+            { "x": 100, "y": -220 },
+            { "x": 48, "y": -119 }
+        ],
+        "Hand_R": [
+            { "x": -100, "y": -270 },
+            { "x": -100, "y": -220 },
+            { "x": -18, "y": -85 }
+        ],
+        "Mobilizer_L": [
+            { "x": 215, "y": 150 },
+            { "x": 215, "y": 90 },
+            { "x": 79, "y": -6 }
+        ],
+        "Mobilizer_R": [
+            { "x": -215, "y": 150 },
+            { "x": -215, "y": 90 },
+            { "x": -79, "y": -6 }
+        ]
+    },
+    "PartDefs": [
+        {
+            "PartType": "Shadow",
+            "PositionFilter": "",
+            "Offset": { "x": 0, "y": -0.1 },
+            "Scale": 1.3,
+
+            "MobilizerAffected" : true,
+            "MobilizerAltHidden" : true
+        },
+        {
+            "PartType": "Weapon",
+            "PositionFilter": "DroneHover",
+            "Offset": { "x": 0, "y": 0.2 },
+            "Scale": 1.0,
+
+            "MobilizerAffected" : true,
+            "MobilizerAltPosFilter" : ""
+        },
+        {
+            "PartType": "Body",
+            "PositionFilter": "DroneHover",
+            "RenderSorted" : true,
+            "Offset": { "x": 0, "y": 0.3 },
+            "Scale": 1,
+
+            "MobilizerAffected" : true,
+            "MobilizerAltPosFilter" : "",
+            "MobilizerLooksDefault" : "Sentry",
+            "MobilizerLooksAlt" : "Sentry_Tracks",
+            "MobilizerLooksEmpty" : ""
+        }
+    ]
+}

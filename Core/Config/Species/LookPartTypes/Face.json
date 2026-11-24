@@ -1,0 +1,10 @@
+{
+    "BitIndex": 9,
+    "IsFace": true,
+    "SortOrder": "BeingFace",
+    "SpriteCategory": "Faces",
+    "Gen": "Standard",
+    "VarTag": "Head",
+    "ColorSource": "PaletteGroup",
+    "IncludeNeutral": true
+}

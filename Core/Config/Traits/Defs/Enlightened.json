@@ -1,0 +1,29 @@
+{
+    "Id" : "Enlightened",
+    "IconId" : "Icons/Color/Sparkles",
+    "TypeId" : "Intellectual",
+    "Rarity" : 0.2,
+    "AddsStatModifiers" : [
+        {
+            "Component" : "MentalBreakdownLightThreshold",
+            "Properties" : [
+                { "Key" : "Value", "Float" : 0.0 },
+                { "Key" : "Type", "String" : "Sets" }
+            ]
+        },
+        {
+            "Component" : "MentalBreakdownMediumThreshold",
+            "Properties" : [
+                { "Key" : "Value", "Float" : 0.0 },
+                { "Key" : "Type", "String" : "Sets" }
+            ]
+        },
+        {
+            "Component" : "MentalBreakdownHeavyThreshold",
+            "Properties" : [
+                { "Key" : "Value", "Float" : 0.0 },
+                { "Key" : "Type", "String" : "Sets" }
+            ]
+        }
+    ]
+}

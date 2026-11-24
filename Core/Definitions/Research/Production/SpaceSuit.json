@@ -1,0 +1,27 @@
+{
+    "Id" : "Research/Production/SpaceSuit",
+    "Tier" : 1,
+    "IsAbstract" : true,
+    "PreviewIcon" : "Icons/Color/Clothing",
+    "NameKey" : "research.spacesuit",
+    "Researchable" : {
+        "IsTreeNode" : true,
+        "Prerequisites" : [
+            "Research/Production/Weaving"
+        ],
+        "DatoidCosts" : [
+            {
+                "TypeId" : "DatoidBasic",
+                "StackSize" : 8
+            },
+            {
+                "TypeId" : "DatoidPhyto",
+                "StackSize" : 1
+            },
+            {
+                "TypeId" : "DatoidBiotic",
+                "StackSize" : 1
+            }
+        ]
+    }
+}

@@ -1,0 +1,13 @@
+// SCS: Supercapital Ship
+{
+    "ChanceWillTrade" : 0.9,
+    "ChancePolice" : 0.25,
+    // empty = all
+    "CompatibleFactions" : [ ],
+    "CompatibleClasses" : [
+        "Dreadnought",
+        "Titan"
+    ],
+    "MinOffensiveness" : 0.9,
+    "MaxOffensiveness" : 1.0
+}

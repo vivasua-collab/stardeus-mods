@@ -1,0 +1,15 @@
+{
+    // C# implementation id.
+    // Multiple configurations can point to a single implementation.
+    "EventId" : "StasisPodRescueCrew",
+    "Points" : 0,
+    // Options: Negative, Positive, Neutral, Raid
+    "OutcomeType" : "Positive",
+    // Full list is in StoryEventFlags class.
+    // No StasisPod flag on purpose, so a normal pod opening can never roll this - it is
+    // reachable only through StasisPodComp.RiggedEventId. Same shape as StasisPod/DeserterReturns.
+    "EventFlags" : [
+        "OnDemand",
+        "CanHaveDuplicates"
+    ]
+}

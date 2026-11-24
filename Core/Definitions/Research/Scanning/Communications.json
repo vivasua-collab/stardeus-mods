@@ -1,0 +1,23 @@
+{
+    "Id" : "Research/Scanning/Communications",
+    "Tier" : 1,
+    "IsAbstract" : true,
+    "PreviewIcon" : "Icons/Color/Communications",
+    "NameKey" : "research.communications",
+    "Researchable" : {
+        "IsTreeNode" : true,
+        "Prerequisites" : [
+            "Research/Scanning/Root"
+        ],
+        "DatoidCosts" : [
+            {
+                "TypeId" : "DatoidBasic",
+                "StackSize" : 7
+            },
+            {
+                "TypeId" : "DatoidTech",
+                "StackSize" : 3
+            }
+        ]
+    }
+}

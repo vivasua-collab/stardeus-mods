@@ -1,0 +1,135 @@
+{
+    "ToolPath" : "Production",
+    "Layer" : "Objects",
+    "ParentId" : "Objects/Devices/BaseDevice",
+    "Researchable" : {
+        "Prerequisites" : [
+            "Research/Production/RemoteMining"
+        ]
+    },
+    "Spawnable" : {
+        "Category": "Mining",
+        "Chance" : 0.05,
+        "ChanceLocked" : 0.01
+    },
+    "Components" : [
+        {
+            "Component" : "TileTransform",
+            "Properties" : [
+                { "Key" : "Width", "Int" : 2 },
+                { "Key" : "Height", "Int" : 2 },
+                { "Key" : "IsRotatable", "Bool" : true },
+                { "Key" : "CoverPercent", "Int" : 75 },
+                { "Key" : "OutPort", "Vector2" : { "x" : 0, "y" : -1 } }
+            ]
+        },
+        {
+            "Component" : "ElectricNode",
+            "Properties" : [
+                { "Key" : "IsConsumer", "Bool" : true }
+            ]
+        },
+        {
+            "Component" : "WithFuse",
+            "Properties" : [
+                { "Key" : "MalfunctionWeight", "Float": 0.25 }
+            ]
+        },
+        { "Component" : "OutdoorsCheck" },
+        {
+            "Component" : "Flammable",
+            "Properties" : [
+                { "Key" : "IgnitionTemperatureCelsius", "Int" : 800 },
+                { "Key" : "FireChance", "Float" : 0.3 },
+                { "Key" : "BaseExplosionLevel", "Int" : 3 },
+                { "Key" : "FlammabilityCurve", "String" : "Device" },
+                { "Key" : "ExplosivenessCurve", "String" : "DeviceLow" }
+            ]
+        },
+        {
+            "Component" : "TileGraphics",
+            "Properties" : [
+                { "Key" : "Type", "String": "Object" },
+                { "Key" : "Graphic", "String": "Objects/Devices/BeamDrill" },
+                { "Key" : "RotateGraphic", "Bool" : false },
+                { "Key" : "HasHeight", "Bool" : true }
+            ]
+        },
+        {
+            "Component" : "TileAnimation",
+            "Properties" : [
+                { "Key" : "Offset", "Vector2": { "x" : 0.0, "y" : 0.9 } },
+                { "Key" : "Size", "Vector2": { "x" : 1.88, "y" : 3.76 } },
+                { "Key" : "Direction", "Int" : -1 },
+                { "Key" : "BaseSprite", "String" : null },
+                // { "Key" : "BaseSprite", "String": "Objects/Devices/BeamDrill" },
+                { "Key" : "AnimSprite", "String" : "Objects/DeviceAnims/BeamDrill_Anim" },
+                { "Key" : "Speed", "Float": 1.0 },
+                { "Key" : "FramePrefix", "String": "R" },
+                { "Key" : "NumFrames", "Int": 8 }
+            ]
+        },
+        {
+            "Component" : "AudioSource",
+            "Properties" : [
+                { "Key" : "AmbienceClip", "String" : "Devices/TractorBeamSFX" },
+                { "Key" : "Rolloff", "Vector2" : { "x" : 4, "y" : 17 } },
+                { "Key" : "IsLinkedToEnergy", "Bool" : true }
+            ]
+        },
+        { "Component" : "ExtraInfo" },
+        {
+            "Component" : "RemoteDrill",
+            "Properties" : [
+                { "Key" : "EnergyCost", "Float" : 10.0 },
+                { "Key" : "Speed", "Float" : 1.0 },
+                { "Key" : "MiningDepth", "Float" : 4.0 }
+            ]
+        },
+        {
+            "Component" : "IndustrialEquipment",
+            "Properties" : [
+                { "Key" : "IsNoisy", "Bool" : true }
+            ]
+        },
+        {
+            "Component" : "VFX",
+            "Properties" : [
+                { "Key" : "Id", "String" : "VFXParticlesGrinder" },
+                { "Key" : "Offset", "Vector2" : { "x" : 0, "y" : 2.47 } }
+            ]
+        },
+        {
+            "Component" : "HeatProducer",
+            "Properties" : [
+                { "Key" : "Rate", "Float" : 3 },
+                { "Key" : "Range", "Int" : 3 },
+                { "Key" : "CheckSameArea", "Bool" : true }
+            ]
+        },
+        {
+            "Component" : "Passability",
+            "Properties" : [
+                { "Key" : "IsPassable", "Bool" : false },
+                { "Key" : "IsWalkable", "Bool" : false },
+                { "Key" : "Difficulty", "Float" : 1 }
+            ]
+        },
+        {
+            "Component" : "Constructable",
+            "Properties" : [
+                { "Key" : "WorkAmount", "Int" : 2000 },
+                { "Key" : "CanDragRow", "Bool" : true },
+                {
+                    "Key" : "Contents",
+                    "RawMaterials" : [
+                        { "TypeId" : "TitaniumPlate", "StackSize" : 10 },
+                        { "TypeId" : "Gears", "StackSize" : 5 },
+                        { "TypeId" : "Microchip2", "StackSize" : 2 },
+                        { "TypeId" : "OpticalFiber", "StackSize" : 3 }
+                    ]
+                }
+            ]
+        }
+    ]
+}

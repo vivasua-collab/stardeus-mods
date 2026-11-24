@@ -1,0 +1,13 @@
+{
+    // Melee skill level -> melee hit chance added to the 50% base (MeleeAccuracy): 65% at
+    // skill 5, 80% at 10, 85% at 15, 90% at 20; levels 21-25 come from training only. Melee
+    // weapons have no accuracy of their own, so skill raising the hit chance this steeply is
+    // what keeps dodge (which rises with skill too) from stretching fights between equals
+    "FloatSet" : [
+        0, 0.0,
+        10, 0.30,
+        15, 0.35,
+        20, 0.40,
+        25, 0.42
+    ]
+}

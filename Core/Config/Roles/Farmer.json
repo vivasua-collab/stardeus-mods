@@ -1,0 +1,22 @@
+{
+    "Id" : "Farmer",
+    "LovesJobTypes" : [ "Plants" ],
+    "Species" : [ "Human" ],
+    "IncapableJobTypes" : [ "Research" ],
+    "AgePhaseIds" : [ "Childhood", "YoungAdult", "MidLife", "Retirement" ],
+    "RoleTypes" : [ ],
+    "AdjustsSkills" : [
+        {
+            "JobId" : "Plants",
+            "Adjustment" : 6
+        },
+        {
+            "JobId" : "Shooting",
+            "Adjustment" : 4
+        },
+        {
+            "JobId" : "Cooking",
+            "Adjustment" : 2
+        }
+    ]
+}

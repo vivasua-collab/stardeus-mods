@@ -1,0 +1,10 @@
+{
+    "Id" : "Melee",
+    "Importance" : 1.5,
+    "IconId" : "Icons/Color/Fist",
+    "Types" : [ "Violent", "Physical", "Dangerous" ],
+    "ProvidesStats" : [
+        { "Stat" : "MeleeDodge", "CurveId" : "Attacks/MeleeSkill_Dodge" },
+        { "Stat" : "MeleeAccuracy", "CurveId" : "Attacks/MeleeSkill_Accuracy" }
+    ]
+}

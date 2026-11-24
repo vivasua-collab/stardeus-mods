@@ -1,0 +1,6 @@
+{
+    "Id" : "DarkPortal",
+    "Type" : "DarkPortal",
+    "CantBeInbound" : true,
+    "HasOrbit" : true
+}

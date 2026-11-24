@@ -1,0 +1,11 @@
+{
+    "Type": "Coffee",
+    "Ingredients": [
+        { "TypeId" : "CoffeeBeans", "StackSize" : 3 },
+        { "TypeId" : "Water", "StackSize" : 1 }
+    ],
+    "OutputMultiplier" : 3,
+    "ProductDefId": "Obj/Materials/Coffee",
+    "ProductionTimeHours": 1.0,
+    "EnergyCost": 5.0
+}

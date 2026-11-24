@@ -1,0 +1,6 @@
+{
+    "Id" : "Trader",
+    "FlagIcon" : "Icons/Color/Starcreds",
+    "IsInternal" : true,
+    "CombatObjective" : "Raid"
+}

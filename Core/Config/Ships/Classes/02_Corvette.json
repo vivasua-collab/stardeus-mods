@@ -1,0 +1,75 @@
+// Corvette class: Slightly bigger than a fighter, light armament, escort, or recon.
+{
+    "Id" : "Corvette",
+    "RequiredClassId" : "Fighter",
+    "UnlockPrice" : 6000,
+
+    "MinSize": 250,
+    "MaxSize": 1000,
+    "MinEnergy" : 300,
+
+    "DerelictSizeMin" : 0.1,
+    "DerelictSizeMax" : 0.2,
+    "DerelictWidthMin" : 0.5,
+    "DerelictWidthMax" : 0.6,
+    "NPCDeviceRepairHealthPerHour" : 400,
+
+    "WeaponsTier" : 1,
+    "MaxClassPoints" : 30,
+    "MaxPointDefense" : 0,
+
+    "MaxShields" : 1,
+    "MinShields" : 0,
+
+    "Visual_EngineCurvatureSign" : -1,
+    "Visual_EnginesPerRow" : 6,
+    "Visual_EngineDensity" : 0.25,
+    "Visual_DeviceMaxScale" : 1.0,
+
+    "CombatMotionHover" : 1.25,
+    "CombatMotionRotation" : 2.8,
+    "CombatMotionSpeed" : 0.9,
+
+    "FluxSoftVentPerHour" : 210,
+
+    "FluxBonus" : 320,
+    "MaxFluxCapacity" : 1000,
+    "MaxFluxVents" : 3,
+    "HPBonus" : 300,
+    "NPCHPBonus" : 50,
+
+    "BaseEvasion" : 0.12,
+
+    "ViewZoneWidth" : [
+        0.0, 0.4,
+        0.33, 0.7,
+        0.66, 0.8,
+        1.0, 0.6
+    ],
+
+    "CombatBreachCapsuleChance" : 0.00,
+    "NoShieldsChance" : 0.5,
+
+    "NPCSizeRange" : [
+        0.0, 400,
+        0.5, 650,
+        1.0, 1000
+    ],
+    "NumThrustersChance" : [
+        0.0, 1.0,
+        1.0, 2.0
+    ],
+    "NumShortRangeDrivesChance" : [
+        0.0, 1.0,
+        1.0, 1.0
+    ],
+    "NumLongRangeDrivesChance" : [
+        0.0, 0.0,
+        1.0, 0.0
+    ],
+    "Rarity" : 0.8,
+    "OriginDifficultyChance" : [
+        0.0, 1.0,
+        1.0, 1.0
+    ]
+}

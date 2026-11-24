@@ -1,0 +1,10 @@
+{
+    "Id" : "Obj/Materials/GoldIngot",
+    "Type" : "CFD",
+    "Groups" : [ "Material" ],
+    "Value" : 1810.0,
+    "Rarity" : 0.18,
+    "TraderQuantity" : 2.0,
+    "MinSectorDifficulty" : 0.67,
+    "Volatility" : 0.0074
+}

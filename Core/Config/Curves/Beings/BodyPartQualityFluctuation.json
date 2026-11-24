@@ -1,0 +1,10 @@
+{
+    // random 0.0 to 1.0 -> chance of body part quality fluctuation
+    "FloatSet" : [
+        0.0, 0.01,
+        0.5, 0.1,
+        0.95, 0.15,
+        0.99, 0.2,
+        1.0, 0.5
+    ]
+}

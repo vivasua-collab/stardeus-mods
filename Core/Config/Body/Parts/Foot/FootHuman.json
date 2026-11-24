@@ -1,0 +1,18 @@
+{
+    "SlotTypeId" : "Foot",
+    "Compatibility" : "Biological",
+    "TargetSpecies" : [ "Human" ],
+    "Tier" : 1,
+    "ResistanceBase" : 4.0,
+    "ProvidesStats" : [
+        {
+            "Component" : "MoveSpeed",
+            "Properties" : [
+                // 2 legs + 2 feet add up to 0.5
+                { "Key" : "CompoundLimit", "Float" : 0.55 },
+                { "Key" : "AmountPerMinute", "Float" : 0.1375 },
+                { "Key" : "StateMul", "Float" : 1.0 }
+            ]
+        }
+    ]
+}

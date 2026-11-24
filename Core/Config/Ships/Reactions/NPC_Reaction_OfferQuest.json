@@ -1,0 +1,30 @@
+{
+    "ReactionId" : "OfferQuest",
+
+    "AttitudeMul" : [
+        -1.0, 0.75,
+        0.0, 1.0,
+        1.0, 2.0
+    ],
+
+    "RegionDifficultyMul" : [
+        0.0, 0.5,
+        1.0, 0.8
+    ],
+
+    "DefaultFactionChance" : 1.0,
+
+    "ClassChanceKey" : [
+        "Corvette",
+        "Cruiser",
+        "Carrier",
+        "Fighter"
+    ],
+    "ClassChanceValue" : [
+        0.6,
+        1.2,
+        0.7,
+        0.4
+    ],
+    "DefaultClassChance" : 1.0
+}

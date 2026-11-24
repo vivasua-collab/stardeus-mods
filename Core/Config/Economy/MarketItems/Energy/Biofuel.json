@@ -1,0 +1,10 @@
+{
+    "Id" : "Obj/Materials/Biofuel",
+    "Type" : "CFD",
+    "Groups" : [ "Energy" ],
+    "Value" : 68.0,
+    "Rarity" : 0.2,
+    "TraderQuantity" : 30.0,
+    "MinSectorDifficulty" : 0.35,
+    "Volatility" : 0.0041
+}

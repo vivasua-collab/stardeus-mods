@@ -1,0 +1,49 @@
+{
+    "Strings" : [
+        { "Key" : "OverlayIcon_REPLACE_THIS", "String" : "Icons/White/REPLACE_THIS" }
+    ],
+    "Ints" : [
+        { "Key" : "OverlayPriority_Electricity", "Int" : 10 },
+        { "Key" : "OverlayPriority_AtmoO2", "Int" : 20 },
+        { "Key" : "OverlayPriority_AtmoTemp", "Int" : 30 },
+        { "Key" : "OverlayPriority_AtmoO2Res", "Int" : 40 },
+        { "Key" : "OverlayPriority_AtmoTempRes", "Int" : 50 },
+        { "Key" : "OverlayPriority_Light", "Int" : 60 },
+        { "Key" : "OverlayPriority_Plan", "Int" : 70 },
+        { "Key" : "OverlayPriority_Path", "Int" : 75 },
+        { "Key" : "OverlayPriority_Areas", "Int" : 90 },
+        { "Key" : "OverlayPriority_Islands", "Int" : 100 },
+
+
+        { "Key" : "OverlayPriority_Research", "Int" : 10 },
+        { "Key" : "OverlayPriority_Starmap", "Int" : 20 },
+        { "Key" : "OverlayPriority_JobMatrix", "Int" : 25 },
+        { "Key" : "OverlayPriority_Codex", "Int" : 30 },
+        { "Key" : "OverlayPriority_Search", "Int" : 40 },
+        { "Key" : "OverlayPriority_Dev", "Int" : 50 },
+        { "Key" : "OverlayPriority_Twitch", "Int" : 60 },
+
+        { "Key" : "OverlayPriority_Resources", "Int" : 10 },
+        { "Key" : "OverlayPriority_Wallet", "Int" : 20 },
+        { "Key" : "OverlayPriority_Quests", "Int" : 30 },
+        { "Key" : "OverlayPriority_Goals", "Int" : 40 },
+        { "Key" : "OverlayPriority_Beings", "Int" : 50 },
+        { "Key" : "OverlayPriority_Tasks", "Int" : 60 },
+        { "Key" : "OverlayPriority_EventLog", "Int" : 70 },
+        { "Key" : "OverlayPriority_AI", "Int" : 80 },
+        { "Key" : "OverlayPriority_Cover", "Int" : 90 },
+        { "Key" : "OverlayPriority_Notes", "Int" : 200 },
+        { "Key" : "OverlayPriority_Reg", "Int" : 1000 },
+        { "Key" : "OverlayPriority_Region", "Int" : 1000 },
+
+        { "Key" : "OverlayPriority_Health", "Int" : 5 },
+        { "Key" : "OverlayPriority_Security", "Int" : 10 },
+        { "Key" : "OverlayPriority_Combat", "Int" : 15 },
+        { "Key" : "OverlayPriority_ShipCombat", "Int" : 20 },
+        { "Key" : "OverlayPriority_ShipNav", "Int" : 30 },
+        { "Key" : "OverlayPriority_Expedition", "Int" : 40 },
+        { "Key" : "OverlayPriority_Copters", "Int" : 50 },
+        { "Key" : "OverlayPriority_Tint", "Int" : 60 },
+        { "Key" : "OverlayPriority_Terraform", "Int" : 70 }
+    ]
+}

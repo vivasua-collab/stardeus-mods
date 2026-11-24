@@ -1,0 +1,38 @@
+{
+    "ReactionId" : "TradeWith",
+
+    "AttitudeMul" : [
+        -1.0, 0.0,
+        -0.1, 0.1,
+        0.0, 0.25,
+        1.0, 0.8
+    ],
+
+    "RegionDifficultyMul" : [
+        0.0, 1.0,
+        0.5, 0.5,
+        1.0, 0.4
+    ],
+
+    "FactionChanceKey" : [
+        "Capitalist"
+    ],
+    "FactionChanceValue" : [
+        2.0
+    ],
+    "DefaultFactionChance" : 1.0,
+
+    "ClassChanceKey" : [
+        "Frigate",
+        "Corvette",
+        "Cruiser",
+        "Carrier"
+    ],
+    "ClassChanceValue" : [
+        1.2,
+        1.1,
+        1.2,
+        1.2
+    ],
+    "DefaultClassChance" : 1.0
+}

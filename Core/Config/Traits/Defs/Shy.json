@@ -1,0 +1,12 @@
+{
+    "Id" : "Shy",
+    "IconId" : "Icons/White/EyeClosed",
+    "TypeId" : "Mental",
+    "Rarity" : 0.25,
+    "AdjustsSkills" : [
+        {
+            "JobId" : "Social",
+            "Adjustment" : -1
+        }
+    ]
+}

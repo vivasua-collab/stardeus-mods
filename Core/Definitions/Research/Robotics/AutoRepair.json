@@ -1,0 +1,25 @@
+{
+    "Id" : "Research/Robotics/AutoRepair",
+    "Tier" : 2,
+    "IsAbstract" : true,
+    "PreviewIcon" : "Icons/Color/Wrench2",
+    "Researchable" : {
+        "IsTreeNode" : true,
+        "Prerequisites" : [
+            "Research/Robotics/Maintenance"
+        ],
+        "DatoidCosts" : [
+            {
+                "TypeId" : "DatoidTech",
+                "StackSize" : 8
+            },
+            {
+                "TypeId" : "DatoidEnergy",
+                "StackSize" : 5
+            }
+        ],
+        "UnlockEffects" : [
+            "AutoRepair"
+        ]
+    }
+}

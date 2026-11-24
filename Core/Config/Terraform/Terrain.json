@@ -1,0 +1,6 @@
+{
+    "IconId" : "Icons/Color/Planet",
+    "MaterialConsumptionPerDay" : 3.3,
+    "DurationDays" : 15.2,
+    "IsCoreGame" : true
+}

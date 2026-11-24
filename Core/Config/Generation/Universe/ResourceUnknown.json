@@ -1,0 +1,20 @@
+{
+    "Id" : "ResourceUnknown",
+    "Icon" : "Icons/Color/Destination",
+    "SizeMin" : 1,
+    "SizeMax" : 1,
+    "IsDynamic" : true,
+    // will turn into auto-visited Resource when consumed
+    "IsConsumable" : true,
+    "CanBeExplored" : true,
+    "CanHaveCustomIcon" : true,
+    "IsScannable" : true,
+    "CanBeOwned" : true,
+    "IsInteractive" : true,
+    "IsOnSurface" : true,
+    "LocationApproxMagnitude" : 2.0,
+    "StarfieldSortOrder" : 1,
+    "IsIconMarker" : true,
+    "NameKey" : "space.object.PlanetPOI",
+    "InfoKey" : "space.object.info.PlanetPOI"
+}

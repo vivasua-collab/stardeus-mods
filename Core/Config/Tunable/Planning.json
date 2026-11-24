@@ -1,0 +1,13 @@
+{
+    "IntSets" : [
+        { "Key" : "PlanningColor1", "IntSet" : [ 217, 231, 242] },
+        { "Key" : "PlanningColor2", "IntSet" : [ 64, 134, 191] },
+        { "Key" : "PlanningColor3", "IntSet" : [ 191, 64, 96] },
+        { "Key" : "PlanningColor4", "IntSet" : [ 45, 115, 38] },
+        { "Key" : "PlanningColor5", "IntSet" : [ 186, 140, 217] }
+    ],
+    "Floats" : [
+        { "Key" : "PlanningAlpha", "Float" : 0.33 },
+        { "Key" : "PlanningToolAlpha", "Float" : 0.5 }
+    ]
+}

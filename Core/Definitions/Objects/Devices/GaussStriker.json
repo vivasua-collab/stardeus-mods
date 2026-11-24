@@ -1,0 +1,100 @@
+{
+    "ToolPath" : "Security",
+    "Layer" : "Objects",
+    "ParentId" : "Objects/Devices/BaseDevice",
+    "Researchable" : {
+        "Prerequisites" : [ "Research/ShipCombat/WeaponsPlasma" ]
+    },
+    "Components" : [
+        {
+            "Component" : "TileTransform",
+            "Properties" : [
+                { "Key" : "Width", "Int" : 2 },
+                { "Key" : "Height", "Int" : 2 },
+                { "Key" : "CoverPercent", "Int" : 50 },
+                { "Key" : "IsRotatable", "Bool" : false }
+            ]
+        },
+        {
+            "Component" : "Damageable",
+            "Properties" : [
+                { "Key" : "Max", "Int": 400 }
+            ]
+        },
+        {
+            "Component" : "IndustrialEquipment",
+            "Properties" : [
+                { "Key" : "IsNoisy", "Bool" : true }
+            ]
+        },
+        {
+            "Component" : "ElectricNode",
+            "Properties" : [
+                { "Key" : "IsConsumer", "Bool": true }
+            ]
+        },
+        {
+            "Component" : "WithFuse",
+            "Properties" : [
+                { "Key" : "MalfunctionWeight", "Float": 0.6 }
+            ]
+        },
+        {
+            "Component" : "Flammable",
+            "Properties" : [
+                { "Key" : "IgnitionTemperatureCelsius", "Int" : 500 },
+                { "Key" : "FireChance", "Float" : 0.6 },
+                { "Key" : "BaseExplosionLevel", "Int" : 4 },
+                { "Key" : "FlammabilityCurve", "String" : "DeviceHigh" },
+                { "Key" : "ExplosivenessCurve", "String" : "DeviceHigh" }
+            ]
+        },
+        { "Component" : "OutdoorsCheck" },
+        {
+            "Component" : "RotatingTurret",
+            "Properties" : [
+                { "Key" : "HeadOffset", "Vector2": { "x" : 0.0, "y" : 0.0 } },
+                { "Key" : "TopOffset", "Vector2": { "x" : 0.0, "y" : 0.0 } },
+                { "Key" : "HasTopSprite", "Bool" : true },
+                { "Key" : "ShotFXDuration", "Float" : 15.0 }
+            ]
+        },
+        {
+            "Component" : "ShipWeapon",
+            "Properties" : [
+                { "Key" : "ShipWeaponId" , "String" : "GaussStriker" }
+            ]
+        },
+        {
+            "Component" : "TileGraphics",
+            "Properties" : [
+                { "Key" : "Type", "String": "Object" },
+                { "Key" : "Graphic", "String": "Objects/Devices/GaussStriker" },
+                { "Key" : "HasHeight", "Bool" : false }
+            ]
+        },
+        {
+            "Component" : "Passability",
+            "Properties" : [
+                { "Key" : "IsPassable", "Bool" : false },
+                { "Key" : "IsWalkable", "Bool" : false },
+                { "Key" : "Difficulty", "Float" : 1 }
+            ]
+        },
+        {
+            "Component" : "Constructable",
+            "Properties" : [
+                { "Key" : "WorkAmount", "Int" : 3400 },
+                {
+                    "Key" : "Contents",
+                    "RawMaterials" : [
+                        { "TypeId" : "PlatinumIngot", "StackSize" : 3 },
+                        { "TypeId" : "LeadPlate", "StackSize" : 2 },
+                        { "TypeId" : "OpticalFiber", "StackSize" : 3 },
+                        { "TypeId" : "Microchip3", "StackSize" : 2 }
+                    ]
+                }
+            ]
+        }
+    ]
+}

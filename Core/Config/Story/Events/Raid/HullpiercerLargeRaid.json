@@ -1,0 +1,35 @@
+{
+    // C# implementation id.
+    // Multiple configurations can point to a single implementation.
+    "EventId" : "HullpiercerRaid",
+    // How much does this story event cost to run
+    "Points" : 50,
+    // Options: Negative, Positive, Neutral, Raid, Raid
+    "OutcomeType" : "Raid",
+    // Full list is in StoryEventFlags class
+    "EventFlags" : [
+        "Raid",
+        "Space",
+        "CanHaveDuplicates",
+        "NoHyperspace"
+    ],
+    "SectorDifficultyChance" : [
+        0.0, 0.0,
+        0.7, 0.0,
+        1.0, 1.0
+    ],
+    "MinRepeatDelayDays" : 100,
+    // Full list of requirements can be found in Situation class
+    "Require" : {
+        "Days" : 360
+    },
+    // Variables for the story event implementation
+    "Properties" : [
+        // how many hullpiercers will we launch
+        { "Key" : "MinInstances", "Int" : 4 },
+        { "Key" : "MaxInstances", "Int" : 7 },
+        // Whole-raid budget multiplier; what makes "Large" larger than HullpiercerRaid.
+        // Provisional, to be calibrated (see RaidScaling.md).
+        { "Key" : "RaidStrengthMul", "Float" : 2.0 }
+    ]
+}

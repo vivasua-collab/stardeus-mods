@@ -1,0 +1,45 @@
+{
+    "Layer" : "Walls",
+    "ParentId" : "Structure/Walls/BaseWindow",
+    "Researchable" : {
+        "Prerequisites" : [
+            "Research/Construction/StructureArmored"
+        ]
+    },
+    "Components" : [
+        {
+            "Component" : "TileGraphics",
+            "Properties" : [
+                { "Key" : "Graphic", "String" : "Structure/Walls/WindowArmored01/WindowArmored01" },
+                { "Key" : "Shader", "String": "ReflectedWallTile" }
+            ]
+        },
+        {
+            "Component" : "Damageable",
+            "Properties" : [
+                { "Key" : "Max", "Int" : 500 }
+            ]
+        },
+        {
+            "Component" : "Flammable",
+            "Properties" : [
+                { "Key" : "FireChance", "Float" : 0.1 }
+            ]
+        },
+        {
+            "Component" : "Constructable",
+            "Properties" : [
+                { "Key" : "WorkAmount", "Int" : 475 },
+                {
+                    "Key" : "Contents",
+                    "RawMaterials" : [
+                        { "TypeId" : "LeadPlate", "StackSize" : 5 },
+                        { "TypeId" : "TitaniumPlate", "StackSize" : 2 },
+                        { "TypeId" : "CarbonFiber", "StackSize" : 2 },
+                        { "TypeId" : "Glass", "StackSize" : 1 }
+                    ]
+                }
+            ]
+        }
+    ]
+}

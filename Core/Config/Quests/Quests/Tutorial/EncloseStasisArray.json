@@ -1,0 +1,152 @@
+{
+    "QuestFlags" : [ "Tutorial", "AutoAdd", "Unique" ],
+    "TitleKey" : "quest.EncloseStasisArray",
+    "DescKey" : "quest.EncloseStasisArray.desc",
+    "QuestProviders" : [
+        "ShipComputer"
+    ],
+    "AvailableWhen" : [
+        "ReadyForTutorialQuests",
+        "ConnectedToStasis"
+    ],
+    "CompleteWhen" : [
+        "StasisAccessible",
+        "StasisCornerGapsClosed",
+        "StasisAirtight",
+        "StasisHasWardrobe",
+        "StasisHasFood",
+        "StasisRationsAllowed"
+    ],
+    "BoundTutorialIds" : [
+        "BaseBuilding/EnclosingAreas",
+        "BaseBuilding/PressurizingAreas"
+    ],
+
+    "SetOnComplete" : [ "EnclosedStasis" ],
+    // if tutorial quest gets abandoned, we still want to move on with the other tutorials
+    "SetOnFail" : [ "EnclosedStasis" ],
+    "Steps" : [
+        {
+            "Id": "RequireStasisArray",
+            "Type" : "RequireDeviceToExist",
+            "StepFlags" : [ "ActiveOnStart", "Secret", "FailsQuest" ],
+            "Config" : [
+                { "Key" : "Definition", "String" : "Objects/Devices/StasisArray" }
+            ]
+        },
+        {
+            "Id": "EncloseStasisArray",
+            "Type" : "EncloseEntity",
+            "StepFlags" : [ "ActiveOnStart" ],
+            "SetOnComplete" : [
+                "EnclosedStasis"
+            ],
+            "Config" : [
+                { "Key" : "Definition", "String" : "Objects/Devices/StasisArray" },
+                { "Key" : "IsOneEnough", "Bool" : false },
+                { "Key" : "FailIfNoDevice", "Bool" : true }
+            ]
+        },
+        // Walls that meet only at a corner enclose the room (it is listed and lit as one), but
+        // air leaks through the corner. Playtesters built rooms like that and got stuck on the
+        // enclose step, so enclosing and closing corner gaps are separate steps. Players who
+        // leave no gap never see this one: it completes hidden when it activates.
+        // Mid-quest on purpose, like the steps below: a saved instance with the old step list
+        // then fails to load and is given again whole.
+        {
+            "Id": "CloseStasisCornerGaps",
+            "Type" : "CloseCornerGaps",
+            "StepFlags" : [ "HideInactive" ],
+            "ActivateWhen" : [
+                "EnclosedStasis"
+            ],
+            "SetOnComplete" : [
+                "StasisCornerGapsClosed"
+            ],
+            "Config" : [
+                { "Key" : "Definition", "String" : "Objects/Devices/StasisArray" },
+                { "Key" : "IsOneEnough", "Bool" : false },
+                { "Key" : "FailIfNoDevice", "Bool" : true }
+            ]
+        },
+        // New Beginning puts the first colonist's only space suit and rations next to the
+        // array, and a tight room around the array alone leaves them in vacuum. Other
+        // scenarios feed and dress people elsewhere, so there these steps start completed.
+        // Kept mid-quest on purpose: a saved instance with the old step list then fails to
+        // load and is given again whole, instead of loading without these steps and never
+        // setting their bools.
+        {
+            "Id": "IncludeWardrobe",
+            "Type" : "EntityInSameRoom",
+            "StepFlags" : [ "ActiveOnStart" ],
+            "ForScenarios" : [ "new_beginning" ],
+            "SetOnComplete" : [
+                "StasisHasWardrobe"
+            ],
+            "Config" : [
+                { "Key" : "Definition", "String" : "Objects/Devices/StasisArray" },
+                { "Key" : "Definitions", "StringSet" : [ "Objects/Furniture/WardrobeSteel" ] }
+            ]
+        },
+        {
+            "Id": "IncludeFood",
+            "Type" : "FoodInSameRoom",
+            "StepFlags" : [ "ActiveOnStart" ],
+            "ForScenarios" : [ "new_beginning" ],
+            "SetOnComplete" : [
+                "StasisHasFood"
+            ],
+            "Config" : [
+                { "Key" : "Definition", "String" : "Objects/Devices/StasisArray" },
+                { "Key" : "Definitions", "StringSet" : [ "Obj/Meals/SurvivalMeal" ] }
+            ]
+        },
+        // The rations spawn forbidden so they stay next to the pod, and nobody eats a
+        // forbidden item: this teaches Allow before the first colonist wakes up hungry.
+        // Mid-quest for the same reason as the steps above.
+        {
+            "Id": "AllowRations",
+            "Type" : "AllowItems",
+            "StepFlags" : [ "HideInactive" ],
+            "ForScenarios" : [ "new_beginning" ],
+            "ActivateWhen" : [
+                "StasisHasFood"
+            ],
+            "SetOnComplete" : [
+                "StasisRationsAllowed"
+            ],
+            "Config" : [
+                { "Key" : "Definitions", "StringSet" : [ "Obj/Meals/SurvivalMeal" ] }
+            ]
+        },
+        {
+            "Id": "MakeStasisAccessible",
+            "Type" : "MakeAccessible",
+            "ActivateWhen" : [
+                "EnclosedStasis"
+            ],
+            "SetOnComplete" : [
+                "StasisAccessible"
+            ],
+            "Config" : [
+                { "Key" : "Definition", "String" : "Objects/Devices/StasisArray" }
+            ]
+        },
+        {
+            "Id": "MakeStasisAirtight",
+            "Type" : "MakeAirtight",
+            // A room with corner gaps cannot hold air, so this waits for them to be closed
+            "ActivateWhen" : [
+                "StasisCornerGapsClosed"
+            ],
+            "SetOnComplete" : [
+                "StasisAirtight"
+            ],
+            "Config" : [
+                { "Key" : "Definition", "String" : "Objects/Devices/StasisArray" },
+                { "Key" : "IsOneEnough", "Bool" : false },
+                { "Key" : "FailIfNoDevice", "Bool" : true }
+            ]
+        }
+    ]
+}

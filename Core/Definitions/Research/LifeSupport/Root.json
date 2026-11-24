@@ -1,0 +1,9 @@
+{
+    "Id" : "Research/LifeSupport/Root",
+    "Tier" : 0,
+    "IsAbstract" : true,
+    "PreviewIcon" : "Icons/Color/Heart",
+    "Researchable" : {
+        "IsTreeNode" : true
+    }
+}

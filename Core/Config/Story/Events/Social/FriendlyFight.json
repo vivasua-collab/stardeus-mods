@@ -1,0 +1,16 @@
+// FriendlyFight story event configuration (new format)
+{
+    // C# implementation id
+    "EventId": "FriendlyFight",
+    // How much does this story event cost to run
+    "Points": 2,
+    // Options: Negative, Positive, Neutral, Raid
+    "OutcomeType": "Negative",
+    // Full list is in StoryEventFlags class
+    "EventFlags": [
+        "Drama"
+    ],
+    "MaxOngoingDays" : 30,
+    // Minimum days before this event can repeat
+    "MinRepeatDelayDays": 20
+}

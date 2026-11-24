@@ -1,0 +1,11 @@
+{
+    "Id" : "Obj/Equipment/Weapons/IonDisruptor01",
+    "Type" : "CFD",
+    "Groups" : [ "Weapon" ],
+    "Value" : 9500.0,
+    "Rarity" : 0.08,
+    "TraderQuantity" : 1.0,
+    "MaxTraderQuantity" : 2,
+    "MinSectorDifficulty" : 0.9,
+    "Volatility" : 0.0034
+}

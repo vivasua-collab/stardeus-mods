@@ -1,0 +1,17 @@
+{
+    "Id" : "Herbalist",
+    "Species" : [ "Human" ],
+    "AgePhaseIds" : [ "YoungAdult", "MidLife", "Retirement" ],
+    "LovesJobTypes" : [ "Plants" ],
+    "RoleTypes" : [ ],
+    "AdjustsSkills" : [
+        {
+            "JobId" : "Medical",
+            "Adjustment" : 2
+        },
+        {
+            "JobId" : "Plants",
+            "Adjustment" : 6
+        }
+    ]
+}

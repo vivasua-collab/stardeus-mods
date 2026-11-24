@@ -1,0 +1,7 @@
+{
+    "Id" : "Text/ResearchHugeLabel",
+
+    "Color" : "UI/Text/Faint",
+    "TextFontSize" : 150,
+    "TextFontStyles" : [ "UpperCase" ]
+}

@@ -1,0 +1,46 @@
+{
+    "Id" : "random",
+    "Order" : 5,
+    "Aspects" : [
+        // Handles calm / eventful periods
+        "Schedule_Neutral_Balanced",
+        "Schedule_Positive_Balanced",
+        "Schedule_Negative_Balanced",
+        "Schedule_Raid_Balanced",
+
+        // Assigns story points (more points compared to balanced)
+        "PointAllowance_Neutral_Random",
+        "PointAllowance_Positive_Random",
+        "PointAllowance_Negative_Random",
+        "PointAllowance_Raid_Random",
+
+        // Picks one of the potential events (has chance to ignore the rules)
+        "EventPicker_Neutral_Random",
+        "EventPicker_Positive_Random",
+        "EventPicker_Negative_Random",
+        "EventPicker_Raid_Random",
+
+        // Keeps the periodic events a few hours away from any other event
+        // (also outlasts the 4-8 hour picker cooldowns above)
+        "Spacing_Balanced",
+
+        // Handles event transition from starting to ongoing, ticking and expiry
+        "Ongoing",
+
+        // Controls periodic raids
+        "Raid_Balanced",
+
+        // Required in every generator for handling stasis wake-ups
+        "StasisWakeUp",
+
+        // Required in every generator: the colony safety net, drops a rescue crew
+        // when nobody aboard can work any more
+        "SecondChance",
+
+        // Required in every generator for executing hooks (events for special objects)
+        "EventHook",
+
+        // Required in every generator to end ongoing events
+        "EventEnd"
+    ]
+}

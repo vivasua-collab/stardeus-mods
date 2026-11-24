@@ -1,0 +1,14 @@
+{
+    "Type": "Upgrades",
+    "Ingredients": [
+        { "TypeId" : "EnergyEfficiencyUpgrade", "StackSize" : 1 },
+        { "TypeId" : "Microchip2", "StackSize" : 1 },
+        { "TypeId" : "OpticalFiber", "StackSize" : 1 },
+        { "TypeId" : "Transistor", "StackSize" : 10 },
+        { "TypeId" : "GoldWire", "StackSize" : 5 }
+    ],
+    "IgnoreMarket" : true,
+    "ProductDefId": "Obj/Upgrades/SpeedUpgrade",
+    "ProductionTimeHours": 8.0,
+    "EnergyCost": 50.0
+}

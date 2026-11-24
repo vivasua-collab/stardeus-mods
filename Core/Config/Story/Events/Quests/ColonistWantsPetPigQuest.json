@@ -1,0 +1,16 @@
+{
+    "EventId" : "ColonistWantsPet",
+    "Points" : 8,
+    "OutcomeType" : "Positive",
+    "EventFlags" : [ "ColonistRequest", "ColonistPetRequest" ],
+    "MinRepeatDelayDays" : 180,
+    "Require" : {
+        "Days" : 50,
+        "Colonists" : 2
+    },
+    // Variables for the story event implementation
+    "Properties" : [
+        { "Key" : "SpeciesId", "String" : "Pig" },
+        { "Key" : "QuestId", "String" : "Random/Personal_ColonistWantsPet_Pig" }
+    ]
+}

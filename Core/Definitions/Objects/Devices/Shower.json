@@ -1,0 +1,104 @@
+{
+    "ToolPath" : "Facilities",
+    "Layer" : "Objects",
+    "ParentId" : "Objects/Devices/BaseDevice",
+    "Researchable" : {
+        "Prerequisites" : [
+            "Research/LifeSupport/Hygiene"
+        ]
+    },
+    "Spawnable" : {
+        "Category": "Comfort",
+        "TierDiff" : -1,
+        "Chance" : 1.0,
+        "ChanceLocked" : 0.5
+    },
+    "Components" : [
+        {
+            "Component" : "TileTransform",
+            "Properties" : [
+                { "Key" : "Height", "Int" : 1 },
+                // { "Key" : "WorkSpot", "Vector2" : { "x" : 0, "y" : -1 } },
+                { "Key" : "OutPort", "Vector2" : { "x" : 0, "y" : -1 } },
+                { "Key" : "InPort", "Vector2" : { "x" : 0, "y" : -1 } },
+                { "Key" : "IsRotatable", "Bool" : true }
+            ]
+        },
+        {
+            "Component" : "Flammable",
+            "Properties" : [
+                { "Key" : "IgnitionTemperatureCelsius", "Int" : 300 },
+                { "Key" : "FireChance", "Float" : 0.3 },
+                { "Key" : "SkipExplosivenessValidation", "Bool" : true }
+            ]
+        },
+        {
+            "Component" : "Shower",
+            "Properties" : [
+                { "Key" : "HideBeing", "Bool" : true },
+                { "Key" : "RequiresSafeArea", "Bool" : true }
+            ]
+        },
+        { "Component" : "SafetyCheck" },
+        { "Component" : "ExtraInfo" },
+        {
+            "Component" : "RefillableStorage",
+            "Properties" : [
+                { "Key" : "DeviceType", "String" : "shower" },
+                { "Key" : "Purpose", "String" : "water" },
+                { "Key" : "ShowBurnRate", "Bool" : false },
+                { "Key" : "LockedMaterial", "String" : "Water" },
+                { "Key" : "BarColor", "String" : "5390C6FF" },
+                { "Key" : "Icon", "String" : "Obj/Materials/Water" },
+                { "Key" : "MaterialCapacity", "Int" : 3 }
+            ]
+        },
+        {
+            "Component" : "Cleanable",
+            "Properties" : [
+                { "Key" : "DirtCapacity", "Int" : 3 },
+                { "Key" : "DirtyThreshold", "Float" : 0.85 },
+                { "Key" : "AutocleanAmount", "Float" : 0.7 },
+                { "Key" : "DirtToMaterialRate", "Float" : 1.0 },
+                { "Key" : "Byproduct", "String" : "Biowaste" },
+                { "Key" : "BarColor", "String" : "BF8C40FF" },
+                { "Key" : "TextKey", "String" : "biowaste.accumulation" },
+                { "Key" : "GoalKey", "String" : "clean.biowaste" },
+                { "Key" : "DirtyKey", "String" : "shower.dirty" },
+                { "Key" : "AmountKey", "String" : "biowaste.amount" },
+                { "Key" : "BarKey", "String" : "biowaste.amount.bar" },
+                { "Key" : "WarningKey", "String" : "biowaste.amount.warning" }
+            ]
+        },
+        {
+            "Component" : "TileGraphics",
+            "Properties" : [
+                { "Key" : "Type", "String": "Object" },
+                { "Key" : "Graphic", "String": "Objects/Devices/Shower" },
+                { "Key" : "HasHeight", "Bool" : true }
+            ]
+        },
+        {
+            "Component" : "Passability",
+            "Properties" : [
+                { "Key" : "IsPassable", "Bool" : false },
+                { "Key" : "IsWalkable", "Bool" : false },
+                { "Key" : "Difficulty", "Float" : 1 }
+            ]
+        },
+        {
+            "Component" : "Constructable",
+            "Properties" : [
+                { "Key" : "WorkAmount", "Int" : 1200 },
+                {
+                    "Key" : "Contents",
+                    "RawMaterials" : [
+                        { "TypeId" : "SteelPlate", "StackSize" : 2 },
+                        { "TypeId" : "Glass", "StackSize" : 1 },
+                        { "TypeId" : "Rubber", "StackSize" : 2 }
+                    ]
+                }
+            ]
+        }
+    ]
+}

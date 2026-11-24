@@ -1,0 +1,6 @@
+{
+    "Id" : "HumanEyeOrangeDark",
+    "Data" : [230, 107, 25, 255],
+    "Groups" : [ "Human.Eye" ],
+    "Weight" : 0.1
+}

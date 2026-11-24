@@ -1,0 +1,11 @@
+{
+    "Type" : "Electronics",
+    "Ingredients" : [
+        { "TypeId" : "SiliconWafer", "StackSize" : 1 },
+        { "TypeId" : "CopperWire", "StackSize" : 2 }
+    ],
+    "ProductDefId" : "Obj/Materials/Transistor",
+    "ProductionTimeHours" : 2.0,
+    "OutputMultiplier" : 10,
+    "EnergyCost" : 5
+}

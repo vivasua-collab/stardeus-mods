@@ -1,0 +1,10 @@
+{
+    "Id" : "Lead",
+    "IconId" : "Obj/Materials/Lead",
+    "GroupId" : "Ore",
+    "InternalValue" : 25.0,
+    "EnergyOutput" : 3100.0,
+    "CollectorCost" : 500,
+    "Rarity" : 30,
+    "MatRarity" : 2
+}

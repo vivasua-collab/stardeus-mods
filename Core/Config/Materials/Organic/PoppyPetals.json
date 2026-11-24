@@ -1,0 +1,10 @@
+{
+    "Id" : "PoppyPetals",
+    "IsComposite" : true,
+    "IsConsumedOnConstruct" : true,
+    "IconId" : "Obj/Materials/PoppyPetals",
+    "GroupId" : "Plants",
+    "EnergyOutput" : 150.0,
+    "InternalValue" : 12.0,
+    "Rarity" : 15
+}

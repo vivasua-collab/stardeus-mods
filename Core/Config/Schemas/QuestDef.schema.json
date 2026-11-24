@@ -1,0 +1,918 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Stardeus QuestDef",
+  "description": "Generated from C# by Game/Generate JSON Schemas, do not edit by hand",
+  "$ref": "#/$defs/QuestDef",
+  "$defs": {
+    "Mat": {
+      "type": "object",
+      "properties": {
+        "TypeId": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "StackSize": {
+          "type": "integer"
+        },
+        "MaxStackSize": {
+          "type": "integer"
+        }
+      },
+      "additionalProperties": false
+    },
+    "QuestDef": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "Id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "Type": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "QuestProviders": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "enum": [
+              "None",
+              "Ship",
+              "ShipDerelict",
+              "Signal",
+              "ShipComputer",
+              "Colonist",
+              "SpaceStation",
+              "POI",
+              "Anomaly",
+              "Port",
+              "SpaceObject"
+            ],
+            "type": "string"
+          }
+        },
+        "Providers": {
+          "anyOf": [
+            {
+              "type": "string",
+              "pattern": "^\\s*(None|Ship|ShipDerelict|Signal|ShipComputer|Colonist|SpaceStation|POI|Anomaly|Port|SpaceObject)(\\s*,\\s*(None|Ship|ShipDerelict|Signal|ShipComputer|Colonist|SpaceStation|POI|Anomaly|Port|SpaceObject))*\\s*$"
+            },
+            {
+              "type": "integer"
+            }
+          ]
+        },
+        "IdH": {
+          "type": "integer"
+        },
+        "QuestFlags": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "enum": [
+              "None",
+              "Tutorial",
+              "Main",
+              "Side",
+              "Random",
+              "Template",
+              "Unique",
+              "HideProgress",
+              "Retryable",
+              "AutoAdd",
+              "Signal",
+              "RequiresMemories",
+              "OncePerGiver",
+              "ConsumeProvider"
+            ],
+            "type": "string"
+          }
+        },
+        "Weight": {
+          "type": "number"
+        },
+        "CompatibleFactions": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "TitleKey": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "DescKey": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "TitleKeys": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "DescKeys": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "TitleT": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "DescT": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "Flags": {
+          "anyOf": [
+            {
+              "type": "string",
+              "pattern": "^\\s*(None|Tutorial|Main|Side|Random|Template|Unique|HideProgress|Retryable|AutoAdd|Signal|RequiresMemories|OncePerGiver|ConsumeProvider)(\\s*,\\s*(None|Tutorial|Main|Side|Random|Template|Unique|HideProgress|Retryable|AutoAdd|Signal|RequiresMemories|OncePerGiver|ConsumeProvider))*\\s*$"
+            },
+            {
+              "type": "integer"
+            }
+          ]
+        },
+        "Require": {
+          "$ref": "#/$defs/Situation"
+        },
+        "IsMain": {
+          "type": "boolean"
+        },
+        "IsTutorial": {
+          "type": "boolean"
+        },
+        "IsTemplate": {
+          "type": "boolean"
+        },
+        "IsUnique": {
+          "type": "boolean"
+        },
+        "AvailableWhen": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "string"
+          }
+        },
+        "CompleteWhen": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "string"
+          }
+        },
+        "FailWhen": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "string"
+          }
+        },
+        "RemoveIf": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "string"
+          }
+        },
+        "SetOnComplete": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "string"
+          }
+        },
+        "SetOnFail": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "string"
+          }
+        },
+        "Rewards": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "$ref": "#/$defs/QuestRewardDef"
+          }
+        },
+        "Variables": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "$ref": "#/$defs/QuestVarDef"
+          }
+        },
+        "Steps": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "$ref": "#/$defs/QuestStepDef"
+          }
+        },
+        "ForScenarios": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "QuestValidators": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "BoundTutorialIds": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "OnStartTutorialId": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "OnStartTutorialDelay": {
+          "type": "number"
+        },
+        "OnStartTutorialIdH": {
+          "type": "integer"
+        },
+        "BoundTutorialIdHSet": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "integer"
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "QuestRewardDef": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "Id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "Type": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "RewardFlags": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "enum": [
+              "None",
+              "Surprise",
+              "HasChance",
+              "Penalty",
+              "PackageContent"
+            ],
+            "type": "string"
+          }
+        },
+        "Chance": {
+          "type": "number"
+        },
+        "Flags": {
+          "anyOf": [
+            {
+              "type": "string",
+              "pattern": "^\\s*(None|Surprise|HasChance|Penalty|PackageContent)(\\s*,\\s*(None|Surprise|HasChance|Penalty|PackageContent))*\\s*$"
+            },
+            {
+              "type": "integer"
+            }
+          ]
+        },
+        "Config": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "$ref": "#/$defs/SerializableProperty"
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "QuestStepDef": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "Id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "Type": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "TitleKey": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "TitleKeys": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "DescKey": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "DescKeys": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "Deadline": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "TooltipKey": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "StepFlags": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "enum": [
+              "None",
+              "Optional",
+              "CompletesQuest",
+              "FailsQuest",
+              "ActiveOnStart",
+              "HideInactive",
+              "Secret",
+              "HideIfQuestUnaccepted",
+              "TickAvailable"
+            ],
+            "type": "string"
+          }
+        },
+        "Flags": {
+          "anyOf": [
+            {
+              "type": "string",
+              "pattern": "^\\s*(None|Optional|CompletesQuest|FailsQuest|ActiveOnStart|HideInactive|Secret|HideIfQuestUnaccepted|TickAvailable)(\\s*,\\s*(None|Optional|CompletesQuest|FailsQuest|ActiveOnStart|HideInactive|Secret|HideIfQuestUnaccepted|TickAvailable))*\\s*$"
+            },
+            {
+              "type": "integer"
+            }
+          ]
+        },
+        "ForScenarios": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "StateStoryEvents": {
+          "type": [
+            "object",
+            "null"
+          ],
+          "propertyNames": {
+            "enum": [
+              "Undefined",
+              "Inactive",
+              "Active",
+              "Completed",
+              "Failed"
+            ]
+          },
+          "additionalProperties": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "ActivateWhen": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "string"
+          }
+        },
+        "CompleteWhen": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "string"
+          }
+        },
+        "FailWhen": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "string"
+          }
+        },
+        "CompleteAndHideWhen": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "string"
+          }
+        },
+        "SetOnComplete": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "string"
+          }
+        },
+        "SetOnHide": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "string"
+          }
+        },
+        "Config": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "$ref": "#/$defs/SerializableProperty"
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "QuestVarDef": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "Id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "IdH": {
+          "type": "integer"
+        },
+        "Type": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "Config": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "$ref": "#/$defs/SerializableProperty"
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "SerializableProperty": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "Key": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "String": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "Int": {
+          "type": "integer"
+        },
+        "Float": {
+          "type": "number"
+        },
+        "Vector2": {
+          "$ref": "#/$defs/Vector2"
+        },
+        "PosIdx": {
+          "type": "integer"
+        },
+        "Bool": {
+          "type": "boolean"
+        },
+        "BoolSet": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "boolean"
+          }
+        },
+        "IntSet": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "integer"
+          }
+        },
+        "FloatSet": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "number"
+          }
+        },
+        "StringSet": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "Vector2Set": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "$ref": "#/$defs/Vector2"
+          }
+        },
+        "RawMaterials": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "$ref": "#/$defs/Mat"
+          }
+        },
+        "IsUsed": {
+          "type": "boolean"
+        }
+      },
+      "additionalProperties": false
+    },
+    "Situation": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "Friendlies": {
+          "type": "integer"
+        },
+        "Workers": {
+          "type": "integer"
+        },
+        "Colonists": {
+          "type": "integer"
+        },
+        "Guests": {
+          "type": "integer"
+        },
+        "Firefighters": {
+          "type": "integer"
+        },
+        "ColonySizeDiff": {
+          "type": "integer"
+        },
+        "Population": {
+          "type": "number"
+        },
+        "HumanDeaths": {
+          "type": "integer"
+        },
+        "Enemies": {
+          "type": "integer"
+        },
+        "ActiveThreats": {
+          "type": "integer"
+        },
+        "Areas": {
+          "type": "integer"
+        },
+        "Islands": {
+          "type": "integer"
+        },
+        "ShipSize": {
+          "type": "integer"
+        },
+        "ResearchedTech": {
+          "type": "integer"
+        },
+        "GridMaxOutput": {
+          "type": "number"
+        },
+        "GridConsumption": {
+          "type": "number"
+        },
+        "GridDeficit": {
+          "type": "number"
+        },
+        "GridBatCharge": {
+          "type": "number"
+        },
+        "GridBatOutput": {
+          "type": "number"
+        },
+        "GridRenewableOutput": {
+          "type": "number"
+        },
+        "GridSize": {
+          "type": "integer"
+        },
+        "Grids": {
+          "type": "integer"
+        },
+        "SectorDifficulty": {
+          "type": "number"
+        },
+        "ShipComputers": {
+          "type": "integer"
+        },
+        "TotalCPU": {
+          "type": "integer"
+        },
+        "TotalGPU": {
+          "type": "integer"
+        },
+        "TotalMemory": {
+          "type": "integer"
+        },
+        "TotalDisk": {
+          "type": "integer"
+        },
+        "BlackHoleJumps": {
+          "type": "integer"
+        },
+        "DerelictsApproached": {
+          "type": "integer"
+        },
+        "ExpeditionsCompleted": {
+          "type": "integer"
+        },
+        "ExpeditionsOngoing": {
+          "type": "integer"
+        },
+        "StoryEvents": {
+          "type": "integer"
+        },
+        "StoryPointsPositiveMax": {
+          "type": "integer"
+        },
+        "StoryPointsPositive": {
+          "type": "integer"
+        },
+        "StoryPointsNegativeMax": {
+          "type": "integer"
+        },
+        "StoryPointsNegative": {
+          "type": "integer"
+        },
+        "StoryPointsNeutralMax": {
+          "type": "integer"
+        },
+        "StoryPointsNeutral": {
+          "type": "integer"
+        },
+        "StoryPointsRaidMax": {
+          "type": "integer"
+        },
+        "StoryPointsRaid": {
+          "type": "integer"
+        },
+        "SpaceObjectsDiscovered": {
+          "type": "integer"
+        },
+        "Days": {
+          "type": "integer"
+        },
+        "Weeks": {
+          "type": "integer"
+        },
+        "Months": {
+          "type": "integer"
+        },
+        "Years": {
+          "type": "integer"
+        },
+        "Money": {
+          "type": "number"
+        },
+        "NetWorth": {
+          "type": "number"
+        },
+        "BaseNetWorth": {
+          "type": "number"
+        },
+        "ShipClassPoints": {
+          "type": "integer"
+        },
+        "Mats": {
+          "type": "integer"
+        },
+        "TimesOnFire": {
+          "type": "integer"
+        },
+        "NumRaids": {
+          "type": "integer"
+        },
+        "NumBreakdowns": {
+          "type": "integer"
+        },
+        "CombatStrength": {
+          "type": "number"
+        },
+        "ThreatWeight": {
+          "type": "number"
+        },
+        "NumShipCombats": {
+          "type": "integer"
+        },
+        "OngoingBuildTasks": {
+          "type": "integer"
+        },
+        "Difficulty": {
+          "type": "number"
+        }
+      },
+      "additionalProperties": false
+    },
+    "Vector2": {
+      "type": "object",
+      "properties": {
+        "x": {
+          "type": "number"
+        },
+        "y": {
+          "type": "number"
+        }
+      },
+      "additionalProperties": false
+    }
+  }
+}

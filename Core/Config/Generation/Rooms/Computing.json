@@ -1,0 +1,26 @@
+{
+    "Type" : "Computing",
+    "SizeMin" : 30,
+    "SizeMax" : 350,
+    "CountMin" : 1,
+    "CountMax" : 1,
+    "Chance" : 1.0,
+    "FillMin" : 0.1,
+    "FillMax" : 0.3,
+    "RequiredObjects" : [
+        "Objects/Devices/ShipComputer",
+        "Objects/Devices/Battery"
+    ],
+    "CompatibleObjects" : [
+        "Objects/Devices/MemoryModuleMini",
+        "Objects/Devices/StorageModuleMini",
+        "Objects/Devices/EnergyConnector"
+    ],
+    "CompatibleTemplates" : [
+        "Templates/Computer01",
+        "Templates/Computer02",
+        "Templates/Computer03",
+        "Templates/Computer04",
+        "Templates/Computer05"
+    ]
+}

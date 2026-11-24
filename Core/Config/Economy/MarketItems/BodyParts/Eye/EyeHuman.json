@@ -1,0 +1,9 @@
+{
+    "Id" : "Obj/Parts/Eye/EyeHuman",
+    "Type" : "CFD",
+    "Groups" : [ "BodyPart", "BlackMarket" ],
+    "Value" : 500.0,
+    "Rarity" : 0.1,
+    "MinSectorDifficulty" : 0.4,
+    "Volatility" : 0.0018
+}

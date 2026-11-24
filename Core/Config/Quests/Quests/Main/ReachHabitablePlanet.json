@@ -1,0 +1,30 @@
+{
+    "QuestFlags" : [ "Main", "AutoAdd", "Unique" ],
+    "TitleKey" : "quest.ReachHabitablePlanet",
+    "DescKey" : "quest.ReachHabitablePlanet.desc",
+    "QuestProviders" : [ "ShipComputer" ],
+    "FailWhen": [ "UsedDarkPortal" ],
+    "AvailableWhen" : [ "HasFoundHabitablePlanet" ],
+    "SetOnComplete" : [ "HasReachedHabitablePlanet" ],
+    "Variables": [
+        {
+            "Id" : "HabitablePlanet",
+            "Type" : "ExistingSpaceObject",
+            "Config": [
+                { "Key": "LoadSOId", "String" : "HabitablePlanetId" }
+            ]
+        }
+    ],
+    "Steps" : [
+        {
+            "Id" : "ReachHabitablePlanet",
+            "Type" : "GoToTargetSector",
+            "StepFlags" : [ "ActiveOnStart", "CompletesQuest", "HideIfQuestUnaccepted" ],
+            "Config" : [
+                { "Key" : "Var_Target", "String" : "HabitablePlanet" },
+                { "Key" : "Type", "String" : "Planet" },
+                { "Key" : "MessageOnReach", "String" : "quest.main.on.reach.habitable.planet" }
+            ]
+        }
+    ]
+}

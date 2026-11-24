@@ -1,0 +1,11 @@
+{
+    "Type" : "Ice",
+    "Ingredients" : [
+        { "TypeId" : "Water", "StackSize" : 5 }
+    ],
+    "IgnoreMarket" : true,
+    "OutputMultiplier" : 1,
+    "ProductDefId" : "Obj/Materials/Ice",
+    "ProductionTimeHours" : 0.5,
+    "EnergyCost" : 5
+}

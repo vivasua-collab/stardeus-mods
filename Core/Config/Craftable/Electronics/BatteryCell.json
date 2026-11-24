@@ -1,0 +1,11 @@
+{
+    "Type": "Electronics",
+    "Ingredients": [
+        { "TypeId" : "Lithium", "StackSize" : 1 },
+        { "TypeId" : "CopperWire", "StackSize" : 3 }
+    ],
+    "IgnoreMarket" : true,
+    "ProductDefId": "Obj/Materials/BatteryCell",
+    "ProductionTimeHours": 2.0,
+    "EnergyCost": 15.0
+}

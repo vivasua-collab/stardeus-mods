@@ -1,0 +1,57 @@
+{
+    "QuestFlags" : [ "Random", "Template" ],
+    "TitleKey" : "quest.colonist.crush.title",
+    "DescKey" : "quest.colonist.crush.desc",
+    "QuestProviders" : [ "Colonist" ],
+    "CompatibleFactions" : [ "Player" ],
+    "Variables" : [
+        {
+            "Id" : "ExpeditionDeadline",
+            "Type" : "Deadline",
+            "Config" : [
+                {
+                    "Key" : "DaysCurve", "FloatSet" : [
+                        0.0, 10.0,
+                        1.0, 20.0
+                    ]
+                }
+            ]
+        }
+    ],
+    "Steps" : [
+        {
+            "Id" : "ShareExpedition",
+            "Type" : "ShareExpeditionWithBeing",
+            "StepFlags" : [ "ActiveOnStart", "CompletesQuest", "FailsQuest", "HideIfQuestUnaccepted" ],
+            "Deadline" : "ExpeditionDeadline"
+        }
+    ],
+    "Rewards" : [
+        {
+            "Id" : "GiverHappy",
+            "Type" : "ColonistMood",
+            "Config" : [
+                { "Key" : "Magnitude", "Int" : 15 },
+                { "Key" : "DurationHours", "Float" : 24.0 },
+                { "Key" : "ReasonKey", "String" : "mood.colonist.crush.shared.expedition" }
+            ]
+        },
+        {
+            "Id" : "GiverTrusts",
+            "Type" : "ColonistTrust",
+            "Config" : [
+                { "Key" : "Magnitude", "Int" : 15 },
+                { "Key" : "DurationHours", "Float" : 2880.0 }
+            ]
+        },
+        {
+            "Id" : "GiverDisappointed",
+            "Type" : "ColonistTrust",
+            "RewardFlags" : [ "Penalty" ],
+            "Config" : [
+                { "Key" : "Magnitude", "Int" : -5 },
+                { "Key" : "DurationHours", "Float" : 720.0 }
+            ]
+        }
+    ]
+}

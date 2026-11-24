@@ -1,0 +1,65 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Stardeus ShipTagDef",
+  "description": "Generated from C# by Game/Generate JSON Schemas, do not edit by hand",
+  "$ref": "#/$defs/ShipTagDef",
+  "$defs": {
+    "ShipTagDef": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "Id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "IdH": {
+          "type": "integer"
+        },
+        "CompatibleFactions": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "CompatibleClasses": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "MinOffensiveness": {
+          "type": "number"
+        },
+        "MaxOffensiveness": {
+          "type": "number"
+        },
+        "ChanceWillTrade": {
+          "type": "number"
+        },
+        "ChancePolice": {
+          "type": "number"
+        },
+        "Rarity": {
+          "type": "number"
+        }
+      },
+      "additionalProperties": false
+    }
+  }
+}

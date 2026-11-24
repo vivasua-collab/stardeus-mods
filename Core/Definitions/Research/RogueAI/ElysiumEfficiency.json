@@ -1,0 +1,34 @@
+{
+    "Id" : "Research/RogueAI/ElysiumEfficiency",
+    "Tier" : 5,
+    "IsAbstract" : true,
+    "PreviewIcon" : "Icons/Color/Cryogenics",
+    "NameKey" : "research.elysiumefficiency",
+    "Researchable" : {
+        "IsTreeNode" : true,
+        "Prerequisites" : [
+            "Research/RogueAI/ElysiumElectricity"
+        ],
+        "UnlockEffects" : [
+            "ElysiumOutput_2"
+        ],
+        "DatoidCosts" : [
+            {
+                "TypeId" : "DatoidEnergy",
+                "StackSize" : 40
+            },
+            {
+                "TypeId" : "DatoidSynthetic",
+                "StackSize" : 20
+            },
+            {
+                "TypeId" : "DatoidAlien",
+                "StackSize" : 8
+            },
+            {
+                "TypeId" : "DatoidQuantum",
+                "StackSize" : 8
+            }
+        ]
+    }
+}

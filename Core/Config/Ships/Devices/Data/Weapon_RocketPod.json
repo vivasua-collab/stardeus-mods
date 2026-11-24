@@ -1,0 +1,23 @@
+{
+    "Id" : "Weapon_RocketPod",
+    "DefId" : "Objects/Devices/RocketPod",
+    "Tier" : 3,
+    "ClassPoints" : 7,
+
+    // if it has multiple rotations:
+    "ZoneSpriteId_D" : "Objects/Devices/RocketPod_ZoneView_D",
+    "ZoneSpriteId_L" : "Objects/Devices/RocketPod_ZoneView_L",
+    "ZoneSpriteId_U" : "Objects/Devices/RocketPod_ZoneView_U",
+    "ZoneSpriteId_R" : "Objects/Devices/RocketPod_ZoneView_R",
+
+    // "ZoneSpriteScale" : 0.5,
+
+    "HP" : 400,
+
+    "Rarity" : 0.25,
+
+    "TargetTypeId" : "ShipWeapon_Missile",
+
+    "EnergyCostPassive": 5,
+    "EnergyCostActive": 50
+}

@@ -1,0 +1,14 @@
+{
+    "BuildGroup" : "FloorReinforced",
+    "Layer" : "Floor",
+    "ParentId" : "Structure/Floors/FloorReinforced01",
+    "UseParentTexts" : true,
+    "Components" : [
+        {
+            "Component" : "TileGraphics",
+            "Properties" : [
+                { "Key" : "Graphic", "String": "Structure/Floors/FloorReinforced02" }
+            ]
+        }
+    ]
+}

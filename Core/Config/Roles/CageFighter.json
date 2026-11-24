@@ -1,0 +1,18 @@
+{
+    "Id" : "CageFighter",
+    "Species" : [ "Human", "Robot", "Dog" ],
+    "RoleTypes" : [ "Dumb" ],
+    "IncompatibleTraitIds" : [ "Pacifist" ],
+    "IncapableJobTypes" : [ "Social" ],
+    "AgePhaseIds" : [ "YoungAdult", "MidLife" ],
+    "AdjustsSkills" : [
+        {
+            "JobId" : "Melee",
+            "Adjustment" : 4
+        },
+        {
+            "JobId" : "Construction",
+            "Adjustment" : 4
+        }
+    ]
+}

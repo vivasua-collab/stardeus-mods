@@ -1,0 +1,16 @@
+{
+    "Type" : "Robotics2",
+    "ProductDefId" : "Obj/Parts/Implant/FirewallChip",
+    "ProductionTimeHours" : 168,
+    "EnergyCost" : 50,
+    "IgnoreMarket" : true,
+    "Ingredients" : [
+        { "TypeId" : "TitaniumPlate", "StackSize" : 1 },
+        { "TypeId" : "Transistor", "StackSize" : 10 },
+        { "TypeId" : "OpticalFiber", "StackSize" : 3 },
+        { "TypeId" : "GoldWire", "StackSize" : 3 }
+    ],
+    "DisposableOutput" : [
+        { "TypeId" : "ScrapMetal", "StackSize" : 1 }
+    ]
+}

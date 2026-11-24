@@ -1,0 +1,30 @@
+{
+    "Id" : "Research/RogueAI/ElysiumElectricity",
+    "Tier" : 4,
+    "IsAbstract" : true,
+    "PreviewIcon" : "Icons/Color/Energy",
+    "NameKey" : "research.elysiumelectricity",
+    "Researchable" : {
+        "IsTreeNode" : true,
+        "Prerequisites" : [
+            "Research/RogueAI/Elysium"
+        ],
+        "UnlockEffects" : [
+            "ElysiumOutput_1"
+        ],
+        "DatoidCosts" : [
+            {
+                "TypeId" : "DatoidEnergy",
+                "StackSize" : 30
+            },
+            {
+                "TypeId" : "DatoidSynthetic",
+                "StackSize" : 18
+            },
+            {
+                "TypeId" : "DatoidAlien",
+                "StackSize" : 5
+            }
+        ]
+    }
+}

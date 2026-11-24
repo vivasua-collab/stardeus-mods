@@ -1,0 +1,48 @@
+{
+    "Id" : "OldEarth",
+    "FlagIcon" : "Icons/Faction/OldEarth",
+    "Friendliness" : 0.8,
+    "ChanceBlackMarket" : 0.1,
+    "ChancePolice" : 1.0,
+    "ChanceRandomShip" : 0.10,
+    "AI" : 0.05,
+    "VictoryRaidChance" : 0.4,
+    "ShipDensityMul" : 1.5,
+    "HyperjumpRelayBaseToll" : 15000,
+    "RegionDifficultyChance" : [
+        0.0, 0.25,
+        0.7, 1.0,
+        1.0, 0.0
+    ],
+    // power difference => chance to engage in combat
+    "BraveryChance" : [
+        -1.0, 0.95,
+        -0.5, 0.75,
+        0.0, 0.5,
+        0.5, 0.25,
+        1.0, 0.05
+    ],
+    // How likely the reaction will be positive (vs negative) given the faction standing
+    // key => standing, value => chance of positive reaction
+    "AttitudePositiveReactionChance" : [
+        -1.0, 0.01,
+        -0.5, 0.1,
+        -0.25, 0.5,
+        -0.15, 0.95,
+        0.0, 1.0,
+        0.5, 1.0,
+        1.0, 1.0
+    ],
+    "GenBodyVars" : {
+        "ChanceModded" : 0.3,
+        "ChanceFreak" : 0.05,
+        "ChanceBionic" : 0.2,
+        "ChanceCustomMind" : 0.05,
+        "ChanceHighQualityParts" : 0.4,
+        "ChanceLowQualityParts" : 0.1,
+        "ChanceNonStandard" : 0.15,
+        "ChanceScarred" : 0.3,
+        "ChanceImplant" : 0.02
+    },
+    "CombatObjective" : "Raid"
+}

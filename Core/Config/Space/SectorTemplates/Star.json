@@ -1,0 +1,10 @@
+{
+    "Id" : "Star",
+    "Type" : "Star",
+    "NoLife" : true,
+    "HasOrbit" : true,
+    "CantBeInbound" : true,
+    "ForceEffects" : [
+        "Star"
+    ]
+}

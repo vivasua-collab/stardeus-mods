@@ -1,0 +1,6 @@
+{
+    "Id" : "UI/Starmap/Trajectory",
+    "Hex" : "#C1D7D7",
+    "Alpha" : 0.5,
+    "SkipAtlas" : true
+}

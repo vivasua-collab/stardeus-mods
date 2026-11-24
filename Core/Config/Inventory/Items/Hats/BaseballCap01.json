@@ -1,0 +1,21 @@
+{
+    "DefId" : "Obj/Equipment/Hats/BaseballCap01",
+    "SlotId" : "Hat",
+    "SpriteId" : "Beings/Hats/Human/BaseballCap01/BaseballCap01",
+    "Rarity" : 1.0,
+    "ColorGroupId" : "Clothing",
+    // Can't do this due to beards
+    // "HidesLookParts" : [
+    //     "Hair"
+    // ],
+    "AddsStatModifiers" : [
+        {
+            "Component" : "ArmorBlunt",
+            "Properties" : [
+                { "Key" : "StateMul", "Float" : 0.5 },
+                { "Key" : "Value", "Float" : 1.5 },
+                { "Key" : "Type", "String" : "Adds" }
+            ]
+        }
+    ]
+}

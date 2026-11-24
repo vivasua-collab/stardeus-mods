@@ -1,0 +1,28 @@
+{
+    "Id" : "Aerolith",
+    "IsWithDepth" : true,
+    "IsBiological" : true,
+    "MinDifficulty" : 0.8,
+    "DifficultyChance" : [
+        0.0, 0.0,
+        0.8, 0.0,
+        0.9, 0.5,
+        1.0, 1.0
+    ],
+    "UniverseQuantityChance" : [
+        0.0, 1.0,
+        1.0, 1.0
+    ],
+    "RegionQuantityChance" : [
+        0.0, 1.0,
+        1.0, 1.0
+    ],
+    "InitialDepthChance" : [
+        0.0, 1.0,
+        1.0, 0.8
+    ],
+    "MiningDifficulty" : 390.0,
+    "CollectKey" : "verb.mine",
+    "ScanDifficulty" : 10.0,
+    "NearbySpawnChance" : 0.05
+}

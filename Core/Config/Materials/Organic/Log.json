@@ -1,0 +1,11 @@
+{
+    "Id" : "Log",
+    "IsComposite" : true,
+    "IconId" : "Obj/Materials/Log",
+    "ProcessableDefId" : "Obj/Materials/Log",
+    "Property" : "Solid",
+    "GroupId" : "Plants",
+    "InternalValue" : 22.0,
+    "EnergyOutput" : 340.0,
+    "Rarity" : 50
+}

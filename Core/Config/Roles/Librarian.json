@@ -1,0 +1,16 @@
+{
+    "Id" : "Librarian",
+    "Species" : [ "Human", "Robot", "Drone", "Sentry", "Orbotron" ],
+    "AgePhaseIds" : [ "YoungAdult", "MidLife", "Retirement" ],
+    "RoleTypes" : [ ],
+    "AdjustsSkills" : [
+        {
+            "JobId" : "Research",
+            "Adjustment" : 4
+        },
+        {
+            "JobId" : "Cleaning",
+            "Adjustment" : 2
+        }
+    ]
+}

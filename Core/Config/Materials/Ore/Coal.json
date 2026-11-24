@@ -1,0 +1,10 @@
+{
+    "Id" : "Coal",
+    "IsComposite" : true,
+    "IconId" : "Obj/Materials/Coal",
+    "GroupId" : "Ore",
+    "InternalValue" : 6.0,
+    "EnergyOutput" : 500.0,
+    "Rarity" : 80,
+    "MatRarity" : 0
+}

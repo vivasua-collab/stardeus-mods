@@ -1,0 +1,11 @@
+{
+    "Type": "Grindable",
+    "IgnoreMarket" : true,
+    "Ingredients": [
+        { "TypeId" : "Rock", "StackSize" : 1 }
+    ],
+    "OutputMultiplier" : 2,
+    "ProductDefId": "Obj/Materials/Soil",
+    "ProductionTimeHours": 1,
+    "EnergyCost": 10.0
+}

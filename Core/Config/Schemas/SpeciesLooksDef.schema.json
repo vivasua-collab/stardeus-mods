@@ -1,0 +1,490 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Stardeus SpeciesLooksDef",
+  "description": "Generated from C# by Game/Generate JSON Schemas, do not edit by hand",
+  "$ref": "#/$defs/SpeciesLooksDef",
+  "$defs": {
+    "DownedWiggleDef": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "Angle": {
+          "type": "number"
+        },
+        "Interval": {
+          "type": "number"
+        },
+        "Duration": {
+          "type": "number"
+        }
+      },
+      "additionalProperties": false
+    },
+    "SpeciesLooksDef": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "Id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "IdH": {
+          "type": "integer"
+        },
+        "HasHorizontal": {
+          "type": "boolean"
+        },
+        "PartDefs": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "$ref": "#/$defs/SpeciesLooksPartDef"
+          }
+        },
+        "BaseOffset": {
+          "type": "number"
+        },
+        "BarOffset": {
+          "$ref": "#/$defs/Vector2"
+        },
+        "BubbleOffset": {
+          "$ref": "#/$defs/Vector2"
+        },
+        "CarryOffset": {
+          "$ref": "#/$defs/Vector2"
+        },
+        "PreviewRot": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "PreviewScale": {
+          "type": "number"
+        },
+        "PreviewOffset": {
+          "$ref": "#/$defs/Vector2"
+        },
+        "PreviewOffsetWeapon": {
+          "$ref": "#/$defs/Vector2"
+        },
+        "BodyPreviewYShift": {
+          "type": "number"
+        },
+        "BodyPreviewScaleMul": {
+          "type": "number"
+        },
+        "BodyPreviewRot": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "HeadPreviewRot": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "RiderOffset": {
+          "$ref": "#/$defs/Vector2"
+        },
+        "FaceOffsetsH": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "$ref": "#/$defs/Vector2"
+          }
+        },
+        "SortOrderAdjustment": {
+          "type": "integer"
+        },
+        "BodyPartSlotViewOffsets": {
+          "type": [
+            "object",
+            "null"
+          ],
+          "additionalProperties": {
+            "$ref": "#/$defs/Vector2"
+          }
+        },
+        "BodyPartSlotLines": {
+          "type": [
+            "object",
+            "null"
+          ],
+          "additionalProperties": {
+            "type": [
+              "array",
+              "null"
+            ],
+            "items": {
+              "$ref": "#/$defs/Vector2"
+            }
+          }
+        },
+        "EyeOverrides": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "$ref": "#/$defs/SpeciesLooksEyeOverrideDef"
+          }
+        },
+        "RebuildForConditions": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "RebuildForConditionIds": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "integer"
+          }
+        },
+        "IsAnimated": {
+          "type": "boolean"
+        },
+        "Walk": {
+          "$ref": "#/$defs/WalkBobDef"
+        },
+        "Wiggle": {
+          "$ref": "#/$defs/DownedWiggleDef"
+        },
+        "Cache": {
+          "type": "boolean"
+        },
+        "CarriedObjSortOrders": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "CarryZOffsets": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "number"
+          }
+        },
+        "WeaponOffsets": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "$ref": "#/$defs/Vector2"
+          }
+        },
+        "SelectOffset": {
+          "$ref": "#/$defs/Vector2"
+        },
+        "SelectSize": {
+          "$ref": "#/$defs/Vector2"
+        }
+      },
+      "additionalProperties": false
+    },
+    "SpeciesLooksEyeOverrideDef": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "Id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "BeingState": {
+          "anyOf": [
+            {
+              "type": "string",
+              "pattern": "^\\s*(Uninitialized|Alive|Dead|Hidden|Expedition|Stored|InDevice|InColony|IncapableOfCombat)(\\s*,\\s*(Uninitialized|Alive|Dead|Hidden|Expedition|Stored|InDevice|InColony|IncapableOfCombat))*\\s*$"
+            },
+            {
+              "type": "integer"
+            }
+          ]
+        },
+        "BodyState": {
+          "anyOf": [
+            {
+              "type": "string",
+              "pattern": "^\\s*(None|Alive|Injured|Recovering|Incapacitated|Unhealthy)(\\s*,\\s*(None|Alive|Injured|Recovering|Incapacitated|Unhealthy))*\\s*$"
+            },
+            {
+              "type": "integer"
+            }
+          ]
+        },
+        "BodyPartState": {
+          "anyOf": [
+            {
+              "type": "string",
+              "pattern": "^\\s*(None|Incapacitated|ParentUnusable|Injured|Destroyed|Infected|Welded|Crippled)(\\s*,\\s*(None|Incapacitated|ParentUnusable|Injured|Destroyed|Infected|Welded|Crippled))*\\s*$"
+            },
+            {
+              "type": "integer"
+            }
+          ]
+        },
+        "BeingStateFlags": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "enum": [
+              "Uninitialized",
+              "Alive",
+              "Dead",
+              "Hidden",
+              "Expedition",
+              "Stored",
+              "InDevice",
+              "InColony",
+              "IncapableOfCombat"
+            ],
+            "type": "string"
+          }
+        },
+        "BodyStateFlags": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "enum": [
+              "None",
+              "Alive",
+              "Injured",
+              "Recovering",
+              "Incapacitated",
+              "Unhealthy"
+            ],
+            "type": "string"
+          }
+        },
+        "BodyPartFlags": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "BodyPartStateFlags": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "enum": [
+              "None",
+              "Incapacitated",
+              "ParentUnusable",
+              "Injured",
+              "Destroyed",
+              "Infected",
+              "Welded",
+              "Crippled"
+            ],
+            "type": "string"
+          }
+        },
+        "PartSpecies": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "ForConditions": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "ForConditionIds": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "integer"
+          }
+        },
+        "ForRobotic": {
+          "type": "boolean"
+        },
+        "Removed": {
+          "type": "boolean"
+        },
+        "HasLR": {
+          "type": "boolean"
+        },
+        "CanBeClosed": {
+          "type": "boolean"
+        },
+        "SpriteState": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "SpriteId": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "IgnoreColor": {
+          "type": "boolean"
+        }
+      },
+      "additionalProperties": false
+    },
+    "SpeciesLooksPartDef": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "PartType": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "Scale": {
+          "type": "number"
+        },
+        "Offset": {
+          "$ref": "#/$defs/Vector2"
+        },
+        "PositionFilter": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "RenderSorted": {
+          "type": "boolean"
+        },
+        "MobilizerAffected": {
+          "type": "boolean"
+        },
+        "MobilizerAltPosFilter": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "MobilizerLooksDefault": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "MobilizerLooksAlt": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "MobilizerLooksEmpty": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "MobilizerAltOffsetY": {
+          "type": "number"
+        },
+        "MobilizerEmptyOffsetY": {
+          "type": "number"
+        },
+        "MobilizerAltHidden": {
+          "type": "boolean"
+        },
+        "MobilizerDefaultHidden": {
+          "type": "boolean"
+        }
+      },
+      "additionalProperties": false
+    },
+    "Vector2": {
+      "type": "object",
+      "properties": {
+        "x": {
+          "type": "number"
+        },
+        "y": {
+          "type": "number"
+        }
+      },
+      "additionalProperties": false
+    },
+    "WalkBobDef": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "Lift": {
+          "type": "number"
+        },
+        "Sway": {
+          "type": "number"
+        },
+        "Step": {
+          "type": "number"
+        },
+        "Pivot": {
+          "type": "number"
+        }
+      },
+      "additionalProperties": false
+    }
+  }
+}

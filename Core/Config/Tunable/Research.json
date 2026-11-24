@@ -1,0 +1,53 @@
+{
+    "Floats" : [
+        { "Key" : "ResearchNextTierUnlockAt", "Float" : 0.25 },
+        { "Key" : "ResearchStorageCostMultiplier", "Float" : 1.0 }
+    ],
+    // 0th = not used, because Tier 0 does not really exist. last = default for anything above last index.",
+    "FloatSets" : [
+        {
+            "Key" : "ResearchTierDatoidCostMultipliers",
+            "FloatSet" : [
+                0.0,
+                1.0
+            ]
+        }
+    ],
+    "StringSets" : [
+        {
+            "Key" : "AlwaysUnlockedResearchNodes",
+            "StringSet" : [
+                "Research/Computing/Research",
+                "Research/Construction/Structure",
+                "Research/Habitation/Furniture",
+                "Research/Energy/Reactor",
+                "Research/Robotics/Maintenance",
+                "Research/Construction/StorageMini"
+            ]
+        },
+        {
+            "Key" : "BasicResearchNodes",
+            "StringSet" : [
+                "Research/Construction/Lighting",
+                "Research/Construction/Winch",
+                "Research/Economy/Wallet",
+                "Research/Economy/OnlineShop",
+                "Research/Energy/Solar",
+                "Research/Entertainment/Treadmill",
+                "Research/Habitation/Storage",
+                "Research/LifeSupport/Hygiene",
+                "Research/LifeSupport/AtmosphereControl",
+                "Research/LifeSupport/FoodProduction",
+                "Research/Production/Weaving",
+                "Research/Production/BiochemicalExtraction",
+                "Research/Production/Assembly",
+                "Research/Production/Electronics",
+                "Research/Scanning/Communications",
+                "Research/Scanning/Radar",
+                "Research/Security/WeaponsBasic",
+                "Research/SpaceTravel/Bridge",
+                "Research/SpaceTravel/Propulsion"
+            ]
+        }
+    ]
+}

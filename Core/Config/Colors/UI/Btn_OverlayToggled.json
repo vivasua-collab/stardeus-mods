@@ -1,0 +1,6 @@
+{
+    "Id" : "UI/Btn/OverlayToggled",
+    "AliasFor" : "UI/Saturated/Comp",
+    "Alpha" : 1.0,
+    "SkipAtlas" : true
+}

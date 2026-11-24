@@ -1,0 +1,27 @@
+{
+    "EventId": "CookingIncident",
+    "Points": 13,
+    "OutcomeType": "Negative",
+    "EventFlags": [
+        "Being",
+        "Device",
+        "Annoying",
+        "Fire",
+        "WaitsForCondition"
+    ],
+    "MinRepeatDelayDays": 70,
+    "Require": {
+        "Difficulty": 0.25
+    },
+    "Properties": [
+        {
+            "Key": "SkillFailChanceCurve",
+            "FloatSet": [
+                0, 1,
+                5, 0.33,
+                10, 0.1,
+                255, 0
+            ]
+        }
+    ]
+}

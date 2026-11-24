@@ -1,0 +1,26 @@
+{
+    "Id" : "Research/Habitation/Labeling",
+    "Tier" : 3,
+    "IsAbstract" : true,
+    "PreviewIcon" : "Icons/Color/Label",
+    "NameKey" : "research.labeling",
+    "Researchable" : {
+        "IsTreeNode" : true,
+        "Prerequisites" : [
+            "Research/Habitation/Sign"
+        ],
+        "UnlockEffects" : [
+            "Labeling"
+        ],
+        "DatoidCosts" : [
+            {
+                "TypeId" : "DatoidTech",
+                "StackSize" : 13
+            },
+            {
+                "TypeId" : "DatoidTechHigh",
+                "StackSize" : 7
+            }
+        ]
+    }
+}

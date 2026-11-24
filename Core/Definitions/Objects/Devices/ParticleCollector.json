@@ -1,0 +1,136 @@
+{
+    "ToolPath" : "Production",
+    "Layer" : "Objects",
+    "ParentId" : "Objects/Devices/BaseDevice",
+    "SkipToolListing" : true,
+    "Spawnable" : {
+        "Category" : "UniqueDevice",
+        "Chance" : 1.0,
+        "ChanceLocked" : 1.0
+    },
+    "Components" : [
+        {
+            "Component" : "TileTransform",
+            "Properties" : [
+                { "Key" : "IsRotatable", "Bool" : true },
+                { "Key" : "CoverPercent", "Int" : 0 },
+                { "Key" : "Width", "Int" : 2 },
+                { "Key" : "Height", "Int" : 3 },
+                // { "Key" : "WorkSpot", "Vector2" : { "x" : 0, "y" : -1 } },
+                { "Key" : "OutPort", "Vector2" : { "x" : 0, "y" : -1 } }
+                // { "Key" : "InPort", "Vector2" : { "x" : 0, "y" : -1 } }
+            ]
+        },
+        {
+            "Component" : "IndustrialEquipment",
+            "Properties" : [
+                { "Key" : "IsNoisy", "Bool" : true }
+            ]
+        },
+        {
+            "Component" : "Flammable",
+            "Properties" : [
+                { "Key" : "IgnitionTemperatureCelsius", "Int" : 400 },
+                { "Key" : "FireChance", "Float" : 0.5 },
+                { "Key" : "BaseExplosionLevel", "Int" : 3 },
+                { "Key" : "FlammabilityCurve", "String" : "Device" },
+                { "Key" : "ExplosivenessCurve", "String" : "DeviceHigh" }
+            ]
+        },
+        {
+            "Component" : "LightSource",
+            "Properties" : [
+                { "Key" : "Color", "IntSet" : [ 123, 191, 64, 128 ] },
+                { "Key" : "PulsateColor", "IntSet" : [ 123, 191, 64, 192 ] },
+                { "Key" : "FrequencyRange", "Vector2" : { "x" : 2, "y" : 3 } },
+                { "Key" : "Radius", "Float" : 7 }
+            ]
+        },
+        {
+            "Component" : "ElectricNode",
+            "Properties" : [
+                { "Key" : "Particles", "String" : "ParticleCollectorFX" },
+                { "Key" : "IsConsumerLowPriority", "Bool" : true }
+            ]
+        },
+        {
+            "Component" : "WithFuse",
+            "Properties" : [
+                { "Key" : "MalfunctionWeight", "Float": 0.15 }
+            ]
+        },
+        {
+            "Component" : "AudioSource",
+            "Properties" : [
+                { "Key" : "AmbienceClip", "String" : "Ambience/ElectricHumm03" },
+                { "Key" : "IsLinkedToEnergy", "Bool" : true },
+                { "Key" : "Rolloff", "Vector2" : { "x" : 3, "y" : 15 } }
+            ]
+        },
+        {
+            "Component" : "TileGraphics",
+            "Properties" : [
+                { "Key" : "Type", "String": "Object" },
+                { "Key" : "Graphic", "String": "Objects/Devices/ParticleCollector" },
+                { "Key" : "HasHeight", "Bool": false }
+            ]
+        },
+        {
+            "Component" : "TileAnimation",
+            "Properties" : [
+                { "Key" : "Offsets", "Vector2Set": [
+                    // down
+                    { "x" : 0.0, "y" : 0.0 },
+                    // left
+                    { "x" : -0.03, "y" : 0.0 },
+                    // up
+                    { "x" : 0.0, "y" : 0.0 },
+                    // right
+                    { "x" : 0.03, "y" : 0.0 }
+                ]},
+                { "Key" : "Size", "Vector2": { "x" : 1.86, "y" : 1.86 } },
+                { "Key" : "BaseSprite", "String": "Objects/Devices/ParticleCollector_Base" },
+                { "Key" : "AnimSprite", "String" : "Objects/DeviceAnims/ParticleCollector_Anim" },
+                { "Key" : "CopyAnimSprite", "Bool" : true },
+                { "Key" : "Speed", "Float": 1.0 },
+                { "Key" : "SpriteOrder", "String": "BelowObjTile" },
+                { "Key" : "FramePrefix", "String": "F" },
+                { "Key" : "NumFrames", "Int": 24 },
+                { "Key" : "PingPong", "Bool": true },
+                { "Key" : "PingPongStillFrames", "Int": 8 },
+                { "Key" : "NeedsEnergy", "Bool": true }
+            ]
+        },
+        {
+            "Component" : "Passability",
+            "Properties" : [
+                { "Key" : "IsPassable", "Bool" : true },
+                { "Key" : "IsWalkable", "Bool" : false },
+                { "Key" : "Difficulty", "Float" : 0.9 }
+            ]
+        },
+        {
+            "Component" : "RawMaterialGenerator",
+            "Properties" : [
+                { "Key" : "SpeedMultiplier", "Float" : 1.0 }
+            ]
+        },
+        {
+            "Component" : "Constructable",
+            "Properties" : [
+                { "Key" : "Placement", "String" : "InSpaceAttached" },
+                { "Key" : "WorkAmount", "Int" : 2400 },
+                {
+                    "Key" : "Contents",
+                    "RawMaterials" : [
+                        { "TypeId" : "LeadPlate", "StackSize" : 8 },
+                        { "TypeId" : "GoldWire", "StackSize" : 1 },
+                        { "TypeId" : "OpticalFiber", "StackSize" : 5 },
+                        { "TypeId" : "Microchip3", "StackSize" : 5 },
+                        { "TypeId" : "Glass", "StackSize" : 5 }
+                    ]
+                }
+            ]
+        }
+    ]
+}

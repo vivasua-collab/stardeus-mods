@@ -1,0 +1,25 @@
+{
+    "Id" : "Engine_WarpDriveMini",
+    "DefId" : "Objects/Devices/WarpDriveMini",
+    "Tier" : 4,
+    "ClassPoints" : 1,
+
+    // if it would only have one rotation:
+    // "ZoneSpriteId" : "Objects/Devices/ShredderCannon_ZoneView",
+
+    // if it has multiple rotations:
+    "ZoneSpriteId_D" : "Objects/Devices/WarpDriveMini_U",
+    "ZoneSpriteId_L" : "Objects/Devices/WarpDriveMini_R",
+    "ZoneSpriteId_U" : "Objects/Devices/WarpDriveMini_D",
+    "ZoneSpriteId_R" : "Objects/Devices/WarpDriveMini_L",
+
+    "ZoneSpriteScale" : 0.2,
+
+    "HP" : 250,
+
+    "Rarity" : 0.01,
+
+    "TargetTypeId" : "ShipEngine_Hyperdrive",
+    "EnergyCostPassive": 0,
+    "EnergyCostActive": 0
+}

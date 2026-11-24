@@ -1,0 +1,16 @@
+{
+    "Id" : "Priest",
+    "Species" : [ "Human", "Robot" ],
+    "AgePhaseIds" : [ "YoungAdult", "MidLife", "Retirement" ],
+    "RoleTypes" : [ ],
+    "AdjustsSkills" : [
+        {
+            "JobId" : "Social",
+            "Adjustment" : 6
+        },
+        {
+            "JobId" : "Robotics",
+            "Adjustment" : -2
+        }
+    ]
+}

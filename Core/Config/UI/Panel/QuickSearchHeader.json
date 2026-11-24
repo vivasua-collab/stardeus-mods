@@ -1,0 +1,9 @@
+{
+    "Id" : "Panel/QuickSearchHeader",
+
+    "Color" : "UI/Panel/Accent",
+
+    "Image" : "UI/Panels/PanelFlipped2BG",
+    "ImageType" : "Sliced",
+    "ImageBorderLBRT" : [ 28, 12, 12, 28 ]
+}

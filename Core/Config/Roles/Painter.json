@@ -1,0 +1,18 @@
+{
+    "Id" : "Painter",
+    "Species" : [ "Human" ],
+    "LovesJobTypes" : [ "Crafting" ],
+    "IncapableJobTypes" : [ "Demolition" ],
+    "AgePhaseIds" : [ "YoungAdult", "MidLife", "Retirement" ],
+    "RoleTypes" : [ "Dumb", "Poor" ],
+    "AdjustsSkills" : [
+        {
+            "JobId" : "Crafting",
+            "Adjustment" : 6
+        },
+        {
+            "JobId" : "Construction",
+            "Adjustment" : 2
+        }
+    ]
+}

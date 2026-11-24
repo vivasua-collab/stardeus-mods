@@ -1,0 +1,23 @@
+{
+    "Layer" : "FreeEntities",
+    "IgnoreMarket" : true,
+    "ParentId" : "Obj/Parts/BasePartOrganic",
+    "NameKey" : "bodypart.Hand.HandHuman",
+    "Researchable" : {
+        "Prerequisites" : [ "Research/LifeSupport/GrowingPartsAdvanced" ]
+    },
+    "Components" : [
+        {
+            "Component" : "ObjGraphics",
+            "Properties" : [
+                { "Key" : "Graphic", "String": "Obj/BodyParts/Organic3" }
+            ]
+        },
+        {
+            "Component" : "BodyPart",
+            "Properties" : [
+                { "Key" : "BodyPartDefId", "String" : "Hand/HandHuman" }
+            ]
+        }
+    ]
+}

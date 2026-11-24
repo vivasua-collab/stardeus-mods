@@ -1,0 +1,199 @@
+{
+    "Bools" : [
+        // If you want this to be true, also set ShipStarmapSizeMul value to ~1!
+        { "Key" : "ShipFixedSizeInStarmap", "Bool" : false }
+    ],
+    "Ints" : [
+        // How many in-game hours have to pass for ships to make their jumps
+        // and move about if the player is not hyperjumping
+        { "Key" : "ShipTrafficTurnHours", "Int" : 24 },
+        // How many in-game hours have to pass for ship to notice some other
+        // ship in the same sector when not hyperjumping.
+        // Same ship can be noticed multiple times
+        { "Key" : "ShipNoticeDelayHoursFrom", "Int" : 12 },
+        { "Key" : "ShipNoticeDelayHoursTo", "Int" : 48 },
+        // Minimum flux any ship will have at all times
+        { "Key" : "ShipBaseFlux", "Int" : 100 },
+        // How fast will NPC ships reload their weapons
+        { "Key" : "NPCShipWeaponReloadDelayMinutesFrom", "Int" : 30 },
+        { "Key" : "NPCShipWeaponReloadDelayMinutesTo", "Int" : 180 },
+        // Ticks delay between sequential shots fired from the same BattleStation salvo
+        { "Key" : "BattleStationSalvoDelayTicksFrom", "Int" : 1 },
+        { "Key" : "BattleStationSalvoDelayTicksTo", "Int" : 3 },
+        // How many NPC ships can fight on the player's side at the same time
+        { "Key" : "ShipCombatMaxNPCAllies", "Int" : 2 },
+        // How many enemies total the player can face at once. Caps reinforcement paths
+        // only (the join-against scan and the hail-insult retaliation pile-on) - never
+        // a player-initiated attack, a raid, or a story-event spawn
+        { "Key" : "ShipCombatMaxEnemies", "Int" : 3 }
+    ],
+    "Floats" : [
+        // how long will a hyper trail linger after a ship makes a hyperjump
+        { "Key" : "HyperTrailTimeoutHours", "Float" : 24.0 },
+        { "Key" : "NPCShipFollowDist", "Float" : 2.0 },
+        // Push of one NPC thruster in local space. Matches the Thruster device's Power, so an
+        // NPC ship flies as fast as a player ship of the same size with plain thrusters
+        { "Key" : "NPCShipThrusterPower", "Float" : 25.0 },
+        // How much health a single device can repair on an enemy ship mid combat per tick
+        { "Key" : "NPCDamageCombatRepairMaxPerTick", "Float" : 3.0 },
+        // Global slowdown on NPC device repair (both budget and per-device cap), multiplied
+        // by Difficulty.SoftLevel (0.1/0.5/1.0/2.0/~3.0). At 0.5: Balanced repairs at half
+        // the old rate, Challenging matches old Balanced, Impossible gets ~1.5x.
+        { "Key" : "NPCDeviceCombatRepairMul", "Float" : 0.5 },
+        // when ships will wander to adjacent regions, this says by how much
+        // the region can be easier for a ship of difficult orgin to be allowed
+        // to roam in there. 0.4 = -40%, or if a ship spawned in 80% difficulty
+        // it will be allowed to go to region no easier than 40%.
+        { "Key" : "NPCShipBehavior_Region_Wander_MinDifficultyDiff", "Float" : 0.1 },
+
+        // Per region-turn chance for a patrolling ship to decide it wants to hyperjump,
+        // and (once in hyperspace) to drop back out again.
+        { "Key" : "NPCShipBehavior_Region_Patrol_WantHyperspaceChance", "Float" : 0.66 },
+        { "Key" : "NPCShipBehavior_Region_Patrol_ExitHyperspaceChance", "Float" : 0.66 },
+        { "Key" : "NPCShipBehavior_Region_RandomWalk_WantHyperspaceChance", "Float" : 0.66 },
+        { "Key" : "NPCShipBehavior_Region_RandomWalk_ExitHyperspaceChance", "Float" : 0.66 },
+        { "Key" : "NPCShipBehavior_Region_Wander_WantHyperspaceChance", "Float" : 0.33 },
+        { "Key" : "NPCShipBehavior_Region_Wander_ExitHyperspaceChance", "Float" : 0.33 },
+        // Chance for a wandering ship that failed to plot a region route to swap its
+        // hyperdrive for a long range drive so it can reach further regions.
+        { "Key" : "NPCShipBehavior_Region_Wander_AddLongRangeDriveChance", "Float" : 0.5 },
+
+        // Multiplies the per-turn "wants hyperspace" chance above for an NPC ship that is
+        // the target of an ACTIVE quest. Lower = the player can actually catch it.
+        { "Key" : "QuestTargetShipHyperjumpChanceMul", "Float" : 0.1 },
+        // Overrides the per-turn exit chance for a quest target ship that IS in hyperspace.
+        // 1.0 = it never spends more than one region turn in hyperspace.
+        { "Key" : "QuestTargetShipExitHyperspaceChance", "Float" : 1.0 },
+
+        { "Key" : "NPCShipFluxBlunderDelayHoursFrom", "Float" : 2.0 },
+        { "Key" : "NPCShipFluxBlunderDelayHoursTo", "Float" : 3.0 },
+        // natural vent (soft only)
+        { "Key" : "ShipFluxSoftVentPercentPerHour", "Float" : 0.05 },
+        // forced manual vent
+        { "Key" : "ShipFluxHardVentPercentPerHour", "Float" : 2.0 },
+        // overload unstoppable vent
+        { "Key" : "ShipFluxOverloadVentPercentPerHour", "Float" : 1.5 },
+        // Max % of total flux capacity that can be vented per hour (soft and hard are each capped)
+        { "Key" : "ShipFluxMaxVentPercentPerHour", "Float" : 0.5 },
+        // Overload vent rate = passive soft vent rate * this multiplier. Never higher than
+        // 1.0 - overload must not vent faster than passive, or manual venting loses its point.
+        { "Key" : "ShipFluxOverloadVentMul", "Float" : 1.0 },
+        // Active/manual vent rate (vent open, not overloaded) = passive soft vent rate * this multiplier
+        { "Key" : "ShipFluxActiveVentMul", "Float" : 2.0 },
+        // Reference value only - NOT read by ShipFlux at runtime. The live per-vent bonus is
+        // ShipVentDef.VentBonus (Config/Ships/Devices/Vents/FluxVent.json). Kept in sync for docs.
+        { "Key" : "ShipFluxVentBonus", "Float" : 30.0 },
+
+        // While a ship is overloaded, the flux its own weapon shots add is multiplied by
+        // these numbers (a venting ship holds fire at ships). Flux from outside counts in full
+        { "Key" : "ShipFluxHardVentMul", "Float" : 0.05 },
+        { "Key" : "ShipFluxSoftVentMul", "Float" : 0.05 },
+        // Seconds to hold the FIRE button until it triggers
+        { "Key" : "ShipCombatManualFireHoldDuration", "Float" : 0.5 },
+        // Share of an NPC ship's weapons that only shoot at the targets its weapon strategy
+        // ranks highest, like the player's weapons. The rest spread over every device
+        { "Key" : "ShipCombatNPCFocusedWeaponShare", "Float" : 0.5 },
+        // 0.5 = 50%
+        { "Key" : "ShipMaxEvadePercent", "Float" : 0.5 },
+        // Ship size multiplier for evasion calculation. Higher values make larger ships
+        // get less evasion from thrusters. 1.0 = no penalty, 2.0 = half effectiveness for same size
+        { "Key" : "ShipEvadeShipSizePenalty", "Float" : 1.0 },
+        // 0.5 = 50% of total class points being used by ship weapons will result in 100% offensiveness
+        { "Key" : "ShipOffensivenessClassPointRatio", "Float" : 0.5 },
+        // how likely will a ship device survive destruction of the ship.
+        // if it does survive it will be attempted to spawn on a derelict
+        // but it can still be destroyed by further steps, so this chance
+        // should be higher to compensate for that
+        { "Key" : "ShipDeviceDerelictSurvivalChance", "Float" : 0.5 },
+        // For a derelict resulting from a ship just defeated in combat: chance that any
+        // given crew remnant is already dead on boarding (vs. spawned alive and hostile).
+        { "Key" : "DerelictCrewDeadChance", "Float" : 0.4 },
+        // Of the crew remnants that are alive, chance that they're wounded (but still
+        // hostile and fighting) rather than unscathed.
+        { "Key" : "DerelictCrewWoundedChance", "Float" : 0.4 },
+        // How much % of hull damage a ship that ended combat undefeated will repair
+        // per hour
+        { "Key" : "ShipPostCombatRepairPercentPerHour", "Float" : 0.05 },
+        // When a hit rolls the device path (75%) but the device is already destroyed,
+        // the dead wreckage still absorbs most of the hull bleed-through.
+        // 0.2 = 20% hull damage on dead-device hits vs 100% on direct hull hits.
+        { "Key" : "ShipHullDamageOnDeadDeviceHitMul", "Float" : 0.2 },
+        // Fraction of hull damage blocked while the ship is in flux overload state.
+        // 0.2 = 20% damage reduction — overloaded ships shed less hull damage while venting.
+        { "Key" : "ShipFluxOverloadArmorBonus", "Float" : 0.2 },
+        // How many days have to pass for the same ship to try to interact with player again
+        { "Key" : "NPCShipRepeatInteractionDelayDays", "Float" : 30.0 },
+
+        // Must be at least 10 with ShipFixedSizeInStarmap disabled, or ships will look super tiny
+        { "Key" : "ShipStarmapSizeMul", "Float" : 10.0 },
+        { "Key" : "ShipStarfieldSizeMul", "Float" : 1.0 },
+
+        { "Key" : "QuestGiverChance_SpaceStation", "Float" : 0.9 },
+        { "Key" : "QuestGiverChance_ShipOutlaw", "Float" : 0.5 },
+        { "Key" : "QuestGiverChance_ShipPolice", "Float" : 0.5 },
+        { "Key" : "QuestGiverChance_ShipNPC", "Float" : 0.1 }
+    ],
+    "FloatSets" : [
+        {
+            // Multiplier that tells how many more or less ships
+            // should appear in the sector depending on sector difficulty.
+            // Will be combined with sector template NPCShipDensity curve
+            "Key" : "NPCShipDensityDifficultyMul",
+            // less ships at low difficulty and high difficulty,
+            // extra ships around 60% difficulty areas
+            "FloatSet" : [
+                0.0, 0.15,
+                0.3, 0.3,
+                0.5, 0.7,
+                0.6, 1.0,
+                1.0, 0.5
+            ]
+        },
+        {
+            // How worried an NPC ship is about their power difference
+            // against another ship.
+            // 0.0 - totally scared, 1.0 - not scared at all
+            "Key" : "NPCShipPowerDifferenceFearFactor",
+            // power difference => fear
+            "FloatSet" : [
+                -1.0, 1.0,
+                -0.5, 0.85,
+                0.0, 0.5,
+                0.5, 0.15,
+                1.0, 0.0
+            ]
+        },
+        {
+            // How likely an NPC ship will offer surrender in combat considering health
+            "Key" : "NPCShipHealthSurrenderChance",
+            // health percent > surrender chance
+            "FloatSet" : [
+                0.0, 1.0,
+                0.25, 0.5,
+                0.5, 0.25,
+                0.75, 0.05,
+                1.0, 0.0
+            ]
+        },
+        {
+            // How much % of corner area will a derelict take up.
+            "Key" : "DerelictSizeCurve",
+            // derelict size (0-1) -> ship length. max length at 320x320 is 80 (25%)
+            "FloatSet" : [
+                0.0, 40,
+                1.0, 80
+            ]
+        },
+        {
+            // How does ship size affect shield energy cost
+            "Key" : "ShipSizeShieldEnergyCostCurve",
+            // derelict size (0-1) -> ship length. max length at 320x320 is 80 (25%)
+            "FloatSet" : [
+                0.0, 0.5,
+                500.0, 1.0,
+                10000.0, 10.0,
+                50000.0, 20.0
+            ]
+        }
+    ]
+}

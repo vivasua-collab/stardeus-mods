@@ -1,0 +1,9 @@
+{
+    "Id" : "UI/Btn/OverlaySelected",
+    "AliasFor" : "UI/White/Primary",
+    // Btn_Normal - 40 saturation + 60 value
+    // "Hex" : "8B80D2",
+    // "Hex" : "BA54FF",
+    "Alpha" : 0.6,
+    "SkipAtlas" : true
+}

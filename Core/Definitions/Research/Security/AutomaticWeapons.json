@@ -1,0 +1,16 @@
+{
+    "Id" : "Research/Security/AutomaticWeapons",
+    "Tier" : 2,
+    "IsAbstract" : true,
+    "PreviewIcon" : "Obj/Weapons/SMG01/SMG01",
+    "Researchable" : {
+        "IsTreeNode" : true,
+        "Prerequisites" : [
+            "Research/Security/Firearms"
+        ],
+        "DatoidCosts" : [
+            { "TypeId" : "DatoidTech",      "StackSize" : 15 },
+            { "TypeId" : "DatoidSynthetic", "StackSize" : 3 }
+        ]
+    }
+}

@@ -1,0 +1,17 @@
+{
+    "Id" : "Resource",
+    "Icon" : "Icons/Color/Pickaxe",
+    "SizeMin" : 1,
+    "SizeMax" : 1,
+    "IsDynamic" : true,
+    "CanBeExplored" : true,
+    "IsAutoVisited" : true,
+    "CanHaveCustomIcon" : true,
+    "IsScannable" : false,
+    "IsInteractive" : true,
+    "LocationApproxMagnitude" : 2.0,
+    "StarfieldSortOrder" : 1,
+    "IsIconMarker" : true,
+    "CanBeOwned" : true,
+    "IsOnSurface" : true
+}

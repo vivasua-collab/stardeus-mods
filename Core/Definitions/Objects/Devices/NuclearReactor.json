@@ -1,0 +1,126 @@
+{
+    "ToolPath" : "Energy",
+    "Layer" : "Objects",
+    "ParentId" : "Objects/Devices/MatterReactorMini",
+    "Researchable" : {
+        "Prerequisites" : [ "Research/Energy/ReactorNuclear" ]
+    },
+    "TranslationVars" : [ "1" ],
+    "Spawnable" : {
+        "Category": "RareDevice",
+        "TierDiff" : -1,
+        "Chance" : 1.0,
+        "ChanceLocked" : 0.5
+    },
+    "Components" : [
+        {
+            "Component" : "TileTransform",
+            "Properties" : [
+                { "Key" : "Width", "Int" : 3 },
+                { "Key" : "Height", "Int" : 3 },
+                // { "Key" : "WorkSpot", "Vector2" : { "x" : 2, "y" : -1 } },
+                // { "Key" : "OutPort", "Vector2" : { "x" : 1, "y" : -1 } },
+                { "Key" : "InPort", "Vector2" : { "x" : 2, "y" : -1 } },
+                { "Key" : "IsRotatable", "Bool" : true }
+            ]
+        },
+        {
+            "Component" : "Reinstallable",
+            "Properties" : [
+                { "Key" : "IsAdvanced", "Bool" : true }
+            ]
+        },
+        {
+            "Component" : "HeatProducer",
+            "Properties" : [
+                { "Key" : "Rate", "Float" : 3 },
+                { "Key" : "Range", "Int" : 3 },
+                { "Key" : "CheckSameArea", "Bool" : true }
+            ]
+        },
+        {
+            "Component" : "Flammable",
+            "Properties" : [
+                { "Key" : "IgnitionTemperatureCelsius", "Int" : 800 },
+                { "Key" : "BaseExplosionLevel", "Int" : 2 },
+                { "Key" : "FlammabilityCurve", "String" : "DeviceHigh" },
+                { "Key" : "ExplosivenessCurve", "String" : "DeviceHigh" }
+            ]
+        },
+        {
+            "Component" : "AudioSource",
+            "Properties" : [
+                { "Key" : "AmbienceClip", "String" : "Ambience/DeviceHumm12" },
+                { "Key" : "Rolloff", "Vector2" : { "x" : 3, "y" : 12 } },
+                { "Key" : "IsLinkedToEnergy", "Bool" : true }
+            ]
+        },
+        {
+            "Component" : "VFX",
+            "Properties" : [
+                { "Key" : "Id", "String" : "VFXParticlesNuclearReactor" },
+                { "Key" : "Offset", "Vector2" : { "x" : 0.0, "y" : 1.57 } },
+                { "Key" : "Offsets", "Vector2Set" : [] }
+            ]
+        },
+        {
+            "Component" : "LightSource",
+            "Properties" : [
+                { "Key" : "Radius", "Float" : 12 },
+                { "Key" : "Color", "IntSet" : [ 102, 143, 204, 192 ] }
+            ]
+        },
+        {
+            "Component" : "MatterReactor",
+            "Properties" : [
+                { "Key" : "MaxRate", "Int" : 1000 }
+            ]
+        },
+        {
+            "Component" : "WithFuse",
+            "Properties" : [
+                { "Key" : "MalfunctionWeight", "Float": 0.25 },
+                // matter reactor has it's own MatterReactorMalfunctionStoryEvent
+                { "Key" : "CanHaveGenericMalfunction", "Bool" : false }
+            ]
+        },
+        {
+            "Component" : "RefillableStorage",
+            "Properties" : [
+                { "Key" : "MaterialCapacity", "Int" : 5 },
+                { "Key" : "LockedMaterial", "String" : "EnrichedUranium" }
+                // in case we want to add more options in future, remove LockedMaterial
+                // { "Key" : "PropertyFilter", "StringSet" : [
+                //     "NuclearFuel"
+                // ] }
+            ]
+        },
+        {
+            "Component" : "Damageable",
+            "Properties" : [
+                { "Key" : "Max", "Int" : 800 }
+            ]
+        },
+        {
+            "Component" : "TileGraphics",
+            "Properties" : [
+                { "Key" : "Graphic", "String" : "Objects/Devices/NuclearReactor" }
+            ]
+        },
+        {
+            "Component" : "Constructable",
+            "Properties" : [
+                { "Key" : "WorkAmount", "Int" : 6000 },
+                {
+                    "Key" : "Contents",
+                    "RawMaterials" : [
+                        { "TypeId" : "LeadPlate", "StackSize" : 12 },
+                        { "TypeId" : "NuclearCell", "StackSize" : 2 },
+                        { "TypeId" : "Rubber", "StackSize" : 6 },
+                        { "TypeId" : "Microchip3", "StackSize" : 3 }
+                    ]
+                }
+            ]
+        }
+    ]
+}

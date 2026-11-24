@@ -1,0 +1,7 @@
+{
+    "Id" : "UI/Text/Accented3",
+    "AliasFor" : "UI/Saturated/Sec+2",
+    // "Hex" : "CC66A3",
+    "Alpha" : 1.0,
+    "SkipAtlas" : true
+}

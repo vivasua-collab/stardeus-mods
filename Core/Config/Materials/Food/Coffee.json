@@ -1,0 +1,10 @@
+{
+    "Id" : "Coffee",
+    "IsComposite" : true,
+    "IconId" : "Obj/Materials/Coffee",
+    "Property" : "Addictive",
+    "Group" : "Drink",
+    "GroupId" : "Food",
+    "EnergyOutput" : 210.0,
+    "Rarity" : 3
+}

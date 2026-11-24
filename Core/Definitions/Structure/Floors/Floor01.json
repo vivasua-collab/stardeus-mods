@@ -1,0 +1,28 @@
+{
+    "BuildGroup" : "Floor",
+    "ToolPath" : "Floors/FloorRegular",
+    "Layer" : "Floor",
+    "ParentId" : "Structure/Floors/BaseFloor",
+    "Components" : [
+        {
+            "Component" : "TileGraphics",
+            "Properties" : [
+                {
+                    "Key" : "Graphic",
+                    "String": "Structure/Floors/Floor01"
+                }
+            ]
+        },
+        {
+            "Component" : "Constructable",
+            "Properties" : [
+                {
+                    "Key" : "Contents",
+                    "RawMaterials" : [
+                        { "TypeId" : "SteelPlate", "StackSize" : 2 }
+                    ]
+                }
+            ]
+        }
+    ]
+}

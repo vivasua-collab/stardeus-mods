@@ -1,0 +1,19 @@
+{
+    "Id" : "Research/LifeSupport/AtmosphereControl",
+    "Tier" : 1,
+    "IsAbstract" : true,
+    "PreviewIcon" : "Icons/Color/Temperature",
+    "NameKey" : "research.atmospherecontrol",
+    "Researchable" : {
+        "IsTreeNode" : true,
+        "Prerequisites" : [
+            "Research/LifeSupport/Root"
+        ],
+        "DatoidCosts" : [
+            {
+                "TypeId" : "DatoidBasic",
+                "StackSize" : 11
+            }
+        ]
+    }
+}

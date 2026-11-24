@@ -1,0 +1,11 @@
+{
+    "Id" : "Obj/Equipment/Hats/SpaceHelmet02",
+    "Type" : "CFD",
+    "Groups" : [ "Equipment" ],
+    "Value" : 2580.0,
+    "Rarity" : 0.1,
+    "TraderQuantity" : 1.0,
+    "MaxTraderQuantity" : 2,
+    "MinSectorDifficulty" : 0.65,
+    "Volatility" : 0.0021
+}

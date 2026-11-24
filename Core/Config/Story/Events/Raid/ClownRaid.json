@@ -1,0 +1,25 @@
+{
+    // C# implementation id.
+    // Multiple configurations can point to a single implementation.
+    "EventId" : "ClownRaid",
+    // How much does this story event cost to run
+    "Points" : 15,
+    // Options: Negative, Positive, Neutral, Raid, Raid
+    "OutcomeType" : "Raid",
+    // Full list is in StoryEventFlags class
+    "EventFlags" : [
+        "Raid",
+        "Space",
+        "CanHaveDuplicates",
+        "NoHyperspace"
+    ],
+    "MinRepeatDelayDays" : 150,
+    "Require" : {
+        "Days" : 60
+    },
+    "SectorDifficultyChance" : [
+        0.0, 0.5,
+        0.5, 0.8,
+        1.0, 1.0
+    ]
+}

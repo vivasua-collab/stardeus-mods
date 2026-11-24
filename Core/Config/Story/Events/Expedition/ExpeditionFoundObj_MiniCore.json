@@ -1,0 +1,22 @@
+{
+    // C# implementation id.
+    "EventId": "ExpeditionFoundObj",
+    "Points": 25,
+    // Options: Negative, Positive, Neutral, Raid
+    "OutcomeType": "Positive",
+    // Full list is in StoryEventFlags class
+    "EventFlags": [
+        "Expedition",
+        "OnDemand",
+        "Anomaly"
+    ],
+    "Properties": [
+        { "Key": "LootDefId", "String": "Obj/Parts/Core/MiniCore" },
+        { "Key": "MinQuantity", "Int": 1 },
+        { "Key": "MaxQuantity", "Int": 1 }
+    ],
+    "Require": {
+        "SectorDifficulty": 0.4,
+        "Days": 120
+    }
+}

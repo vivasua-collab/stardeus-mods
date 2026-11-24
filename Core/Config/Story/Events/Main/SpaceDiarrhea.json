@@ -1,0 +1,21 @@
+{
+    // C# implementation id.
+    // Multiple configurations can point to a single implementation.
+    "EventId" : "SpaceDiarrhea",
+    // How much does this story event cost to run
+    "Points" : 15,
+    // Options: Negative, Positive, Neutral, Raid
+    "OutcomeType" : "Negative",
+    // Full list is in StoryEventFlags class
+    "EventFlags" : [
+        "Being",
+        "Disease",
+        "Funny",
+        "Annoying"
+    ],
+    "MinRepeatDelayDays" : 390,
+    // Full list of requirements can be found in Situation class
+    "Require" : {
+        "Colonists" : 5
+    }
+}

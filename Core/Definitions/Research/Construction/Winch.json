@@ -1,0 +1,19 @@
+{
+    "Id" : "Research/Construction/Winch",
+    "Tier" : 1,
+    "IsAbstract" : true,
+    "PreviewIcon" : "Objects/Devices/WinchHook_D",
+    "NameKey" : "research.winch",
+    "Researchable" : {
+        "IsTreeNode" : true,
+        "Prerequisites" : [
+            "Research/Construction/Structure"
+        ],
+        "DatoidCosts" : [
+            {
+                "TypeId" : "DatoidBasic",
+                "StackSize" : 5
+            }
+        ]
+    }
+}

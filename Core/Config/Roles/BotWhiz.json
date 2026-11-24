@@ -1,0 +1,17 @@
+{
+    "Id" : "BotWhiz",
+    "LovesJobTypes" : [ "Robotics" ],
+    "Species" : [ "Human" ],
+    "RoleTypes" : [ ],
+    "AgePhaseIds" : [ "Childhood", "YoungAdult" ],
+    "AdjustsSkills" : [
+        {
+            "JobId" : "Robotics",
+            "Adjustment" : 6
+        },
+        {
+            "JobId" : "Crafting",
+            "Adjustment" : 2
+        }
+    ]
+}

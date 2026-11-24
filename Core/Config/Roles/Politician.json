@@ -1,0 +1,14 @@
+{
+    "Id" : "Politician",
+    "Species" : [ "Human", "Robot" ],
+    "AgePhaseIds" : [ "MidLife", "Retirement" ],
+    "RoleTypes" : [ "Smart", "Rich" ],
+    "LovesJobTypes" : [ "Social" ],
+    "IncapableJobTypes" : [ "Mining", "Hauling" ],
+    "AdjustsSkills" : [
+        {
+            "JobId" : "Social",
+            "Adjustment" : 6
+        }
+    ]
+}

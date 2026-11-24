@@ -1,0 +1,20 @@
+{
+    "Id" : "Thief",
+    "Species" : [ "Human" ],
+    "BodyTypes" : "T",
+    "RoleTypes" : [ "Evil" ],
+    "AdjustsSkills" : [
+        {
+            "JobId" : "Expedition",
+            "Adjustment" : 2
+        },
+        {
+            "JobId" : "Crafting",
+            "Adjustment" : 4
+        },
+        {
+            "JobId" : "Social",
+            "Adjustment" : -1
+        }
+    ]
+}

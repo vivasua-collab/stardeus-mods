@@ -1,0 +1,10 @@
+{
+    "Type": "Wire",
+    "Ingredients": [
+        { "TypeId" : "CopperPlate", "StackSize" : 1 }
+    ],
+    "ProductDefId": "Obj/Materials/CopperWire",
+    "ProductionTimeHours": 2.0,
+    "OutputMultiplier" : 5,
+    "EnergyCost": 7.5
+}

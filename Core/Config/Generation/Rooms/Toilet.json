@@ -1,0 +1,25 @@
+{
+    "Type" : "Toilet",
+    "SizeMin" : 4,
+    "SizeMax" : 16,
+    "CountMin" : 3,
+    "CountMax" : 6,
+    "Chance" : 1.0,
+    "FillMin" : 0.1,
+    "FillMax" : 0.8,
+    "RequiredObjects" : [
+        "Objects/Devices/Toilet",
+        "Objects/Devices/Shower"
+    ],
+    "CompatibleObjects" : [
+        "Objects/Devices/Toilet",
+        "Objects/Devices/Shower",
+        "Objects/Devices/Heater",
+        "Objects/Devices/OxygenPump"
+    ],
+    "CompatibleTemplates" : [
+        "Templates/Hygiene01",
+        "Templates/Hygiene02",
+        "Templates/Hygiene03"
+    ]
+}

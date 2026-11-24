@@ -1,0 +1,9 @@
+{
+    "Id" : "Obj/Equipment/Hats/Hat01",
+    "Type" : "CFD",
+    "Groups" : [ "Equipment" ],
+    "Value" : 50.0,
+    "Rarity" : 0.2,
+    "MinSectorDifficulty" : 0.5,
+    "Volatility" : 0.0034
+}

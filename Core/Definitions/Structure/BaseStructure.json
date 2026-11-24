@@ -1,0 +1,44 @@
+{
+    "ToolPath" : "Structure",
+    "ResearchValue" : 0,
+    "IsAbstract" : true,
+    "ParentId" : "BaseTile",
+    "Researchable" : {
+        "Prerequisites" : [
+            "Research/Construction/Structure"
+        ]
+    },
+    "Components" : [
+        {
+            "Component" : "TileTransform",
+            "Properties" : [
+                { "Key" : "IsRotatable", "Bool" : true }
+            ]
+        },
+        { "Component" : "HullIntegrity" },
+        {
+            "Component" : "Flammable",
+            "Properties" : [
+                { "Key" : "FireChance", "Float" : 0.05 },
+                { "Key" : "FireDamageResistance", "Float" : 0.7 },
+                { "Key" : "SpreadIntoChance", "Float" : 0.1 },
+                { "Key" : "IgnitionTemperatureCelsius", "Int" : 0 }
+            ]
+        },
+        {
+            "Component" : "Passability",
+            "Properties" : [
+                { "Key" : "IsPassable", "Bool" : false },
+                { "Key" : "IsWalkable", "Bool" : false },
+                { "Key" : "Difficulty", "Float" : 1 }
+            ]
+        },
+        {
+            "Component" : "Constructable",
+            "Properties" : [
+                { "Key" : "WorkAmount", "Int" : 300 },
+                { "Key" : "CanReplaceSameLayer", "Bool": true }
+            ]
+        }
+    ]
+}

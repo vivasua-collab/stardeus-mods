@@ -1,0 +1,11 @@
+{
+    "Id" : "Obj/Meals/SurvivalMeal",
+    "Type" : "CFD",
+    "Groups" : [ "Food" ],
+    "Value" : 50.0,
+    "Rarity" : 0.6,
+    "CustomChanceInStock" : 0.75,
+    "OnlineShopQuantity" : 100,
+    "TraderQuantity" : 25.0,
+    "Volatility" : 0.00037
+}

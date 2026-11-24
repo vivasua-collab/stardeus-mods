@@ -1,0 +1,13 @@
+{
+    "Id" : "Pilot",
+    "LovesJobTypes" : [ "Piloting" ],
+    "RoleTypes" : [ ],
+    "Species" : [ "Human", "Robot", "Sentry", "Orbotron" ],
+    "AgePhaseIds" : [ "YoungAdult", "MidLife", "Retirement" ],
+    "AdjustsSkills" : [
+        {
+            "JobId" : "Piloting",
+            "Adjustment" : 6
+        }
+    ]
+}

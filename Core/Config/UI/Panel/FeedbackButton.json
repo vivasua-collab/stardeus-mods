@@ -1,0 +1,10 @@
+{
+    "Id" : "Panel/FeedbackButton",
+
+    "Color" : "UI/Panel/Main",
+    "Alpha" : 0.8,
+
+    "Image" : "UI/Buttons/IconButtonBG",
+    "ImageType" : "Sliced",
+    "ImageBorderLBRT" : [ 8, 8, 8, 8]
+}

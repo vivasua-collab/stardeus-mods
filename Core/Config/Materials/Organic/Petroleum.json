@@ -1,0 +1,12 @@
+{
+    "Id" : "Petroleum",
+    "IsComposite" : true,
+    "IsConsumedOnConstruct" : true,
+    "IconId" : "Obj/Materials/Petroleum",
+    "Property" : "Liquid",
+    "GroupId" : "Components",
+    "EnergyOutput" : 1200.0,
+    "Rarity" : 10,
+    "ExplosionLevel" : 4,
+    "ExplosivenessCurveId" : "Extreme"
+}

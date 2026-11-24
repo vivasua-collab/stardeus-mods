@@ -1,0 +1,72 @@
+{
+    "ToolPath" : "Furniture",
+    "Layer" : "Objects",
+    "ParentId" : "Objects/Furniture/BaseFurniture",
+    "Researchable" : {
+        "Prerequisites" : [ "Research/LifeSupport/DeathCare" ]
+    },
+    "Spawnable" : {
+        "Chance" : 0.5,
+        "ChanceLocked" : 0.5,
+        "Quantity" : {
+            "Component" : "PureRandom",
+            "Properties" : [
+                { "Key" : "MaxQuantity", "Int" : 3 },
+                { "Key" : "MaxQuantityChance", "Float" : 0.1 }
+            ]
+        }
+    },
+    "Components" : [
+        {
+            "Component" : "TileTransform",
+            "Properties" : [
+                // { "Key" : "WorkSpot", "Vector2" : { "x" : 0, "y" : -1 } }
+                { "Key" : "OutPort", "Vector2" : { "x" : 0, "y" : -1 } },
+                { "Key" : "InPort", "Vector2" : { "x" : 0, "y" : -1 } }
+            ]
+        },
+        {
+            "Component" : "Flammable",
+            "Properties" : [
+                { "Key" : "FireChance", "Float" : 0.05 }
+            ]
+        },
+        {
+            "Component" : "TileGraphics",
+            "Properties" : [
+                { "Key" : "Graphic", "String": "Objects/Furniture/Urn" },
+                { "Key" : "RotateGraphic", "Bool" : false },
+                { "Key" : "HasHeight", "Bool" : false }
+            ]
+        },
+        { "Component" : "UrnName" },
+        { "Component" : "ObjHaulTarget" },
+        {
+            "Component" : "ObjStorage",
+            "Properties" : [
+                { "Key" : "Groups", "StringSet" : [ "Ashes" ] },
+                { "Key" : "MaxCapacity", "Int" : 1 }
+            ]
+        },
+        {
+            "Component" : "Passability",
+            "Properties" : [
+                { "Key" : "IsPassable", "Bool" : true },
+                { "Key" : "IsWalkable", "Bool" : true },
+                { "Key" : "Difficulty", "Float" : 0.95 }
+            ]
+        },
+        {
+            "Component" : "Constructable",
+            "Properties" : [
+                { "Key" : "WorkAmount", "Int" : 225 },
+                {
+                    "Key" : "Contents",
+                    "RawMaterials" : [
+                        { "TypeId" : "TitaniumPlate", "StackSize" : 1 }
+                    ]
+                }
+            ]
+        }
+    ]
+}

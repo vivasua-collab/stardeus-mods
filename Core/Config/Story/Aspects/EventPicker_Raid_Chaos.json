@@ -1,0 +1,35 @@
+{
+    // C# implementation id.
+    // Multiple configurations can point to a single implementation.
+    "AspectId" : "EventPicker",
+    "Properties" : [
+        // manual event picker will not do anything on tick and will not
+        // try to start scheduled events, because we will handle
+        // the starting in Raid aspect
+        { "Key" : "Manual", "Bool" : true },
+        { "Key" : "Outcome", "String" : "Raid" },
+        {
+            "Key" : "SeenDaysAgoWeightCurve",
+            "String" : "StoryPicker/SeenDaysAgoWeight"
+        },
+        {
+            "Key" : "StartDaysAgoWeightCurve",
+            "String" : "StoryPicker/StartDaysAgoWeight"
+        },
+        {
+            "Key" : "SeenCountWeightCurve",
+            "String" : "StoryPicker/SeenCountWeight"
+        },
+        {
+            // if an event is fired when schedule allows it, cooldown will
+            // not fire any more events for this schedule for given amount of
+            // hours
+            "Key" : "ScheduleCooldownHoursCurve",
+            // random value => hours
+            "FloatSet" : [
+                0.0, 4.0,
+                1.0, 8.0
+            ]
+        }
+    ]
+}

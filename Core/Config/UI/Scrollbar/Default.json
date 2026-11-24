@@ -1,0 +1,16 @@
+{
+    "Id" : "Scrollbar/Default",
+
+    "ChildrenKeys" : [
+        "PanelHandle",
+        "PanelScroll",
+        "Selectable"
+    ],
+
+    "ChildrenIds" : [
+        "Panel/SliderFill",
+        "Panel/Scrollbar",
+        "Selectable/Scrollbar"
+    ]
+
+}

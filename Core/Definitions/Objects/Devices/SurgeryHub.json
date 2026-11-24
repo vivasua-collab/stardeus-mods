@@ -1,0 +1,150 @@
+{
+    "ToolPath" : "Facilities",
+    "Layer" : "Objects",
+    "ParentId" : "Objects/Devices/BaseDevice",
+    "Researchable" : {
+        "Prerequisites" : [
+            "Research/LifeSupport/MedicalCare"
+        ]
+    },
+    "Spawnable" : {
+        "Category": "Medical",
+        "Chance" : 1.0,
+        "ChanceLocked" : 0.5
+    },
+    "Components" : [
+        {
+            "Component" : "TileTransform",
+            "Properties" : [
+                { "Key" : "Width", "Int" : 2 },
+                { "Key" : "Height", "Int" : 2 },
+                { "Key" : "IsRotatable", "Bool" : true },
+                { "Key" : "WorkSpot", "Vector2" : { "x" : 0, "y" : -1 } },
+                { "Key" : "OutPort", "Vector2" : { "x" : 1, "y" : -1 } },
+                { "Key" : "InPort", "Vector2" : { "x" : 1, "y" : -1 } }
+            ]
+        },
+        {
+            "Component" : "IndustrialEquipment",
+            "Properties" : [
+                { "Key" : "IsNoisy", "Bool" : true }
+            ]
+        },
+        {
+            "Component" : "Flammable",
+            "Properties" : [
+                { "Key" : "IgnitionTemperatureCelsius", "Int" : 600 },
+                { "Key" : "FireChance", "Float" : 0.5 },
+                { "Key" : "BaseExplosionLevel", "Int" : 2 },
+                { "Key" : "FlammabilityCurve", "String" : "Device" },
+                { "Key" : "ExplosivenessCurve", "String" : "Device" }
+            ]
+        },
+        {
+            "Component" : "AudioSource",
+            "Properties" : [
+                { "Key" : "AmbienceClip", "String" : "Devices/AssemblerSFX" },
+                { "Key" : "Rolloff", "Vector2" : { "x" : 3, "y" : 15 } },
+                { "Key" : "IsLinkedToEnergy", "Bool" : true }
+            ]
+        },
+        {
+            "Component" : "ElectricNode",
+            "Properties" : [
+                { "Key" : "IsConsumer", "Bool" : true }
+            ]
+        },
+        {
+            "Component" : "WithFuse",
+            "Properties" : [
+                { "Key" : "MalfunctionWeight", "Float": 0.25 }
+            ]
+        },
+        {
+            "Component" : "TileGraphics",
+            "Properties" : [
+                { "Key" : "Type", "String": "Object" },
+                { "Key" : "Graphic", "String": "Objects/Devices/SurgeryHub" },
+                { "Key" : "HasHeight", "Bool" : true }
+            ]
+        },
+        {
+            "Component" : "VFX",
+            "Properties" : [
+                { "Key" : "Id", "String" : "VFXParticlesHeal" },
+                { "Key" : "Offsets", "Vector2Set" : [
+                    { "x" : 0, "y" : 0.6 },
+                    { "x" : 0.3, "y" : 0.5 },
+                    { "x" : 0, "y" : 0.1 },
+                    { "x" : -0.3, "y" : 0.5 }
+                ] }
+            ]
+        },
+        { "Component" : "SafetyCheck" },
+        {
+            "Component" : "OperatableDevice",
+            "Properties" : [
+                { "Key" : "JobType", "String" : "Medical" },
+                { "Key" : "DefaultPriority", "Int" : 4 },
+                { "Key" : "AnimationType", "String" : "Strafe" },
+                { "Key" : "OperatorOffsets", "Vector2Set" : [
+                    { "x" : 0.0, "y" : 0.0 },
+                    { "x" : -0.3, "y" : 0.4 },
+                    { "x" : 0.0, "y" : 0.7 },
+                    { "x" : 0.3, "y" : 0.3 }
+                ] }
+            ]
+        },
+        {
+            "Component" : "BodyModSpot",
+            "Properties" : [
+                { "Key" : "EnergyCost", "Float" : 25.0 },
+                { "Key" : "DefaultPriority", "Int" : 4 },
+                { "Key" : "Type", "String" : "Organic" },
+                { "Key" : "SlotUsePorts", "Bool" : true },
+                { "Key" : "SpotRotation", "String" : "R" },
+                {
+                    "Key" : "SlotOffsets_L",
+                    "Vector2Set" : [ { "x" : 0.3, "y" : 0.3   } ]
+                },
+                {
+                    "Key" : "SlotOffsets_R",
+                    "Vector2Set" : [ { "x" : -0.3, "y" : 0.3 } ]
+                },
+                {
+                    "Key" : "SlotOffsets_D",
+                    "Vector2Set" : [ { "x" : 0.0, "y" : 0.6 } ]
+                },
+                {
+                    "Key" : "SlotOffsets_U",
+                    "Vector2Set" : [ { "x" : 0.0, "y" : 0.1 } ]
+                }
+            ]
+        },
+        {
+            "Component" : "Passability",
+            "Properties" : [
+                { "Key" : "IsPassable", "Bool" : false },
+                { "Key" : "IsWalkable", "Bool" : false },
+                { "Key" : "Difficulty", "Float" : 1 }
+            ]
+        },
+        {
+            "Component" : "Constructable",
+            "Properties" : [
+                { "Key" : "WorkAmount", "Int" : 2400 },
+                { "Key" : "CanDragRow", "Bool" : true },
+                {
+                    "Key" : "Contents",
+                    "RawMaterials" : [
+                        { "TypeId" : "TitaniumPlate", "StackSize" : 6 },
+                        { "TypeId" : "Glass", "StackSize" : 1 },
+                        { "TypeId" : "OpticalFiber", "StackSize" : 2 },
+                        { "TypeId" : "Microchip2", "StackSize" : 2 },
+                        { "TypeId" : "GoldWire", "StackSize" : 1 }
+                    ]
+                }
+            ]
+        }
+    ]
+}

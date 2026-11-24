@@ -1,0 +1,14 @@
+{
+    "Id" : "Obj/Materials/StemCells",
+    "Type" : "CFD",
+    // Organic only, no sector gate: before Genetic Engineering unlocks the Cloning Pod,
+    // traders are the only steady stem cell source for Biotic Datoids. BodyPart would hide
+    // them until Assembly Hub research, BlackMarket until Black Market research.
+    "Groups" : [ "Organic" ],
+    "Value" : 50.0,
+    "Rarity" : 0.25,
+    // A few per trader, so buying helps the biotic chain without replacing it
+    "TraderQuantity" : 2.5,
+    "MaxTraderQuantity" : 15,
+    "Volatility" : 0.00125
+}

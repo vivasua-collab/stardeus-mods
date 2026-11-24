@@ -1,0 +1,5 @@
+{
+    // C# implementation id.
+    // Multiple configurations can point to a single implementation.
+    "AspectId" : "EventHook"
+}

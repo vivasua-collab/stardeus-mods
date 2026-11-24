@@ -1,0 +1,9 @@
+{
+    "Id" : "Panel/SliderFillResearch",
+
+    "Color" : "UI/Scroll/Normal",
+
+    "Image" : "UI/Panels/SliderFill",
+    "ImageType" : "Tiled",
+    "ImageBorderLBRT" : [ 8, 8, 8, 8 ]
+}

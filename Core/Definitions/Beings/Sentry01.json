@@ -1,0 +1,40 @@
+{
+    "Layer" : "FreeEntities",
+    "ParentId" : "Beings/BaseBeing",
+    "PreviewIcon" : "Icons/Color/PreviewSentry01",
+    "Researchable" : {
+        "Prerequisites" : [ "Research/Robotics/Sentry" ]
+    },
+    "Components" : [
+        {
+            "Component" : "LightSource",
+            "Properties" : [
+                { "Key" : "Radius", "Float" : 7 },
+                { "Key" : "Color", "IntSet" : [ 221, 34, 34, 80 ] },
+                { "Key" : "PulsateColor", "IntSet" : [ 234, 123, 123, 96 ] },
+                { "Key" : "FrequencyRange", "Vector2" : { "x" : 1, "y" : 5 } },
+                { "Key" : "NeedsEnergy", "Bool" : false }
+            ]
+        },
+        {
+            "Component" : "MobilizerVisual",
+            "Properties" : [
+                { "Key" : "IsDefaultGrounded", "Bool" : false }
+            ]
+        },
+        { "Component" : "BotDockable" },
+        {
+            "Component" : "Disposable",
+            "Properties" : [
+                { "Key" : "IsBiological", "Bool" : false }
+            ]
+        },
+        {
+            "Component" : "ParticleTrail",
+            "Properties" : [
+                { "Key" : "Particles", "String" : "DroneTrailFX" },
+                { "Key" : "ParticlesOffset", "Vector2" : { "x" : 0, "y" : 0.35 } }
+            ]
+        }
+    ]
+}

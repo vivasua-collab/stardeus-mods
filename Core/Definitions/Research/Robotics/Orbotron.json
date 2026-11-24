@@ -1,0 +1,31 @@
+{
+    "Id" : "Research/Robotics/Orbotron",
+    "Tier" : 5,
+    "IsAbstract" : true,
+    "PreviewIcon" : "Icons/Color/PreviewOrbotron01",
+    "NameKey" : "beings.orbotron01",
+    "Researchable" : {
+        "IsTreeNode" : true,
+        "Prerequisites" : [
+            "Research/Robotics/Sentry"
+        ],
+        "DatoidCosts" : [
+            {
+                "TypeId" : "DatoidTechHigh",
+                "StackSize" : 11
+            },
+            {
+                "TypeId" : "DatoidNuclear",
+                "StackSize" : 17
+            },
+            {
+                "TypeId" : "DatoidAlien",
+                "StackSize" : 22
+            },
+            {
+                "TypeId" : "DatoidQuantum",
+                "StackSize" : 5
+            }
+        ]
+    }
+}

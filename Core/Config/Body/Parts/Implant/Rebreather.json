@@ -1,0 +1,22 @@
+{
+    "SlotTypeId" : "Implant",
+    "Compatibility" : "Biological",
+    "ResistanceBase" : 8.0,
+    "Tier" : 2,
+    "AddsStatModifiers" : [
+        {
+            "Component" : "O2Min",
+            "Properties" : [
+                { "Key" : "Value", "Float" : 0.0 },
+                { "Key" : "Type", "String" : "Sets" }
+            ]
+        },
+        {
+            "Component" : "O2",
+            "Properties" : [
+                { "Key" : "Value", "Float" : 0.21 },
+                { "Key" : "Type", "String" : "Sets" }
+            ]
+        }
+    ]
+}

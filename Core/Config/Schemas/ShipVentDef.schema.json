@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Stardeus ShipVentDef",
+  "description": "Generated from C# by Game/Generate JSON Schemas, do not edit by hand",
+  "$ref": "#/$defs/ShipVentDef",
+  "$defs": {
+    "ShipVentDef": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "Id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "IdH": {
+          "type": "integer"
+        },
+        "DeviceId": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "VentBonus": {
+          "type": "number"
+        }
+      },
+      "additionalProperties": false
+    }
+  }
+}

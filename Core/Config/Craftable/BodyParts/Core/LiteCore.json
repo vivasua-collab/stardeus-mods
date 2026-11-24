@@ -1,0 +1,14 @@
+{
+    "Type" : "RoboticsManual",
+    "ProductDefId" : "Obj/Parts/Core/LiteCore",
+    "ProductionTimeHours" : 336,
+    "EnergyCost" : 60,
+    "IgnoreMarket" : true,
+    "Ingredients" : [
+        { "TypeId" : "CarbonFiber", "StackSize" : 3 },
+        { "TypeId" : "SilverIngot", "StackSize" : 2 },
+        { "TypeId" : "Transistor", "StackSize" : 10 },
+        { "TypeId" : "Microchip2", "StackSize" : 5 },
+        { "TypeId" : "SiliconWafer", "StackSize" : 8 }
+    ]
+}

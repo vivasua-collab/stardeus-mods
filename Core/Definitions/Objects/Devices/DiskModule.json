@@ -1,0 +1,69 @@
+{
+    "ToolPath" : "Computing",
+    "Layer" : "Objects",
+    "ParentId" : "Objects/Devices/DiskModuleMini",
+    "TranslationVars" : [ "24" ],
+    "Researchable" : {
+        "Prerequisites" : [
+            "Research/Computing/DiskImproved"
+        ]
+    },
+    "Spawnable" : {
+        "Category": "Computing",
+        "Chance" : 1.0,
+        "ChanceLocked" : 0.5
+    },
+    "Components" : [
+        {
+            "Component" : "TileTransform",
+            "Properties" : [
+                { "Key" : "IsRotatable", "Bool" : true },
+                { "Key" : "CoverPercent", "Int" : 100 }
+            ]
+        },
+        {
+            "Component" : "DiskModule",
+            "Properties" : [
+                { "Key" : "Amount",  "Int" : 24 },
+                { "Key" : "EnergyCost", "Float" : 1 }
+            ]
+        },
+        {
+            "Component" : "ElectricNode",
+            "Properties" : [
+                { "Key" : "Particles_D", "String" : "ServerLargeFX" },
+                { "Key" : "Particles_U", "String" : "ServerLargeFX" },
+                { "Key" : "IsConsumer", "Bool" : true }
+            ]
+        },
+        {
+            "Component" : "WithFuse",
+            "Properties" : [
+                { "Key" : "MalfunctionWeight", "Float": 0.05 }
+            ]
+        },
+        {
+            "Component" : "TileGraphics",
+            "Properties" : [
+                { "Key" : "Type", "String": "Object" },
+                { "Key" : "Graphic", "String": "Objects/Devices/DiskModule" },
+                { "Key" : "HasHeight", "Bool" : true }
+            ]
+        },
+        {
+            "Component" : "Constructable",
+            "Properties" : [
+                { "Key" : "WorkAmount", "Int" : 1600 },
+                {
+                    "Key" : "Contents",
+                    "RawMaterials" : [
+                        { "TypeId" : "Microchip2", "StackSize" : 1 },
+                        { "TypeId" : "CopperWire", "StackSize" : 5 },
+                        { "TypeId" : "OpticalFiber", "StackSize" : 2 },
+                        { "TypeId" : "TitaniumPlate", "StackSize" : 3 }
+                    ]
+                }
+            ]
+        }
+    ]
+}

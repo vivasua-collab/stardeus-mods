@@ -1,0 +1,59 @@
+{
+    "Id" : "CleaningBot",
+    "StartingSkillCurves" : [
+        {
+            // Bots start near the neutral level 5 in combat, combat bots above it
+            "Jobs" : [ "Melee", "Shooting" ],
+            "LevelCurve" : [
+                0.0, 4.0,
+                0.5, 4.0,
+                0.51, 5.0,
+                1.0, 5.0
+            ]
+        },
+        {
+            "Jobs" : [ "Cleaning" ],
+            "LevelCurve" : [
+                0.0, 3.0,
+                0.3, 3.0,
+                0.31, 4.0,
+                0.9, 4.0,
+                0.91, 5.0,
+                1.0, 5.0
+            ]
+        },
+        {
+            "Jobs" : [ "Social" ],
+            "LevelCurve" : [
+                0.0, 0.0,
+                1.0, 0.0
+            ]
+        },
+        {
+            "LevelCurve" : [
+                0.0, 0.0,
+                0.3, 0.0,
+                0.31, 1.0,
+                0.9, 1.0,
+                0.91, 2.0,
+                1.0, 2.0
+            ]
+        }
+    ],
+    "AgeSkillCurves" : [
+        {
+            "LevelCurve" : [
+                0.0, 0.0,
+                1.0, 0.3
+            ]
+        }
+    ],
+    "StartingJobs" : [
+        { "Job" : "Cleaning" },
+        { "Job" : "Firefighting" },
+        { "Job" : "Melee" },
+        { "Job" : "Shooting" },
+        { "Job" : "Social" },
+        { "Job" : "Task" }
+    ]
+}

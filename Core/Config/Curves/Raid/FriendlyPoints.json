@@ -1,0 +1,20 @@
+{
+    // Threat wealth (millions) -> raid strength points per effective friendly
+    // (Situation.ThreatWeight, see RaidThreatWeight). Headcount still multiplies the colony's
+    // stage (Popular colony sim's PointsPerColonistByWealth shape), but deliberately much flatter
+    // than that game's 13x: at the previous 1.0 -> 5.0 a day-791 ship with 45 worker bots got
+    // three quarters of its raid points from headcount, so building bots (not wealth) was
+    // what escalated raids - the arm-your-colony feedback loop in disguise. Now 0.68 -> 1.7
+    // (0.8 -> 2.0 before both point curves were scaled by 0.85, see WealthPoints.json), which
+    // keeps WealthPoints the larger term from ~3M on. See WealthPoints.json for the
+    // anchors and RaidScaling.md, "Calibration".
+    "FloatSet" : [
+        0.0,    0.68,
+        2.0,    0.85,
+        10.0,   1.02,
+        30.0,   1.19,
+        100.0,  1.36,
+        300.0,  1.53,
+        1000.0, 1.7
+    ]
+}

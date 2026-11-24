@@ -1,0 +1,8 @@
+{
+    "Id" : "BlackMarket",
+    "RecessionEffect" : 1.0,
+    "Rarity" : 1.0,
+    "TraderQuantity" : 3.0,
+    "MaxTraderQuantity" : 10,
+    "Volatility" : 0.0015
+}

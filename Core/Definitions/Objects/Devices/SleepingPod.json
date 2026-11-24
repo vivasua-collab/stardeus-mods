@@ -1,0 +1,155 @@
+{
+    "ToolPath" : "Furniture",
+    "Layer" : "Objects",
+    "ParentId" : "Objects/Devices/BaseDevice",
+    "Researchable" : {
+        "Prerequisites" : [
+            "Research/Habitation/FurnitureImproved"
+        ]
+    },
+    "Spawnable" : {
+        "Category": "Comfort",
+        "Chance" : 1.0,
+        "ChanceLocked" : 0.5
+    },
+    "Components" : [
+        {
+            "Component" : "TileTransform",
+            "Properties" : [
+                { "Key" : "Width", "Int" : 2 },
+                { "Key" : "Height", "Int" : 1 },
+                { "Key" : "IsRotatable", "Bool" : true },
+                { "Key" : "CoverPercent", "Int" : 75 },
+                // { "Key" : "WorkSpot", "Vector2" : { "x" : 0, "y" : -1 } },
+                { "Key" : "OutPort", "Vector2" : { "x" : 0, "y" : -1 } },
+                { "Key" : "InPort", "Vector2" : { "x" : 0, "y" : -1 } }
+            ]
+        },
+        {
+            "Component" : "Flammable",
+            "Properties" : [
+                { "Key" : "IgnitionTemperatureCelsius", "Int" : 300 },
+                { "Key" : "FireChance", "Float" : 0.5 }
+            ]
+        },
+        {
+            "Component" : "TileGraphics",
+            "Properties" : [
+                { "Key" : "Type", "String": "Object" },
+                { "Key" : "Graphic", "String": "Objects/Devices/SleepingPod" },
+                { "Key" : "HasHeight", "Bool" : true }
+            ]
+        },
+        {
+            "Component" : "Bed",
+            "Properties" : [
+                { "Key" : "Slots", "Int" : 2 },
+                { "Key" : "SlotUsePorts", "Bool" : true },
+                { "Key" : "HideBeing", "Bool" : true },
+                { "Key" : "SlotFlags_0", "StringSet" : [ "Humanoid" ] },
+                { "Key" : "SlotFlags_1", "StringSet" : [ "Animal", "Pet"] },
+                { "Key" : "SlotNameKey_0", "String" : "bed.slot.main" },
+                { "Key" : "SlotNameKey_1", "String" : "bed.slot.pet" },
+                { "Key" : "SlotHidesBody_0", "Bool" : false },
+                { "Key" : "SlotHidesBody_1", "Bool" : false },
+                {
+                    "Key" : "SlotOffset_L_0",
+                    "Vector2" : { "x" : 0.0, "y" : -0.05 }
+                },
+                {
+                    "Key" : "SlotOffset_R_0",
+                    "Vector2" : { "x" : 0.0, "y" : -0.05 }
+                },
+                {
+                    "Key" : "SlotOffset_D_0",
+                    "Vector2" : { "x" : 0.0, "y" : -0.05 }
+                },
+                {
+                    "Key" : "SlotOffset_U_0",
+                    "Vector2" : { "x" : 0.0, "y" : -0.05 }
+                },
+                {
+                    "Key" : "SlotOffset_L_1",
+                    "Vector2" : { "x" : 0.0, "y" : 0.05 }
+                },
+                {
+                    "Key" : "SlotOffset_R_1",
+                    "Vector2" : { "x" : 0.0, "y" : 0.05 }
+                },
+                {
+                    "Key" : "SlotOffset_D_1",
+                    "Vector2" : { "x" : 0.0, "y" : 0.05 }
+                },
+                {
+                    "Key" : "SlotOffset_U_1",
+                    "Vector2" : { "x" : 0.0, "y" : 0.05 }
+                },
+                { "Key" : "ShowOwnerNames", "Bool" : true },
+                { "Key" : "ShowPetNames", "Bool" : true },
+                { "Key" : "OwnerNameFontSize", "Float" : 1.25 },
+                {
+                    "Key" : "SlotNameOffset_D_0",
+                    "Vector2" : { "x" : 0, "y" : -0.4 }
+                },
+                {
+                    "Key" : "SlotNameOffset_R_0",
+                    "Vector2" : { "x" : 0.6, "y" : 0 }
+                },
+                {
+                    "Key" : "SlotNameOffset_U_0",
+                    "Vector2" : { "x" : 0, "y" : -0.4 }
+                },
+                {
+                    "Key" : "SlotNameOffset_L_0",
+                    "Vector2" : { "x" : -0.6, "y" : 0 }
+                },
+                {
+                    "Key" : "SlotNameOffset_D_1",
+                    "Vector2" : { "x" : 0.9, "y" : 0 }
+                },
+                {
+                    "Key" : "SlotNameOffset_R_1",
+                    "Vector2" : { "x" : 0, "y" : -0.9 }
+                },
+                {
+                    "Key" : "SlotNameOffset_U_1",
+                    "Vector2" : { "x" : -0.9, "y" : 0 }
+                },
+                {
+                    "Key" : "SlotNameOffset_L_1",
+                    "Vector2" : { "x" : 0, "y" : -0.9 }
+                },
+                { "Key" : "SlotNameRotation_D_0", "Float" : 0 },
+                { "Key" : "SlotNameRotation_R_0", "Float" : -90 },
+                { "Key" : "SlotNameRotation_U_0", "Float" : 0 },
+                { "Key" : "SlotNameRotation_L_0", "Float" : 90 },
+                { "Key" : "SlotNameRotation_D_1", "Float" : -90 },
+                { "Key" : "SlotNameRotation_R_1", "Float" : 0 },
+                { "Key" : "SlotNameRotation_U_1", "Float" : 90 },
+                { "Key" : "SlotNameRotation_L_1", "Float" : 0 }
+            ]
+        },
+        {
+            "Component" : "Passability",
+            "Properties" : [
+                { "Key" : "IsPassable", "Bool" : false },
+                { "Key" : "IsWalkable", "Bool" : false },
+                { "Key" : "Difficulty", "Float" : 1 }
+            ]
+        },
+        {
+            "Component" : "Constructable",
+            "Properties" : [
+                { "Key" : "WorkAmount", "Int" : 1400 },
+                {
+                    "Key" : "Contents",
+                    "RawMaterials" : [
+                        { "TypeId" : "SteelPlate", "StackSize" : 1 },
+                        { "TypeId" : "Plastic", "StackSize" : 1 },
+                        { "TypeId" : "Glass", "StackSize" : 1 }
+                    ]
+                }
+            ]
+        }
+    ]
+}

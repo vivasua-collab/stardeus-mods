@@ -1,0 +1,8 @@
+{
+    "Id" : "Region",
+    "Probability" : 1.0,
+    "FixedStarmapSize" : 0.4,
+    "KeepUprightInStarfield" : true,
+    "IsConstantSizeInStarmap" : true,
+    "Sprite" : "Icons/White/Starmap"
+}

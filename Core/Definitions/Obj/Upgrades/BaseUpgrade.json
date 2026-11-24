@@ -1,0 +1,49 @@
+{
+    "IsAbstract" : true,
+    "Layer" : "FreeEntities",
+    "ParentId" : "Obj/BaseObj",
+    "Spawnable" : {
+        "TierDiff" : -1,
+        "Chance" : 1.0,
+        "ChanceLocked" : 0.5
+    },
+    "Components" : [
+        {
+            "Component" : "ObjHealth",
+            "Properties" : [
+                { "Key" : "IsInvincible", "Bool" : true }
+            ]
+        },
+        {
+            "Component" : "Flammable",
+            "Properties" : [
+                { "Key" : "IsTemperatureResistant", "Bool" : false }
+            ]
+        },
+        {
+            "Component" : "UnstoredMat",
+            "Properties" : [
+                { "Key" : "FixedSize", "Bool" : true }
+            ]
+        },
+        {
+            "Component" : "ObjGraphics",
+            "Properties" : [
+                { "Key" : "Shader", "String" : "ObjFlat" },
+                { "Key" : "Scale", "Float": 0.5 }
+            ]
+        },
+        { "Component" : "InstallableUpgrade" },
+        { "Component" : "ExtraInfo" },
+        {
+            "Component" : "LightSource",
+            "Properties" : [
+                { "Key" : "NeedsEnergy", "Bool" : false },
+                { "Key" : "Color", "IntSet" : [ 191, 64, 140, 196 ] },
+                { "Key" : "PulsateColor", "IntSet" : [ 191, 64, 140, 128 ] },
+                { "Key" : "FrequencyRange", "Vector2" : { "x" : 1, "y" : 5 } },
+                { "Key" : "Radius", "Float" : 3 }
+            ]
+        }
+     ]
+}

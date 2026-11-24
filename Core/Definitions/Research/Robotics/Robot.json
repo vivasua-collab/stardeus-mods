@@ -1,0 +1,27 @@
+{
+    "Id" : "Research/Robotics/Robot",
+    "Tier" : 3,
+    "IsAbstract" : true,
+    "PreviewIcon" : "Icons/Color/PreviewRobot01",
+    "NameKey" : "beings.robot01",
+    "Researchable" : {
+        "IsTreeNode" : true,
+        "Prerequisites" : [
+            "Research/Robotics/PartsImproved"
+        ],
+        "DatoidCosts" : [
+            {
+                "TypeId" : "DatoidSynthetic",
+                "StackSize" : 7
+            },
+            {
+                "TypeId" : "DatoidEnergy",
+                "StackSize" : 5
+            },
+            {
+                "TypeId" : "DatoidTechHigh",
+                "StackSize" : 9
+            }
+        ]
+    }
+}

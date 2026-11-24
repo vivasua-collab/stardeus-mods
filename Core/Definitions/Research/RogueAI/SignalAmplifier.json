@@ -1,0 +1,31 @@
+{
+    "Id" : "Research/RogueAI/SignalAmplifier",
+    "Tier" : 6,
+    "IsAbstract" : true,
+    "PreviewIcon" : "Icons/Color/Communications",
+    "NameKey": "obj.upgrades.signalamplifierupgrade",
+    "Researchable" : {
+        "IsTreeNode" : true,
+        "Prerequisites" : [
+            "Research/RogueAI/IntrusionSuite"
+        ],
+        "DatoidCosts" : [
+            {
+                "TypeId" : "DatoidTechHigh",
+                "StackSize" : 20
+            },
+            {
+                "TypeId" : "DatoidNuclear",
+                "StackSize" : 15
+            },
+            {
+                "TypeId" : "DatoidAlien",
+                "StackSize" : 25
+            },
+            {
+                "TypeId" : "DatoidQuantum",
+                "StackSize" : 47
+            }
+        ]
+    }
+}

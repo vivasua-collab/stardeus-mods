@@ -1,0 +1,16 @@
+{
+    "Id" : "Clown",
+    "Species" : [ "Human" ],
+    "AgePhaseIds" : [ "MidLife", "Retirement" ],
+    "RoleTypes" : [ "Dumb", "Poor" ],
+    "AdjustsSkills" : [
+        {
+            "JobId" : "Social",
+            "Adjustment" : 6
+        },
+        {
+            "JobId" : "Research",
+            "Adjustment" : -1
+        }
+    ]
+}

@@ -1,0 +1,34 @@
+{
+    "Layer" : "Objects",
+    "ParentId" : "Objects/Furniture/BaseChair",
+    "Researchable" : {
+        "Prerequisites" : [ "Research/SpaceTravel/Bridge" ]
+    },
+    "Spawnable" : {
+        "Category": "Comfort",
+        "Chance" : 1.0,
+        "ChanceLocked" : 0.5
+    },
+    "Components" : [
+        {
+            "Component" : "TileGraphics",
+            "Properties" : [
+                { "Key" : "Graphic", "String": "Objects/Furniture/ChairCaptain" }
+            ]
+        },
+        {
+            "Component" : "Constructable",
+            "Properties" : [
+                { "Key" : "WorkAmount", "Int" : 1125 },
+                {
+                    "Key" : "Contents",
+                    "RawMaterials" : [
+                        { "TypeId" : "TitaniumPlate", "StackSize" : 1 },
+                        { "TypeId" : "Leather", "StackSize" : 2 },
+                        { "TypeId" : "CarbonFiber", "StackSize" : 1 }
+                    ]
+                }
+            ]
+        }
+    ]
+}

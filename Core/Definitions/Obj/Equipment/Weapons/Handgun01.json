@@ -1,0 +1,23 @@
+{
+    "Layer" : "FreeEntities",
+    "ParentId" : "Obj/Equipment/BaseEquipment",
+    "Researchable" : {
+        "Prerequisites" : [ "Research/Security/Firearms" ]
+    },
+    "Components" : [
+        {
+            "Component" : "ObjGraphics",
+            "Properties" : [
+                { "Key" : "Graphic", "String" : "Obj/Weapons/Handgun01/Handgun01" },
+                { "Key" : "Scale", "Float" : 0.4 },
+                { "Key" : "SelectableScale", "Float": 0.5 }
+            ]
+        },
+        {
+            "Component" : "StorableObj",
+            "Properties" : [
+                { "Key" : "Group", "String" : "Weapon" }
+            ]
+        }
+    ]
+}

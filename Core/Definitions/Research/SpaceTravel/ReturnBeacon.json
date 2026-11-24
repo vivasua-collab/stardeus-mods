@@ -1,0 +1,23 @@
+{
+    "Id" : "Research/SpaceTravel/ReturnBeacon",
+    "Tier" : 2,
+    "IsAbstract" : true,
+    "PreviewIcon" : "SpaceObjects/Misc/ReturnBeacon01",
+    "NameKey" : "noun.return.beacon",
+    "Researchable" : {
+        "IsTreeNode" : true,
+        "Prerequisites" : [
+            "Research/SpaceTravel/PropulsionFusion"
+        ],
+        "DatoidCosts" : [
+            {
+                "TypeId" : "DatoidTech",
+                "StackSize" : 12
+            },
+            {
+                "TypeId" : "DatoidEnergy",
+                "StackSize" : 4
+            }
+        ]
+    }
+}

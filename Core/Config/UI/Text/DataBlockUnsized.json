@@ -1,0 +1,9 @@
+{
+    "Id" : "Text/DataBlockUnsized",
+
+    "Color" : "UI/Text/Main",
+    "Alpha" : 1,
+
+    "TextSkipAutoScale" : true,
+    "TextOverflowMode" : "Ellipsis"
+}

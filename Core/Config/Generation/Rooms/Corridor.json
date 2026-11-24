@@ -1,0 +1,20 @@
+{
+    "Type" : "Corridor",
+    "SizeMin" : 1,
+    "SizeMax" : 800,
+    "CountMin" : 20,
+    "CountMax" : 20,
+    "Chance" : 0,
+    "FillMin" : 0.05,
+    "FillMax" : 0.2,
+    "CompatibleObjects" : [
+        "Objects/Furniture/ChairWood",
+        "Objects/Furniture/ChairSteel",
+        "Objects/Devices/EnergyConnector",
+        "Objects/Devices/Heater",
+        "Objects/Devices/OxygenPump"
+    ],
+    "CompatibleTemplates" : [
+        "Templates/Hygiene01"
+    ]
+}

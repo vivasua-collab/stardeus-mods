@@ -1,0 +1,13 @@
+{
+    "Floats" : [
+        { "Key" : "MiningDifficultyIncrease", "Float" : 0.2 },
+        { "Key" : "ExpeditionMiningSpeed", "Float" : 0.5 },
+        { "Key" : "RemoteDrillSpeed", "Float" : 0.4 },
+        { "Key" : "AutoMiningSpeed", "Float" : 1.0 },
+        { "Key" : "MiningLevelUpRate", "Float" : 2.0 },
+        { "Key" : "MiningDepthIncreaseRate", "Float" : 0.01 },
+        { "Key" : "AutoMiningDifficultyIncrease", "Float" : 0.02 },
+        { "Key" : "RemoteMiningDepthIncreaseRate", "Float" : 0.001 },
+        { "Key" : "RemoteMiningDifficultyIncrease", "Float" : 0.2 }
+    ]
+}

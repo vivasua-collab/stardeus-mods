@@ -1,0 +1,8 @@
+{
+    "Id" : "Glass",
+    "IsComposite" : true,
+    "IconId" : "Obj/Materials/Glass",
+    "GroupId" : "Components",
+    "EnergyOutput" : 41.0,
+    "Rarity" : 150
+}

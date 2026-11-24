@@ -1,0 +1,12 @@
+{
+    "Id" : "SnakeCartridgeUpgrade",
+    "DefId" : "Obj/Upgrades/SnakeCartridgeUpgrade",
+    "IsComposite" : true,
+    "IsConsumedOnDestroy" : true,
+    "IconId" : "Obj/Upgrades/GameCartridgeUpgrade",
+    "Property" : "Electronic",
+    "Group" : "Upgrade",
+    "GroupId" : "Upgrades",
+    "InternalValue" : 10000,
+    "Rarity" : 1
+}

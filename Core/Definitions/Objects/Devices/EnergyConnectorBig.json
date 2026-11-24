@@ -1,0 +1,66 @@
+{
+    "ToolPath" : "Energy",
+    "Layer" : "Objects",
+    "ParentId" : "Objects/Devices/EnergyConnector",
+    "UseParentTexts" : true,
+    "Researchable" : {
+        "Prerequisites" : [ "Research/Energy/ConnectorImproved" ]
+    },
+    "TranslationVars" : [ "16", "12" ],
+    "Spawnable" : {
+        "Category": "Connector",
+        "Chance" : 1.0,
+        "ChanceLocked" : 0.5
+    },
+    "Components" : [
+        {
+            "Component" : "TileTransform",
+            "Properties" : [
+                { "Key" : "IsRotatable", "Bool" : false },
+                { "Key" : "CoverPercent", "Int" : 85 }
+            ]
+        },
+        {
+            "Component" : "TileGraphics",
+            "Properties" : [
+                { "Key" : "Graphic", "String": "Objects/Devices/EnergyConnectorBig" }
+            ]
+        },
+        {
+            "Component" : "LightSource",
+            "Properties" : [
+                { "Key" : "Radius", "Float" : 5 },
+                { "Key" : "Color", "IntSet" : [ 102, 143, 204, 128 ] }
+            ]
+        },
+        {
+            "Component" : "ElectricNode",
+            "Properties" : [
+                { "Key" : "MaxConnections", "Int" : 16 },
+                { "Key" : "ConnectorRange", "Int" : 12 }
+            ]
+        },
+        {
+            "Component" : "WithFuse",
+            "Properties" : [
+                { "Key" : "MalfunctionWeight", "Float": 0.3 },
+                // Has special event
+                { "Key" : "CanHaveGenericMalfunction", "Bool": false }
+            ]
+        },
+        {
+            "Component" : "Constructable",
+            "Properties" : [
+                { "Key" : "WorkAmount", "Int" : 500 },
+                { "Key" : "CanReplaceGroup", "String" : "EnergyConnector" },
+                {
+                    "Key" : "Contents",
+                    "RawMaterials" : [
+                        { "TypeId" : "SteelPlate", "StackSize" : 2 },
+                        { "TypeId" : "CopperWire", "StackSize" : 2 }
+                    ]
+                }
+            ]
+        }
+    ]
+}

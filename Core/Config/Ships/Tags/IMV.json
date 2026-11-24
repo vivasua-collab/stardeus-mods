@@ -1,0 +1,19 @@
+// IMV: Industrial Mining Vessel
+{
+    "ChanceWillTrade" : 0.8,
+    "CompatibleFactions" : [
+        "Player",
+        "OldEarth",
+        "Adventurer",
+        "Scavenger",
+        "Capitalist"
+    ],
+    "CompatibleClasses" : [
+        "Frigate",
+        "Corvette",
+        "Cruiser",
+        "Unclassified"
+    ],
+    "MinOffensiveness" : 0.0,
+    "MaxOffensiveness" : 0.7
+}

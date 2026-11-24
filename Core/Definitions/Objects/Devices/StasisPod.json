@@ -1,0 +1,95 @@
+{
+    "ToolPath" : "SpaceTravel",
+    "Layer" : "Objects",
+    "ParentId" : "Objects/Devices/BaseDevice",
+    "SkipToolListing" : true,
+    "Components" : [
+        {
+            "Component" : "TileTransform",
+            "Properties" : [
+                { "Key" : "Width", "Int" : 2 },
+                { "Key" : "Height", "Int" : 2 },
+                // { "Key" : "WorkSpot", "Vector2" : { "x" : 1, "y" : -1} },
+                { "Key" : "InPort", "Vector2" : { "x" : 1, "y" : -1 } },
+                { "Key" : "OutPort", "Vector2" : { "x" : 1, "y" : -1 } },
+                { "Key" : "IsRotatable", "Bool" : true }
+            ]
+        },
+        { "Component" : "StasisPodMerchant" },
+        {
+            "Component" : "Flammable",
+            "Properties" : [
+                { "Key" : "IgnitionTemperatureCelsius", "Int" : 1500 },
+                { "Key" : "FireChance", "Float" : 0.25 },
+                { "Key" : "BaseExplosionLevel", "Int" : 6 },
+                { "Key" : "FlammabilityCurve", "String" : "Device" },
+                { "Key" : "ExplosivenessCurve", "String" : "DeviceHigh" }
+            ]
+        },
+        {
+            "Component" : "IndustrialEquipment",
+            "Properties" : [
+                { "Key" : "IsNoisy", "Bool" : false }
+            ]
+        },
+        {
+            "Component" : "LightSource",
+            "Properties" : [
+                { "Key" : "Radius", "Float" : 5 },
+                { "Key" : "Glow", "Float" : 1 },
+                { "Key" : "NeedsEnergy", "Bool" : false },
+                { "Key" : "Color", "IntSet" : [ 156, 140, 217, 128 ] }
+            ]
+        },
+        { "Component" : "StasisPod" },
+        { "Component" : "OutdoorsCheck" },
+        {
+            "Component" : "MatStorage",
+            "Properties" : [
+                { "Key" : "IsPublic", "Bool" : false },
+                { "Key" : "MaxCapacity", "Int": 100 }
+            ]
+        },
+        {
+            "Component" : "TileGraphics",
+            "Properties" : [
+                { "Key" : "Graphic", "String": "Objects/Devices/StasisPod" },
+                { "Key" : "HasHeight", "Bool" : false }
+            ]
+        },
+        {
+            "Component" : "Passability",
+            "Properties" : [
+                { "Key" : "IsPassable", "Bool" : true },
+                { "Key" : "IsWalkable", "Bool" : true },
+                { "Key" : "Difficulty", "Float" : 0.99 }
+            ]
+        },
+        {
+            "Component" : "Damageable",
+            "Properties" : [
+                { "Key" : "Max", "Int" : 1000 }
+            ]
+        },
+        {
+            "Component" : "Constructable",
+            "Properties" : [
+                { "Key" : "WorkAmount", "Int" : 5000 },
+                { "Key" : "Placement", "String" : "OnFloor" },
+                {
+                    "Key" : "Contents",
+                    "RawMaterials" : [
+                        { "TypeId" : "TitaniumPlate", "StackSize" : 10 },
+                        { "TypeId" : "GoldWire", "StackSize" : 5 },
+                        { "TypeId" : "Plastic", "StackSize" : 10 },
+                        { "TypeId" : "NuclearCell", "StackSize" : 1 },
+                        { "TypeId" : "Microchip2", "StackSize" : 3 },
+                        { "TypeId" : "Gears", "StackSize" : 10 },
+                        { "TypeId" : "Glass", "StackSize" : 3 },
+                        { "TypeId" : "OpticalFiber", "StackSize" : 5 }
+                    ]
+                }
+            ]
+        }
+    ]
+}

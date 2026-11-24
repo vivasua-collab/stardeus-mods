@@ -1,0 +1,10 @@
+{
+    "Id" : "Overlay/TutorialGlow",
+
+    "Color" : "FFF129",
+    "Alpha" : 0.5,
+
+    "Image" : "UI/Buttons/ActiveOverlayTop",
+    "ImageType" : "Sliced",
+    "ImageBorderLBRT" : [ 12, 12, 12, 12 ]
+}

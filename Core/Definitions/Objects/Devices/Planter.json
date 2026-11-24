@@ -1,0 +1,117 @@
+{
+    "ToolPath" : "Food",
+    "Layer" : "Objects",
+    "ParentId" : "Objects/Devices/PlanterMini",
+    "Researchable" : {
+        "Prerequisites" : [
+            "Research/LifeSupport/PlanterImproved"
+        ]
+    },
+    "Spawnable" : {
+        "Category": "Food",
+        "Chance" : 1.0,
+        "ChanceLocked" : 0.5
+    },
+    "Components" : [
+        {
+            "Component" : "TileTransform",
+            "Properties" : [
+                { "Key" : "Width", "Int" : 2 },
+                { "Key" : "Height", "Int" : 2 },
+                { "Key" : "CoverPercent", "Int" : 50 },
+                { "Key" : "OutPort", "Vector2" : { "x" : 0, "y" : -1 } },
+                { "Key" : "InPort", "Vector2" : { "x" : 0, "y" : -1 } }
+            ]
+        },
+        {
+            "Component" : "TileGraphics",
+            "Properties" : [
+                { "Key" : "Graphic", "String": "Objects/Devices/Planter" }
+            ]
+        },
+        {
+            "Component" : "Toilet",
+            "Properties" : [
+                { "Key" : "HideUI", "Bool" : true },
+                { "Key" : "IsMakeshift", "Bool" : true },
+                { "Key" : "IsMultislot", "Bool" : true },
+                { "Key" : "Slots", "Int" : 4 },
+                {
+                    "Key" : "SlotOffsets_L",
+                    "Vector2Set" : [
+                        { "x" : -0.3, "y" : -0.3 },
+                        { "x" : -0.3, "y" : 0.3 },
+                        { "x" : 0.3, "y" : 0.3 },
+                        { "x" : 0.3, "y" : -0.3 }
+                    ]
+                },
+                {
+                    "Key" : "SlotOffsets_R",
+                    "Vector2Set" : [
+                        { "x" : -0.3, "y" : -0.3 },
+                        { "x" : -0.3, "y" : 0.3 },
+                        { "x" : 0.3, "y" : 0.3 },
+                        { "x" : 0.3, "y" : -0.3 }
+                    ]
+                },
+                {
+                    "Key" : "SlotOffsets_D",
+                    "Vector2Set" : [
+                        { "x" : -0.3, "y" : -0.3 },
+                        { "x" : -0.3, "y" : 0.3 },
+                        { "x" : 0.3, "y" : 0.3 },
+                        { "x" : 0.3, "y" : -0.3 }
+                    ]
+                },
+                {
+                    "Key" : "SlotOffsets_U",
+                    "Vector2Set" : [
+                        { "x" : -0.3, "y" : -0.3 },
+                        { "x" : -0.3, "y" : 0.3 },
+                        { "x" : 0.3, "y" : 0.3 },
+                        { "x" : 0.3, "y" : -0.3 }
+                    ]
+                }
+            ]
+        },
+        {
+            "Component" : "Planter",
+            "Properties" : [
+                { "Key" : "PlantSizes", "StringSet" : [ "Small", "Medium", "Large" ] },
+                { "Key" : "SmallPlantCapacity", "Int" : 4 },
+                { "Key" : "MediumPlantCapacity", "Int" : 4 },
+                { "Key" : "LargePlantCapacity", "Int" : 1 },
+                { "Key" : "LargePlantOffsets", "Vector2Set": [
+                    { "x" : 0, "y" : 0.7 }
+                ]},
+                { "Key" : "PlantOffsets", "Vector2Set": [
+                    { "x" : -0.4, "y" : 0.1 },
+                    { "x" : -0.4, "y" : 0.9 },
+                    { "x" : 0.4, "y" : 0.1 },
+                    { "x" : 0.4, "y" : 0.9 }
+                ]}
+            ]
+        },
+        {
+            "Component" : "RefillableStorage",
+            "Properties" : [
+                { "Key" : "MaterialCapacity", "Int" : 8 }
+            ]
+        },
+        {
+            "Component" : "Constructable",
+            "Properties" : [
+                { "Key" : "WorkAmount", "Int" : 1600 },
+                {
+                    "Key" : "Contents",
+                    "RawMaterials" : [
+                        { "TypeId" : "SteelPlate", "StackSize" : 4 },
+                        { "TypeId" : "Glass", "StackSize" : 2 },
+                        { "TypeId" : "Soil", "StackSize" : 8 },
+                        { "TypeId" : "Rubber", "StackSize" : 2 }
+                    ]
+                }
+            ]
+        }
+    ]
+}

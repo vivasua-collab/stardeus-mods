@@ -1,0 +1,25 @@
+{
+    "Layer" : "Objects",
+    "ParentId" : "Objects/Cosmetics/Chess/ChessPawnW",
+    "DescKey" : "objects.cosmetics.chess.piece.desc",
+    "Spawnable" : {
+        "Category" : "Chess",
+        "SkipOwned" : 1,
+        "Chance" : 0.8,
+        "ChanceLocked" : 0.8
+    },
+    "Components" : [
+        {
+            "Component" : "TileGraphics",
+            "Properties" : [
+                { "Key" : "Graphic", "String": "Objects/Cosmetics/Chess/ChessKingW" }
+            ]
+        },
+        {
+            "Component" : "Admirable",
+            "Properties" : [
+                { "Key" : "FunSubject", "String" : "fun.subject.chessking" }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,17 @@
+{
+    "Id": "ShootingSkillAccuracyCurve",
+    // Skill levels remapped after the 2026-10 skill rebase (new = 1.8 + 1.3 x old), so a typical colonist keeps the old result
+    "FloatSet": [
+        1.8, 0.70,
+        3.1, 0.75,
+        4.4, 0.80,
+        5.7, 0.85,
+        7.0, 0.90,
+        8.3, 1.00,
+        9.6, 1.05,
+        14.8, 1.10,
+        34.3, 1.15,
+        66.8, 1.20,
+        255.0, 1.30
+    ]
+}

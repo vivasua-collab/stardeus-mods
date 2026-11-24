@@ -1,0 +1,92 @@
+{
+    "Ints" : [
+        { "Key" : "WreckedEmptyShip_FoodPerSurvivor", "Int" : 10 },
+        { "Key" : "WreckedEmptyShip_FuelInSurvivorArea", "Int" : 20 },
+
+        { "Key" : "WreckedEmptyShip_SteelPlate", "Int" : 400 },
+        { "Key" : "WreckedEmptyShip_ScrapMetal", "Int" : 400 },
+        { "Key" : "WreckedEmptyShip_TitaniumPlate", "Int" : 150 },
+        { "Key" : "WreckedEmptyShip_SiliconWafer", "Int" : 50 },
+        { "Key" : "WreckedEmptyShip_Rock", "Int" : 50 },
+        { "Key" : "WreckedEmptyShip_CopperPlate", "Int" : 50 },
+        { "Key" : "WreckedEmptyShip_Copper", "Int" : 25 }, // for the quest
+        { "Key" : "WreckedEmptyShip_Carbon", "Int" : 50 },
+        { "Key" : "WreckedEmptyShip_Coal", "Int" : 30 },
+        { "Key" : "WreckedEmptyShip_Glass", "Int" : 50 },
+        { "Key" : "WreckedEmptyShip_Soil", "Int" : 100 },
+        { "Key" : "WreckedEmptyShip_Protein", "Int" : 10 },
+        { "Key" : "WreckedEmptyShip_Rubber", "Int" : 50 },
+        { "Key" : "WreckedEmptyShip_Plastic", "Int" : 50 },
+        { "Key" : "WreckedEmptyShip_Transistor", "Int" : 50 },
+        { "Key" : "WreckedEmptyShip_CopperWire", "Int" : 100 },
+        { "Key" : "WreckedEmptyShip_FusionCell", "Int" : 10 },
+        { "Key" : "WreckedEmptyShip_Phasium", "Int" : 10 },
+        { "Key" : "WreckedEmptyShip_GoldWire", "Int" : 10 },
+        // ShieldEmitter (3), BridgeControls and Communicator, all asked for by tutorials.
+        { "Key" : "WreckedEmptyShip_OpticalFiber", "Int" : 10 },
+        { "Key" : "WreckedEmptyShip_Gears", "Int" : 50 },
+        { "Key" : "WreckedEmptyShip_Microchip", "Int" : 10 },
+        { "Key" : "WreckedEmptyShip_Microchip2", "Int" : 2 },
+        { "Key" : "WreckedEmptyShip_Silicon", "Int" : 25 },
+        { "Key" : "WreckedEmptyShip_Lithium", "Int" : 25 },
+        { "Key" : "WreckedEmptyShip_BatteryCell", "Int" : 20 },
+        { "Key" : "WreckedEmptyShip_Water", "Int" : 200 },
+        { "Key" : "WreckedEmptyShip_Wood", "Int" : 20 },
+        // Two Shredder Cannons (5 each) for the combat tutorial, plus the Treadmill.
+        { "Key" : "WreckedEmptyShip_CarbonFiber", "Int" : 15 }
+    ],
+    "StringSets" : [
+        {
+            "Key" : "WreckedEmptyShip_UnlockedResearch",
+            "StringSet" : [
+                // Tutorial/EstablishProduction is the second quest of the game, before the
+                // research tutorial, and its Crafting Station sits behind this node. It is a
+                // basic node, so only a non-default Basic Tech setting would leave it locked -
+                // this keeps the quest doable regardless.
+                "Research/Production/Assembly"
+            ]
+        },
+        {
+            "Key" : "WreckedEmptyShip_Objects",
+            "StringSet" : [
+                "Objects/Devices/PlanterMini",
+                "Objects/Devices/DiskModuleMini",
+                // "Objects/Devices/CraftingStation",
+                "Objects/Devices/FloorSocket",
+                "Templates/TableWithChairs01",
+                "Objects/Furniture/BedSteel"
+            ]
+        },
+        {
+            "Key" : "WreckedEmptyShip_ObjectsInSpace",
+            "StringSet" : [
+                "Objects/Devices/SolarPanel",
+                "Objects/Devices/SolarPanel",
+                "Objects/Devices/SolarPanel",
+                "Objects/Devices/SolarPanel",
+                "Objects/Devices/ParticleCollector"
+            ]
+        },
+        {
+            "Key" : "WreckedEmptyShip_Objs",
+            "StringSet" : [
+                "Obj/Equipment/Clothing/SpaceSuit01",
+                "Obj/Equipment/Clothing/SpaceSuit01",
+                "Obj/Equipment/Hats/SpaceHelmet01",
+                "Obj/Parts/Core/DumbCore",
+                "Obj/Parts/Battery/MiniCell",
+                "Obj/Materials/NuclearCell",
+                "Obj/Misc/ResonanceCharge",
+                "Obj/Upgrades/ReactorEfficiencyUpgrade"
+            ]
+        },
+        {
+            "Key" : "WreckedEmptyShip_StartingWeapons",
+            // Equipped on the starting crew (StartingCrewWeapons), not dropped on the floor
+            "StringSet" : [
+                "Obj/Equipment/Weapons/Handgun01",
+                "Obj/Equipment/Weapons/Knife01"
+            ]
+        }
+    ]
+}

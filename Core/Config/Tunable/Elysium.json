@@ -1,0 +1,8 @@
+{
+    "Floats" : [
+        { "Key" : "ElysiumEnergyPerPerson", "Float" : 40.0 },
+        // How much Protein a single Elysium sleeper renders down into per day
+        // once Biomass Harvesting is researched.
+        { "Key" : "ElysiumBiomassPerPersonPerDay", "Float" : 0.16 }
+    ]
+}

@@ -1,0 +1,9 @@
+{
+    "Id" : "Repairs",
+    "SkillSpeedCurve" : "Skills/SpeedConstruction",
+    "Importance" : 1.5,
+    "IconId" : "Icons/Color/Wrench2",
+    "EnabledByAbilities" : [ "Build", "SkilledLabor" ],
+    "Types" : [ "Physical", "NanobotCompatible" ],
+    "WorkSpeedStat" : "ManualWorkSpeed"
+}

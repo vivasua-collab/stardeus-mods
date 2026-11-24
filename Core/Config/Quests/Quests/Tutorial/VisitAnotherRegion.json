@@ -1,0 +1,54 @@
+{
+    "QuestFlags" : [ "Tutorial", "AutoAdd", "Unique" ],
+    "TitleKey" : "quest.VisitAnotherRegion",
+    "DescKey" : "quest.VisitAnotherRegion.desc",
+    "QuestProviders" : [
+        "ShipComputer"
+    ],
+    "Require" : {
+        "Days" : 10
+    },
+    "AvailableWhen" : [
+        "ReadyForTutorialQuests",
+        "HasHyperjumped"
+    ],
+    "SetOnComplete" : [ "HasChangedRegion" ],
+    "SetOnFail" : [ "HasChangedRegion" ],
+    "Steps" : [
+        {
+            "Id": "ReachRelay",
+            "Type" : "ReachSOType",
+            "StepFlags" : [ "ActiveOnStart" ],
+            "Config" : [
+                { "Key" : "SOType", "String" : "HyperjumpRelay" }
+            ],
+            "SetOnComplete" : [
+                "ReachedRelay"
+            ]
+        },
+        {
+            "Id": "UseRelay",
+            "Type" : "UseHyperjumpRelay",
+            "Config" : [
+                { "Key" : "SOType", "String" : "HyperjumpRelay" }
+            ],
+            "ActivateWhen": [
+                "ReachedRelay"
+            ],
+            "SetOnComplete" : [
+                "UsedRelay"
+            ]
+        },
+        {
+            "Id": "MoveInHyperspace",
+            "Type" : "MoveInHyperspace",
+            "StepFlags": [ "CompletesQuest" ],
+            "ActivateWhen": [
+                "UsedRelay"
+            ],
+            "Config" : [
+                { "Key" : "StarmapLayer", "String" : "Universe" }
+            ]
+        }
+    ]
+}

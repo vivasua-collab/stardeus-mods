@@ -1,0 +1,26 @@
+{
+    "Id" : "Shuttle",
+    "Icon" : "Objects/Devices/ShuttleFlying_D",
+    "ParentIds" : [
+        "Universe", "System", "Galaxy", "Planet", "Space"
+    ],
+    "IsDynamic" : true,
+    "CanMoveInStarmap" : true,
+    "SpawnChance" : 0.0,
+    "CanBeOwned" : true,
+    "IsInteractive" : true,
+    "StarfieldSortOrder" : 3,
+    "NameChanceWeights" : [ 0.5, 0.5 ],
+    "NameParts" : [
+        {
+            "Type" : "ShuttleName",
+            "Paths" : [ "Space/Object/Name" ],
+            "Chances" : [ 1.0, 0.0 ]
+        },
+        {
+            "Type" : "ShuttleName",
+            "Paths" : [ "Space/Object/Name" ],
+            "Chances" : [ 0.0, 1.0 ]
+        }
+    ]
+}

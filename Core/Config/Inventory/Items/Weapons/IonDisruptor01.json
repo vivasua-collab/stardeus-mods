@@ -1,0 +1,69 @@
+{
+    "DefId" : "Obj/Equipment/Weapons/IonDisruptor01",
+    "SlotId" : "Weapon",
+    // illegal for robots, unless their faction is above the law (RobotWeaponLaw)
+    "RequiresBodyFlags" : [ "Humanoid" ],
+    "SpriteId" : "Obj/Weapons/IonDisruptor01/IonDisruptor01",
+    "Rarity" : 0.2,
+    "SpawnRequirements" : {
+        "Days" : 300,
+        "Friendlies" : 14,
+        "SectorDifficulty" : 0.9
+    },
+    "LooksShowFlags" : [
+        "Combat"
+    ],
+    "AddsAttackMethods" : [
+        {
+            "Component" : "Shoot",
+            "Properties" : [
+                { "Key" : "AttackAction", "String" : "Ranged" },
+                { "Key" : "RangeMin", "Float" : 1.5 },
+                { "Key" : "RangeMax", "Float" : 15.0 },
+                // less raw damage than a Vibroblade, but from 10 tiles away
+                { "Key" : "DPS", "Float" : 7.2 },
+                { "Key" : "AttackType", "String" : "Energy" },
+                { "Key" : "ChargeSec", "Float" : 6.0 },
+                { "Key" : "CooldownSec", "Float" : 4.0 },
+                { "Key" : "MoveSpeedMul", "Float" : 0.15 },
+                { "Key" : "StunChanceBio", "Float" : 0.3 },
+                { "Key" : "StunChanceRobo", "Float" : 0.6 },
+                // the ion burst fries circuits: extra damage to robotic bodies
+                { "Key" : "RoboticDamageMul", "Float" : 1.5 },
+                { "Key" : "BleedChance", "Float" : 0.2 },
+                { "Key" : "ArmorPenetration", "Float" : 0.2 },
+                { "Key" : "AccuracyMax", "Float" : 0.8 },
+                { "Key" : "AttackVFX", "String" : "AttackEnergyRedVFX" },
+                { "Key" : "FatalHitChanceMul", "Float" : 1.0 },
+                { "Key" : "InternalHitChanceMul", "Float" : 1.0 },
+                { "Key" : "AttackSounds", "StringSet" : [
+                    "FX/EnergyShot_01",
+                    "FX/EnergyShot_02",
+                    "FX/EnergyShot_03",
+                    "FX/EnergyShot_04",
+                    "FX/EnergyShot_05",
+                    "FX/EnergyShot_06"
+                ] },
+                { "Key" : "AccuracyCurve", "FloatSet" : [
+                    0.0, 0.25,
+                    0.5, 1.0,
+                    1.0, 0.5
+                ] }
+            ]
+        },
+        {
+            "Component" : "ButtStrike",
+            "Properties" : [
+                { "Key" : "AttackAction", "String" : "Melee" },
+                { "Key" : "DPS", "Float" : 2.31 },
+                { "Key" : "AttackType", "String" : "Blunt" },
+                { "Key" : "ChargeSec", "Float" : 3.0 },
+                { "Key" : "CooldownSec", "Float" : 3.0 },
+                { "Key" : "MoveSpeedMul", "Float" : 0.05 },
+                { "Key" : "StunChanceBio", "Float" : 1.00 },
+                { "Key" : "StunChanceRobo", "Float" : 0.46 },
+                { "Key" : "BleedChance", "Float" : 0.2 }
+            ]
+        }
+    ]
+}

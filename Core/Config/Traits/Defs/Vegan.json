@@ -1,0 +1,9 @@
+{
+    "Id" : "Vegan",
+    "IconId" : "Icons/Color/Leaf",
+    "TypeId" : "Intellectual",
+    "Rarity" : 0.5,
+    "IncompatibleTraitIds" : [
+        "Carnivore"
+    ]
+}

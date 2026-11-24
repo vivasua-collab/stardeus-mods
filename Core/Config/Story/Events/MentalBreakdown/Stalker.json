@@ -1,0 +1,21 @@
+{
+    // C# implementation id.
+    // Multiple configurations can point to a single implementation.
+    "EventId" : "BreakdownStalker",
+    // How much does this story event cost to run
+    "Points" : 0,
+    // Options: Negative, Positive, Neutral, Raid
+    "OutcomeType" : "Negative",
+    // Full list is in StoryEventFlags class
+    "EventFlags" : [
+        "OnDemand",
+        "MentalBreakdown",
+        "CanHaveDuplicates"
+    ],
+    // Variables for the story event implementation
+    "Properties" : [
+        { "Key" : "SupportsImmobilized", "Bool" : false },
+        { "Key" : "RequiredAIAction", "String" : "BreakdownStalker" },
+        { "Key" : "PlayerFactionOnly", "Bool" : false }
+    ]
+}

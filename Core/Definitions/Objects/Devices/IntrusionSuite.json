@@ -1,0 +1,93 @@
+{
+    "ToolPath" : "Computing",
+    "Layer" : "Objects",
+    "ParentId" : "Objects/Devices/BaseDevice",
+    "DescKey" : "intrusion.suite.desc",
+    "Researchable" : {
+        "Prerequisites" : [ "Research/RogueAI/IntrusionSuite" ]
+    },
+    "Components" : [
+        {
+            "Component" : "TileTransform",
+            "Properties" : [
+                { "Key" : "Width", "Int" : 2 },
+                { "Key" : "Height", "Int" : 2 },
+                { "Key" : "IsRotatable", "Bool" : true },
+                { "Key" : "CoverPercent", "Int" : 75 }
+            ]
+        },
+        {
+            "Component" : "ElectricNode",
+            "Properties" : [
+                { "Key" : "IsConsumer", "Bool" : true }
+            ]
+        },
+        {
+            "Component" : "WithFuse",
+            "Properties" : [
+                { "Key" : "MalfunctionWeight", "Float": 0.5 }
+            ]
+        },
+        {
+            "Component" : "IntrusionSuite",
+            "Properties" : [
+                { "Key" : "EnergyCost", "Float" : 120 }
+            ]
+        },
+        {
+            "Component" : "Flammable",
+            "Properties" : [
+                { "Key" : "IgnitionTemperatureCelsius", "Int" : 300 },
+                { "Key" : "FireChance", "Float" : 0.5 },
+                { "Key" : "FlammabilityCurve", "String" : "Device" }
+            ]
+        },
+        {
+            "Component" : "OutdoorsCheck",
+            "Properties" : [
+                { "Key" : "MustBeIndoors", "Bool" : true }
+            ]
+        },
+        { "Component" : "ExtraInfo" },
+        {
+            "Component" : "AudioSource",
+            "Properties" : [
+                { "Key" : "AmbienceClip", "String" : "Ambience/DeviceOperating06" },
+                { "Key" : "IsLinkedToEnergy", "Bool" : true },
+                { "Key" : "Rolloff", "Vector2" : { "x" : 3, "y" : 12 } }
+            ]
+        },
+        {
+            "Component" : "TileGraphics",
+            "Properties" : [
+                { "Key" : "Type", "String": "Object" },
+                { "Key" : "Graphic", "String": "Objects/Devices/IntrusionSuite" },
+                { "Key" : "HasHeight", "Bool" : true }
+            ]
+        },
+        {
+            "Component" : "Passability",
+            "Properties" : [
+                { "Key" : "IsPassable", "Bool" : false },
+                { "Key" : "IsWalkable", "Bool" : false },
+                { "Key" : "Difficulty", "Float" : 1 }
+            ]
+        },
+        {
+            "Component" : "Constructable",
+            "Properties" : [
+                { "Key" : "WorkAmount", "Int" : 3600 },
+                {
+                    "Key" : "Contents",
+                    "RawMaterials" : [
+                        { "TypeId" : "TitaniumPlate", "StackSize" : 4 },
+                        { "TypeId" : "Microchip3", "StackSize" : 10 },
+                        { "TypeId" : "OpticalFiber", "StackSize" : 12 },
+                        { "TypeId" : "GoldWire", "StackSize" : 8 },
+                        { "TypeId" : "SiliconWafer", "StackSize" : 8 }
+                    ]
+                }
+            ]
+        }
+    ]
+}

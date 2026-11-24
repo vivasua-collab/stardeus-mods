@@ -1,0 +1,16 @@
+{
+    "Id" : "Drummer",
+    "Species" : [ "Human" ],
+    "RoleTypes" : [ "Dumb", "Poor" ],
+    "AgePhaseIds" : [ "YoungAdult", "MidLife", "Retirement" ],
+    "AdjustsSkills" : [
+        {
+            "JobId" : "Crafting",
+            "Adjustment" : 6
+        },
+        {
+            "JobId" : "Cleaning",
+            "Adjustment" : -1
+        }
+    ]
+}

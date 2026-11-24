@@ -1,0 +1,19 @@
+{
+    "Id" : "Soldier",
+    "Species" : [ "Human" ],
+    "AgePhaseIds" : [ "YoungAdult", "MidLife" ],
+    "RoleTypes" : [ "Dumb" ],
+    "IncapableJobTypes" : [ "Research", "Robotics" ],
+    "IncompatibleTraitIds" : [ "Pacifist" ],
+    "BodyTypes" : "MF",
+    "AdjustsSkills" : [
+        {
+            "JobId" : "Shooting",
+            "Adjustment" : 6
+        },
+        {
+            "JobId" : "Melee",
+            "Adjustment" : 4
+        }
+    ]
+}

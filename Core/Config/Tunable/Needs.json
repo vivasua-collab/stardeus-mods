@@ -1,0 +1,10 @@
+{
+    "Floats" : [
+        { "Key" : "ElectricityNeedChargeCost", "Float" : 5.0 },
+        { "Key" : "EmergencyRechargeRate", "Float" : 0.0188888 },
+        { "Key" : "O2ConsumptionPerHourBase", "Float" : 0.01 },
+        // Light a being sees by outside the ship. The light map only lights rooms, so space
+        // would read as pitch dark and every fight or walk outside would suffer for it
+        { "Key" : "OutsideLight", "Float" : 0.75 }
+    ]
+}

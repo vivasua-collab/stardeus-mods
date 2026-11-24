@@ -1,0 +1,7 @@
+{
+    "Id" : "UI/Scroll/Normal",
+    "AliasFor" : "UI/Main/Comp-1",
+    // "Hex" : "542673",
+    "Alpha" : 1.0,
+    "SkipAtlas" : true
+}

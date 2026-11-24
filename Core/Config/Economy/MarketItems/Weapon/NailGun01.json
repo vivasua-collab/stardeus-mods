@@ -1,0 +1,10 @@
+{
+    "Id" : "Obj/Equipment/Weapons/NailGun01",
+    "Type" : "CFD",
+    "Groups" : [ "Weapon" ],
+    "Value" : 600.0,
+    "Rarity" : 0.85,
+    "TraderQuantity" : 2.0,
+    "MaxTraderQuantity" : 5,
+    "Volatility" : 0.0016
+}

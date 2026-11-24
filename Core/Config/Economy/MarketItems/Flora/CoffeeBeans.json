@@ -1,0 +1,10 @@
+{
+    "Id" : "Obj/Materials/CoffeeBeans",
+    "Type" : "CFD",
+    "Groups" : [ "Flora" ],
+    "Value" : 20.0,
+    "Rarity" : 0.8,
+    "TraderQuantity" : 20.0,
+    "MinSectorDifficulty" : 0.45,
+    "Volatility" : 0.0052
+}

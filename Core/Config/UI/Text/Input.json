@@ -1,0 +1,9 @@
+{
+    "Id" : "Text/Input",
+
+    "Color" : "UI/Text/Main",
+    "Alpha" : 1,
+
+    "TextFontSize" : 24,
+    "TextMarginLTRB" : [ 12, 0, 12, 0 ]
+}

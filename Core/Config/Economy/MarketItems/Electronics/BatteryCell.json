@@ -1,0 +1,11 @@
+{
+    "Id" : "Obj/Materials/BatteryCell",
+    "Type" : "CFD",
+    "Groups" : [ "Electronics" ],
+    "Value" : 390.0,
+    "Rarity" : 0.3,
+    "TraderQuantity" : 20.0,
+    "MinSectorDifficulty" : 0.4,
+    "OnlineShopQuantity" : 10,
+    "Volatility" : 0.0037
+}

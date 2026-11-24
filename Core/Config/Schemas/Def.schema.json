@@ -1,0 +1,401 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Stardeus Def",
+  "description": "Generated from C# by Game/Generate JSON Schemas, do not edit by hand",
+  "$ref": "#/$defs/Def",
+  "$defs": {
+    "ComponentConfig": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "Component": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "Properties": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "$ref": "#/$defs/SerializableProperty"
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "Def": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "IsAbstract": {
+          "type": "boolean"
+        },
+        "IsUnfinished": {
+          "type": "boolean"
+        },
+        "SkipToolListing": {
+          "type": "boolean"
+        },
+        "UseParentTexts": {
+          "type": "boolean"
+        },
+        "Tier": {
+          "type": "integer"
+        },
+        "ResearchValue": {
+          "type": "integer"
+        },
+        "WealthValueMul": {
+          "type": "number"
+        },
+        "InternalValue": {
+          "type": "number"
+        },
+        "Id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "IdH": {
+          "type": "integer"
+        },
+        "IsImportant": {
+          "type": "boolean"
+        },
+        "IgnoreMarket": {
+          "type": "boolean"
+        },
+        "Seasonal": {
+          "$ref": "#/$defs/SeasonalLock"
+        },
+        "ToolPath": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "BuildGroup": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "Researchable": {
+          "$ref": "#/$defs/Researchable"
+        },
+        "Spawnable": {
+          "$ref": "#/$defs/GenSpawnable"
+        },
+        "NameKey": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "DescKey": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "PreviewIcon": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "ParentId": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "LayerId": {
+          "type": "integer"
+        },
+        "Layer": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "IsBeing": {
+          "type": "boolean"
+        },
+        "TranslationVars": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "Components": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "$ref": "#/$defs/ComponentConfig"
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "GenSpawnable": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "Chance": {
+          "type": "number"
+        },
+        "ChanceLocked": {
+          "type": "number"
+        },
+        "TierDiff": {
+          "type": "integer"
+        },
+        "Category": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "SkipOwned": {
+          "type": "integer"
+        },
+        "Quantity": {
+          "$ref": "#/$defs/ComponentConfig"
+        }
+      },
+      "additionalProperties": false
+    },
+    "Mat": {
+      "type": "object",
+      "properties": {
+        "TypeId": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "StackSize": {
+          "type": "integer"
+        },
+        "MaxStackSize": {
+          "type": "integer"
+        }
+      },
+      "additionalProperties": false
+    },
+    "Researchable": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "DatoidCosts": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "$ref": "#/$defs/Mat"
+          }
+        },
+        "IsDiscoverable": {
+          "type": "boolean"
+        },
+        "IsAutoDiscovered": {
+          "type": "boolean"
+        },
+        "IsTreeNode": {
+          "type": "boolean"
+        },
+        "UnlockValue": {
+          "type": "integer"
+        },
+        "UnlockCost": {
+          "type": "number"
+        },
+        "SkipCostValidation": {
+          "type": "boolean"
+        },
+        "Storage": {
+          "type": "integer"
+        },
+        "Prerequisites": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "CanBeResearchedNow": {
+          "type": "boolean"
+        },
+        "UnlockEffects": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "SeasonalLock": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "FromMonth": {
+          "type": "integer"
+        },
+        "FromDay": {
+          "type": "integer"
+        },
+        "ToMonth": {
+          "type": "integer"
+        },
+        "ToDay": {
+          "type": "integer"
+        }
+      },
+      "additionalProperties": false
+    },
+    "SerializableProperty": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "Key": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "String": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "Int": {
+          "type": "integer"
+        },
+        "Float": {
+          "type": "number"
+        },
+        "Vector2": {
+          "$ref": "#/$defs/Vector2"
+        },
+        "PosIdx": {
+          "type": "integer"
+        },
+        "Bool": {
+          "type": "boolean"
+        },
+        "BoolSet": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "boolean"
+          }
+        },
+        "IntSet": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "integer"
+          }
+        },
+        "FloatSet": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "number"
+          }
+        },
+        "StringSet": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "Vector2Set": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "$ref": "#/$defs/Vector2"
+          }
+        },
+        "RawMaterials": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "$ref": "#/$defs/Mat"
+          }
+        },
+        "IsUsed": {
+          "type": "boolean"
+        }
+      },
+      "additionalProperties": false
+    },
+    "Vector2": {
+      "type": "object",
+      "properties": {
+        "x": {
+          "type": "number"
+        },
+        "y": {
+          "type": "number"
+        }
+      },
+      "additionalProperties": false
+    }
+  }
+}

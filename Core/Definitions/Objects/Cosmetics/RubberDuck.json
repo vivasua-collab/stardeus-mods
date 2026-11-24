@@ -1,0 +1,65 @@
+{
+    "Layer" : "Objects",
+    "ParentId" : "Objects/Cosmetics/BaseCosmetics",
+    "Spawnable" : {
+        "Category": "Cosmetics",
+        "Chance" : 0.5,
+        "ChanceLocked" : 0.5
+    },
+    "Researchable" : {
+        "Prerequisites" : [ "Research/Habitation/Decorations" ]
+    },
+    "Components" : [
+        {
+            "Component" : "TileTransform",
+            "Properties" : [
+                { "Key" : "IsRotatable", "Bool" : true },
+                { "Key" : "CoverPercent", "Int" : 15 }
+            ]
+        },
+        {
+            "Component" : "TileGraphics",
+            "Properties" : [
+                { "Key" : "Type", "String": "Object" },
+                { "Key" : "HasHeight", "Bool" : false },
+                { "Key" : "Graphic", "String": "Objects/Cosmetics/RubberDuck" }
+            ]
+        },
+        {
+            "Component" : "Admirable",
+            "Properties" : [
+                { "Key" : "Amount", "Int" : 1 },
+                { "Key" : "Multiplier", "Float" : 0.25 },
+                { "Key" : "Chance", "Float" : 0.5 }
+            ]
+        },
+        {
+            "Component" : "Flammable",
+            "Properties" : [
+                { "Key" : "IgnitionTemperatureCelsius", "Int" : 200 },
+                { "Key" : "FireChance", "Float" : 0.75 },
+                { "Key" : "FlammabilityCurve", "String" : "High" }
+            ]
+        },
+        {
+            "Component" : "Passability",
+            "Properties" : [
+                { "Key" : "IsPassable", "Bool" : true },
+                { "Key" : "IsWalkable", "Bool" : true },
+                { "Key" : "Difficulty", "Float" : 0.8 }
+            ]
+        },
+        {
+            "Component" : "Constructable",
+            "Properties" : [
+                { "Key" : "WorkAmount", "Int" : 225 },
+                {
+                    "Key" : "Contents",
+                    "RawMaterials" : [
+                        { "TypeId" : "Rubber", "StackSize" : 2 }
+                    ]
+                }
+            ]
+        }
+    ]
+}

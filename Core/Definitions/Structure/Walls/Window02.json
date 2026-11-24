@@ -1,0 +1,32 @@
+{
+    "Layer" : "Walls",
+    "ParentId" : "Structure/Walls/BaseWindow",
+    "DescKey": "structure.walls.window01.desc",
+    "Researchable" : {
+        "Prerequisites" : [
+            "Research/Construction/Habitation"
+        ]
+    },
+    "Components" : [
+        {
+            "Component" : "TileGraphics",
+            "Properties" : [
+                { "Key" : "Graphic", "String" : "Structure/Walls/Window02/Window02" },
+                { "Key" : "Shader", "String": "ReflectedWallTile" }
+            ]
+        },
+        {
+            "Component" : "HullIntegrity",
+            "Properties" : [
+                { "Key" : "MaxInsulation", "Float" : 0.25 },
+                { "Key" : "MaxAirtight", "Float" : 1 }
+            ]
+        },
+        {
+            "Component" : "Damageable",
+            "Properties" : [
+                { "Key" : "Max", "Int" : 30 }
+            ]
+        }
+    ]
+}

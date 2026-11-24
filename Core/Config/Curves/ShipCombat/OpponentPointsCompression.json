@@ -1,0 +1,11 @@
+{
+    // player current class points -> opponent strength compression multiplier
+    "FloatSet": [
+        0,   1.0,
+        50,  1.0,
+        100, 0.95,
+        200, 0.85,
+        300, 0.80,
+        450, 0.75
+    ]
+}

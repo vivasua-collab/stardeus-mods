@@ -1,0 +1,17 @@
+{
+    "Id" : "Teacher",
+    "Species" : [ "Human" ],
+    "AgePhaseIds" : [ "YoungAdult", "MidLife", "Retirement" ],
+    "RoleTypes" : [ "Smart", "Poor", "Good" ],
+    "IncapableJobTypes" : [ "Construction", "Demolition" ],
+    "AdjustsSkills" : [
+        {
+            "JobId" : "Social",
+            "Adjustment" : 4
+        },
+        {
+            "JobId" : "Research",
+            "Adjustment" : 2
+        }
+    ]
+}

@@ -1,0 +1,12 @@
+{
+    "Id" : "FarmAnimal",
+    "LovesJobTypes" : [ ],
+    "Species" : [ "Dog", "Pig", "Cat" ],
+    "RoleTypes" : [ "Good" ],
+    "AdjustsSkills" : [
+        {
+            "JobId" : "Social",
+            "Adjustment" : 4
+        }
+    ]
+}

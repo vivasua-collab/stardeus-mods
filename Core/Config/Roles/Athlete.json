@@ -1,0 +1,19 @@
+{
+    "Id" : "Athlete",
+    "Species" : [ "Human" ],
+    "LovesJobTypes" : [ "Mining", "Construction" ],
+    "AgePhaseIds" : [ "YoungAdult", "MidLife" ],
+    "RoleTypes" : [ "Dumb" ],
+    "IncapableJobTypes" : [ "Research" ],
+    "BodyTypes" : "MF",
+    "AdjustsSkills" : [
+        {
+            "JobId" : "Construction",
+            "Adjustment" : 4
+        },
+        {
+            "JobId" : "Mining",
+            "Adjustment" : 6
+        }
+    ]
+}

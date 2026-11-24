@@ -1,0 +1,31 @@
+{
+    "Id" : "Research/Robotics/Nanobots",
+    "Tier" : 3,
+    "IsAbstract" : true,
+    "NameKey" : "obj.materials.nanobots",
+    "PreviewIcon" : "Obj/Materials/Nanobots",
+    "Researchable" : {
+        "IsTreeNode" : true,
+        "Prerequisites" : [
+            "Research/Robotics/AutoRepair"
+        ],
+        "DatoidCosts" : [
+            {
+                "TypeId" : "DatoidBiotic",
+                "StackSize" : 8
+            },
+            {
+                "TypeId" : "DatoidSynthetic",
+                "StackSize" : 5
+            },
+            {
+                "TypeId" : "DatoidEnergy",
+                "StackSize" : 7
+            },
+            {
+                "TypeId" : "DatoidTechHigh",
+                "StackSize" : 4
+            }
+        ]
+    }
+}

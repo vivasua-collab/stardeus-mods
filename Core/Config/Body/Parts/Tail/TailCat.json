@@ -1,0 +1,7 @@
+{
+    "SlotTypeId" : "Tail",
+    "Compatibility" : "Biological",
+    "Tier" : 1,
+    "ResistanceBase" : 4.0,
+    "TargetSpecies" : [ "Cat" ]
+}

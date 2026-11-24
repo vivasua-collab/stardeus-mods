@@ -1,0 +1,10 @@
+{
+    "Id" : "Build",
+    "AlwaysAddFor" : [
+        "Broadcaster",
+        "Moderator",
+        "VIP",
+        "Subscriber"
+    ],
+    "AddAtReputation" : 300
+}

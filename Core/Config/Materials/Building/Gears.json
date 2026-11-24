@@ -1,0 +1,8 @@
+{
+    "Id" : "Gears",
+    "IsComposite" : true,
+    "IconId" : "Obj/Materials/Gears",
+    "GroupId" : "Components",
+    "EnergyOutput" : 48.0,
+    "Rarity" : 100
+}

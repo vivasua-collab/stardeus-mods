@@ -1,0 +1,12 @@
+{
+    // C# implementation id.
+    "EventId": "ExpeditionMerchant",
+    "Points": 5,
+    // Options: Negative, Positive, Neutral, Raid
+    "OutcomeType": "Positive",
+    // Full list is in StoryEventFlags class
+    "EventFlags": [
+        "OnDemand",
+        "Expedition"
+    ]
+}

@@ -1,0 +1,12 @@
+{
+    "Id" : "Obj/Upgrades/EnergyEfficiencyUpgrade",
+    "Type" : "CFD",
+    "Groups" : [ "Upgrade" ],
+    "Value" : 3500.0,
+    "Rarity" : 0.4,
+    "TraderQuantity" : 1.0,
+    "MaxTraderQuantity" : 5,
+    "MinSectorDifficulty" : 0.4,
+    "PlayerBuyPriceMultiplier": 2.0,
+    "Volatility" : 0.0012
+}

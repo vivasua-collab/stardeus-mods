@@ -1,0 +1,65 @@
+{
+    "BuildGroup" : "FloorArmoredLit",
+    "ToolPath" : "Lights/FloorLit",
+    "Layer" : "Floor",
+    "ParentId" : "Structure/Floors/FloorArmored01",
+    "Components" : [
+        {
+            "Component" : "TileTransform",
+            "Properties" : [
+                { "Key" : "PlacementType", "String": "Single" }
+            ]
+        },
+        {
+            "Component" : "LightSource",
+            "Properties" : [
+                { "Key" : "IsCustomizable", "Bool": true },
+                { "Key" : "IsMainLight", "Bool": true },
+                { "Key" : "Radius", "Float" : 10 },
+                { "Key" : "Glow", "Float" : 1 },
+                { "Key" : "EnergyCost", "Float" : 0.25 }
+            ]
+        },
+        {
+            "Component" : "TileGraphics",
+            "Properties" : [
+                {
+                    "Key" : "Graphic",
+                    "String": "Structure/Floors/FloorArmored01Lit"
+                }
+            ]
+        },
+        { "Component" : "TileLabel" },
+        {
+            "Component" : "Flammable",
+            "Properties" : [
+                { "Key" : "FireChance", "Float" : 0.025 },
+                { "Key" : "FlammabilityCurve", "String" : "DeviceLow" }
+            ]
+        },
+        {
+            "Component" : "ElectricNode",
+            "Properties" : [
+                { "Key" : "IsConsumerLowPriority", "Bool" : true }
+            ]
+        },
+        {
+            "Component" : "Constructable",
+            "Properties" : [
+                { "Key" : "CanReplaceSameLayer", "Bool": true },
+                { "Key" : "CanDragRow", "Bool": false },
+                { "Key" : "WorkAmount", "Int" : 865 },
+                {
+                    "Key" : "Contents",
+                    "RawMaterials" : [
+                        { "TypeId" : "LeadPlate", "StackSize" : 2 },
+                        { "TypeId" : "Glass", "StackSize" : 1 },
+                        { "TypeId" : "TitaniumPlate", "StackSize" : 1 },
+                        { "TypeId" : "CarbonFiber", "StackSize" : 1 },
+                        { "TypeId" : "CopperWire", "StackSize" : 1 }
+                    ]
+                }
+            ]
+        }
+    ]
+}

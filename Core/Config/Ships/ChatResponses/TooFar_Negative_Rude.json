@@ -1,0 +1,8 @@
+{
+    "ResponseType" : "Negative",
+    "TopicType" : "TooFar",
+    "ToneType" : "Rude",
+    "MessageKeys" : [
+        "ship.chat.too.far.negative.rude.*"
+    ]
+}

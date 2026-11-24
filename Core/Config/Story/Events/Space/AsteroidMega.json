@@ -1,0 +1,36 @@
+{
+    // C# implementation id.
+    // Multiple configurations can point to a single implementation.
+    "EventId" : "Asteroid",
+    // How much does this story event cost to run
+    "Points" : 40,
+    // Options: Negative, Positive, Neutral, Raid
+    "OutcomeType" : "Negative",
+    // Full list is in StoryEventFlags class
+    "EventFlags" : [
+        "Space",
+        "HeavyDisaster",
+        "NoHyperspace"
+    ],
+    "MinRepeatDelayDays" : 800,
+    // Full list of requirements can be found in Situation class
+    "Require" : {
+        "Days" : 600,
+        "ShipSize" : 4000,
+        // over ideal colony size
+        "Friendlies" : 17
+    },
+    // How likely this event can occur given the sector difficulty
+    // sector difficulty -> chance
+    "SectorDifficultyChance" : [
+        0.0, 0.0,
+        0.95, 0.0,
+        1.0, 0.5
+    ],
+    // Variables for the story event implementation
+    "Properties" : [
+        { "Key" : "MinDistToImportantObjects", "Int" : 25 },
+        // Will be matched to Obj/Asteroids/AsteroidMega*
+        { "Key" : "AsteroidDef", "String" : "Obj/Asteroids/AsteroidMega01" }
+    ]
+}

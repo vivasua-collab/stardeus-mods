@@ -1,0 +1,7 @@
+{
+    "Id" : "UI/Btn/SpeedInactive",
+    "AliasFor" : "UI/White/Comp+2",
+    // "Hex" : "FFFFFF",
+    "Alpha" : 0.75,
+    "SkipAtlas" : true
+}

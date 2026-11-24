@@ -1,0 +1,40 @@
+{
+    "Layer" : "FreeEntities",
+    "ParentId" : "Obj/Materials/BaseMaterial",
+    "Researchable" : {
+        "Prerequisites" : [ "Research/LifeSupport/BiosphereGeneration" ]
+    },
+    "Components" : [
+        {
+            "Component" : "ObjGraphics",
+            "Properties" : [
+                { "Key" : "Shader", "String": "Obj" },
+                { "Key" : "Graphic", "String": "Obj/Materials/MultiFertilizer" }
+            ]
+        },
+        {
+            "Component" : "Flammable",
+            "Properties" : [
+                { "Key" : "IsTemperatureResistant", "Bool" : false },
+                { "Key" : "FireChance", "Float" : 0.7 }
+            ]
+        },
+        {
+            "Component" : "UnstoredMat",
+            "Properties" : [
+                { "Key" : "Type", "String" : "MultiFertilizer" },
+                { "Key" : "FixedSize", "Bool" : true }
+            ]
+        },
+        {
+            "Component" : "LightSource",
+            "Properties" : [
+                { "Key" : "NeedsEnergy", "Bool" : false },
+                { "Key" : "Color", "IntSet" : [ 71, 153, 51, 128 ] },
+                { "Key" : "PulsateColor", "IntSet" : [ 122, 204, 102, 128 ] },
+                { "Key" : "FrequencyRange", "Vector2" : { "x" : 0.4, "y" : 0.9 } },
+                { "Key" : "Radius", "Float" : 3 }
+            ]
+        }
+    ]
+}

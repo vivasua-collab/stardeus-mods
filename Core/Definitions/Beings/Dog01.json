@@ -1,0 +1,31 @@
+{
+    "Layer" : "FreeEntities",
+    "ParentId" : "Beings/BaseBeing",
+    "PreviewIcon" : "Icons/Color/PreviewDog01",
+    "Researchable" : {
+        "Prerequisites" : [ "Research/LifeSupport/CloneDog" ]
+    },
+    "Components" : [
+        {
+            "Component" : "BeingNameText" ,
+            "Properties" : [
+                { "Key" : "Offset", "Vector2" : { "x" : 0, "y" : -0.4 } }
+            ]
+        },
+        {
+            "Component" : "Flammable",
+            "Properties" : [
+                { "Key" : "SpreadIntoChance", "Float" : 0.3 },
+                { "Key" : "FireChance", "Float" : 0.3 }
+            ]
+        },
+        { "Component" : "Pettable" },
+        { "Component" : "BedUser" },
+        {
+            "Component" : "Disposable",
+            "Properties" : [
+                { "Key" : "IsBiological", "Bool" : true }
+            ]
+        }
+    ]
+}

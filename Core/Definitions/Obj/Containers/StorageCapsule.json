@@ -1,0 +1,56 @@
+{
+    "Layer" : "FreeEntities",
+    "ParentId" : "Obj/BaseObj",
+    "IgnoreMarket" : true,
+    "Components" : [
+        {
+            "Component" : "ObjGraphics",
+            "Properties" : [
+                { "Key" : "Graphic", "String": "Obj/Containers/StorageCapsule" },
+                { "Key" : "Shader", "String" : "ObjAbove" },
+                // { "Key" : "Renderer", "String" : "VFXRendererObjAbove" },
+                { "Key" : "HasShadow", "Bool" : true },
+                { "Key" : "IsAnimated", "Bool" : true },
+                { "Key" : "DoNotCull", "Bool" : true }
+            ]
+        },
+        {
+            "Component" : "ObjHealth",
+            "Properties" : [
+                { "Key" : "IsInvincible", "Bool" : true }
+            ]
+        },
+        {
+            "Component" : "LightSource",
+            "Properties" : [
+                { "Key" : "NeedsEnergy", "Bool" : false },
+                { "Key" : "Color", "IntSet" : [ 223, 175, 32, 128 ] },
+                { "Key" : "PulsateColor", "IntSet" : [ 68, 30, 70, 128 ] },
+                { "Key" : "FrequencyRange", "Vector2" : { "x" : 1, "y" : 5 } },
+                { "Key" : "Radius", "Float" : 5 }
+            ]
+        },
+        {
+            "Component" : "ParticleTrail",
+            "Properties" : [
+                { "Key" : "Particles", "String" : "SlowSmokeTrailFX" },
+                { "Key" : "ParticlesOffset", "Vector2" : { "x" : 0, "y" : 0 } },
+                { "Key" : "InheritScale", "Bool" : true },
+                { "Key" : "DestroyDelay", "Float" : 15 },
+                { "Key" : "DelayStart", "Bool" : true }
+            ]
+        },
+        {
+            "Component" : "StorageCapsule",
+            "Properties" : [
+                { "Key" : "ImpactExplosionLevel", "Int" : 2 }
+            ]
+        },
+        {
+            "Component" : "Disposable",
+            "Properties" : [
+                { "Key" : "IsBiological", "Bool" : false }
+            ]
+        }
+    ]
+}

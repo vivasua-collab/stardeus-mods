@@ -1,0 +1,15 @@
+{
+    "Id" : "ShipCorvette01",
+    "Probability" : 1.0,
+    "StarmapSizeMul" : 0.34,
+    "StarfieldSizeMul" : 0.17,
+    "IsConstantSizeInStarmap" : false,
+    "OrderDist" : -50,
+    "Sprite" : "SpaceObjects/Ships/ShipCorvette01_D",
+    "CanRotate" : true,
+    "KeepUprightInStarfield" : true,
+    "Sprite_L" : "SpaceObjects/Ships/ShipCorvette01_L",
+    "Sprite_R" : "SpaceObjects/Ships/ShipCorvette01_R",
+    "Sprite_U" : "SpaceObjects/Ships/ShipCorvette01_U",
+    "Sprite_D" : "SpaceObjects/Ships/ShipCorvette01_D"
+}

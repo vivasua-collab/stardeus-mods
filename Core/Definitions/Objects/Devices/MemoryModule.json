@@ -1,0 +1,69 @@
+{
+    "ToolPath" : "Computing",
+    "Layer" : "Objects",
+    "ParentId" : "Objects/Devices/MemoryModuleMini",
+    "TranslationVars" : [ "2" ],
+    "UseParentTexts" : true,
+    "Researchable" : {
+        "Prerequisites" : [
+            "Research/Computing/MemoryImproved"
+        ]
+    },
+    "Spawnable" : {
+        "Category": "Computing",
+        "Chance" : 0.9,
+        "ChanceLocked" : 0.4
+    },
+    "Components" : [
+        {
+            "Component" : "TileTransform",
+            "Properties" : [
+                { "Key" : "IsRotatable", "Bool" : true },
+                { "Key" : "CoverPercent", "Int" : 100 }
+            ]
+        },
+        {
+            "Component" : "TileGraphics",
+            "Properties" : [
+                { "Key" : "Graphic", "String": "Objects/Devices/MemoryModule" }
+            ]
+        },
+        {
+            "Component" : "MemoryModule",
+            "Properties" : [
+                { "Key" : "Amount",  "Int" : 2 },
+                { "Key" : "EnergyCost", "Float" : 5 }
+            ]
+        },
+        {
+            "Component" : "ElectricNode",
+            "Properties" : [
+                { "Key" : "Particles_D", "String" : "ServerLargeFX" },
+                { "Key" : "Particles_U", "String" : "ServerLargeFX" },
+                { "Key" : "IsConsumer", "Bool" : true }
+            ]
+        },
+        {
+            "Component" : "WithFuse",
+            "Properties" : [
+                { "Key" : "MalfunctionWeight", "Float": 0.4 }
+            ]
+        },
+        {
+            "Component" : "Constructable",
+            "Properties" : [
+                { "Key" : "WorkAmount", "Int" : 1600 },
+                { "Key" : "CanReplaceGroup", "String" : "MemoryModule" },
+                {
+                    "Key" : "Contents",
+                    "RawMaterials" : [
+                        { "TypeId" : "TitaniumPlate", "StackSize" : 3 },
+                        { "TypeId" : "Microchip3", "StackSize" : 2 },
+                        { "TypeId" : "GoldWire", "StackSize" : 5 },
+                        { "TypeId" : "Plastic", "StackSize" : 1 }
+                    ]
+                }
+            ]
+        }
+    ]
+}

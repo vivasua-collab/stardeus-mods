@@ -1,0 +1,13 @@
+{
+    "SlotTypeId" : "Brain",
+    "Compatibility" : "Biological",
+    "TargetSpecies" : [ "Human" ],
+    "PartFlags" : [ "HoldsMind", "SupportsMindTransfer", "SupportsMLBooth" ],
+    "AddsAbilities" : [
+        "DumbLabor",
+        "SkilledLabor",
+        "Intelligence"
+    ],
+    "ResistanceBase" : 2.0,
+    "Tier" : 3
+}

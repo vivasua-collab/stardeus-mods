@@ -1,0 +1,81 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Stardeus ShipChatToneAssignmentDef",
+  "description": "Generated from C# by Game/Generate JSON Schemas, do not edit by hand",
+  "$ref": "#/$defs/ShipChatToneAssignmentDef",
+  "$defs": {
+    "ShipChatToneAssignmentDef": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "ToneType": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "Tone": {
+          "anyOf": [
+            {
+              "type": "string",
+              "enum": [
+                "Undefined",
+                "Rude",
+                "Polite",
+                "Casual"
+              ]
+            },
+            {
+              "type": "integer"
+            }
+          ]
+        },
+        "Id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "IdH": {
+          "type": "integer"
+        },
+        "FactionChanceKey": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "FactionChanceValue": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "number"
+          }
+        },
+        "DefaultFactionChance": {
+          "type": "number"
+        },
+        "AttitudeChance": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "number"
+          }
+        }
+      },
+      "additionalProperties": false
+    }
+  }
+}

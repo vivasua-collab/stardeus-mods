@@ -1,0 +1,10 @@
+{
+    "Type": "DatoidSynthetic",
+    "Ingredients": [
+        { "TypeId" : "Plastic", "StackSize" : 1 },
+        { "TypeId" : "CarbonFiber", "StackSize" : 1 }
+    ],
+    "ProductDefId": "Obj/Datoids/DatoidSynthetic",
+    "ProductionTimeHours": 2.0,
+    "EnergyCost": 40.0
+}

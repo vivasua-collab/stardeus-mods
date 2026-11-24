@@ -1,0 +1,10 @@
+{
+    "Id" : "Obj/Equipment/Weapons/Knife01",
+    "Type" : "CFD",
+    "Groups" : [ "Weapon" ],
+    "Value" : 85.0,
+    "Rarity" : 0.9,
+    "TraderQuantity" : 2.0,
+    "MaxTraderQuantity" : 5,
+    "Volatility" : 0.00084
+}

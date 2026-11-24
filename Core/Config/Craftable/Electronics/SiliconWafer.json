@@ -1,0 +1,10 @@
+{
+    "Type" : "Electronics",
+    "Ingredients" : [
+        { "TypeId" : "Silicon", "StackSize" : 1 }
+    ],
+    "ProductDefId" : "Obj/Materials/SiliconWafer",
+    "ProductionTimeHours" : 2.0,
+    "OutputMultiplier" : 10,
+    "EnergyCost" : 5
+}

@@ -1,0 +1,22 @@
+{
+    "Id" : "Research/Energy/Solar",
+    "Tier" : 2,
+    "IsAbstract" : true,
+    "PreviewIcon" : "Objects/Devices/SolarPanel",
+    "Researchable" : {
+        "IsTreeNode" : true,
+        "Prerequisites" : [
+            "Research/Energy/Reactor"
+        ],
+        "DatoidCosts" : [
+            {
+                "TypeId" : "DatoidBasic",
+                "StackSize" : 15
+            },
+            {
+                "TypeId" : "DatoidTech",
+                "StackSize" : 8
+            }
+        ]
+    }
+}

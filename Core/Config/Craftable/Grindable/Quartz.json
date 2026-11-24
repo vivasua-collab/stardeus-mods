@@ -1,0 +1,10 @@
+{
+    "Type": "Grindable",
+    "IgnoreMarket" : true,
+    "Ingredients": [
+        { "TypeId" : "Rock", "StackSize" : 8 }
+    ],
+    "OutputMultiplier" : 1,    "ProductDefId": "Obj/Materials/Quartz",
+    "ProductionTimeHours": 3,
+    "EnergyCost": 15.0
+}

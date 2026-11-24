@@ -1,0 +1,11 @@
+{
+    "Id" : "Obj/Materials/Microchip3",
+    "Type" : "CFD",
+    "Groups" : [ "Electronics", "Robotics" ],
+    "Value" : 550.0,
+    "Rarity" : 0.1,
+    "TraderQuantity" : 5.0,
+    "OnlineShopQuantity" : 5,
+    "MinSectorDifficulty" : 0.70,
+    "Volatility" : 0.0047
+}

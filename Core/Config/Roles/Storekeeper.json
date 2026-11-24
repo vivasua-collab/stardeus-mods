@@ -1,0 +1,17 @@
+{
+    "Id" : "Storekeeper",
+    "LovesJobTypes" : [ ],
+    "Species" : [ "Human", "Robot", "Drone", "Carrier" ],
+    "AgePhaseIds" : [ "YoungAdult", "MidLife", "Retirement" ],
+    "RoleTypes" : [ ],
+    "AdjustsSkills" : [
+        {
+            "JobId" : "Cooking",
+            "Adjustment" : 2
+        },
+        {
+            "JobId" : "Social",
+            "Adjustment" : 4
+        }
+    ]
+}

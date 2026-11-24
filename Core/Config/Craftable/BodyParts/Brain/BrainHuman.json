@@ -1,0 +1,12 @@
+{
+    "Type" : "Disposable",
+    "ProductDefId" : "Obj/Parts/Brain/BrainHuman",
+    "ProductionTimeHours" : 8,
+    "EnergyCost" : 30,
+    "IgnoreMarket" : true,
+    "DisposableOutput": [
+        { "TypeId" : "Protein", "StackSize" : 1 },
+        { "TypeId" : "Water", "StackSize" : 1 },
+        { "TypeId" : "StemCells", "StackSize" : 10 }
+    ]
+}

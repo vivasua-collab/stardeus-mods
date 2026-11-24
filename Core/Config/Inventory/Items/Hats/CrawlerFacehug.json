@@ -1,0 +1,32 @@
+{
+    "DefId" : "Obj/Equipment/Hats/CrawlerFacehug",
+    "SlotId" : "Hat",
+    "SpriteId" : "Beings/Hats/Human/CrawlerFacehug/CrawlerFacehug",
+    "Rarity" : -1,
+    "AddsConditions" : [
+        "CrawlerAttached"
+    ],
+    "AddsStatModifiers" : [
+        {
+            "Component" : "AIAlignment",
+            "Properties" : [
+                { "Key" : "Value", "Float" : 0 },
+                { "Key" : "Type", "String" : "Sets" }
+            ]
+        },
+        {
+            "Component" : "HungerRate",
+            "Properties" : [
+                { "Key" : "Value", "Float" : 0.5 },
+                { "Key" : "Type", "String" : "Adds" }
+            ]
+        },
+        {
+            "Component" : "BloodToxicity",
+            "Properties" : [
+                { "Key" : "Value", "Float" : 0.25 },
+                { "Key" : "Type", "String" : "Adds" }
+            ]
+        }
+    ]
+}

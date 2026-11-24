@@ -1,0 +1,33 @@
+{
+    "Layer" : "FreeEntities",
+    "ParentId" : "Obj/Equipment/BaseEquipment",
+    "Researchable" : {
+        "Prerequisites" : [
+            "Research/Production/SpaceSuit"
+        ]
+    },
+    "Components" : [
+        { "Component" : "SafetyCheck" },
+        {
+            "Component" : "StorableObj",
+            "Properties" : [
+                { "Key" : "Group", "String" : "Clothing" }
+            ]
+        },
+        {
+            "Component" : "ObjGraphics",
+            "Properties" : [
+                { "Key" : "Graphic", "String": "Beings/Hats/Human/SpaceHelmet01/SpaceHelmet01" },
+                { "Key" : "Scale", "Float" : 0.33 },
+                { "Key" : "SelectableScale", "Float": 0.5 }
+            ]
+        },
+        {
+            "Component" : "Flammable",
+            "Properties" : [
+                { "Key" : "IgnitionTemperatureCelsius", "Int" : 300 },
+                { "Key" : "FireChance", "Float" : 0.2 }
+            ]
+        }
+    ]
+}

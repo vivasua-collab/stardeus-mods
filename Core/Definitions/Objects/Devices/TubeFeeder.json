@@ -1,0 +1,105 @@
+{
+    "ToolPath" : "Food",
+    "Layer" : "Objects",
+    "ParentId" : "Objects/Devices/BaseDevice",
+    "DescKey" : "tube.feeder.desc",
+    "Researchable" : {
+        "Prerequisites" : [
+            "Research/RogueAI/NutrientInfusion"
+        ]
+    },
+    "Components" : [
+        {
+            "Component" : "TileTransform",
+            "Properties" : [
+                { "Key" : "CoverPercent", "Int" : 50 },
+                { "Key" : "IsRotatable", "Bool" : true },
+                { "Key" : "WorkSpot", "Vector2" : { "x" : 0, "y" : -1 } },
+                { "Key" : "InPort", "Vector2" : { "x" : -1, "y" : 0 } }
+            ]
+        },
+        {
+            "Component" : "IndustrialEquipment",
+            "Properties" : [
+                { "Key" : "IsNoisy", "Bool" : true }
+            ]
+        },
+        {
+            "Component" : "TileGraphics",
+            "Properties" : [
+                { "Key" : "Type", "String": "Object" },
+                { "Key" : "HasHeight", "Bool" : true },
+                { "Key" : "Graphic", "String": "Objects/Devices/TubeFeeder" }
+            ]
+        },
+        {
+            "Component" : "Flammable",
+            "Properties" : [
+                { "Key" : "IgnitionTemperatureCelsius", "Int" : 300 },
+                { "Key" : "FireChance", "Float" : 0.5 },
+                { "Key" : "BaseExplosionLevel", "Int" : 1 },
+                { "Key" : "FlammabilityCurve", "String" : "Device" },
+                { "Key" : "ExplosivenessCurve", "String" : "Device" }
+            ]
+        },
+        {
+            "Component" : "ElectricNode",
+            "Properties" : [
+                { "Key" : "IsConsumer", "Bool" : true }
+            ]
+        },
+        {
+            "Component" : "RefillableStorage",
+            "Properties" : [
+                { "Key" : "Icon", "String" : "Icons/Color/Feeding" },
+                { "Key" : "DeviceType", "String" : "tube.feeder" },
+                { "Key" : "Purpose", "String" : "food" },
+                { "Key" : "ShowBurnRate", "Bool" : false },
+                { "Key" : "MaterialCapacity", "Int" : 20 },
+                { "Key" : "GroupFilter", "StringSet" : [ "Food", "RawFood" ] }
+            ]
+        },
+        {
+            "Component" : "TubeFeeder",
+            "Properties" : [
+                { "Key" : "SlotUseWorkSpot", "Bool" : true },
+                { "Key" : "HideBeing", "Bool" : false },
+                { "Key" : "RequiresSafeArea", "Bool" : true },
+                { "Key" : "EnergyCost", "Float" : 5 }
+            ]
+        },
+        { "Component" : "ExtraInfo" },
+        {
+            "Component" : "AudioSource",
+            "Properties" : [
+                { "Key" : "AmbienceClip", "String" : "Ambience/DeviceOperating06" },
+                { "Key" : "IsLinkedToEnergy", "Bool" : true },
+                { "Key" : "Rolloff", "Vector2" : { "x" : 3, "y" : 12 } }
+            ]
+        },
+        {
+            "Component" : "Passability",
+            "Properties" : [
+                { "Key" : "IsPassable", "Bool" : false },
+                { "Key" : "IsWalkable", "Bool" : false },
+                { "Key" : "Difficulty", "Float" : 1 }
+            ]
+        },
+        {
+            "Component" : "Constructable",
+            "Properties" : [
+                { "Key" : "WorkAmount", "Int" : 1600 },
+                {
+                    "Key" : "Contents",
+                    "RawMaterials" : [
+                        { "TypeId" : "TitaniumPlate", "StackSize" : 2 },
+                        { "TypeId" : "Rubber", "StackSize" : 5 },
+                        { "TypeId" : "Plastic", "StackSize" : 2 },
+                        { "TypeId" : "Microchip3", "StackSize" : 3 },
+                        { "TypeId" : "GoldWire", "StackSize" : 3 }
+                    ]
+                }
+            ]
+        }
+    ]
+}

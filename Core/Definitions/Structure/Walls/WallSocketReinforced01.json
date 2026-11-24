@@ -1,0 +1,46 @@
+{
+    "Layer" : "Walls",
+    "ParentId" : "Structure/Walls/BaseWallSocket",
+    "TranslationVars" : [ "32", "8" ],
+    "Researchable" : {
+        "Prerequisites" : [
+            "Research/Construction/StructureReinforced"
+        ]
+    },
+    "Components" : [
+        {
+            "Component" : "TileGraphics",
+            "Properties" : [
+                { "Key" : "Graphic", "String" : "Structure/Walls/WallSocketReinforced01/WallSocketReinforced01" }
+            ]
+        },
+        {
+            "Component" : "Damageable",
+            "Properties" : [
+                { "Key" : "Max", "Int" : 300 }
+            ]
+        },
+        {
+            "Component" : "Flammable",
+            "Properties" : [
+                { "Key" : "FireChance", "Float" : 0.3 },
+                { "Key" : "FireDamageResistance", "Float" : 0.4 }
+            ]
+        },
+        {
+            "Component" : "Constructable",
+            "Properties" : [
+                { "Key" : "WorkAmount", "Int" : 225 },
+                {
+                    "Key" : "Contents",
+                    "RawMaterials" : [
+                        { "TypeId" : "SteelPlate", "StackSize" : 1 },
+                        { "TypeId" : "TitaniumPlate", "StackSize" : 1 },
+                        { "TypeId" : "CopperWire", "StackSize" : 1 },
+                        { "TypeId" : "Transistor", "StackSize" : 1 }
+                    ]
+                }
+            ]
+        }
+    ]
+}

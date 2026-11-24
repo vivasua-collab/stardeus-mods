@@ -1,0 +1,17 @@
+{
+    "Id" : "Mechanic",
+    "LovesJobTypes" : [ "Robotics" ],
+    "Species" : [ "Human", "Robot", "Drone" ],
+    "RoleTypes" : [ ],
+    "AgePhaseIds" : [ "YoungAdult", "MidLife" ],
+    "AdjustsSkills" : [
+        {
+            "JobId" : "Robotics",
+            "Adjustment" : 4
+        },
+        {
+            "JobId" : "Repairs",
+            "Adjustment" : 4
+        }
+    ]
+}

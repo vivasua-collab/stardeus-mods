@@ -1,0 +1,10 @@
+{
+    "Type" : "Ore",
+    "Ingredients" : [
+        { "TypeId" : "Copper", "StackSize" : 1 }
+    ],
+    "OutputMultiplier" : 3,
+    "ProductDefId" : "Obj/Materials/CopperPlate",
+    "ProductionTimeHours" : 1.0,
+    "EnergyCost" : 15
+}

@@ -1,0 +1,37 @@
+{
+    "Id" : "Quartz",
+    "IsWithDepth" : true,
+    "IsCommon" : true,
+    "MinDifficulty" : 0.15,
+    "DifficultyChance" : [
+        0.0, 0.0,
+        0.15, 0.0,
+        0.3, 0.1,
+        0.4, 0.7,
+        0.5, 1.0,
+        0.6, 0.3,
+        0.7, 0.2,
+        1.0, 0.0
+    ],
+    // "UniverseQuantityChance" : [
+    //     0.0, 6.0,
+    //     1.0, 9.0
+    // ],
+    "RegionQuantityChance" : [
+        0.0, 1.0,
+        0.8, 2.0,
+        0.9, 3.0,
+        1.0, 4.0
+    ],
+    "InitialDepthChance" : [
+        0.0, 1.0,
+        0.5, 1.0,
+        0.85, 0.8,
+        0.95, 0.6,
+        1.0, 0.4
+    ],
+    "MiningDifficulty" : 38.0,
+    "CollectKey" : "verb.mine",
+    "ScanDifficulty" : 1.2,
+    "NearbySpawnChance" : 0.6
+}

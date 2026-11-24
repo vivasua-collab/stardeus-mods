@@ -1,0 +1,9 @@
+{
+    "Id" : "Lithium",
+    "IconId" : "Obj/Materials/Lithium",
+    "GroupId" : "Ore",
+    "InternalValue" : 15.0,
+    "EnergyOutput" : 800.0,
+    "Rarity" : 57,
+    "MatRarity" : 1
+}

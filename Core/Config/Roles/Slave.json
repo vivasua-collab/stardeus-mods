@@ -1,0 +1,19 @@
+{
+    "Id" : "Slave",
+    "Species" : [ "Human", "Robot", "Drone", "Carrier", "CleaningBot", "Orbotron", "Sentry" ],
+    "RoleTypes" : [ "Dumb", "Poor" ],
+    "AdjustsSkills" : [
+        {
+            "JobId" : "Social",
+            "Adjustment" : -1
+        },
+        {
+            "JobId" : "Construction",
+            "Adjustment" : 4
+        },
+        {
+            "JobId" : "Cleaning",
+            "Adjustment" : 4
+        }
+    ]
+}

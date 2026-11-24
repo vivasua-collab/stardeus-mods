@@ -1,0 +1,17 @@
+{
+    "Type": "Clothing",
+    "ColorGroupId": "Suit",
+    "Ingredients": [
+        { "TypeId" : "CarbonFiber", "StackSize" : 36 },
+        { "TypeId" : "TitaniumPlate", "StackSize" : 18 },
+        { "TypeId" : "Rubber", "StackSize" : 14 },
+        { "TypeId" : "Plastic", "StackSize" : 12 },
+        { "TypeId" : "LeadPlate", "StackSize" : 8 },
+        { "TypeId" : "BatteryCell", "StackSize" : 12 },
+        { "TypeId" : "Microchip", "StackSize" : 2 }
+    ],
+    "IgnoreMarket" : true,
+    "ProductDefId": "Obj/Equipment/Clothing/AssaultArmor01",
+    "ProductionTimeHours": 24.0,
+    "EnergyCost": 200.0
+}

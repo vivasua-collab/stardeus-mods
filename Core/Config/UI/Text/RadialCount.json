@@ -1,0 +1,9 @@
+{
+    "Id" : "Text/RadialCount",
+
+    "Color" : "UI/Text/Main",
+    "Alpha" : 0.8,
+    "TextFontSize" : 22,
+
+    "TextOverflowMode" : "Overflow"
+}

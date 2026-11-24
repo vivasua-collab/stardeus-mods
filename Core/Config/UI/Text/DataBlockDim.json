@@ -1,0 +1,9 @@
+{
+    "Id" : "Text/DataBlockDim",
+
+    "Color" : "UI/Text/Main",
+    "Alpha" : 0.7,
+
+    "TextFontSize" : 20,
+    "TextOverflowMode" : "Ellipsis"
+}

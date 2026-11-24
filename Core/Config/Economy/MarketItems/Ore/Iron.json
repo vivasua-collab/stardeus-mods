@@ -1,0 +1,10 @@
+{
+    "Id" : "Obj/Materials/Iron",
+    "Type" : "CFD",
+    "Groups" : [ "Ore" ],
+    "Value" : 40.0,
+    "Rarity" : 0.1,
+    "TraderQuantity" : 1000.0,
+    "OnlineShopQuantity" : 1000,
+    "Volatility" : 0.0005
+}

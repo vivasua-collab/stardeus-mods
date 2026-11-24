@@ -1,0 +1,48 @@
+{
+    "Id" : "Scavenger",
+    "FlagIcon" : "Icons/Faction/Scavenger",
+    "Friendliness" : -0.2,
+    "ChanceBlackMarket" : 0.5,
+    "TradesPeople" : true,
+    "ChancePolice" : 0.0,
+    "ChanceRandomShip" : 0.3,
+    "AI" : 0.1,
+    "ShipDensityMul" : 0.8,
+    "VictoryRaidChance" : 0.95,
+    "ChanceTradeWithOutlaw" : 0.5,
+    "HyperjumpRelayBaseToll" : 12000,
+    "RegionDifficultyChance" : [
+        0.0, 0.2,
+        0.7, 1.0,
+        1.0, 0.3
+    ],
+    // power difference => chance to engage in combat
+    "BraveryChance" : [
+        -1.0, 0.15,
+        -0.5, 0.33,
+        0.0, 0.8,
+        0.5, 0.9,
+        1.0, 1.0
+    ],
+    // How likely the reaction will be positive (vs negative) given the faction standing
+    // key => standing, value => chance of positive reaction
+    "AttitudePositiveReactionChance" : [
+        -1.0, 0.0,
+        -0.5, 0.25,
+        0.0, 0.5,
+        0.5, 0.85,
+        1.0, 0.95
+    ],
+    "GenBodyVars" : {
+        "ChanceModded" : 0.6,
+        "ChanceFreak" : 0.3,
+        "ChanceBionic" : 0.4,
+        "ChanceCustomMind" : 0.2,
+        "ChanceHighQualityParts" : 0.05,
+        "ChanceLowQualityParts" : 0.5,
+        "ChanceNonStandard" : 0.3,
+        "ChanceScarred" : 0.4,
+        "ChanceImplant" : 0.05
+    },
+    "CombatObjective" : "Raid"
+}

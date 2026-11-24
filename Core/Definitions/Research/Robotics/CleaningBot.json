@@ -1,0 +1,23 @@
+{
+    "Id" : "Research/Robotics/CleaningBot",
+    "Tier" : 2,
+    "IsAbstract" : true,
+    "PreviewIcon" : "Icons/Color/PreviewCleaningBot01",
+    "NameKey" : "beings.cleaningbot01",
+    "Researchable" : {
+        "IsTreeNode" : true,
+        "Prerequisites" : [
+            "Research/Robotics/PartsBasic"
+        ],
+        "DatoidCosts" : [
+            {
+                "TypeId" : "DatoidBasic",
+                "StackSize" : 19
+            },
+            {
+                "TypeId" : "DatoidTech",
+                "StackSize" : 13
+            }
+        ]
+    }
+}

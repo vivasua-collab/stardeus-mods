@@ -1,0 +1,10 @@
+{
+    "Type": "DatoidAlien",
+    "Ingredients": [
+        { "TypeId" : "EggShell", "StackSize" : 1 },
+        { "TypeId" : "CrawlerGoo", "StackSize" : 1 }
+    ],
+    "ProductDefId": "Obj/Datoids/DatoidAlien",
+    "ProductionTimeHours": 2.0,
+    "EnergyCost": 150.0
+}

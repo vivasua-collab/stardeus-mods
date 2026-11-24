@@ -1,0 +1,12 @@
+{
+    "Type" : "Ore",
+    "Ingredients" : [
+        { "TypeId" : "ScrapMetal", "StackSize" : 1 }
+    ],
+    "OutputMultiplier" : 1,
+    "ListOrder" : 100,
+    "ProductDefId" : "Obj/Materials/SteelPlate",
+    "ProductionTimeHours" : 0.5,
+    "EnergyCost" : 5,
+    "IgnoreMarket" : true
+}

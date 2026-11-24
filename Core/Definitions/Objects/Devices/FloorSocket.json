@@ -1,0 +1,75 @@
+{
+    "ToolPath" : "Energy",
+    "Layer" : "Objects",
+    "ParentId" : "Objects/Devices/EnergyConnector",
+    "Researchable" : {
+        "Prerequisites" : [ "Research/Energy/ConnectorImproved" ]
+    },
+    "TranslationVars" : [ "32", "8" ],
+    "Spawnable" : {
+        "Category": "Connector",
+        "Chance" : 1.0,
+        "ChanceLocked" : 0.5
+    },
+    "Components" : [
+        {
+            "Component" : "TileTransform",
+            "Properties" : [
+                { "Key" : "IsRotatable", "Bool" : false },
+                { "Key" : "CoverPercent", "Int" : 0 }
+            ]
+        },
+        {
+            "Component" : "TileGraphics",
+            "Properties" : [
+                { "Key" : "Graphic", "String": "Objects/Devices/FloorSocket" },
+                { "Key" : "HasHeight", "Bool" : false }
+            ]
+        },
+        {
+            "Component" : "LightSource",
+            "Properties" : [
+                { "Key" : "Radius", "Float" : 4 },
+                { "Key" : "Color", "IntSet" : [ 102, 143, 204, 128 ] }
+            ]
+        },
+        {
+            "Component" : "Passability",
+            "Properties" : [
+                { "Key" : "IsPassable", "Bool" : true },
+                { "Key" : "IsWalkable", "Bool" : true },
+                { "Key" : "Difficulty", "Float" : 0 }
+            ]
+        },
+        {
+            "Component" : "ElectricNode",
+            "Properties" : [
+                { "Key" : "IsConnector", "Bool" : true },
+                { "Key" : "MaxConnections", "Int" : 32 },
+                { "Key" : "ConnectorRange", "Int" : 8 }
+            ]
+        },
+        {
+            "Component" : "WithFuse",
+            "Properties" : [
+                { "Key" : "MalfunctionWeight", "Float": 0.25 },
+                // Has special event
+                { "Key" : "CanHaveGenericMalfunction", "Bool": false }
+            ]
+        },
+        {
+            "Component" : "Constructable",
+            "Properties" : [
+                { "Key" : "WorkAmount", "Int" : 300 },
+                { "Key" : "CanReplaceGroup", "String" : "EnergyConnector" },
+                {
+                    "Key" : "Contents",
+                    "RawMaterials" : [
+                        { "TypeId" : "TitaniumPlate", "StackSize" : 1 },
+                        { "TypeId" : "CopperWire", "StackSize" : 1 }
+                    ]
+                }
+            ]
+        }
+    ]
+}

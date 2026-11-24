@@ -1,0 +1,10 @@
+{
+    "Id" : "Obj/Materials/TitaniumPlate",
+    "Type" : "CFD",
+    "Groups" : [ "Material" ],
+    "Value" : 74.0,
+    "Rarity" : 0.4,
+    "TraderQuantity" : 1000.0,
+    "MinSectorDifficulty" : 0.4,
+    "Volatility" : 0.0016
+}

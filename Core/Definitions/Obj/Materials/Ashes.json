@@ -1,0 +1,36 @@
+{
+    "Layer" : "FreeEntities",
+    "ParentId" : "Obj/Materials/BaseMaterial",
+    "IgnoreMarket" : true,
+    "Components" : [
+        {
+            "Component" : "Flammable",
+            "Properties" : [
+                { "Key" : "IsTemperatureResistant", "Bool" : true }
+            ]
+        },
+        {
+            "Component" : "StorableObj",
+            "Properties" : [
+                { "Key" : "Group", "String" : "Ashes" }
+            ]
+        },
+        {
+            "Component" : "ObjGraphics",
+            "Properties" : [
+                { "Key" : "Graphic", "String": "Obj/Materials/Ashes" },
+                { "Key" : "Scale", "Float": 0.66 }
+            ]
+        },
+        {
+            "Component" : "UnstoredMat",
+            "Properties" : [
+                { "Key" : "Type", "String" : "Ashes" }
+            ]
+        },
+        {
+            "Component" : "BeingAshes"
+        }
+    ]
+}
+

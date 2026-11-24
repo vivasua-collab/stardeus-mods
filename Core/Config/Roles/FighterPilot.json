@@ -1,0 +1,17 @@
+{
+    "Id" : "FighterPilot",
+    "LovesJobTypes" : [ "Piloting" ],
+    "RoleTypes" : [ ],
+    "Species" : [ "Human", "Robot", "Sentry", "Orbotron" ],
+    "AgePhaseIds" : [ "YoungAdult", "MidLife" ],
+    "AdjustsSkills" : [
+        {
+            "JobId" : "Piloting",
+            "Adjustment" : 8
+        },
+        {
+            "JobId" : "Shooting",
+            "Adjustment" : 4
+        }
+    ]
+}

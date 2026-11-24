@@ -1,0 +1,21 @@
+{
+    "Id" : "Dancer",
+    "Species" : [ "Human", "Robot", "CleaningBot" ],
+    "BodyTypes" : "MFT",
+    "RoleTypes" : [ "Dumb", "Poor" ],
+    "AgePhaseIds" : [ "YoungAdult", "MidLife" ],
+    "AdjustsSkills" : [
+        {
+            "JobId" : "Social",
+            "Adjustment" : 4
+        },
+        {
+            "JobId" : "Crafting",
+            "Adjustment" : 2
+        },
+        {
+            "JobId" : "Construction",
+            "Adjustment" : -1
+        }
+    ]
+}

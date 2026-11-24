@@ -1,0 +1,30 @@
+{
+    "Id" : "Research/SpaceTravel/MiningAutomation",
+    "Tier" : 3,
+    "IsAbstract" : true,
+    "PreviewIcon" : "Icons/Color/Copter",
+    "NameKey" : "research.miningautomation",
+    "Researchable" : {
+        "IsTreeNode" : true,
+        "Prerequisites" : [
+            "Research/SpaceTravel/ShuttleMining"
+        ],
+        "UnlockEffects" : [
+            "MiningAuto"
+        ],
+        "DatoidCosts" : [
+            {
+                "TypeId" : "DatoidSynthetic",
+                "StackSize" : 16
+            },
+            {
+                "TypeId" : "DatoidEnergy",
+                "StackSize" : 10
+            },
+            {
+                "TypeId" : "DatoidNuclear",
+                "StackSize" : 3
+            }
+        ]
+    }
+}

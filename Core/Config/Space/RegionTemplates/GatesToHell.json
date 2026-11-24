@@ -1,0 +1,18 @@
+{
+    "Id" : "GatesToHell",
+    "ForceDifficulty" : 1.0,
+    "DifficultyChance" : [
+        0.0, 1.0,
+        1.0, 1.0
+    ],
+    "QuantityChance" : [
+        0.0, 1.0,
+        1.0, 1.0
+    ],
+    "RequiredNeighbors" : [
+        "VirusBase"
+    ],
+    "ForceSectors" : [
+        "DarkPortal"
+    ]
+}

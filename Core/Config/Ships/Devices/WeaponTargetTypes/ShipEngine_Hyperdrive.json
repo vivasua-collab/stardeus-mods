@@ -1,0 +1,13 @@
+{
+    "Id" : "ShipEngine_Hyperdrive",
+    "GroupId" : "ShipDevice_3_Engine",
+    "GroupNameKey" : "noun.ship",
+    "NameKey" : "noun.hyperdrive",
+    "Icon" : "Icons/Color/HyperspaceEnter",
+    "DefaultTargetByWeaponTypes" : [
+        "Ballistic",
+        "Missile",
+        "Laser",
+        "Plasma"
+    ]
+}

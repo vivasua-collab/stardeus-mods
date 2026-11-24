@@ -1,0 +1,79 @@
+{
+    "SkipToolListing" : true,
+    "Layer" : "Objects",
+    "ToolPath" : "Decorations",
+    "ParentId" : "Objects/Devices/BaseDevice",
+    "Spawnable" : {
+        "Chance" : 0.0,
+        "ChanceLocked" : 0.0
+    },
+    "Components" : [
+        {
+            "Component" : "TileTransform",
+            "Properties" : [
+                { "Key" : "IsRotatable", "Bool" : true },
+                { "Key" : "CoverPercent", "Int" : 75 },
+                { "Key" : "WorkSpot", "Vector2" : { "x" : 0, "y" : -1 } }
+            ]
+        },
+        {
+            "Component" : "TileGraphics",
+            "Properties" : [
+                { "Key" : "Type", "String": "Object" },
+                { "Key" : "HasHeight", "Bool" : true },
+                { "Key" : "Graphic", "String": "Objects/Devices/PentagramStatue" }
+            ]
+        },
+        {
+            "Component" : "Flammable",
+            "Properties" : [
+                { "Key" : "IgnitionTemperatureCelsius", "Int" : 200 },
+                { "Key" : "FireChance", "Float" : 0.75 },
+                { "Key" : "BaseExplosionLevel", "Int" : 7 },
+                { "Key" : "FlammabilityCurve", "String" : "DeviceHigh" },
+                { "Key" : "ExplosivenessCurve", "String" : "Device" }
+            ]
+        },
+        {
+            "Component" : "LightSource",
+            "Properties" : [
+                { "Key" : "NeedsEnergy", "Bool" : false },
+                { "Key" : "Color", "IntSet" : [ 221, 34, 34, 196 ] },
+                { "Key" : "PulsateColor", "IntSet" : [ 234, 123, 123, 128 ] },
+                { "Key" : "FrequencyRange", "Vector2" : { "x" : 1, "y" : 5 } },
+                { "Key" : "Radius", "Float" : 7 }
+            ]
+        },
+        {
+            "Component" : "Admirable",
+            "Properties" : [
+                { "Key" : "Amount", "Int" : 1 },
+                { "Key" : "Multiplier", "Float" : 0.3 },
+                { "Key" : "Chance", "Float" : 0.5 }
+            ]
+        },
+        {
+            "Component" : "Passability",
+            "Properties" : [
+                { "Key" : "IsPassable", "Bool" : false },
+                { "Key" : "IsWalkable", "Bool" : false },
+                { "Key" : "Difficulty", "Float" : 1 }
+            ]
+        },
+        {
+            "Component" : "Constructable",
+            "Properties" : [
+                { "Key" : "WorkAmount", "Int" : 1000 },
+                {
+                    "Key" : "Contents",
+                    "RawMaterials" : [
+                        { "TypeId" : "TitaniumPlate", "StackSize" : 2 },
+                        { "TypeId" : "Rubber", "StackSize" : 1 },
+                        { "TypeId" : "DarkMatter", "StackSize" : 3 },
+                        { "TypeId" : "NuclearCell", "StackSize" : 1 }
+                    ]
+                }
+            ]
+        }
+    ]
+}

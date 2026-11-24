@@ -1,0 +1,102 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Stardeus LookPartTypeDef",
+  "description": "Generated from C# by Game/Generate JSON Schemas, do not edit by hand",
+  "$ref": "#/$defs/LookPartTypeDef",
+  "$defs": {
+    "LookPartTypeDef": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "Id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "IdH": {
+          "type": "integer"
+        },
+        "BitIndex": {
+          "type": "integer"
+        },
+        "IsFace": {
+          "type": "boolean"
+        },
+        "SortOrder": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "SortOrderDirectional": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "IgnoreSortAdjustment": {
+          "type": "boolean"
+        },
+        "SpriteCategory": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "Gen": {
+          "anyOf": [
+            {
+              "type": "string",
+              "enum": [
+                "Standard",
+                "DerivedFromBody",
+                "MirrorPair",
+                "None"
+              ]
+            },
+            {
+              "type": "integer"
+            }
+          ]
+        },
+        "VarTag": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "ColorSource": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "MirrorOf": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "IncludeNeutral": {
+          "type": "boolean"
+        },
+        "EyeSpriteFiltering": {
+          "type": "boolean"
+        },
+        "HideInBed": {
+          "type": "boolean"
+        }
+      },
+      "additionalProperties": false
+    }
+  }
+}

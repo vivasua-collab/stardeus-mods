@@ -1,0 +1,12 @@
+{
+    "Id" : "Selectable/Event",
+
+    "CBColorNormal" : "UI/Btn/Normal",
+    "CBColorHighlighted" : "UI/Btn/Highlighted",
+    "CBColorPressed" : "UI/Btn/Pressed",
+    "CBColorSelected" : "UI/Btn/Selected",
+    "CBColorDisabled" : "UI/Btn/Disabled",
+
+    "CBColorMultiplier" : 1.0,
+    "CBFadeDuration" : 0.1
+}

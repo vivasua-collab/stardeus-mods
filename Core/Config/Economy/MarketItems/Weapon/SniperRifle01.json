@@ -1,0 +1,11 @@
+{
+    "Id" : "Obj/Equipment/Weapons/SniperRifle01",
+    "Type" : "CFD",
+    "Groups" : [ "Weapon" ],
+    "Value" : 2400.0,
+    "Rarity" : 0.3,
+    "TraderQuantity" : 1.0,
+    "MaxTraderQuantity" : 5,
+    "MinSectorDifficulty" : 0.7,
+    "Volatility" : 0.0028
+}

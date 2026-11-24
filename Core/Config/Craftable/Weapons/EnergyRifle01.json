@@ -1,0 +1,15 @@
+{
+    "Type": "Weapons3",
+    "Ingredients": [
+        { "TypeId" : "TitaniumPlate", "StackSize" : 2 },
+        { "TypeId" : "Microchip", "StackSize" : 2 },
+        { "TypeId" : "OpticalFiber", "StackSize" : 2 },
+        { "TypeId" : "Transistor", "StackSize" : 10 },
+        { "TypeId" : "Plastic", "StackSize" : 3 },
+        { "TypeId" : "NuclearCell", "StackSize" : 1 }
+    ],
+    "IgnoreMarket" : true,
+    "ProductDefId": "Obj/Equipment/Weapons/EnergyRifle01",
+    "ProductionTimeHours": 8.0,
+    "EnergyCost": 100.0
+}

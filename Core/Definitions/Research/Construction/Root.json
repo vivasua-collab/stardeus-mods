@@ -1,0 +1,10 @@
+{
+    "Id" : "Research/Construction/Root",
+    "Tier" : 0,
+    "IsAbstract" : true,
+    "PreviewIcon" : "Icons/Color/Hammer",
+    "NameKey" : "research.construction",
+    "Researchable" : {
+        "IsTreeNode" : true
+    }
+}

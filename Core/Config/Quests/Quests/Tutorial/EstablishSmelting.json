@@ -1,0 +1,98 @@
+{
+    "QuestFlags" : [ "Tutorial", "AutoAdd", "Unique" ],
+    "TitleKey" : "quest.EstablishSmelting",
+    "DescKey" : "quest.EstablishSmelting.desc",
+    "QuestProviders" : [
+        "ShipComputer"
+    ],
+    // A leaf. The furnace has nothing useful to do while the starting plate stock lasts, so
+    // it waits until the first expedition brings ore.
+    "AvailableWhen" : [
+        "ReadyForTutorialQuests",
+        "HadExpedition"
+    ],
+    "SetOnComplete" : [ "HasEstablishedSmelting" ],
+    "SetOnFail" : [ "HasEstablishedSmelting" ],
+    "BoundTutorialIds": [ "Resources/ConfigureCrafter" ],
+    "Steps" : [
+        {
+            // Smelting is the first research that costs Tech Datoids, and no earlier
+            // quest makes them. Without this step the node only reads "Locked".
+            "Id": "HaveTechDatoids",
+            "Type" : "HaveResearchDatoids",
+            "StepFlags" : [ "ActiveOnStart" ],
+            "Config" : [
+                { "Key" : "Research", "String" : "Research/Production/Smelting" },
+                { "Key" : "MatType", "String" : "DatoidTech" }
+            ],
+            "SetOnComplete" : [
+                "HasTechDatoids"
+            ]
+        },
+        {
+            "Id": "ResearchSmelting",
+            "Type" : "UnlockResearch",
+            "Config" : [
+                { "Key" : "Research", "String" : "Research/Production/Smelting" }
+            ],
+            "ActivateWhen" : [
+                "HasTechDatoids"
+            ],
+            "SetOnComplete" : [
+                "UnlockedSmelting"
+            ]
+        },
+        {
+            "Id": "HaveFurnace",
+            "Type" : "HaveOnGrid",
+            "Config" : [
+                { "Key" : "Definition", "String" : "Objects/Devices/Furnace" },
+                { "Key" : "Count", "Int" : 1 }
+            ],
+            "ActivateWhen" : [
+                "UnlockedSmelting"
+            ],
+            "SetOnComplete" : [
+                "HasFurnace"
+            ]
+        },
+        {
+            "Id": "ConfigureFurnace",
+            "Type" : "ConfigureCrafter",
+            "ActivateWhen" : [
+                "HasFurnace"
+            ],
+            "SetOnComplete" : [
+                "HasConfiguredFurnace"
+            ],
+            "Config" : [
+                {
+                    "Key" : "Crafter",
+                    "String" : "Objects/Devices/Furnace"
+                },
+                {
+                    "Key" : "Product",
+                    "String" : "Obj/Materials/CopperPlate"
+                }
+            ]
+        },
+        {
+            // It was steel plate before, but producing steel plates
+            // with furnace in early game sucks because we also deconstruct
+            // stuff and get a ton of extra steel plates that kills the furnace
+            // target. Copper plates are more reasonable since they don't get
+            // acquired like steel plates do. Id remains the same to not break
+            // tests where saves with this step id are loaded
+            "Id": "ProduceSteelPlate",
+            "StepFlags" : [ "CompletesQuest" ],
+            "Type" : "Produce",
+            "ActivateWhen" : [
+                "HasConfiguredFurnace"
+            ],
+            "Config" : [
+                { "Key" : "Product", "String" : "Obj/Materials/CopperPlate" },
+                { "Key" : "Count", "Int" : 5 }
+            ]
+        }
+    ]
+}

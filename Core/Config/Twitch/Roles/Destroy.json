@@ -1,0 +1,10 @@
+{
+    "Id" : "Destroy",
+    "AlwaysAddFor" : [
+        "Broadcaster",
+        "Moderator",
+        "VIP",
+        "Subscriber"
+    ],
+    "AddAtReputation" : 600
+}

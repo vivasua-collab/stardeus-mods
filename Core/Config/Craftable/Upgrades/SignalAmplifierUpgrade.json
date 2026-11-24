@@ -1,0 +1,14 @@
+{
+    "Type": "Upgrades",
+    "Ingredients": [
+        { "TypeId" : "DarkMatter", "StackSize" : 5 },
+        { "TypeId" : "Microchip3", "StackSize" : 15 },
+        { "TypeId" : "OpticalFiber", "StackSize" : 10 },
+        { "TypeId" : "GoldWire", "StackSize" : 8 },
+        { "TypeId" : "NuclearCell", "StackSize" : 4 }
+    ],
+    "IgnoreMarket" : true,
+    "ProductDefId": "Obj/Upgrades/SignalAmplifierUpgrade",
+    "ProductionTimeHours": 120.0,
+    "EnergyCost": 150.0
+}

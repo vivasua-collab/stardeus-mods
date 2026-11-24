@@ -1,0 +1,12 @@
+{
+    "BitIndex": 6,
+    "SortOrder": "BeingBodyFront",
+    "SortOrderDirectional": [
+        "BeingBodyFront",
+        "BeingBodyBack",
+        "BeingBodyBack",
+        "BeingBodyFront"
+    ],
+    "SpriteCategory": "Weapons",
+    "Gen": "None"
+}

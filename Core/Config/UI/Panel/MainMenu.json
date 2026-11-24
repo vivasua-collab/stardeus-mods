@@ -1,0 +1,10 @@
+{
+    "Id" : "Panel/MainMenu",
+
+    "Color" : "UI/Panel/MainMenu",
+    "Alpha" : 0.83,
+
+    "Image" : "UI/Panels/PanelBG",
+    "ImageType" : "Sliced",
+    "ImageBorderLBRT" : [ 28, 28, 12, 12 ]
+}

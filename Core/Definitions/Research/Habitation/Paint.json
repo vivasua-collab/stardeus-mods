@@ -1,0 +1,30 @@
+{
+    "Id" : "Research/Habitation/Paint",
+    "Tier" : 3,
+    "IsAbstract" : true,
+    "PreviewIcon" : "Icons/Color/Paint",
+    "NameKey" : "research.paint",
+    "Researchable" : {
+        "IsTreeNode" : true,
+        "Prerequisites" : [
+            "Research/Habitation/Decorations"
+        ],
+        "UnlockEffects" : [
+            "PaintUnlocked"
+        ],
+        "DatoidCosts" : [
+            {
+                "TypeId" : "DatoidPhyto",
+                "StackSize" : 4
+            },
+            {
+                "TypeId" : "DatoidBiotic",
+                "StackSize" : 7
+            },
+            {
+                "TypeId" : "DatoidSynthetic",
+                "StackSize" : 4
+            }
+        ]
+    }
+}

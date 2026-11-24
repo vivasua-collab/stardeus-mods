@@ -1,0 +1,23 @@
+{
+    "Id" : "Seaman",
+    "Species" : [ "Human" ],
+    "RoleTypes" : [ ],
+    "AgePhaseIds" : [ "YoungAdult", "MidLife", "Retirement" ],
+    "LovesJobTypes" : [ "Expedition" ],
+    "SexChances" : [
+        {
+            "Sex" : "M",
+            "Chance" : 1.0
+        }
+    ],
+    "AdjustsSkills" : [
+        {
+            "JobId" : "Crafting",
+            "Adjustment" : 2
+        },
+        {
+            "JobId" : "Cleaning",
+            "Adjustment" : 4
+        }
+    ]
+}

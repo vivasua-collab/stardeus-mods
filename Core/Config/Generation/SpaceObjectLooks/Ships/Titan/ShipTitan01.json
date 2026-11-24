@@ -1,0 +1,15 @@
+{
+    "Id" : "ShipTitan01",
+    "Probability" : 1.0,
+    "StarmapSizeMul" : 0.5,
+    "StarfieldSizeMul" : 0.25,
+    "IsConstantSizeInStarmap" : false,
+    "OrderDist" : -50,
+    "Sprite" : "SpaceObjects/Ships/ShipTitan01_D",
+    "CanRotate" : true,
+    "KeepUprightInStarfield" : true,
+    "Sprite_L" : "SpaceObjects/Ships/ShipTitan01_L",
+    "Sprite_R" : "SpaceObjects/Ships/ShipTitan01_R",
+    "Sprite_U" : "SpaceObjects/Ships/ShipTitan01_U",
+    "Sprite_D" : "SpaceObjects/Ships/ShipTitan01_D"
+}

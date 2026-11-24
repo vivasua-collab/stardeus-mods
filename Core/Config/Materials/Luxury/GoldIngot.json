@@ -1,0 +1,8 @@
+{
+    "Id" : "GoldIngot",
+    "IsComposite" : true,
+    "IconId" : "Obj/Materials/GoldIngot",
+    "EnergyOutput" : 1230.0,
+    "GroupId" : "Plates",
+    "Rarity" : 20
+}

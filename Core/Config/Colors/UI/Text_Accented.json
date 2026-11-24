@@ -1,0 +1,9 @@
+{
+    "Id" : "UI/Text/Accented",
+    "AliasFor" : "UI/Saturated/Comp",
+    // same as overlay toggled
+    // "Hex" : "80D2B4",
+    // "Hex" : "ECDBAC",
+    "Alpha" : 1.0,
+    "SkipAtlas" : true
+}

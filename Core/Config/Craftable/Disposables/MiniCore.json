@@ -1,0 +1,12 @@
+{
+    "Type" : "Disposable",
+    "ProductDefId" : "Obj/Parts/Core/MiniCore",
+    "ProductionTimeHours" : 2,
+    "EnergyCost" : 10,
+    "IgnoreMarket" : true,
+    "DisposableOutput" : [
+        { "TypeId" : "OpticalFiber", "StackSize" : 5 },
+        { "TypeId" : "Microchip3", "StackSize" : 3 },
+        { "TypeId" : "PlatinumIngot", "StackSize" : 3 }
+    ]
+}

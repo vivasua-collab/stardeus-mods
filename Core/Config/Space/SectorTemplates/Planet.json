@@ -1,0 +1,32 @@
+{
+    "Id" : "Planet",
+    "Type" : "Planet",
+    "MustHavePOIs" : true,
+    "HasOrbit" : true,
+    "TemplateWeight" : 0.7,
+    "NumPOIsChance" : [
+        0.0, 0.0,
+        0.1, 1.0,
+        0.5, 2.0,
+        0.9, 3.0,
+        1.0, 4.0
+    ],
+    "NumDepositsChance" : [
+        0.0, 1.0,
+        0.1, 2.0,
+        0.5, 2.0,
+        0.9, 3.0,
+        1.0, 4.0
+    ],
+    "NumFactionsChance" : [
+        0.0, 1.0,
+        0.5, 1.0,
+        0.9, 2.0,
+        1.0, 5.0
+    ],
+    "NPCShipDensity" : [
+        0.0, 1.0,
+        1.0, 2.0
+    ]
+
+}

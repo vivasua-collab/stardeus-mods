@@ -1,0 +1,27 @@
+{
+    "Type" : "BedroomLarge",
+    "SizeMin" : 50,
+    "SizeMax" : 100,
+    "CountMin" : 3,
+    "CountMax" : 6,
+    "Chance" : 1.0,
+    "FillMin" : 0.15,
+    "FillMax" : 0.3,
+    "RequiredObjects" : [
+        "Objects/Devices/Heater",
+        "Objects/Devices/OxygenPump"
+    ],
+    "CompatibleObjects" : [
+        "Objects/Furniture/BedWood",
+        "Objects/Devices/Heater",
+        "Objects/Devices/OxygenPump"
+    ],
+    "CompatibleTemplates" : [
+        "Templates/Bedroom01",
+        "Templates/Bedroom02",
+        "Templates/Bedroom03",
+        "Templates/Bedroom04",
+        "Templates/Hygiene01",
+        "Templates/HeaterOxygen01"
+    ]
+}

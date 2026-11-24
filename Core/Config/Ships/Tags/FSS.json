@@ -1,0 +1,9 @@
+// FSS: Frontier Space Station
+{
+    "ChanceWillTrade" : 1.0,
+    "CompatibleClasses" : [
+        "SpaceStation"
+    ],
+    "MinOffensiveness" : 0.7,
+    "MaxOffensiveness" : 1.0
+}

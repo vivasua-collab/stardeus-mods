@@ -1,0 +1,10 @@
+{
+    "Type" : "Hyperfuel",
+    "Ingredients" : [
+        { "TypeId" : "Phasium", "StackSize" : 1 },
+        { "TypeId" : "SteelPlate", "StackSize" : 1 }
+    ],
+    "ProductDefId" : "Obj/Materials/FusionCell",
+    "ProductionTimeHours" : 3,
+    "EnergyCost" : 20
+}

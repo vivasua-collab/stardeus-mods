@@ -1,0 +1,18 @@
+{
+    "Id" : "Selectable/MainMenuButton",
+
+    "CBColorNormal" : "UI/Main/Primary",
+    "CBColorHighlighted" : "UI/Main/Primary+1",
+    "CBColorPressed" : "UI/Main/Primary+2",
+    "CBColorSelected" : "UI/Main/Primary+1",
+    "CBColorDisabled" : "UI/Grey/Primary-1",
+
+    "CBAlphaNormal" : 0.9,
+    "CBAlphaHighlighted" : 0.9,
+    "CBAlphaPressed" : 0.9,
+    "CBAlphaSelected" : 0.9,
+    "CBAlphaDisabled" : 0.9,
+
+    "CBColorMultiplier" : 1.0,
+    "CBFadeDuration" : 0.1
+}

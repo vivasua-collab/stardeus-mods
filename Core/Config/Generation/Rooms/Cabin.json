@@ -1,0 +1,24 @@
+{
+    "Type" : "Cabin",
+    "SizeMin" : 4,
+    "SizeMax" : 16,
+    "CountMin" : 6,
+    "CountMax" : 12,
+    "Chance" : 1.0,
+    "FillMin" : 0.1,
+    "FillMax" : 0.8,
+    "RequiredObjects" : [
+        "Objects/Furniture/BedWood"
+    ],
+    "CompatibleObjects" : [
+        "Objects/Devices/Heater",
+        "Objects/Devices/OxygenPump"
+    ],
+    "CompatibleTemplates" : [
+        "Templates/Cabin01",
+        "Templates/Cabin02",
+        "Templates/Cabin03",
+        "Templates/Cabin04"
+    ]
+}
+

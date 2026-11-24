@@ -1,0 +1,18 @@
+{
+    "Id" : "Technophobe",
+    "IconId" : "Icons/Color/Leaf",
+    "TypeId" : "Intellectual",
+    "Rarity" : 0.5,
+    "IncompatibleTraitIds" : [
+        "Technophile"
+    ],
+    "AddsStatModifiers" : [
+        {
+            "Component" : "AIAlignment",
+            "Properties" : [
+                { "Key" : "Value", "Float" : -0.33 },
+                { "Key" : "Type", "String" : "Adds" }
+            ]
+        }
+    ]
+}

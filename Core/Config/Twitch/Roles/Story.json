@@ -1,0 +1,10 @@
+{
+    "Id" : "Story",
+    "AlwaysAddFor" : [
+        "Broadcaster",
+        "Moderator",
+        "VIP",
+        "Subscriber"
+    ],
+    "AddAtReputation" : 600
+}

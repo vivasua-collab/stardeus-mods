@@ -1,0 +1,115 @@
+{
+    "ToolPath" : "SpaceTravel",
+    "Layer" : "Objects",
+    "ParentId" : "Objects/Devices/BaseDevice",
+    "Researchable" : {
+        "Prerequisites" : [
+            "Research/SpaceTravel/Bridge"
+        ]
+    },
+    "Spawnable" : {
+        "Category": "RareDevice",
+        "Chance" : 1.0,
+        "ChanceLocked" : 0
+    },
+    "Components" : [
+        {
+            "Component" : "TileTransform",
+            "Properties" : [
+                { "Key" : "Width", "Int" : 3 },
+                { "Key" : "Height", "Int" : 2 },
+                { "Key" : "CoverPercent", "Int" : 75 },
+                { "Key" : "IsRotatable", "Bool" : true },
+                { "Key" : "WorkSpot", "Vector2" : { "x" : 1, "y" : -1 } }
+            ]
+        },
+        {
+            "Component" : "Flammable",
+            "Properties" : [
+                { "Key" : "IgnitionTemperatureCelsius", "Int" : 350 },
+                { "Key" : "FireChance", "Float" : 0.5 },
+                { "Key" : "BaseExplosionLevel", "Int" : 2 },
+                { "Key" : "FlammabilityCurve", "String" : "DeviceHigh" },
+                { "Key" : "ExplosivenessCurve", "String" : "DeviceLow" }
+            ]
+        },
+        { "Component" : "SafetyCheck" },
+        {
+            "Component" : "TileGraphics",
+            "Properties" : [
+                { "Key" : "Type", "String": "Object" },
+                { "Key" : "Graphic", "String": "Objects/Devices/BridgeControls" },
+                { "Key" : "HasHeight", "Bool" : false }
+            ]
+        },
+        {
+            "Component" : "Passability",
+            "Properties" : [
+                { "Key" : "IsPassable", "Bool" : false },
+                { "Key" : "IsWalkable", "Bool" : false },
+                { "Key" : "Difficulty", "Float" : 1 }
+            ]
+        },
+        {
+            "Component" : "ElectricNode",
+            "Properties" : [
+                { "Key" : "Particles_D", "String" : "BridgeControlsFX_D" },
+                { "Key" : "Particles_U", "String" : "BridgeControlsFX_U" },
+                { "Key" : "Particles_L", "String" : "BridgeControlsFX_L" },
+                { "Key" : "Particles_R", "String" : "BridgeControlsFX_R" },
+                { "Key" : "IsConsumer", "Bool" : true }
+            ]
+        },
+        {
+            "Component" : "WithFuse",
+            "Properties" : [
+                { "Key" : "MalfunctionWeight", "Float": 0.05 }
+            ]
+        },
+        {
+            "Component" : "LightSource",
+            "Properties" : [
+                { "Key" : "Color", "IntSet" : [ 102, 158, 204, 128 ] },
+                { "Key" : "Radius", "Float" : 7 }
+            ]
+        },
+        {
+            "Component" : "BridgeControls",
+            "Properties" : [
+                { "Key" : "IsOperatorRequired", "Bool" : true }
+            ]
+        },
+        {
+            "Component" : "OperatableDevice" ,
+            "Properties" : [
+                { "Key" : "DefaultPriority", "Int" : 4 },
+                { "Key" : "JobType", "String" : "Piloting" },
+                { "Key" : "JobLevelUpSpeed", "Float" : 0.5 },
+                { "Key" : "AnimationType", "String" : "Strafe" },
+                { "Key" : "CanKeepOperator", "Bool" : true },
+                { "Key" : "OperatorOffsets", "Vector2Set" : [
+                    { "x" : 0, "y" : -0.9 },
+                    { "x" : -1.22, "y" : 0.27 },
+                    { "x" : 0, "y" : 1.2 },
+                    { "x" : 1, "y" : 0.25 }
+                ] }
+            ]
+        },
+        {
+            "Component" : "Constructable",
+            "Properties" : [
+                { "Key" : "WorkAmount", "Int" : 2000 },
+                {
+                    "Key" : "Contents",
+                    "RawMaterials" : [
+                        { "TypeId" : "SteelPlate", "StackSize" : 10 },
+                        { "TypeId" : "Glass", "StackSize" : 5 },
+                        { "TypeId" : "Microchip", "StackSize" : 1 },
+                        { "TypeId" : "OpticalFiber", "StackSize" : 1 },
+                        { "TypeId" : "CopperWire", "StackSize" : 5 }
+                    ]
+                }
+            ]
+        }
+    ]
+}

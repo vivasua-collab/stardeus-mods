@@ -1,0 +1,10 @@
+{
+    "IsAbstract" : true,
+    "ResearchValue" : 1,
+    "ParentId" : "BaseTile",
+    "Components" : [
+        { "Component" : "Upgrades" },
+        { "Component" : "Reinstallable" },
+        { "Component" : "TileLabel" }
+    ]
+}

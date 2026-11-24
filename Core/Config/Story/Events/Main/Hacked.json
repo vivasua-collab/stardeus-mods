@@ -1,0 +1,21 @@
+{
+    // C# implementation id. Multiple configurations can point to a single implementation.
+    "EventId": "Hacked",
+    // How much does this story event cost to run
+    "Points": 14,
+    // Options: Negative, Positive, Neutral, Raid
+    "OutcomeType": "Negative",
+    // Full list is in StoryEventFlags class
+    "EventFlags": [
+        "Being",
+        "Annoying"
+    ],
+    "MinRepeatDelayDays": 160,
+    // Full list of requirements can be found in Situation class
+    "Require": {
+        "SectorDifficulty": 0.6,
+        "Difficulty": 0.25,
+        "Days": 60,
+        "Workers": 8
+    }
+}

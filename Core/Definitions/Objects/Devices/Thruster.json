@@ -1,0 +1,113 @@
+{
+    "ToolPath" : "SpaceTravel",
+    "Layer" : "Objects",
+    "ParentId" : "Objects/Devices/BaseDevice",
+    "Researchable" : {
+        "Prerequisites" : [
+            "Research/SpaceTravel/Propulsion"
+        ]
+    },
+    "Components" : [
+        {
+            "Component" : "TileTransform",
+            "Properties" : [
+                { "Key" : "CoverPercent", "Int" : 0 },
+                { "Key" : "IsRotatable", "Bool" : true }
+            ]
+        },
+        {
+            "Component" : "IndustrialEquipment",
+            "Properties" : [
+                { "Key" : "IsNoisy", "Bool" : true }
+            ]
+        },
+        {
+            "Component" : "Damageable",
+            "Properties" : [
+                { "Key" : "Max", "Int": 100 }
+            ]
+        },
+        {
+            "Component" : "TileGraphics",
+            "Properties" : [
+                { "Key" : "Type", "String": "Object" },
+                { "Key" : "Graphic", "String": "Objects/Devices/Thruster" }
+            ]
+        },
+        {
+            "Component" : "ElectricNode",
+            "Properties" : [
+                { "Key" : "IsConsumer", "Bool" : true }
+            ]
+        },
+        {
+            "Component" : "WithFuse",
+            "Properties" : [
+                { "Key" : "MalfunctionWeight", "Float": 0.2 },
+                // Has special event (EngineFailure)
+                { "Key" : "CanHaveGenericMalfunction", "Bool": false }
+            ]
+        },
+        {
+            "Component" : "Flammable",
+            "Properties" : [
+                { "Key" : "IgnitionTemperatureCelsius", "Int" : 0 },
+                { "Key" : "FireChance", "Float" : 0.5 },
+                { "Key" : "BaseExplosionLevel", "Int" : 2 },
+                { "Key" : "FlammabilityCurve", "String" : "DeviceHigh" },
+                { "Key" : "ExplosivenessCurve", "String" : "DeviceHigh" }
+            ]
+        },
+        {
+            "Component" : "ShipEngine",
+            "Properties" : [
+                { "Key" : "Power", "Float" : 25 },
+                { "Key" : "EnergyCost", "Float" : 10 },
+                { "Key" : "WorksIn", "StringSet" : [ "Sector" ] },
+                { "Key" : "FlameSize", "Vector2" : { "x" : 1, "y" : 10 } },
+                { "Key" : "ParticleLifeTime", "Float" :  6.0 },
+                { "Key" : "LegacyEmissionEffect", "String" : "ShipThrusterFX" }
+            ]
+        },
+        {
+            "Component" : "ShipCombatEngine",
+            "Properties" : [
+                { "Key" : "ShipEngineId" , "String" : "Thruster" }
+            ]
+        },
+        {
+            "Component" : "AudioSource",
+            "Properties" : [
+                { "Key" : "AmbienceClip", "String" : "Ambience/EngineNoise" },
+                { "Key" : "IsLinkedToEnergy", "Bool" : true },
+                { "Key" : "Rolloff", "Vector2" : { "x" : 5, "y" : 35 } },
+                { "Key" : "Volume", "Float" : 0.75 }
+            ]
+        },
+        {
+            "Component" : "Passability",
+            "Properties" : [
+                { "Key" : "IsPassable", "Bool" : true },
+                { "Key" : "IsWalkable", "Bool" : false },
+                { "Key" : "Difficulty", "Float" : 0.9 }
+            ]
+        },
+        {
+            "Component" : "Constructable",
+            "Properties" : [
+                { "Key" : "Placement", "String" : "InSpaceAttached" },
+                { "Key" : "CanReplaceGroup", "String" : "Thruster" },
+                { "Key" : "WorkAmount", "Int" : 1000 },
+                {
+                    "Key" : "Contents",
+                    "RawMaterials" : [
+                        { "TypeId" : "SteelPlate", "StackSize" : 3 },
+                        { "TypeId" : "CopperWire", "StackSize" : 2 },
+                        { "TypeId" : "Microchip", "StackSize" : 2 },
+                        { "TypeId" : "Gears", "StackSize" : 3 }
+                    ]
+                }
+            ]
+        }
+    ]
+}

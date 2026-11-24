@@ -1,0 +1,27 @@
+{
+    "Id" : "Waitress",
+    "LovesJobTypes" : [ ],
+    "Species" : [ "Human" ],
+    "RoleTypes" : [ "Poor" ],
+    "AgePhaseIds" : [ "Childhood", "YoungAdult", "MidLife" ],
+    "SexChances" : [
+        {
+            "Sex" : "M",
+            "Chance" : 0.0
+        },
+        {
+            "Sex" : "F",
+            "Chance" : 1.0
+        }
+    ],
+    "AdjustsSkills" : [
+        {
+            "JobId" : "Cooking",
+            "Adjustment" : 2
+        },
+        {
+            "JobId" : "Social",
+            "Adjustment" : 4
+        }
+    ]
+}

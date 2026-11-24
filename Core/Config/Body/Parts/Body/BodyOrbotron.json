@@ -1,0 +1,87 @@
+{
+    "SlotTypeId" : "Body",
+    "Compatibility" : "TargetSpecies",
+    "TargetSpecies" : [ "Orbotron" ],
+    "PartFlags" : [ "Indestructible" ],
+    "ResistanceBase" : 22.0,
+    "Resistances" : [
+        { "DamageType" : "Energy", "Resistance" : 16.0 }
+    ],
+    "AddsAttackMethods" : [
+        {
+            "Component" : "BodySlam",
+            "Properties" : [
+                { "Key" : "AttackAction", "String" : "Melee" },
+                // above a riot shield bash and a rifle butt, but below every other melee weapon:
+                // a held weapon outranks the body's own attacks (WeaponChoiceTests)
+                { "Key" : "DPS", "Float" : 2.4 },
+                { "Key" : "AttackType", "String" : "Blunt" },
+                { "Key" : "ChargeSec", "Float" : 4.0 },
+                { "Key" : "CooldownSec", "Float" : 2.5 },
+                { "Key" : "MoveSpeedMul", "Float" : 0.05 },
+                { "Key" : "StunChanceBio", "Float" : 0.23 },
+                { "Key" : "StunChanceRobo", "Float" : 0.35 },
+                { "Key" : "BleedChance", "Float" : 0.1 },
+                { "Key" : "FatalHitChanceMul", "Float" : 0.0 },
+                { "Key" : "InternalHitChanceMul", "Float" : 0.0 }
+            ]
+        }
+    ],
+    "AddsAbilities" : [
+    ],
+    "AddsNeeds" : [
+        "Electricity",
+        "Maintenance",
+        "Temperature"
+    ],
+    "AddsStatModifiers" : [
+        {
+            "Component" : "MoveSpeed",
+            "Properties" : [
+                { "Key" : "Value", "Float" : -0.2 },
+                { "Key" : "Type", "String" : "AddsPercent" }
+            ]
+        }
+    ],
+    "ProvidesStats" : [
+        {
+            "Component" : "TempMax",
+            "Properties" : [
+                { "Key" : "StateMul", "Float" : 0.0 },
+                { "Key" : "QualityMul", "Float" : 0.1 },
+                { "Key" : "TemperatureCelsius", "Float" : 1000.0 }
+            ]
+        },
+        {
+            "Component" : "BatteryConsumption",
+            "Properties" : [
+                { "Key" : "AmountPerDay", "Float" : 65 },
+                { "Key" : "QualityMul", "Float" : 0.1 }
+            ]
+        },
+        {
+            "Component" : "ArmorSharp",
+            "Properties" : [
+                { "Key" : "Amount", "Float" : 6.0 }
+            ]
+        },
+        {
+            "Component" : "ArmorPiercing",
+            "Properties" : [
+                { "Key" : "Amount", "Float" : 6.0 }
+            ]
+        },
+        {
+            "Component" : "ArmorBlunt",
+            "Properties" : [
+                { "Key" : "Amount", "Float" : 7.0 }
+            ]
+        },
+        {
+            "Component" : "ArmorEnergy",
+            "Properties" : [
+                { "Key" : "Amount", "Float" : 4.0 }
+            ]
+        }
+    ]
+}

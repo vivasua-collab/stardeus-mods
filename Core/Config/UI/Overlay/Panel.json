@@ -1,0 +1,9 @@
+{
+    "Id" : "Overlay/Panel",
+
+    "Color" : "UI/Btn/OverlayActive",
+
+    "Image" : "UI/Buttons/ActiveOverlayPanel",
+    "ImageType" : "Sliced",
+    "ImageBorderLBRT" : [ 28, 28, 12, 12 ]
+}

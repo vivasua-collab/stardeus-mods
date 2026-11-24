@@ -1,0 +1,13 @@
+{
+    "Id" : "ShipWeapon_Plasma",
+    "GroupId" : "ShipDevice_1_Weapon",
+    "GroupNameKey" : "noun.ship",
+    "NameKey" : "research.shipcombat.weaponsplasma",
+    "Icon" : "Icons/Color/AttackTarget",
+    "DefaultTargetByWeaponTypes" : [
+        "Ballistic",
+        "Missile",
+        "Laser",
+        "Plasma"
+    ]
+}

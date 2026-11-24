@@ -1,0 +1,61 @@
+{
+    "SlotTypeId" : "Body",
+    "Compatibility" : "TargetSpecies",
+    "TargetSpecies" : [ "Crawler" ],
+    "PartFlags" : [ "Biological" ],
+    "ResistanceBase" : 5.0,
+    "Resistances" : [
+        { "DamageType" : "Energy", "Resistance" : 8.0 }
+    ],
+    "AddsAbilities" : [
+        "IdleHide"
+    ],
+    "AddsNeeds" : [
+        "Health",
+        "Hunger",
+        "Temperature",
+        "Faction"
+    ],
+    "ProvidesStats" : [
+        {
+            "Component" : "TempMax",
+            "Properties" : [
+                { "Key" : "StateMul", "Float" : 0.0 },
+                { "Key" : "QualityMul", "Float" : 0.01 },
+                { "Key" : "TemperatureCelsius", "Float" : 150.0 }
+            ]
+        },
+        {
+            "Component" : "WoundHealRate",
+            "Properties" : [
+                { "Key" : "StateMul", "Float" : 0.5 },
+                { "Key" : "QualityMul", "Float" : 0.5 },
+                { "Key" : "AmountPerDay", "Float" : 0.5 }
+            ]
+        },
+        {
+            "Component" : "BloodClotRate",
+            "Properties" : [
+                { "Key" : "StateMul", "Float" : 0.5 },
+                { "Key" : "QualityMul", "Float" : 0.5 },
+                { "Key" : "AmountPerDay", "Float" : 0.09 }
+            ]
+        },
+        {
+            "Component" : "Sight",
+            "Properties" : [
+                { "Key" : "CompoundLimit", "Float" : 1.0 },
+                { "Key" : "Amount", "Float" : 1.0 },
+                { "Key" : "StateMul", "Float" : 1.0 }
+            ]
+        },
+        {
+            "Component" : "HungerRate",
+            "Properties" : [
+                { "Key" : "StateMul", "Float" : 0.0 },
+                { "Key" : "QualityMul", "Float" : 0.1 },
+                { "Key" : "AmountPerDay", "Float" : 0.5 }
+            ]
+        }
+    ]
+}

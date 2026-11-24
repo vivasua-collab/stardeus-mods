@@ -1,0 +1,8 @@
+{
+    "Id" : "OpticalFiber",
+    "IsComposite" : true,
+    "IconId" : "Obj/Materials/OpticalFiber",
+    "GroupId" : "Electronics",
+    "EnergyOutput" : 270.0,
+    "Rarity" : 20
+}

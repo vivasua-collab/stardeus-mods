@@ -1,0 +1,11 @@
+{
+    // Skill level -> work speed. Research and plant work: 0.08 + 0.115 per level,
+    // divided by its value at level 3, the typical generated skill, so a typical colonist
+    // works at the speed the content is tuned for and experts much faster. Linear, so the
+    // points only mark the ends; levels 21-25 come from training only
+    "FloatSet" : [
+        0, 0.188,
+        20, 5.6,
+        25, 6.953
+    ]
+}

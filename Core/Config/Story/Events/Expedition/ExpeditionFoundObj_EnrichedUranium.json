@@ -1,0 +1,18 @@
+{
+    // C# implementation id.
+    "EventId": "ExpeditionFoundObj",
+    "Points": 10,
+    // Options: Negative, Positive, Neutral, Raid
+    "OutcomeType": "Positive",
+    // Full list is in StoryEventFlags class
+    "EventFlags": [
+        "Expedition",
+        "OnDemand"
+    ],
+    "Properties": [
+        { "Key": "LootDefId", "String": "Obj/Materials/EnrichedUranium" },
+        { "Key": "MinQuantity", "Int": 10 },
+        { "Key": "MaxQuantity", "Int": 30 },
+        { "Key": "FailureChance", "Float": 0.10 }
+    ]
+}

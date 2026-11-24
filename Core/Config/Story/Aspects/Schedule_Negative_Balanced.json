@@ -1,0 +1,51 @@
+{
+    // C# implementation id.
+    // Multiple configurations can point to a single implementation.
+    "AspectId" : "Schedule",
+    // Variables for the schedule on / off
+    "Properties" : [
+        { "Key" : "Outcome", "String" : "Negative" },
+        // Random fires, breaches and meteors wait until the tutorial spine is done: later than
+        // the first stasis wake-up and the first Positive / Neutral windows. This is the latest
+        // the first window opens; the scripted opening (Curated_Balanced) has its own beats
+        {
+            "Key" : "InitialDelayDaysCurve",
+            "FloatSet" : [
+                0.0, 18.0,
+                1.0, 22.0
+            ]
+        },
+        // Or this many days after the first expedition (the end of the spine), if that is
+        // sooner. Later than the Neutral window keyed to the same milestone
+        { "Key" : "OpenAfterQuestBool", "String" : "HadExpedition" },
+        {
+            "Key" : "OpenAfterDaysCurve",
+            "FloatSet" : [
+                0.0, 3.0,
+                1.0, 5.0
+            ]
+        },
+        // Periodic events a window may start (rolled per window)
+        {
+            "Key" : "EventsPerCycleCurve",
+            "FloatSet" : [
+                0.0, 1.0,
+                1.0, 2.0
+            ]
+        },
+        {
+            "Key" : "DaysCurve_On",
+            "FloatSet" : [
+                0.0, 2.0,
+                1.0, 3.0
+            ]
+        },
+        {
+            "Key" : "DaysCurve_Off",
+            "FloatSet" : [
+                0.0, 8.0,
+                1.0, 12.0
+            ]
+        }
+    ]
+}

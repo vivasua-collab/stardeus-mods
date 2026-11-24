@@ -1,0 +1,10 @@
+{
+    "Id" : "Panel/ScrollbarHandle",
+
+    "Color" : "FFFFFF",
+    "Alpha" : 1,
+
+    "Image" : "UI/Buttons/IconButtonBG",
+    "ImageType" : "Sliced",
+    "ImageBorderLBRT" : [ 12, 12, 12, 12 ]
+}

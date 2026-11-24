@@ -1,0 +1,28 @@
+{
+    "Id" : "Research/Security/EnergyWeapons",
+    "Tier" : 3,
+    "IsAbstract" : true,
+    "PreviewIcon" : "Obj/Weapons/EnergyRifle01/EnergyRifle01",
+    "NameKey" : "research.energyweapons",
+    "Researchable" : {
+        "IsTreeNode" : true,
+        "Prerequisites" : [
+            "Research/Security/PrecisionFirearms",
+            "Research/Security/Explosives"
+        ],
+        "DatoidCosts" : [
+            {
+                "TypeId" : "DatoidTech",
+                "StackSize" : 8
+            },
+            {
+                "TypeId" : "DatoidSynthetic",
+                "StackSize" : 6
+            },
+            {
+                "TypeId" : "DatoidEnergy",
+                "StackSize" : 16
+            }
+        ]
+    }
+}

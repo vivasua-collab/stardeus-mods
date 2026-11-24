@@ -1,0 +1,12 @@
+{
+    "Id" : "Obj/Upgrades/StarcredsMiningUpgrade",
+    "Type" : "CFD",
+    "Groups" : [ "Upgrade" ],
+    "Value" : 100000,
+    "Rarity" : 0.15,
+    "TraderQuantity" : 1.0,
+    "MaxTraderQuantity" : 1,
+    "MinSectorDifficulty" : 0.90,
+    "PlayerSellPriceMultiplier": 0.5,
+    "Volatility" : 0.0023
+}

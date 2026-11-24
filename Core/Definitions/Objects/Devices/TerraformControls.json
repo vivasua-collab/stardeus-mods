@@ -1,0 +1,102 @@
+{
+    "ToolPath" : "Special",
+    "Layer" : "Objects",
+    "ParentId" : "Objects/Devices/BaseDevice",
+    "Researchable" : {
+        "Prerequisites" : [
+            "Research/LifeSupport/TerraformControls"
+        ]
+    },
+    "Spawnable" : {
+        "Category": "RareDevice",
+        "SkipOwned": 1,
+        "Chance" : 1.0,
+        "ChanceLocked" : 0.0
+    },
+    "Components" : [
+        {
+            "Component" : "TileTransform",
+            "Properties" : [
+                { "Key" : "Width", "Int" : 3 },
+                { "Key" : "Height", "Int" : 2 },
+                { "Key" : "IsRotatable", "Bool" : true },
+                { "Key" : "WorkSpot", "Vector2" : { "x" : 1, "y" : -1 } }
+            ]
+        },
+        {
+            "Component" : "Flammable",
+            "Properties" : [
+                { "Key" : "IgnitionTemperatureCelsius", "Int" : 350 },
+                { "Key" : "FireChance", "Float" : 0.5 },
+                { "Key" : "FlammabilityCurve", "String" : "Device" }
+            ]
+        },
+        {
+            "Component" : "TileGraphics",
+            "Properties" : [
+                { "Key" : "Type", "String": "Object" },
+                { "Key" : "Graphic", "String": "Objects/Devices/TerraformControls" },
+                { "Key" : "HasHeight", "Bool" : false }
+            ]
+        },
+        {
+            "Component" : "Passability",
+            "Properties" : [
+                { "Key" : "IsPassable", "Bool" : false },
+                { "Key" : "IsWalkable", "Bool" : false },
+                { "Key" : "Difficulty", "Float" : 1 }
+            ]
+        },
+        {
+            "Component" : "ElectricNode",
+            "Properties" : [
+                { "Key" : "IsConsumer", "Bool" : true }
+            ]
+        },
+        {
+            "Component" : "WithFuse",
+            "Properties" : [
+                { "Key" : "MalfunctionWeight", "Float": 0.5 }
+            ]
+        },
+        { "Component" : "SafetyCheck" },
+        {
+            "Component" : "OperatableDevice",
+            "Properties" : [
+                { "Key" : "JobType", "String" : "Task" },
+                { "Key" : "AnimationType", "String" : "Strafe" },
+                { "Key" : "CanKeepOperator", "Bool" : true },
+                { "Key" : "OperatorOffsets", "Vector2Set" : [
+                    { "x" : -0.15, "y" : -0.5 },
+                    { "x" : -0.8, "y" : 0.4 },
+                    { "x" : 0.5, "y" : 1.0 },
+                    { "x" : 0.8, "y" : 0.0 }
+                ] }
+            ]
+        },
+        { "Component" : "TerraformControls" },
+        {
+            "Component" : "LightSource",
+            "Properties" : [
+                { "Key" : "Color", "IntSet" : [ 102, 158, 204, 128 ] },
+                { "Key" : "Radius", "Float" : 7 }
+            ]
+        },
+        {
+            "Component" : "Constructable",
+            "Properties" : [
+                { "Key" : "WorkAmount", "Int" : 1600 },
+                {
+                    "Key" : "Contents",
+                    "RawMaterials" : [
+                        { "TypeId" : "TitaniumPlate", "StackSize" : 3 },
+                        { "TypeId" : "Glass", "StackSize" : 2 },
+                        { "TypeId" : "Microchip3", "StackSize" : 5 },
+                        { "TypeId" : "OpticalFiber", "StackSize" : 1 },
+                        { "TypeId" : "Plastic", "StackSize" : 1 }
+                    ]
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,11 @@
+{
+    "Id" : "Bread",
+    "DefId" : "Obj/Meals/Bread",
+    "IsComposite" : true,
+    "IconId" : "Obj/Meals/Bread",
+    "Property" : "Nutrient",
+    "Group" : "Food",
+    "GroupId" : "Food",
+    "EnergyOutput" : 460.0,
+    "Rarity" : 70
+}

@@ -1,0 +1,9 @@
+{
+    "Id" : "Text/DataBlockAuto",
+
+    "Color" : "UI/Text/Main",
+    "Alpha" : 1,
+
+    "TextFontSize" : 20,
+    "TextOverflowMode" : "Overflow"
+}

@@ -1,0 +1,10 @@
+{
+    "Id" : "Text/DataBlockHeaderOverflow",
+
+    "Color" : "UI/Text/Main",
+    "Alpha" : 1,
+
+    "TextFontSize" : 22,
+    "TextFontStyles" : [ "Bold" ],
+    "TextOverflowMode" : "Overflow"
+}

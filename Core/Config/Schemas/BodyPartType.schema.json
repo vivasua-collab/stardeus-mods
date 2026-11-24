@@ -1,0 +1,99 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Stardeus BodyPartType",
+  "description": "Generated from C# by Game/Generate JSON Schemas, do not edit by hand",
+  "$ref": "#/$defs/BodyPartType",
+  "$defs": {
+    "BodyPartType": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "Id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "IdH": {
+          "type": "integer"
+        },
+        "NameT": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "Flags": {
+          "anyOf": [
+            {
+              "type": "string",
+              "pattern": "^\\s*(None|Removable|Internal|Limb|Essential|Biological|HoldsMind|Indestructible|Optional|SupportsMindTransfer|SupportsMLBooth|NeverGenerate)(\\s*,\\s*(None|Removable|Internal|Limb|Essential|Biological|HoldsMind|Indestructible|Optional|SupportsMindTransfer|SupportsMLBooth|NeverGenerate))*\\s*$"
+            },
+            {
+              "type": "integer"
+            }
+          ]
+        },
+        "Size": {
+          "type": "number"
+        },
+        "SubpartHitChance": {
+          "type": "number"
+        },
+        "ExtractRisk": {
+          "type": "number"
+        },
+        "ImplantRisk": {
+          "type": "number"
+        },
+        "FatalityRisk": {
+          "type": "number"
+        },
+        "RejectionRisk": {
+          "type": "number"
+        },
+        "SurgicalFatigue": {
+          "type": "number"
+        },
+        "IconId": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "AttachedTo": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "PartFlags": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "enum": [
+              "None",
+              "Removable",
+              "Internal",
+              "Limb",
+              "Essential",
+              "Biological",
+              "HoldsMind",
+              "Indestructible",
+              "Optional",
+              "SupportsMindTransfer",
+              "SupportsMLBooth",
+              "NeverGenerate"
+            ],
+            "type": "string"
+          }
+        }
+      },
+      "additionalProperties": false
+    }
+  }
+}

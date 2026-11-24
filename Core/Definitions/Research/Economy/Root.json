@@ -1,0 +1,9 @@
+{
+    "Id" : "Research/Economy/Root",
+    "Tier" : 0,
+    "IsAbstract" : true,
+    "PreviewIcon" : "Icons/Color/Starcreds",
+    "Researchable" : {
+        "IsTreeNode" : true
+    }
+}

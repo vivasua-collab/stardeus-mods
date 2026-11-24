@@ -1,0 +1,29 @@
+{
+    "Id" : "Research/RogueAI/CorticalOverride",
+    "Tier" : 5,
+    "IsAbstract" : true,
+    "PreviewIcon" : "Icons/Color/BodyRemoveOne",
+    "Researchable" : {
+        "IsTreeNode" : true,
+        "Prerequisites" : [
+            "Research/RogueAI/MindControl"
+        ],
+        "UnlockEffects" : [
+            "CorticalOverride"
+        ],
+        "DatoidCosts" : [
+            {
+                "TypeId" : "DatoidBiotic",
+                "StackSize" : 40
+            },
+            {
+                "TypeId" : "DatoidAlien",
+                "StackSize" : 16
+            },
+            {
+                "TypeId" : "DatoidQuantum",
+                "StackSize" : 11
+            }
+        ]
+    }
+}

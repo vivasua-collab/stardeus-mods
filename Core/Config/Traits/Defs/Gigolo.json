@@ -1,0 +1,17 @@
+{
+    "Id" : "Gigolo",
+    "IconId" : "Icons/Color/Heart",
+    "TypeId" : "BiologicalFunction",
+    "CompatibleSex" : "M",
+    "Rarity" : 0.2,
+    "Modifiers" : [
+        // will run HighLibidoBeingModifier C# code
+        "HighLibido"
+    ],
+    "AdjustsSkills" : [
+        {
+            "JobId" : "Social",
+            "Adjustment" : 1
+        }
+    ]
+}

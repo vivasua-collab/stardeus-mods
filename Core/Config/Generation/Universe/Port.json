@@ -1,0 +1,16 @@
+{
+    "Id" : "Port",
+    "Icon" : "Icons/Color/Destination",
+    "SizeMin" : 1,
+    "SizeMax" : 1,
+    "CanBeExplored" : false,
+    "HasTrader" : true,
+    "CanHaveCustomIcon" : true,
+    "IsInteractive" : true,
+    "IsAutoVisited" : true,
+    "IsScannable" : false,
+    "IsOnSurface" : true,
+    "StarfieldSortOrder" : 1,
+    "IsIconMarker" : true,
+    "CanBeOwned" : true
+}

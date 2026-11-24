@@ -1,0 +1,18 @@
+{
+    "Id" : "Slow",
+    "IconId" : "Icons/Color/Age2",
+    "TypeId" : "MotorFunction",
+    "Rarity" : 0.5,
+    "IncompatibleTraitIds" : [
+        "Fast"
+    ],
+    "AddsStatModifiers" : [
+        {
+            "Component" : "MoveSpeed",
+            "Properties" : [
+                { "Key" : "Value", "Float" : -0.2 },
+                { "Key" : "Type", "String" : "AddsPercent" }
+            ]
+        }
+    ]
+}

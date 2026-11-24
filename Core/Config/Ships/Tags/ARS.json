@@ -1,0 +1,21 @@
+// ARS: Automated Response Vessel
+{
+    "ChanceWillTrade" : 0.1,
+    "ChancePolice" : 1.0,
+    "CompatibleFactions" : [
+        "Player",
+        "Sentinel",
+        "Virus",
+        "Capitalist"
+    ],
+    "CompatibleClasses" : [
+        "Battleship",
+        "Fighter",
+        "Cruiser",
+        "Destroyer",
+        "Dreadnought",
+        "Battlecruiser"
+    ],
+    "MinOffensiveness" : 0.5,
+    "MaxOffensiveness" : 1.0
+}

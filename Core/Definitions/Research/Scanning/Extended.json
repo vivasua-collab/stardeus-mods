@@ -1,0 +1,30 @@
+{
+    "Id" : "Research/Scanning/Extended",
+    "Tier" : 4,
+    "IsAbstract" : true,
+    "PreviewIcon" : "Icons/Color/Communications",
+    "NameKey" : "system.scan.extended",
+    "Researchable" : {
+        "IsTreeNode" : true,
+        "Prerequisites" : [
+            "Research/Scanning/System"
+        ],
+        "UnlockEffects" : [
+            "SystemScan_Extended"
+        ],
+        "DatoidCosts" : [
+            {
+                "TypeId" : "DatoidNuclear",
+                "StackSize" : 11
+            },
+            {
+                "TypeId" : "DatoidEnergy",
+                "StackSize" : 14
+            },
+            {
+                "TypeId" : "DatoidAlien",
+                "StackSize" : 5
+            }
+        ]
+    }
+}

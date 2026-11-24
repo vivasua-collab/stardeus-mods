@@ -1,0 +1,102 @@
+{
+    "ToolPath" : "Entertainment",
+    "Layer" : "Objects",
+    "ParentId" : "Objects/Devices/BaseDevice",
+    "Researchable" : {
+        "Prerequisites" : [ "Research/Entertainment/Jukebox" ]
+    },
+    "Spawnable" : {
+        "Category": "Fun",
+        "Chance" : 1.0,
+        "ChanceLocked" : 0.5
+    },
+    "Components" : [
+        {
+            "Component" : "TileTransform",
+            "Properties" : [
+                { "Key" : "WorkSpot", "Vector2" : { "x" : 0, "y" : -1 } },
+                { "Key" : "CoverPercent", "Int" : 85 },
+                { "Key" : "IsRotatable", "Bool" : true }
+            ]
+        },
+        {
+            "Component" : "TileGraphics",
+            "Properties" : [
+                { "Key" : "Type", "String": "Object" },
+                { "Key" : "HasHeight", "Bool" : true },
+                { "Key" : "Graphic", "String": "Objects/Devices/KaraokeMachine" }
+            ]
+        },
+        { "Component" : "SafetyCheck" },
+        {
+            "Component" : "ElectricNode",
+            "Properties" : [
+                { "Key" : "IsConsumer", "Bool" : true }
+            ]
+        },
+        {
+            "Component" : "WithFuse",
+            "Properties" : [
+                { "Key" : "MalfunctionWeight", "Float": 0.3 }
+            ]
+        },
+        {
+            "Component" : "Flammable",
+            "Properties" : [
+                { "Key" : "IgnitionTemperatureCelsius", "Int" : 350 },
+                { "Key" : "FireChance", "Float" : 0.6 },
+                { "Key" : "BaseExplosionLevel", "Int" : 1 },
+                { "Key" : "FlammabilityCurve", "String" : "DeviceHigh" },
+                { "Key" : "ExplosivenessCurve", "String" : "DeviceLow" }
+            ]
+        },
+        {
+            "Component" : "Jukebox",
+            "Properties" : [
+                { "Key" : "SocialChatContext", "String" : "dance" },
+                { "Key" : "SocialOpportunityExpectedDurationHours", "Float" : 4.0 },
+                { "Key" : "EnergyCost", "Float" : 1.0 },
+                { "Key" : "MaxCapacity", "Int" : 3 },
+                { "Key" : "Income", "Int" : 15 }
+            ]
+        },
+        {
+            "Component" : "AudioSource",
+            "Properties" : [
+                { "Key" : "AmbienceClip", "String" : "Devices/JukeBoxTuneSFX" },
+                { "Key" : "Rolloff", "Vector2" : { "x" : 3, "y" : 6 } },
+                { "Key" : "IsLinkedToEnergy", "Bool" : true }
+            ]
+        },
+        {
+            "Component" : "LightSource",
+            "Properties" : [
+                { "Key" : "Radius", "Float" : 4 },
+                { "Key" : "Color", "IntSet" : [ 247, 219, 110, 128 ] }
+            ]
+        },
+        {
+            "Component" : "Passability",
+            "Properties" : [
+                { "Key" : "IsPassable", "Bool" : false },
+                { "Key" : "IsWalkable", "Bool" : false },
+                { "Key" : "Difficulty", "Float" : 1 }
+            ]
+        },
+        {
+            "Component" : "Constructable",
+            "Properties" : [
+                { "Key" : "WorkAmount", "Int" : 1000 },
+                {
+                    "Key" : "Contents",
+                    "RawMaterials" : [
+                        { "TypeId" : "SteelPlate", "StackSize" : 1 },
+                        { "TypeId" : "Glass", "StackSize" : 1 },
+                        { "TypeId" : "Transistor", "StackSize" : 3 },
+                        { "TypeId" : "CopperWire", "StackSize" : 2 }
+                    ]
+                }
+            ]
+        }
+    ]
+}

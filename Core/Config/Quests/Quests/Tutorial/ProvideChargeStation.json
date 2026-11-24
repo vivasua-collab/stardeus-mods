@@ -1,0 +1,127 @@
+{
+    "QuestFlags" : [ "Tutorial", "AutoAdd", "Unique" ],
+    "TitleKey" : "quest.ProvideChargeStation",
+    "DescKey" : "quest.ProvideChargeStation.desc",
+    "QuestProviders" : [
+        "ShipComputer"
+    ],
+    "AvailableWhen" : [
+        "ReadyForTutorialQuests"
+    ],
+    "BoundTutorialIds" : [
+        "Electricity/ElectricityConnect",
+        "Electricity/ConfigureReactor"
+    ],
+    "ForScenarios": [
+        "wrecked_empty_ship",
+        "new_beginning"
+    ],
+    "SetOnComplete" : [ "HasChargeStation" ],
+    // if tutorial quest gets abandoned, we still want to move on with the other tutorials
+    "SetOnFail" : [ "HasChargeStation" ],
+    "Steps" : [
+        // hidden watchdog: complete the quest if the charge station already exists and is connected
+        {
+            "Id": "ChargeStationWatchdog",
+            "Type" : "ChargeStationWatchdog",
+            "StepFlags" : [ "ActiveOnStart", "Secret", "CompletesQuest" ]
+        },
+        // 1. build a connector
+        {
+            "Id": "BuildConnector",
+            "Type" : "BuildFirstConnector",
+            "StepFlags" : [ "ActiveOnStart" ],
+            "Config" : [
+                { "Key" : "Definition", "String" : "Objects/Devices/EnergyConnector" }
+            ],
+            "SetOnComplete" : [
+                "HasBuiltConnector"
+            ]
+        },
+        // 2. connect the connector to the ship computer
+        {
+            "Id": "ConnectConnector",
+            "Type" : "ConnectFirstConnector",
+            "StepFlags" : [ "HideInactive" ],
+            "Config" : [
+                { "Key" : "Definition", "String" : "Objects/Devices/EnergyConnector" }
+            ],
+            "ActivateWhen" : [
+                "HasBuiltConnector"
+            ],
+            "SetOnComplete" : [
+                "HasConnectedConnector"
+            ]
+        },
+        // 3. build a reactor
+        {
+            "Id": "BuildReactor",
+            "Type" : "BuildFirstDevice",
+            // "StepFlags" : [ "HideInactive" ],
+            "Config" : [
+                { "Key" : "Definition", "String" : "Objects/Devices/MatterReactorMini" },
+                { "Key" : "ConnectorDefinition", "String" : "Objects/Devices/EnergyConnector" }
+            ],
+            "ActivateWhen" : [
+                "HasConnectedConnector"
+            ],
+            "SetOnComplete" : [
+                "HasBuiltReactor"
+            ]
+        },
+        // 4. connect the reactor to the connector
+        {
+            "Id": "ConnectReactor",
+            "Type" : "ConnectFirstDevice",
+            "StepFlags" : [ "HideInactive" ],
+            "Config" : [
+                { "Key" : "Definition", "String" : "Objects/Devices/MatterReactorMini" },
+                { "Key" : "ConnectorDefinition", "String" : "Objects/Devices/EnergyConnector" }
+            ],
+            "ActivateWhen" : [
+                "HasBuiltReactor"
+            ],
+            "SetOnComplete" : [
+                "HasConnectedReactor"
+            ]
+        },
+        {
+            "Id": "ConfigureReactor",
+            "Type" : "ConfigureMatterReactor",
+            "StepFlags" : [ "HideInactive" ],
+            "ActivateWhen" : [
+                "HasConnectedReactor"
+            ],
+            "SetOnComplete" : [
+                "ReactorConfigured"
+            ]
+        },
+        {
+            "Id": "BuildChargeStation",
+            "Type" : "BuildFirstDevice",
+            // "StepFlags" : [ "HideInactive" ],
+            "Config" : [
+                { "Key" : "Definition", "String" : "Objects/Devices/ChargeStation" },
+                { "Key" : "ConnectorDefinition", "String" : "Objects/Devices/EnergyConnector" }
+            ],
+            "ActivateWhen" : [
+                "ReactorConfigured"
+            ],
+            "SetOnComplete" : [
+                "ChargeStationBuilt"
+            ]
+        },
+        {
+            "Id": "ConnectChargeStation",
+            "Type" : "ConnectFirstDevice",
+            "StepFlags" : [ "HideInactive", "CompletesQuest" ],
+            "ActivateWhen" : [
+                "ChargeStationBuilt"
+            ],
+            "Config" : [
+                { "Key" : "Definition", "String" : "Objects/Devices/ChargeStation" },
+                { "Key" : "ConnectorDefinition", "String" : "Objects/Devices/EnergyConnector" }
+            ]
+        }
+    ]
+}

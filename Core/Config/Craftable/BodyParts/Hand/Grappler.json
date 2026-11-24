@@ -1,0 +1,16 @@
+{
+    "Type" : "Robotics1",
+    "ProductDefId" : "Obj/Parts/Hand/Grappler",
+    "ProductionTimeHours" : 120,
+    "EnergyCost" : 15,
+    "IgnoreMarket" : true,
+    "Ingredients" : [
+        { "TypeId" : "TitaniumPlate", "StackSize" : 1 },
+        { "TypeId" : "Transistor", "StackSize" : 10 },
+        { "TypeId" : "Gears", "StackSize" : 12 },
+        { "TypeId" : "CopperWire", "StackSize" : 10 }
+    ],
+    "DisposableOutput" : [
+        { "TypeId" : "ScrapMetal", "StackSize" : 1 }
+    ]
+}

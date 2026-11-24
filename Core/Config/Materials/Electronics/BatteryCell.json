@@ -1,0 +1,12 @@
+{
+    "Id" : "BatteryCell",
+    "IsComposite" : true,
+    "IsConsumedOnDestroy" : true,
+    "IconId" : "Obj/Materials/BatteryCell",
+    "Property" : "Electronics",
+    "GroupId" : "Electronics",
+    "EnergyOutput" : 700.0,
+    "Rarity" : 30,
+    "ExplosionLevel" : 1,
+    "ExplosivenessCurveId" : "High"
+}

@@ -1,0 +1,9 @@
+{
+    "Id" : "Overlay/PanelFlipped",
+
+    "Color" : "UI/Btn/OverlayActive",
+
+    "Image" : "UI/Buttons/ActiveOverlayPanelFlipped",
+    "ImageType" : "Sliced",
+    "ImageBorderLBRT" : [ 12, 28, 28, 12 ]
+}

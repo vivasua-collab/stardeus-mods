@@ -1,0 +1,13 @@
+{
+    "Type" : "Converter",
+    "Ingredients" : [
+        { "TypeId" : "Carbon", "StackSize" : 1 },
+        { "TypeId" : "Water", "StackSize" : 1 },
+        { "TypeId" : "Plastic", "StackSize" : 3 }
+    ],
+    "ListOrder" : 100,
+    "IgnoreMarket" : true,
+    "ProductDefId" : "Obj/Materials/Rubber",
+    "ProductionTimeHours" : 4,
+    "EnergyCost" : 20
+}

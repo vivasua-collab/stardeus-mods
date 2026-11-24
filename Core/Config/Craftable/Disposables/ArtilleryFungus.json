@@ -1,0 +1,10 @@
+{
+    "Type": "Disposable",
+    "DisposableOutput": [
+        { "TypeId" : "StemCells", "StackSize" : 1 },
+        { "TypeId" : "PlantFiber", "StackSize" : 1 }
+    ],
+    "ProductDefId": "Obj/Plants/ArtilleryFungus",
+    "ProductionTimeHours": 8.0,
+    "EnergyCost": 50.0
+}

@@ -1,0 +1,16 @@
+{
+    "Id" : "Asteroid",
+    "GroupId" : "Threats",
+    "GroupNameKey" : "group.other",
+    "NameKey" : "asteroid",
+    "Icon" : "Obj/Asteroids/Asteroid01",
+    "NonShipTarget" : true,
+    "SkipDuringShipCombat" : true,
+    "DefaultTargetByWeaponTypes" : [
+        "Ballistic",
+        "PointDefense",
+        "Missile",
+        "Laser",
+        "Plasma"
+    ]
+}

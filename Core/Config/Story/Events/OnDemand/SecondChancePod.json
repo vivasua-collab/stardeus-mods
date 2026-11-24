@@ -1,0 +1,22 @@
+{
+    // C# implementation id.
+    // Multiple configurations can point to a single implementation.
+    // This is the delivery half of the second chance: an ordinary stasis pod drop, rigged to
+    // open into StasisPod/RescueCrew. Started only by SecondChanceStoryAspect.
+    "EventId" : "StasisPod",
+    // Free: an emergency is not something the colony has to be able to afford.
+    "Points" : 0,
+    // Options: Negative, Positive, Neutral, Raid
+    "OutcomeType" : "Positive",
+    // Full list is in StoryEventFlags class.
+    // Deliberately no ColonyGrowth flag: this must not be priced, cooled down or paced by
+    // the colony growth model, and it must never be picked at random.
+    "EventFlags" : [
+        "OnDemand",
+        "CanHaveDuplicates"
+    ],
+    // Variables for the story event implementation
+    "Properties" : [
+        { "Key" : "RiggedEvent", "String" : "StasisPod/RescueCrew" }
+    ]
+}

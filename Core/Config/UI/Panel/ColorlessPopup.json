@@ -1,0 +1,10 @@
+{
+    "Id" : "Panel/ColorlessPopup",
+
+    "Color" : "FFFFFF",
+    "Alpha" : 1.0,
+
+    "Image" : "UI/Panels/PopupBG",
+    "ImageType" : "Sliced",
+    "ImageBorderLBRT" : [ 12, 12, 28, 28 ]
+}

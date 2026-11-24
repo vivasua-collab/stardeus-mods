@@ -1,0 +1,12 @@
+{
+    "Id" : "Meteoroid",
+    "GroupId" : "Threats",
+    "GroupNameKey" : "group.other",
+    "NameKey" : "meteor",
+    "Icon" : "Obj/Asteroids/Asteroid05",
+    "NonShipTarget" : true,
+    "SkipDuringShipCombat" : true,
+    "DefaultTargetByWeaponTypes" : [
+        "Ballistic"
+    ]
+}

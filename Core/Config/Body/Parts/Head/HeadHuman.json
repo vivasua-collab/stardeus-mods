@@ -1,0 +1,10 @@
+{
+    "SlotTypeId" : "Head",
+    "Compatibility" : "TargetSpecies",
+    "TargetSpecies" : [ "Human" ],
+    "ResistanceBase" : 6.0,
+    "AddsAbilities" : [
+    ],
+    "AddsNeeds" : [
+    ]
+}

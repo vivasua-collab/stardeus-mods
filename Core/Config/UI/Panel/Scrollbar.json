@@ -1,0 +1,9 @@
+{
+    "Id" : "Panel/Scrollbar",
+
+    "Color" : "UI/Scroll/Background",
+
+    "Image" : "UI/Buttons/IconButtonBG",
+    "ImageType" : "Sliced",
+    "ImageBorderLBRT" : [ 12, 12, 12, 12 ]
+}

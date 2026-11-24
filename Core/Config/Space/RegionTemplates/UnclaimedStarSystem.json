@@ -1,0 +1,18 @@
+{
+    "Id" : "UnclaimedStarSystem",
+    "DifficultyChance" : [
+        0.0, 1.0,
+        0.2, 1.0,
+        0.25, 0.1,
+        0.8, 0.0,
+        1.0, 0.0
+    ],
+    "NumFactionsChance" : [
+        0.0, 0.0,
+        1.0, 0.0
+    ],
+    "ForceSectors" : [
+        "Star",
+        "HyperjumpRelay"
+    ]
+}

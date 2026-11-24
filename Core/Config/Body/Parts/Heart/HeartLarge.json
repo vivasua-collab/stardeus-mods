@@ -1,0 +1,7 @@
+{
+    "SlotTypeId" : "Heart",
+    "Compatibility" : "Biological",
+    "CompatibleBodySizes" : [ "Medium", "Large" ],
+    "ResistanceBase" : 5.0,
+    "Tier" : 3
+}

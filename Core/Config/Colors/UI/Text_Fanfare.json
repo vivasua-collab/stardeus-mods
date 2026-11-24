@@ -1,0 +1,7 @@
+{
+    "Id" : "UI/Text/Fanfare",
+    "AliasFor" : "UI/Saturated/Sec+2",
+    // "Hex" : "D9F2F2",
+    "Alpha" : 1.0,
+    "SkipAtlas" : true
+}

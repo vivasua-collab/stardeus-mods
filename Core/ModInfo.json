@@ -1,0 +1,138 @@
+{
+    "Id" : "Core",
+    "Name" : "Core Game",
+    "Description" : "Contains the base game.",
+    "Dependencies" : [],
+    "DLLFiles" : [],
+    "Atlases" : [
+        { "Id" : "FX", "Path" : "FX/" },
+        {
+            "Id" : "UI",
+            "Path" : "UI/",
+            "SkipMipMaps" : true,
+            "SkipRescale" : true,
+            //"UI Scaling kills pixel perfection, filtering should be on"
+            "DoNotFilterAtlas" : false
+        },
+        {
+            "Id" : "Icons",
+            "Path" : "Icons/",
+            "SkipMipMaps" : false,
+            "SkipRescale" : true,
+            // Very important, or UI will sometimes load mip 2 that will look blurry.
+            "MipMapBias" : -1.0,
+            "DoNotFilterAtlas" : false
+        },
+        {
+            "Id" : "Obj",
+            "Path" : "Obj/"
+        },
+        {
+            "Id" : "Devices",
+            "Path" : "Objects/Devices/",
+            "ExtraPaths" : [
+                "Emblems/"
+            ]
+        },
+        {
+            "Id" : "TurretHeads",
+            "Path" : "Objects/TurretHeads/"
+        },
+        {
+            "Id" : "DeviceAnims",
+            "Path" : "Objects/DeviceAnims/"
+        },
+        {
+            "Id" : "Furniture",
+            "Path" : "Objects/Furniture/"
+        },
+        {
+            "Id" : "Cosmetics",
+            "Path" : "Objects/Cosmetics/",
+            "ExtraPaths" : [
+                "Objects/Defenses/"
+            ]
+        },
+        {
+            "Id" : "Beings_Bodies",
+            "Path" : "Beings/Bodies",
+            "ExtraPaths" : [
+                "Beings/Heads/Robot/",
+                "Beings/Shadows/",
+                "Beings/Clothing/"
+            ],
+            "MipMapBias" : -1.0
+        },
+        {
+            "Id" : "Beings_Heads",
+            "Path" : "Beings/Eyes/",
+            "ExtraPaths" : [
+                "Beings/Heads/Human/",
+                "Beings/Faces/",
+                "Beings/Hats/",
+                "Beings/Hair/"
+            ],
+            "MipMapBias" : -1.0
+        },
+        {
+            "Id" : "SpaceObjects",
+            "Path" : "SpaceObjects/"
+        },
+        {
+            "Id" : "Achievements",
+            "Path" : "Achievements/",
+            "SkipRescale" : true,
+            "DoNotFilterAtlas" : false,
+            "SkipMipMaps" : true,
+            "TexturePadding" : -1
+        },
+        {
+            "Id" : "Dirt",
+            "Path" : "Dirt/",
+            "MipMapBias" : -0.2
+        },
+        {
+            // The ship's exterior: hull view tilesets (Hull.shader, HullDetail.shader) and
+            // floor foundation strips (Foundation.shader). Each of those draws in one call that
+            // samples one texture, so this stays a small atlas of its own: the shared Floors
+            // atlas, mod floors included, could spill them onto a second page.
+            "Id" : "Hull",
+            "Path" : "Structure/Hull/",
+            "ExtraPaths" : [
+                "Structure/Foundations/"
+            ],
+            "TexturePadding" : 16,
+            "MipMapBias" : -1.0,
+            "MinimizeNumAtlases" : true,
+            "ExtrudeEdges" : true
+        },
+        {
+            "Id" : "Floors",
+            "Path" : "Structure/Floors",
+            "TexturePadding" : 16,
+            "InnerPadding" : 0.0,
+            "MipMapBias" : -1.0,
+            "MinimizeNumAtlases" : true,
+            "ExtrudeEdges" : true
+        },
+        {
+            "Id" : "Structure",
+            "Path" : "Structure/",
+            "MinimizeNumAtlases" : true,
+            "ExtrudeEdges" : true
+        },
+        {
+            "Id" : "Nebulas",
+            "Path" : "Nebulas/",
+            "SkipAtlas" : true,
+            "SkipMipMaps" : true
+        },
+        {
+            "Id" : "NoAtlas",
+            "Path" : "NoAtlas/",
+            "SkipAtlas" : true,
+            "SkipMipMaps" : true,
+            "SkipRescale" : true
+        }
+    ]
+}

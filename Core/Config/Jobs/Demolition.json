@@ -1,0 +1,9 @@
+{
+    "Id" : "Demolition",
+    "SkillSpeedCurve" : "Skills/SpeedConstruction",
+    "Importance" : 1.5,
+    "EnabledByAbilities" : [ "Build" ],
+    "IconId" : "Icons/Color/Demolition",
+    "Types" : [ "Physical", "Mindless", "NanobotCompatible" ],
+    "WorkSpeedStat" : "ManualWorkSpeed"
+}

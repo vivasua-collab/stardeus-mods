@@ -1,0 +1,17 @@
+{
+    "Id" : "Landlord",
+    "Species" : [ "Human", "Robot" ],
+    "AgePhaseIds" : [ "YoungAdult", "MidLife", "Retirement" ],
+    "IncapableJobTypes" : [ "Demolition" ],
+    "RoleTypes" : [ ],
+    "AdjustsSkills" : [
+        {
+            "JobId" : "Repairs",
+            "Adjustment" : 6
+        },
+        {
+            "JobId" : "Construction",
+            "Adjustment" : 4
+        }
+    ]
+}

@@ -1,0 +1,6 @@
+{
+    "Id" : "HumanHairBlue",
+    "Data" : [0, 112, 192, 255],
+    "Groups" : [ "Human.Hair" ],
+    "Weight" : 0.1
+}

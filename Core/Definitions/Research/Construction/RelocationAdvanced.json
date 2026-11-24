@@ -1,0 +1,26 @@
+{
+    "Id" : "Research/Construction/RelocationAdvanced",
+    "Tier" : 2,
+    "IsAbstract" : true,
+    "PreviewIcon" : "Icons/Color/Move",
+    "NameKey" : "research.relocation.advanced",
+    "Researchable" : {
+        "IsTreeNode" : true,
+        "Prerequisites" : [
+            "Research/Construction/Winch"
+        ],
+        "UnlockEffects" : [
+            "RelocationAdvanced"
+        ],
+        "DatoidCosts" : [
+            {
+                "TypeId" : "DatoidTech",
+                "StackSize" : 4
+            },
+            {
+                "TypeId" : "DatoidEnergy",
+                "StackSize" : 3
+            }
+        ]
+    }
+}

@@ -1,0 +1,74 @@
+{
+    "Id" : "balanced",
+    "Level" : 1.0,
+    "DatoidCostScale" : 1.0,
+    "StartingResources" : 1.0,
+    "PlanetResources" : 1.0,
+    "DefaultDestructionLevel" : 0.75,
+    // Difficulty changes mood only through the resting sanity. Sanity falls at the same rate
+    // and breakdowns roll the same chance on every difficulty: scaling those too compounded,
+    // and on the hardest difficulty colonists broke down whatever the player did
+    "SanityDropRate" : 1.0,
+    "SanityBaseline" : 0.40,
+    "BreachCapsuleSpeed" : 3.0,
+    // For how many in-game minutes a brand new fire resists being extinguished,
+    // and how much it is boosted while that lasts
+    "FireBoostMinutes" : 120,
+    "FireBoostGrowthMul" : 2.0,
+    "FireBoostSpreadMul" : 1.5,
+    "FireBoostFirefightingMul" : 0.25,
+    // Strength above which a boosted fire builds up pressure to spread. Below
+    // FireStrengthAfterSpread (0.7), so a fought fire keeps spreading anyway
+    "FireBoostSpreadThreshold" : 0.65,
+    // Scales the chance that incidents start extra fires or explosions
+    "FireChanceScale" : 1.0,
+    "WantedTensionMultiplier" : 1.0,
+    // Raid adaptation: how much of its swing reaches raid points, and how fast it grows over
+    // a run without losses (RaidAdaptation)
+    "AdaptationEffect" : 0.9,
+    "AdaptationGrowthOverZero" : 1.0,
+    "MinDeepScansPerLocation" : 1,
+    "MaxDeepScansPerLocation" : 4,
+    // how many in-game minutes ships will linger before pressing "shoot" button
+    // when their weapons are ready
+    "NPCShipShootHesitationMin" : 10,
+    "NPCShipShootHesitationMax" : 15,
+    // Fraction of an NPC ship's free class points offensiveness may spend on weapons
+    "ShipCombatDifficulty" : 0.8,
+    // Multiplier applied to quest-spawned NPC ship opponents' class points
+    "QuestShipStrengthMul" : 1.0,
+    // How strong will event-spawned opponents be against player's ship.
+    // strength: 0.0 - dead ship, 1.0, same as you, 2.0 - 2x as strong as you
+    // 0.0 - , 1.0 - not scared at all
+    // random value => strength
+    "NPCShipStrengthChance" : [
+        0.0, 0.1,
+        0.05, 0.2,
+        0.15, 0.5,
+        0.75, 1.0,
+        0.95, 1.15,
+        1.0, 2.0
+    ],
+    "StoryScheduleModifiers" : [
+        {
+            "Schedule" : "Neutral",
+            "PointAllowanceMul" : 1.0,
+            "CooldownMul" : 1.0
+        },
+        {
+            "Schedule" : "Positive",
+            "PointAllowanceMul" : 1.0,
+            "CooldownMul" : 1.0
+        },
+        {
+            "Schedule" : "Negative",
+            "PointAllowanceMul" : 1.0,
+            "CooldownMul" : 1.0
+        },
+        {
+            "Schedule" : "Raid",
+            "PointAllowanceMul" : 1.0,
+            "CooldownMul" : 1.0
+        }
+    ]
+}

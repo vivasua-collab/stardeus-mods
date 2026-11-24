@@ -1,0 +1,30 @@
+{
+    "Id" : "Research/Energy/ReactorNuclear",
+    "Tier" : 4,
+    "IsAbstract" : true,
+    "PreviewIcon" : "Icons/Color/Radioactive",
+    "Researchable" : {
+        "IsTreeNode" : true,
+        "Prerequisites" : [
+            "Research/Energy/ReactorImproved"
+        ],
+        "DatoidCosts" : [
+            {
+                "TypeId" : "DatoidTech",
+                "StackSize" : 20
+            },
+            {
+                "TypeId" : "DatoidEnergy",
+                "StackSize" : 6
+            },
+            {
+                "TypeId" : "DatoidTechHigh",
+                "StackSize" : 4
+            },
+            {
+                "TypeId" : "DatoidNuclear",
+                "StackSize" : 14
+            }
+        ]
+    }
+}

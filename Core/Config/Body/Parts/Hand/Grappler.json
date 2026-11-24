@@ -1,0 +1,46 @@
+{
+    "SlotTypeId" : "Hand",
+    "Compatibility" : "Any",
+    "Tier" : 1,
+    "AddsAbilities" : [
+        "Carry",
+        "UseItem"
+    ],
+    "ResistanceBase" : 10.0,
+    "ProvidesStats" : [
+        {
+            "Component" : "Dexterity",
+            "Properties" : [
+                { "Key" : "Amount", "Float" : 0.25 },
+                { "Key" : "CompoundLimit", "Float" : 1.0 },
+                { "Key" : "StateMul", "Float" : 0.6 }
+            ]
+        },
+        {
+            "Component" : "CarryCapacity",
+            "Properties" : [
+                { "Key" : "Amount", "Float" : 500 },
+                { "Key" : "CompoundLimit", "Float" : 0 },
+                { "Key" : "StateMul", "Float" : 0.6 }
+            ]
+        }
+    ],
+    "AddsAttackMethods" : [
+        {
+            "Component" : "Jab",
+            "Properties" : [
+                { "Key" : "AttackAction", "String" : "Melee" },
+                { "Key" : "DPS", "Float" : 1.9 },
+                { "Key" : "AttackType", "String" : "Blunt" },
+                { "Key" : "ChargeSec", "Float" : 3.0 },
+                { "Key" : "CooldownSec", "Float" : 3.0 },
+                { "Key" : "MoveSpeedMul", "Float" : 0.05 },
+                { "Key" : "StunChanceBio", "Float" : 0.23 },
+                { "Key" : "StunChanceRobo", "Float" : 0.29 },
+                { "Key" : "BleedChance", "Float" : 0.1 },
+                { "Key" : "FatalHitChanceMul", "Float" : 0.0 },
+                { "Key" : "InternalHitChanceMul", "Float" : 0.0 }
+            ]
+        }
+    ]
+}

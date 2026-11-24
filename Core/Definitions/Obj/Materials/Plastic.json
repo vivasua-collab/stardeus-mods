@@ -1,0 +1,35 @@
+{
+    "Layer" : "FreeEntities",
+    "ParentId" : "Obj/Materials/BaseMaterial",
+    "Researchable" : {
+        "Prerequisites" : [ "Research/Production/OilProcessing" ]
+    },
+    "Components" : [
+        {
+            "Component" : "ObjHealth",
+            "Properties" : [
+                { "Key" : "IsInvincible", "Bool" : false }
+            ]
+        },
+        {
+            "Component" : "ObjGraphics",
+            "Properties" : [
+                { "Key" : "Graphic", "String": "Obj/Materials/Plastic" }
+            ]
+        },
+        {
+            "Component" : "Flammable",
+            "Properties" : [
+                { "Key" : "IsTemperatureResistant", "Bool" : false },
+                { "Key" : "FireDamageResistance", "Float" : 0.4 },
+                { "Key" : "FireChance", "Float" : 0.7 }
+            ]
+        },
+        {
+            "Component" : "UnstoredMat",
+            "Properties" : [
+                { "Key" : "Type", "String" : "Plastic" }
+            ]
+        }
+    ]
+}

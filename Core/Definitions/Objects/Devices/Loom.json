@@ -1,0 +1,166 @@
+{
+    "ToolPath" : "Production",
+    "Layer" : "Objects",
+    "ParentId" : "Objects/Devices/BaseDevice",
+    "Researchable" : {
+        "Prerequisites" : [
+            "Research/Production/Weaving"
+        ]
+    },
+    "Spawnable" : {
+        "Category": "Production",
+        "Chance" : 1.0,
+        "ChanceLocked" : 0.5
+    },
+    "Components" : [
+        {
+            "Component" : "TileTransform",
+            "Properties" : [
+                { "Key" : "Width", "Int" : 1 },
+                { "Key" : "Height", "Int" : 1 },
+                { "Key" : "CoverPercent", "Int" : 50 },
+                { "Key" : "IsRotatable", "Bool" : true },
+                { "Key" : "WorkSpot", "Vector2" : { "x" : 0, "y" : -1 } },
+                { "Key" : "OutPort", "Vector2" : { "x" : 1, "y" : 0 } },
+                { "Key" : "InPort", "Vector2" : { "x" : 1, "y" : 0 } }
+            ]
+        },
+        {
+            "Component" : "IndustrialEquipment",
+            "Properties" : [
+                { "Key" : "IsNoisy", "Bool" : true }
+            ]
+        },
+        {
+            "Component" : "ElectricNode",
+            "Properties" : [
+                { "Key" : "IsConsumer", "Bool" : true }
+            ]
+        },
+        {
+            "Component" : "WithFuse",
+            "Properties" : [
+                { "Key" : "MalfunctionWeight", "Float": 0.15 }
+            ]
+        },
+        {
+            "Component" : "Flammable",
+            "Properties" : [
+                { "Key" : "IgnitionTemperatureCelsius", "Int" : 350 },
+                { "Key" : "FireChance", "Float" : 0.7 },
+                { "Key" : "BaseExplosionLevel", "Int" : 1 },
+                { "Key" : "FlammabilityCurve", "String" : "Device" },
+                { "Key" : "ExplosivenessCurve", "String" : "DeviceLow" }
+            ]
+        },
+        {
+            "Component" : "AudioSource",
+            "Properties" : [
+                { "Key" : "AmbienceClip", "String" : "Devices/LoomSFX" },
+                { "Key" : "Rolloff", "Vector2" : { "x" : 3, "y" : 15 } },
+                { "Key" : "IsLinkedToEnergy", "Bool" : true }
+            ]
+        },
+        { "Component" : "SafetyCheck" },
+        {
+            "Component" : "TileGraphics",
+            "Properties" : [
+                { "Key" : "Type", "String": "Object" },
+                { "Key" : "Graphic", "String": "Objects/Devices/Loom" },
+                { "Key" : "HasHeight", "Bool" : false }
+            ]
+        },
+        {
+            "Component" : "TileAnimation",
+            "Properties" : [
+                {
+                    "Key": "Offset",
+                    "Vector2": { "x": 0.0, "y": 0.0 }
+                },
+                {
+                    "Key": "Rotations",
+                    "StringSet": [
+                        // Down
+                        "D",
+                        // Left
+                        "L",
+                        // Up
+                        "U",
+                        // Right
+                        "R"
+                    ]
+                },
+                { "Key" : "Size", "Vector2": { "x" : 1.0, "y" : 1.0 } },
+                { "Key" : "Direction", "Int" : 1 },
+                { "Key" : "BaseSprite", "String": null },
+                { "Key" : "AnimSprite", "String" : "Objects/DeviceAnims/Loom_Anim" },
+                // Since two devices use same animation (Mini oxygen pump and regular one)
+                // we need to copy the sprite, otherwise resizing it to a different scale will
+                // resize it for both devices
+                { "Key" : "CopyAnimSprite", "Bool" : false },
+                { "Key" : "Speed", "Float": 1.0 },
+                { "Key" : "SpriteOrder", "String": "InBetweenTile" },
+                { "Key" : "FramePrefix", "String": "F" },
+                { "Key" : "NumFrames", "Int": 24 },
+                { "Key" : "PingPong", "Bool": true },
+                { "Key" : "PingPongStillFrames", "Int": 6 },
+                { "Key" : "NeedsEnergy", "Bool": true }
+            ]
+        },
+        {
+            "Component" : "ExtraInfo"
+        },
+        {
+            "Component" : "MultiCrafter",
+            "Properties" : [
+                { "Key" : "UIItemIcon", "String" : "Icons/Color/Cog" },
+                { "Key" : "CraftKey", "String" : "weave" },
+                { "Key" : "ProgressBarKey", "String" : "weaving.now" },
+                { "Key" : "IsOperatorRequired", "Bool" : true },
+                { "Key" : "CompatibleTypes", "StringSet": [
+                    "Clothing", "Weave"
+                ] }
+            ]
+        },
+        {
+            "Component" : "OperatableDevice",
+            "Properties" : [
+                { "Key" : "JobType", "String" : "Crafting" },
+                { "Key" : "AnimationType", "String" : "Strafe" },
+                { "Key" : "OperatorOffsets", "Vector2Set" : [
+                    // down
+                    { "x" : 0.17, "y" : -0.40 },
+                    // left
+                    { "x" : -0.64, "y" : -0.32 },
+                    // up
+                    { "x" : -0.22, "y" : 0.76 },
+                    // right
+                    { "x" : 0.58, "y" : 0.27 }
+                ] }
+            ]
+        },
+        {
+            "Component" : "Passability",
+            "Properties" : [
+                { "Key" : "IsPassable", "Bool" : false },
+                { "Key" : "IsWalkable", "Bool" : false },
+                { "Key" : "Difficulty", "Float" : 1 }
+            ]
+        },
+        {
+            "Component" : "Constructable",
+            "Properties" : [
+                { "Key" : "WorkAmount", "Int" : 1400 },
+                {
+                    "Key" : "Contents",
+                    "RawMaterials" : [
+                        { "TypeId" : "SteelPlate", "StackSize" : 3 },
+                        { "TypeId" : "CopperWire", "StackSize" : 2 },
+                        { "TypeId" : "Gears", "StackSize" : 4 },
+                        { "TypeId" : "Transistor", "StackSize" : 1 }
+                    ]
+                }
+            ]
+        }
+    ]
+}

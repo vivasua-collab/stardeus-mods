@@ -1,0 +1,214 @@
+{
+    "ToolPath" : "Production",
+    "Layer" : "Objects",
+    "ParentId" : "Objects/Devices/BaseDevice",
+    "Researchable" : {
+        "Prerequisites" : [
+            "Research/Production/Assembly"
+        ]
+    },
+    "Spawnable" : {
+        "Category": "Production",
+        "Chance" : 1.0,
+        "ChanceLocked" : 0.5
+    },
+    "Components" : [
+        {
+            "Component" : "TileTransform",
+            "Properties" : [
+                { "Key" : "Width", "Int" : 2 },
+                { "Key" : "Height", "Int" : 1 },
+                { "Key" : "IsRotatable", "Bool" : true },
+                { "Key" : "CoverPercent", "Int" : 50 },
+                { "Key" : "WorkSpot", "Vector2" : { "x" : 0, "y" : -1 } },
+                { "Key" : "OutPort", "Vector2" : { "x" : 1, "y" : -1 } },
+                { "Key" : "InPort", "Vector2" : { "x" : 1, "y" : -1 } }
+            ]
+        },
+        {
+            "Component" : "Flammable",
+            "Properties" : [
+                { "Key" : "IgnitionTemperatureCelsius", "Int" : 350 },
+                { "Key" : "FireChance", "Float" : 0.6 },
+                { "Key" : "BaseExplosionLevel", "Int" : 1 },
+                { "Key" : "FlammabilityCurve", "String" : "DeviceHigh" },
+                { "Key" : "ExplosivenessCurve", "String" : "Device" }
+            ]
+        },
+        {
+            "Component" : "IndustrialEquipment",
+            "Properties" : [
+                { "Key" : "IsNoisy", "Bool" : true }
+            ]
+        },
+        { "Component" : "SafetyCheck" },
+        {
+            "Component" : "ElectricNode",
+            "Properties" : [
+                { "Key" : "IsConsumer", "Bool" : true }
+            ]
+        },
+        {
+            "Component" : "WithFuse",
+            "Properties" : [
+                { "Key" : "MalfunctionWeight", "Float": 0.25 }
+            ]
+        },
+        {
+            "Component" : "TileGraphics",
+            "Properties" : [
+                { "Key" : "Type", "String": "Object" },
+                { "Key" : "Graphic", "String": "Objects/Devices/CraftingStation" },
+                { "Key" : "HasHeight", "Bool" : true }
+            ]
+        },
+        {
+            "Component" : "TileAnimation",
+            "Properties" : [
+                {
+                    "Key": "Offsets",
+                    "Vector2Set": [
+                        // Down
+                        { "x": 0.125, "y": 0.335 },
+                        // Left
+                        { "x": 0.0, "y": 0.17 },
+                        // Up
+                        { "x": -0.12, "y": 0.33 },
+                        // Right
+                        { "x": 0.0, "y": 0.39 }
+                    ]
+                },
+                {
+                    "Key": "Rotations",
+                    "StringSet": [
+                        // Down
+                        "D",
+                        // Left
+                        "L",
+                        // Up
+                        "U",
+                        // Right
+                        "R"
+                    ]
+                },
+                {
+                    "Key": "SpriteOrders",
+                    "StringSet": [
+                        // Down
+                        "InBetweenTile",
+                        // Left
+                        "AboveAnyTile",
+                        // Up
+                        "AboveAnyTile",
+                        // Right
+                        "AboveAnyTile"
+                    ]
+                },
+                { "Key" : "Size", "Vector2": { "x" : 1.45, "y" : 1.45 } },
+                { "Key" : "Direction", "Int" : 1 },
+                { "Key" : "BaseSprite", "String": "Objects/Devices/CraftingStation_Base" },
+                { "Key" : "AnimSprite", "String" : "Objects/DeviceAnims/CraftingStation_Anim" },
+                // Since two devices use same animation (Mini oxygen pump and regular one)
+                // we need to copy the sprite, otherwise resizing it to a different scale will
+                // resize it for both devices
+                { "Key" : "CopyAnimSprite", "Bool" : true },
+                { "Key" : "Speed", "Float": 0.66 },
+                { "Key" : "SpriteOrder", "String": "InBetweenTile" },
+                { "Key" : "FramePrefix", "String": "F" },
+                { "Key" : "NumFrames", "Int": 25 },
+                { "Key" : "PingPong", "Bool": true },
+                { "Key" : "PingPongStillFrames", "Int": 6 },
+                { "Key" : "NeedsEnergy", "Bool": true }
+            ]
+        },
+        {
+            "Component" : "AudioSource",
+            "Properties" : [
+                { "Key" : "AmbienceClip", "String" : "Devices/CraftingStationSFX" },
+                { "Key" : "Rolloff", "Vector2" : { "x" : 3, "y" : 15 } },
+                { "Key" : "IsLinkedToEnergy", "Bool" : true }
+            ]
+        },
+        {
+            "Component" : "VFX",
+            "Properties" : [
+                { "Key" : "Id", "String" : "VFXParticlesCraftingStation" },
+                { "Key" : "Offset", "Vector2" : { "x" : 0, "y" : 0.25 } }
+            ]
+        },
+        {
+            "Component" : "Surface",
+            "Properties" : [
+                { "Key" : "IsMultislot", "Bool" : true },
+                { "Key" : "IsMakeshift", "Bool" : true }
+            ]
+        },
+        {
+            "Component" : "ExtraInfo"
+        },
+        {
+            "Component" : "MultiCrafter",
+            "Properties" : [
+                { "Key" : "UIItemIcon", "String" : "Icons/Color/Cog" },
+                { "Key" : "CraftKey", "String" : "assemble" },
+                { "Key" : "IsOperatorRequired", "Bool" : true },
+                { "Key" : "ProgressBarKey", "String" : "assembling.now" },
+                { "Key" : "CompatibleTypes", "StringSet": [
+                    "Mechanical",
+                    "Electronics",
+                    "Electronics2",
+                    "Wire",
+                    "Wire2",
+                    "Upgrades",
+                    "Oil",
+                    "Hyperfuel",
+                    "Robotics1",
+                    "Robotics2",
+                    "Robotics3",
+                    "RoboticsManual",
+                    "Weapons1",
+                    "Weapons2",
+                    "Weapons3",
+                    "Ammo"
+                ] }
+            ]
+        },
+        {
+            "Component" : "OperatableDevice",
+            "Properties" : [
+                { "Key" : "JobType", "String" : "Crafting" },
+                { "Key" : "AnimationType", "String" : "Strafe" },
+                { "Key" : "OperatorOffsets", "Vector2Set" : [
+                    { "x" : -0.3, "y" : -0.42 },
+                    { "x" : -0.65, "y" : 0.5 },
+                    { "x" : 0.34, "y" : 0.97 },
+                    { "x" : 0.58, "y" : 0.13 }
+                ] }
+            ]
+        },
+        {
+            "Component" : "Passability",
+            "Properties" : [
+                { "Key" : "IsPassable", "Bool" : false },
+                { "Key" : "IsWalkable", "Bool" : false },
+                { "Key" : "Difficulty", "Float" : 1 }
+            ]
+        },
+        {
+            "Component" : "Constructable",
+            "Properties" : [
+                { "Key" : "WorkAmount", "Int" : 1000 },
+                {
+                    "Key" : "Contents",
+                    "RawMaterials" : [
+                        { "TypeId" : "SteelPlate", "StackSize" : 2 },
+                        { "TypeId" : "Transistor", "StackSize" : 3 },
+                        { "TypeId" : "Glass", "StackSize" : 1 },
+                        { "TypeId" : "Gears", "StackSize" : 4 },
+                        { "TypeId" : "CopperWire", "StackSize" : 5 }
+                    ]
+                }
+            ]
+        }
+    ]
+}

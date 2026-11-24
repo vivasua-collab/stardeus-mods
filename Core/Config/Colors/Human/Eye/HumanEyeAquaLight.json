@@ -1,0 +1,6 @@
+{
+    "Id" : "HumanEyeAquaLight",
+    "Data" : [112, 194, 194, 255],
+    "Groups" : [ "Human.Eye" ],
+    "Weight" : 0.1
+}

@@ -1,0 +1,13 @@
+{
+    "Type" : "Refineable",
+    "Ingredients" : [
+        { "TypeId" : "PlantFiber", "StackSize" : 2 }
+    ],
+    "IgnoreMarket" : true,
+    "IgnoreEnergyOutput" : true,
+    "OutputMultiplier" : 1,
+    "ListOrder" : 100,
+    "ProductDefId" : "Obj/Materials/Biofuel",
+    "ProductionTimeHours" : 2.0,
+    "EnergyCost" : 10
+}

@@ -1,0 +1,11 @@
+{
+    "Id" : "Obj/Misc/ResonanceCharge",
+    "Type" : "CFD",
+    "Groups" : [ "Weapon" ],
+    "Value" : 1300.0,
+    "Rarity" : 0.5,
+    "TraderQuantity" : 1.0,
+    "MaxTraderQuantity" : 3,
+    "MinSectorDifficulty" : 0.2,
+    "Volatility" : 0.0023
+}

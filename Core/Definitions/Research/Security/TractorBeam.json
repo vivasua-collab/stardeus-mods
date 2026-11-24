@@ -1,0 +1,27 @@
+{
+    "Id" : "Research/Security/TractorBeam",
+    "Tier" : 3,
+    "IsAbstract" : true,
+    "PreviewIcon" : "Icons/Color/TargetSpot",
+    "NameKey" : "research.tractorbeam",
+    "Researchable" : {
+        "IsTreeNode" : true,
+        "Prerequisites" : [
+            "Research/Security/EnergyWeapons"
+        ],
+        "DatoidCosts" : [
+            {
+                "TypeId" : "DatoidEnergy",
+                "StackSize" : 14
+            },
+            {
+                "TypeId" : "DatoidTechHigh",
+                "StackSize" : 6
+            },
+            {
+                "TypeId" : "DatoidAlien",
+                "StackSize" : 4
+            }
+        ]
+    }
+}

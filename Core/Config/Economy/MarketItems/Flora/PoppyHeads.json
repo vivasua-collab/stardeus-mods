@@ -1,0 +1,10 @@
+{
+    "Id" : "Obj/Materials/PoppyHeads",
+    "Type" : "CFD",
+    "Groups" : [ "Flora" ],
+    "Value" : 38.0,
+    "Rarity" : 0.01,
+    "TraderQuantity" : 10.0,
+    "MinSectorDifficulty" : 0.65,
+    "Volatility" : 0.0027
+}

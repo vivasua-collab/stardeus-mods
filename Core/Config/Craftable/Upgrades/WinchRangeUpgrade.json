@@ -1,0 +1,12 @@
+{
+    "Type": "Upgrades",
+    "Ingredients": [
+        { "TypeId" : "TitaniumPlate", "StackSize" : 10 },
+        { "TypeId" : "CarbonFiber", "StackSize" : 10 },
+        { "TypeId" : "Gears", "StackSize" : 5 }
+    ],
+    "IgnoreMarket" : true,
+    "ProductDefId": "Obj/Upgrades/WinchRangeUpgrade",
+    "ProductionTimeHours": 24.0,
+    "EnergyCost": 50.0
+}

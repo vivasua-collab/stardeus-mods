@@ -1,0 +1,17 @@
+{
+    "Id" : "Guitarist",
+    "Species" : [ "Human" ],
+    "LovesJobTypes" : [ "Creative" ],
+    "RoleTypes" : [ "Dumb", "Poor" ],
+    "AgePhaseIds" : [ "YoungAdult", "MidLife", "Retirement" ],
+    "AdjustsSkills" : [
+        {
+            "JobId" : "Crafting",
+            "Adjustment" : 4
+        },
+        {
+            "JobId" : "Shooting",
+            "Adjustment" : -1
+        }
+    ]
+}

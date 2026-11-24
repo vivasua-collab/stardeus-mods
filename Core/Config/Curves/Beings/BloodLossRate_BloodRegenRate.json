@@ -1,0 +1,6 @@
+{
+    // any blood loss stops blood regeneration (the dependency ignores 0)
+    "FloatSet" : [
+        0.0, 0.0
+    ]
+}

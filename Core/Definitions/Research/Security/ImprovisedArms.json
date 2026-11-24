@@ -1,0 +1,16 @@
+{
+    "Id" : "Research/Security/ImprovisedArms",
+    "Tier" : 1,
+    "IsAbstract" : true,
+    "PreviewIcon" : "Obj/Weapons/NailGun01/NailGun01",
+    "Researchable" : {
+        "IsTreeNode" : true,
+        "Prerequisites" : [
+            "Research/Security/WeaponsBasic"
+        ],
+        "DatoidCosts" : [
+            { "TypeId" : "DatoidBasic", "StackSize" : 8 },
+            { "TypeId" : "DatoidTech",  "StackSize" : 3 }
+        ]
+    }
+}

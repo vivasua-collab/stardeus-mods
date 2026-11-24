@@ -1,0 +1,8 @@
+{
+    "IsAbstract" : true,
+    "Layer" : "FreeEntities",
+    "IgnoreMarket" : true,
+    "ParentId" : "Obj/BaseObj",
+    "NameKey" : "noun.alien.egg",
+    "Components" : [ ]
+}

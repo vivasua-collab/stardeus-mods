@@ -1,0 +1,12 @@
+{
+    "Id" : "Panel/Dialog",
+
+    // "Colors are defined through Selectable color blocks",
+    "Color" : "UI/Panel/Dialog",
+    "Alpha" : 0.9,
+
+    "Image" : "UI/Panels/PanelBG",
+    "ImageType" : "Sliced",
+    "ImageBorderLBRT" : [ 28, 28, 12, 12 ],
+    "ImagePPUMultiplier" : 1.5
+}

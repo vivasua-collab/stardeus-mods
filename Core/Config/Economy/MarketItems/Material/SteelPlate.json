@@ -1,0 +1,9 @@
+{
+    "Id" : "Obj/Materials/SteelPlate",
+    "Type" : "CFD",
+    "Groups" : [ "Material" ],
+    "Value" : 15.0,
+    "Rarity" : 0.8,
+    "TraderQuantity" : 2000.0,
+    "Volatility" : 0.0009
+}

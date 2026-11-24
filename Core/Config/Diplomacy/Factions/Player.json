@@ -1,0 +1,20 @@
+{
+    "Id" : "Player",
+    "IsPlayer" : true,
+    "FlagIcon" : "Icons/Faction/Player",
+    "Friendliness" : 0,
+    "AI" : 0.5,
+    "ShipDensityMul" : 1.0,
+    "CombatObjective" : "Defend",
+    "GenBodyVars" : {
+        "ChanceModded" : 0.15,
+        "ChanceFreak" : 0.01,
+        "ChanceBionic" : 0.05,
+        "ChanceCustomMind" : 0.0,
+        "ChanceHighQualityParts" : 0.1,
+        "ChanceLowQualityParts" : 0.1,
+        "ChanceNonStandard" : 0.1,
+        "ChanceScarred" : 0.2,
+        "ChanceImplant" : 0.01
+    }
+}

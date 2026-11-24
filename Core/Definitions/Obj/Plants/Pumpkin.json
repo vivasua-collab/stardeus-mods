@@ -1,0 +1,32 @@
+{
+    "Layer" : "FreeEntities",
+    "ParentId" : "Obj/Plants/BasePlant",
+    "Researchable" : {
+        "Prerequisites" : [ "Research/LifeSupport/VegetarianFood" ]
+    },
+    "Components" : [
+        {
+            "Component" : "ObjGraphics",
+            "Properties" : [
+                { "Key" : "Scale", "Float": 0.5 },
+                { "Key" : "Graphic", "String": "Obj/Plants/PumpkinPlant/PumpkinPlant" }
+            ]
+        },
+        {
+            "Component" : "Plant",
+            "Properties" : [
+                { "Key" : "Size", "String" : "Medium" },
+                {
+                    "Key" : "HarvestOutput",
+                    "RawMaterials" : [
+                        { "TypeId" : "Pumpkin", "StackSize" : 1 }
+                    ]
+                },
+                { "Key" : "WaterUsePerDay", "Float" : 0.5 },
+                { "Key" : "WorkAmount", "Int" : 50 },
+                { "Key" : "GrowthRate", "Float" : 0.85 },
+                { "Key" : "GrowthAfterHarvest", "Float" : 0.3 }
+            ]
+        }
+    ]
+}

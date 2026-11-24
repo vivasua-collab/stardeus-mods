@@ -1,0 +1,98 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Stardeus Craftable",
+  "description": "Generated from C# by Game/Generate JSON Schemas, do not edit by hand",
+  "$ref": "#/$defs/Craftable",
+  "$defs": {
+    "Craftable": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "Id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "IdH": {
+          "type": "integer"
+        },
+        "Type": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "ColorGroupId": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "OutputMultiplier": {
+          "type": "integer"
+        },
+        "Ingredients": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "$ref": "#/$defs/Mat"
+          }
+        },
+        "DisposableOutput": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "$ref": "#/$defs/Mat"
+          }
+        },
+        "ProductDefId": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "ProductionTimeHours": {
+          "type": "number"
+        },
+        "EnergyCost": {
+          "type": "number"
+        },
+        "IgnoreMarket": {
+          "type": "boolean"
+        },
+        "IgnoreEnergyOutput": {
+          "type": "boolean"
+        },
+        "ListOrder": {
+          "type": "integer"
+        }
+      },
+      "additionalProperties": false
+    },
+    "Mat": {
+      "type": "object",
+      "properties": {
+        "TypeId": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "StackSize": {
+          "type": "integer"
+        },
+        "MaxStackSize": {
+          "type": "integer"
+        }
+      },
+      "additionalProperties": false
+    }
+  }
+}

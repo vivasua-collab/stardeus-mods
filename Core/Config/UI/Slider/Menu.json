@@ -1,0 +1,22 @@
+{
+    "Id" : "Slider/Menu",
+
+    "ChildrenKeys" : [
+        "PanelBackground",
+        "PanelFillArea",
+        "PanelFill",
+        "PanelHandle",
+        "Selectable",
+        "ActiveOverlay"
+    ],
+
+    "ChildrenIds" : [
+        "Panel/SliderMenu",
+        "Panel/SliderMenu",
+        "Panel/SliderFill",
+        "Panel/SliderHandleMenu",
+        "Selectable/Scrollbar",
+        "Overlay/ButtonMenu"
+    ]
+
+}

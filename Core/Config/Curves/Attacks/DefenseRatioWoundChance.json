@@ -1,0 +1,18 @@
+{
+    // Whether a hit wounds at all, from the hit's damage over the part's defense (its
+    // resistance plus the being's armor), the same ratio DefenseRatioSeverity reads. It is
+    // q^2 / (q^2 + 1): diminishing returns for every armor point, no cliff. Clamped to
+    // 5-95% in code, so armor never makes a being immune.
+    "FloatSet" : [
+        0, 0,
+        0.25, 0.059,
+        0.5, 0.2,
+        0.75, 0.36,
+        1, 0.5,
+        1.5, 0.692,
+        2, 0.8,
+        3, 0.9,
+        4, 0.941,
+        6, 0.973
+    ]
+}

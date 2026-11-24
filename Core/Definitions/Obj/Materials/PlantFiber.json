@@ -1,0 +1,39 @@
+{
+    "Layer" : "FreeEntities",
+    "ParentId" : "Obj/Materials/BaseMaterial",
+    "Components" : [
+        {
+            "Component" : "ObjHealth",
+            "Properties" : [
+                { "Key" : "IsInvincible", "Bool" : false }
+            ]
+        },
+        {
+            "Component" : "ObjGraphics",
+            "Properties" : [
+                { "Key" : "Graphic", "String": "Obj/Materials/PlantFiber" }
+            ]
+        },
+        {
+            "Component" : "Edible" ,
+            "Properties" : [
+                { "Key" : "Amount", "Float" : 0.25 },
+                { "Key" : "IsVegan", "Bool" : true }
+            ]
+        },
+        {
+            "Component" : "UnstoredMat",
+            "Properties" : [
+                { "Key" : "Type", "String" : "PlantFiber" }
+            ]
+        },
+        {
+            "Component" : "Flammable",
+            "Properties" : [
+                { "Key" : "IgnitionTemperatureCelsius", "Int" : 200 },
+                { "Key" : "FireDamageResistance", "Float" : 0.2 },
+                { "Key" : "FireChance", "Float" : 0.95 }
+            ]
+        }
+    ]
+}

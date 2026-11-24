@@ -1,0 +1,8 @@
+{
+    "Id" : "Text/ResearchNameUndiscovered",
+    "TextSkipAutoScale" : true,
+
+    "Color" : "UI/Text/LightGrey",
+    "TextOverflowMode" : "Ellipsis",
+    "TextFontStyles" : [ "UpperCase" ]
+}

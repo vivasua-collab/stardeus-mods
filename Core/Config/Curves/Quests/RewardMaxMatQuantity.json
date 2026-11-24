@@ -1,0 +1,9 @@
+{
+    // Sector difficulty (0..1) -> max material reward stack size
+    "FloatSet" : [
+        0.0, 200,
+        0.5, 300,
+        0.9, 500,
+        1.0, 1000
+    ]
+}

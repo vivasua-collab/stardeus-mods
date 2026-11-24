@@ -1,0 +1,11 @@
+{
+    "Id" : "Obj/Equipment/Weapons/SMG01",
+    "Type" : "CFD",
+    "Groups" : [ "Weapon" ],
+    "Value" : 2000.0,
+    "Rarity" : 0.6,
+    "TraderQuantity" : 1.0,
+    "MaxTraderQuantity" : 5,
+    "MinSectorDifficulty" : 0.5,
+    "Volatility" : 0.002
+}

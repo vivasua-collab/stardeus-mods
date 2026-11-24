@@ -1,0 +1,759 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Stardeus Species",
+  "description": "Generated from C# by Game/Generate JSON Schemas, do not edit by hand",
+  "$ref": "#/$defs/Species",
+  "$defs": {
+    "AgePhaseRange": {
+      "type": "object",
+      "properties": {
+        "AgeFrom": {
+          "type": "integer"
+        },
+        "Phase": {
+          "enum": [
+            "None",
+            "Childhood",
+            "YoungAdult",
+            "MidLife",
+            "Retirement"
+          ],
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "AgePhase": {
+          "anyOf": [
+            {
+              "type": "string",
+              "pattern": "^\\s*(None|Childhood|YoungAdult|MidLife|Retirement)(\\s*,\\s*(None|Childhood|YoungAdult|MidLife|Retirement))*\\s*$"
+            },
+            {
+              "type": "integer"
+            }
+          ]
+        }
+      },
+      "additionalProperties": false
+    },
+    "BeingSex": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "Type": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "TypeChar": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "Chance": {
+          "type": "number"
+        },
+        "ChanceBald": {
+          "type": "number"
+        },
+        "HairTypes": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "HeadTypes": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "BodyTypes": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "BodyTypeChances": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "number"
+          }
+        },
+        "NameParts": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "$ref": "#/$defs/NamePartDef"
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "ComponentConfig": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "Component": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "Properties": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "$ref": "#/$defs/SerializableProperty"
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "Mat": {
+      "type": "object",
+      "properties": {
+        "TypeId": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "StackSize": {
+          "type": "integer"
+        },
+        "MaxStackSize": {
+          "type": "integer"
+        }
+      },
+      "additionalProperties": false
+    },
+    "NamePartDef": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "NonUnique": {
+          "type": "boolean"
+        },
+        "Type": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "Paths": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "Chances": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "number"
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "SerializableProperty": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "Key": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "String": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "Int": {
+          "type": "integer"
+        },
+        "Float": {
+          "type": "number"
+        },
+        "Vector2": {
+          "$ref": "#/$defs/Vector2"
+        },
+        "PosIdx": {
+          "type": "integer"
+        },
+        "Bool": {
+          "type": "boolean"
+        },
+        "BoolSet": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "boolean"
+          }
+        },
+        "IntSet": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "integer"
+          }
+        },
+        "FloatSet": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "number"
+          }
+        },
+        "StringSet": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "Vector2Set": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "$ref": "#/$defs/Vector2"
+          }
+        },
+        "RawMaterials": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "$ref": "#/$defs/Mat"
+          }
+        },
+        "IsUsed": {
+          "type": "boolean"
+        }
+      },
+      "additionalProperties": false
+    },
+    "SexualAttraction": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "Sex": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "SexChar": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "Orientation": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "AttractedTo": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "additionalProperties": false
+    },
+    "SexualOrientation": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "Type": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "Chance": {
+          "type": "number"
+        }
+      },
+      "additionalProperties": false
+    },
+    "Species": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "Size": {
+          "anyOf": [
+            {
+              "type": "string",
+              "enum": [
+                "Small",
+                "Medium",
+                "Large"
+              ]
+            },
+            {
+              "type": "integer"
+            }
+          ]
+        },
+        "DefaultCombatConfig": {
+          "anyOf": [
+            {
+              "type": "string",
+              "enum": [
+                "FreeWill",
+                "Fight",
+                "Flee",
+                "Ignore"
+              ]
+            },
+            {
+              "type": "integer"
+            }
+          ]
+        },
+        "BodySize": {
+          "enum": [
+            "Small",
+            "Medium",
+            "Large"
+          ],
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "BodyPartSlotSizes": {
+          "type": [
+            "object",
+            "null"
+          ],
+          "additionalProperties": {
+            "type": "number"
+          }
+        },
+        "BloodCapacityLiters": {
+          "type": "number"
+        },
+        "BeingValueBase": {
+          "type": "number"
+        },
+        "Trade": {
+          "$ref": "#/$defs/SpeciesTradeConfig"
+        },
+        "BaseCombatStrength": {
+          "type": "number"
+        },
+        "RaidTierWeights": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "number"
+          }
+        },
+        "CustomMindWeight": {
+          "type": "number"
+        },
+        "Id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "IdH": {
+          "type": "integer"
+        },
+        "Looks": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "LifeExpectancyYears": {
+          "type": "number"
+        },
+        "SpawnAgeCurve": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "number"
+          }
+        },
+        "StatFlags": {
+          "anyOf": [
+            {
+              "type": "string",
+              "pattern": "^\\s*(None|Biological|Robotic|IsNegative|Humanoid|Animal|Pet|Wild|Flying)(\\s*,\\s*(None|Biological|Robotic|IsNegative|Humanoid|Animal|Pet|Wild|Flying))*\\s*$"
+            },
+            {
+              "type": "integer"
+            }
+          ]
+        },
+        "Flags": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "enum": [
+              "None",
+              "Biological",
+              "Robotic",
+              "IsNegative",
+              "Humanoid",
+              "Animal",
+              "Pet",
+              "Wild",
+              "Flying"
+            ],
+            "type": "string"
+          }
+        },
+        "SelectSounds": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "HasFullName": {
+          "type": "boolean"
+        },
+        "NameChanceWeights": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "number"
+          }
+        },
+        "NameParts": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "$ref": "#/$defs/NamePartDef"
+          }
+        },
+        "Sexes": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "$ref": "#/$defs/BeingSex"
+          }
+        },
+        "SexualAttractions": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "$ref": "#/$defs/SexualAttraction"
+          }
+        },
+        "SexualOrientations": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "$ref": "#/$defs/SexualOrientation"
+          }
+        },
+        "BloodSpriteRoot": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "Traits": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "InventorySlotTypes": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "BodyPartSlotTypes": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "AttackSounds": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "PainSounds": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "TakeDamageSounds": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "DefId": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "ForcedFaction": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "StasisWakeUpChance": {
+          "type": "number"
+        },
+        "AgePhases": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "$ref": "#/$defs/AgePhaseRange"
+          }
+        },
+        "CombatBehavior": {
+          "enum": [
+            "FreeWill",
+            "Fight",
+            "Flee",
+            "Ignore"
+          ],
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "AddsNeeds": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "GrantsMentalHealth": {
+          "type": "boolean"
+        },
+        "FunRepetitionCurve": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "AddsAbilities": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "StatSources": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "$ref": "#/$defs/StatSourceData"
+          }
+        },
+        "ProvidesStats": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "$ref": "#/$defs/ComponentConfig"
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "SpeciesTradeConfig": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "Group": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "ChanceInStock": {
+          "type": "number"
+        },
+        "MaxInStock": {
+          "type": "integer"
+        },
+        "LivingPremium": {
+          "type": "number"
+        },
+        "SellWreck": {
+          "type": "boolean"
+        }
+      },
+      "additionalProperties": false
+    },
+    "StatSourceData": {
+      "type": "object",
+      "properties": {
+        "StatId": {
+          "type": "integer"
+        },
+        "CompoundLimit": {
+          "type": "number"
+        },
+        "StateMul": {
+          "type": "number"
+        },
+        "QualityMul": {
+          "type": "number"
+        },
+        "Amount": {
+          "type": "number"
+        }
+      },
+      "additionalProperties": false
+    },
+    "Vector2": {
+      "type": "object",
+      "properties": {
+        "x": {
+          "type": "number"
+        },
+        "y": {
+          "type": "number"
+        }
+      },
+      "additionalProperties": false
+    }
+  }
+}

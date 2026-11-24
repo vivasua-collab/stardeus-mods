@@ -1,0 +1,13 @@
+{
+    "Id" : "FlatEarther",
+    "Species" : [ "Human" ],
+    "AgePhaseIds" : [ "YoungAdult", "MidLife", "Retirement" ],
+    "RoleTypes" : [ "Dumb" ],
+    "IncapableJobTypes" : [ "Research" ],
+    "AdjustsSkills" : [
+        {
+            "JobId" : "Social",
+            "Adjustment" : 6
+        }
+    ]
+}

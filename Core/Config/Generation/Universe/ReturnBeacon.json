@@ -1,0 +1,11 @@
+{
+    "Id" : "ReturnBeacon",
+    "Icon" : "SpaceObjects/Misc/ReturnBeacon01",
+    "NameKey" : "noun.return.beacon",
+    "InfoKey" : "noun.return.beacon.desc",
+    "UseTypeName" : true,
+    "IsDynamic" : true,
+    "IsInteractive" : true,
+    "SpawnChance" : 0.0,
+    "StarfieldSortOrder" : 2
+}

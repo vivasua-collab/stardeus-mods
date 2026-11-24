@@ -1,0 +1,11 @@
+{
+    "Id" : "SurvivalMeal",
+    "DefId" : "Obj/Meals/SurvivalMeal",
+    "IsComposite" : true,
+    "IconId" : "Obj/Meals/SurvivalMeal",
+    "Property" : "Nutrient",
+    "Group" : "Food",
+    "GroupId" : "Food",
+    "EnergyOutput" : 410.0,
+    "Rarity" : 100
+}

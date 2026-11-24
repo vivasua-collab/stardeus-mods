@@ -1,0 +1,10 @@
+{
+    "Id" : "FusionCell",
+    "IsComposite" : true,
+    "IconId" : "Obj/Materials/FusionCell",
+    "GroupId" : "Hyperfuel",
+    "EnergyOutput" : 2000.0,
+    "Rarity" : 2,
+    "ExplosionLevel" : 3,
+    "ExplosivenessCurveId" : "High"
+}

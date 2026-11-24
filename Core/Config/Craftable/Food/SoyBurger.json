@@ -1,0 +1,11 @@
+{
+    "Type": "Food",
+    "Ingredients": [
+        { "TypeId" : "PlantFiber", "StackSize" : 1 },
+        { "TypeId" : "Water", "StackSize" : 1 }
+    ],
+    "IgnoreMarket" : true,
+    "ProductDefId": "Obj/Meals/SoyBurger",
+    "ProductionTimeHours": 1.0,
+    "EnergyCost": 5.0
+}

@@ -1,0 +1,6 @@
+{
+    "Floats" : [
+        { "Key" : "ConstructionVolume", "Float" : 0.5 },
+        { "Key" : "RepairsVolume", "Float" : 0.5 }
+    ]
+}

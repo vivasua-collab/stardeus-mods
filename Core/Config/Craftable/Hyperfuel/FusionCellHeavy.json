@@ -1,0 +1,10 @@
+{
+    "Type" : "Hyperfuel2",
+    "Ingredients" : [
+        { "TypeId" : "Phasium", "StackSize" : 10 },
+        { "TypeId" : "SilverIngot", "StackSize" : 1 }
+    ],
+    "ProductDefId" : "Obj/Materials/FusionCellHeavy",
+    "ProductionTimeHours" : 12,
+    "EnergyCost" : 150
+}

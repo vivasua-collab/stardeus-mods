@@ -1,0 +1,38 @@
+{
+    "ToolPath" : "Floors/FloorRegular",
+    "Layer" : "Floor",
+    "ParentId" : "Structure/Floors/BaseFloor",
+    "Components" : [
+        {
+            "Component" : "TileGraphics",
+            "Properties" : [
+                { "Key" : "Graphic", "String": "Structure/Floors/FloorGlass01" },
+                { "Key" : "Shader", "String": "ReflectedFloorTile" }
+            ]
+        },
+        {
+            "Component" : "Admirable",
+            "Properties" : [
+                // mood bonus
+                { "Key" : "Amount", "Int" : 1 },
+                // fun multiplier
+                { "Key" : "Multiplier", "Float" : 0.1 },
+                { "Key" : "Chance", "Float" : 0.1 },
+                { "Key" : "IsWindow", "Bool" : true }
+            ]
+        },
+        {
+            "Component" : "Constructable",
+            "Properties" : [
+                { "Key" : "WorkAmount", "Int" : 100 },
+                {
+                    "Key" : "Contents",
+                    "RawMaterials" : [
+                        { "TypeId" : "SteelPlate", "StackSize" : 1 },
+                        { "TypeId" : "Glass", "StackSize" : 1 }
+                    ]
+                }
+            ]
+        }
+    ]
+}

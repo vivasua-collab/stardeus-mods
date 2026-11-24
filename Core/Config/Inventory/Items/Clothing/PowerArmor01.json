@@ -1,0 +1,91 @@
+{
+    "DefId" : "Obj/Equipment/Clothing/PowerArmor01",
+    "SlotId" : "Suit",
+    "SpriteId" : "Beings/Clothing/Human/PowerArmor01/[BODY_TYPE]/[BODY_TYPE]PowerArmor01",
+    "ColorGroupId" : "Suit",
+    // craft-only: Rarity -1 keeps it off raiders, and the unreachable SpawnRequirements keep it out of trader stock
+    "Rarity" : -1,
+    "CombatStrengthBonus" : 5.0,
+    "SpawnRequirements" : {
+        "Days" : 100000
+    },
+    "LooksShowFlags" : [
+        "SlotEmpty",
+        "Combat"
+    ],
+    "LooksHideFlags" : [
+        "SafeEnv"
+    ],
+    "HidesLookParts" : [
+
+    ],
+    "AddsAbilities" : [
+        "Fly"
+    ],
+    "ProvidesStats" : [
+        {
+            "Component" : "SpaceSuitIntegrity",
+            "Properties" : [
+                { "Key" : "StateMul", "Float" : 0.0 },
+                { "Key" : "Amount", "Float" : 0.90 },
+                { "Key" : "CompoundLimit", "Float" : 1.0 }
+            ]
+        }
+    ],
+    "AddsStatModifiers" : [
+        {
+            "Component" : "TempMin",
+            "Properties" : [
+                { "Key" : "Value", "Float" : -80 },
+                { "Key" : "Type", "String" : "Adds" }
+            ]
+        },
+        {
+            "Component" : "TempMax",
+            "Properties" : [
+                { "Key" : "Value", "Float" : 300 },
+                { "Key" : "Type", "String" : "Adds" }
+            ]
+        },
+        {
+            "Component" : "ArmorSharp",
+            "Properties" : [
+                { "Key" : "StateMul", "Float" : 1.0 },
+                { "Key" : "Value", "Float" : 18 },
+                { "Key" : "Type", "String" : "Adds" }
+            ]
+        },
+        {
+            "Component" : "ArmorPiercing",
+            "Properties" : [
+                { "Key" : "StateMul", "Float" : 1.0 },
+                { "Key" : "Value", "Float" : 17 },
+                { "Key" : "Type", "String" : "Adds" }
+            ]
+        },
+        {
+            "Component" : "ArmorBlunt",
+            "Properties" : [
+                { "Key" : "StateMul", "Float" : 1.0 },
+                { "Key" : "Value", "Float" : 18 },
+                { "Key" : "Type", "String" : "Adds" }
+            ]
+        },
+        {
+            "Component" : "ArmorEnergy",
+            "Properties" : [
+                { "Key" : "StateMul", "Float" : 1.0 },
+                { "Key" : "Value", "Float" : 20 },
+                { "Key" : "Type", "String" : "Adds" }
+            ]
+        },
+        {
+            "Component" : "WeakPointCover",
+            "Properties" : [
+                { "Key" : "StateMul", "Float" : 1.0 },
+                { "Key" : "Value", "Float" : 0.6 },
+                { "Key" : "Type", "String" : "Adds" }
+            ]
+        }
+    ]
+}

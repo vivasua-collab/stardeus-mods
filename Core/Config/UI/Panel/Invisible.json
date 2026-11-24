@@ -1,0 +1,9 @@
+{
+    "Id" : "Panel/Invisible",
+
+    "Color" : "FFFFFF",
+    "Alpha" : 0.001,
+
+    "Image" : "NoAtlas/WhiteSquare",
+    "ImageType" : "Simple"
+}

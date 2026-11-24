@@ -1,0 +1,9 @@
+{
+    "Id" : "Overlay/LongPress",
+
+    "Color" : "UI/Btn/OverlayActive",
+
+    "Image" : "UI/Buttons/ActiveOverlayLongPress",
+    "ImageType" : "Sliced",
+    "ImageBorderLBRT" : [ 20, 12, 12, 20 ]
+}

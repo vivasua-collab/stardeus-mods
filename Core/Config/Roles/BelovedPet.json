@@ -1,0 +1,15 @@
+{
+    "Id" : "BelovedPet",
+    "Species" : [ "Dog", "Cat", "Pig" ],
+    "RoleTypes" : [ "Dumb", "Good" ],
+    "AdjustsSkills" : [
+        {
+            "JobId" : "Social",
+            "Adjustment" : 4
+        },
+        {
+            "JobId" : "Melee",
+            "Adjustment" : -1
+        }
+    ]
+}

@@ -1,0 +1,9 @@
+{
+    "Id" : "Optimist",
+    "IconId" : "Icons/Color/MoodGood",
+    "TypeId" : "Intellectual",
+    "Rarity" : 0.5,
+    "IncompatibleTraitIds" : [
+        "Pessimist"
+    ]
+}

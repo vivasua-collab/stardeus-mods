@@ -1,0 +1,6 @@
+{
+    "Id" : "Expedition",
+    "Importance" : 2.0,
+    "IconId" : "Icons/Color/Destination",
+    "Types" : [ "Physical", "Challenging", "Dangerous" ]
+}

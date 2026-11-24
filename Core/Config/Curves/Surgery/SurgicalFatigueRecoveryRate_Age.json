@@ -1,0 +1,15 @@
+{
+    // being age percent => recovery per day
+    "FloatSet" : [
+        // ~25 days to full recovery for newborn
+        0.0, 0.04,
+        // ~30 days to full recovery for ~20 years old human
+        0.2, 0.03,
+        // ~60 days for 50 y/o
+        0.5, 0.015,
+        // ~180 days to full recovery when you're 80 y/o
+        0.8, 0.005,
+        // downhill from here, almost no recovery when you're 100 y/o
+        1.0, 0.0005
+    ]
+}

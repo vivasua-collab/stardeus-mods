@@ -1,0 +1,470 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Stardeus StoryEventDef",
+  "description": "Generated from C# by Game/Generate JSON Schemas, do not edit by hand",
+  "$ref": "#/$defs/StoryEventDef",
+  "$defs": {
+    "Mat": {
+      "type": "object",
+      "properties": {
+        "TypeId": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "StackSize": {
+          "type": "integer"
+        },
+        "MaxStackSize": {
+          "type": "integer"
+        }
+      },
+      "additionalProperties": false
+    },
+    "SerializableProperty": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "Key": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "String": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "Int": {
+          "type": "integer"
+        },
+        "Float": {
+          "type": "number"
+        },
+        "Vector2": {
+          "$ref": "#/$defs/Vector2"
+        },
+        "PosIdx": {
+          "type": "integer"
+        },
+        "Bool": {
+          "type": "boolean"
+        },
+        "BoolSet": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "boolean"
+          }
+        },
+        "IntSet": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "integer"
+          }
+        },
+        "FloatSet": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "number"
+          }
+        },
+        "StringSet": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "Vector2Set": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "$ref": "#/$defs/Vector2"
+          }
+        },
+        "RawMaterials": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "$ref": "#/$defs/Mat"
+          }
+        },
+        "IsUsed": {
+          "type": "boolean"
+        }
+      },
+      "additionalProperties": false
+    },
+    "Situation": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "Friendlies": {
+          "type": "integer"
+        },
+        "Workers": {
+          "type": "integer"
+        },
+        "Colonists": {
+          "type": "integer"
+        },
+        "Guests": {
+          "type": "integer"
+        },
+        "Firefighters": {
+          "type": "integer"
+        },
+        "ColonySizeDiff": {
+          "type": "integer"
+        },
+        "Population": {
+          "type": "number"
+        },
+        "HumanDeaths": {
+          "type": "integer"
+        },
+        "Enemies": {
+          "type": "integer"
+        },
+        "ActiveThreats": {
+          "type": "integer"
+        },
+        "Areas": {
+          "type": "integer"
+        },
+        "Islands": {
+          "type": "integer"
+        },
+        "ShipSize": {
+          "type": "integer"
+        },
+        "ResearchedTech": {
+          "type": "integer"
+        },
+        "GridMaxOutput": {
+          "type": "number"
+        },
+        "GridConsumption": {
+          "type": "number"
+        },
+        "GridDeficit": {
+          "type": "number"
+        },
+        "GridBatCharge": {
+          "type": "number"
+        },
+        "GridBatOutput": {
+          "type": "number"
+        },
+        "GridRenewableOutput": {
+          "type": "number"
+        },
+        "GridSize": {
+          "type": "integer"
+        },
+        "Grids": {
+          "type": "integer"
+        },
+        "SectorDifficulty": {
+          "type": "number"
+        },
+        "ShipComputers": {
+          "type": "integer"
+        },
+        "TotalCPU": {
+          "type": "integer"
+        },
+        "TotalGPU": {
+          "type": "integer"
+        },
+        "TotalMemory": {
+          "type": "integer"
+        },
+        "TotalDisk": {
+          "type": "integer"
+        },
+        "BlackHoleJumps": {
+          "type": "integer"
+        },
+        "DerelictsApproached": {
+          "type": "integer"
+        },
+        "ExpeditionsCompleted": {
+          "type": "integer"
+        },
+        "ExpeditionsOngoing": {
+          "type": "integer"
+        },
+        "StoryEvents": {
+          "type": "integer"
+        },
+        "StoryPointsPositiveMax": {
+          "type": "integer"
+        },
+        "StoryPointsPositive": {
+          "type": "integer"
+        },
+        "StoryPointsNegativeMax": {
+          "type": "integer"
+        },
+        "StoryPointsNegative": {
+          "type": "integer"
+        },
+        "StoryPointsNeutralMax": {
+          "type": "integer"
+        },
+        "StoryPointsNeutral": {
+          "type": "integer"
+        },
+        "StoryPointsRaidMax": {
+          "type": "integer"
+        },
+        "StoryPointsRaid": {
+          "type": "integer"
+        },
+        "SpaceObjectsDiscovered": {
+          "type": "integer"
+        },
+        "Days": {
+          "type": "integer"
+        },
+        "Weeks": {
+          "type": "integer"
+        },
+        "Months": {
+          "type": "integer"
+        },
+        "Years": {
+          "type": "integer"
+        },
+        "Money": {
+          "type": "number"
+        },
+        "NetWorth": {
+          "type": "number"
+        },
+        "BaseNetWorth": {
+          "type": "number"
+        },
+        "ShipClassPoints": {
+          "type": "integer"
+        },
+        "Mats": {
+          "type": "integer"
+        },
+        "TimesOnFire": {
+          "type": "integer"
+        },
+        "NumRaids": {
+          "type": "integer"
+        },
+        "NumBreakdowns": {
+          "type": "integer"
+        },
+        "CombatStrength": {
+          "type": "number"
+        },
+        "ThreatWeight": {
+          "type": "number"
+        },
+        "NumShipCombats": {
+          "type": "integer"
+        },
+        "OngoingBuildTasks": {
+          "type": "integer"
+        },
+        "Difficulty": {
+          "type": "number"
+        }
+      },
+      "additionalProperties": false
+    },
+    "StoryEventDef": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "Id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "EventId": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "Points": {
+          "type": "integer"
+        },
+        "IdH": {
+          "type": "integer"
+        },
+        "IsDisabled": {
+          "type": "boolean"
+        },
+        "EventFlags": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "enum": [
+              "None",
+              "OnDemand",
+              "Being",
+              "Device",
+              "Raid",
+              "ShipCombat",
+              "ShipInteraction",
+              "Expedition",
+              "Capsule",
+              "StasisPod",
+              "ColonyGrowthRobo",
+              "ColonyGrowthBio",
+              "Death",
+              "Disease",
+              "Signal",
+              "Anomaly",
+              "Fire",
+              "Explosion",
+              "OncePerGame",
+              "HeavyDisaster",
+              "WaitsForCondition",
+              "Funny",
+              "Annoying",
+              "CanHaveDuplicates",
+              "SpaceThreat",
+              "DerelictShip",
+              "Space",
+              "NoHyperspace",
+              "MentalBreakdown",
+              "NeverTimeout",
+              "Egg",
+              "Neglect",
+              "Punishing",
+              "CooldownOnStart",
+              "ColonistRequest",
+              "Drama",
+              "Social",
+              "RunASAPWhenPrioritized",
+              "CanIgnoreRepeatDelay",
+              "SpaceStorm",
+              "NPCShipAttack",
+              "ColonistPetRequest",
+              "Coolable",
+              "Fallback",
+              "DerelictSpawnsSurvivors"
+            ],
+            "type": "string"
+          }
+        },
+        "OutcomeType": {
+          "enum": [
+            "Negative",
+            "Positive",
+            "Neutral",
+            "Raid"
+          ],
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "Outcome": {
+          "anyOf": [
+            {
+              "type": "string",
+              "enum": [
+                "Negative",
+                "Positive",
+                "Neutral",
+                "Raid"
+              ]
+            },
+            {
+              "type": "integer"
+            }
+          ]
+        },
+        "Require": {
+          "$ref": "#/$defs/Situation"
+        },
+        "Properties": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "$ref": "#/$defs/SerializableProperty"
+          }
+        },
+        "Rarity": {
+          "type": "number"
+        },
+        "MinRepeatDelayDays": {
+          "type": "number"
+        },
+        "MaxOngoingDays": {
+          "type": "number"
+        },
+        "MaxOngoingTicks": {
+          "type": "integer"
+        },
+        "SectorDifficultyChance": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "number"
+          }
+        },
+        "RunASAPWhenPrioritized": {
+          "type": "boolean"
+        }
+      },
+      "additionalProperties": false
+    },
+    "Vector2": {
+      "type": "object",
+      "properties": {
+        "x": {
+          "type": "number"
+        },
+        "y": {
+          "type": "number"
+        }
+      },
+      "additionalProperties": false
+    }
+  }
+}

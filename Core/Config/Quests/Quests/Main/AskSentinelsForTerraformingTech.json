@@ -1,0 +1,84 @@
+{
+    "QuestFlags" : [ "Main", "AutoAdd", "Unique" ],
+    "TitleKey" : "quest.AskSentinelsForTerraformingTech",
+    "DescKey" : "quest.AskSentinelsForTerraformingTech.desc",
+    "QuestProviders" : [
+        "ShipComputer"
+    ],
+    "AvailableWhen": [
+        "HasAskedAroundForTerraformingTech"
+    ],
+    "SetOnComplete" : [
+        "AskedSentinelsAboutTerraforming"
+    ],
+    "Variables" : [
+        {
+            "Id" : "SentinelPort",
+            "Type" : "SectorPOI",
+            "Config" : [
+                { "Key" : "CanBeVisited", "Bool" : true },
+                { "Key" : "MinRegionsAway", "Int" : 2 },
+                { "Key" : "MinRegionDifficulty", "Float" : 0.7 },
+                { "Key" : "MaxRegionDifficulty", "Float" : 0.9 },
+                { "Key" : "SectorTemplate", "String" : "Planet" },
+                { "Key" : "POIConfigId", "String" : "Port" },
+                { "Key" : "FactionId", "String" : "Sentinel" },
+                { "Key" : "Var_Start", "String" : null },
+                { "Key" : "SkipRegionsWithoutRelay", "Bool" : false },
+                { "Key" : "SharedVar_SavePOIId", "String" : "Main_SentinelPortId" }
+            ]
+        }
+    ],
+    "Steps" : [
+        {
+            "Id" : "ReachPlanet",
+            "Type" : "GoToTargetSector",
+            "StepFlags" : [ "ActiveOnStart", "HideInactive", "HideIfQuestUnaccepted" ],
+            "SetOnComplete" : [
+                "ReachedPlanet"
+            ],
+            "Config" : [
+                { "Key" : "Var_Target", "String" : "SentinelPort" },
+                { "Key" : "MakeHabitable", "Bool" : true }
+            ]
+        },
+        {
+            "Id" : "HailPort",
+            "Type" : "InteractWithSO",
+            "TitleKey": "verb.communicate.with",
+            "StepFlags" : [ "HideInactive", "CompletesQuest" ],
+            "ActivateWhen": [
+                "ReachedPlanet"
+            ],
+            "Config" : [
+                { "Key" : "Var_Target", "String" : "SentinelPort" },
+                { "Key" : "MessageIcon", "String" : "Icons/Faction/Sentinel" },
+                { "Key" : "MessageOnInteract", "String" : "quest.ask.sentinels.about.terraforming.msg" },
+                {
+                    "Key" : "OfferQuestIds",
+                    "StringSet" : [
+                        "Main/KillVirusShip_Atmo",
+                        "Main/KillVirusShip_Bio",
+                        "Main/KillVirusShip_Terrain",
+                        "Main/KillVirusShip_Ocean"
+                    ]
+                },
+                { "Key" : "AutoActivateQuest", "Bool" : false }
+            ]
+        }
+    ],
+    "Rewards" : [
+        {
+            "Id" : "TerraformControls",
+            "Type" : "Research",
+            "RewardFlags" : [ "Surprise" ],
+            "Config" : [
+                {
+                    "Key" : "Definition",
+                    "String" : "Research/LifeSupport/TerraformControls"
+                },
+                { "Key" : "DiscoverOnly", "Bool" : true }
+            ]
+        }
+    ]
+}

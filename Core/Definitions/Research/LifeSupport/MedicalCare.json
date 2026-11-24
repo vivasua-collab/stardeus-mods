@@ -1,0 +1,23 @@
+{
+    "Id" : "Research/LifeSupport/MedicalCare",
+    "Tier" : 2,
+    "IsAbstract" : true,
+    "PreviewIcon" : "Icons/Color/Health",
+    "NameKey" : "noun.medical.care",
+    "Researchable" : {
+        "IsTreeNode" : true,
+        "Prerequisites" : [
+            "Research/LifeSupport/DeathCare"
+        ],
+        "DatoidCosts" : [
+            {
+                "TypeId" : "DatoidBiotic",
+                "StackSize" : 6
+            },
+            {
+                "TypeId" : "DatoidPhyto",
+                "StackSize" : 4
+            }
+        ]
+    }
+}

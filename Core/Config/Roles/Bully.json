@@ -1,0 +1,28 @@
+{
+    "Id" : "Bully",
+    "Species" : [ "Human" ],
+    "AgePhaseIds" : [ "Childhood" ],
+    "RoleTypes" : [ "Dumb" ],
+    "IncompatibleTraitIds" : [ "Pacifist" ],
+    "BodyTypes" : "MFL",
+    "SexChances" : [
+        {
+            "Sex" : "M",
+            "Chance" : 0.90
+        },
+        {
+            "Sex" : "F",
+            "Chance" : 0.10
+        }
+    ],
+    "AdjustsSkills" : [
+        {
+            "JobId" : "Melee",
+            "Adjustment" : 3
+        },
+        {
+            "JobId" : "Social",
+            "Adjustment" : -1
+        }
+    ]
+}

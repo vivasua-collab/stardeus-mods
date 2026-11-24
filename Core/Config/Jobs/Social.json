@@ -1,0 +1,6 @@
+{
+    "Id" : "Social",
+    "Importance" : 2.0,
+    "IconId" : "Icons/Color/Wave",
+    "Types" : [ "Caring" ]
+}

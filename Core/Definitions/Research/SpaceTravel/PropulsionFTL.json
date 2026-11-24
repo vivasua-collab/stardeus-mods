@@ -1,0 +1,31 @@
+{
+    "Id" : "Research/SpaceTravel/PropulsionFTL",
+    "Tier" : 5,
+    "IsAbstract" : true,
+    "PreviewIcon" : "Icons/Color/Propulsion",
+    "NameKey" : "research.propulsionftl",
+    "Researchable" : {
+        "IsTreeNode" : true,
+        "Prerequisites" : [
+            "Research/SpaceTravel/WarpDrive"
+        ],
+        "DatoidCosts" : [
+            {
+                "TypeId" : "DatoidEnergy",
+                "StackSize" : 27
+            },
+            {
+                "TypeId" : "DatoidNuclear",
+                "StackSize" : 25
+            },
+            {
+                "TypeId" : "DatoidTechHigh",
+                "StackSize" : 12
+            },
+            {
+                "TypeId" : "DatoidAlien",
+                "StackSize" : 9
+            }
+        ]
+    }
+}

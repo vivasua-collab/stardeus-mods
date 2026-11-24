@@ -1,0 +1,22 @@
+// CSS: Corporate Starship
+{
+    "ChanceWillTrade" : 1.0,
+    "ChancePolice" : 0.0,
+    "CompatibleFactions" : [
+        "Player",
+        "OldEarth",
+        "Capitalist"
+    ],
+    "CompatibleClasses" : [
+        "Battlecruiser",
+        "Frigate",
+        "Corvette",
+        "Destroyer",
+        "Carrier",
+        "Battleship",
+        "Dreadnought",
+        "Titan"
+    ],
+    "MinOffensiveness" : 0.0,
+    "MaxOffensiveness" : 0.8
+}

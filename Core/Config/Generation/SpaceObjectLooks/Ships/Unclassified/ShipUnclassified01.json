@@ -1,0 +1,15 @@
+{
+    "Id" : "ShipUnclassified01",
+    "Probability" : 1.0,
+    "StarmapSizeMul" : 0.30,
+    "StarfieldSizeMul" : 0.15,
+    "IsConstantSizeInStarmap" : false,
+    "OrderDist" : -50,
+    "Sprite" : "SpaceObjects/Ships/ShipUnclassified01_D",
+    "CanRotate" : true,
+    "KeepUprightInStarfield" : true,
+    "Sprite_L" : "SpaceObjects/Ships/ShipUnclassified01_L",
+    "Sprite_R" : "SpaceObjects/Ships/ShipUnclassified01_R",
+    "Sprite_U" : "SpaceObjects/Ships/ShipUnclassified01_U",
+    "Sprite_D" : "SpaceObjects/Ships/ShipUnclassified01_D"
+}

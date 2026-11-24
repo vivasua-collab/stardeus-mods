@@ -1,0 +1,21 @@
+{
+    // C# implementation id. Multiple configurations can point to a single implementation.
+    "EventId": "ConstructionDisaster",
+    // How much does this story event cost to run
+    "Points": 12,
+    // Options: Negative, Positive, Neutral, Raid
+    "OutcomeType": "Negative",
+    // Full list is in StoryEventFlags class
+    "EventFlags": [
+        "Device",
+        "Annoying",
+        "Fire",
+        "WaitsForCondition"
+    ],
+    "MinRepeatDelayDays": 60,
+    // Full list of requirements can be found in Situation class
+    "Require": {
+        "Difficulty": 0.25,
+        "Days": 10
+    }
+}

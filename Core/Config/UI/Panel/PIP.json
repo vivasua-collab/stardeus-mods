@@ -1,0 +1,9 @@
+{
+    "Id" : "Panel/PIP",
+
+    "Alpha" : 0.9,
+    "Color" : "000000",
+
+    "Image" : "NoAtlas/WhiteSquare",
+    "ImageType" : "Simple"
+}

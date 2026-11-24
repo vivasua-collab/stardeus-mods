@@ -1,0 +1,36 @@
+{
+    "BuildGroup" : "Bed",
+    "Layer" : "Objects",
+    "ParentId" : "Objects/Furniture/BaseBed",
+    "Spawnable" : {
+        "Category": "Furniture",
+        "Chance" : 1.0,
+        "ChanceLocked" : 0.5
+    },
+    "Components" : [
+        {
+            "Component" : "TileGraphics",
+            "Properties" : [
+                { "Key" : "Graphic", "String": "Objects/Furniture/BedWood" }
+            ]
+        },
+        {
+            "Component" : "Flammable",
+            "Properties" : [
+                { "Key" : "FireChance", "Float" : 1.5 }
+            ]
+        },
+        {
+            "Component" : "Constructable",
+            "Properties" : [
+                {
+                    "Key" : "Contents",
+                    "RawMaterials" : [
+                        { "TypeId" : "Wood", "StackSize" : 2 },
+                        { "TypeId" : "CarbonFiber", "StackSize" : 1 }
+                    ]
+                }
+            ]
+        }
+    ]
+}

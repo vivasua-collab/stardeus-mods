@@ -1,0 +1,18 @@
+{
+    "Type": "Human",
+    "Ingredients": [
+        { "TypeId" : "Protein", "StackSize" : 100 },
+        { "TypeId" : "Carbon", "StackSize" : 10 },
+        { "TypeId" : "Water", "StackSize" : 30 },
+        { "TypeId" : "StemCells", "StackSize" : 400 }
+    ],
+    "DisposableOutput": [
+        { "TypeId" : "Protein", "StackSize" : 4 },
+        { "TypeId" : "Leather", "StackSize" : 2 },
+        { "TypeId" : "Water", "StackSize" : 3 },
+        { "TypeId" : "StemCells", "StackSize" : 1 }
+    ],
+    "ProductDefId": "Beings/Human01",
+    "ProductionTimeHours": 960.0,
+    "EnergyCost": 150.0
+}

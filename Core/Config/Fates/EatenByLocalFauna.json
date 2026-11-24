@@ -1,0 +1,25 @@
+{
+    "RemoveColonist" : true,
+    "IsDead" : true,
+    "IncludeInStasis" : true,
+    "ExcludeRobots" : true,
+    "Chance" : 0.05,
+    "GenerateName" : true,
+    "NameChanceWeights" : [ 1.0 ],
+    "NameParts" : [
+        {
+            "Type" : "LocalFauna",
+            "Paths" : [
+                "Space/Object/Name"
+            ],
+            "Chances" : [ 1.0 ]
+        },
+        {
+            "Type" : "LocalFauna",
+            "Paths" : [
+                "Space/Object/Name"
+            ],
+            "Chances" : [ 0.1 ]
+        }
+    ]
+}

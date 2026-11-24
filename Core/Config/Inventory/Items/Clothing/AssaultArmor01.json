@@ -1,0 +1,103 @@
+{
+    "DefId" : "Obj/Equipment/Clothing/AssaultArmor01",
+    "SlotId" : "Suit",
+    "SpriteId" : "Beings/Clothing/Human/AssaultArmor01/[BODY_TYPE]/[BODY_TYPE]AssaultArmor01",
+    "ColorGroupId" : "Suit",
+    "Rarity" : 0.15,
+    "CombatStrengthBonus" : 4.0,
+    "SpawnRequirements" : {
+        "Days" : 400,
+        "Friendlies" : 14,
+        "SectorDifficulty" : 0.9
+    },
+    "LooksShowFlags" : [
+        "SlotEmpty",
+        "Combat"
+    ],
+    "LooksHideFlags" : [
+        "SafeEnv"
+    ],
+    "HidesLookParts" : [
+
+    ],
+    "AddsAbilities" : [
+        "Fly"
+    ],
+    "ProvidesStats" : [
+        {
+            "Component" : "SpaceSuitIntegrity",
+            "Properties" : [
+                { "Key" : "StateMul", "Float" : 0.0 },
+                { "Key" : "Amount", "Float" : 0.90 },
+                { "Key" : "CompoundLimit", "Float" : 1.0 }
+            ]
+        }
+    ],
+    "AddsStatModifiers" : [
+        {
+            "Component" : "TempMin",
+            "Properties" : [
+                { "Key" : "Value", "Float" : -60 },
+                { "Key" : "Type", "String" : "Adds" }
+            ]
+        },
+        {
+            "Component" : "TempMax",
+            "Properties" : [
+                { "Key" : "Value", "Float" : 250 },
+                { "Key" : "Type", "String" : "Adds" }
+            ]
+        },
+        {
+            "Component" : "ArmorSharp",
+            "Properties" : [
+                { "Key" : "StateMul", "Float" : 1.0 },
+                { "Key" : "Value", "Float" : 13 },
+                { "Key" : "Type", "String" : "Adds" }
+            ]
+        },
+        {
+            "Component" : "ArmorPiercing",
+            "Properties" : [
+                { "Key" : "StateMul", "Float" : 1.0 },
+                { "Key" : "Value", "Float" : 12 },
+                { "Key" : "Type", "String" : "Adds" }
+            ]
+        },
+        {
+            "Component" : "ArmorBlunt",
+            "Properties" : [
+                { "Key" : "StateMul", "Float" : 1.0 },
+                { "Key" : "Value", "Float" : 13 },
+                { "Key" : "Type", "String" : "Adds" }
+            ]
+        },
+        {
+            "Component" : "ArmorEnergy",
+            "Properties" : [
+                { "Key" : "StateMul", "Float" : 1.0 },
+                { "Key" : "Value", "Float" : 14 },
+                { "Key" : "Type", "String" : "Adds" }
+            ]
+        },
+        {
+            "Component" : "WeakPointCover",
+            "Properties" : [
+                { "Key" : "StateMul", "Float" : 1.0 },
+                { "Key" : "Value", "Float" : 0.35 },
+                { "Key" : "Type", "String" : "Adds" }
+            ]
+        }
+    ],
+    // only while the suit shows (outdoors, unsafe air, drafted, in combat):
+    // indoors under the clothes it does not slow its wearer
+    "AddsStatModifiersWhenShown" : [
+        {
+            "Component" : "MoveSpeed",
+            "Properties" : [
+                { "Key" : "Value", "Float" : -0.12 },
+                { "Key" : "Type", "String" : "AddsPercent" }
+            ]
+        }
+    ]
+}

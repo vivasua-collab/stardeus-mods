@@ -1,0 +1,25 @@
+{
+    "Type" : "BedroomSmall",
+    "SizeMin" : 12,
+    "SizeMax" : 50,
+    "CountMin" : 6,
+    "CountMax" : 12,
+    "Chance" : 1.0,
+    "FillMin" : 0.2,
+    "FillMax" : 0.4,
+    "RequiredObjects" : [
+        "Objects/Devices/Heater",
+        "Objects/Devices/OxygenPump"
+    ],
+    "CompatibleObjects" : [
+        "Objects/Devices/Heater",
+        "Objects/Devices/OxygenPump"
+    ],
+    "CompatibleTemplates" : [
+        "Templates/Bedroom01",
+        "Templates/Bedroom02",
+        "Templates/Bedroom03",
+        "Templates/Bedroom04",
+        "Templates/HeaterOxygen01"
+    ]
+}

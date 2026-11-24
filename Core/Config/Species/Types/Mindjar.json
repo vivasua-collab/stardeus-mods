@@ -1,0 +1,85 @@
+{
+    "Looks" : "Mindjar",
+    "DefId" : "Beings/Mindjar01",
+    "LifeExpectancyYears" : 200,
+    "BeingValueBase" : 500,
+    "BaseCombatStrength" : 0.0,
+    "CustomMindWeight" : 0.0,
+    "SpawnAgeCurve" : [
+        0.0, 0,
+        0.2, 5,
+        0.5, 10,
+        0.8, 20,
+        0.9, 30,
+        0.95, 50,
+        0.99, 100,
+        1.0, 200
+    ],
+    "AgePhases" : [
+        {
+            "AgeFrom" : 0,
+            "Phase" : "Childhood"
+        },
+        {
+            "AgeFrom" : 18,
+            "Phase" : "YoungAdult"
+        },
+        {
+            "AgeFrom" : 30,
+            "Phase" : "MidLife"
+        },
+        {
+            "AgeFrom" : 70,
+            "Phase" : "Retirement"
+        }
+    ],
+    "NameChanceWeights" : [
+        1.0
+    ],
+    "NameParts" : [
+        {
+            "Type" : "Nickname",
+            "Paths" : [
+                "Human/Neutral/Nick"
+            ],
+            "Chances" : [ 1.0 ]
+        }
+    ],
+    "CombatBehavior" : "Ignore",
+    "AddsAbilities" : [
+    ],
+    "AddsNeeds" : [
+        "Faction"
+    ],
+    "Flags" : [ "Robotic" ],
+    "BloodSpriteRoot" : "Dirt/OilSplash",
+    "SelectSounds" : [
+        "FX/CleaningBotSelect_01",
+        "FX/CleaningBotSelect_02",
+        "FX/CleaningBotSelect_03",
+        "FX/CleaningBotSelect_04"
+    ],
+    "TakeDamageSounds" : [
+        "FX/PunchMetal_01",
+        "FX/PunchMetal_02",
+        "FX/PunchMetal_03",
+        "FX/PunchMetal_04",
+        "FX/PunchMetal_05"
+    ],
+    "InventorySlotTypes" : [
+    ],
+    "BodySize" : "Small",
+    // A Mindjar's only other internals under Body are Implant (0.05) and Battery (0.2), so at
+    // its default size of 0.6 the Brain would take ~75% of subpart hits and, being HoldsMind,
+    // destroying it is fatal. 0.05 keeps the jar losable in a firefight without making a single
+    // stray hit the norm.
+    "BodyPartSlotSizes" : { "Brain" : 0.05 },
+    "BodyPartSlotTypes" : [
+        "Body",
+        "Brain",
+        "Implant",
+        "Eye",
+        "Mobilizer",
+        "Battery"
+    ]
+}

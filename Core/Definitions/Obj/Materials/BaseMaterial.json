@@ -1,0 +1,21 @@
+{
+    "IsAbstract" : true,
+    "Layer" : "FreeEntities",
+    "ParentId" : "Obj/BaseObj",
+    "Components" : [
+        {
+            "Component" : "ObjHealth",
+            "Properties" : [
+                { "Key" : "IsInvincible", "Bool" : true }
+            ]
+        },
+        { "Component" : "ExtraInfo" },
+        {
+            "Component" : "ObjGraphics",
+            "Properties" : [
+                { "Key" : "Shader", "String" : "ObjFlat" },
+                { "Key" : "IsAnimated", "Bool" : true }
+            ]
+        }
+     ]
+}

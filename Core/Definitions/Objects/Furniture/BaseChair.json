@@ -1,0 +1,37 @@
+{
+    "ToolPath" : "Furniture/Chairs",
+    "Layer" : "Objects",
+    "ParentId" : "Objects/Furniture/BaseFurniture",
+    "IsAbstract" : true,
+    "Researchable" : {
+        "Prerequisites" : [ "Research/Habitation/Furniture" ]
+    },
+    "Components" : [
+        {
+            "Component" : "TileTransform",
+            "Properties" : [
+                { "Key" : "IsWorkSpotCompatible", "Bool" : true },
+                { "Key" : "CoverPercent", "Int" : 0 }
+            ]
+        },
+        {
+            "Component" : "Surface",
+            "Properties" : [
+                { "Key" : "Designation", "String" : "Chair" },
+                { "Key" : "IsForBeings", "Bool" : true }
+            ]
+        },
+        {
+            "Component" : "Passability",
+            "Properties" : [
+                { "Key" : "Difficulty", "Float" : 0.25 }
+            ]
+        },
+        {
+            "Component" : "Constructable",
+            "Properties" : [
+                { "Key" : "WorkAmount", "Int" : 225 }
+            ]
+        }
+    ]
+}

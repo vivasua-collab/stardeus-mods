@@ -1,0 +1,30 @@
+{
+    "Id" : "Research/Economy/MarketInsights",
+    "Tier" : 3,
+    "IsAbstract" : true,
+    "PreviewIcon" : "Icons/Color/StockMarket",
+    "NameKey" : "research.stockinsights",
+    "Researchable" : {
+        "IsTreeNode" : true,
+        "Prerequisites" : [
+            "Research/Economy/StockTrading"
+        ],
+        "UnlockEffects" : [
+            "StockInsightsUnlocked"
+        ],
+        "DatoidCosts" : [
+            {
+                "TypeId" : "DatoidTech",
+                "StackSize" : 18
+            },
+            {
+                "TypeId" : "DatoidEnergy",
+                "StackSize" : 4
+            },
+            {
+                "TypeId" : "DatoidTechHigh",
+                "StackSize" : 8
+            }
+        ]
+    }
+}

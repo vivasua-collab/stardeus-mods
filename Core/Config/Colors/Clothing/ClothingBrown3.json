@@ -1,0 +1,7 @@
+{
+    "Id" : "ClothingBrown3",
+    "Data" : [92, 66, 50, 255],
+    "NameColorId" : "Brown",
+    "NameNumber" : 3,
+    "Groups" : [ "Clothing" ]
+}

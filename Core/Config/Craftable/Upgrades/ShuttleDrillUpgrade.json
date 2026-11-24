@@ -1,0 +1,13 @@
+{
+    "Type": "Upgrades",
+    "Ingredients": [
+        { "TypeId" : "LeadPlate", "StackSize" : 5 },
+        { "TypeId" : "Microchip2", "StackSize" : 2 },
+        { "TypeId" : "NuclearCell", "StackSize" : 1 },
+        { "TypeId" : "Gears", "StackSize" : 5 }
+    ],
+    "IgnoreMarket" : true,
+    "ProductDefId": "Obj/Upgrades/ShuttleDrillUpgrade",
+    "ProductionTimeHours": 24.0,
+    "EnergyCost": 50.0
+}

@@ -1,0 +1,23 @@
+{
+    "Layer" : "FreeEntities",
+    "IgnoreMarket" : true,
+    "ParentId" : "Obj/Parts/BasePartOrganic",
+    "NameKey" : "bodypart.Intestines.IntestinesLarge",
+    "Researchable" : {
+        "Prerequisites" : [ "Research/LifeSupport/GrowingPartsAdvanced" ]
+    },
+    "Components" : [
+        {
+            "Component" : "ObjGraphics",
+            "Properties" : [
+                { "Key" : "Graphic", "String": "Obj/BodyParts/Organic3" }
+            ]
+        },
+        {
+            "Component" : "BodyPart",
+            "Properties" : [
+                { "Key" : "BodyPartDefId", "String" : "Intestines/IntestinesLarge" }
+            ]
+        }
+    ]
+}

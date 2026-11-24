@@ -1,0 +1,28 @@
+{
+    // C# implementation id.
+    // Multiple configurations can point to a single implementation.
+    "EventId" : "MeteoroidShower",
+    // How much does this story event cost to run
+    "Points" : 10,
+    // Options: Negative, Positive, Neutral, Raid
+    "OutcomeType" : "Negative",
+    // Full list is in StoryEventFlags class
+    "EventFlags" : [
+        "Space",
+        "NoHyperspace",
+        "CanIgnoreRepeatDelay"
+    ],
+    "MinRepeatDelayDays" : 16,
+    // the event caps itself at 12 h in code; this keeps the OngoingStoryAspect
+    // (3 day default) from failing it first
+    "MaxOngoingDays" : 1,
+    // How likely this event can occur given the sector difficulty
+    // sector difficulty -> chance
+    "SectorDifficultyChance" : [
+        0.0, 0.0,
+        0.39, 0.0,
+        0.4, 0.1,
+        0.5, 0.5,
+        1.0, 1.0
+    ]
+}

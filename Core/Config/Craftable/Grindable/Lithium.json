@@ -1,0 +1,11 @@
+{
+    "Type": "Grindable",
+    "IgnoreMarket" : true,
+    "Ingredients": [
+        { "TypeId" : "Rock", "StackSize" : 18 }
+    ],
+    "OutputMultiplier" : 1,
+    "ProductDefId": "Obj/Materials/Lithium",
+    "ProductionTimeHours": 4,
+    "EnergyCost": 20.0
+}

@@ -1,0 +1,25 @@
+{
+    "BuildGroup" : "Skull",
+    "Layer" : "Objects",
+    "ParentId" : "Objects/Cosmetics/Skull01",
+    "UseParentTexts" : true,
+    "Components" : [
+        {
+            "Component" : "TileGraphics",
+            "Properties" : [
+                { "Key" : "Graphic", "String": "Objects/Cosmetics/Skull03" }
+            ]
+        },
+        {
+            "Component" : "Constructable",
+            "Properties" : [
+                {
+                    "Key" : "Contents",
+                    "RawMaterials" : [
+                        { "TypeId" : "PlatinumIngot", "StackSize" : 1 }
+                    ]
+                }
+            ]
+        }
+    ]
+}

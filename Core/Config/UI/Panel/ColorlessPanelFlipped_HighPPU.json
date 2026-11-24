@@ -1,0 +1,11 @@
+{
+    "Id" : "Panel/ColorlessPanelFlipped_HighPPU",
+
+    "Color" : "FFFFFF",
+    "Alpha" : 1.0,
+
+    "Image" : "UI/Panels/PanelFlippedBG",
+    "ImageType" : "Sliced",
+    "ImageBorderLBRT" : [ 12, 28, 28, 12 ],
+    "ImagePPUMultiplier" : 1.5
+}

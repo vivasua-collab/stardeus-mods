@@ -1,0 +1,137 @@
+{
+    "ToolPath" : "Facilities",
+    "Layer" : "Objects",
+    "ParentId" : "Objects/Devices/BaseDevice",
+    "IsImportant" : true,
+    "SkipToolListing" : true,
+    "Spawnable" : {
+        "Chance" : 0.0,
+        "ChanceLocked" : 0.0
+    },
+    "Components" : [
+        {
+            "Component" : "TileTransform",
+            "Properties" : [
+                { "Key" : "Width", "Int" : 3 },
+                { "Key" : "Height", "Int" : 3 },
+                // { "Key" : "WorkSpot", "Vector2" : { "x" : 1, "y" : -1 } },
+                { "Key" : "OutPort", "Vector2" : { "x" : 1, "y" : -1 } },
+                { "Key" : "InPort", "Vector2" : { "x" : 1, "y" : -1 } },
+                { "Key" : "IsRotatable", "Bool" : true }
+            ]
+        },
+        {
+            "Component" : "Damageable",
+            "Properties" : [
+                { "Key" : "Max", "Int" : 1000 }
+            ]
+        },
+        {
+            "Component" : "IndustrialEquipment",
+            "Properties" : [
+                { "Key" : "IsNoisy", "Bool" : false }
+            ]
+        },
+        {
+            "Component" : "Flammable",
+            "Properties" : [
+                { "Key" : "IgnitionTemperatureCelsius", "Int" : 300 },
+                { "Key" : "FireChance", "Float" : 0.5 },
+                { "Key" : "BaseExplosionLevel", "Int" : 8 },
+                { "Key" : "FlammabilityCurve", "String" : "Device" },
+                { "Key" : "ExplosivenessCurve", "String" : "DeviceLow" }
+            ]
+        },
+        {
+            "Component" : "AudioSource",
+            "Properties" : [
+                { "Key" : "AmbienceClip", "String" : "Devices/StasisArraySFX" },
+                { "Key" : "Rolloff", "Vector2" : { "x" : 3, "y" : 12 } },
+                { "Key" : "IsAutoplay", "Bool" : true },
+                { "Key" : "IsLinkedToEnergy", "Bool" : false }
+            ]
+        },
+        {
+            "Component" : "TileGraphics",
+            "Properties" : [
+                { "Key" : "Type", "String": "Object" },
+                { "Key" : "Graphic", "String": "Objects/Devices/StasisArrayMini" },
+                { "Key" : "RotateGraphic", "Bool" : false },
+                { "Key" : "HasHeight", "Bool" : true }
+            ]
+        },
+        {
+            "Component" : "Reinstallable",
+            "Properties" : [
+                { "Key" : "IsAdvanced", "Bool" : true }
+            ]
+        },
+        {
+            "Component" : "Particles",
+            "Properties" : [
+                { "Key" : "IsAutoplay", "Bool" : true },
+                { "Key" : "Particles", "String" : "StasisArrayFX" }
+            ]
+        },
+        {
+            "Component" : "ElectricNode",
+            "Properties" : [
+                { "Key" : "ShowZeroProduction", "Bool": false },
+                { "Key" : "IsSwitchable", "Bool" : false },
+                { "Key" : "IsConsumerHighPriority", "Bool" : true }
+            ]
+        },
+        {
+            "Component" : "LightSource",
+            "Properties" : [
+                { "Key" : "Color", "IntSet" : [ 123, 191, 64, 128 ] },
+                { "Key" : "PulsateColor", "IntSet" : [ 123, 191, 64, 192 ] },
+                { "Key" : "FrequencyRange", "Vector2" : { "x" : 1, "y" : 2 } },
+                { "Key" : "Radius", "Float" : 15 },
+                { "Key" : "NeedsEnergy", "Bool" : false }
+            ]
+        },
+        {
+            "Component" : "Passability",
+            "Properties" : [
+                { "Key" : "IsPassable", "Bool" : false },
+                { "Key" : "IsWalkable", "Bool" : false },
+                { "Key" : "Difficulty", "Float" : 1 }
+            ]
+        },
+        {
+            "Component" : "StasisArray",
+            "Properties" : [
+                { "Key" : "MaxCapacity", "Int" : 30 }
+            ]
+        },
+        {
+            "Component" : "StasisArrayMatrix",
+            "Properties" : [
+                { "Key" : "Graphic", "String": "Objects/Devices/StasisArrayMiniMatrix" },
+                { "Key" : "ElysiumColor", "IntSet" : [ 189, 64, 191, 192 ] },
+                { "Key" : "ElysiumPulsateColor", "IntSet" : [ 189, 64, 191, 128 ] }
+            ]
+        },
+        {
+            "Component" : "Constructable",
+            "Properties" : [
+                { "Key" : "WorkAmount", "Int" : 20000 },
+                {
+                    "Key" : "Contents",
+                    "RawMaterials" : [
+                        { "TypeId" : "TitaniumPlate", "StackSize" : 50 },
+                        { "TypeId" : "GoldWire", "StackSize" : 10 },
+                        { "TypeId" : "Glass", "StackSize" : 20 },
+                        { "TypeId" : "Water", "StackSize" : 100 },
+                        { "TypeId" : "Gears", "StackSize" : 20 },
+                        { "TypeId" : "Rubber", "StackSize" : 50 },
+                        { "TypeId" : "Plastic", "StackSize" : 30 },
+                        { "TypeId" : "Microchip3", "StackSize" : 10 },
+                        { "TypeId" : "NuclearCell", "StackSize" : 8 }
+                    ]
+                }
+            ]
+        }
+    ]
+}

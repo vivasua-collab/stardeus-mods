@@ -1,0 +1,16 @@
+{
+    "Id" : "GraffitiArtist",
+    "Species" : [ "Human" ],
+    "LovesJobTypes" : [ "Crafting" ],
+    "AgePhaseIds" : [ "Childhood", "YoungAdult" ],
+    "AdjustsSkills" : [
+        {
+            "JobId" : "Crafting",
+            "Adjustment" : 4
+        },
+        {
+            "JobId" : "Construction",
+            "Adjustment" : 2
+        }
+    ]
+}

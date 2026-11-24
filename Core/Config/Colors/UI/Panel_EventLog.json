@@ -1,0 +1,9 @@
+{
+    "Id" : "UI/Panel/EventLog",
+    "AliasFor" : "UI/Greyish/Sec-1",
+    // Same as Panel_Event
+    // "Hex" : "16071F",
+    // "Hex" : "240E1F",
+    "Alpha" : 0.75,
+    "SkipAtlas" : true
+}

@@ -1,0 +1,19 @@
+{
+    "Id" : "Input/TextArea",
+
+    "Color" : "UI/Text/Input/SelectionHighlight",
+
+    "ChildrenKeys" : [
+        "Panel",
+        "Selectable",
+        "Text",
+        "ActiveOverlay"
+    ],
+
+    "ChildrenIds" : [
+        "Panel/Input",
+        "Selectable/Default",
+        null,
+        "Overlay/ButtonMenu"
+    ]
+}

@@ -1,0 +1,6 @@
+{
+    "Id" : "Suit",
+    "Worn" : true,
+    "LookPart" : "Clothing",
+    "Order" : 10
+}

@@ -1,0 +1,31 @@
+{
+    // C# implementation id.
+    // Multiple configurations can point to a single implementation.
+    "EventId": "VirusShipAttack",
+    // How much does this story event cost to run
+    "Points": 70,
+    // Options: Negative, Positive, Neutral, Raid
+    "OutcomeType": "Negative",
+    // Full list is in StoryEventFlags class
+    "EventFlags": [
+        "Space",
+        "NoHyperspace",
+        "CanIgnoreRepeatDelay"
+    ],
+    "MinRepeatDelayDays": 560,
+    "Require" : {
+        "Difficulty" : 0.9,
+        "Days" : 490
+    },
+    // How likely this event can occur given the sector difficulty
+    // sector difficulty -> chance
+    "SectorDifficultyChance": [
+        0.0, 0.0,
+        0.9, 0.0,
+        0.91,0.1,
+        1.0, 1.0
+    ],
+    "Properties": [
+        { "Key": "Range", "Int" : 5 }
+    ]
+}

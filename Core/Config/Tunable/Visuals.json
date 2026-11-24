@@ -1,0 +1,12 @@
+{
+    "Floats" : [
+        { "Key" : "CameraPanSpaceParallax", "Float" : 0.025 },
+        { "Key" : "CameraZoomSpaceParallax", "Float" : 2.0 },
+        { "Key" : "ElectricityNodeViewCutoffHeight", "Float" : 20.0 },
+        { "Key" : "BeingBlinkZoomCutoff", "Float" : 10.0 },
+        { "Key" : "BeingBlinkIntervalMin", "Float" : 2.0 },
+        { "Key" : "BeingBlinkIntervalMax", "Float" : 6.0 },
+        { "Key" : "BeingBlinkDurationMin", "Float" : 0.1 },
+        { "Key" : "BeingBlinkDurationMax", "Float" : 0.18 }
+    ]
+}

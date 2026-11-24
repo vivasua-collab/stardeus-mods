@@ -1,0 +1,20 @@
+{
+    "Id" : "Wimp",
+    "IconId" : "Icons/Color/HeartBroken",
+    "TypeId" : "Mental",
+    "CompatibleSpecies" : [ "Human" ],
+    "Rarity" : 0.5,
+    "IncompatibleTraitIds" : [
+        "Stoic"
+    ],
+    // Passes out from pain far sooner (pain shock at 40% instead of 80%)
+    "AddsStatModifiers" : [
+        {
+            "Component" : "PainThreshold",
+            "Properties" : [
+                { "Key" : "Value", "Float" : -0.5 },
+                { "Key" : "Type", "String" : "AddsPercent" }
+            ]
+        }
+    ]
+}

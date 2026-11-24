@@ -1,0 +1,40 @@
+{
+    "SlotTypeId" : "Intestines",
+    "Compatibility" : "Biological",
+    "ResistanceBase" : 3.0,
+    "Tier" : 1,
+    "AddsAbilities" : [
+        "UseToilet"
+    ],
+    "ProvidesStats" : [
+        {
+            "Component" : "IntestinesCapacity",
+            "Properties" : [
+                { "Key" : "CompoundLimit", "Float" : 0.5 },
+                { "Key" : "Amount", "Float" : 0.5 },
+                { "Key" : "StateMul", "Float" : 1.0 }
+            ]
+        },
+        {
+            "Component" : "DigestionRate",
+            "Properties" : [
+                { "Key" : "AmountPerHour", "Float" : 0.1 },
+                { "Key" : "QualityMul", "Float" : 0.001 }
+            ]
+        },
+        {
+            "Component" : "ToiletRate",
+            "Properties" : [
+                { "Key" : "AmountPerHour", "Float" : 0.01 },
+                { "Key" : "QualityMul", "Float" : 0.001 }
+            ]
+        },
+        {
+            "Component" : "ToiletReliefRate",
+            "Properties" : [
+                { "Key" : "AmountPerHour", "Float" : 1.0 },
+                { "Key" : "QualityMul", "Float" : 0.001 }
+            ]
+        }
+    ]
+}

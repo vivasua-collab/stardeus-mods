@@ -1,0 +1,18 @@
+{
+    "IsBlunder" : true,
+    "Strength" : 0.10,
+    "ShootFluxThreshold" : 0.95,
+    "ToleratedFluxTotal" : 1.0,
+    "ToleratedFluxHard" : 1.0,
+    "VentFluxStopHard" : 0.2,
+    "VentFluxStopTotal" : 0.3,
+
+    "MinOffensiveness" : 0.0,
+    "MaxOffensiveness" : 1.0,
+    "StrengthDifferenceChance" : [
+        -1.0, 0.5,
+        0.0, 1.0,
+        0.5, 0.5,
+        1.0, 0.1
+    ]
+}

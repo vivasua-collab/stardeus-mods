@@ -1,0 +1,33 @@
+{
+    "Id" : "Research/Computing/HighAvailabilityImproved",
+    "Tier" : 6,
+    "IsAbstract" : true,
+    "PreviewIcon" : "Icons/Color/MachineLearning",
+    "Researchable" : {
+        "IsTreeNode" : true,
+        "Prerequisites" : [
+            "Research/Computing/HighAvailability"
+        ],
+        "DatoidCosts" : [
+            {
+                "TypeId" : "DatoidEnergy",
+                "StackSize" : 27
+            },
+            {
+                "TypeId" : "DatoidTechHigh",
+                "StackSize" : 23
+            },
+            {
+                "TypeId" : "DatoidNuclear",
+                "StackSize" : 12
+            },
+            {
+                "TypeId" : "DatoidQuantum",
+                "StackSize" : 14
+            }
+        ],
+        "UnlockEffects" : [
+            "ShipComputerCap_6"
+        ]
+    }
+}

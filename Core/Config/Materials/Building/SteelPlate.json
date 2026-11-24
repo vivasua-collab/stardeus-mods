@@ -1,0 +1,13 @@
+{
+    "Id" : "SteelPlate",
+    "IsComposite" : true,
+    "IconId" : "Obj/Materials/SteelPlate",
+    "EnergyOutput" : 520.0,
+    "GroupId" : "Plates",
+
+    // 50% chance for SteelPlate to be converted to ScrapMetal on dispose / deconstruct
+    "ConvertToMatOnDestroyId" : "ScrapMetal",
+    "ConvertToMatOnDestroyChance" : 0.5,
+
+    "Rarity" : 100
+}

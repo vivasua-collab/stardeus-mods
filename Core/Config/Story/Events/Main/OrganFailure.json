@@ -1,0 +1,25 @@
+// EngineFailure story event configuration (new format)
+{
+    // C# implementation id
+    "EventId": "BodyPartFailure",
+    // How much does this story event cost to run
+    "Points": 15,
+    // Options: Negative, Positive, Neutral, Raid
+    "OutcomeType": "Negative",
+    // Full list is in StoryEventFlags class
+    "EventFlags": [
+        "Being",
+        "Annoying"
+    ],
+    // Minimum days before this event can repeat
+    "MinRepeatDelayDays": 25,
+    "Properties": [
+        { "Key": "IsBiological", "Bool": true }
+    ],
+    // Requirements for this event to be available
+    "Require": {
+        "Difficulty": 0.25,
+        "Days" : 80,
+        "Friendlies": 14
+    }
+}

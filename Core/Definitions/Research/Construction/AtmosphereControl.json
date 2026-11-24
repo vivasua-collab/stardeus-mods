@@ -1,0 +1,23 @@
+{
+    "Id" : "Research/Construction/AtmosphereControl",
+    "Tier" : 2,
+    "IsAbstract" : true,
+    "PreviewIcon" : "Icons/Color/Airtightness",
+    "NameKey" : "structure.doors.doorairlock01",
+    "Researchable" : {
+        "IsTreeNode" : true,
+        "Prerequisites" : [
+            "Research/Construction/Habitation"
+        ],
+        "DatoidCosts" : [
+            {
+                "TypeId" : "DatoidBasic",
+                "StackSize" : 12
+            },
+            {
+                "TypeId" : "DatoidTech",
+                "StackSize" : 5
+            }
+        ]
+    }
+}

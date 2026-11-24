@@ -1,0 +1,119 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Stardeus DepositConfig",
+  "description": "Generated from C# by Game/Generate JSON Schemas, do not edit by hand",
+  "$ref": "#/$defs/DepositConfig",
+  "$defs": {
+    "DepositConfig": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "InitialDepthChance": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "number"
+          }
+        },
+        "InitialDifficultyChance": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "number"
+          }
+        },
+        "ScanDifficulty": {
+          "type": "number"
+        },
+        "NearbySpawnChance": {
+          "type": "number"
+        },
+        "IsWithDepth": {
+          "type": "boolean"
+        },
+        "IsCommon": {
+          "type": "boolean"
+        },
+        "CollectKey": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "MiningDifficulty": {
+          "type": "number"
+        },
+        "Id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "IdH": {
+          "type": "integer"
+        },
+        "DifficultyChance": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "number"
+          }
+        },
+        "MinDifficulty": {
+          "type": "number"
+        },
+        "RegionQuantityChance": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "number"
+          }
+        },
+        "UniverseQuantityChance": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "number"
+          }
+        },
+        "RequiresFaction": {
+          "type": "boolean"
+        },
+        "MaxOnePerSector": {
+          "type": "boolean"
+        },
+        "NeverUnavailable": {
+          "type": "boolean"
+        },
+        "IsBiological": {
+          "type": "boolean"
+        },
+        "ExcludeTemplates": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        }
+      },
+      "additionalProperties": false
+    }
+  }
+}

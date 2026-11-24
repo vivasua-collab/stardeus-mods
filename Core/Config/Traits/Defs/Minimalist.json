@@ -1,0 +1,7 @@
+{
+    "Id" : "Minimalist",
+    "IconId" : "Icons/Color/Room",
+    "TypeId" : "Mental",
+    "CompatibleSpecies" : [ "Human" ],
+    "Rarity" : 0.5
+}

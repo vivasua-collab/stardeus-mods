@@ -1,0 +1,7 @@
+{
+    "Id" : "Electronics",
+    "RecessionEffect" : 0.8,
+    "Rarity" : 0.4,
+    "TraderQuantity" : 300.0,
+    "Volatility" : 0.0013
+}

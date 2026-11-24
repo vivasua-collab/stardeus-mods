@@ -1,0 +1,39 @@
+{
+    "Layer" : "FreeEntities",
+    "ParentId" : "Obj/BaseObj",
+    "IgnoreMarket" : true,
+    "Components" : [
+        {
+            "Component" : "ObjGraphics",
+            "Properties" : [
+                { "Key" : "Graphic", "String": "Obj/Containers/QuestPackage" },
+                { "Key" : "Shader", "String" : "Obj" }
+            ]
+        },
+        {
+            "Component" : "ObjHealth",
+            "Properties" : [
+                { "Key" : "IsInvincible", "Bool" : true }
+            ]
+        },
+        {
+            "Component" : "LightSource",
+            "Properties" : [
+                { "Key" : "NeedsEnergy", "Bool" : false },
+                { "Key" : "Color", "IntSet" : [ 183, 21, 166, 192 ] },
+                { "Key" : "PulsateColor", "IntSet" : [ 234, 72, 217, 192 ] },
+                { "Key" : "FrequencyRange", "Vector2" : { "x" : 2, "y" : 5 } },
+                { "Key" : "Radius", "Float" : 4 }
+            ]
+        },
+        {
+            "Component" : "QuestPackage"
+        },
+        {
+            "Component" : "Disposable",
+            "Properties" : [
+                { "Key" : "IsBiological", "Bool" : false }
+            ]
+        }
+    ]
+}

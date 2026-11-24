@@ -1,0 +1,27 @@
+{
+    "Id" : "Research/Robotics/Drone",
+    "Tier" : 3,
+    "IsAbstract" : true,
+    "PreviewIcon" : "Icons/Color/PreviewDrone01",
+    "NameKey" : "beings.drone01",
+    "Researchable" : {
+        "IsTreeNode" : true,
+        "Prerequisites" : [
+            "Research/Robotics/PartsImproved"
+        ],
+        "DatoidCosts" : [
+            {
+                "TypeId" : "DatoidTech",
+                "StackSize" : 16
+            },
+            {
+                "TypeId" : "DatoidSynthetic",
+                "StackSize" : 7
+            },
+            {
+                "TypeId" : "DatoidEnergy",
+                "StackSize" : 9
+            }
+        ]
+    }
+}

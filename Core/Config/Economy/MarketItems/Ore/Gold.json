@@ -1,0 +1,11 @@
+{
+    "Id" : "Obj/Materials/Gold",
+    "Type" : "CFD",
+    "Groups" : [ "Ore" ],
+    "Value" : 1250.0,
+    "Rarity" : 0.04,
+    "TraderQuantity" : 100.0,
+    "OnlineShopQuantity" : 25,
+    "MinSectorDifficulty" : 0.48,
+    "Volatility" : 0.0015
+}

@@ -1,0 +1,10 @@
+{
+    "FlagName": "Disease",
+    // Difficulty -> cooldown days. Disease is the one flag whose cadence still eases below Balanced: it is attrition, like the reference colony sim's disease frequency
+    "CooldownDaysDifficultyCurve": [
+        0.0, 35.0,
+        1.0, 22.0,
+        2.0, 15.0,
+        5.0, 8.0
+    ]
+}

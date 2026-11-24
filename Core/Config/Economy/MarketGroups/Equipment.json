@@ -1,0 +1,8 @@
+{
+    "Id" : "Equipment",
+    "RecessionEffect" : 1.0,
+    "Rarity" : 0.5,
+    "TraderQuantity" : 1.0,
+    "MaxTraderQuantity" : 3,
+    "Volatility" : 0.0013
+}

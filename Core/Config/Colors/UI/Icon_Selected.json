@@ -1,0 +1,6 @@
+{
+    "Id" : "UI/Icon_Selected",
+    "AliasFor" : "UI/Saturated/Comp",
+    "Alpha" : 0.85,
+    "SkipAtlas" : true
+}

@@ -1,0 +1,10 @@
+{
+    "Id" : "Obj/Materials/CopperWire",
+    "Type" : "CFD",
+    "Groups" : [ "Electronics" ],
+    "Value" : 17.0,
+    "Rarity" : 0.8,
+    "TraderQuantity" : 50.0,
+    "OnlineShopQuantity" : 50,
+    "Volatility" : 0.0014
+}

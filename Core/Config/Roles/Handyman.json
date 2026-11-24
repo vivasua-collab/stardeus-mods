@@ -1,0 +1,22 @@
+{
+    "Id" : "Handyman",
+    "Species" : [ "Human" ],
+    "AgePhaseIds" : [ "YoungAdult", "MidLife", "Retirement" ],
+    "RoleTypes" : [ "Dumb", "Poor" ],
+    "LovesJobTypes" : [ "Construction", "Repairs" ],
+    "IncapableJobTypes" : [ "Cooking" ],
+    "AdjustsSkills" : [
+        {
+            "JobId" : "Crafting",
+            "Adjustment" : 4
+        },
+        {
+            "JobId" : "Construction",
+            "Adjustment" : 4
+        },
+        {
+            "JobId" : "Repairs",
+            "Adjustment" : 2
+        }
+    ]
+}

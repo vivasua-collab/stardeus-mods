@@ -1,0 +1,16 @@
+{
+    "Id" : "Veterinarian",
+    "Species" : [ "Human", "Robot" ],
+    "AgePhaseIds" : [ "YoungAdult", "MidLife", "Retirement" ],
+    "RoleTypes" : [ "Good" ],
+    "AdjustsSkills" : [
+        {
+            "JobId" : "Medical",
+            "Adjustment" : 4
+        },
+        {
+            "JobId" : "Plants",
+            "Adjustment" : 2
+        }
+    ]
+}

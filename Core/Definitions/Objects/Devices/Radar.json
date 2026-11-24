@@ -1,0 +1,110 @@
+{
+    "ToolPath" : "SpaceTravel",
+    "Layer" : "Objects",
+    "ParentId" : "Objects/Devices/BaseDevice",
+    "Researchable" : {
+        "Prerequisites" : [
+            "Research/Scanning/Radar"
+        ]
+    },
+    "Spawnable" : {
+        "Category": "Comms",
+        "Chance" : 0.3,
+        "ChanceLocked" : 0.0
+    },
+    "Components" : [
+        {
+            "Component" : "TileTransform",
+            "Properties" : [
+                { "Key" : "CoverPercent", "Int" : 50 },
+                { "Key" : "Width", "Int" : 2 },
+                { "Key" : "Height", "Int" : 2 },
+                { "Key" : "IsRotatable", "Bool" : false }
+            ]
+        },
+        {
+            "Component" : "IndustrialEquipment",
+            "Properties" : [
+                { "Key" : "IsNoisy", "Bool" : true }
+            ]
+        },
+        {
+            "Component" : "Flammable",
+            "Properties" : [
+                { "Key" : "IgnitionTemperatureCelsius", "Int" : 400 },
+                { "Key" : "FireChance", "Float" : 0.5 },
+                { "Key" : "BaseExplosionLevel", "Int" : 2 },
+                { "Key" : "FlammabilityCurve", "String" : "Device" },
+                { "Key" : "ExplosivenessCurve", "String" : "DeviceLow" }
+            ]
+        },
+        {
+            "Component" : "Radar",
+            "Properties" : [
+                { "Key" : "ScanStrength", "Int" : 1 },
+                { "Key" : "EnergyCost", "Float" : 20 }
+            ]
+        },
+        { "Component" : "OutdoorsCheck" },
+        {
+            "Component" : "TileGraphics",
+            "Properties" : [
+                { "Key" : "Type", "String": "Object" },
+                { "Key" : "Graphic", "String": "Objects/Devices/Radar" },
+                { "Key" : "HasHeight", "Bool" : true }
+            ]
+        },
+        {
+            "Component" : "TileAnimation",
+            "Properties" : [
+                { "Key" : "Offset", "Vector2": { "x" : 0.0, "y" : 1.0 } },
+                { "Key" : "Size", "Vector2": { "x" : 2.0, "y" : 2.0 } },
+                { "Key" : "Speed", "Float": 0.66 },
+                { "Key" : "BaseSprite", "String" : "Objects/Devices/Radar_Base" },
+                { "Key" : "AnimSprite", "String" : "Objects/DeviceAnims/Radar_Anim" },
+                { "Key" : "Direction", "Int" : 0 },
+                { "Key" : "FramePrefix", "String": "R" },
+                { "Key" : "NumFrames", "Int": 128 }
+            ]
+        },
+        {
+            "Component" : "ElectricNode",
+            "Properties" : [
+                { "Key" : "Particles", "String" : "RadarFX" },
+                { "Key" : "ParticlesEmitChance", "Float" : 0.5 },
+                { "Key" : "IsConsumerHighPriority", "Bool" : true }
+            ]
+        },
+        {
+            "Component" : "WithFuse",
+            "Properties" : [
+                { "Key" : "MalfunctionWeight", "Float": 0.15 }
+            ]
+        },
+        {
+            "Component" : "Passability",
+            "Properties" : [
+                { "Key" : "IsPassable", "Bool" : false },
+                { "Key" : "IsWalkable", "Bool" : false },
+                { "Key" : "Difficulty", "Float" : 1 }
+            ]
+        },
+        {
+            "Component" : "Constructable",
+            "Properties" : [
+                { "Key" : "WorkAmount", "Int" : 1600 },
+                { "Key" : "CanReplaceGroup", "String" : "Radar" },
+                {
+                    "Key" : "Contents",
+                    "RawMaterials" : [
+                        { "TypeId" : "TitaniumPlate", "StackSize" : 4 },
+                        { "TypeId" : "Gears", "StackSize" : 5 },
+                        { "TypeId" : "Glass", "StackSize" : 5 },
+                        { "TypeId" : "CopperWire", "StackSize" : 8 },
+                        { "TypeId" : "Microchip", "StackSize" : 1 }
+                    ]
+                }
+            ]
+        }
+    ]
+}

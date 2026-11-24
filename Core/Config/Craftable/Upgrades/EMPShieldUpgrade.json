@@ -1,0 +1,13 @@
+{
+    "Type": "Upgrades",
+    "Ingredients": [
+        { "TypeId" : "TitaniumPlate", "StackSize" : 3 },
+        { "TypeId" : "GoldWire", "StackSize" : 6 },
+        { "TypeId" : "Microchip2", "StackSize" : 2 },
+        { "TypeId" : "Transistor", "StackSize" : 10 }
+    ],
+    "IgnoreMarket" : true,
+    "ProductDefId": "Obj/Upgrades/EMPShieldUpgrade",
+    "ProductionTimeHours": 48.0,
+    "EnergyCost": 50.0
+}

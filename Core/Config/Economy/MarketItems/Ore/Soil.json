@@ -1,0 +1,10 @@
+{
+    "Id" : "Obj/Materials/Soil",
+    "Type" : "CFD",
+    "Groups" : [ "Ore" ],
+    "Value" : 3.0,
+    "Rarity" : 0.1,
+    "TraderQuantity" : 5000.0,
+    "OnlineShopQuantity" : 100,
+    "Volatility" : 0.0002
+}

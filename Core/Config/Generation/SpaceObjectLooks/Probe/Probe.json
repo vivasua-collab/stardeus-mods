@@ -1,0 +1,15 @@
+{
+    "Id" : "Probe",
+    "Probability" : 1.0,
+    "StarmapSizeMul" : 0.25,
+    "OrderDist" : -30,
+    "StarfieldSizeMul" : 0.25,
+    "Sprite" : "Objects/Devices/Probe_Flying_U",
+    "IsConstantSizeInStarmap" : true,
+    "CanRotate" : true,
+    "KeepUprightInStarfield" : true,
+    "Sprite_L" : "Objects/Devices/Probe_Flying_L",
+    "Sprite_R" : "Objects/Devices/Probe_Flying_R",
+    "Sprite_U" : "Objects/Devices/Probe_Flying_U",
+    "Sprite_D" : "Objects/Devices/Probe_Flying_D"
+}

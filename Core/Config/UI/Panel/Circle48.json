@@ -1,0 +1,8 @@
+{
+    "Id" : "Panel/Circle48",
+
+    "Color" : "UI/Panel/Accent",
+    "Alpha" : 0.94,
+
+    "Image" : "UI/Panels/Circle48"
+}

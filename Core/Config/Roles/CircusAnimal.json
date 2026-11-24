@@ -1,0 +1,14 @@
+{
+    "Id" : "CircusAnimal",
+    "Species" : [ "Cat", "Dog", "Pig" ],
+    "AdjustsSkills" : [
+        {
+            "JobId" : "Social",
+            "Adjustment" : 4
+        },
+        {
+            "JobId" : "Melee",
+            "Adjustment" : -1
+        }
+    ]
+}

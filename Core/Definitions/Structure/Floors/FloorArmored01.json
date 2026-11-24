@@ -1,0 +1,47 @@
+{
+    "BuildGroup" : "FloorArmored",
+    "ToolPath" : "Floors/FloorArmored",
+    "Layer" : "Floor",
+    "ParentId" : "Structure/Floors/BaseFloor",
+    "Researchable" : {
+        "Prerequisites" : [
+            "Research/Construction/StructureArmored"
+        ]
+    },
+    "Components" : [
+        {
+            "Component" : "TileGraphics",
+            "Properties" : [
+                { "Key" : "Graphic", "String": "Structure/Floors/FloorArmored01" },
+                { "Key" : "Foundation", "String": "Structure/Foundations/Armored" }
+            ]
+        },
+        {
+            "Component" : "Damageable",
+            "Properties" : [
+                { "Key" : "Max", "Int" : 1000 }
+            ]
+        },
+        {
+            "Component" : "Flammable",
+            "Properties" : [
+                { "Key" : "FireChance", "Float" : 0.01 },
+                { "Key" : "SpreadIntoChance", "Float" : 0.01 }
+            ]
+        },
+        {
+            "Component" : "Constructable",
+            "Properties" : [
+                { "Key" : "WorkAmount", "Int" : 800 },
+                {
+                    "Key" : "Contents",
+                    "RawMaterials" : [
+                        { "TypeId" : "LeadPlate", "StackSize" : 2 },
+                        { "TypeId" : "TitaniumPlate", "StackSize" : 1 },
+                        { "TypeId" : "CarbonFiber", "StackSize" : 1 }
+                    ]
+                }
+            ]
+        }
+    ]
+}

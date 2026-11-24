@@ -1,0 +1,23 @@
+{
+    "Layer" : "FreeEntities",
+    "ParentId" : "Obj/Asteroids/Asteroid01",
+    "DescKey" : "obj.asteroids.asteroid01.desc",
+    "Components" : [
+        {
+            "Component" : "Asteroid",
+            "Properties" : [
+                { "Key" : "RadiusRange", "Vector2" : { "x" : 20, "y" : 30 } },
+                // Breaks into regular asteroids, which can break up further.
+                // Will be matched to Obj/Asteroids/Asteroid*
+                { "Key" : "FragmentDef", "String" : "Obj/Asteroids/Asteroid01" },
+                { "Key" : "FragmentCount", "Vector2" : { "x" : 4, "y" : 6 } }
+            ]
+        },
+        {
+            "Component" : "ObjHealth",
+            "Properties" : [
+                { "Key" : "Max", "Int" : 2500 }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,16 @@
+{
+    "Id" : "WebDeveloper",
+    "Species" : [ "Human" ],
+    "RoleTypes" : [ "Smart" ],
+    "AgePhaseIds" : [ "YoungAdult", "MidLife", "Retirement" ],
+    "AdjustsSkills" : [
+        {
+            "JobId" : "Crafting",
+            "Adjustment" : 4
+        },
+        {
+            "JobId" : "Mining",
+            "Adjustment" : -1
+        }
+    ]
+}

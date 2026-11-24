@@ -1,0 +1,23 @@
+{
+    "Id" : "Research/Production/Weaving",
+    "Tier" : 1,
+    "IsAbstract" : true,
+    "PreviewIcon" : "Icons/Color/Clothing",
+    "NameKey" : "research.weaving",
+    "Researchable" : {
+        "IsTreeNode" : true,
+        "Prerequisites" : [
+            "Research/Production/Root"
+        ],
+        "DatoidCosts" : [
+            {
+                "TypeId" : "DatoidBasic",
+                "StackSize" : 10
+            },
+            {
+                "TypeId" : "DatoidTech",
+                "StackSize" : 2
+            }
+        ]
+    }
+}

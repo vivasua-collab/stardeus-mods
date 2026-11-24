@@ -1,0 +1,17 @@
+{
+    "Id" : "NeighborhoodMenace",
+    "Species" : [ "Human", "Dog", "Cat", "Pig" ],
+    "RoleTypes" : [ "Evil" ],
+    "IncompatibleTraitIds" : [ "Pacifist" ],
+    "AgePhaseIds" : [ "Childhood" ],
+    "AdjustsSkills" : [
+        {
+            "JobId" : "Melee",
+            "Adjustment" : 3
+        },
+        {
+            "JobId" : "Medical",
+            "Adjustment" : 2
+        }
+    ]
+}

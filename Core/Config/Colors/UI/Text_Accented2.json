@@ -1,0 +1,7 @@
+{
+    "Id" : "UI/Text/Accented2",
+    "AliasFor" : "UI/Saturated/Primary+2",
+    // "Hex" : "66CCCC",
+    "Alpha" : 1.0,
+    "SkipAtlas" : true
+}

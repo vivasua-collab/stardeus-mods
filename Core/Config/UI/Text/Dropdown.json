@@ -1,0 +1,10 @@
+{
+    "Id" : "Text/Dropdown",
+
+    "Color" : "UI/Text/Main",
+    "Alpha" : 1,
+
+    "TextFontSize" : 28,
+    "TextOverflowMode" : "Ellipsis",
+    "TextMarginLTRB" : [ 20, 4, 20, 4 ]
+}

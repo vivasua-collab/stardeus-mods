@@ -1,0 +1,9 @@
+{
+    "Id" : "Panel/EventLog",
+
+    "Color" : "UI/Panel/EventLog",
+
+    "Image" : "UI/Panels/PanelFlipped2BG",
+    "ImageType" : "Sliced",
+    "ImageBorderLBRT" : [ 28, 12, 12, 28 ]
+}

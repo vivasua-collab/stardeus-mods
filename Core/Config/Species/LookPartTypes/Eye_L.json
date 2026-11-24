@@ -1,0 +1,12 @@
+{
+    "BitIndex": 7,
+    "IsFace": true,
+    "SortOrder": "BeingFace",
+    "SpriteCategory": "Eyes",
+    "Gen": "MirrorPair",
+    "MirrorOf": "Eye_R",
+    "VarTag": "Head",
+    "ColorSource": "EyeL",
+    "IncludeNeutral": true,
+    "EyeSpriteFiltering": true
+}

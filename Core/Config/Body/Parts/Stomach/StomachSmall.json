@@ -1,0 +1,24 @@
+{
+    "SlotTypeId" : "Stomach",
+    "Compatibility" : "Biological",
+    "Tier" : 1,
+    "ResistanceBase" : 3.0,
+    "ProvidesStats" : [
+        {
+            "Component" : "StomachCapacity",
+            "Properties" : [
+                { "Key" : "CompoundLimit", "Float" : 0.5 },
+                { "Key" : "Amount", "Float" : 0.5 },
+                { "Key" : "QualityMul", "Float" : 0.1 },
+                { "Key" : "StateMul", "Float" : 1.0 }
+            ]
+        },
+        {
+            "Component" : "DigestionRate",
+            "Properties" : [
+                { "Key" : "AmountPerHour", "Float" : 0.1 },
+                { "Key" : "QualityMul", "Float" : 0.5 }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,9 @@
+{
+    "Id" : "Obj/Parts/Implant/MoodRegulator",
+    "Type" : "CFD",
+    "Groups" : [ "BodyPart", "Robotics" ],
+    "Value" : 1800.0,
+    "Rarity" : 0.2,
+    "MinSectorDifficulty" : 0.6,
+    "Volatility" : 0.002
+}

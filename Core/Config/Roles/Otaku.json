@@ -1,0 +1,20 @@
+{
+    "Id" : "Otaku",
+    "Species" : [ "Human" ],
+    "LovesJobTypes" : [ "Crafting" ],
+    "AgePhaseIds" : [ "Childhood", "YoungAdult" ],
+    "AdjustsSkills" : [
+        {
+            "JobId" : "Crafting",
+            "Adjustment" : 4
+        },
+        {
+            "JobId" : "Research",
+            "Adjustment" : 2
+        },
+        {
+            "JobId" : "Social",
+            "Adjustment" : -3
+        }
+    ]
+}

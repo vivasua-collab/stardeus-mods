@@ -1,0 +1,26 @@
+{
+    "Id" : "Research/LifeSupport/GrowingPartsAdvanced",
+    "Tier" : 5,
+    "IsAbstract" : true,
+    "PreviewIcon" : "Icons/Color/DNA",
+    "Researchable" : {
+        "IsTreeNode" : true,
+        "Prerequisites" : [
+            "Research/LifeSupport/GrowingPartsImproved"
+        ],
+        "DatoidCosts" : [
+            {
+                "TypeId" : "DatoidBiotic",
+                "StackSize" : 25
+            },
+            {
+                "TypeId" : "DatoidSynthetic",
+                "StackSize" : 30
+            },
+            {
+                "TypeId" : "DatoidAlien",
+                "StackSize" : 11
+            }
+        ]
+    }
+}

@@ -1,0 +1,10 @@
+{
+    "Id" : "PlanetPOI",
+    "Probability" : 1.0,
+    "StarmapSizeMul" : 0.25,
+    "StarfieldSizeMul" : 0.25,
+    "OrderDist" : -10,
+    "KeepUprightInStarfield" : true,
+    "IsConstantSizeInStarmap" : true,
+    "Sprite" : "Icons/Color/Destination"
+}

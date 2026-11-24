@@ -1,0 +1,81 @@
+{
+    "QuestFlags" : [ "Tutorial", "AutoAdd", "Unique" ],
+    "TitleKey" : "quest.EstablishFoodProduction",
+    "DescKey" : "quest.EstablishFoodProduction.desc",
+    "QuestProviders" : [
+        "ShipComputer"
+    ],
+    // Colonist branch. It follows ProvideBeds, and BuildARadar waits for it, so the spine
+    // does not pull the player away before the first colonist can eat. No colonist gate: the
+    // first wake-up is released together with this branch (see StasisWakeUpStoryAspect), so
+    // the colonist is on the way by the time this is offered. Not chained behind body
+    // disposal any more - disposal can take a long time and the colonists would starve
+    // meanwhile.
+    "AvailableWhen" : [
+        "ReadyForTutorialQuests",
+        "HasBeds"
+    ],
+    "SetOnComplete" : [ "HasFoodProduction" ],
+    "SetOnFail" : [ "HasFoodProduction" ],
+    "BoundTutorialIds": [ "Resources/ConfigureCrafter" ],
+    "Steps" : [
+        {
+            "Id": "ResearchFoodProduction",
+            "Type" : "UnlockResearch",
+            "StepFlags" : [ "ActiveOnStart" ],
+            "Config" : [
+                { "Key" : "Research", "String" : "Research/LifeSupport/FoodProduction" }
+            ],
+            "SetOnComplete" : [
+                "UnlockedFoodProduction"
+            ]
+        },
+        {
+            "Id": "HaveCookingStation",
+            "Type" : "HaveOnGrid",
+            "Config" : [
+                { "Key" : "Definition", "String" : "Objects/Devices/CookingStation" },
+                { "Key" : "RequireUnconfigured", "Bool" : false },
+                { "Key" : "Count", "Int" : 1 }
+            ],
+            "ActivateWhen" : [
+                "UnlockedFoodProduction"
+            ],
+            "SetOnComplete" : [
+                "HasCookingStation"
+            ]
+        },
+        {
+            "Id": "ConfigureCookingStation",
+            "Type" : "ConfigureCrafter",
+            "ActivateWhen" : [
+                "HasCookingStation"
+            ],
+            "SetOnComplete" : [
+                "HasConfiguredCookingStation"
+            ],
+            "Config" : [
+                {
+                    "Key" : "Crafter",
+                    "String" : "Objects/Devices/CookingStation"
+                },
+                {
+                    "Key" : "Product",
+                    "String" : "Obj/Meals/SurvivalMeal"
+                }
+            ]
+        },
+        {
+            "Id": "ProduceMeals",
+            "StepFlags" : [ "CompletesQuest" ],
+            "Type" : "Produce",
+            "ActivateWhen" : [
+                "HasConfiguredCookingStation"
+            ],
+            "Config" : [
+                { "Key" : "Product", "String" : "Obj/Meals/SurvivalMeal" },
+                { "Key" : "Count", "Int" : 1 }
+            ]
+        }
+    ]
+}

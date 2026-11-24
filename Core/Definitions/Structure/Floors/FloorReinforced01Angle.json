@@ -1,0 +1,64 @@
+{
+    "BuildGroup" : "FloorReinforcedAngle",
+    "ToolPath" : "Floors/FloorReinforced",
+    "Layer" : "Floor",
+    "ParentId" : "Structure/Floors/BaseFloor",
+    "Researchable" : {
+        "Prerequisites" : [
+            "Research/Construction/StructureReinforced"
+        ]
+    },
+    "Components" : [
+        {
+            "Component" : "TileTransform",
+            "Properties" : [
+                { "Key" : "PlacementType", "String" : "Single" },
+                { "Key" : "IsRotatable", "Bool" : true }
+            ]
+        },
+        {
+            "Component" : "TileGraphics",
+            "Properties" : [
+                { "Key" : "Graphic", "String": "Structure/Floors/FloorReinforced01Angle" },
+                { "Key" : "Shader", "String": "TransparentFloorTile" },
+                { "Key" : "Foundation", "String": "Structure/Foundations/Reinforced" },
+                { "Key" : "IsAngled", "Bool": true }
+            ]
+        },
+        {
+            "Component" : "HullIntegrity",
+            "Properties" : [
+                { "Key" : "MaxIntegrity", "Float" : 0.5 },
+                { "Key" : "MaxInsulation", "Float" : 0 },
+                { "Key" : "MaxAirtight", "Float" : 0 }
+            ]
+        },
+        {
+            "Component" : "Damageable",
+            "Properties" : [
+                { "Key" : "Max", "Int" : 150 }
+            ]
+        },
+        {
+            "Component" : "Constructable",
+            "Properties" : [
+                { "Key" : "CanDragRow", "Bool": false },
+                { "Key" : "WorkAmount", "Int" : 200 },
+                {
+                    "Key" : "Contents",
+                    "RawMaterials" : [
+                        { "TypeId" : "SteelPlate", "StackSize" : 1 },
+                        { "TypeId" : "TitaniumPlate", "StackSize" : 1 }
+                    ]
+                }
+            ]
+        },
+        {
+            "Component" : "Passability",
+            "Properties" : [
+                { "Key" : "IsWalkable", "Bool" : false },
+                { "Key" : "Difficulty", "Float" : 0.5 }
+            ]
+        }
+    ]
+}

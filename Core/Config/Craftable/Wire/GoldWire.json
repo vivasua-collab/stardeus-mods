@@ -1,0 +1,11 @@
+{
+    "Type": "Wire",
+    "Ingredients": [
+        { "TypeId" : "GoldIngot", "StackSize" : 1 }
+    ],
+    "IgnoreMarket" : true,
+    "ProductDefId": "Obj/Materials/GoldWire",
+    "ProductionTimeHours": 4.0,
+    "OutputMultiplier" : 5,
+    "EnergyCost": 15
+}

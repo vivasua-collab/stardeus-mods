@@ -1,0 +1,30 @@
+{
+    "Id" : "Research/Security/IonWeapons",
+    "Tier" : 5,
+    "IsAbstract" : true,
+    "PreviewIcon" : "Obj/Weapons/IonDisruptor01/IonDisruptor01",
+    "Researchable" : {
+        "IsTreeNode" : true,
+        "Prerequisites" : [
+            "Research/Security/EnergyWeapons"
+        ],
+        "DatoidCosts" : [
+            {
+                "TypeId" : "DatoidTechHigh",
+                "StackSize" : 20
+            },
+            {
+                "TypeId" : "DatoidEnergy",
+                "StackSize" : 16
+            },
+            {
+                "TypeId" : "DatoidAlien",
+                "StackSize" : 12
+            },
+            {
+                "TypeId" : "DatoidNuclear",
+                "StackSize" : 9
+            }
+        ]
+    }
+}

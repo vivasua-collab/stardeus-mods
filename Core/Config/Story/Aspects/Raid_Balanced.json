@@ -1,0 +1,68 @@
+{
+    // C# implementation id.
+    // Multiple configurations can point to a single implementation.
+    "AspectId" : "Raid",
+    "Properties" : [
+        // Added to the first cooldown roll (day 15-25 on a fresh ship). Since the first raid
+        // follows the first supply capsule (below), this is only the latest it can come, for
+        // games where no capsule ever arrives.
+        { "Key" : "InitialExtraDelayDays", "Float" : 6 },
+        // The first raid is a twist on the scripted supply capsule (Curated_Balanced): this
+        // many hours after the first capsule of the game is opened, another "supply capsule"
+        // arrives with a raider inside. A lone raider walking in is forgettable; one climbing
+        // out of what looked like the next delivery is not.
+        { "Key" : "FirstRaidAfterEventFlag", "String" : "Capsule" },
+        {
+            "Key" : "FirstRaidDelayHoursCurve",
+            "FloatSet" : [
+                0.0, 2.0,
+                1.0, 5.0
+            ]
+        },
+        { "Key" : "FirstRaidEventId", "String" : "Raid/StorageCapsuleRaid" },
+        // Opening a capsule is a player order, and a passive player may never give it. The
+        // twist above stays tied to the opening, so the player learns first that capsules can
+        // be good. If the first supply capsule sits unopened this many days after it arrives,
+        // the first raid comes from the map edge instead
+        { "Key" : "FirstRaidFallbackAfterEventId", "String" : "Space/StorageCapsule" },
+        { "Key" : "FirstRaidFallbackDays", "Float" : 2 },
+        { "Key" : "FirstRaidFallbackEventId", "String" : "Raid/MapEdgeRaid" },
+        {
+            "Key" : "RaidDelayDaysCurve",
+            // Threat wealth (millions, structures at Tunables.StructureThreatWeight) => mean days
+            // till the next scheduled raid. Wealth only: the old ColonyCombatStrength curve pair
+            // gave a weak colony the shortest gap, so a colony that had just been mauled was
+            // raided sooner. Log-shaped because real colonies sit between ~1M (early) and ~50M
+            // (endgame) - the previous curve was flat until 20M, so wealth changed cadence by a
+            // fraction of a day across the whole game. A mid-game 2.7M ship gets ~12.7 days, a
+            // 47M endgame ship ~9.4, both spread by RaidDelayJitter. The whole curve sits at 1.4x
+            // its previous values: measured in real play time one of our days is about half a
+            // day of the reference colony sim, whose major threats average ~14.6 of our days.
+            "FloatSet" : [
+                0.0,    14.0,
+                1.0,    13.3,
+                3.0,    12.6,
+                10.0,   11.2,
+                30.0,   9.8,
+                100.0,  8.4,
+                300.0,  7.0,
+                1000.0, 6.3
+            ]
+        },
+        // Rolled delay = mean x Range(1 - jitter, 1 + jitter). 0.35 reproduces the old
+        // From/To spread (about 1:2).
+        { "Key" : "RaidDelayJitter", "Float" : 0.35 },
+        // Scheduled raids' strength is multiplied by Range(1 - jitter, 1 + jitter) from the
+        // seeded story RNG, on top of any storm. Non-scheduled raids are not jittered.
+        { "Key" : "RaidStrengthJitter", "Float" : 0.15 },
+        // Calm-before-the-storm skip mechanic:
+        // chance (0–1) that a skip slot actually suppresses the raid
+        { "Key" : "RaidSkipChance", "Float" : 0.5 },
+        // raids between consecutive skip slots (inclusive range)
+        { "Key" : "RaidSkipIntervalMin", "Float" : 2 },
+        { "Key" : "RaidSkipIntervalMax", "Float" : 3 },
+        // strength multiplier applied to the raid immediately after a skip
+        { "Key" : "RaidStormMulMin", "Float" : 1.15 },
+        { "Key" : "RaidStormMulMax", "Float" : 1.25 }
+    ]
+}

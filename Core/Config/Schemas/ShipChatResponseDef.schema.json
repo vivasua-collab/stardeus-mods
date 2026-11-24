@@ -1,0 +1,134 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Stardeus ShipChatResponseDef",
+  "description": "Generated from C# by Game/Generate JSON Schemas, do not edit by hand",
+  "$ref": "#/$defs/ShipChatResponseDef",
+  "$defs": {
+    "ShipChatResponseDef": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "ResponseType": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "Response": {
+          "anyOf": [
+            {
+              "type": "string",
+              "enum": [
+                "Undefined",
+                "Positive",
+                "Negative",
+                "Neutral",
+                "Busy",
+                "Outlaw",
+                "End"
+              ]
+            },
+            {
+              "type": "integer"
+            }
+          ]
+        },
+        "TopicType": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "Topic": {
+          "anyOf": [
+            {
+              "type": "string",
+              "enum": [
+                "Undefined",
+                "HailRequest",
+                "HailResponse",
+                "Generic",
+                "TradeRequest",
+                "TradeResponse",
+                "GiftRequest",
+                "GiftResponse",
+                "FuelRequest",
+                "FuelResponse",
+                "ExtortionRequest",
+                "ExtortionResponse",
+                "SurrenderRequest",
+                "SurrenderResponse",
+                "CombatEngage",
+                "TooFar",
+                "QuestRequest",
+                "QuestResponse",
+                "QuestDeliveryResponse"
+              ]
+            },
+            {
+              "type": "integer"
+            }
+          ]
+        },
+        "ToneType": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "Tone": {
+          "anyOf": [
+            {
+              "type": "string",
+              "enum": [
+                "Undefined",
+                "Rude",
+                "Polite",
+                "Casual"
+              ]
+            },
+            {
+              "type": "integer"
+            }
+          ]
+        },
+        "MessageKeys": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "MessageTs": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "Id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "IdH": {
+          "type": "integer"
+        }
+      },
+      "additionalProperties": false
+    }
+  }
+}

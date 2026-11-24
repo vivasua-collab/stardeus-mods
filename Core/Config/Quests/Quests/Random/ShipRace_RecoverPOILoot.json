@@ -1,0 +1,115 @@
+{
+    "QuestFlags" : [ "Random" ],
+    "TitleKeys" : [
+        "quest.ShipRaceRecoverPOILoot",
+        "quest.ShipRaceRecoverPOILoot2",
+        "quest.ShipRaceRecoverPOILoot3",
+        "quest.ShipRaceRecoverPOILoot4",
+        "quest.ShipRaceRecoverPOILoot5"
+    ],
+    "DescKeys" : [
+        "quest.ShipRaceRecoverPOILoot.desc",
+        "quest.ShipRaceRecoverPOILoot2.desc",
+        "quest.ShipRaceRecoverPOILoot3.desc",
+        "quest.ShipRaceRecoverPOILoot4.desc",
+        "quest.ShipRaceRecoverPOILoot5.desc"
+    ],
+    "QuestProviders" : [
+        "Ship",
+        "SpaceStation"
+    ],
+    "Require": {
+        "Days": 3
+    },
+    "Rewards" : [
+        {
+            "Id" : "CashMain",
+            "Type" : "Money_NetWorth",
+            "Config" : [
+                { "Key" : "NetWorthCurve", "FloatSet" : [
+                    0.0, 0.01,
+                    0.95, 0.05,
+                    1.0, 0.1
+                ] },
+                { "Key" : "AmountMin", "Int" : 10000 },
+                { "Key" : "AmountMax", "Int" : 100000 }
+            ]
+        },
+        {
+            "Id" : "QuestItem",
+            "Type" : "Material_HighValue",
+            "RewardFlags" : [ "PackageContent" ],
+            "Config" : [
+                // min price of one unit of the item
+                { "Key" : "MinPrice", "Int" : 1000 },
+                // min value of total stack
+                { "Key" : "MinValue", "Int" : 10000 },
+                { "Key" : "MaxValue", "Int" : 1000000 },
+                {
+                    "Key" : "NetWorthCurve", "FloatSet" : [
+                        0.0, 0.1,
+                        1.0, 0.2
+                    ]
+                }
+            ]
+        }
+    ],
+    "Variables" : [
+        {
+            "Id" : "POI",
+            "Type" : "SectorPOI",
+            "Config" : [
+                { "Key" : "MinRegionsAway", "Int" : 0 },
+                { "Key" : "MinRegionDifficulty", "Float" : 0 },
+                { "Key" : "MaxRegionDifficulty", "Float" : 1 },
+                { "Key" : "POIConfigId", "String" : "Event" },
+                { "Key" : "Var_Start", "String" : null },
+                { "Key" : "SkipRegionsWithoutRelay", "Bool" : true }
+            ]
+        },
+        {
+            "Id" : "DeliverDeadline",
+            "Type" : "Deadline",
+            "Config" : [
+                {
+                    "Key" : "DaysCurve", "FloatSet" : [
+                        0.0, 24.0,
+                        1.0, 36.0
+                    ]
+                }
+            ]
+        }
+    ],
+    "Steps" : [
+        {
+            "Id" : "RetrieveItem",
+            "Type" : "ExplorePOI",
+            "TitleKey": "quest.step.search.for.package.title",
+            "DescKey" : "quest.step.search.for.package.desc",
+            "Deadline" : "DeliverDeadline",
+            "StepFlags" : [ "ActiveOnStart", "HideIfQuestUnaccepted" ],
+            "StateStoryEvents" : {
+                "Completed" : "Space/PirateShipAttack"
+            },
+            "SetOnComplete" : [
+                "RetrievedPackage"
+            ],
+            "Config" : [
+                { "Key" : "Var_POI", "String" : "POI" },
+                { "Key" : "ExpeditionMinHours", "Float" : 4.0 },
+                { "Key" : "ExpeditionMaxHours", "Float" : 8.0 },
+                { "Key" : "ExpeditionFoundItemMsgKey", "String" : "quest.expedition.found.package" },
+                { "Key" : "PackageRewardIds", "StringSet" : [ "QuestItem" ] }
+            ]
+        },
+        {
+            "Id" : "DeliverItem",
+            "Type" : "DeliverPackageShip",
+            "Deadline" : "DeliverDeadline",
+            "StepFlags" : [ "CompletesQuest", "FailsQuest", "HideIfQuestUnaccepted" ],
+            "ActivateWhen" : [
+                "RetrievedPackage"
+            ]
+        }
+    ]
+}

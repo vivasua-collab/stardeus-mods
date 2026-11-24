@@ -1,0 +1,26 @@
+{
+    "Id" : "Research/Computing/ResearchQuantum",
+    "Tier" : 4,
+    "IsAbstract" : true,
+    "PreviewIcon" : "Icons/Color/Nucleus",
+    "Researchable" : {
+        "IsTreeNode" : true,
+        "Prerequisites" : [
+            "Research/Computing/ResearchAdvanced"
+        ],
+        "DatoidCosts" : [
+            {
+                "TypeId" : "DatoidSynthetic",
+                "StackSize" : 27
+            },
+            {
+                "TypeId" : "DatoidNuclear",
+                "StackSize" : 8
+            },
+            {
+                "TypeId" : "DatoidAlien",
+                "StackSize" : 5
+            }
+        ]
+    }
+}

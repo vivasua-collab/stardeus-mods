@@ -1,0 +1,11 @@
+{
+    "Type" : "Ore",
+    "Ingredients" : [
+        { "TypeId" : "Gold", "StackSize" : 1 },
+        { "TypeId" : "Carbon", "StackSize" : 1 }
+    ],
+    "OutputMultiplier" : 1,
+    "ProductDefId" : "Obj/Materials/GoldIngot",
+    "ProductionTimeHours" : 3.0,
+    "EnergyCost" : 30
+}

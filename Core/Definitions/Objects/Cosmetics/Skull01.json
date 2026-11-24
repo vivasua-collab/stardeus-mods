@@ -1,0 +1,67 @@
+{
+    "BuildGroup" : "Skull",
+    "Layer" : "Objects",
+    "ParentId" : "Objects/Cosmetics/BaseCosmetics",
+    "Seasonal" : { "FromMonth" : 10, "FromDay" : 1, "ToMonth" : 11, "ToDay" : 7 },
+    "Spawnable" : {
+        "Category": "Cosmetics",
+        "Chance" : 0.5,
+        "ChanceLocked" : 0.5
+    },
+    "Researchable" : {
+        "Prerequisites" : [ "Research/Habitation/HalloweenDecorations" ]
+    },
+    "Components" : [
+        {
+            "Component" : "TileTransform",
+            "Properties" : [
+                { "Key" : "IsRotatable", "Bool" : true },
+                { "Key" : "CoverPercent", "Int" : 15 }
+            ]
+        },
+        {
+            "Component" : "TileGraphics",
+            "Properties" : [
+                { "Key" : "Type", "String": "Object" },
+                { "Key" : "HasHeight", "Bool" : false },
+                { "Key" : "Graphic", "String": "Objects/Cosmetics/Skull01" }
+            ]
+        },
+        {
+            "Component" : "Admirable",
+            "Properties" : [
+                { "Key" : "Amount", "Int" : 1 },
+                { "Key" : "Multiplier", "Float" : 0.25 },
+                { "Key" : "Chance", "Float" : 0.5 }
+            ]
+        },
+        {
+            "Component" : "Flammable",
+            "Properties" : [
+                { "Key" : "IgnitionTemperatureCelsius", "Int" : 200 },
+                { "Key" : "FireChance", "Float" : 0.75 },
+                { "Key" : "FlammabilityCurve", "String" : "High" }
+            ]
+        },
+        {
+            "Component" : "Passability",
+            "Properties" : [
+                { "Key" : "IsPassable", "Bool" : true },
+                { "Key" : "IsWalkable", "Bool" : true },
+                { "Key" : "Difficulty", "Float" : 0.8 }
+            ]
+        },
+        {
+            "Component" : "Constructable",
+            "Properties" : [
+                { "Key" : "WorkAmount", "Int" : 800 },
+                {
+                    "Key" : "Contents",
+                    "RawMaterials" : [
+                        { "TypeId" : "TitaniumPlate", "StackSize" : 1 }
+                    ]
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,45 @@
+{
+    "BuildGroup" : "TableLarge",
+    "Layer" : "Objects",
+    "ParentId" : "Objects/Furniture/BaseTable",
+    "Researchable" : {
+        "Prerequisites" : [ "Research/Habitation/Furniture" ]
+    },
+    "Spawnable" : {
+        "Category": "Furniture",
+        "Chance" : 1.0,
+        "ChanceLocked" : 0.5
+    },
+    "Components" : [
+        {
+            "Component" : "TileTransform",
+            "Properties" : [
+                { "Key" : "Width", "Int" : 3 }
+            ]
+        },
+        {
+            "Component" : "TileGraphics",
+            "Properties" : [
+                { "Key" : "Graphic", "String": "Objects/Furniture/TableSteel1x3" }
+            ]
+        },
+        {
+            "Component" : "Flammable",
+            "Properties" : [
+                { "Key" : "FireChance", "Float" : 0.25 }
+            ]
+        },
+        {
+            "Component" : "Constructable",
+            "Properties" : [
+                { "Key" : "WorkAmount", "Int" : 565 },
+                {
+                    "Key" : "Contents",
+                    "RawMaterials" : [
+                        { "TypeId" : "SteelPlate", "StackSize" : 3 }
+                    ]
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,20 @@
+{
+    "Id" : "RoboButler",
+    "LovesJobTypes" : [ ],
+    "Species" : [ "Robot", "Drone", "Carrier" ],
+    "RoleTypes" : [ "Dumb" ],
+    "AdjustsSkills" : [
+        {
+            "JobId" : "Cooking",
+            "Adjustment" : 6
+        },
+        {
+            "JobId" : "Cleaning",
+            "Adjustment" : 4
+        },
+        {
+            "JobId" : "Mining",
+            "Adjustment" : -1
+        }
+    ]
+}

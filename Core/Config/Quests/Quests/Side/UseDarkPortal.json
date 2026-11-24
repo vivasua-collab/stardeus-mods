@@ -1,0 +1,33 @@
+{
+    "QuestFlags" : [ "Side", "AutoAdd", "Unique" ],
+    "TitleKey" : "quest.UseDarkPortal",
+    "DescKey" : "quest.UseDarkPortal.desc",
+    "QuestProviders" : [
+        "ShipComputer"
+    ],
+    "AvailableWhen" : [
+        "HasColonizedPlanet"
+    ],
+    "SetOnComplete" : [ "HasUsedDarkPortal" ],
+    "Steps" : [
+        {
+            "Id": "ReachDarkPortal",
+            "Type" : "ReachSOType",
+            "StepFlags" : [ "ActiveOnStart" ],
+            "Config" : [
+                { "Key" : "SOType", "String" : "DarkPortal" }
+            ],
+            "SetOnComplete" : [
+                "ReachedDarkPortal"
+            ]
+        },
+        {
+            "Id": "UseDarkPortal",
+            "Type" : "UseDarkPortal",
+            "StepFlags" : [ "HideInactive", "CompletesQuest" ],
+            "ActivateWhen" : [
+                "ReachedDarkPortal"
+            ]
+        }
+    ]
+}

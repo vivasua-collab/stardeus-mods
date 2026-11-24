@@ -1,0 +1,6 @@
+{
+    "Id" : "Firefighting",
+    "Importance" : 3.0,
+    "IconId" : "Icons/Color/Fire",
+    "Types" : [ "Physical", "Challenging", "Dangerous" ]
+}

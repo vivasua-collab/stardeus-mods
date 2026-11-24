@@ -1,0 +1,23 @@
+{
+    "Layer" : "FreeEntities",
+    "ParentId" : "Obj/Equipment/BaseEquipment",
+    "Researchable" : {
+        "Prerequisites" : [ "Research/Security/DefensiveGear" ]
+    },
+    "Components" : [
+        {
+            "Component" : "ObjGraphics",
+            "Properties" : [
+                { "Key" : "Graphic", "String" : "Obj/Weapons/RiotShield01/RiotShield01" },
+                { "Key" : "Scale", "Float" : 0.6 },
+                { "Key" : "SelectableScale", "Float": 0.5 }
+            ]
+        },
+        {
+            "Component" : "StorableObj",
+            "Properties" : [
+                { "Key" : "Group", "String" : "Weapon" }
+            ]
+        }
+    ]
+}

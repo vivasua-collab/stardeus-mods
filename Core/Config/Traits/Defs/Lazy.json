@@ -1,0 +1,21 @@
+{
+    "Id" : "Lazy",
+    "IconId" : "Icons/Color/Briefcase",
+    "TypeId" : "Intellectual",
+    "Rarity" : 0.5,
+    "IncompatibleTraitIds" : [
+        "Workaholic"
+    ],
+    "IncapableJobTypes" : [
+        "Hauling", "Mining", "Crafting"
+    ],
+    "AddsStatModifiers" : [
+        {
+            "Component" : "FunDropRate",
+            "Properties" : [
+                { "Key" : "Value", "Float" : -0.25 },
+                { "Key" : "Type", "String" : "AddsPercent" }
+            ]
+        }
+    ]
+}

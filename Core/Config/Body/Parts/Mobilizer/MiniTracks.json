@@ -1,0 +1,19 @@
+{
+    "SlotTypeId" : "Mobilizer",
+    "Compatibility" : "Robotic",
+    "Tier" : 1,
+    "ResistanceBase" : 10.0,
+    "AddsAbilities" : [
+        "Move"
+    ],
+    "ProvidesStats" : [
+        {
+            "Component" : "MoveSpeed",
+            "Properties" : [
+                { "Key" : "CompoundLimit", "Float" : 0.55 },
+                { "Key" : "AmountPerMinute", "Float" : 0.275 },
+                { "Key" : "StateMul", "Float" : 1.0 }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,137 @@
+{
+    "SortOrderAdjustment": -1,
+    "BarOffset": { "x": 0, "y": -0.2 },
+    "SelectOffset": { "x": 0, "y": -0.05 },
+    "SelectSize": { "x": 1, "y": 1.05 },
+    "BaseOffset": -0.2,
+    "PreviewRot": "R",
+    "PreviewScale": 1.25,
+
+    // surgery preview parameters
+    "BodyPreviewRot": "D",
+    "HeadPreviewRot": "D",
+    "BodyPreviewYShift": 0,
+    "BodyPreviewScaleMul": 0.65,
+    // end surgery preview parameters
+
+
+    "PreviewOffset": { "x": 0.0, "y": 0.0 },
+    "BubbleOffset": { "x": 0.4, "y": 0.5 },
+    "CarryOffset": { "x": 0, "y": 0.4 },
+    "HasHorizontal": true,
+    "IsAnimated": true,
+    // Downed wiggle (Ambient Motion setting), in degrees and seconds
+    "Wiggle": { "Angle": 10, "Interval": 3, "Duration": 1 },
+    "BodyPartSlotViewOffsets": {
+        // Body tab
+        "Body": { "x": 0, "y": 270 },
+        "Leg_L1": { "x": 215, "y": 200 },
+        "Leg_L2": { "x": 270, "y": 70 },
+        "Leg_L3": { "x": 270, "y": -70 },
+        "Leg_L4": { "x": 215, "y": -200 },
+        "Leg_R1": { "x": -215, "y": 200 },
+        "Leg_R2": { "x": -270, "y": 70 },
+        "Leg_R3": { "x": -270, "y": -70 },
+        "Leg_R4": { "x": -215, "y": -200 },
+        // Organs tab. The maw is Internal, so it lives here rather than on the Body tab and
+        // cannot share the bottom centre spot with the heart any more. Six cards evenly spaced
+        // on the same radius-270 ring every other species uses, with the diagonals pulled in to
+        // 215/170 so the ring stays circular instead of squaring off at the corners.
+        "Brain": { "x": -215, "y": 170 },
+        "Implant": { "x": 215, "y": 170 },
+        "Stomach": { "x": -270, "y": 0 },
+        "Intestines": { "x": 270, "y": 0 },
+        "Heart": { "x": -215, "y": -170 },
+        "Jaw": { "x": 215, "y": -170 }
+    },
+    "BodyPartSlotLines": {
+        // Body tab
+        "Body": [
+            { "x": 0, "y": 270 },
+            { "x": 0, "y": 36 }
+        ],
+        "Leg_L1": [
+            { "x": 215, "y": 200 },
+            { "x": 110, "y": 200 },
+            { "x": 36, "y": 49 }
+        ],
+        "Leg_L2": [
+            { "x": 250, "y": 70 },
+            { "x": 160, "y": 70 },
+            { "x": 48, "y": 32 }
+        ],
+        "Leg_L3": [
+            { "x": 240, "y": -70 },
+            { "x": 160, "y": -70 },
+            { "x": 55, "y": 4 }
+        ],
+        "Leg_L4": [
+            { "x": 180, "y": -200 },
+            { "x": 180, "y": -130 },
+            { "x": 50, "y": -20 }
+        ],
+        "Leg_R1": [
+            { "x": -215, "y": 200 },
+            { "x": -110, "y": 200 },
+            { "x": -36, "y": 57 }
+        ],
+        "Leg_R2": [
+            { "x": -250, "y": 70 },
+            { "x": -160, "y": 70 },
+            { "x": -54, "y": 27 }
+        ],
+        "Leg_R3": [
+            { "x": -240, "y": -70 },
+            { "x": -160, "y": -70 },
+            { "x": -55, "y": 4 }
+        ],
+        "Leg_R4": [
+            { "x": -180, "y": -200 },
+            { "x": -180, "y": -130 },
+            { "x": -45, "y": -27 }
+        ],
+        // Organs tab. Every anchor sits in the same quadrant as its card so the connectors
+        // radiate out of the body instead of converging on the centre and crossing. The heart
+        // is mirrored to the left to match its card rather than sitting where it anatomically
+        // would.
+        "Brain": [
+            { "x": -215, "y": 170 },
+            { "x": -100, "y": 170 },
+            { "x": -20, "y": 25 }
+        ],
+        "Implant": [
+            { "x": 215, "y": 170 },
+            { "x": 100, "y": 170 },
+            { "x": 14, "y": 32 }
+        ],
+        "Stomach": [
+            { "x": -260, "y": 0 },
+            { "x": -155, "y": 0 },
+            { "x": -30, "y": -4 }
+        ],
+        "Intestines": [
+            { "x": 270, "y": 0 },
+            { "x": 145, "y": 0 },
+            { "x": 28, "y": 10 }
+        ],
+        "Heart": [
+            { "x": -215, "y": -170 },
+            { "x": -100, "y": -170 },
+            { "x": -12, "y": -22 }
+        ],
+        "Jaw": [
+            { "x": 215, "y": -170 },
+            { "x": 100, "y": -170 },
+            { "x": 0, "y": -3 }
+        ]
+    },
+    "PartDefs": [
+        {
+            "PartType": "Body",
+            "PositionFilter": "",
+            "RenderSorted" : true,
+            "Offset": { "x": 0, "y": 0 },
+            "Scale": 1
+        }
+    ]
+}

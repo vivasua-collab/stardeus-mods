@@ -1,0 +1,6 @@
+{
+    "Id" : "White",
+    "Data" : [255, 255, 255, 255],
+    "IsGeneric" : true,
+    "Groups" : [ "UI" ]
+}

@@ -1,0 +1,25 @@
+{
+    // C# implementation id.
+    // Multiple configurations can point to a single implementation.
+    "EventId": "ShipDuel",
+    // How much does this story event cost to run
+    "Points": 8,
+    // Options: Negative, Positive, Neutral, Raid
+    "OutcomeType": "Neutral",
+    // Full list is in StoryEventFlags class
+    "EventFlags": [
+        "Space",
+        "OnDemand",
+        "NoHyperspace",
+        "CanIgnoreRepeatDelay"
+    ],
+    "MinRepeatDelayDays": 24,
+    // How likely this event can occur given the sector difficulty
+    // sector difficulty -> chance
+    "SectorDifficultyChance": [
+        0.0, 0.5,
+        0.3, 0.7,
+        0.6, 0.9,
+        1.0, 1.0
+    ]
+}

@@ -1,0 +1,22 @@
+{
+    "Id" : "Star",
+    "Probability" : 1.0,
+    "Shader" : "Shader Graphs/SOStar",
+    "StarmapSizeMul" : 1.1,
+    "ScaleRand" : 0.5,
+    "StarfieldSizeMul" : 2.0,
+    "ShaderPropertiesFloatFrom": [
+        { "Key" : "_RotationSpeed", "Float" : 0.05 },
+        { "Key" : "_DetailSpeed", "Float" : -0.04 }
+    ],
+    "ShaderPropertiesFloatTo": [
+        { "Key" : "_RotationSpeed", "Float" : 0.25 },
+        { "Key" : "_DetailSpeed", "Float" : 0.04 }
+    ],
+    "ShaderPropertiesVector2From": [
+        { "Key" : "_RotDir", "Vector2" : { "x" : -1.0, "y" : -1.0 } }
+    ],
+    "ShaderPropertiesVector2To": [
+        { "Key" : "_RotDir", "Vector2" : { "x" : 1.0, "y" : 1.0 } }
+    ]
+}

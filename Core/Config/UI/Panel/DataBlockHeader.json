@@ -1,0 +1,10 @@
+{
+    "Id" : "Panel/DataBlockHeader",
+
+    "Color" : "UI/Panel/Header",
+    // "Alpha" : 0.95,
+
+    "Image" : "UI/Buttons/ButtonTopBG",
+    "ImageType" : "Sliced",
+    "ImageBorderLBRT" : [ 12, 12, 12, 12 ]
+}

@@ -1,0 +1,8 @@
+{
+    "FlagName": "Drama",
+    // Difficulty -> cooldown days. Flat below Balanced (1.0): easier difficulties change how hard events hit, not how often they come
+    "CooldownDaysDifficultyCurve": [
+        0.0, 1.0,
+        1.0, 1.0
+    ]
+}

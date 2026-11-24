@@ -1,0 +1,39 @@
+{
+    // C# implementation id.
+    // Multiple configurations can point to a single implementation.
+    "AspectId" : "Raid",
+    "Properties" : [
+        // No opening grace: the first raid can land any time from about day 6
+        { "Key" : "InitialExtraDelayDays", "Float" : 0 },
+        {
+            "Key" : "RaidDelayDaysCurve",
+            // Threat wealth (millions, structures at Tunables.StructureThreatWeight) => mean days
+            // till the next scheduled raid. Same means as Raid_Balanced (the random storyteller
+            // this generator mirrors averages the same raid gap as the default one); what
+            // differs is the spread below. See Raid_Balanced.json for the shape and why it is
+            // keyed on wealth alone.
+            "FloatSet" : [
+                0.0,    14.0,
+                1.0,    13.3,
+                3.0,    12.6,
+                10.0,   11.2,
+                30.0,   9.8,
+                100.0,  8.4,
+                300.0,  7.0,
+                1000.0, 6.3
+            ]
+        },
+        // Rolled delay = mean x Range(0.4, 1.6): 5.6 to 22.4 days on a fresh ship, which is
+        // also what keeps the longest gap under ~4 weeks without a hard cap.
+        { "Key" : "RaidDelayJitter", "Float" : 0.6 },
+        // Scheduled raids arrive at 0.5x to 1.5x their computed strength
+        { "Key" : "RaidStrengthJitter", "Float" : 0.5 },
+        // No calm-before-the-storm: the strength jitter above is the surprise. Interval and
+        // storm values are inert while the chance is 0.
+        { "Key" : "RaidSkipChance", "Float" : 0 },
+        { "Key" : "RaidSkipIntervalMin", "Float" : 2 },
+        { "Key" : "RaidSkipIntervalMax", "Float" : 3 },
+        { "Key" : "RaidStormMulMin", "Float" : 1.15 },
+        { "Key" : "RaidStormMulMax", "Float" : 1.25 }
+    ]
+}

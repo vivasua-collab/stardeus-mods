@@ -1,0 +1,22 @@
+{
+    "Id" : "Research/ShipCombat/PointDefense",
+    "Tier" : 3,
+    "IsAbstract" : true,
+    "PreviewIcon" : "Icons/Color/ForceField",
+    "Researchable" : {
+        "IsTreeNode" : true,
+        "Prerequisites" : [
+            "Research/ShipCombat/Shields"
+        ],
+        "DatoidCosts" : [
+            {
+                "TypeId" : "DatoidSynthetic",
+                "StackSize" : 9
+            },
+            {
+                "TypeId" : "DatoidEnergy",
+                "StackSize" : 6
+            }
+        ]
+    }
+}

@@ -1,0 +1,19 @@
+{
+    "Id" : "Input/DataBlock",
+
+    "Color" : "UI/Text/Input/SelectionHighlight",
+
+    "ChildrenKeys" : [
+        "Panel",
+        "Selectable",
+        "Text",
+        "ActiveOverlay"
+    ],
+
+    "ChildrenIds" : [
+        "Panel/ColorlessIconButton",
+        "Selectable/InputDataBlock",
+        "Text/DataBlockInput",
+        "Overlay/Icon"
+    ]
+}

@@ -1,0 +1,9 @@
+{
+    "ResponseType" : "Positive",
+    "TopicType" : "ExtortionResponse",
+    "ToneType" : "Polite",
+    "MessageKeys" : [
+        "ship.chat.extort_res.positive.polite.*",
+        "ship.chat.surrender_req.neutral.polite.*"
+    ]
+}

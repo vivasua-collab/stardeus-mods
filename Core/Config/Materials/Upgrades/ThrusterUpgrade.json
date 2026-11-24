@@ -1,0 +1,12 @@
+{
+    "Id" : "ThrusterUpgrade",
+    "DefId" : "Obj/Upgrades/ThrusterUpgrade",
+    "IsComposite" : true,
+    "IsConsumedOnDestroy" : true,
+    "IconId" : "Obj/Upgrades/ThrusterUpgrade",
+    "Property" : "Electronic",
+    "Group" : "Upgrade",
+    "GroupId" : "Upgrades",
+    "EnergyOutput" : 50.0,
+    "Rarity" : 1
+}

@@ -1,0 +1,14 @@
+{
+    "Layer" : "FreeEntities",
+    "ParentId" : "Obj/Equipment/BaseEquipment",
+    "Components" : [
+        { "Component" : "CrawlerFacehug" },
+        {
+            "Component" : "ObjGraphics",
+            "Properties" : [
+                { "Key" : "Graphic", "String": "Beings/Hats/Human/CrawlerFacehug/CrawlerFacehug" },
+                { "Key" : "Scale", "Float": 0.5 }
+            ]
+        }
+    ]
+}

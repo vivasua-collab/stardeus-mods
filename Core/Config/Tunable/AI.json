@@ -1,0 +1,213 @@
+{
+    "Floats" : [
+        { "Key" : "MLBoothTrainingSpeed", "Float" : 1.0 },
+        { "Key" : "MLBoothEnergyCost", "Float" : 1.0 },
+        { "Key" : "CloseEnoughDist", "Float" : 5 },
+        { "Key" : "CloseEnoughChance", "Float" : 0.5 },
+        // how much % sanity glides toward SanityTarget per day
+        { "Key" : "SanityRecoveryPerHour", "Float" : 0.04 },
+        // how much % sanity glides toward SanityTarget per day
+        { "Key" : "SanityDropPerHour", "Float" : 0.03 },
+        // how hard the sanity effects affect the sanity base threshold
+        // too much = too many breakdowns, too little = sanity won't swing enough and it's boring
+        { "Key" : "SanityEffectImpact", "Float" : 0.02 },
+        // Mental breakdown threshold bands: a being becomes eligible for light/medium/heavy
+        // breakdown checks once its Sanity drops at or below these values. Defaults seed the
+        // per-being threshold stats; traits (e.g. Enlightened) tune them via stat modifiers.
+        { "Key" : "BreakdownLightThreshold", "Float" : 0.31 },
+        { "Key" : "BreakdownMediumThreshold", "Float" : 0.20 },
+        { "Key" : "BreakdownHeavyThreshold", "Float" : 0.05 },
+        // Mean Time Between breakdowns (in days) per band. Per-hour chance = 1 / (days * 24).
+        { "Key" : "BreakdownLightMtbDays", "Float" : 10.0 },
+        { "Key" : "BreakdownMediumMtbDays", "Float" : 3.0 },
+        { "Key" : "BreakdownHeavyMtbDays", "Float" : 0.7 },
+        // Relief: temporary mood boost applied when a breakdown ends, suppressing re-breaks.
+        { "Key" : "BreakdownReliefDays", "Float" : 2.5 },
+        { "Key" : "GroundedBeingDirtSpawnChance", "Float" : 0.01 },
+        // Worn gear at or below this quality is "tattered" and depresses its wearer.
+        // Nothing procgen or traders produce falls this low - it is reachable through
+        // crafting by an unskilled colonist, which is the point of it.
+        { "Key" : "TatteredQualityThreshold", "Float" : 0.4 },
+        // How long a being remembers using a fun source. Uses fade linearly over this window,
+        // repeated recent uses make the source give less fun and mood.
+        { "Key" : "FunRepetitionWindowDays", "Float" : 7.0 }
+    ],
+    "Ints" : [
+        { "Key" : "NewTaskBoostMinutes", "Int" : 30 },
+        // Task priority of the hidden per-room floor cleaning tasks. 1 is the lowest, so a
+        // worker only cleans when no other work is waiting for it; 0 switches them off.
+        { "Key" : "CleaningTaskPriority", "Int" : 1 },
+        // Mood points, so x SanityEffectImpact (0.02): +0.40 on the target for BreakdownReliefDays
+        { "Key" : "BreakdownReliefMoodBonus", "Int" : 20 },
+        { "Key" : "ExpeditionNeedCostFloor_Electricity", "Int" : 5 },
+        { "Key" : "ExpeditionNeedCostFloor_Sleep", "Int" : -85 },
+        { "Key" : "ExpeditionNeedCostFloor_Toilet", "Int" : -50 },
+        { "Key" : "ExpeditionNeedCostFloor_Hunger", "Int" : -75 },
+        { "Key" : "ExpeditionNeedCostFloor_Rest", "Int" : -90 },
+        { "Key" : "ExpeditionNeedCostFloor_Fun", "Int" : -100 },
+        { "Key" : "ExpeditionNeedCostFloor_Stress", "Int" : -95 },
+        // Mood for what a being is wearing, per garment in the category. Each of the
+        // three categories is emitted as its own effect, so a corpse item never hides
+        // what the rest of the outfit is worth. Set any of these to 0 to switch that
+        // complaint off: the effect is then not emitted at all rather than emitted as
+        // a zero, and the "several such garments" nudge does not apply either.
+        { "Key" : "WornGearMoodSecondHand", "Int" : -1 },
+        { "Key" : "WornGearMoodSecondHandThrifty", "Int" : 1 },
+        { "Key" : "WornGearMoodSecondHandFastidious", "Int" : -3 },
+        { "Key" : "WornGearMoodDeadMans", "Int" : -6 },
+        { "Key" : "WornGearMoodDeadMansThrifty", "Int" : -3 },
+        { "Key" : "WornGearMoodDeadMansFastidious", "Int" : -10 },
+        { "Key" : "WornGearMoodTattered", "Int" : -3 },
+        { "Key" : "WornGearMoodTatteredFastidious", "Int" : -6 },
+        // Trust effects (TrustSys), in percentage points of AI Alignment. Favor quests set
+        // their own in the quest's ColonistTrust rewards.
+        // While a colonist has personal quarters
+        { "Key" : "TrustPersonalQuarters", "Int" : 10 },
+        // Every colonist, when a crewmate dies starving, suffocating, freezing or overheating
+        { "Key" : "TrustNeglectDeath", "Int" : -8 },
+        { "Key" : "TrustNeglectDeathDays", "Int" : 30 },
+        // Every colonist, when the AI sells a crewmate
+        { "Key" : "TrustCrewSold", "Int" : -10 },
+        { "Key" : "TrustCrewSoldDays", "Int" : 60 },
+        // Close friends, lovers and family (never a nemesis) of a colonist the AI sends back
+        // into stasis, wakes again, leaves without a funeral, or puts an Obey Chip into
+        { "Key" : "TrustFriendToStasis", "Int" : -5 },
+        { "Key" : "TrustFriendToStasisDays", "Int" : 30 },
+        { "Key" : "TrustFriendWoken", "Int" : 5 },
+        { "Key" : "TrustFriendWokenDays", "Int" : 30 },
+        { "Key" : "TrustNoCeremony", "Int" : -5 },
+        { "Key" : "TrustNoCeremonyDays", "Int" : 30 },
+        { "Key" : "TrustFriendChipped", "Int" : -10 },
+        { "Key" : "TrustFriendChippedDays", "Int" : 60 },
+        // The deserter, when the AI takes them back
+        { "Key" : "TrustTakenBack", "Int" : 10 },
+        { "Key" : "TrustTakenBackDays", "Int" : 60 }
+    ],
+    "FloatSets" : [
+        {
+            "Key" : "SanityMentalBreakdownRiskCurve",
+            "FloatSet" : [
+                0.0, 1.0,
+                0.1, 0.05,
+                0.2, 0.02,
+                0.3, 0.01,
+                0.31, 0.0,
+                1.0, 0.0
+            ]
+        },
+        {
+            "Key" : "ExpeditionSanityCostDaysCurve",
+            "FloatSet" : [
+                0.1, 0.0,
+                5.0, 0.2,
+                10, 0.3,
+                20, 0.4,
+                30, 0.5,
+                50, 1.0
+            ]
+        },
+        {
+            "Key" : "ExpeditionNeedCostDaysCurve_Electricity",
+            "FloatSet" : [
+                0.0, 0.0,
+                0.2, 10.0,
+                0.4, 15.0,
+                0.8, 20.0,
+                1.0, 30.0,
+                2.0, 50.0,
+                3.0, 60.0,
+                4.0, 70.0,
+                5.0, 95.0
+            ]
+        },
+        {
+            "Key" : "ExpeditionNeedCostDaysCurve_Hunger",
+            "FloatSet" : [
+                0.0, 0.0,
+                0.1, 30.0,
+                0.2, 70.0,
+                0.5, 80.0,
+                1.0, 90.0,
+                2.0, 100.0,
+                3.0, 120.0,
+                4.0, 150.0,
+                5.0, 200.0
+            ]
+        },
+        {
+            "Key" : "ExpeditionNeedCostDaysCurve_Fun",
+            "FloatSet" : [
+                0.0, 0.0,
+                0.1, 20.0,
+                0.2, 40.0,
+                0.5, 60.0,
+                1.0, 80.0,
+                1.5, 90.0,
+                2.0, 100.0,
+                3.0, 150.0,
+                5.0, 200.0
+            ]
+        },
+        {
+            "Key" : "ExpeditionNeedCostDaysCurve_Toilet",
+            "FloatSet" : [
+                0.0, 0.0,
+                0.1, 30.0,
+                0.2, 40.0,
+                0.5, 50.0,
+                0.7, 60.0,
+                0.8, 70.0,
+                1.0, 100.0,
+                3.0, 150.0,
+                5.0, 200.0
+            ]
+        },
+        {
+            "Key" : "ExpeditionNeedCostDaysCurve_Shower",
+            "FloatSet" : [
+                0.0, 0.0,
+                0.1, 30.0,
+                0.2, 70.0,
+                0.5, 120.0,
+                1.0, 130.0,
+                2.0, 150.0,
+                5.0, 200.0
+            ]
+        },
+        {
+            "Key" : "ExpeditionNeedCostDaysCurve_Rest",
+            "FloatSet" : [
+                0.1, 0.0,
+                0.2, 50.0,
+                0.5, 100.0,
+                1.0, 120.0,
+                3.0, 150.0,
+                5.0, 200.0
+            ]
+        },
+        {
+            "Key" : "ExpeditionNeedCostDaysCurve_Sleep",
+            "FloatSet" : [
+                0.0, 0.0,
+                0.3, 50.0,
+                0.7, 90.0,
+                1.0, 120.0,
+                2.0, 130.0,
+                5.0, 190.0
+            ]
+        },
+        {
+            "Key" : "ExpeditionNeedCostDaysCurve_Stress",
+            "FloatSet" : [
+                0.0, 0.0,
+                0.1, 10.0,
+                0.5, 20.0,
+                0.8, 30.0,
+                1.0, 35.0,
+                2.0, 70.0,
+                3.0, 100.0,
+                5.0, 200.0
+            ]
+        }
+    ]
+}

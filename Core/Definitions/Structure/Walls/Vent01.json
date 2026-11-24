@@ -1,0 +1,12 @@
+{
+    "Layer" : "Walls",
+    "ParentId" : "Structure/Walls/BaseVent",
+    "Components" : [
+        { 
+            "Component" : "TileGraphics",
+            "Properties" : [
+                { "Key" : "Graphic", "String" : "Structure/Walls/Vent01/Vent01" }
+            ]
+        }
+    ]
+}

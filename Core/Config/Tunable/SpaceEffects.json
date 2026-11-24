@@ -1,0 +1,31 @@
+{
+    "Floats" : [
+        // How many hours it will take for solar panels to drop to 0kW output
+        // after you enter hyperspace. Recovery is immediate
+        { "Key" : "SolarPanelHyperspacePhaseOutHours", "Float" : 4.0 },
+        // How many hours does it take for solar panels to reach full output
+        // after you jumped near a star
+        { "Key" : "SolarPanelStarPowerOutputPhaseInHours", "Float" : 12.0 },
+        { "Key" : "DustStormSolarOutputMultiplier", "Float" : 0.33 },
+        { "Key" : "PhotonStormSolarOutputMultiplier", "Float" : 2.0 }
+    ],
+    "FloatSets" : [
+        {
+            "Key" : "StarSolarOutputMulCurve",
+            "FloatSet" : [
+                0.0, 1.5,
+                0.5, 2.0,
+                1.0, 3.0
+            ]
+        },
+        {
+            "Key" : "StarTempIncreaseDegreesPerHourCurve",
+            "FloatSet" : [
+                0.0, 3.0,
+                0.5, 6.0,
+                0.9, 9.0,
+                1.0, 15.0
+            ]
+        }
+    ]
+}

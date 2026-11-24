@@ -1,0 +1,17 @@
+{
+    "Id" : "Nurse",
+    "Species" : [ "Human", "Robot", "Drone" ],
+    "AgePhaseIds" : [ "YoungAdult", "MidLife", "Retirement" ],
+    "RoleTypes" : [ "Poor", "Good" ],
+    "LovesJobTypes" : [ "Caring" ],
+    "AdjustsSkills" : [
+        {
+            "JobId" : "Medical",
+            "Adjustment" : 4
+        },
+        {
+            "JobId" : "Construction",
+            "Adjustment" : -1
+        }
+    ]
+}

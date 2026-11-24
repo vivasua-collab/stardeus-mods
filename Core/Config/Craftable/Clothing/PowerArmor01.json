@@ -1,0 +1,17 @@
+{
+    "Type": "Clothing",
+    "ColorGroupId": "Suit",
+    "Ingredients": [
+        { "TypeId" : "CarbonFiber", "StackSize" : 40 },
+        { "TypeId" : "TitaniumPlate", "StackSize" : 30 },
+        { "TypeId" : "Rubber", "StackSize" : 10 },
+        { "TypeId" : "LeadPlate", "StackSize" : 12 },
+        { "TypeId" : "BatteryCell", "StackSize" : 20 },
+        { "TypeId" : "Microchip3", "StackSize" : 4 },
+        { "TypeId" : "NuclearCell", "StackSize" : 2 }
+    ],
+    "IgnoreMarket" : true,
+    "ProductDefId": "Obj/Equipment/Clothing/PowerArmor01",
+    "ProductionTimeHours": 36.0,
+    "EnergyCost": 320.0
+}

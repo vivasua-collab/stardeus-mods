@@ -1,0 +1,19 @@
+// how much hate can grow towards someone, given the social affinity
+// towards them. mirrors SocialAffinity_MaxFriendship, except for the top end.
+{
+    // social affinity (-1..1) => max hate
+    //
+    // the 1.00 plateau matters: nemesis is only declared when hate reaches
+    // exactly 1.0, and an affinity of exactly -1.0 is practically never
+    // generated, so the plateau is what keeps nemeses possible at all
+    "FloatSet" : [
+        -1.00, 1.00,
+        -0.75, 1.00,
+        -0.50, 0.75,
+        -0.30, 0.55,
+        -0.15, 0.40,
+         0.00, 0.20,
+         0.50, 0.05,
+         1.00, 0.00
+    ]
+}

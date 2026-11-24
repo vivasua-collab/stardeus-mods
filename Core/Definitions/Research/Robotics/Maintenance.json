@@ -1,0 +1,19 @@
+{
+    "Id" : "Research/Robotics/Maintenance",
+    "Tier" : 1,
+    "IsAbstract" : true,
+    "PreviewIcon" : "Icons/Color/Wrench2",
+    "NameKey" : "need.Maintenance",
+    "Researchable" : {
+        "IsTreeNode" : true,
+        "Prerequisites" : [
+            "Research/Robotics/Root"
+        ],
+        "DatoidCosts" : [
+            {
+                "TypeId" : "DatoidBasic",
+                "StackSize" : 10
+            }
+        ]
+    }
+}

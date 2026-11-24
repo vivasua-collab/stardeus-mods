@@ -1,0 +1,56 @@
+{
+    "ToolPath" : "Facilities",
+    "Layer" : "Objects",
+    "ParentId" : "Objects/Devices/StorageMini",
+    "UseParentTexts" : true,
+    "TranslationVars" : [ "2000" ],
+    "Researchable" : {
+        "Prerequisites" : [
+            "Research/Construction/Storage"
+        ]
+    },
+    "Spawnable" : {
+        "Category": "Storage",
+        "Chance" : 1.0,
+        "ChanceLocked" : 0.5
+    },
+    "Components" : [
+        {
+            "Component" : "TileTransform",
+            "Properties" : [
+                { "Key" : "Width", "Int" : 3 },
+                { "Key" : "Height", "Int" : 3 },
+                { "Key" : "IsRotatable", "Bool" : true },
+                // { "Key" : "WorkSpot", "Vector2" : { "x" : 1, "y" : -1 } },
+                { "Key" : "OutPort", "Vector2" : { "x" : 1, "y" : -1 } },
+                { "Key" : "InPort", "Vector2" : { "x" : 1, "y" : -1 } }
+            ]
+        },
+        {
+            "Component" : "TileGraphics",
+            "Properties" : [
+                { "Key" : "Graphic", "String": "Objects/Devices/Storage" }
+            ]
+        },
+        {
+            "Component" : "MatStorage",
+            "Properties" : [
+                // If capacity is changing, also change FullStorageGenStage
+                { "Key" : "MaxCapacity", "Int" : 2000 }
+            ]
+        },
+        {
+            "Component" : "Constructable",
+            "Properties" : [
+                { "Key" : "WorkAmount", "Int" : 1600 },
+                {
+                    "Key" : "Contents",
+                    "RawMaterials" : [
+                        { "TypeId" : "SteelPlate", "StackSize" : 8 },
+                        { "TypeId" : "Gears", "StackSize" : 2 }
+                    ]
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Id" : "SlowPooper",
+    "IconId" : "Icons/Color/Toilet",
+    "TypeId" : "BiologicalFunction",
+    "Rarity" : 0.25,
+    "AddsStatModifiers" : [
+        {
+            "Component" : "ToiletReliefRate",
+            "Properties" : [
+                { "Key" : "Value", "Float" : -0.5 },
+                { "Key" : "Type", "String" : "AddsPercent" }
+            ]
+        }
+    ]
+}

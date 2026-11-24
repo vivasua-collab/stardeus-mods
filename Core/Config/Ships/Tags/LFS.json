@@ -1,0 +1,14 @@
+// LFS: Light Fighter Ship
+{
+    "ChanceWillTrade" : 0.1,
+    "ChancePolice" : 0.7,
+    // empty = all
+    "CompatibleFactions" : [ ],
+    "CompatibleClasses" : [
+        "Fighter",
+        "Corvette",
+        "Unclassified"
+    ],
+    "MinOffensiveness" : 0.3,
+    "MaxOffensiveness" : 0.6
+}

@@ -1,0 +1,9 @@
+{
+    "Id" : "Panel/SliderDataBlock",
+
+    "Color" : "UI/Panel/Main",
+
+    "Image" : "UI/Buttons/IconButtonBG",
+    "ImageType" : "Sliced",
+    "ImageBorderLBRT" : [ 12, 12, 12, 12 ]
+}

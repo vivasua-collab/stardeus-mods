@@ -1,0 +1,15 @@
+{
+    "Type": "Weapons3",
+    "Ingredients": [
+        { "TypeId" : "TitaniumPlate", "StackSize" : 3 },
+        { "TypeId" : "Microchip3", "StackSize" : 2 },
+        { "TypeId" : "NuclearCell", "StackSize" : 2 },
+        { "TypeId" : "GoldWire", "StackSize" : 4 },
+        { "TypeId" : "OpticalFiber", "StackSize" : 3 },
+        { "TypeId" : "Plastic", "StackSize" : 4 }
+    ],
+    "IgnoreMarket" : true,
+    "ProductDefId": "Obj/Equipment/Weapons/IonDisruptor01",
+    "ProductionTimeHours": 10.0,
+    "EnergyCost": 140.0
+}

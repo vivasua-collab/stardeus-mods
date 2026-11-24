@@ -1,0 +1,17 @@
+{
+    "Id" : "Signal",
+    "Icon" : "Icons/Color/Signal",
+    "SizeMin" : 1,
+    "SizeMax" : 1,
+    "IsDynamic" : true,
+    "IsConsumable" : true,
+    "CanHaveCustomIcon" : false,
+    "UseTypeName" : true,
+    "IsScannable" : false,
+    "IsInteractive" : true,
+    "IsOnSurface" : true,
+    "StarfieldSortOrder" : 3,
+    "IsIconMarker" : true,
+    "LocationApproxMagnitude" : 3.0,
+    "CanBeOwned" : false
+}

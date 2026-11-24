@@ -1,0 +1,33 @@
+{
+    "Name": "Elysium",
+    "Colors": {
+        "White": "#00FF00",
+        "Black": "#000000",
+        "Bright": "#00FF00",
+
+        "RedPanel": "#FF0000",
+
+        "PanelHeader": "#001100",
+        "PanelTop": "#002200",
+        "PanelContent": "#000000",
+        "PanelFooter": "#001100",
+
+        "ButtonSlot": "#003300",
+        "ButtonPanel": "#004400",
+        "ButtonPanelFancy": "#006600",
+
+        "Accent": "#80FF80",
+
+        "AlertRed": "RedPanel",
+        "AlertAmber": "#FFB000",
+        "AlertYellow": "#FFFF33",
+        "AlertGreen": "White",
+        // White is green here and taken by AlertGreen, so Info gets a dimmer green
+        "AlertWhite": "#80C480",
+
+        "Button1": "#002200",
+        "Button2": "#001100",
+        "Button3": "#000000",
+        "InputHighlight": "#008800"
+    }
+}

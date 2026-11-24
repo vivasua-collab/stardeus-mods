@@ -1,0 +1,18 @@
+{
+    "Id" : "Port",
+    "Type" : "Port",
+    "IsBiological" : true,
+    "MinDifficulty" : 0.0,
+    "MaxOnePerSector" : true,
+    "DifficultyChance" : [
+        0.0, 1.0,
+        1.0, 1.0
+    ],
+    "RegionQuantityChance" : [
+        0.0, 0.0,
+        0.3, 1.0,
+        0.7, 2.0,
+        1.0, 3.0
+    ],
+    "RequiresFaction" : true
+}

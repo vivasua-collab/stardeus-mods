@@ -1,0 +1,10 @@
+{
+    "SlotTypeId" : "Implant",
+    "Compatibility" : "Any",
+    "ResistanceBase" : 4.0,
+    "Tier" : 2,
+    "AddsAbilities" : [
+        "Vocalize",
+        "Hear"
+    ]
+}

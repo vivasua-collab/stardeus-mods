@@ -1,0 +1,10 @@
+{
+    "Id" : "Transistor",
+    "IsComposite" : true,
+    "IsConsumedOnDestroy" : true,
+    "IconId" : "Obj/Materials/Transistor",
+    "Property" : "Electronics",
+    "GroupId" : "Electronics",
+    "EnergyOutput" : 18.0,
+    "Rarity" : 5
+}

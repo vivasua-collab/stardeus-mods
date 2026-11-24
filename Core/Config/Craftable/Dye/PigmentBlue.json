@@ -1,0 +1,11 @@
+{
+    "Type": "Dye",
+    "Ingredients": [
+        { "TypeId" : "CornflowerPetals", "StackSize" : 5 },
+        { "TypeId" : "Water", "StackSize" : 1 }
+    ],
+    "OutputMultiplier" : 5,
+    "ProductDefId": "Obj/Materials/PigmentBlue",
+    "ProductionTimeHours": 1.0,
+    "EnergyCost": 10.0
+}

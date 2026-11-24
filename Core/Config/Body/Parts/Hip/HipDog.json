@@ -1,0 +1,9 @@
+{
+    "SlotTypeId" : "Hip",
+    "Compatibility" : "Biological",
+    "ResistanceBase" : 6.0,
+    "Tier" : 1,
+    "TargetSpecies" : [ "Dog" ],
+    "CompatibleSpeciesFlags" : [ "Animal" ],
+    "CompatibleBodySizes" : [ "Small", "Medium" ]
+}

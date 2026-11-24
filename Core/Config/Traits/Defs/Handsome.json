@@ -1,0 +1,8 @@
+{
+    "Id" : "Handsome",
+    "IconId" : "Icons/Color/Sparkles",
+    "TypeId" : "BiologicalFunction",
+    "CompatibleSex" : "M",
+    "TraitFlagIds" : [ "BodyBound" ],
+    "Rarity" : 0.25
+}

@@ -1,0 +1,10 @@
+{
+    "Type": "Grindable",
+    "Ingredients": [
+        { "TypeId" : "Grain", "StackSize" : 1 }
+    ],
+    "OutputMultiplier" : 1,
+    "ProductDefId": "Obj/Materials/Flour",
+    "ProductionTimeHours": 2,
+    "EnergyCost": 5.0
+}

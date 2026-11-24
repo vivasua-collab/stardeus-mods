@@ -1,0 +1,58 @@
+{
+    "Layer" : "FreeEntities",
+    "IgnoreMarket" : true,
+    "ParentId" : "Obj/BaseObj",
+    "Components" : [
+        {
+            "Component" : "ObjHealth",
+            "Properties" : [
+                { "Key" : "Max", "Int" : 150 }
+            ]
+        },
+        {
+            "Component" : "Flammable",
+            "Properties" : [
+                { "Key" : "IsTemperatureResistant", "Bool": true }
+            ]
+        },
+        {
+            "Component" : "ObjGraphics",
+            "Properties" : [
+                { "Key" : "Graphic", "String": "Obj/Asteroids/Asteroid01" },
+                { "Key" : "Shader", "String" : "ObjAbove" },
+                // { "Key" : "Renderer", "String" : "VFXRendererObjAbove" },
+                { "Key" : "HoverWhenInSpace", "Bool" : false},
+                { "Key" : "HasShadow", "Bool" : true },
+                { "Key" : "IsAnimated", "Bool" : true },
+                { "Key" : "DoNotCull", "Bool" : true }
+            ]
+        },
+        {
+            "Component" : "ParticleTrail",
+            "Properties" : [
+                { "Key" : "Particles", "String" : "SmokeTrailFX" },
+                { "Key" : "ParticlesOffset", "Vector2" : { "x" : 0, "y" : 0 } },
+                { "Key" : "InheritScale", "Bool" : true },
+                { "Key" : "DestroyDelay", "Float" : 5 },
+                { "Key" : "DelayStart", "Bool" : true }
+            ]
+        },
+        {
+            "Component" : "Movable",
+            "Properties" : [
+                { "Key" : "IsForbidden", "Bool" : true }
+            ]
+        },
+        {
+            "Component" : "Asteroid",
+            "Properties" : [
+                { "Key" : "RadiusRange", "Vector2" : { "x" : 4, "y" : 10 } },
+                // What it breaks into when it hits a shield or gets shot down.
+                // Will be matched to Obj/Asteroids/AsteroidFragment*
+                { "Key" : "FragmentDef", "String" : "Obj/Asteroids/AsteroidFragment01" },
+                { "Key" : "FragmentCount", "Vector2" : { "x" : 2, "y" : 4 } }
+            ]
+        }
+    ]
+}
+

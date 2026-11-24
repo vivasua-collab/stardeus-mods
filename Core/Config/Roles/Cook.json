@@ -1,0 +1,13 @@
+{
+    "Id" : "Cook",
+    "LovesJobTypes" : [ "Cooking" ],
+    "Species" : [ "Human", "Robot", "Carrier", "Drone" ],
+    "RoleTypes" : [ ],
+    "AgePhaseIds" : [ "YoungAdult", "MidLife", "Retirement" ],
+    "AdjustsSkills" : [
+        {
+            "JobId" : "Cooking",
+            "Adjustment" : 6
+        }
+    ]
+}

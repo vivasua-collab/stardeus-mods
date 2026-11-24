@@ -1,0 +1,10 @@
+{
+    "Id" : "StemCells",
+    "IsComposite" : true,
+    "IsConsumedOnConstruct" : true,
+    "IconId" : "Obj/Materials/StemCells",
+    "Group" : "StemCells",
+    "GroupId" : "Components",
+    "EnergyOutput" : 50.0,
+    "Rarity" : 10
+}

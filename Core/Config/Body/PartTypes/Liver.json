@@ -1,0 +1,9 @@
+{
+    "PartFlags" : [ "Removable", "Internal", "Essential" ],
+    "Size" : 0.25,
+    "ExtractRisk" : 0.5,
+    "ImplantRisk" : 0.2,
+    "FatalityRisk" : 0.35,
+    "RejectionRisk" : 0.3,
+    "SurgicalFatigue" : 0.14
+}

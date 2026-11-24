@@ -1,0 +1,7 @@
+{
+    "Id" : "Robotics",
+    "Importance" : 2.5,
+    "IconId" : "Icons/Color/Cog",
+    "Types" : [ "Intellectual", "MicroPrecision", "NanobotCompatible" ],
+    "WorkSpeedStat" : "ManualWorkSpeed"
+}

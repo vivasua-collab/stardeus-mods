@@ -1,0 +1,61 @@
+{
+    "QuestFlags" : [ "Main", "AutoAdd", "Unique" ],
+    "TitleKey" : "quest.main.reach.recovered.planet.title",
+    "DescKey" : "quest.main.reach.recovered.planet.desc",
+    "QuestProviders" : [
+        "ShipComputer"
+    ],
+    "AvailableWhen": [
+        "HasKilledTraitorShip"
+    ],
+    "SetOnComplete" : [
+        "ReachedRecoveredPlanetCoords"
+    ],
+    "Variables" : [
+        {
+            "Id" : "CapitalistPort",
+            "Type" : "SectorPOI",
+            "Config" : [
+                { "Key" : "CanBeVisited", "Bool" : false },
+                { "Key" : "MinRegionsAway", "Int" : 3 },
+                { "Key" : "MinRegionDifficulty", "Float" : 0.5 },
+                { "Key" : "MaxRegionDifficulty", "Float" : 0.7 },
+                { "Key" : "SectorTemplate", "String" : "Planet" },
+                { "Key" : "POIConfigId", "String" : "Port" },
+                { "Key" : "FactionId", "String" : "Capitalist" },
+                { "Key" : "Var_Start", "String" : null },
+                { "Key" : "SkipRegionsWithoutRelay", "Bool" : true },
+                { "Key" : "SharedVar_SavePOIId", "String" : "Main_CapitalistPortId" }
+            ]
+        }
+    ],
+    "Steps" : [
+        {
+            "Id" : "ReachPlanet",
+            "Type" : "GoToTargetSector",
+            "StepFlags" : [ "ActiveOnStart", "HideIfQuestUnaccepted" ],
+            "SetOnComplete" : [
+                "ReachedPlanet"
+            ],
+            "Config" : [
+                { "Key" : "Var_Target", "String" : "CapitalistPort" },
+                { "Key" : "MessageIcon", "String" : "Icons/Color/Computing" },
+                { "Key" : "MessageOnReach", "String" : "quest.main.on.reach.recovered.planet" }
+            ]
+        },
+        {
+            "Id" : "HailPort",
+            "Type" : "InteractWithSO",
+            "StepFlags" : [ "HideInactive", "CompletesQuest" ],
+            "TitleKey": "verb.communicate.with",
+            "ActivateWhen": [
+                "ReachedPlanet"
+            ],
+            "Config" : [
+                { "Key" : "Var_Target", "String" : "CapitalistPort" },
+                { "Key" : "MakeHabitable", "Bool" : true },
+                { "Key" : "OfferQuestId", "String" : "Main/EliminatePirateDen" }
+            ]
+        }
+    ]
+}

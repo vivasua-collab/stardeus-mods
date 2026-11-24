@@ -1,0 +1,26 @@
+{
+    "Layer" : "FreeEntities",
+    "ParentId" : "Obj/Equipment/BaseEquipment",
+    "Spawnable" : {
+        "Category": "Cosmetics",
+        "Chance" : 0.05,
+        "ChanceLocked" : 0.05,
+        "TierDiff" : 0
+    },
+    "Components" : [
+        {
+            "Component" : "StorableObj",
+            "Properties" : [
+                { "Key" : "Group", "String" : "Clothing" }
+            ]
+        },
+        { "Component" : "SafetyCheck" },
+        {
+            "Component" : "ObjGraphics",
+            "Properties" : [
+                { "Key" : "Graphic", "String": "Beings/Clothing/Human/ClownCostume01/ClownCostume01" },
+                { "Key" : "Scale", "Float" : 0.6 }
+            ]
+        }
+    ]
+}

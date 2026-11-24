@@ -1,0 +1,26 @@
+{
+    "Id" : "Weapon_ShredderCannon",
+    "DefId" : "Objects/Devices/ShredderCannon",
+    "Tier" : 1,
+    "ClassPoints" : 2,
+
+    // if it would only have one rotation:
+    // "ZoneSpriteId" : "Objects/Devices/ShredderCannon_ZoneView",
+
+    // if it has multiple rotations:
+    "ZoneSpriteId_D" : "Objects/Devices/ShredderCannon_ZoneView_D",
+    "ZoneSpriteId_L" : "Objects/Devices/ShredderCannon_ZoneView_L",
+    "ZoneSpriteId_U" : "Objects/Devices/ShredderCannon_ZoneView_U",
+    "ZoneSpriteId_R" : "Objects/Devices/ShredderCannon_ZoneView_R",
+
+    // "ZoneSpriteScale" : 0.5,
+
+    "HP" : 300,
+
+    // common device
+    "Rarity" : 1.0,
+
+    "TargetTypeId" : "ShipWeapon_Ballistic",
+    "EnergyCostPassive": 5,
+    "EnergyCostActive": 20
+}

@@ -1,0 +1,7 @@
+{
+    "Id" : "UI/Panel/InputBlock",
+    "AliasFor" : "UI/Main/Comp-1",
+    // "Hex" : "0F0619",
+    "Alpha" : 0.5,
+    "SkipAtlas" : true
+}

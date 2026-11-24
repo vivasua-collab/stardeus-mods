@@ -1,0 +1,8 @@
+{
+    "Id" : "AsteroidZone",
+    "Icon" : "Obj/Asteroids/Asteroid01",
+    "IsScannable" : true,
+    "MinDistanceBetweenSubObjects" : 7.5,
+    "MinExitDist" : 25,
+    "DistanceUnitsKey" : "units.km.thousands"
+}

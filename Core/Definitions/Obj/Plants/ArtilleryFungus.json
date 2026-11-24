@@ -1,0 +1,30 @@
+{
+    "Layer" : "FreeEntities",
+    "ParentId" : "Obj/Plants/BasePlant",
+    "Components" : [
+        {
+            "Component" : "ObjGraphics",
+            "Properties" : [
+                { "Key" : "Scale", "Float" : 0.5 },
+                { "Key" : "Shader", "String" : "Obj" },
+                { "Key" : "Graphic", "String": "Obj/Plants/ArtilleryFungus/ArtilleryFungus" }
+            ]
+        },
+        { "Component" : "Movable" },
+        {
+            "Component" : "Disposable",
+            "Properties" : [
+                { "Key" : "IsBiological", "Bool" : true }
+            ]
+        },
+        {
+            "Component" : "ArtilleryFungus",
+            "Properties" : [
+                { "Key" : "GrowthRate", "Float" : 0.15 },
+                { "Key" : "MaxTempCelsius", "Int" : 50 },
+                { "Key" : "Radius", "Float" : 3.0 }
+            ]
+
+        }
+    ]
+}

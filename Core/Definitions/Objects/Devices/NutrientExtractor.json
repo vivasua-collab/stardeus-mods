@@ -1,0 +1,171 @@
+{
+    "ToolPath" : "Production",
+    "Layer" : "Objects",
+    "ParentId" : "Objects/Devices/BaseDevice",
+    "Researchable" : {
+        "Prerequisites" : [
+            "Research/Production/BiochemicalExtraction"
+        ]
+    },
+    "Spawnable" : {
+        "Category": "Production",
+        "Chance" : 1.0,
+        "ChanceLocked" : 0.1
+    },
+    "Components" : [
+        {
+            "Component" : "TileTransform",
+            "Properties" : [
+                { "Key" : "Width", "Int" : 2 },
+                { "Key" : "Height", "Int" : 2 },
+                // { "Key" : "WorkSpot", "Vector2" : { "x" : 0, "y" : -1 } }
+                { "Key" : "OutPort", "Vector2" : { "x" : 1, "y" : -1 } },
+                { "Key" : "InPort", "Vector2" : { "x" : 0, "y" : -1 } }
+            ]
+        },
+        {
+            "Component" : "IndustrialEquipment",
+            "Properties" : [
+                { "Key" : "IsNoisy", "Bool" : true }
+            ]
+        },
+        {
+            "Component" : "Flammable",
+            "Properties" : [
+                { "Key" : "IgnitionTemperatureCelsius", "Int" : 400 },
+                { "Key" : "FireChance", "Float" : 0.5 },
+                { "Key" : "BaseExplosionLevel", "Int" : 2 },
+                { "Key" : "FlammabilityCurve", "String" : "DeviceLow" },
+                { "Key" : "ExplosivenessCurve", "String" : "DeviceLow" }
+            ]
+        },
+        {
+            "Component" : "TileGraphics",
+            "Properties" : [
+                { "Key" : "Type", "String": "Object" },
+                { "Key" : "Graphic", "String": "Objects/Devices/NutrientExtractor" },
+                { "Key" : "HasHeight", "Bool": true }
+            ]
+        },
+        {
+            "Component" : "TileAnimation",
+            "Properties" : [
+                {
+                    "Key": "Offsets",
+                    "Vector2Set": [
+                        // Down
+                        { "x": -0.38, "y": 0.72 },
+                        // Left
+                        { "x": 0.35, "y": 0.74 },
+                        // Up
+                        { "x": 0.38, "y": 0.12 },
+                        // Right
+                        { "x": -0.35, "y": 0.09 }
+                    ]
+                },
+                {
+                    "Key": "Rotations",
+                    "StringSet": [
+                        // Down
+                        "D",
+                        // Left
+                        "R",
+                        // Up
+                        "D",
+                        // Right
+                        "R"
+                    ]
+                },
+                { "Key" : "Size", "Vector2": { "x" : 0.69, "y" : 0.69 } },
+                { "Key" : "Direction", "Int" : 1 },
+                { "Key" : "BaseSprite", "String": "Objects/Devices/NutrientExtractor" },
+                { "Key" : "AnimSprite", "String" : "Objects/DeviceAnims/NutrientExtractor_Anim" },
+                // Since two devices use same animation (Mini oxygen pump and regular one)
+                // we need to copy the sprite, otherwise resizing it to a different scale will
+                // resize it for both devices
+                { "Key" : "CopyAnimSprite", "Bool" : true },
+                { "Key" : "Speed", "Float": 1.0 },
+                { "Key" : "SpriteOrder", "String": "AboveAnyTile" },
+                { "Key" : "FramePrefix", "String": "F" },
+                { "Key" : "NumFrames", "Int": 13 },
+                { "Key" : "NeedsEnergy", "Bool": true }
+            ]
+        },
+        {
+            "Component" : "HeatProducer",
+            "Properties" : [
+                { "Key" : "Rate", "Float" : 1 },
+                { "Key" : "Range", "Int" : 3 },
+                { "Key" : "CheckSameArea", "Bool" : true }
+            ]
+        },
+        {
+            "Component" : "AudioSource",
+            "Properties" : [
+                { "Key" : "AmbienceClip", "String" : "Devices/NutrientExtractorSFX" },
+                { "Key" : "Rolloff", "Vector2" : { "x" : 3, "y" : 12 } },
+                { "Key" : "IsLinkedToEnergy", "Bool" : true }
+            ]
+        },
+        {
+            "Component" : "Passability",
+            "Properties" : [
+                { "Key" : "IsPassable", "Bool" : false },
+                { "Key" : "IsWalkable", "Bool" : false },
+                { "Key" : "Difficulty", "Float" : 1 }
+            ]
+        },
+        { "Component" : "ExtraInfo" },
+        {
+            "Component" : "Disposer",
+            "Properties" : [
+                { "Key" : "HideBeing", "Bool" : true },
+                { "Key" : "HideUI", "Bool" : true },
+                { "Key" : "SlotUsePorts", "Bool" : true },
+                { "Key" : "RequiresSafeArea", "Bool" : false },
+                { "Key" : "Biological", "Bool" : true }
+            ]
+        },
+        {
+            "Component" : "VFX",
+            "Properties" : [
+                { "Key" : "Id", "String" : "VFXParticlesNutrientExtractor" },
+                { "Key" : "Offsets", "Vector2Set" : [
+                    { "x" : 0.38, "y" : 0.95 },
+                    { "x" : 0.23, "y" : 0.46 },
+                    { "x" : -0.37, "y" : 0.47 },
+                    { "x" : -0.23, "y" : 1.05 }
+                ] }
+            ]
+        },
+        {
+            "Component" : "ElectricNode",
+            "Properties" : [
+                { "Key" : "IsConsumer", "Bool" : true }
+            ]
+        },
+        {
+            "Component" : "WithFuse",
+            "Properties" : [
+                { "Key" : "MalfunctionWeight", "Float": 0.15 }
+            ]
+        },
+        {
+            "Component" : "Constructable",
+            "Properties" : [
+                { "Key" : "Placement", "String" : "OnFloor" },
+                { "Key" : "WorkAmount", "Int" : 1600 },
+                {
+                    "Key" : "Contents",
+                    "RawMaterials" : [
+                        { "TypeId" : "SteelPlate", "StackSize" : 8 },
+                        { "TypeId" : "Gears", "StackSize" : 4 },
+                        { "TypeId" : "Rubber", "StackSize" : 2 },
+                        { "TypeId" : "Transistor", "StackSize" : 3 },
+                        { "TypeId" : "CopperWire", "StackSize" : 1 }
+                    ]
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,14 @@
+{
+    "Type": "Upgrades",
+    "Ingredients": [
+        { "TypeId" : "Microchip", "StackSize" : 2 },
+        { "TypeId" : "OpticalFiber", "StackSize" : 1 },
+        { "TypeId" : "Plastic", "StackSize" : 1 },
+        { "TypeId" : "Transistor", "StackSize" : 5 },
+        { "TypeId" : "GoldWire", "StackSize" : 1 }
+    ],
+    "IgnoreMarket" : true,
+    "ProductDefId": "Obj/Upgrades/DiskCompressionUpgrade",
+    "ProductionTimeHours": 4.0,
+    "EnergyCost": 50.0
+}

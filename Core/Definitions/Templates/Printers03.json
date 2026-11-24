@@ -1,0 +1,91 @@
+{
+    "SkipToolListing": true,
+    "Layer": "Objects",
+    "Components": [
+        {
+            "Component": "TileTransform",
+            "Properties": [
+                {
+                    "Key": "Width",
+                    "Int": 7
+                },
+                {
+                    "Key": "Height",
+                    "Int": 5
+                }
+            ]
+        },
+        {
+            "Component": "Passability"
+        },
+        {
+            "Component": "TileGraphics",
+            "Properties": [
+                {
+                    "Key": "Graphic",
+                    "String": "Icons/White/Square"
+                }
+            ]
+        },
+        {
+            "Component": "Template",
+            "Properties": [
+                {
+                    "Key": "PlaceInTheMiddle",
+                    "Bool": true
+                },
+                {
+                    "Key": "Chance",
+                    "Float": 0.800000011920929
+                },
+                {
+                    "Key": "MinInstances",
+                    "Int": 1
+                },
+                {
+                    "Key": "MaxInstances",
+                    "Int": 5
+                },
+                {
+                    "Key": "Definitions",
+                    "StringSet": [
+                        "Objects/Devices/Assembler",
+                        "Objects/Devices/Assembler",
+                        "Objects/Devices/Assembler",
+                        "Objects/Devices/Assembler"
+                    ]
+                },
+                {
+                    "Key": "Positions",
+                    "Vector2Set": [
+                        {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        {
+                            "x": 1.0,
+                            "y": 3.0
+                        },
+                        {
+                            "x": 4.0,
+                            "y": 1.0
+                        },
+                        {
+                            "x": 4.0,
+                            "y": 3.0
+                        }
+                    ]
+                },
+                {
+                    "Key": "Rotations",
+                    "StringSet": [
+                        "D",
+                        "D",
+                        "D",
+                        "D"
+                    ]
+                }
+            ]
+        }
+    ]
+}

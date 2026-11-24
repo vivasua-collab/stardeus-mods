@@ -1,0 +1,12 @@
+{
+    "Id" : "WinchRangeUpgrade",
+    "DefId" : "Obj/Upgrades/WinchRangeUpgrade",
+    "IsComposite" : true,
+    "IsConsumedOnDestroy" : true,
+    "IconId" : "Obj/Upgrades/WinchRangeUpgrade",
+    "Property" : "Electronic",
+    "Group" : "Upgrade",
+    "GroupId" : "Upgrades",
+    "EnergyOutput" : 50.0,
+    "Rarity" : 1
+}

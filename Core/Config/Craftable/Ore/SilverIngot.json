@@ -1,0 +1,11 @@
+{
+    "Type" : "Ore",
+    "Ingredients" : [
+        { "TypeId" : "Silver", "StackSize" : 1 },
+        { "TypeId" : "Carbon", "StackSize" : 1 }
+    ],
+    "OutputMultiplier" : 1,
+    "ProductDefId" : "Obj/Materials/SilverIngot",
+    "ProductionTimeHours" : 3.0,
+    "EnergyCost" : 25
+}

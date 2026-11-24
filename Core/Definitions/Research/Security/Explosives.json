@@ -1,0 +1,26 @@
+{
+    "Id" : "Research/Security/Explosives",
+    "Tier" : 2,
+    "IsAbstract" : true,
+    "PreviewIcon" : "Icons/Color/Explosion",
+    "Researchable" : {
+        "IsTreeNode" : true,
+        "Prerequisites" : [
+            "Research/Security/Turrets"
+        ],
+        "DatoidCosts" : [
+            {
+                "TypeId" : "DatoidTech",
+                "StackSize" : 9
+            },
+            {
+                "TypeId" : "DatoidEnergy",
+                "StackSize" : 4
+            },
+            {
+                "TypeId" : "DatoidSynthetic",
+                "StackSize" : 2
+            }
+        ]
+    }
+}

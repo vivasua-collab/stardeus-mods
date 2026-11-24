@@ -1,0 +1,44 @@
+{
+    "QuestFlags" : [ "Tutorial", "AutoAdd", "Unique" ],
+    "TitleKey" : "quest.ProvideEntertainment",
+    "DescKey" : "quest.ProvideEntertainment.desc",
+    "QuestProviders" : [
+        "ShipComputer"
+    ],
+    // Last step of the colonist branch, after hygiene; Colonists guards against the branch
+    // continuing for a crew that lost its only colonist.
+    "Require": {
+        "Colonists" : 1
+    },
+    "AvailableWhen" : [
+        "ReadyForTutorialQuests",
+        "HasHygiene"
+    ],
+    "SetOnComplete" : [ "HasEntertainment" ],
+    "SetOnFail" : [ "HasEntertainment" ],
+    "Steps" : [
+        {
+            "Id": "ResearchTreadmill",
+            "Type" : "UnlockResearch",
+            "StepFlags" : [ "ActiveOnStart" ],
+            "Config" : [
+                { "Key" : "Research", "String" : "Research/Entertainment/Treadmill" }
+            ],
+            "SetOnComplete" : [
+                "UnlockedTreadmill"
+            ]
+        },
+        {
+            "Id": "HaveTreadmill",
+            "Type" : "HaveOnGrid",
+            "StepFlags" : [ "CompletesQuest"],
+            "Config" : [
+                { "Key" : "Definition", "String" : "Objects/Devices/Treadmill" },
+                { "Key" : "Count", "Int" : 1 }
+            ],
+            "ActivateWhen" : [
+                "UnlockedTreadmill"
+            ]
+        }
+    ]
+}

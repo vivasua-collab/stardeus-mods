@@ -1,0 +1,147 @@
+{
+    "ToolPath" : "Facilities",
+    "Layer" : "Objects",
+    "ParentId" : "Objects/Devices/BaseDevice",
+    "Researchable" : {
+        "Prerequisites" : [ "Research/Robotics/Maintenance" ]
+    },
+    "Spawnable" : {
+        "Category": "Robotics",
+        "Chance" : 1.0,
+        "ChanceLocked" : 0.5
+    },
+    "Components" : [
+        {
+            "Component" : "TileTransform",
+            "Properties" : [
+                { "Key" : "CoverPercent", "Int" : 0 },
+                { "Key" : "IsRotatable", "Bool" : true }
+            ]
+        },
+        {
+            "Component" : "IndustrialEquipment",
+            "Properties" : [
+                { "Key" : "IsNoisy", "Bool" : true }
+            ]
+        },
+        {
+            "Component" : "Flammable",
+            "Properties" : [
+                { "Key" : "IgnitionTemperatureCelsius", "Int" : 400 },
+                { "Key" : "FireChance", "Float" : 0.5 },
+                { "Key" : "FlammabilityCurve", "String" : "Device" }
+            ]
+        },
+        { "Component" : "RepairStation" },
+        {
+            "Component" : "ElectricNode",
+            "Properties" : [
+                { "Key" : "Particles", "String" : "RepairStationFX" },
+                { "Key" : "IsConsumer", "Bool" : true }
+            ]
+        },
+        {
+            "Component" : "WithFuse",
+            "Properties" : [
+                { "Key" : "MalfunctionWeight", "Float": 0.15 }
+            ]
+        },
+        {
+            "Component" : "AudioSource",
+            "Properties" : [
+                { "Key" : "AmbienceClip", "String" : "Devices/RepairStationSFX" },
+                { "Key" : "IsLinkedToEnergy", "Bool" : true },
+                { "Key" : "Rolloff", "Vector2" : { "x" : 3, "y" : 12 } }
+            ]
+        },
+        {
+            "Component" : "TileGraphics",
+            "Properties" : [
+                { "Key" : "Type", "String": "Object" },
+                { "Key" : "HasHeight", "Bool": true },
+                { "Key" : "Graphic", "String": "Objects/Devices/RepairStation" }
+            ]
+        },
+        {
+            "Component" : "TileAnimation",
+            "Properties" : [
+                {
+                    "Key": "Offsets",
+                    "Vector2Set": [
+                        // Down
+                        { "x": 0.0, "y": 0.42 },
+                        // Left
+                        { "x": -0.047, "y": 0.47 },
+                        // Up
+                        { "x": 0.0, "y": 0.52 },
+                        // Right
+                        { "x": 0.047, "y": 0.47 }
+                    ]
+                },
+                {
+                    "Key": "Rotations",
+                    "StringSet": [
+                        // Down
+                        "D",
+                        // Left
+                        "L",
+                        // Up
+                        "U",
+                        // Right
+                        "R"
+                    ]
+                },
+                {
+                    "Key": "SpriteOrders",
+                    "StringSet": [
+                        // Down
+                        "AboveAnyTile",
+                        // Left
+                        "AboveAnyTile",
+                        // Up
+                        "AboveAnyTile",
+                        // Right
+                        "AboveAnyTile"
+                    ]
+                },
+                { "Key" : "Size", "Vector2": { "x" : 1.0, "y" : 1.0 } },
+                { "Key" : "Direction", "Int" : 1 },
+                { "Key" : "BaseSprite", "String": "Objects/Devices/RepairStation_Base" },
+                { "Key" : "AnimSprite", "String" : "Objects/DeviceAnims/RepairStation_Anim" },
+                // Since two devices use same animation (Mini oxygen pump and regular one)
+                // we need to copy the sprite, otherwise resizing it to a different scale will
+                // resize it for both devices
+                { "Key" : "CopyAnimSprite", "Bool" : true },
+                { "Key" : "Speed", "Float": 1.0 },
+                { "Key" : "FramePrefix", "String": "F" },
+                { "Key" : "NumFrames", "Int": 24 },
+                { "Key" : "PingPong", "Bool": true },
+                { "Key" : "PingPongStillFrames", "Int": 8 },
+                { "Key" : "NeedsEnergy", "Bool": true }
+            ]
+        },
+        {
+            "Component" : "Passability",
+            "Properties" : [
+                { "Key" : "IsPassable", "Bool" : true },
+                { "Key" : "IsWalkable", "Bool" : false },
+                { "Key" : "Difficulty", "Float" : 0.5 }
+            ]
+        },
+        {
+            "Component" : "Constructable",
+            "Properties" : [
+                { "Key" : "WorkAmount", "Int" : 800 },
+                {
+                    "Key" : "Contents",
+                    "RawMaterials" : [
+                        { "TypeId" : "SteelPlate", "StackSize" : 2 },
+                        { "TypeId" : "CopperWire", "StackSize" : 1 },
+                        { "TypeId" : "Microchip", "StackSize" : 1 },
+                        { "TypeId" : "Gears", "StackSize" : 3 }
+                    ]
+                }
+            ]
+        }
+    ]
+}

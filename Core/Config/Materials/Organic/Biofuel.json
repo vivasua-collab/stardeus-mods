@@ -1,0 +1,12 @@
+{
+    "Id" : "Biofuel",
+    "IsComposite" : true,
+    "IsConsumedOnConstruct" : true,
+    "IconId" : "Obj/Materials/Biofuel",
+    "Property" : "Liquid",
+    "GroupId" : "Components",
+    "EnergyOutput" : 1000.0,
+    "Rarity" : 10,
+    "ExplosionLevel" : 4,
+    "ExplosivenessCurveId" : "Extreme"
+}

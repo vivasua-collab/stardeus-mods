@@ -1,0 +1,8 @@
+{
+    "Id" : "Text/ErrorMessage",
+
+    "Color" : "UI/Text/Yellow",
+    "Alpha" : 1,
+
+    "TextFontSize" : 28
+}

@@ -1,0 +1,22 @@
+{
+    "Id" : "Research/Security/Firearms",
+    "Tier" : 2,
+    "IsAbstract" : true,
+    "PreviewIcon" : "Obj/Weapons/Handgun01/Handgun01",
+    "Researchable" : {
+        "IsTreeNode" : true,
+        "Prerequisites" : [
+            "Research/Security/ImprovisedArms"
+        ],
+        "DatoidCosts" : [
+            {
+                "TypeId" : "DatoidTech",
+                "StackSize" : 12
+            },
+            {
+                "TypeId" : "DatoidSynthetic",
+                "StackSize" : 3
+            }
+        ]
+    }
+}

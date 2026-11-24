@@ -1,0 +1,43 @@
+{
+    "BuildGroup" : "Chair",
+    "Layer" : "Objects",
+    "ParentId" : "Objects/Furniture/BaseChair",
+    "Spawnable" : {
+        "Category": "Furniture",
+        "Chance" : 1.0,
+        "ChanceLocked" : 0.5,
+        "Quantity" : {
+            "Component" : "PureRandom",
+            "Properties" : [
+                { "Key" : "MaxQuantity", "Int" : 2 },
+                { "Key" : "MaxQuantityChance", "Float" : 0.1 }
+            ]
+        }
+    },
+    "Components" : [
+        {
+            "Component" : "TileGraphics",
+            "Properties" : [
+                { "Key" : "Graphic", "String": "Objects/Furniture/ChairWood" }
+            ]
+        },
+        {
+            "Component" : "Flammable",
+            "Properties" : [
+                { "Key" : "FireChance", "Float" : 1.5 }
+            ]
+        },
+        {
+            "Component" : "Constructable",
+            "Properties" : [
+                { "Key" : "WorkAmount", "Int" : 225 },
+                {
+                    "Key" : "Contents",
+                    "RawMaterials" : [
+                        { "TypeId" : "Wood", "StackSize" : 1 }
+                    ]
+                }
+            ]
+        }
+    ]
+}

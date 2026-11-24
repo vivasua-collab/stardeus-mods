@@ -1,0 +1,96 @@
+{
+    "ToolPath" : "SpaceTravel",
+    "Layer" : "Objects",
+    "ParentId" : "BaseTile",
+    "SkipToolListing" : true,
+    "Researchable" : {
+        "Prerequisites" : [ ]
+    },
+    "Components" : [
+        { "Component" : "Damageable" },
+        {
+            "Component" : "TileTransform",
+            "Properties" : [
+                { "Key" : "Width", "Int" : 2 },
+                { "Key" : "Height", "Int" : 2 },
+                { "Key" : "InPort", "Vector2" : { "x" : 0, "y" : 0 } },
+                { "Key" : "OutPort", "Vector2" : { "x" : 0, "y" : 0 } },
+                { "Key" : "IsRotatable", "Bool" : true }
+            ]
+        },
+        {
+            "Component" : "Flammable",
+            "Properties" : [
+                { "Key" : "IsTemperatureResistant", "Bool" : true }
+            ]
+        },
+        {
+            "Component" : "TileAnimation",
+            "Properties" : [
+                { "Key" : "Offset", "Vector2": { "x" : 0.0, "y" : 0.3 } },
+                { "Key" : "Size", "Vector2": { "x" : 1.25, "y" : 1.25 } },
+                { "Key" : "Direction", "Int" : 1 },
+                { "Key" : "BaseSprite", "String" : null },
+                { "Key" : "AnimSprite", "String" : "Objects/DeviceAnims/BreachCapsule_Drill_Anim" },
+                { "Key" : "Speed", "Float": 1.0 },
+                { "Key" : "FramePrefix", "String": "R" },
+                { "Key" : "SpriteOrder", "String" : "Obj" },
+                // BreachCapsule comp will be controlling this
+                { "Key" : "AutoRegister", "Bool": false },
+                { "Key" : "NumFrames", "Int": 8 },
+                { "Key" : "NeedsEnergy", "Bool": false }
+            ]
+        },
+        {
+            "Component" : "LightSource",
+            "Properties" : [
+                { "Key" : "Radius", "Float" : 5 },
+                { "Key" : "NeedsEnergy", "Bool" : false },
+                { "Key" : "Color", "IntSet" : [ 224, 31, 31, 192 ] }
+            ]
+        },
+        { "Component" : "BreachCapsule" },
+        {
+            "Component" : "MatStorage",
+            "Properties" : [
+                { "Key" : "IsPublic", "Bool" : false },
+                { "Key" : "MaxCapacity", "Int": 100 },
+                { "Key" : "DisableExplosivenessProvider", "Bool" : true }
+            ]
+        },
+        {
+            "Component" : "TileGraphics",
+            "Properties" : [
+                { "Key" : "Graphic", "String": "Objects/Devices/BreachCapsule" },
+                { "Key" : "RotateGraphic", "Bool" : false },
+                { "Key" : "HasHeight", "Bool" : false }
+            ]
+        },
+        {
+            "Component" : "Passability",
+            "Properties" : [
+                { "Key" : "IsPassable", "Bool" : true },
+                { "Key" : "IsWalkable", "Bool" : true },
+                { "Key" : "Difficulty", "Float" : 0.3 }
+            ]
+        },
+        {
+            "Component" : "Constructable",
+            "Properties" : [
+                { "Key" : "WorkAmount", "Int" : 2400 },
+                {
+                    "Key" : "Contents",
+                    "RawMaterials" : [
+                        { "TypeId" : "TitaniumPlate", "StackSize" : 15 },
+                        { "TypeId" : "LeadPlate", "StackSize" : 3 },
+                        { "TypeId" : "GoldWire", "StackSize" : 15 },
+                        { "TypeId" : "Plastic", "StackSize" : 10 },
+                        { "TypeId" : "Rubber", "StackSize" : 5 },
+                        { "TypeId" : "Microchip2", "StackSize" : 1 },
+                        { "TypeId" : "OpticalFiber", "StackSize" : 5 }
+                    ]
+                }
+            ]
+        }
+    ]
+}

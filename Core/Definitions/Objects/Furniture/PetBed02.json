@@ -1,0 +1,82 @@
+{
+    "BuildGroup" : "PetBed",
+    "ToolPath" : "Furniture/Beds",
+    "Layer" : "Objects",
+    "NameKey" : "objects.furniture.petbed",
+    "ParentId" : "Objects/Furniture/BaseFurniture",
+    "Researchable" : {
+        "Prerequisites" : [ "Research/Habitation/Furniture" ]
+    },
+    "Spawnable" : {
+        "Category": "Comfort",
+        "Chance" : 1.0,
+        "ChanceLocked" : 0.5
+    },
+    "Components" : [
+        {
+            "Component" : "TileTransform",
+            "Properties" : [
+                { "Key" : "CoverPercent", "Int" : 0 }
+            ]
+        },
+        { "Component" : "SafetyCheck" },
+        {
+            "Component" : "Bed",
+            "Properties" : [
+                { "Key" : "Slots", "Int" : 1 },
+                { "Key" : "ShowOwnerNames", "Bool" : true },
+                { "Key" : "ShowPetNames", "Bool" : true },
+                { "Key" : "OwnerNameFontSize", "Float" : 1.25 },
+                { "Key" : "SlotFlags_0", "StringSet" : [ "Animal", "Pet"] },
+                { "Key" : "SlotNameKey_0", "String" : "bed.slot.pet" },
+                { "Key" : "SlotHidesBody_0", "Bool" : false },
+                {
+                    "Key" : "SlotNameOffset_D_0",
+                    "Vector2" : { "x" : 0, "y" : -0.4 }
+                },
+                {
+                    "Key" : "SlotNameOffset_U_0",
+                    "Vector2" : { "x" : 0, "y" : -0.4 }
+                },
+                {
+                    "Key" : "SlotNameOffset_L_0",
+                    "Vector2" : { "x" : 0, "y" : -0.5 }
+                },
+                {
+                    "Key" : "SlotNameOffset_R_0",
+                    "Vector2" : { "x" : 0, "y" : -0.5 }
+                },
+                { "Key" : "SlotNameRotation_D_0", "Float" : 0 },
+                { "Key" : "SlotNameRotation_U_0", "Float" : 0 },
+                { "Key" : "SlotNameRotation_L_0", "Float" : 0 },
+                { "Key" : "SlotNameRotation_R_0", "Float" : 0 }
+            ]
+        },
+        {
+            "Component" : "Passability",
+            "Properties" : [
+                { "Key" : "Difficulty", "Float" : 0.7 }
+            ]
+        },
+        {
+            "Component" : "TileGraphics",
+            "Properties" : [
+                { "Key" : "Type", "String": "Object" },
+                { "Key" : "Graphic", "String": "Objects/Furniture/PetBed02" }
+            ]
+        },
+        {
+            "Component" : "Constructable",
+            "Properties" : [
+                { "Key" : "WorkAmount", "Int" : 225 },
+                {
+                    "Key" : "Contents",
+                    "RawMaterials" : [
+                        { "TypeId" : "Leather", "StackSize" : 5 },
+                        { "TypeId" : "CarbonFiber", "StackSize" : 1 }
+                    ]
+                }
+            ]
+        }
+    ]
+}

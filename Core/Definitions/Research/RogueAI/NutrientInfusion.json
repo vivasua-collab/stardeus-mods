@@ -1,0 +1,26 @@
+{
+    "Id" : "Research/RogueAI/NutrientInfusion",
+    "Tier" : 3,
+    "IsAbstract" : true,
+    "PreviewIcon" : "Icons/Color/Feeding",
+    "Researchable" : {
+        "IsTreeNode" : true,
+        "Prerequisites" : [
+            "Research/RogueAI/Root"
+        ],
+        "DatoidCosts" : [
+            {
+                "TypeId" : "DatoidPhyto",
+                "StackSize" : 15
+            },
+            {
+                "TypeId" : "DatoidBiotic",
+                "StackSize" : 10
+            },
+            {
+                "TypeId" : "DatoidSynthetic",
+                "StackSize" : 6
+            }
+        ]
+    }
+}

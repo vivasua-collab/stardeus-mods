@@ -1,0 +1,15 @@
+{
+    "Id" : "Mercenary",
+    "Species" : [ "Human" ],
+    "IncompatibleTraitIds" : [ "Pacifist" ],
+    "AgePhaseIds" : [ "MidLife", "Retirement" ],
+    "LovesJobTypes" : [ "Shooting" ],
+    "RoleTypes" : [ "Dumb", "Rich" ],
+    "BodyTypes" : "MF",
+    "AdjustsSkills" : [
+        {
+            "JobId" : "Shooting",
+            "Adjustment" : 4
+        }
+    ]
+}

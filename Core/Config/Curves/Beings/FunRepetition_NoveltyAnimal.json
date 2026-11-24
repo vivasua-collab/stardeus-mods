@@ -1,0 +1,15 @@
+{
+    // Same as Beings/FunRepetition_Novelty with uses scaled by 1.5, for pets.
+    // Dogs and pigs can only reach 3 strong fun sources, so they tolerate more repetition.
+    // Last X must stay <= FunMemory.MaxTrackedUsesPerSource / 2
+    "FloatSet" : [
+        0.0, 1.0,
+        2.25, 1.0,
+        3.75, 0.85,
+        5.25, 0.55,
+        6.75, 0.33,
+        9.0, 0.18,
+        13.5, 0.08,
+        18.0, 0.05
+    ]
+}

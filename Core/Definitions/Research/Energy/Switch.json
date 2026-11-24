@@ -1,0 +1,22 @@
+{
+    "Id" : "Research/Energy/Switch",
+    "Tier" : 2,
+    "IsAbstract" : true,
+    "PreviewIcon" : "Icons/Color/Operate",
+    "Researchable" : {
+        "IsTreeNode" : true,
+        "Prerequisites" : [
+            "Research/Energy/ConnectorImproved"
+        ],
+        "DatoidCosts" : [
+            {
+                "TypeId" : "DatoidBasic",
+                "StackSize" : 10
+            },
+            {
+                "TypeId" : "DatoidTech",
+                "StackSize" : 4
+            }
+        ]
+    }
+}

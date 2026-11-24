@@ -1,0 +1,13 @@
+{
+    "EventId": "ColonistExperimentCrawlerChip",
+    "Points": 20,
+    "OutcomeType": "Positive",
+    "EventFlags": [
+        "ColonistRequest"
+    ],
+    "MinRepeatDelayDays": 900,
+    "Require" : {
+        "Days" : 180,
+        "Colonists" : 3
+    }
+}

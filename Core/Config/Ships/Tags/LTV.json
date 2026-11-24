@@ -1,0 +1,20 @@
+// LTV: Logistics Transport Vessel
+{
+    "ChanceWillTrade" : 1.0,
+    "CompatibleFactions" : [
+        "Player",
+        "OldEarth",
+        "Adventurer",
+        "Scavenger",
+        "Capitalist"
+    ],
+    "CompatibleClasses" : [
+        "Frigate",
+        "Corvette",
+        "Cruiser",
+        "Carrier",
+        "Unclassified"
+    ],
+    "MinOffensiveness" : 0.0,
+    "MaxOffensiveness" : 0.5
+}

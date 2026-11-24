@@ -1,0 +1,31 @@
+{
+    "Layer" : "FreeEntities",
+    "ParentId" : "Obj/Plants/BasePlant",
+    "Researchable" : {
+        "Prerequisites" : [ "Research/LifeSupport/Coffee" ]
+    },
+    "Components" : [
+        {
+            "Component" : "ObjGraphics",
+            "Properties" : [
+                { "Key" : "Graphic", "String": "Obj/Plants/CoffeeTree/CoffeeTree" }
+            ]
+        },
+        {
+            "Component" : "Plant",
+            "Properties" : [
+                { "Key" : "Size", "String" : "Small" },
+                {
+                    "Key" : "HarvestOutput",
+                    "RawMaterials" : [
+                        { "TypeId" : "CoffeeBeans", "StackSize" : 3 }
+                    ]
+                },
+                { "Key" : "WaterUsePerDay", "Float" : 0.15 },
+                { "Key" : "WorkAmount", "Int" : 50 },
+                { "Key" : "GrowthRate", "Float" : 0.75 },
+                { "Key" : "GrowthAfterHarvest", "Float" : 0.51 }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "Id" : "CollectingRust",
+    "Species" : [ "Robot", "Drone", "Carrier", "Orbotron", "Sentry" ],
+    "AdjustsSkills" : [
+        {
+            "JobId" : "Construction",
+            "Adjustment" : -1
+        }
+    ]
+}

@@ -1,0 +1,35 @@
+{
+    "IsAbstract" : true,
+    "ResearchValue" : 1,
+    "Layer" : "FreeEntities",
+    "Components" : [
+        { "Component" : "Motion" },
+        { "Component" : "BeingGraphics" },
+        { "Component" : "BeingLooks" },
+        { "Component" : "Body" },
+        { "Component" : "Conditions" },
+        { "Component" : "Needs" },
+        { "Component" : "Bonds" },
+        { "Component" : "Persona" },
+        {
+            "Component" : "Flammable",
+            "Properties" : [
+                { "Key" : "SpreadIntoChance", "Float" : 0.05 },
+                { "Key" : "FireChance", "Float" : 0.05 }
+            ]
+        },
+        { "Component" : "MentalHealth" },
+        { "Component" : "Movable" },
+        { "Component" : "DirectControl" },
+        { "Component" : "StorableBeing" },
+        { "Component" : "AIAgent" },
+        { "Component" : "CombatUnit" },
+        { "Component" : "Inventory" },
+        {
+            "Component" : "BeingNameText" ,
+            "Properties" : [
+                { "Key" : "Offset", "Vector2" : { "x" : 0, "y" : -0.25 } }
+            ]
+        }
+    ]
+}

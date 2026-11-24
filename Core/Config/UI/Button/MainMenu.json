@@ -1,0 +1,17 @@
+{
+    "Id" : "Button/MainMenu",
+
+    "ChildrenKeys" : [
+        "Panel",
+        "Selectable",
+        "Text",
+        "ActiveOverlay"
+    ],
+
+    "ChildrenIds" : [
+        "Panel/ColorlessPopup",
+        "Selectable/MainMenuButton",
+        "Text/MainMenuButton",
+        "Overlay/MainMenuButton"
+    ]
+}

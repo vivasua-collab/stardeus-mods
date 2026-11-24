@@ -1,0 +1,143 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Stardeus ColonistFate",
+  "description": "Generated from C# by Game/Generate JSON Schemas, do not edit by hand",
+  "$ref": "#/$defs/ColonistFate",
+  "$defs": {
+    "ColonistFate": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "Id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "RemoveColonist": {
+          "type": "boolean"
+        },
+        "IsDead": {
+          "type": "boolean"
+        },
+        "IsForSpecies": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "ExcludeRobots": {
+          "type": "boolean"
+        },
+        "ExcludeBiologicals": {
+          "type": "boolean"
+        },
+        "ExcludePets": {
+          "type": "boolean"
+        },
+        "ExcludeNonPets": {
+          "type": "boolean"
+        },
+        "ExcludeNotInStasis": {
+          "type": "boolean"
+        },
+        "IncludeInStasis": {
+          "type": "boolean"
+        },
+        "Chance": {
+          "type": "number"
+        },
+        "Max": {
+          "type": "integer"
+        },
+        "GenerateName": {
+          "type": "boolean"
+        },
+        "NameMaxWords": {
+          "type": "integer"
+        },
+        "CustomNames": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "NameChanceWeights": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "number"
+          }
+        },
+        "NameParts": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "$ref": "#/$defs/NamePartDef"
+          }
+        },
+        "AffectedInStasis": {
+          "type": "integer"
+        },
+        "AffectedNames": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "NamePartDef": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "NonUnique": {
+          "type": "boolean"
+        },
+        "Type": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "Paths": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "Chances": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "number"
+          }
+        }
+      },
+      "additionalProperties": false
+    }
+  }
+}

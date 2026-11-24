@@ -1,0 +1,36 @@
+{
+    "Id" : "Research/LifeSupport/OceanGeneration",
+    "Tier" : 6,
+    "IsAbstract" : true,
+    "PreviewIcon" : "Icons/Color/Terraform",
+    "NameKey" : "research.oceangeneration",
+    "Researchable" : {
+        "IsTreeNode" : true,
+        "IsDiscoverable" : true,
+        "Prerequisites" : [
+            "Research/LifeSupport/CoolingAdvanced"
+        ],
+        "DatoidCosts" : [
+            {
+                "TypeId" : "DatoidBasic",
+                "StackSize" : 126
+            },
+            {
+                "TypeId" : "DatoidPhyto",
+                "StackSize" : 51
+            },
+            {
+                "TypeId" : "DatoidBiotic",
+                "StackSize" : 36
+            },
+            {
+                "TypeId" : "DatoidSynthetic",
+                "StackSize" : 75
+            },
+            {
+                "TypeId" : "DatoidQuantum",
+                "StackSize" : 14
+            }
+        ]
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "Id" : "Researcher",
+    "LovesJobTypes" : [ "Research" ],
+    "Species" : [ "Human" ],
+    "AgePhaseIds" : [ "MidLife", "Retirement" ],
+    "RoleTypes" : [ "Smart", "Rich" ],
+    "NotAfterRoles" : [ "Nanny" ],
+    "AdjustsSkills" : [
+        {
+            "JobId" : "Research",
+            "Adjustment" : 6
+        }
+    ]
+}

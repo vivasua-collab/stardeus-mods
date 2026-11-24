@@ -1,0 +1,10 @@
+{
+    "Type": "Weave",
+    "Ingredients": [
+        { "TypeId" : "Carbon", "StackSize" : 1 }
+    ],
+    "OutputMultiplier" : 2,
+    "ProductDefId": "Obj/Materials/CarbonFiber",
+    "ProductionTimeHours": 2.0,
+    "EnergyCost": 5.0
+}

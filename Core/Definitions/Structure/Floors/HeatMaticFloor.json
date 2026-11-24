@@ -1,0 +1,84 @@
+{
+    "ToolPath" : "Atmosphere",
+    "Layer" : "Floor",
+    "ParentId" : "Structure/Floors/Floor01",
+    "Researchable" : {
+        "Prerequisites" : [
+            "Research/LifeSupport/HeatingAdvanced"
+        ]
+    },
+    "Components" : [
+        {
+            "Component" : "TileTransform",
+            "Properties" : [
+                { "Key" : "PlacementType", "String": "Single" }
+            ]
+        },
+        {
+            "Component" : "TileGraphics",
+            "Properties" : [
+                {
+                    "Key" : "Graphic",
+                    "String": "Structure/Floors/HeatMaticFloor"
+                }
+            ]
+        },
+        {
+            "Component" : "Flammable",
+            "Properties" : [
+                { "Key" : "FireChance", "Float" : 0.6 },
+                { "Key" : "SpreadIntoChance", "Float" : 0.35 },
+                { "Key" : "BaseExplosionLevel", "Int" : 2 },
+                { "Key" : "FlammabilityCurve", "String" : "DeviceHigh" },
+                { "Key" : "ExplosivenessCurve", "String" : "Device" }
+            ]
+        },
+        {
+            "Component" : "Heater",
+            "Properties" : [
+                { "Key" : "Rate", "Float" : 500 },
+                { "Key" : "Range", "Int" : 3 },
+                { "Key" : "DisplayRange", "Int" : 11 },
+                { "Key" : "Effectiveness", "Int" : 3 },
+                { "Key" : "EnergyCost", "Float" : 10 }
+            ]
+        },
+        {
+            "Component" : "ElectricNode",
+            "Properties" : [
+                { "Key" : "Particles", "String" : "HeaterFX" },
+                { "Key" : "IsConsumer", "Bool" : true }
+            ]
+        },
+        { "Component" : "Upgrades" },
+        {
+            "Component" : "WithFuse",
+            "Properties" : [
+                { "Key" : "MalfunctionWeight", "Float": 0.3 }
+            ]
+        },
+        {
+            "Component" : "OutdoorsCheck",
+            "Properties" : [
+                { "Key" : "MustBeIndoors", "Bool" : true }
+            ]
+        },
+        {
+            "Component" : "Constructable",
+            "Properties" : [
+                { "Key" : "CanReplaceSameLayer", "Bool": true },
+                { "Key" : "CanDragRow", "Bool": false },
+                { "Key" : "WorkAmount", "Int" : 1600 },
+                {
+                    "Key" : "Contents",
+                    "RawMaterials" : [
+                        { "TypeId" : "TitaniumPlate", "StackSize" : 2 },
+                        { "TypeId" : "CopperWire", "StackSize" : 2 },
+                        { "TypeId" : "Microchip", "StackSize" : 1 },
+                        { "TypeId" : "Rubber", "StackSize" : 1 }
+                    ]
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,6 @@
+{
+    "Id" : "UI/Panel/Accent",
+    "AliasFor" : "UI/Main/Primary",
+    "Alpha" : 0.95,
+    "SkipAtlas" : true
+}

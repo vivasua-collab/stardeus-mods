@@ -1,0 +1,506 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Stardeus HullStyleDef",
+  "description": "Generated from C# by Game/Generate JSON Schemas, do not edit by hand",
+  "$ref": "#/$defs/HullStyleDef",
+  "$defs": {
+    "HullStyleDef": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "Roof": {
+          "$ref": "#/$defs/HullStyleDef.RoofLook"
+        },
+        "Slope": {
+          "$ref": "#/$defs/HullStyleDef.SlopeLook"
+        },
+        "Panels": {
+          "$ref": "#/$defs/HullStyleDef.PanelLook"
+        },
+        "Motifs": {
+          "$ref": "#/$defs/HullStyleDef.MotifLook"
+        },
+        "Details": {
+          "$ref": "#/$defs/HullStyleDef.DetailLook"
+        }
+      },
+      "additionalProperties": false
+    },
+    "HullStyleDef.DetailLook": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "Clearance": {
+          "type": "number"
+        },
+        "Hatch": {
+          "$ref": "#/$defs/HullStyleDef.PieceLook"
+        },
+        "Hub": {
+          "$ref": "#/$defs/HullStyleDef.PieceLook"
+        },
+        "Grilles": {
+          "$ref": "#/$defs/HullStyleDef.GrilleLook"
+        },
+        "Vent": {
+          "$ref": "#/$defs/HullStyleDef.PieceLook"
+        },
+        "Lights": {
+          "$ref": "#/$defs/HullStyleDef.LightLook"
+        }
+      },
+      "additionalProperties": false
+    },
+    "HullStyleDef.FishboneLook": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "NarrowBelow": {
+          "type": "number"
+        },
+        "SpineHalfWidths": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "number"
+          }
+        },
+        "RibGaps": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "number"
+          }
+        },
+        "HalfOffsetChance": {
+          "type": "number"
+        },
+        "CenterLineChance": {
+          "type": "number"
+        },
+        "RibAngle": {
+          "type": "number"
+        }
+      },
+      "additionalProperties": false
+    },
+    "HullStyleDef.FrameLook": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "NarrowBelow": {
+          "type": "number"
+        },
+        "Gaps": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "number"
+          }
+        },
+        "NarrowGap": {
+          "type": "number"
+        },
+        "CrossChance": {
+          "type": "number"
+        },
+        "SecondCrossChance": {
+          "type": "number"
+        }
+      },
+      "additionalProperties": false
+    },
+    "HullStyleDef.GrilleLook": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "Count": {
+          "type": "integer"
+        },
+        "BigRoomCount": {
+          "type": "integer"
+        },
+        "BigRoomTiles": {
+          "type": "integer"
+        },
+        "Size": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "integer"
+          }
+        },
+        "Spacing": {
+          "type": "integer"
+        }
+      },
+      "additionalProperties": false
+    },
+    "HullStyleDef.HexesLook": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "HeightShare": {
+          "type": "number"
+        },
+        "Gap": {
+          "type": "number"
+        },
+        "MaxCount": {
+          "type": "integer"
+        },
+        "NestChance": {
+          "type": "number"
+        },
+        "NestInset": {
+          "type": "number"
+        },
+        "VerticalsChance": {
+          "type": "number"
+        },
+        "Angle": {
+          "type": "number"
+        }
+      },
+      "additionalProperties": false
+    },
+    "HullStyleDef.LightLook": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "Every": {
+          "type": "integer"
+        },
+        "Height": {
+          "type": "number"
+        },
+        "Size": {
+          "type": "number"
+        },
+        "Glow": {
+          "type": "number"
+        }
+      },
+      "additionalProperties": false
+    },
+    "HullStyleDef.MotifLook": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "Weights": {
+          "$ref": "#/$defs/HullStyleDef.MotifWeights"
+        },
+        "MinSide": {
+          "type": "number"
+        },
+        "MinArea": {
+          "type": "number"
+        },
+        "Plates": {
+          "$ref": "#/$defs/HullStyleDef.PlatesLook"
+        },
+        "Hexes": {
+          "$ref": "#/$defs/HullStyleDef.HexesLook"
+        },
+        "Fishbone": {
+          "$ref": "#/$defs/HullStyleDef.FishboneLook"
+        },
+        "Frame": {
+          "$ref": "#/$defs/HullStyleDef.FrameLook"
+        }
+      },
+      "additionalProperties": false
+    },
+    "HullStyleDef.MotifWeights": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "Plates": {
+          "type": "number"
+        },
+        "Hexes": {
+          "type": "number"
+        },
+        "Fishbone": {
+          "type": "number"
+        },
+        "Frame": {
+          "type": "number"
+        }
+      },
+      "additionalProperties": false
+    },
+    "HullStyleDef.PanelLook": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "MaxArea": {
+          "type": "number"
+        },
+        "MaxSpan": {
+          "type": "number"
+        },
+        "MinSplitSide": {
+          "type": "number"
+        },
+        "SplitJitter": {
+          "type": "number"
+        },
+        "ChamferChance": {
+          "type": "number"
+        },
+        "ChamferSizes": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "number"
+          }
+        },
+        "ChamferAngle": {
+          "type": "number"
+        },
+        "RaisedChance": {
+          "type": "number"
+        },
+        "RecessedChance": {
+          "type": "number"
+        },
+        "MinShapedArea": {
+          "type": "number"
+        },
+        "BevelWidth": {
+          "type": "number"
+        },
+        "BevelMinPx": {
+          "type": "number"
+        },
+        "BevelLight": {
+          "type": "number"
+        },
+        "FlatLip": {
+          "type": "number"
+        },
+        "PanelTone": {
+          "type": "number"
+        },
+        "TypeTone": {
+          "type": "number"
+        },
+        "SeamInk": {
+          "type": "number"
+        },
+        "SeamInkWidth": {
+          "type": "number"
+        }
+      },
+      "additionalProperties": false
+    },
+    "HullStyleDef.PieceLook": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "MinRoomTiles": {
+          "type": "integer"
+        },
+        "Size": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "integer"
+          }
+        },
+        "Spacing": {
+          "type": "integer"
+        }
+      },
+      "additionalProperties": false
+    },
+    "HullStyleDef.PlatesLook": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "NarrowBelow": {
+          "type": "number"
+        },
+        "BandHalfWidths": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "number"
+          }
+        },
+        "Steps": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "number"
+          }
+        },
+        "StepRoom": {
+          "type": "number"
+        },
+        "StepReach": {
+          "type": "number"
+        },
+        "PeakChance": {
+          "type": "number"
+        },
+        "PeakMax": {
+          "type": "number"
+        },
+        "PeakAngle": {
+          "type": "number"
+        },
+        "CrossChance": {
+          "type": "number"
+        },
+        "CornerCutChance": {
+          "type": "number"
+        },
+        "CornerCutSizes": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "number"
+          }
+        },
+        "CornerCutAngle": {
+          "type": "number"
+        }
+      },
+      "additionalProperties": false
+    },
+    "HullStyleDef.RoofLook": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "Rim": {
+          "type": "number"
+        },
+        "Inset": {
+          "type": "number"
+        },
+        "MaxPillarTiles": {
+          "type": "integer"
+        },
+        "SurfaceTiles": {
+          "type": "number"
+        },
+        "TopTone": {
+          "type": "number"
+        },
+        "Lift": {
+          "type": "number"
+        },
+        "LightDir": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "number"
+          }
+        },
+        "CreaseShadow": {
+          "type": "number"
+        },
+        "CreaseShadowWidth": {
+          "type": "number"
+        },
+        "InsetInk": {
+          "type": "number"
+        },
+        "InsetInkWidth": {
+          "type": "number"
+        },
+        "FootInkWidth": {
+          "type": "number"
+        }
+      },
+      "additionalProperties": false
+    },
+    "HullStyleDef.SlopeLook": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "Color": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "Light": {
+          "type": "number"
+        },
+        "FacingLight": {
+          "type": "number"
+        },
+        "FootShade": {
+          "type": "number"
+        },
+        "CreaseLit": {
+          "type": "number"
+        },
+        "CreaseDark": {
+          "type": "number"
+        },
+        "CreaseWidth": {
+          "type": "number"
+        },
+        "SkyLight": {
+          "type": "number"
+        },
+        "SkyRimWidth": {
+          "type": "number"
+        }
+      },
+      "additionalProperties": false
+    }
+  }
+}

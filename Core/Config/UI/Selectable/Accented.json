@@ -1,0 +1,18 @@
+{
+    "Id" : "Selectable/Accented",
+
+    "CBColorNormal" : "UI/Main/Comp-1",
+    "CBColorHighlighted" : "UI/Main/Comp",
+    "CBColorPressed" : "UI/Main/Comp+1",
+    "CBColorSelected" : "UI/Main/Comp",
+    "CBColorDisabled" : "UI/Grey/Comp",
+
+    // "CBColorNormal" : "UI/Btn/NormalAccented",
+    // "CBColorHighlighted" : "UI/Btn/HighlightedAccented",
+    // "CBColorPressed" : "UI/Btn/PressedAccented",
+    // "CBColorSelected" : "UI/Btn/SelectedAccented",
+    // "CBColorDisabled" : "UI/Btn/Disabled",
+
+    "CBColorMultiplier" : 1.0,
+    "CBFadeDuration" : 0.1
+}

@@ -1,0 +1,18 @@
+{
+    "Id" : "Button/IconAccented",
+
+    "ChildrenKeys" : [
+        "Panel",
+        "Selectable",
+        "Text",
+        "ActiveOverlay"
+    ],
+
+    "ChildrenIds" : [
+        "Panel/ColorlessIconButton",
+        "Selectable/Accented",
+        "Text/DataBlock",
+        "Overlay/IconAccented"
+    ]
+
+}

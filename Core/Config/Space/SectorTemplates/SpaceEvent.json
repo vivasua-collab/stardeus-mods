@@ -1,0 +1,9 @@
+{
+    "Id" : "SpaceEvent",
+    "Type" : "SpaceEvent",
+    "FallbackLevel" : 3
+    // this is added post-generation, so it wouldn't work anyway
+    // "ForceEffect" : [
+    //     "SpaceEvent"
+    // ]
+}

@@ -1,0 +1,15 @@
+// Chance that a floor or wall next to a collapsing one gives way too (StructureCollapse).
+// Each neighbor rolls once, with 4 neighbors per tile. Intact floor (health 1) still tears
+// with a small chance, so an isolated weak spot takes about 5 tiles with a long tail; walls
+// only roll when damaged. Above ~0.6 a region is likely to go whole (up to the room edge or
+// StructureCollapseMaxTiles), so heavy damage collapses far.
+{
+    // health percent => chance to collapse along
+    "FloatSet" : [
+        0.0, 1.0,
+        0.25, 0.85,
+        0.5, 0.6,
+        0.75, 0.4,
+        1.0, 0.25
+    ]
+}

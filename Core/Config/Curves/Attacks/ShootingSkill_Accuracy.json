@@ -1,0 +1,25 @@
+{
+    // Shooting skill level -> ShootingAccuracy added (1.0 is neutral, at skill 5): a shooter's
+    // accuracy per tile of range (89% at skill 0, 94.5% at 5, 97% at 10, 99% at 20) as a ratio
+    // to skill 5, over the 8-tile reference distance (CombatSkillReferenceDistance). A shot
+    // raises the whole stat to distance / 8, so skill matters little point blank and a lot at
+    // range. Levels 21-25 come from training only
+    "FloatSet" : [
+        0, -0.381,
+        1, -0.317,
+        2, -0.248,
+        3, -0.172,
+        4, -0.089,
+        5, 0.0,
+        6, 0.043,
+        7, 0.088,
+        8, 0.134,
+        9, 0.182,
+        10, 0.232,
+        12, 0.282,
+        15, 0.360,
+        17, 0.396,
+        20, 0.451,
+        25, 0.486
+    ]
+}

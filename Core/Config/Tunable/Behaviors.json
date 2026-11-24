@@ -1,0 +1,10 @@
+{
+    "Floats" : [
+        { "Key" : "OldAgeDamageChance", "Float" : 0.1 },
+        { "Key" : "OldAgeKillChance", "Float" : 0.01 },
+        { "Key" : "LeaveUneatenMealChance", "Float" : 0.02 },
+        { "Key" : "LeaveUneatenMealChanceMakeshift", "Float" : 0.05 },
+        { "Key" : "EatingDurationHours", "Float" : 0.5 },
+        { "Key" : "DrinkingDurationHours", "Float" : 0.15 }
+    ]
+}

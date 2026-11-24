@@ -1,0 +1,16 @@
+{
+    "Type": "Clothing",
+    "ColorGroupId": "Suit",
+    "Ingredients": [
+        { "TypeId" : "CarbonFiber", "StackSize" : 14 },
+        { "TypeId" : "TitaniumPlate", "StackSize" : 4 },
+        { "TypeId" : "Glass", "StackSize" : 5 },
+        { "TypeId" : "Rubber", "StackSize" : 4 },
+        { "TypeId" : "Plastic", "StackSize" : 4 },
+        { "TypeId" : "LeadPlate", "StackSize" : 2 }
+    ],
+    "IgnoreMarket" : true,
+    "ProductDefId": "Obj/Equipment/Hats/CombatHelmet01",
+    "ProductionTimeHours": 12.0,
+    "EnergyCost": 90.0
+}

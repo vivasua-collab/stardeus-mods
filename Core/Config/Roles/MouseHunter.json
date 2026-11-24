@@ -1,0 +1,12 @@
+{
+    "Id" : "MouseHunter",
+    "LovesJobTypes" : [ ],
+    "Species" : [ "Cat" ],
+    "RoleTypes" : [ ],
+    "AdjustsSkills" : [
+        {
+            "JobId" : "Melee",
+            "Adjustment" : 4
+        }
+    ]
+}

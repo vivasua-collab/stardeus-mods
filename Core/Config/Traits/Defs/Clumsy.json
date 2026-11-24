@@ -1,0 +1,15 @@
+{
+    "Id" : "Clumsy",
+    "IconId" : "Icons/Color/Warning",
+    "TypeId" : "MotorFunction",
+    "Rarity" : 0.5,
+    "AddsStatModifiers" : [
+        {
+            "Component" : "Dexterity",
+            "Properties" : [
+                { "Key" : "Value", "Float" : -0.2 },
+                { "Key" : "Type", "String" : "AddsPercent" }
+            ]
+        }
+    ]
+}

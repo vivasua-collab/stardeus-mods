@@ -1,0 +1,19 @@
+{
+    "Id" : "Slider/DataBlockThin",
+
+    "ChildrenKeys" : [
+        "PanelBackground",
+        "PanelFillArea",
+        "PanelFill",
+        "PanelHandle",
+        "ActiveOverlay"
+    ],
+
+    "ChildrenIds" : [
+        "Panel/SliderDataBlock",
+        "Panel/SliderDataBlock",
+        "Panel/SliderFillDataBlock",
+        "Panel/SliderDataBlockHandle",
+        "Overlay/Icon"
+    ]
+}

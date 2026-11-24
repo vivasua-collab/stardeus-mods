@@ -1,0 +1,33 @@
+{
+    // C# implementation id.
+    // Multiple configurations can point to a single implementation.
+    "EventId" : "MapEdgeRaid",
+    // How much does this story event cost to run
+    "Points" : 6,
+    // Options: Negative, Positive, Neutral, Raid, Raid
+    "OutcomeType" : "Raid",
+    // Full list is in StoryEventFlags class
+    "EventFlags" : [
+        "Raid",
+        "Space",
+        "CanHaveDuplicates",
+        "NoHyperspace"
+    ],
+    "MinRepeatDelayDays" : 7,
+    "SectorDifficultyChance" : [
+        0.0, 1.0,
+        0.5, 1.0,
+        1.0, 1.0
+    ],
+    // A staged raid: this share of the raids gather at the edge for a few hours,
+    // then attack together (CombatObjectiveStage). They attack at once if fired upon.
+    "Properties" : [
+        { "Key" : "StagingChance", "Float" : 0.35 },
+        { "Key" : "StagingHoursMin", "Float" : 2.0 },
+        { "Key" : "StagingHoursMax", "Float" : 6.0 }
+    ]
+    // Full list of requirements can be found in Situation class
+    // "Require" : {
+    //     "Colonists" : 5
+    // },
+}

@@ -1,0 +1,104 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Stardeus ShipWeaponTargetTypeDef",
+  "description": "Generated from C# by Game/Generate JSON Schemas, do not edit by hand",
+  "$ref": "#/$defs/ShipWeaponTargetTypeDef",
+  "$defs": {
+    "ShipWeaponTargetTypeDef": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "Id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "GroupId": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "IdH": {
+          "type": "integer"
+        },
+        "Icon": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "NameKey": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "GroupNameKey": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "NameT": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "GroupNameT": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "NonShipTarget": {
+          "type": "boolean"
+        },
+        "SkipDuringShipCombat": {
+          "type": "boolean"
+        },
+        "DefaultTargetByWeaponTypes": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "DefaultTargetBy": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "anyOf": [
+              {
+                "type": "string",
+                "enum": [
+                  "Undefined",
+                  "Ballistic",
+                  "Missile",
+                  "Laser",
+                  "Plasma",
+                  "PointDefense"
+                ]
+              },
+              {
+                "type": "integer"
+              }
+            ]
+          }
+        }
+      },
+      "additionalProperties": false
+    }
+  }
+}

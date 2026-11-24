@@ -1,0 +1,22 @@
+{
+    "IsAbstract" : true,
+    "ResearchValue" : 1,
+    "Components" : [
+        { "Component" : "TileTransform" },
+        { "Component" : "Damageable" },
+        { "Component" : "Flammable" },
+        { "Component" : "PendingReplacement" },
+        {
+            "Component" : "Constructable",
+            "Properties" : [
+                { "Key" : "WorkAmount", "Int" : 1000 },
+                {
+                    "Key" : "Contents",
+                    "RawMaterials" : [
+                        { "TypeId" : "SteelPlate", "StackSize" : 1 }
+                    ]
+                }
+            ]
+        }
+    ]
+}

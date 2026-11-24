@@ -1,0 +1,10 @@
+{
+    "IsAbstract" : true,
+    "ParentId" : "BaseTile",
+    "ToolPath" : "Decorations",
+    "Components" : [
+        { "Component" : "Reinstallable" },
+        { "Component" : "TileLabel" },
+        { "Component" : "Admirable" }
+    ]
+}

@@ -1,0 +1,14 @@
+{
+    "Id" : "BlackHole",
+    "Templates" : [
+        "BlackHole"
+    ],
+    "Shadow" : "#05070D",
+    "Mid" : "#2B3350",
+    "Highlight" : "#FF9A3C",
+    "Strength" : 0.95,
+    "Intensity" : 1.0,
+    "BrightnessRange" : 0.6,
+    "RimStrength" : 0.16,
+    "AmbientStorm" : "BlackHoleFlashes"
+}

@@ -1,0 +1,18 @@
+{
+    "Id" : "Button/EventLongPress",
+
+    "ChildrenKeys" : [
+        "Panel",
+        "Selectable",
+        "Text",
+        "ActiveOverlay"
+    ],
+
+    "ChildrenIds" : [
+        "Panel/Events",
+        "Selectable/Event",
+        "Text/DataBlock",
+        "Overlay/IconLongPress"
+    ]
+
+}

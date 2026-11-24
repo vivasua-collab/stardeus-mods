@@ -1,0 +1,12 @@
+{
+    // how many days ago event was last started (but not necessarily succeeded / seen) -> weight
+    // value can't be 0!
+    "FloatSet" : [
+        0.0, 0.1,
+        1.0, 0.2,
+        5.0, 0.3,
+        10.0, 0.5,
+        30.0, 0.75,
+        60.0, 1.0
+    ]
+}

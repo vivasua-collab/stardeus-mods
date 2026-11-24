@@ -1,0 +1,9 @@
+{
+    "Id" : "Obj/Parts/Mobilizer/Tracks",
+    "Type" : "CFD",
+    "Groups" : [ "BodyPart", "Robotics" ],
+    "Value" : 280.0,
+    "Rarity" : 0.1,
+    "MinSectorDifficulty" : 0.25,
+    "Volatility" : 0.0015
+}

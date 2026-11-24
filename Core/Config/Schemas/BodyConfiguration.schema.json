@@ -1,0 +1,62 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Stardeus BodyConfiguration",
+  "description": "Generated from C# by Game/Generate JSON Schemas, do not edit by hand",
+  "$ref": "#/$defs/BodyConfiguration",
+  "$defs": {
+    "BodyConfiguration": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "Id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "IsDefault": {
+          "type": "boolean"
+        },
+        "SpeciesType": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "Parts": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "$ref": "#/$defs/BodyConfiguration.Assignment"
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "BodyConfiguration.Assignment": {
+      "type": "object",
+      "properties": {
+        "Slot": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "Part": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "Empty": {
+          "type": "boolean"
+        }
+      },
+      "additionalProperties": false
+    }
+  }
+}

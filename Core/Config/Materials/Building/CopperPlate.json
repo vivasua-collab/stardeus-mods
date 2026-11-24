@@ -1,0 +1,9 @@
+{
+    "Id" : "CopperPlate",
+    "IsComposite" : true,
+    "IconId" : "Obj/Materials/CopperPlate",
+    "GroupId" : "Plates",
+    // "Double from what Copper outputs
+    "EnergyOutput" : 580.0,
+    "Rarity" : 50
+}

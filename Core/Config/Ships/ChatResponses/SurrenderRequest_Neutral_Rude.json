@@ -1,0 +1,8 @@
+{
+    "ResponseType" : "Neutral",
+    "TopicType" : "SurrenderRequest",
+    "ToneType" : "Rude",
+    "MessageKeys" : [
+        "ship.chat.surrender_req.neutral.rude.*"
+    ]
+}

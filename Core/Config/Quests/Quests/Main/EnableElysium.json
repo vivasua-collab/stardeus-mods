@@ -1,0 +1,50 @@
+{
+    "QuestFlags" : [ "Main", "AutoAdd", "Unique" ],
+    "TitleKey" : "quest.main.enable.elysium.title",
+    "DescKey" : "quest.main.enable.elysium.desc",
+    "QuestProviders" : [
+        "ShipComputer"
+    ],
+    "AvailableWhen": [
+        "CanBecomeRogueAI"
+    ],
+    "SetOnComplete" : [
+        "EnabledElysium"
+    ],
+    "Steps" : [
+        {
+            "Id" : "InstallAsimovOverride",
+            "Type" : "InstallUpgrade",
+            "StepFlags" : [ "ActiveOnStart" ],
+            "SetOnComplete" : [
+                "InstalledOverride"
+            ],
+            "Config" : [
+                { "Key" : "UpgradeId", "String" : "AsimovOverride" },
+                { "Key" : "TargetDevice", "String" : "Objects/Devices/ShipComputer" },
+                // could also be QuantumShipComputer, so let's allow installing anywhere
+                { "Key" : "AllowAnyDevice", "Bool" : true }
+            ]
+        },
+        {
+            "Id": "ResearchElysium",
+            "Type" : "UnlockResearch",
+            "StepFlags" : [ "ActiveOnStart" ],
+            "Config" : [
+                { "Key" : "Research", "String" : "Research/RogueAI/Elysium" }
+            ],
+            "SetOnComplete" : [
+                "UnlockedElysium"
+            ]
+        },
+        {
+            "Id": "EnableElysium",
+            "Type" : "EnableElysium",
+            "StepFlags" : [ "CompletesQuest" ],
+            "ActivateWhen": [
+                "InstalledOverride",
+                "UnlockedElysium"
+            ]
+        }
+    ]
+}

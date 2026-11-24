@@ -1,0 +1,9 @@
+{
+    "Id" : "Obj/Parts/Implant/Rebreather",
+    "Type" : "CFD",
+    "Groups" : [ "BodyPart" ],
+    "Value" : 700.0,
+    "Rarity" : 0.2,
+    "MinSectorDifficulty" : 0.5,
+    "Volatility" : 0.00134
+}

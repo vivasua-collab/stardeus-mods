@@ -1,0 +1,28 @@
+{
+    "Layer" : "FreeEntities",
+    "ParentId" : "Obj/Meals/BaseMeal",
+    "Researchable" : {
+        "Prerequisites" : [ "Research/LifeSupport/FoodProduction" ]
+    },
+    "Components" : [
+        {
+            "Component" : "Edible" ,
+            "Properties" : [
+                { "Key" : "Amount", "Float" : 1.25 },
+                { "Key" : "IsVegan", "Bool" : false }
+            ]
+        },
+        {
+            "Component" : "UnstoredMat",
+            "Properties" : [
+                { "Key" : "Type", "String" : "SurvivalMeal" }
+            ]
+        },
+        {
+            "Component" : "ObjGraphics",
+            "Properties" : [
+                { "Key" : "Graphic", "String": "Obj/Meals/SurvivalMeal" }
+            ]
+        }
+    ]
+}

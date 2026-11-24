@@ -1,0 +1,23 @@
+{
+    // plan.FinalPoints -> typical StrengthOf of one raider, for RaidPlan.EstimatedRaiders.
+    // Display-only (raid_report and the DEBUG_RAID log); the spend loop never reads it. It
+    // follows the per-raider cost cap (MaxRaiderCost.json): raiders cost about half to two
+    // thirds of it up to 300 points, where the cap stops binding and humans in the best suits
+    // and late bots are the norm. It steps up at the tier-2 threshold (RaiderGearTier.json,
+    // 100 points), where gear weighting leans to the top of what the cap allows. Measured on the
+    // Wealth Balance save ladder (WealthCalibrationTests: the raid each save would spawn) and
+    // the WealthSweepTests meanStrength columns, after the cost cap (October 2026). All-bot
+    // factions run a few points dearer late (Sentries and Orbotrons). Re-measure after any
+    // pricing retune.
+    "FloatSet" : [
+        0.0,    3.5,
+        20.0,   4.5,
+        40.0,   5.3,
+        70.0,   6.8,
+        99.0,   7.5,
+        100.0,  11.0,
+        160.0,  12.5,
+        300.0,  18.0,
+        1000.0, 19.0
+    ]
+}

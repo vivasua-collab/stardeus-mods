@@ -1,0 +1,11 @@
+{
+    "Id" : "Settled",
+    "Difficulty" : 0.3,
+    "Shadow" : "#0A2350",
+    "Mid" : "#2A7FE0",
+    "Highlight" : "#CBE6FF",
+    "Strength" : 0.9,
+    "Intensity" : 1.3,
+    "BrightnessRange" : 0.6,
+    "RimStrength" : 0.19
+}

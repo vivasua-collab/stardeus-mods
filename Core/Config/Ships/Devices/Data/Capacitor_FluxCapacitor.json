@@ -1,0 +1,26 @@
+{
+    "Id" : "Capacitor_FluxCapacitor",
+    "DefId" : "Objects/Devices/FluxCapacitor",
+    "Tier" : 2,
+    "ClassPoints" : 3,
+
+    // if it would only have one rotation:
+    "ZoneSpriteId" : "Objects/Devices/FluxCapacitor",
+
+    // if it has multiple rotations:
+    // "ZoneSpriteId_D" : "Objects/Devices/FluxCapacitor_D",
+    // "ZoneSpriteId_L" : "Objects/Devices/FluxCapacitor_L",
+    // "ZoneSpriteId_U" : "Objects/Devices/FluxCapacitor_U",
+    // "ZoneSpriteId_R" : "Objects/Devices/FluxCapacitor_R",
+
+    "ZoneSpriteScale" : 0.25,
+
+    "HP" : 300,
+
+    // common device
+    "Rarity" : 0.25,
+
+    "TargetTypeId" : "ShipCapacitor",
+    "EnergyCostPassive": 3,
+    "EnergyCostActive": 30
+}

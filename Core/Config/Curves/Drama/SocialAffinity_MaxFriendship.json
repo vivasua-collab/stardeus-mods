@@ -1,0 +1,20 @@
+// how much friendship can grow towards someone, given the social affinity
+// towards them. affinity determines not only how fast a friendship grows,
+// but also how far it can go.
+{
+    // social affinity (-1..1) => max friendship
+    //
+    // must stay at or above the identity line, since relationship generation
+    // seeds friendship as rng(0..1) * affinity
+    "FloatSet" : [
+        -1.00, 0.00,
+        -0.50, 0.05,
+         0.00, 0.20,
+         0.15, 0.40,
+         0.30, 0.55,
+         0.50, 0.75,
+         0.75, 0.95,
+         0.85, 1.00,
+         1.00, 1.00
+    ]
+}

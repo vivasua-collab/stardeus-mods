@@ -1,0 +1,17 @@
+{
+    "Id" : "ArmsDealer",
+    "Species" : [ "Human", "Robot" ],
+    "RoleTypes" : [ "Rich", "Evil" ],
+    "IncompatibleTraitIds" : [ "Pacifist" ],
+    "LovesJobTypes" : [ "Shooting" ],
+    "AdjustsSkills" : [
+        {
+            "JobId" : "Shooting",
+            "Adjustment" : 4
+        },
+        {
+            "JobId" : "Melee",
+            "Adjustment" : -1
+        }
+    ]
+}

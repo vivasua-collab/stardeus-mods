@@ -1,0 +1,47 @@
+{
+    "ToolPath" : "Furniture",
+    "ResearchValue" : 0,
+    "Layer" : "Objects",
+    "ParentId" : "BaseTile",
+    "IsAbstract" : true,
+    "Researchable" : {
+        "Prerequisites" : [ "Research/Habitation/Furniture" ]
+    },
+    "Components" : [
+        {
+            "Component" : "TileTransform",
+            "Properties" : [
+                { "Key" : "IsRotatable", "Bool" : true }
+            ]
+        },
+        {
+            "Component" : "Flammable",
+            "Properties" : [
+                { "Key" : "FireChance", "Float" : 0.75 }
+            ]
+        },
+        {
+            "Component" : "TileGraphics",
+            "Properties" : [
+                { "Key" : "Type", "String": "Object" }
+            ]
+        },
+        {
+            "Component" : "Passability",
+            "Properties" : [
+                { "Key" : "IsPassable", "Bool" : true },
+                { "Key" : "IsWalkable", "Bool" : true },
+                { "Key" : "Difficulty", "Float" : 0.5 }
+            ]
+        },
+        { "Component" : "Reinstallable" },
+        {
+            "Component" : "Constructable",
+            "Properties" : [
+                { "Key" : "WorkAmount", "Int" : 225 },
+                { "Key" : "CanDragRow", "Bool" : true }
+            ]
+        },
+        { "Component" : "TileLabel" }
+    ]
+}

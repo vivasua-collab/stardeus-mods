@@ -1,0 +1,12 @@
+// For ship computers. They explode 100% when destroyed, but low chance otherwise
+{
+    "FloatSet" : [
+        0.0, 10.0,
+        0.01, 1.0,
+        0.05, 0.005,
+        0.25, 0.002,
+        0.10, 0.001,
+        0.11, 0.0,
+        1.0, 0.0
+    ]
+}

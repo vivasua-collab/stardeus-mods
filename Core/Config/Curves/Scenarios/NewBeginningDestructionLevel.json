@@ -1,0 +1,12 @@
+{
+    // A difficulty's own default destruction level -> New Beginning's default, before the
+    // player moves the slider. The first ship a new player sees should be a ship to fix, not
+    // a debris field to make sense of: below 40% the destruction stages also leave the ship
+    // in one piece. Balanced, Challenging and Impossible share a 75% default, so they share
+    // this one too.
+    "FloatSet" : [
+        0.20, 0.15,
+        0.40, 0.20,
+        0.75, 0.30
+    ]
+}

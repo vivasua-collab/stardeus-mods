@@ -1,0 +1,20 @@
+{
+    // C# implementation id.
+    "EventId": "ExpeditionRaiderExtortion",
+    "Points": 20,
+    // Options: Negative, Positive, Neutral, Raid
+    "OutcomeType": "Negative",
+    // Full list is in StoryEventFlags class
+    "EventFlags": [
+        "OnDemand",
+        "Expedition",
+        "Anomaly"
+    ],
+    "MinRepeatDelayDays": 200,
+    "Require": {
+        "Days": 120,
+        "Difficulty": 0.25,
+        "SectorDifficulty": 0.5,
+        "Friendlies": 12
+    }
+}

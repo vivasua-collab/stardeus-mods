@@ -1,0 +1,7 @@
+{
+    "Id" : "UI/Chart/Gradient",
+    "AliasFor" : "UI/Grey/Primary+2",
+    // "Hex" : "888888",
+    "Alpha" : 0.4,
+    "SkipAtlas" : true
+}

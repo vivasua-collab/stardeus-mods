@@ -1,0 +1,7 @@
+{
+    "Id" : "TradeZone",
+    "Icon" : "Icons/Color/Starmap",
+    "MinExitDist" : 30,
+    "MinDistanceBetweenSubObjects" : 15.0,
+    "DistanceUnitsKey" : "units.km.thousands"
+}

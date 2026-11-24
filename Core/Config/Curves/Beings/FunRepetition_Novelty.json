@@ -1,0 +1,20 @@
+{
+    // Recency-weighted uses of one fun source (activity + subject) in the last
+    // FunRepetitionWindowDays -> how well that source still works (fun gain and mood bonus).
+    // A use counts 1 when fresh and fades to 0 at the end of the window.
+    // Steep on purpose: with fewer fun sources each one is used more, so a single source
+    // drops low enough that Fun can't be sustained (leads to Depression), two sources keep
+    // Fun safe but lower, and all current strong fun devices stay close to full effect.
+    // See Docs/Architecture/Systems/FunRepetition.md
+    // Last X must stay <= FunMemory.MaxTrackedUsesPerSource / 2
+    "FloatSet" : [
+        0.0, 1.0,
+        1.5, 1.0,
+        2.5, 0.85,
+        3.5, 0.55,
+        4.5, 0.33,
+        6.0, 0.18,
+        9.0, 0.08,
+        12.0, 0.05
+    ]
+}

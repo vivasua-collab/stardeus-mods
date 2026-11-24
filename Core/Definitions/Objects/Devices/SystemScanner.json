@@ -1,0 +1,119 @@
+{
+    "ToolPath" : "SpaceTravel",
+    "Layer" : "Objects",
+    "ParentId" : "Objects/Devices/BaseDevice",
+    "Researchable" : {
+        "Prerequisites" : [
+            "Research/Scanning/System"
+        ]
+    },
+    "Spawnable" : {
+        "Category": "Comms",
+        "TierDiff" : -1,
+        "Chance" : 1.0,
+        "ChanceLocked" : 0.5
+    },
+    "Components" : [
+        {
+            "Component" : "TileTransform",
+            "Properties" : [
+                { "Key" : "CoverPercent", "Int" : 50 },
+                { "Key" : "Width", "Int" : 2 },
+                { "Key" : "Height", "Int" : 2 },
+                { "Key" : "IsRotatable", "Bool" : false }
+            ]
+        },
+        {
+            "Component" : "IndustrialEquipment",
+            "Properties" : [
+                { "Key" : "IsNoisy", "Bool" : true }
+            ]
+        },
+        {
+            "Component" : "Reinstallable",
+            "Properties" : [
+                { "Key" : "IsAdvanced", "Bool" : true }
+            ]
+        },
+        {
+            "Component" : "Flammable",
+            "Properties" : [
+                { "Key" : "IgnitionTemperatureCelsius", "Int" : 400 },
+                { "Key" : "FireChance", "Float" : 0.5 },
+                { "Key" : "BaseExplosionLevel", "Int" : 2 },
+                { "Key" : "FlammabilityCurve", "String" : "Device" },
+                { "Key" : "ExplosivenessCurve", "String" : "DeviceLow" }
+            ]
+        },
+        {
+            "Component" : "Radar",
+            "Properties" : [
+                { "Key" : "EnergyCost", "Float" : 20 },
+                { "Key" : "ScanStrength", "Int" : 3 }
+            ]
+        },
+        {
+            "Component" : "TileAnimation",
+            "Properties" : [
+                { "Key" : "Offset", "Vector2": { "x" : 0.0, "y" : 0.45 } },
+                { "Key" : "Size", "Vector2": { "x" : 2.5, "y" : 2.5 } },
+                { "Key" : "Direction", "Int" : 0 },
+                { "Key" : "BaseSprite", "String": "Objects/Devices/SystemScanner_Base" },
+                { "Key" : "AnimSprite", "String" : "Objects/DeviceAnims/SystemScanner_Anim" },
+                { "Key" : "Speed", "Float": 0.66 },
+                { "Key" : "FramePrefix", "String": "R" },
+                { "Key" : "NumFrames", "Int": 64 }
+            ]
+        },
+        { "Component" : "OutdoorsCheck" },
+        {
+            "Component" : "TileGraphics",
+            "Properties" : [
+                { "Key" : "Type", "String": "Object" },
+                { "Key" : "Graphic", "String": "Objects/Devices/SystemScanner" },
+                { "Key" : "AliasLR", "Bool" : true },
+                { "Key" : "AliasUD", "Bool" : true },
+                { "Key" : "HasHeight", "Bool" : true }
+            ]
+        },
+        {
+            "Component" : "ElectricNode",
+            "Properties" : [
+                { "Key" : "Particles", "String" : "RadarFX" },
+                { "Key" : "ParticlesEmitChance", "Float" : 0.5 },
+                { "Key" : "IsConsumerHighPriority", "Bool" : true }
+            ]
+        },
+        {
+            "Component" : "WithFuse",
+            "Properties" : [
+                { "Key" : "MalfunctionWeight", "Float": 0.2 }
+            ]
+        },
+        {
+            "Component" : "Passability",
+            "Properties" : [
+                { "Key" : "IsPassable", "Bool" : false },
+                { "Key" : "IsWalkable", "Bool" : false },
+                { "Key" : "Difficulty", "Float" : 1 }
+            ]
+        },
+        {
+            "Component" : "Constructable",
+            "Properties" : [
+                { "Key" : "WorkAmount", "Int" : 2400 },
+                { "Key" : "CanReplaceGroup", "String" : "Radar" },
+                {
+                    "Key" : "Contents",
+                    "RawMaterials" : [
+                        { "TypeId" : "TitaniumPlate", "StackSize" : 5 },
+                        { "TypeId" : "Glass", "StackSize" : 8 },
+                        { "TypeId" : "OpticalFiber", "StackSize" : 4 },
+                        { "TypeId" : "GoldWire", "StackSize" : 3 },
+                        { "TypeId" : "Microchip2", "StackSize" : 3 }
+                    ]
+                }
+            ]
+        }
+    ]
+}

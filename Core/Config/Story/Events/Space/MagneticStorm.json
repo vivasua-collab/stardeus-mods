@@ -1,0 +1,45 @@
+{
+    // C# implementation id.
+    // Multiple configurations can point to a single implementation.
+    "EventId" : "MagneticStorm",
+    // How much does this story event cost to run
+    "Points" : 7,
+    // Options: Negative, Positive, Neutral, Raid
+    "OutcomeType" : "Negative",
+    // Full list is in StoryEventFlags class
+    "EventFlags" : [
+        "Space",
+        "SpaceStorm",
+        "NoHyperspace",
+        "CanIgnoreRepeatDelay"
+    ],
+    // How likely this event can occur given the sector difficulty
+    // sector difficulty -> chance
+    "SectorDifficultyChance" : [
+        0.0, 0.1,
+        0.5, 0.7,
+        1.0, 1.0
+    ],
+    "MaxOngoingDays" : 10,
+    "MinRepeatDelayDays" : 31,
+    "Properties": [
+        { "Key": "DurationDaysMin", "Float" : 2.0 },
+        { "Key": "DurationDaysMax", "Float" : 3.0 },
+        { "Key": "Particles", "String" : "ParticleStorm" },
+        // HDR - values can go above 1.0
+        { "Key": "ParticleColor", "FloatSet" : [
+            0,
+            2.1,
+            1.844,
+            1
+        ]},
+        { "Key": "ParticlePlayRate", "Float" : 0.2 },
+        { "Key": "ParticleVelocity", "Float" : 0.01 },
+        { "Key": "ParticleSize", "Float" : 5.0 },
+        { "Key": "ParticleTurbulenceIntensity", "Float" : 1.8 },
+        { "Key": "ParticleTurbulenceDrag", "Float" : 1.5 },
+        { "Key": "ParticleTurbulenceFrequency", "Float" : 0.32 },
+        { "Key": "ParticleSphereAttractionForce", "Float" : 30.0 },
+        { "Key": "ParticleSphereAttractionStickDist", "Float" : 90.0 }
+    ]
+}

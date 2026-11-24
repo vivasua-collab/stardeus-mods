@@ -1,0 +1,8 @@
+{
+    "ResponseType" : "Outlaw",
+    "TopicType" : "Generic",
+    "ToneType" : "Polite",
+    "MessageKeys" : [
+        "ship.chat.outlaw.polite.*"
+    ]
+}

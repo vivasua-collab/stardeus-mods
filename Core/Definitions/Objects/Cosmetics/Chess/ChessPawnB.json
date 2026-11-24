@@ -1,0 +1,19 @@
+{
+    "Layer" : "Objects",
+    "ParentId" : "Objects/Cosmetics/Chess/ChessPawnW",
+    "DescKey" : "objects.cosmetics.chess.piece.desc",
+    "Spawnable" : {
+        "Category" : "Chess",
+        "SkipOwned" : 8,
+        "Chance" : 1.0,
+        "ChanceLocked" : 1.0
+    },
+    "Components" : [
+        {
+            "Component" : "TileGraphics",
+            "Properties" : [
+                { "Key" : "Graphic", "String": "Objects/Cosmetics/Chess/ChessPawnB" }
+            ]
+        }
+    ]
+}

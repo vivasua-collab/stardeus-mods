@@ -1,0 +1,23 @@
+{
+    // plan.FinalPoints -> the most one raider may cost (StrengthOf), so a raid's own size
+    // decides how well armed and armored its raiders are: a small or ramped raid is a few
+    // cheap raiders, and elite gear and late bots come only with big raids. This is the only
+    // gate on raider gear; raiders ignore the Days, Friendlies and SectorDifficulty
+    // requirements of items (CombatRaid.RaiderGearSituation).
+    // The popular colony sim's pirate curve with both axes divided by 10, since its cheapest
+    // raider costs about 35 points and ours about 3.5. The value at 0 is also a floor, so the
+    // cheapest raiders always fit. Raiders first fit, by price:
+    //   ~10-11  a human with a rifle, Ion Disruptor or Vibroblade in a basic suit (70 points)
+    //   ~16     a rifleman in a Combat Suit (140)
+    //   ~18.7   a Sentry (170)
+    //   ~24.7   an Orbotron (230)
+    // See Docs/Architecture/Systems/RaidScaling.md, "Raider gear follows raid points".
+    "FloatSet" : [
+        0.0,    3.5,
+        7.0,    5.0,
+        70.0,   10.0,
+        130.0,  15.0,
+        300.0,  32.0,
+        1000.0, 102.0
+    ]
+}

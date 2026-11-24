@@ -1,0 +1,26 @@
+{
+    "Id" : "Engine_FTLDrive",
+    "DefId" : "Objects/Devices/FTLDrive",
+    "Tier" : 3,
+    "ClassPoints" : 1,
+
+    // if it would only have one rotation:
+    // "ZoneSpriteId" : "Objects/Devices/ShredderCannon_ZoneView",
+
+    // if it has multiple rotations:
+    "ZoneSpriteId_D" : "Objects/Devices/FTLDrive_U",
+    "ZoneSpriteId_L" : "Objects/Devices/FTLDrive_R",
+    "ZoneSpriteId_U" : "Objects/Devices/FTLDrive_D",
+    "ZoneSpriteId_R" : "Objects/Devices/FTLDrive_L",
+
+    "ZoneSpriteScale" : 0.2,
+
+    "HP" : 500,
+
+    // common device
+    "Rarity" : 1.0,
+
+    "TargetTypeId" : "ShipEngine_Hyperdrive",
+    "EnergyCostPassive": 0,
+    "EnergyCostActive": 0
+}

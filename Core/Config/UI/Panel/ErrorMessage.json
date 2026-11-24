@@ -1,0 +1,9 @@
+{
+    "Id" : "Panel/ErrorMessage",
+
+    "Color" : "110000",
+    "Alpha" : 0.75,
+
+    "Image" : "NoAtlas/WhiteSquare",
+    "ImageType" : "Simple"
+}

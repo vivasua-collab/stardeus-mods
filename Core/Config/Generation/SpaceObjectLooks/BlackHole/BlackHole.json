@@ -1,0 +1,15 @@
+{
+    "Id" : "BlackHole",
+    "Probability" : 1.0,
+    "StarmapSizeMul" : 2.0,
+    "Shader" : "Shader Graphs/SOBlackHole",
+    "StarfieldSizeMul" : 1.0,
+    "ShaderPropertiesFloatFrom": [
+        { "Key" : "_RotationSpeed", "Float" : 0.05 },
+        { "Key" : "_DetailSpeed", "Float" : -0.1 }
+    ],
+    "ShaderPropertiesFloatTo": [
+        { "Key" : "_RotationSpeed", "Float" : 0.15 },
+        { "Key" : "_DetailSpeed", "Float" : 0.1 }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "Id" : "Obj/Materials/Coal",
+    "Type" : "CFD",
+    "Groups" : [ "Ore" ],
+    "Value" : 7.0,
+    "Rarity" : 0.1,
+    "TraderQuantity" : 1000.0,
+    "OnlineShopQuantity" : 100,
+    "Volatility" : 0.0018
+}

@@ -1,0 +1,40 @@
+{
+    // C# implementation id.
+    // Multiple configurations can point to a single implementation.
+    "EventId" : "ExpeditionInteraction",
+    // How much does this story event cost to run
+    "Points" : 5,
+    // Options: Negative, Positive, Neutral, Raid
+    "OutcomeType" : "Negative",
+    // Full list is in StoryEventFlags class
+    "EventFlags" : [
+        "Social",
+        "OnDemand"
+    ],
+    "MinRepeatDelayDays" : 25,
+    // Full list of requirements can be found in Situation class
+    // "Require" : {
+    //     "Colonists" : 5
+    // },
+    // Variables for the story event implementation
+    "Properties" : [
+        // { "Key" : "CompatibleStage", "String" : "MineResource" },
+        // { "Key" : "RequireDepositWithDepth", "Bool" : true },
+        // for important interactions
+        { "Key" : "ShowPopup", "Bool" : true },
+        { "Key" : "AddEventNotification", "Bool" : false },
+        { "Key" : "MinHoursInStage", "Float" : 2.0 },
+        { "Key" : "ShowFanfare", "Bool" : false },
+        { "Key" : "AddLog", "Bool" : true },
+        { "Key" : "TitleKey", "String" : "social.exp.fist.fight.title" },
+        { "Key" : "TextKey", "String" : "social.exp.fist.fight.desc" },
+        { "Key" : "AttitudeChange", "Float" : -0.05 },
+        { "Key" : "Icon", "String" : "Icons/Color/Fist" },
+        // { "Key" : "ChangeWeightB1", "Float" : 0.1 },
+        { "Key" : "MentalEffectB1", "Int" : -5 },
+        { "Key" : "MentalEffectDurationHoursB1", "Float" : 6.0 },
+        // { "Key" : "ChangeWeightB2", "Float" : 1.0 },
+        { "Key" : "MentalEffectB2", "Int" : -5 },
+        { "Key" : "MentalEffectDurationHoursB2", "Float" : 6.0 }
+    ]
+}

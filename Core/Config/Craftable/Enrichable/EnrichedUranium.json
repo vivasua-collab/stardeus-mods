@@ -1,0 +1,11 @@
+{
+    "Type" : "Enrichable",
+    "Ingredients" : [
+        { "TypeId" : "Uranium", "StackSize" : 1 },
+        { "TypeId" : "Water", "StackSize" : 10 }
+    ],
+    "ProductDefId" : "Obj/Materials/EnrichedUranium",
+    "IgnoreEnergyOutput" : true,
+    "ProductionTimeHours" : 8,
+    "EnergyCost" : 50
+}

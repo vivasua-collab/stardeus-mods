@@ -1,0 +1,13 @@
+{
+    "Layer" : "Walls",
+    "ParentId" : "Structure/Walls/BaseWallSocket",
+    "TranslationVars" : [ "32", "8" ],
+    "Components" : [
+        {
+            "Component" : "TileGraphics",
+            "Properties" : [
+                { "Key" : "Graphic", "String" : "Structure/Walls/WallSocket01/WallSocket01" }
+            ]
+        }
+    ]
+}

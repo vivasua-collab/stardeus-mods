@@ -1,0 +1,142 @@
+{
+    "ToolPath" : "Atmosphere",
+    "Layer" : "Objects",
+    "ParentId" : "Objects/Devices/OxygenPumpMini",
+    "Researchable" : {
+        "Prerequisites" : [
+            "Research/LifeSupport/OxygenImproved"
+        ]
+    },
+    "Spawnable" : {
+        "Category": "Survival",
+        "Chance" : 1.0,
+        "ChanceLocked" : 0.5
+    },
+    "Components" : [
+        {
+            "Component" : "TileTransform",
+            "Properties" : [
+                { "Key" : "CoverPercent", "Int" : 85 },
+                { "Key" : "Width", "Int" : 2 },
+                // { "Key" : "OutPort", "Vector2" : { "x" : 1, "y" : -1 } },
+                { "Key" : "InPort", "Vector2" : { "x" : 1, "y" : -1 } }
+            ]
+        },
+        {
+            "Component" : "TileGraphics",
+            "Properties" : [
+                { "Key" : "HasHeight", "Bool": true },
+                { "Key" : "Graphic", "String": "Objects/Devices/OxygenPump" }
+            ]
+        },
+        {
+            "Component" : "TileAnimation",
+            "Properties" : [
+                {
+                    "Key": "Offsets",
+                    "Vector2Set": [
+                        // Down
+                        { "x": -0.41, "y": 0.54 },
+                        // Left
+                        { "x": 0, "y": 0.868 },
+                        // Up
+                        { "x": 0.41, "y": 0.54 },
+                        // Right
+                        { "x": 0, "y": 0.14 }
+                    ]
+                },
+                { "Key" : "Size", "Vector2": { "x" : 0.8, "y" : 0.8 } },
+                { "Key" : "Direction", "Int" : 1 },
+                { "Key" : "BaseSprite", "String" : "Objects/Devices/OxygenPump" },
+                { "Key" : "AnimSprite", "String" : "Objects/DeviceAnims/OxygenPump_Anim" },
+                // Since two devices use same animation (Mini oxygen pump and regular one)
+                // we need to copy the sprite, otherwise resizing it to a different scale will
+                // resize it for both devices
+                { "Key" : "CopyAnimSprite", "Bool" : true },
+                { "Key" : "Speed", "Float": 1.0 },
+                { "Key" : "SpriteOrder", "String": "AboveAnyTile" },
+                { "Key" : "FramePrefix", "String": "R" },
+                { "Key" : "NumFrames", "Int": 4 },
+                { "Key" : "NeedsEnergy", "Bool": true }
+            ]
+        },
+        {
+            "Component" : "Flammable",
+            "Properties" : [
+                { "Key" : "IgnitionTemperatureCelsius", "Int" : 300 },
+                { "Key" : "BaseExplosionLevel", "Int" : 3 },
+                { "Key" : "ExplosivenessCurve", "String" : "Device" }
+            ]
+        },
+        {
+            "Component" : "AudioSource",
+            "Properties" : [
+                { "Key" : "Rolloff", "Vector2" : { "x" : 3, "y" : 12 } }
+            ]
+        },
+        {
+            "Component" : "OxygenProducer",
+            "Properties" : [
+                { "Key" : "Rate", "Float" : 0.04 },
+                { "Key" : "Range", "Int" : 3 },
+                { "Key" : "DisplayRange", "Int" : 15 },
+                { "Key" : "Effectiveness", "Int" : 2 },
+                { "Key" : "FuelPerDay", "Float" : 0.5 },
+                { "Key" : "EnergyCost", "Float": 5 }
+            ]
+        },
+        {
+            "Component" : "RefillableStorage",
+            "Properties" : [
+                { "Key" : "MaterialCapacity", "Int" : 5 }
+            ]
+        },
+        {
+            "Component" : "ElectricNode",
+            "Properties" : [
+                { "Key" : "ParticleOffsets", "Vector2Set" : [
+                    { "x" : 0.5, "y" : 0.4 },
+                    { "x" : 0, "y" : -0.1 },
+                    { "x" : -0.5, "y" : 0.4 },
+                    { "x" : 0, "y" : 0.7 }
+                ] }
+            ]
+        },
+        {
+            "Component" : "WithFuse",
+            "Properties" : [
+                { "Key" : "MalfunctionWeight", "Float": 0.15 }
+            ]
+        },
+        {
+            "Component" : "Surface",
+            "Properties" : [
+                { "Key" : "IsMultislot", "Bool" : true },
+                { "Key" : "IsMakeshift", "Bool" : true }
+            ]
+        },
+        {
+            "Component" : "Passability",
+            "Properties" : [
+                { "Key" : "IsPassable", "Bool" : false },
+                { "Key" : "IsWalkable", "Bool" : false },
+                { "Key" : "Difficulty", "Float" : 1.0 }
+            ]
+        },
+        {
+            "Component" : "Constructable",
+            "Properties" : [
+                { "Key" : "WorkAmount", "Int" : 1400 },
+                {
+                    "Key" : "Contents",
+                    "RawMaterials" : [
+                        { "TypeId" : "TitaniumPlate", "StackSize" : 2 },
+                        { "TypeId" : "Glass", "StackSize" : 1 },
+                        { "TypeId" : "CopperWire", "StackSize" : 2 },
+                        { "TypeId" : "Microchip", "StackSize" : 1 }
+                    ]
+                }
+            ]
+        }
+    ]
+}

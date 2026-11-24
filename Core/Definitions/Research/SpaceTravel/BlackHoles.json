@@ -1,0 +1,27 @@
+{
+    "Id" : "Research/SpaceTravel/BlackHoles",
+    "Tier" : 3,
+    "IsAbstract" : true,
+    "PreviewIcon" : "Icons/Color/BlackHole",
+    "NameKey" : "research.blackholes",
+    "Researchable" : {
+        "IsTreeNode" : true,
+        "Prerequisites" : [
+            "Research/SpaceTravel/ReturnBeacon"
+        ],
+        "DatoidCosts" : [
+            {
+                "TypeId" : "DatoidSynthetic",
+                "StackSize" : 6
+            },
+            {
+                "TypeId" : "DatoidEnergy",
+                "StackSize" : 8
+            },
+            {
+                "TypeId" : "DatoidTechHigh",
+                "StackSize" : 7
+            }
+        ]
+    }
+}

@@ -1,0 +1,13 @@
+{
+    "Layer" : "FreeEntities",
+    "ParentId" : "Obj/Asteroids/Meteor01",
+    "NameKey" : "obj.asteroids.meteor01",
+    "Components" : [
+        {
+            "Component" : "ObjGraphics",
+            "Properties" : [
+                { "Key" : "Graphic", "String": "Obj/Asteroids/Asteroid05" }
+            ]
+        }
+    ]
+}

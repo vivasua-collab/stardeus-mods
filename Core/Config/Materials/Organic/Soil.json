@@ -1,0 +1,10 @@
+{
+    "Id" : "Soil",
+    "IsComposite" : true,
+    "IconId" : "Obj/Materials/Soil",
+    "GroupId" : "Components",
+    "EnergyOutput" : 50.0,
+    "InternalValue" : 2.0,
+    "MatRarity" : 0,
+    "Rarity" : 85
+}

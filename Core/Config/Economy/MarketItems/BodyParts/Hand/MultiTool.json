@@ -1,0 +1,9 @@
+{
+    "Id" : "Obj/Parts/Hand/MultiTool",
+    "Type" : "CFD",
+    "Groups" : [ "BodyPart", "Robotics" ],
+    "Value" : 1250.0,
+    "Rarity" : 0.1,
+    "MinSectorDifficulty" : 0.75,
+    "Volatility" : 0.00124
+}

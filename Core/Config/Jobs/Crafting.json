@@ -1,0 +1,8 @@
+{
+    "Id" : "Crafting",
+    "Importance" : 2.5,
+    "EnabledByAbilities" : [ "Manipulate", "Craft" ],
+    "IconId" : "Icons/Color/Crafting",
+    "Types" : [ "Intellectual", "Creative", "MicroPrecision" ],
+    "WorkSpeedStat" : "ManualWorkSpeed"
+}

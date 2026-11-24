@@ -1,0 +1,10 @@
+{
+    "SlotTypeId" : "Ear",
+    "Compatibility" : "Biological",
+    "TargetSpecies" : [ "Pig" ],
+    "Tier" : 2,
+    "ResistanceBase" : 3.0,
+    "AddsAbilities" : [
+        "Hear"
+    ]
+}

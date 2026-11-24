@@ -1,0 +1,9 @@
+{
+    "Id" : "Panel/SliderFillSpaceObject",
+
+    "Color" : "UI/Text/Green",
+
+    // "Image" : "UI/Panels/SliderFill",
+    "ImageType" : "Sliced"
+    // "ImageBorderLBRT" : [ 8, 8, 8, 8 ]
+}

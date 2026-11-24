@@ -1,0 +1,18 @@
+{
+    "Id" : "Fast",
+    "IconId" : "Icons/Color/FastForward",
+    "TypeId" : "MotorFunction",
+    "Rarity" : 0.5,
+    "IncompatibleTraitIds" : [
+        "Slow"
+    ],
+    "AddsStatModifiers" : [
+        {
+            "Component" : "MoveSpeed",
+            "Properties" : [
+                { "Key" : "Value", "Float" : 0.2 },
+                { "Key" : "Type", "String" : "AddsPercent" }
+            ]
+        }
+    ]
+}

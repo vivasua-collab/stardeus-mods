@@ -1,0 +1,155 @@
+{
+    "Ints" : [
+        // No survivor area in this scenario, so no prepared meals come with it, and
+        // EstablishFoodProduction does not arrive until after the first stasis wake-up.
+        // This is what the first colonist eats in the meantime. Kept next to the stasis
+        // array's wardrobe by StasisRationsGenStage rather than scattered by the
+        // generic starting-resource stages, so it stays where the sleeper wakes up.
+        { "Key" : "NewBeginning_StasisRations", "Int" : 7 },
+
+        { "Key" : "NewBeginning_SteelPlate", "Int" : 400 },
+        { "Key" : "NewBeginning_ScrapMetal", "Int" : 400 },
+        { "Key" : "NewBeginning_TitaniumPlate", "Int" : 150 },
+        { "Key" : "NewBeginning_SiliconWafer", "Int" : 50 },
+        { "Key" : "NewBeginning_Rock", "Int" : 50 },
+        { "Key" : "NewBeginning_CopperPlate", "Int" : 50 },
+        { "Key" : "NewBeginning_Copper", "Int" : 25 }, // for the quest
+        { "Key" : "NewBeginning_Carbon", "Int" : 100 },
+        { "Key" : "NewBeginning_Coal", "Int" : 30 },
+        { "Key" : "NewBeginning_Glass", "Int" : 50 },
+        { "Key" : "NewBeginning_Soil", "Int" : 100 },
+        { "Key" : "NewBeginning_Protein", "Int" : 25 },
+        { "Key" : "NewBeginning_Rubber", "Int" : 50 },
+        { "Key" : "NewBeginning_Plastic", "Int" : 50 },
+        { "Key" : "NewBeginning_Transistor", "Int" : 100 },
+        { "Key" : "NewBeginning_CopperWire", "Int" : 100 },
+        { "Key" : "NewBeginning_FusionCell", "Int" : 10 },
+        { "Key" : "NewBeginning_Phasium", "Int" : 10 },
+        // GoldWire, OpticalFiber and Microchip are sized for the Assembler recipe
+        // (5 / 1 / 1), which the production tutorial requires. Starting amounts are scaled
+        // by both Difficulty.StartingResources and ModifierResourceMul - 0.25x at worst, but
+        // a reduction never goes below 5 (ScenarioStartingMats) - and GoldWire cannot be
+        // crafted out of trouble, since its recipe needs mined GoldIngot. At 30, GoldWire's
+        // worst case is 8. Do not lower these without rechecking that worst case.
+        { "Key" : "NewBeginning_GoldWire", "Int" : 30 },
+        { "Key" : "NewBeginning_OpticalFiber", "Int" : 15 },
+        { "Key" : "NewBeginning_Gears", "Int" : 50 },
+        { "Key" : "NewBeginning_Microchip", "Int" : 15 },
+        { "Key" : "NewBeginning_Microchip2", "Int" : 3 },
+        { "Key" : "NewBeginning_Silicon", "Int" : 25 },
+        { "Key" : "NewBeginning_Lithium", "Int" : 25 },
+        { "Key" : "NewBeginning_BatteryCell", "Int" : 25 },
+        { "Key" : "NewBeginning_Water", "Int" : 200 },
+        { "Key" : "NewBeginning_Wood", "Int" : 20 },
+        { "Key" : "NewBeginning_CarbonFiber", "Int" : 15 }
+    ],
+    "StringSets" : [
+        {
+            "Key" : "NewBeginning_QuickStartSeeds",
+            "StringSet" : [
+                // Any ship generation change can rebuild these differently. Re-check them
+                // after one: a single island, no reroll, and the stasis array a few rooms
+                // away from the computer, so the player reaches it later.
+
+                // stasis far aft, 23 tiles from the computer
+                "New York Armstrong",
+
+                // ring-like hull, stasis 27 tiles from the computer
+                "Elara",
+
+                // broad hull, stasis 20 tiles from the computer
+                "Ceres Hope",
+
+                // stasis 15 tiles from the computer
+                "Vega Harbor",
+
+                // mirrored cross, stasis 14 tiles from the computer
+                "Gaia Seed"
+            ]
+        },
+        {
+            "Key" : "NewBeginning_UnlockedResearch",
+            "StringSet" : [
+                // Research/Production/AssemblyImproved (the Assembler) is not listed here on
+                // purpose: the scenario grants it in code only when the intro found nobody who
+                // can run the Crafting Station, see
+                // BaseRandomShipScenario.UnlockAssemblerIfCrewCannotCraft.
+                //
+                // Gears carry their own research gate (Obj/Materials/Gears requires this
+                // node), and the crafter UI hides locked products. The manual quest
+                // researches it as its first step; the Assembler variant has no research
+                // step, so without this a Basic Tech setting other than Unlocked leaves the
+                // Assembler unable to be configured to Gears and the chain stalls.
+                "Research/Production/Assembly",
+
+                // New Beginning starts with Basic Tech Locked (Scenario.DefaultBasicTech), so
+                // research decides what the build menu grows into. These Basic nodes stay open.
+                // Locked on purpose: Winch, AtmosphereControl and Bridge/Propulsion (the stasis
+                // and flight quests research them, after a HaveResearchDatoids step) and Solar.
+
+                // Basics for living and tidying up
+                "Research/LifeSupport/Hygiene",
+                "Research/Habitation/Storage",
+                "Research/Construction/Lighting",
+                "Research/Entertainment/Treadmill",
+                // The first colonist can wake with no datoids saved while the stasis rations
+                // last 2-3 days, so food is never behind research
+                "Research/LifeSupport/FoodProduction",
+                // Survival meals are protein and water, and no quest teaches the extractor
+                "Research/Production/BiochemicalExtraction",
+                // Tech datoids and transistor/microchip crafting hang on it
+                "Research/Production/Electronics",
+                // The radar costs Tech and Energy datoids, and Energy datoids need
+                // ReactorEfficiency: too much before the first expedition, which is the way
+                // to new copper. Communications is its prerequisite.
+                "Research/Scanning/Communications",
+                "Research/Scanning/Radar",
+                // No build items, so locking them would shrink nothing
+                "Research/Production/Weaving",
+                "Research/Security/WeaponsBasic",
+                "Research/Economy/Wallet",
+                "Research/Economy/OnlineShop"
+            ]
+        },
+        {
+            "Key" : "NewBeginning_Objects",
+            "StringSet" : [
+                // Mini planter produces an "unconfigured" warning, let's not
+                // overwhelm the new players
+                // "Objects/Devices/PlanterMini",
+                "Objects/Devices/DiskModuleMini",
+                // "Objects/Devices/CraftingStation",
+                "Objects/Devices/FloorSocket",
+                "Templates/TableWithChairs01"
+                // "Objects/Furniture/BedSteel"
+            ]
+        },
+        {
+            "Key" : "NewBeginning_ObjectsInSpace",
+            "StringSet" : [
+                "Objects/Devices/SolarPanel",
+                "Objects/Devices/SolarPanel",
+                "Objects/Devices/SolarPanel",
+                "Objects/Devices/SolarPanel",
+                "Objects/Devices/ParticleCollector"
+            ]
+        },
+        {
+            "Key" : "NewBeginning_Objs",
+            "StringSet" : [
+                // "Obj/Parts/Core/DumbCore",
+                // "Obj/Parts/Battery/MiniCell",
+                "Obj/Misc/ResonanceCharge",
+                "Obj/Materials/NuclearCell"
+            ]
+        },
+        {
+            "Key" : "NewBeginning_StartingWeapons",
+            // Equipped on the starting crew (StartingCrewWeapons), not dropped on the floor
+            "StringSet" : [
+                "Obj/Equipment/Weapons/Handgun01",
+                "Obj/Equipment/Weapons/Knife01"
+            ]
+        }
+    ]
+}

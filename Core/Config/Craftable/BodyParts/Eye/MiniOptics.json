@@ -1,0 +1,13 @@
+{
+    "Type" : "Robotics2",
+    "ProductDefId" : "Obj/Parts/Eye/MiniOptics",
+    "ProductionTimeHours" : 120,
+    "EnergyCost" : 25,
+    "IgnoreMarket" : true,
+    "Ingredients" : [
+        { "TypeId" : "Transistor", "StackSize" : 10 },
+        { "TypeId" : "OpticalFiber", "StackSize" : 3 },
+        { "TypeId" : "Glass", "StackSize" : 1 },
+        { "TypeId" : "Microchip", "StackSize" : 1 }
+    ]
+}

@@ -1,0 +1,16 @@
+{
+    "Type" : "Robotics2",
+    "ProductDefId" : "Obj/Parts/Mobilizer/Tracks",
+    "ProductionTimeHours" : 168,
+    "EnergyCost" : 25,
+    "IgnoreMarket" : true,
+    "Ingredients" : [
+        { "TypeId" : "TitaniumPlate", "StackSize" : 5 },
+        { "TypeId" : "Microchip", "StackSize" : 2 },
+        { "TypeId" : "Gears", "StackSize" : 12 },
+        { "TypeId" : "CopperWire", "StackSize" : 6 }
+    ],
+    "DisposableOutput" : [
+        { "TypeId" : "ScrapMetal", "StackSize" : 5 }
+    ]
+}

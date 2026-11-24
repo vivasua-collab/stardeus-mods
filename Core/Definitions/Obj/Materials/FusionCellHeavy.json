@@ -1,0 +1,22 @@
+{
+    "Layer" : "FreeEntities",
+    "ParentId" : "Obj/Materials/FusionCell",
+    "Researchable" : {
+        "Prerequisites" : [ "Research/SpaceTravel/PropulsionFTL" ]
+    },
+    "Components" : [
+        {
+            "Component" : "ObjGraphics",
+            "Properties" : [
+                { "Key" : "Graphic", "String": "Obj/Materials/FusionCellHeavy" }
+            ]
+        },
+        {
+            "Component" : "UnstoredMat",
+            "Properties" : [
+                { "Key" : "Type", "String" : "FusionCellHeavy" },
+                { "Key" : "FixedSize", "Bool" : true }
+            ]
+        }
+    ]
+}

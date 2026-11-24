@@ -1,0 +1,10 @@
+{
+    "Id" : "Panel/TooltipSmall",
+
+    "Color" : "UI/Greyish/Primary",
+    "Alpha" : 0.94,
+
+    "Image" : "UI/Buttons/ButtonBG",
+    "ImageType" : "Sliced",
+    "ImageBorderLBRT" : [ 12, 12, 12, 12 ]
+}

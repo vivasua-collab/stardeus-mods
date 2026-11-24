@@ -1,0 +1,11 @@
+{
+    "Id" : "CoffeeBeans",
+    "IsComposite" : true,
+    "IconId" : "Obj/Materials/CoffeeBeans",
+    "Property" : "Nutrient",
+    "Group" : "RawFoodInedible",
+    "GroupId" : "FoodIngredients",
+    "EnergyOutput" : 100.0,
+    "InternalValue" : 14.0,
+    "Rarity" : 3
+}

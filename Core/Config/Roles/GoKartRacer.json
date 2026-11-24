@@ -1,0 +1,13 @@
+{
+    "Id" : "GoKartRacer",
+    "LovesJobTypes" : [ "Piloting" ],
+    "Species" : [ "Human" ],
+    "RoleTypes" : [ ],
+    "AgePhaseIds" : [ "Childhood" ],
+    "AdjustsSkills" : [
+        {
+            "JobId" : "Piloting",
+            "Adjustment" : 3
+        }
+    ]
+}

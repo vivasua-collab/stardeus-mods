@@ -1,0 +1,105 @@
+{
+    "QuestFlags" : [ "Random", "Template", "RequiresMemories", "OncePerGiver" ],
+    "TitleKey" : "quest.colonist.stash.title",
+    "DescKey" : "quest.colonist.stash.desc",
+    "QuestProviders" : [ "Colonist" ],
+    "CompatibleFactions" : [ "Player" ],
+    "Variables" : [
+        {
+            "Id" : "POI",
+            "Type" : "SectorPOI",
+            "Config" : [
+                { "Key" : "MinRegionsAway", "Int" : 1 },
+                { "Key" : "MinRegionDifficulty", "Float" : 0.2 },
+                { "Key" : "MaxRegionDifficulty", "Float" : 0.7 },
+                { "Key" : "POIConfigId", "String" : "Event" },
+                { "Key" : "SkipRegionsWithoutRelay", "Bool" : true }
+            ]
+        }
+    ],
+    "Steps" : [
+        {
+            "Id" : "FlyToSector",
+            "Type" : "GoToTargetSector",
+            "StepFlags" : [ "ActiveOnStart", "HideIfQuestUnaccepted" ],
+            "SetOnComplete" : [ "ColonistStash_ArrivedAtSector" ],
+            "Config" : [
+                { "Key" : "Var_Target", "String" : "POI" }
+            ]
+        },
+        {
+            "Id" : "ExplorePOI",
+            "Type" : "ExplorePOI",
+            "TitleKey" : "quest.colonist.stash.step.explore.title",
+            "DescKey" : "quest.colonist.stash.step.explore.desc",
+            "StepFlags" : [ "HideInactive" ],
+            "SetOnComplete" : [ "ExploredPOI" ],
+            "ActivateWhen" : [ "ColonistStash_ArrivedAtSector" ],
+            "Config" : [
+                { "Key" : "Var_POI", "String" : "POI" },
+                { "Key" : "ExpeditionMinHours", "Float" : 4.0 },
+                { "Key" : "ExpeditionMaxHours", "Float" : 8.0 },
+                // example for subsequent quests
+                { "Key" : "ExpeditionFoundItemMsgKey", "String" : null },
+                { "Key" : "PackageFlags", "StringSet" : [ "FailQuestOnDestroy", "CompleteQuestOnOpen" ] },
+                { "Key" : "PackageRewardIds", "StringSet" : [ "Treasure" ] }
+            ]
+        },
+        {
+            "Id" : "OpenPackage",
+            "Type" : "OpenPackage",
+            "StepFlags" : [ "HideInactive" ],
+            "ActivateWhen" : [
+                "ExploredPOI"
+            ],
+            "Config" : [
+                // if only one package is involved, this can be null,
+                // otherwise the if of the step that creates the package must be
+                // put here
+                { "Key" : "PackageStepId", "String" : null }
+            ]
+        }
+    ],
+    "Rewards" : [
+        {
+            "Id" : "Treasure",
+            "Type" : "Material_HighValue",
+            "RewardFlags" : [ "PackageContent" ],
+            "Config" : [
+                { "Key" : "MinPrice", "Int" : 2000 },
+                { "Key" : "MinValue", "Int" : 20000 },
+                { "Key" : "MaxValue", "Int" : 800000 },
+                { "Key" : "NetWorthCurve", "FloatSet" : [
+                    0.0, 0.08,
+                    1.0, 0.20
+                ] }
+            ]
+        },
+        {
+            "Id" : "GiverHappy",
+            "Type" : "ColonistMood",
+            "Config" : [
+                { "Key" : "Magnitude", "Int" : 10 },
+                { "Key" : "DurationHours", "Float" : 24.0 },
+                { "Key" : "ReasonKey", "String" : "mood.colonist.stash.retrieved" }
+            ]
+        },
+        {
+            "Id" : "GiverTrusts",
+            "Type" : "ColonistTrust",
+            "Config" : [
+                { "Key" : "Magnitude", "Int" : 15 },
+                { "Key" : "DurationHours", "Float" : 2880.0 }
+            ]
+        },
+        {
+            "Id" : "GiverDisappointed",
+            "Type" : "ColonistTrust",
+            "RewardFlags" : [ "Penalty" ],
+            "Config" : [
+                { "Key" : "Magnitude", "Int" : -5 },
+                { "Key" : "DurationHours", "Float" : 720.0 }
+            ]
+        }
+    ]
+}

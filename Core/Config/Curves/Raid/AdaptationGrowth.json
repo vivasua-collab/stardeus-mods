@@ -1,0 +1,17 @@
+{
+    // Raid adaptation days -> adaptation days gained per game day (applied every half day).
+    // Fast recovery after losses (below 0), slower growth over a run without losses (above
+    // 0), which only starts after the opening grace (RaidAdaptation.GraceDays) and is scaled
+    // by Difficulty.AdaptationGrowthOverZero. The popular colony sim's steps with the
+    // adaptation days doubled, so the rates stay its own.
+    "FloatSet" : [
+        -60.01, 6.0,
+        -60.0,  3.0,
+        -0.01,  3.0,
+        0.0,    1.0,
+        119.99, 1.0,
+        120.0,  0.5,
+        239.99, 0.5,
+        240.0,  0.25
+    ]
+}

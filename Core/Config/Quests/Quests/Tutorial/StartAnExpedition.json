@@ -1,0 +1,45 @@
+{
+    "QuestFlags" : [ "Tutorial", "AutoAdd", "Unique" ],
+    "TitleKey" : "quest.StartAnExpedition",
+    "DescKey" : "quest.StartAnExpedition.desc",
+    "QuestProviders" : [
+        "ShipComputer"
+    ],
+    // The shuttle works within the current sector, so the expedition does not wait for flight
+    // readiness, which is offered at the same time: the radar reveals the deposits, and the
+    // ore it brings back is what makes smelting worth setting up.
+    "AvailableWhen" : [
+        "ReadyForTutorialQuests",
+        "HasRadar"
+    ],
+    "OnStartTutorialId": "Resources/LaunchingExpeditions",
+    "OnStartTutorialDelay": 3,
+    "SetOnComplete" : [ "HadExpedition" ],
+    // if tutorial quest gets abandoned, we still want to move on with the other tutorials
+    "SetOnFail" : [ "HadExpedition" ],
+    "Steps" : [
+        {
+            "Id": "RequireShuttle",
+            "Type" : "RequireShuttle",
+            "StepFlags" : [ "ActiveOnStart", "Secret", "FailsQuest" ]
+        },
+        {
+            // The expedition aborts itself during boarding if the shuttle carries any damage
+            // (ExpeditionStagePrep), and wrecked starts hand the player a damaged one. Without
+            // this step the lesson is a dead end with no explanation. Hides itself on ships
+            // whose shuttle is intact.
+            "Id": "RepairShuttle",
+            "Type" : "RepairDevice",
+            "StepFlags" : [ "ActiveOnStart" ],
+            "TooltipKey" : "quest.StartAnExpedition.repair.shuttle.tip",
+            "Config" : [
+                { "Key" : "Definition", "String" : "Objects/Devices/Shuttle" }
+            ]
+        },
+        {
+            "Id": "StartExpedition",
+            "Type" : "StartExpedition",
+            "StepFlags" : [ "ActiveOnStart", "CompletesQuest" ]
+        }
+    ]
+}

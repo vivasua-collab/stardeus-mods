@@ -1,0 +1,21 @@
+{
+    // C# implementation id.
+    // Multiple configurations can point to a single implementation.
+    "EventId" : "DerelictShipWithSurvivors",
+    // How much does this story event cost to run
+    "Points" : 8,
+    // Options: Negative, Positive, Neutral, Raid, Raid
+    "OutcomeType" : "Positive",
+    // Full list is in StoryEventFlags class
+    "EventFlags" : [
+        "OnDemand",
+        "DerelictShip",
+        "DerelictSpawnsSurvivors"
+    ],
+    "MinRepeatDelayDays" : 120
+    // Variables for the story event implementation
+    // "Properties" : [
+    //     // how many beings we will choose from
+    //     { "Key" : "RiggedEvent", "String" : "Capsule/StorageCapsuleRaid" }
+    // ]
+}

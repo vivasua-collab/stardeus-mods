@@ -1,0 +1,9 @@
+{
+    "Id" : "Obj/Parts/Lung/LungMedium",
+    "Type" : "CFD",
+    "Groups" : [ "BodyPart", "BlackMarket" ],
+    "Value" : 300.0,
+    "Rarity" : 0.1,
+    "MinSectorDifficulty" : 0.47,
+    "Volatility" : 0.00163
+}

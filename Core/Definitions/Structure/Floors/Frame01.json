@@ -1,0 +1,44 @@
+{
+    "BuildGroup" : "Frame",
+    "ToolPath" : "Floors/FloorSpecial",
+    "Layer" : "Floor",
+    "ParentId" : "Structure/Floors/BaseFloor",
+    "Components" : [
+        {
+            "Component" : "TileGraphics",
+            "Properties" : [
+                { "Key" : "Shader", "String": "TransparentFloorTile" },
+                { "Key" : "Graphic", "String": "Structure/Floors/Frame01" },
+                { "Key" : "Foundation", "String": "Structure/Foundations/Frame" }
+            ]
+        },
+        {
+            "Component" : "HullIntegrity",
+            "Properties" : [
+                { "Key" : "MaxIntegrity", "Float" : 0.25 },
+                { "Key" : "MaxInsulation", "Float" : 0 },
+                { "Key" : "MaxAirtight", "Float" : 0 }
+            ]
+        },
+        {
+            "Component" : "Passability",
+            "Properties" : [
+                { "Key" : "IsWalkable", "Bool" : true },
+                { "Key" : "Difficulty", "Float" : 0 }
+            ]
+        },
+        {
+            "Component" : "Constructable",
+            "Properties" : [
+                { "Key" : "Placement", "String" : "InSpace" },
+                { "Key" : "WorkAmount", "Int" : 25 },
+                {
+                    "Key" : "Contents",
+                    "RawMaterials" : [
+                        { "TypeId" : "SteelPlate", "StackSize" : 1 }
+                    ]
+                }
+            ]
+        }
+    ]
+}

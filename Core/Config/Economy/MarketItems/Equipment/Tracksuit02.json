@@ -1,0 +1,9 @@
+{
+    "Id" : "Obj/Equipment/Clothing/Tracksuit02",
+    "Type" : "CFD",
+    "Groups" : [ "Equipment" ],
+    "Value" : 90.0,
+    "Rarity" : 0.7,
+    "MinSectorDifficulty" : 0.45,
+    "Volatility" : 0.0025
+}

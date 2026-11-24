@@ -1,0 +1,17 @@
+// ISS: Independent Space Station
+{
+    "ChanceWillTrade" : 1.0,
+    "CompatibleFactions" : [
+        "Player",
+        "OldEarth",
+        "Adventurer",
+        "Scavenger",
+        "Capitalist",
+        "Sentinel"
+    ],
+    "CompatibleClasses" : [
+        "SpaceStation"
+    ],
+    "MinOffensiveness" : 0.5,
+    "MaxOffensiveness" : 1.0
+}

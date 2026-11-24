@@ -1,0 +1,8 @@
+{
+    // light at the surgeon's spot -> SurgerySuccess multiplier. x0.75 at 0 light, none from 50%
+    "FloatSet" : [
+        0.0, 0.75,
+        0.5, 1.0,
+        1.0, 1.0
+    ]
+}

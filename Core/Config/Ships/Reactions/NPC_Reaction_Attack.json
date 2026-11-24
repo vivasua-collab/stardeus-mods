@@ -1,0 +1,19 @@
+{
+    // We will make this reaction always available, but it will check
+    // for attack probability in the code
+    "ReactionId" : "Attack",
+
+    "AttitudeMul" : [
+        -1.0, 1.0,
+        1.0, 1.0
+    ],
+    "RegionDifficultyMul" : [
+        0.0, 0.0,
+        0.8, 0.0,
+        0.9, 0.05,
+        1.0, 0.15
+    ],
+
+    "DefaultFactionChance" : 1.0,
+    "DefaultClassChance" : 1.0
+}

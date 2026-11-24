@@ -1,0 +1,27 @@
+{
+    "Id" : "Research/ShipCombat/WeaponCapacityUpgrade",
+    "Tier" : 4,
+    "IsAbstract" : true,
+    "NameKey": "noun.weapon.capacity.upgrade",
+    "PreviewIcon" : "Icons/Color/AttackTarget",
+    "Researchable" : {
+        "IsTreeNode" : true,
+        "Prerequisites" : [
+            "Research/ShipCombat/WeaponsMissile"
+        ],
+        "DatoidCosts" : [
+            {
+                "TypeId" : "DatoidSynthetic",
+                "StackSize" : 13
+            },
+            {
+                "TypeId" : "DatoidTechHigh",
+                "StackSize" : 20
+            },
+            {
+                "TypeId" : "DatoidEnergy",
+                "StackSize" : 16
+            }
+        ]
+    }
+}

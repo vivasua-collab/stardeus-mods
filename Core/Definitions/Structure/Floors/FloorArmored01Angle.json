@@ -1,0 +1,58 @@
+{
+    "BuildGroup" : "FloorArmoredAngle",
+    "Layer" : "Floor",
+    "ParentId" : "Structure/Floors/FloorArmored01",
+    "Components" : [
+        {
+            "Component" : "TileTransform",
+            "Properties" : [
+                { "Key" : "PlacementType", "String" : "Single" },
+                { "Key" : "IsRotatable", "Bool" : true }
+            ]
+        },
+        {
+            "Component" : "TileGraphics",
+            "Properties" : [
+                { "Key" : "Graphic", "String": "Structure/Floors/FloorArmored01Angle" },
+                { "Key" : "Shader", "String": "TransparentFloorTile" },
+                { "Key" : "IsAngled", "Bool": true }
+            ]
+        },
+        {
+            "Component" : "HullIntegrity",
+            "Properties" : [
+                { "Key" : "MaxIntegrity", "Float" : 0.5 },
+                { "Key" : "MaxInsulation", "Float" : 0 },
+                { "Key" : "MaxAirtight", "Float" : 0 }
+            ]
+        },
+        {
+            "Component" : "Damageable",
+            "Properties" : [
+                { "Key" : "Max", "Int" : 300 }
+            ]
+        },
+        {
+            "Component" : "Constructable",
+            "Properties" : [
+                { "Key" : "CanDragRow", "Bool": false },
+                { "Key" : "WorkAmount", "Int" : 400 },
+                {
+                    "Key" : "Contents",
+                    "RawMaterials" : [
+                        { "TypeId" : "LeadPlate", "StackSize" : 1 },
+                        { "TypeId" : "TitaniumPlate", "StackSize" : 1 },
+                        { "TypeId" : "CarbonFiber", "StackSize" : 1 }
+                    ]
+                }
+            ]
+        },
+        {
+            "Component" : "Passability",
+            "Properties" : [
+                { "Key" : "IsWalkable", "Bool" : false },
+                { "Key" : "Difficulty", "Float" : 0.5 }
+            ]
+        }
+    ]
+}

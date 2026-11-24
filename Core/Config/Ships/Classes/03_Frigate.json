@@ -1,0 +1,76 @@
+// Frigate Class: Medium-sized, versatile, good firepower, often a patrol or escort ship.
+{
+    "Id" : "Frigate",
+    "RequiredClassId" : "Corvette",
+    "UnlockPrice" : 15000,
+
+    "MinSize": 500,
+    "MaxSize": 1400,
+    "DerelictSizeMin" : 0.1,
+    "DerelictSizeMax" : 0.3,
+    "DerelictWidthMin" : 0.5,
+    "DerelictWidthMax" : 0.7,
+    "MinEnergy" : 600,
+    "NPCDeviceRepairHealthPerHour" : 600,
+
+    "WeaponsTier" : 2,
+    "MaxClassPoints" : 40,
+    "MaxPointDefense" : 0,
+
+    "MaxShields" : 1,
+    "MinShields" : 0,
+
+    "Visual_EngineCurvatureSign" : -1,
+    "Visual_EnginesPerRow" : 8,
+    "Visual_EngineDensity" : 0.11,
+    "Visual_DeviceMaxScale" : 1.25,
+
+    "CombatMotionHover" : 1.5,
+    "CombatMotionRotation" : 2.4,
+    "CombatMotionSpeed" : 0.8,
+
+    "FluxSoftVentPerHour" : 300,
+
+    "FluxBonus" : 430,
+    "MaxFluxCapacity" : 1500,
+    "MaxFluxVents" : 4,
+    "HPBonus" : 500,
+    "NPCHPBonus" : 400,
+    "ViewScale" : 1.5,
+
+    "BaseEvasion" : 0.11,
+
+    "ViewZoneWidth" : [
+        0.0, 0.7,
+        0.5, 1.0,
+        1.0, 0.7
+    ],
+
+    "CombatBreachCapsuleChance" : 0.00,
+    "NoShieldsChance" : 0.25,
+
+    "NPCSizeRange" : [
+        0.0, 600,
+        0.5, 900,
+        1.0, 1400
+    ],
+    "NumThrustersChance" : [
+        0.0, 1.0,
+        1.0, 3.0
+    ],
+    "NumShortRangeDrivesChance" : [
+        0.0, 1.0,
+        1.0, 2.0
+    ],
+    "NumLongRangeDrivesChance" : [
+        0.0, 0.0,
+        1.0, 0.0
+    ],
+    // fairly common ship type
+    "Rarity" : 0.8,
+    // guaranteed to appear in sectors of all difficulties with same chance
+    "OriginDifficultyChance" : [
+        0.0, 1.0,
+        1.0, 1.0
+    ]
+}

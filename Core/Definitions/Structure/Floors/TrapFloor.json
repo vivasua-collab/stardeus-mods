@@ -1,0 +1,82 @@
+{
+    "ToolPath" : "Security",
+    "Layer" : "Floor",
+    "ParentId" : "Structure/Floors/Floor01",
+    "Researchable" : {
+        "Prerequisites" : [
+            "Research/Security/TrapFloor"
+        ]
+    },
+    "Components" : [
+        {
+            "Component" : "TileTransform",
+            "Properties" : [
+                { "Key" : "PlacementType", "String": "Single" }
+            ]
+        },
+        {
+            "Component" : "Flammable",
+            "Properties" : [
+                { "Key" : "FireChance", "Float" : 0.25 }
+            ]
+        },
+        {
+            "Component" : "Passability",
+            "Properties" : [
+                { "Key" : "Difficulty", "Float" : 0.9 }
+            ]
+        },
+        {
+            "Component" : "TileGraphics",
+            "Properties" : [
+                { "Key" : "AnimationFrames", "Int": 2 },
+                { "Key" : "AliasLR", "Bool" : true },
+                { "Key" : "AliasUD", "Bool" : true },
+                {
+                    "Key" : "Graphic",
+                    "String": "Structure/Floors/TrapFloor01"
+                }
+            ]
+        },
+        {
+            "Component" : "TrapFloor",
+            "Properties" : [
+                { "Key" : "Damage", "Int" : 100 },
+                { "Key" : "EnergyCost", "Float" : 3 },
+                { "Key" : "ResetTimeHours", "Float" : 0.5 }
+            ]
+        },
+        { "Component" : "TileLabel" },
+        {
+            "Component" : "ElectricNode",
+            "Properties" : [
+                { "Key" : "IsConsumer", "Bool" : true }
+            ]
+        },
+        { "Component" : "Upgrades" },
+        {
+            "Component" : "WithFuse",
+            "Properties" : [
+                { "Key" : "MalfunctionWeight", "Float": 1.0 }
+            ]
+        },
+        {
+            "Component" : "Constructable",
+            "Properties" : [
+                { "Key" : "CanReplaceSameLayer", "Bool": true },
+                { "Key" : "CanDragRow", "Bool": false },
+                { "Key" : "WorkAmount", "Int" : 800 },
+                {
+                    "Key" : "Contents",
+                    "RawMaterials" : [
+                        { "TypeId" : "SteelPlate", "StackSize" : 3 },
+                        { "TypeId" : "TitaniumPlate", "StackSize" : 1 },
+                        { "TypeId" : "Gears", "StackSize" : 1 },
+                        { "TypeId" : "OpticalFiber", "StackSize" : 1 },
+                        { "TypeId" : "Transistor", "StackSize" : 1 }
+                    ]
+                }
+            ]
+        }
+    ]
+}

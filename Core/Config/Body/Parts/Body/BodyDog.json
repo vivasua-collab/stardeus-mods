@@ -1,0 +1,76 @@
+{
+    "SlotTypeId" : "Body",
+    "Compatibility" : "TargetSpecies",
+    "TargetSpecies" : [ "Dog" ],
+    "PartFlags" : [ "Biological" ],
+    "ResistanceBase" : 6.0,
+    "Resistances" : [
+        { "DamageType" : "Energy", "Resistance" : 9.0 }
+    ],
+    "AddsAbilities" : [
+        "Sleep"
+    ],
+    "AddsNeeds" : [
+        "Health",
+        "Hunger",
+        "Toilet",
+        "Oxygen",
+        "Temperature",
+        "Sleep"
+    ],
+    "ProvidesStats" : [
+        {
+            "Component" : "TempMin",
+            "Properties" : [
+                { "Key" : "StateMul", "Float" : 0.0 },
+                { "Key" : "QualityMul", "Float" : 0.0001 },
+                { "Key" : "TemperatureCelsius", "Float" : -30.0 }
+            ]
+        },
+        {
+            "Component" : "TempMax",
+            "Properties" : [
+                { "Key" : "StateMul", "Float" : 0.0 },
+                { "Key" : "QualityMul", "Float" : 0.01 },
+                { "Key" : "TemperatureCelsius", "Float" : 40.0 }
+            ]
+        },
+        {
+            "Component" : "WoundHealRate",
+            "Properties" : [
+                { "Key" : "StateMul", "Float" : 0.5 },
+                { "Key" : "AmountPerDay", "Float" : 0.06 }
+            ]
+        },
+        {
+            "Component" : "BloodClotRate",
+            "Properties" : [
+                { "Key" : "StateMul", "Float" : 0.5 },
+                { "Key" : "AmountPerDay", "Float" : 0.036 }
+            ]
+        },
+        {
+            "Component" : "HungerRate",
+            "Properties" : [
+                { "Key" : "AmountPerDay", "Float" : 1.0 },
+                { "Key" : "QualityMul", "Float" : 0.1 }
+            ]
+        },
+        {
+            "Component" : "SleepRate",
+            "Properties" : [
+                // "1/8. 1.0 or 100% in 8 hours" }
+                { "Key" : "AmountPerHour", "Float" : 0.125 },
+                { "Key" : "QualityMul", "Float" : 0.0001 }
+            ]
+        },
+        {
+            "Component" : "SleepPressureRate",
+            "Properties" : [
+                // 1/20 will drop fully in 20 hours
+                { "Key" : "AmountPerHour", "Float" : 0.05 },
+                { "Key" : "QualityMul", "Float" : 0.0001 }
+            ]
+        }
+    ]
+}

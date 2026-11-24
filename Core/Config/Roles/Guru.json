@@ -1,0 +1,13 @@
+{
+    "Id" : "Guru",
+    "Species" : [ "Human" ],
+    "LovesJobTypes" : [ "Social" ],
+    "IncapableJobTypes" : [ "Construction" ],
+    "AgePhaseIds" : [ "MidLife", "Retirement" ],
+    "AdjustsSkills" : [
+        {
+            "JobId" : "Social",
+            "Adjustment" : 4
+        }
+    ]
+}

@@ -1,0 +1,11 @@
+{
+    // Skill level -> XP needed for the next level (SkillXp has what each activity gives).
+    // Levels 20-24 only come from training (generation stops at 20) and keep climbing toward
+    // the cap of 25
+    "FloatSet" : [
+        0, 1000,
+        9, 10000,
+        19, 30000,
+        24, 40000
+    ]
+}

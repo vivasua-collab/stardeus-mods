@@ -1,0 +1,19 @@
+{
+    "Id" : "Terrorist",
+    "Species" : [ "Human", "Robot" ],
+    "RoleTypes" : [ "Dumb", "Evil" ],
+    "LovesJobTypes" : [ "Dangerous" ],
+    "IncapableJobTypes" : [ "Intellectual" ],
+    "IncompatibleTraitIds" : [ "Pacifist" ],
+    "Rarity" : 0.25,
+    "AdjustsSkills" : [
+        {
+            "JobId" : "Shooting",
+            "Adjustment" : 6
+        },
+        {
+            "JobId" : "Social",
+            "Adjustment" : -1
+        }
+    ]
+}

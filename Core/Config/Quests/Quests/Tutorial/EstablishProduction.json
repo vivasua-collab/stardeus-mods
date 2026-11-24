@@ -1,0 +1,87 @@
+{
+    "QuestFlags" : [ "Tutorial", "AutoAdd", "Unique" ],
+    "TitleKey" : "quest.EstablishProduction",
+    "DescKey" : "quest.EstablishProduction.desc",
+    "QuestProviders" : [
+        "ShipComputer"
+    ],
+    // Straight after ConnectToSurvivorArea, which in scenarios without a survivor area is
+    // scenario-skipped an activator tick after the charge station. Production is the only
+    // slot in the tutorial spine that can differ per crew (manual here, Assembler when nobody
+    // can craft), so it sits ahead of the rest: everything from EstablishResearch on can then
+    // key off HasEstablishedProduction and be identical in every scenario. It needs no
+    // research the player could not already have - Research/Production/Assembly is a basic
+    // node and the scenarios pre-unlock it - so nothing is asked before it is taught.
+    "AvailableWhen" : [
+        "ReadyForTutorialQuests",
+        "HasConnectedToSurvivorArea"
+    ],
+    // The Crafting Station is operator-required. The Crafting job is ability-driven
+    // (Manipulate + Craft), and the stock robot's Manipulator hand grants both, so robot-only
+    // starts normally get this quest too. A scenario intro sets CrewCannotCraft only when it
+    // finds nobody who can run the station, and then
+    // Tutorial/EstablishAutomatedProduction (Assembler) takes over.
+    "RemoveIf" : [ "CrewCannotCraft" ],
+    "SetOnComplete" : [ "HasEstablishedProduction" ],
+    "SetOnFail" : [ "HasEstablishedProduction" ],
+    "BoundTutorialIds": [ "Resources/ConfigureCrafter" ],
+    "Steps" : [
+        {
+            "Id": "ResearchAssembly",
+            "Type" : "UnlockResearch",
+            "StepFlags" : [ "ActiveOnStart" ],
+            "Config" : [
+                { "Key" : "Research", "String" : "Research/Production/Assembly" }
+            ],
+            "SetOnComplete" : [
+                "UnlockedAssembly"
+            ]
+        },
+        {
+            "Id": "HaveCraftingStation",
+            "Type" : "HaveOnGrid",
+            "Config" : [
+                { "Key" : "Definition", "String" : "Objects/Devices/CraftingStation" },
+                { "Key" : "Count", "Int" : 1 }
+            ],
+            "ActivateWhen" : [
+                "UnlockedAssembly"
+            ],
+            "SetOnComplete" : [
+                "HasCraftingStation"
+            ]
+        },
+        {
+            "Id": "ConfigureCraftingStation",
+            "Type" : "ConfigureCrafter",
+            "ActivateWhen" : [
+                "HasCraftingStation"
+            ],
+            "SetOnComplete" : [
+                "HasConfiguredCraftingStation"
+            ],
+            "Config" : [
+                {
+                    "Key" : "Crafter",
+                    "String" : "Objects/Devices/CraftingStation"
+                },
+                {
+                    "Key" : "Product",
+                    "String" : "Obj/Materials/Gears"
+                }
+            ]
+        },
+        {
+            "Id": "ProduceGears",
+            "StepFlags" : [ "CompletesQuest" ],
+            "Type" : "Produce",
+            "ActivateWhen" : [
+                "HasConfiguredCraftingStation"
+            ],
+            "Config" : [
+                { "Key" : "Product", "String" : "Obj/Materials/Gears" },
+                { "Key" : "Count", "Int" : 5 }
+            ]
+        }
+    ]
+}

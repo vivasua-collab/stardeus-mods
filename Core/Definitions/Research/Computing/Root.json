@@ -1,0 +1,10 @@
+{
+    "Id" : "Research/Computing/Root",
+    "Tier" : 0,
+    "IsAbstract" : true,
+    "PreviewIcon" : "Icons/Color/CPU",
+    "NameKey" : "research.computing",
+    "Researchable" : {
+        "IsTreeNode" : true
+    }
+}

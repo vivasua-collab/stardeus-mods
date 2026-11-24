@@ -1,0 +1,27 @@
+{
+    "Id" : "Research/LifeSupport/HeatingAdvanced",
+    "Tier" : 3,
+    "IsAbstract" : true,
+    "PreviewIcon" : "Icons/Color/Temperature",
+    "NameKey" : "research.heatingadvanced",
+    "Researchable" : {
+        "IsTreeNode" : true,
+        "Prerequisites" : [
+            "Research/LifeSupport/HeatingImproved"
+        ],
+        "DatoidCosts" : [
+            {
+                "TypeId" : "DatoidBiotic",
+                "StackSize" : 4
+            },
+            {
+                "TypeId" : "DatoidEnergy",
+                "StackSize" : 5
+            },
+            {
+                "TypeId" : "DatoidTechHigh",
+                "StackSize" : 4
+            }
+        ]
+    }
+}

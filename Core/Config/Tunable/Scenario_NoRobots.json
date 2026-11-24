@@ -1,0 +1,68 @@
+{
+    "Ints" : [
+        { "Key" : "NoRobots_SteelPlate", "Int" : 500 },
+        { "Key" : "NoRobots_TitaniumPlate", "Int" : 100 },
+        { "Key" : "NoRobots_Glass", "Int" : 30 },
+        { "Key" : "NoRobots_CopperPlate", "Int" : 30 },
+        { "Key" : "NoRobots_Carbon", "Int" : 10 },
+        { "Key" : "NoRobots_Protein", "Int" : 15 },
+        { "Key" : "NoRobots_Lithium", "Int" : 5 },
+        { "Key" : "NoRobots_Water", "Int" : 100 },
+        { "Key" : "NoRobots_Rock", "Int" : 20 },
+        { "Key" : "NoRobots_SurvivalMeal", "Int" : 30 },
+        { "Key" : "NoRobots_Soil", "Int" : 15 },
+        { "Key" : "NoRobots_CarbonFiber", "Int" : 10 },
+        { "Key" : "NoRobots_SiliconWafer", "Int" : 10 },
+        { "Key" : "NoRobots_Microchip", "Int" : 10 },
+        { "Key" : "NoRobots_Microchip2", "Int" : 2 },
+        { "Key" : "NoRobots_Transistor", "Int" : 20 },
+        { "Key" : "NoRobots_BatteryCell", "Int" : 10 },
+        { "Key" : "NoRobots_FusionCell", "Int" : 10 },
+        { "Key" : "NoRobots_Phasium", "Int" : 10 },
+        { "Key" : "NoRobots_Plastic", "Int" : 30 },
+        { "Key" : "NoRobots_OpticalFiber", "Int" : 10 },
+        { "Key" : "NoRobots_CopperWire", "Int" : 30 },
+        { "Key" : "NoRobots_Rubber", "Int" : 30 },
+        { "Key" : "NoRobots_Gears", "Int" : 15 }
+    ],
+    "StringSets" : [
+        {
+            "Key" : "NoRobots_UnlockedResearch",
+            "StringSet" : [
+                "Research/Computing/Research",
+                "Research/Construction/Structure",
+                "Research/Habitation/Furniture",
+                "Research/Energy/ConnectorImproved",
+                "Research/Energy/Reactor",
+                "Research/Robotics/Maintenance",
+                "Research/Construction/StorageMini",
+                "Research/LifeSupport/FoodProduction",
+                "Research/LifeSupport/Hygiene",
+                // Tutorial/EstablishProduction is the second quest of the game, before the
+                // research tutorial; its Crafting Station sits behind this node, so it must
+                // hold whatever the Basic Tech modifier says.
+                "Research/Production/Assembly"
+            ]
+        },
+        {
+            "Key" : "NoRobots_Objects",
+            "StringSet" : [
+                "Templates/TableWithChairs01"
+            ]
+        },
+        {
+            "Key" : "NoRobots_Objs",
+            // Kept even empty: gen stages take rng forks in order, so dropping this stage
+            // would move what every later stage places
+            "StringSet" : []
+        },
+        {
+            "Key" : "NoRobots_StartingWeapons",
+            // Equipped on the starting crew (StartingCrewWeapons), not dropped on the floor
+            "StringSet" : [
+                "Obj/Equipment/Weapons/Handgun01",
+                "Obj/Equipment/Weapons/Knife01"
+            ]
+        }
+    ]
+}

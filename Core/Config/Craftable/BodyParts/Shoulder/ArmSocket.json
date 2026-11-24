@@ -1,0 +1,16 @@
+{
+    "Type" : "Robotics1",
+    "ProductDefId" : "Obj/Parts/Shoulder/ArmSocket",
+    "ProductionTimeHours" : 96,
+    "EnergyCost" : 15,
+    "IgnoreMarket" : true,
+    "Ingredients" : [
+        { "TypeId" : "TitaniumPlate", "StackSize" : 1 },
+        { "TypeId" : "CopperWire", "StackSize" : 8 },
+        { "TypeId" : "Rubber", "StackSize" : 2 },
+        { "TypeId" : "Plastic", "StackSize" : 1 }
+    ],
+    "DisposableOutput" : [
+        { "TypeId" : "ScrapMetal", "StackSize" : 1 }
+    ]
+}

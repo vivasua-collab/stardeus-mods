@@ -1,0 +1,64 @@
+{
+    "Floats" : [
+        { "Key" : "HyperjumpSpeed", "Float" : 2.0 },
+        { "Key" : "HyperjumpNextWaypointDelayHours", "Float" : 2.0 },
+        { "Key" : "ShipSpeedMin", "Float" : 0.01 },
+        { "Key" : "ShipSpeedMax", "Float" : 10.0 },
+        { "Key" : "SpaceTravelBaseSpeed", "Float" : 0.001 },
+        { "Key" : "ShuttleSpeedBase", "Float" : 0.0002 },
+        { "Key" : "CopterSpeedBase", "Float" : 0.0002 },
+        { "Key" : "CopterSpeedBaseOnShip", "Float" : 6.0 },
+        { "Key" : "SpaceTravelFlightSpeed", "Float" : 20.0 },
+        { "Key" : "SpaceTravelRotationSpeed", "Float" : 1.0 },
+
+        { "Key" : "SpaceBGMotionSpeed", "Float" : 0.0003 },
+        { "Key" : "SpaceBGMotionSpeed_Hyperspace", "Float" : 0.006 },
+
+        // How far the ship maneuvers when boarding a derelict it is already parked next
+        // to. Deliberately tiny - it only exists so the engines burn and the ship turns a
+        // little instead of the derelict appearing out of nowhere.
+        { "Key" : "DerelictApproachHopDist", "Float" : 0.5 },
+
+        // How far from the player the scenario's starting derelict spawns. Much closer
+        // and its starmap icon hides under ours, where new players never notice it. Much
+        // further and it leaves the screen in the starfield behind the ship.
+        { "Key" : "StartingDerelictDist", "Float" : 4.5 },
+
+        { "Key" : "SpaceTravelAcceleration", "Float" : 0.05 },
+        { "Key" : "SpaceTravelDeceleration", "Float" : 0.05 },
+
+        { "Key" : "StarmapSpaceObjectSpread", "Float" : 500 },
+        { "Key" : "StarmapPositionMultiplier_Region", "Float" : 15.0 },
+        { "Key" : "StarmapPositionMultiplier_Sector", "Float" : 10.0 },
+        { "Key" : "LooseObjectFloatSpeed", "Float" : 0.1 },
+        { "Key" : "IncomingSpaceBodiesShipMoveMul", "Float" : 10.0 },
+        { "Key" : "MeteorOOBSpawnDistance", "Float" : 60.0 },
+        // Share of the asteroid's area that survives a split, the rest burns off
+        { "Key" : "AsteroidSplitMassKeep", "Float" : 0.75 },
+        // Full width of the fan the fragments fly out in
+        { "Key" : "AsteroidSplitSpreadDegrees", "Float" : 40.0 },
+        // Rocks too small to punch through the ship only burst on the surface.
+        // Multiplier of the punch through explosion strength
+        { "Key" : "AsteroidSurfaceImpactStrengthMul", "Float" : 0.35 },
+        { "Key" : "StarmapMargin", "Float" : 100 },
+        { "Key" : "StarmapApproxMagnitude", "Float" : 1.0 },
+        { "Key" : "StarmapVisualCondensation", "Float" : 50.0 },
+        { "Key" : "BaseScanDurationDays", "Float" : 2.0 }
+    ],
+    "FloatSets" : [
+        // How much damage % a void ripper will receive upon going though a
+        // Black Hole.
+        // Random value => damage %
+        {
+            "Key" : "VoidRipperDamageChance",
+            "FloatSet" : [
+                0.0, 0.0,
+                0.05, 0.0,
+                0.5, 0.25,
+                0.9, 0.5,
+                0.95, 1.0,
+                1.0, 1.0
+            ]
+        }
+    ]
+}

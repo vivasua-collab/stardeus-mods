@@ -1,0 +1,38 @@
+{
+    "BehaviorId" : "Region_Patrol",
+
+    "OriginDifficultyChance" : [
+        0.0, 0.2,
+        1.0, 2.0
+    ],
+
+    "RequiresEngines" : true,
+
+    "FactionChanceKey" : [
+        "Virus",
+        "Sentinel",
+        "Pirate"
+    ],
+    "FactionChanceValue" : [
+        0.8,
+        0.7,
+        0.5
+    ],
+    "DefaultFactionChance" : 0.0,
+
+    "ClassChanceKey" : [
+        "Fighter",
+        "Frigate",
+        "Corvette",
+        "Cruiser",
+        "Battlecruiser"
+    ],
+    "ClassChanceValue" : [
+        0.2,
+        0.3,
+        0.3,
+        0.4,
+        0.3
+    ],
+    "DefaultClassChance" : 0.0
+}

@@ -1,0 +1,12 @@
+{
+    "Id" : "Paranoid",
+    "IconId" : "Icons/Color/AttackTarget",
+    "TypeId" : "Mental",
+    "Rarity" : 0.02,
+    "AdjustsSkills" : [
+        {
+            "JobId" : "Shooting",
+            "Adjustment" : 2
+        }
+    ]
+}

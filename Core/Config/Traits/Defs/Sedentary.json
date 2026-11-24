@@ -1,0 +1,14 @@
+{
+    "Id" : "Sedentary",
+    "IconId" : "Icons/Color/Furniture",
+    "TypeId" : "Civilized",
+    "Rarity" : 0.5,
+    "BodyTypes" : "L",
+    "IncapableJobTypes" : [ "Expedition", "Mining" ],
+    "AdjustsSkills" : [
+        {
+            "JobId" : "Research",
+            "Adjustment" : 1
+        }
+    ]
+}

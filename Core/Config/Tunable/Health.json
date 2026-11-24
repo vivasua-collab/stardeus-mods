@@ -1,0 +1,112 @@
+{
+    "Ints" : [
+        { "Key" : "Room_PersonalQuartersMinSize", "Int" : 6 },
+        { "Key" : "Room_PersonalQuartersMaxSize", "Int" : 30 },
+        { "Key" : "Room_TooBigStartingSize", "Int" : 100 }
+    ],
+    "Floats" : [
+        // 1.0 = +100% of natural wound heal rate (i.e. double)
+        { "Key" : "BedRest_WoundHealRate_AddPctPerHour", "Float" : 0.05 },
+        { "Key" : "BedRest_BloodClotRate_AddPct", "Float" : 2.0 },
+        { "Key" : "BedRest_BloodRegenRate_AddPct", "Float" : 1.0},
+        { "Key" : "BodyPartReplacementDurationHours", "Float" : 1 },
+        { "Key" : "StarvationDevelopmentRateDays", "Float" : 3 },
+        { "Key" : "StarvationRecoveryRateHours", "Float" : 1 },
+        { "Key" : "CrawlerHatchTimeDays", "Float" : 21.0 },
+        { "Key" : "FoodConsumptionRate", "Float" : 2.0 },
+        { "Key" : "BodyPartRisk_Extract", "Float" : 0.35 },
+        { "Key" : "BodyPartRisk_Implant", "Float" : 0.15 },
+        // A crippled body part can heal, but its Condition can never rise above this
+        { "Key" : "CrippledPartMaxCondition", "Float" : 0.5 },
+        // How fast the pain of a destroyed part fades, as a share of the wound heal rate.
+        // At a human's base rate (0.25 per day) 0.33 settles it in about 12 days.
+        { "Key" : "DestroyedPartSettleMul", "Float" : 0.33 },
+        { "Key" : "BodyPartRejectionChance", "Float" : 0.15 },
+        { "Key" : "SurgerySuccessChanceMin", "Float" : 0.05 },
+        { "Key" : "SurgerySuccessChanceMax", "Float" : 0.95 },
+        // Multiplies BodyPartType.RejectionRisk when the implanted part is not native to the patient species
+        { "Key" : "BodyPartForeignRejectionRiskMul", "Float" : 2.0 },
+        // Quality (long-term stat) loss per week for rotting biological bodies
+        { "Key" : "RottingQualityLossPerWeek", "Float" : 0.125 },
+        // Condition (wound-based health) loss per week for rotting biological bodies
+        { "Key" : "RottingConditionLossPerWeek", "Float" : 0.5 },
+        // How many days for Rotting condition to fully develop after death
+        { "Key" : "RottingDevelopmentDays", "Float" : 1.0 },
+        // Rotting slowdown multiplier when stored in a Morgue (e.g. 20 = 20x slower)
+        { "Key" : "RottingStorageSlowdown", "Float" : 50.0 },
+        // Quality loss per week for Corroding non-biological bodies
+        { "Key" : "CorrodingQualityLossPerWeek", "Float" : 0.05 },
+        // Condition loss per week for Corroding non-biological bodies
+        { "Key" : "CorrodingConditionLossPerWeek", "Float" : 0.1 },
+        // How many days for Corroding condition to fully develop after death
+        { "Key" : "CorrodingDevelopmentDays", "Float" : 3.0 },
+        // Corroding slowdown multiplier when stored in a Mechuary (e.g. 20 = 20x slower)
+        { "Key" : "CorrodingStorageSlowdown", "Float" : 100.0 },
+        // Below this % of BloodCapacity, a living being dies of blood loss
+        { "Key" : "BloodLethalPct", "Float" : 0.1 },
+        // Below this % of BloodCapacity, a being is incapacitated
+        { "Key" : "BloodIncapacitatedPct", "Float" : 0.5 },
+        // A pain shock (or a robot's system shock) ends once Pain is this far below the
+        // PainThreshold, so a pain right at the threshold does not flip the being up and down
+        { "Key" : "PainShockRecoverMargin", "Float" : 0.05 },
+        // Backstop behind pain shock: more parts at Moderate damage than this share of the
+        // body's parts (at most 10 counted), and never more than the cap below, downs a being
+        // that feels too little pain to go down from it
+        { "Key" : "IncapDamagedPartsShare", "Float" : 0.5 },
+        { "Key" : "IncapMaxDamagedParts", "Float" : 5 },
+        // How fast blood toxicity moves toward what the kidneys settle it at (BloodFiltration).
+        // With no kidneys: Toxemia after 2 days, down after 8, dead after about 9.5
+        { "Key" : "BloodToxicityRisePerDay", "Float" : 0.1 },
+        // After a kidney transplant, the worst toxicity clears in about 3 days
+        { "Key" : "BloodToxicityFallPerDay", "Float" : 0.3 },
+        // A dead body cannot bleed below this % of BloodCapacity - see ConditionBleeding
+        { "Key" : "BloodDeadBodyPct", "Float" : 0.15 },
+        // Chance that a healed wound leaves a scar, by the worst severity the wound reached.
+        // Multiplied by the damage type (Sharp/Piercing x1, burns x1.5, Blunt never) - see Scar
+        { "Key" : "BodyPartScarChance_ModerateWound", "Float" : 0.04 },
+        { "Key" : "BodyPartScarChance_SevereWound", "Float" : 0.12 },
+        { "Key" : "BodyPartScarChance_CriticalWound", "Float" : 0.3 },
+        // Share of the part quality above BodyPartScarQualityFloor that a new scar takes away.
+        // Tuned so four severe scars take a perfect part to about 25%
+        { "Key" : "BodyPartScarQualityLoss_Mild", "Float" : 0.06 },
+        { "Key" : "BodyPartScarQualityLoss_Moderate", "Float" : 0.15 },
+        { "Key" : "BodyPartScarQualityLoss_Severe", "Float" : 0.32 },
+        // Scars approach this body part quality but never cross it
+        { "Key" : "BodyPartScarQualityFloor", "Float" : 0.05 }
+    ],
+    "FloatSets" : [
+        {
+            "Key" : "ImmunityGainByAgeCurve",
+            // age percent => % per day
+            "FloatSet": [
+                0.0, 0.75,
+                0.25, 1.0,
+                0.5, 0.75,
+                0.75, 0.5,
+                1.0, 0.1
+            ]
+        },
+        {
+            "Key" : "ImmunityLossByAgeCurve",
+            // age percent => % per day
+            "FloatSet": [
+                0.0, 0.001,
+                0.25, 0.005,
+                0.5, 0.01,
+                0.75, 0.02,
+                1.0, 0.05
+            ]
+        },
+        {
+            "Key" : "DiseaseTransmissionSpeedByAgeCurve",
+            // age percent => % per single encounter
+            "FloatSet": [
+                0.0, 0.05,
+                0.25, 0.1,
+                0.5, 0.15,
+                0.75, 0.25,
+                1.0, 0.5
+            ]
+        }
+    ]
+}

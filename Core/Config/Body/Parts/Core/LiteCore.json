@@ -1,0 +1,14 @@
+{
+    "SlotTypeId" : "Core",
+    "Compatibility" : "Robotic",
+    "PartFlags" : [
+        "HoldsMind",
+        "SupportsMindTransfer"
+    ],
+    "ResistanceBase" : 4.0,
+    "AddsAbilities" : [
+        "DumbLabor",
+        "SkilledLabor"
+    ],
+    "Tier" : 2
+}

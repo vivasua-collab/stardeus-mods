@@ -1,0 +1,9 @@
+{
+    "Id" : "Obj/Parts/Implant/ObeyChip",
+    "Type" : "CFD",
+    "Groups" : [ "BodyPart", "BlackMarket" ],
+    "Value" : 2500.0,
+    "Rarity" : 0.2,
+    "MinSectorDifficulty" : 0.8,
+    "Volatility" : 0.00167
+}

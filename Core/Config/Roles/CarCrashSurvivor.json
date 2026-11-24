@@ -1,0 +1,17 @@
+{
+    "Id" : "CarCrashSurvivor",
+    "Species" : [ "Human", "Dog", "Cat" ],
+    "AgePhaseIds" : [ "YoungAdult", "MidLife", "Retirement" ],
+    "RoleTypes" : [ ],
+    "IncapableJobTypes" : [ "Medical", "Rescue" ],
+    "AdjustsSkills" : [
+        {
+            "JobId" : "Crafting",
+            "Adjustment" : 4
+        },
+        {
+            "JobId" : "Plants",
+            "Adjustment" : 4
+        }
+    ]
+}

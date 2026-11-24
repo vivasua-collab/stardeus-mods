@@ -1,0 +1,91 @@
+{
+    "QuestFlags" : [ "Tutorial", "AutoAdd", "Unique" ],
+    "TitleKey" : "quest.TradeWithSpaceStation",
+    "DescKey" : "quest.TradeWithSpaceStation.desc",
+    "QuestProviders" : [
+        "ShipComputer"
+    ],
+    "Require" : {
+        "Days" : 10
+    },
+    "AvailableWhen" : [
+        "ReadyForTutorialQuests",
+        "HasHyperjumped"
+    ],
+    "SetOnComplete" : [ "HasTraded" ],
+    "SetOnFail" : [ "HasTraded" ],
+    "Steps" : [
+        {
+            "Id": "ResearchComms",
+            "Type" : "UnlockResearch",
+            "StepFlags" : [ "ActiveOnStart" ],
+            "Config" : [
+                { "Key" : "Research", "String" : "Research/Scanning/Communications" }
+            ],
+            "SetOnComplete" : [
+                "UnlockedComms"
+            ]
+        },
+        {
+            "Id": "HaveComms",
+            "Type" : "HaveOnGrid",
+            "Config" : [
+                { "Key" : "Definition", "String" : "Objects/Devices/Communicator" },
+                { "Key" : "Count", "Int" : 1 }
+            ],
+            "ActivateWhen" : [
+                "UnlockedComms"
+            ],
+            "SetOnComplete" : [
+                "HasComms"
+            ]
+        },
+        {
+            "Id": "ResearchTradePortal",
+            "Type" : "UnlockResearch",
+            "StepFlags" : [ "ActiveOnStart" ],
+            "Config" : [
+                { "Key" : "Research", "String" : "Research/Economy/TradePortal" }
+            ],
+            "SetOnComplete" : [
+                "UnlockedTradePortal"
+            ]
+        },
+        {
+            "Id": "HaveTradePortal",
+            "Type" : "HaveOnGrid",
+            "Config" : [
+                { "Key" : "Definition", "String" : "Objects/Devices/TradePortal" },
+                { "Key" : "Count", "Int" : 1 }
+            ],
+            "ActivateWhen" : [
+                "UnlockedTradePortal"
+            ],
+            "SetOnComplete" : [
+                "HasTradePortal"
+            ]
+        },
+        {
+            "Id": "ReachSpaceStation",
+            "Type" : "ReachSOType",
+            "Config" : [
+                { "Key" : "SOType", "String" : "SpaceStation" }
+            ],
+            "ActivateWhen": [
+                "HasComms",
+                "HasTradePortal"
+            ],
+            "SetOnComplete" : [
+                "ReachedSpaceStation"
+            ]
+        },
+        {
+            "Id": "ExecuteTrade",
+            "Type" : "ExecuteTrade",
+            "StepFlags": [ "CompletesQuest" ],
+            "ActivateWhen": [
+                "ReachedSpaceStation"
+            ]
+        }
+    ]
+}

@@ -1,0 +1,48 @@
+{
+    "Id" : "Capitalist",
+    "FlagIcon" : "Icons/Faction/Capitalist",
+    "Friendliness" : 0.2,
+    "ChanceBlackMarket" : 0.1,
+    "ChancePolice" : 0.3,
+    "ChanceRandomShip" : 0.15,
+    "AI" : 0.25,
+    "VictoryRaidChance" : 0.75,
+    "ShipDensityMul" : 2.5,
+    "RaidStrengthMul" : 1.20,
+    "HyperjumpRelayBaseToll" : 30000,
+    "RegionDifficultyChance" : [
+        0.0, 0.5,
+        0.7, 1.0,
+        1.0, 0.03
+    ],
+    // power difference => chance to engage in combat
+    "BraveryChance" : [
+        -1.0, 1.0,
+        -0.5, 0.95,
+        0.0, 0.85,
+        0.5, 0.5,
+        1.0, 0.15
+    ],
+    // How likely the reaction will be positive (vs negative) given the faction standing
+    // key => standing, value => chance of positive reaction
+    "AttitudePositiveReactionChance" : [
+        -1.0, 0.01,
+        -0.5, 0.1,
+        -0.25, 0.5,
+        0.0, 0.95,
+        0.5, 1.0,
+        1.0, 1.0
+    ],
+    "GenBodyVars" : {
+        "ChanceModded" : 0.2,
+        "ChanceFreak" : 0.2,
+        "ChanceBionic" : 0.0,
+        "ChanceCustomMind" : 0.5,
+        "ChanceHighQualityParts" : 0.7,
+        "ChanceLowQualityParts" : 0.05,
+        "ChanceNonStandard" : 0.2,
+        "ChanceScarred" : 0.2,
+        "ChanceImplant" : 0.1
+    },
+    "CombatObjective" : "Raid"
+}

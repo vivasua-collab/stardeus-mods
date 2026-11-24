@@ -1,0 +1,11 @@
+{
+    // Skill level -> work speed. Construction, demolition and repairs: 0.3 + 0.0875 per level,
+    // divided by its value at level 3, the typical generated skill, so a typical colonist
+    // works at the speed the content is tuned for and experts much faster. Linear, so the
+    // points only mark the ends; levels 21-25 come from training only
+    "FloatSet" : [
+        0, 0.533,
+        20, 3.644,
+        25, 4.422
+    ]
+}

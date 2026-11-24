@@ -1,0 +1,116 @@
+{
+    "ToolPath" : "Security",
+    "Layer" : "Objects",
+    "NameKey" : "noun.battle.station",
+    "ParentId" : "Objects/Devices/BaseDevice",
+    "Researchable" : {
+        "Prerequisites" : [ "Research/ShipCombat/WeaponsBallistic" ]
+    },
+    "Spawnable" : {
+        "Category": "RareDevice",
+        "Chance" : 0.6,
+        "ChanceLocked" : 0.0
+    },
+    "Components" : [
+        {
+            "Component" : "TileTransform",
+            "Properties" : [
+                { "Key" : "Width", "Int" : 2 },
+                { "Key" : "Height", "Int" : 1 },
+                { "Key" : "IsRotatable", "Bool" : true },
+                { "Key" : "CoverPercent", "Int" : 50 },
+                { "Key" : "WorkSpot", "Vector2" : { "x" : 0, "y" : -1 } }
+            ]
+        },
+        { "Component" : "SafetyCheck" },
+        {
+            "Component" : "ElectricNode",
+            "Properties" : [
+                { "Key" : "IsConsumer", "Bool" : true }
+            ]
+        },
+        {
+            "Component" : "WithFuse",
+            "Properties" : [
+                { "Key" : "MalfunctionWeight", "Float": 0.25 }
+            ]
+        },
+        {
+            "Component" : "Flammable",
+            "Properties" : [
+                { "Key" : "IgnitionTemperatureCelsius", "Int" : 350 },
+                { "Key" : "FireChance", "Float" : 0.5 },
+                { "Key" : "BaseExplosionLevel", "Int" : 2 },
+                { "Key" : "FlammabilityCurve", "String" : "DeviceLow" },
+                { "Key" : "ExplosivenessCurve", "String" : "Device" }
+            ]
+        },
+        {
+            "Component" : "AudioSource",
+            "Properties" : [
+                { "Key" : "AmbienceClip", "String" : "Devices/BattleStationSFX" },
+                { "Key" : "Rolloff", "Vector2" : { "x" : 3, "y" : 12 } },
+                { "Key" : "IsLinkedToEnergy", "Bool" : true }
+            ]
+        },
+        {
+            "Component" : "OperatableDevice",
+            "Properties" : [
+                { "Key" : "DefaultPriority", "Int" : 4 },
+                { "Key" : "JobType", "String" : "Shooting" },
+                { "Key" : "AnimationType", "String" : "Strafe" },
+                { "Key" : "CanKeepOperator", "Bool" : true },
+                { "Key" : "OperatorOffsets", "Vector2Set" : [
+                    { "x" : -0.3, "y" : -0.22 },
+                    { "x" : -0.65, "y" : 0.5 },
+                    { "x" : 0.34, "y" : 0.97 },
+                    { "x" : 0.58, "y" : 0.13 }
+                ] }
+            ]
+        },
+        {
+            "Component" : "Surface",
+            "Properties" : [
+                { "Key" : "IsMultislot", "Bool" : true },
+                { "Key" : "IsMakeshift", "Bool" : true }
+            ]
+        },
+        {
+            "Component" : "TileGraphics",
+            "Properties" : [
+                { "Key" : "Type", "String": "Object" },
+                { "Key" : "Graphic", "String": "Objects/Devices/BattleStation" },
+                { "Key" : "HasHeight", "Bool" : true }
+            ]
+        },
+        {
+            "Component" : "BattleStation"
+        },
+        {
+            "Component" : "ExtraInfo"
+        },
+        {
+            "Component" : "Passability",
+            "Properties" : [
+                { "Key" : "IsPassable", "Bool" : false },
+                { "Key" : "IsWalkable", "Bool" : false },
+                { "Key" : "Difficulty", "Float" : 1 }
+            ]
+        },
+        {
+            "Component" : "Constructable",
+            "Properties" : [
+                { "Key" : "WorkAmount", "Int" : 1000 },
+                {
+                    "Key" : "Contents",
+                    "RawMaterials" : [
+                        { "TypeId" : "SteelPlate", "StackSize" : 3 },
+                        { "TypeId" : "Plastic", "StackSize" : 1 },
+                        { "TypeId" : "CopperWire", "StackSize" : 5 },
+                        { "TypeId" : "Glass", "StackSize" : 2 }
+                    ]
+                }
+            ]
+        }
+    ]
+}

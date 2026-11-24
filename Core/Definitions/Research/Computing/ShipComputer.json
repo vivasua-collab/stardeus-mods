@@ -1,0 +1,34 @@
+{
+    "Id" : "Research/Computing/ShipComputer",
+    "Tier" : 4,
+    "IsAbstract" : true,
+    "PreviewIcon" : "Objects/Devices/ShipComputer",
+    "NameKey" : "research.shipcomputer",
+    "Researchable" : {
+        "IsTreeNode" : true,
+        "Prerequisites" : [
+            "Research/Computing/GPU"
+        ],
+        "DatoidCosts" : [
+            {
+                "TypeId" : "DatoidSynthetic",
+                "StackSize" : 6
+            },
+            {
+                "TypeId" : "DatoidEnergy",
+                "StackSize" : 11
+            },
+            {
+                "TypeId" : "DatoidTechHigh",
+                "StackSize" : 16
+            },
+            {
+                "TypeId" : "DatoidNuclear",
+                "StackSize" : 7
+            }
+        ],
+        "UnlockEffects" : [
+            "ShipComputerCap_2"
+        ]
+    }
+}

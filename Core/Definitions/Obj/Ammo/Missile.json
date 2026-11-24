@@ -1,0 +1,38 @@
+{
+    "Layer" : "FreeEntities",
+    "ParentId" : "Obj/Materials/BaseMaterial",
+    "Researchable" : {
+        "Prerequisites" : [ "Research/ShipCombat/WeaponsMissile" ]
+    },
+    "Components" : [
+        {
+            "Component" : "ObjGraphics",
+            "Properties" : [
+                { "Key" : "Graphic", "String": "Obj/Ammo/Missile" }
+            ]
+        },
+        {
+            "Component" : "ObjHealth",
+            "Properties" : [
+                { "Key" : "Max", "Int" : 100 },
+                { "Key" : "IsInvincible", "Bool" : false }
+            ]
+        },
+        {
+            "Component" : "Flammable",
+            "Properties" : [
+                { "Key" : "IsTemperatureResistant", "Bool" : false },
+                { "Key" : "IgnitionTemperatureCelsius", "Int" : 150 },
+                { "Key" : "FireChance", "Float" : 1.5 },
+                { "Key" : "FlammabilityCurve", "String" : "Extreme" }
+            ]
+        },
+        {
+            "Component" : "UnstoredMat",
+            "Properties" : [
+                { "Key" : "Type", "String" : "Missile" },
+                { "Key" : "FixedSize", "Bool" : true }
+            ]
+        }
+    ]
+}

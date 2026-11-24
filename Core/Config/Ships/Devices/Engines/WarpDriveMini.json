@@ -1,0 +1,7 @@
+{
+    "Id" : "WarpDriveMini",
+    "EngineTypeId" : "HyperdriveShort",
+    "Evade" : 0,
+
+    "ChargeTimeMinutes" : 240
+}

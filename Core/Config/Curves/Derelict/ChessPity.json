@@ -1,0 +1,14 @@
+{
+    // Derelicts in a row without a chess piece (while the colony still misses some) -> chance
+    // that this derelict brings one missing piece anyway (ChessPitySys). The values are the
+    // hazard rates of an even pick from 2 to 5, so the forced piece lands on the 2nd, 3rd, 4th
+    // or 5th dry derelict with equal odds: always within reach, never on a beat players learn.
+    // For an even pick from a..b, the value at k is 1 / (b - k + 1).
+    "FloatSet" : [
+        1, 0.0,
+        2, 0.25,
+        3, 0.3333,
+        4, 0.5,
+        5, 1.0
+    ]
+}

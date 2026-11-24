@@ -1,0 +1,11 @@
+{
+    "IsAbstract" : true,
+    "ResearchValue" : 1,
+    "Layer" : "FreeEntities",
+    "Components" : [
+        { "Component" : "Transform" },
+        { "Component" : "ObjHealth" },
+        { "Component" : "Flammable" },
+        { "Component" : "Movable" }
+    ]
+}

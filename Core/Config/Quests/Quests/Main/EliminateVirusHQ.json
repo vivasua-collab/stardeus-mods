@@ -1,0 +1,148 @@
+{
+    "QuestFlags" : [ "Main", "AutoAdd", "Unique" ],
+    "TitleKey" : "quest.main.eliminate.virus.hq.title",
+    "DescKey" : "quest.main.eliminate.virus.hq.desc",
+    "QuestProviders" : [
+        "Port"
+    ],
+    "AvailableWhen": [
+        "HasTerraformingAtmo",
+        "HasTerraformingOcean",
+        "HasTerraformingTerrain",
+        "HasTerraformingBio"
+    ],
+    "Variables" : [
+        {
+            "Id" : "SentinelPort",
+            "Type" : "SectorPOI",
+            "Config" : [
+                { "Key" : "SharedVar_LoadPOIId", "String" : "Main_SentinelPortId" },
+                { "Key" : "MustExistOnLoad", "Bool" : true }
+            ]
+        },
+        {
+            "Id" : "VirusPort",
+            "Type" : "SectorPOI",
+            "Config" : [
+                { "Key" : "CanBeVisited", "Bool" : true },
+                { "Key" : "MinRegionsAway", "Int" : 1 },
+                { "Key" : "MinRegionDifficulty", "Float" : 0.9 },
+                { "Key" : "MaxRegionDifficulty", "Float" : 1.0 },
+                { "Key" : "SectorTemplate", "String" : "Planet" },
+                { "Key" : "POIConfigId", "String" : "Port" },
+                { "Key" : "FactionId", "String" : "Virus" },
+                { "Key" : "Var_Start", "String" : null },
+                { "Key" : "SkipRegionsWithoutRelay", "Bool" : false },
+                { "Key" : "SharedVar_SavePOIId", "String" : "Main_VirusPortId" }
+            ]
+        }
+    ],
+    "Steps" : [
+        {
+            "Id": "BuildNuke",
+            "Type" : "BuildTile",
+            "StepFlags" : [ "ActiveOnStart", "HideInactive" ],
+            "Config" : [
+                { "Key" : "Definition", "String" : "Objects/Devices/SectorNuke" },
+                { "Key" : "Count", "Int" : 1 }
+            ],
+            "SetOnComplete" : [
+                "HasNuke"
+            ]
+        },
+        {
+            "Id" : "ReachPlanet",
+            "Type" : "GoToTargetSector",
+            "StepFlags" : [ "HideInactive" ],
+            "ActivateWhen": [
+                "HasNuke"
+            ],
+            "SetOnComplete" : [
+                "ReachedPlanet"
+            ],
+            "Config" : [
+                { "Key" : "Var_Target", "String" : "VirusPort" }
+            ]
+        },
+        {
+            "Id" : "HailPort",
+            "Type" : "InteractWithSO",
+            "TitleKey": "verb.communicate.with",
+            "StepFlags" : [ "Optional", "HideInactive" ],
+            "ActivateWhen": [
+                "ReachedPlanet"
+            ],
+            "FailWhen" : [
+                "NukedSector"
+            ],
+            "Config" : [
+                { "Key" : "Var_Target", "String" : "VirusPort" },
+                { "Key" : "OfferQuestId", "String" : "Main/BecomeRogueAI" },
+                { "Key" : "AutoActivateQuest", "Bool" : false }
+            ]
+        },
+        {
+            "Id" : "NukeSector",
+            "Type" : "NukeSector",
+            "StepFlags" : [ "HideInactive" ],
+            "ActivateWhen": [
+                "ReachedPlanet"
+            ],
+            "SetOnComplete": [
+                "NukedSector"
+            ],
+            "StateStoryEvents" : {
+                "Completed" : "Space/VirusShipAttack"
+            },
+            "Config" : [
+                { "Key" : "Var_Target", "String" : "VirusPort" }
+            ]
+        },
+        {
+            "Id" : "ReceiveReward",
+            "Type" : "InteractWithSO",
+            "StepFlags" : [ "HideInactive", "CompletesQuest", "FailsQuest" ],
+            "TitleKey": "verb.communicate.with",
+            "ActivateWhen": [
+                "NukedSector"
+            ],
+            "Config" : [
+                { "Key" : "Var_Target", "String" : "SentinelPort" }
+                // { "Key" : "QuestProvider", "Bool" : true }
+                // { "Key" : "OfferQuestId", "String" : "Main/EliminatePirateDen" }
+            ]
+        }
+    ],
+    "Rewards" : [
+        {
+            "Id" : "CashMain",
+            "Type" : "Money_NetWorth",
+            "Config" : [
+                { "Key" : "NetWorthCurve", "FloatSet" : [
+                    0.0, 0.2,
+                    0.95, 0.3,
+                    1.0, 0.4
+                ] },
+                { "Key" : "AmountMin", "Int" : 100000 },
+                { "Key" : "AmountMax", "Int" : 1000000 }
+            ]
+        },
+        {
+            "Id" : "SentinelAttitude",
+            "Type" : "FactionAttitude",
+            "Config" : [
+                { "Key" : "FactionId", "String" : "Sentinel" },
+                { "Key" : "AttitudeChange", "Int" : 100 }
+            ]
+        },
+        {
+            "Id" : "DarkMatter",
+            "Type" : "Material",
+            "RewardFlags" : [ "PackageContent" ],
+            "Config" : [
+                { "Key" : "MatType", "String" : "DarkMatter" },
+                { "Key" : "Amount", "Int" : 20 }
+            ]
+        }
+    ]
+}

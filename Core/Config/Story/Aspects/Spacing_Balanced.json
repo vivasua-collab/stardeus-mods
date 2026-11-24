@@ -1,0 +1,21 @@
+{
+    // C# implementation id.
+    // Multiple configurations can point to a single implementation.
+    "AspectId" : "Spacing",
+    "Properties" : [
+        // Each outcome paces only itself, so without this two outcomes that became eligible
+        // together started events a game minute apart. After a notable event (not raids, not
+        // social interactions or breakdowns) the periodic pickers wait this many game hours
+        // (rolled per event): about half a minute at the fastest speed, minutes at 1x.
+        {
+            "Key" : "QuietHoursCurve",
+            "FloatSet" : [
+                0.0, 8.0,
+                1.0, 16.0
+            ]
+        },
+        // Chance that an event opens no quiet period, so two events still land together now
+        // and then, just not often
+        { "Key" : "ClumpChance", "Float" : 0.1 }
+    ]
+}

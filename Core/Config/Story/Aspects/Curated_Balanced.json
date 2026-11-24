@@ -1,0 +1,30 @@
+{
+    // C# implementation id.
+    // Multiple configurations can point to a single implementation.
+    "AspectId" : "Curated",
+    "Properties" : [
+        { "Key" : "EventSchedule", "StringSet" : [
+            // day,event id,flags
+            // The opening is scripted, before any random window opens (those are set by
+            // Schedule_*_Balanced). Its beats are keyed to player progress with
+            // after:<QuestBool>+<days>, and the day is then the latest the beat can come:
+            // a fast player finishes the tutorial spine in a third of the time a slow one
+            // needs, so a fixed day is dead air for one and a rush for the other.
+
+            // The wreck is unstable: a damaged part collapses a day after production is set up
+            "6,Main/DamagedStructureCollapse,force_start,after:HasEstablishedProduction+1",
+            // The first kitchen fire, on the third meal cooked. Small and unboosted, so the
+            // crew learns to fight fire while the stakes are low
+            "40,Main/FirstCookingIncident,force_start,after:HasConfiguredCookingStation+0",
+            // Radar contact: a capsule with material the ship needs. Both lines move together,
+            // or the capsule opens with random contents. A few hours after it is opened, the
+            // first raid arrives in another capsule (Raid_Balanced FirstRaidAfterEventFlag)
+            "7.2,Space/StorageCapsule,force_start,after:HasRadar+0.25",
+            "7.2,Capsule/CapsuleNeededMat,after:HasRadar+0.25",
+            "12.1,Social/Expedition/SavedFromFalling",
+            "20.5,Main/FoodOnDevice",
+            "45.1,Social/Expedition/MiningBond",
+            "120.9,Social/Stabbing"
+        ] }
+    ]
+}

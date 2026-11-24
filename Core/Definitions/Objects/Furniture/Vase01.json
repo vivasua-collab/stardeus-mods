@@ -1,0 +1,101 @@
+{
+    "ToolPath" : "Furniture/Decorations",
+    "Layer" : "Objects",
+    "ParentId" : "Objects/Devices/BaseDevice",
+    "Researchable" : {
+        "Prerequisites" : [ "Research/Habitation/Decorations" ]
+    },
+    "Spawnable" : {
+        "Category": "Cosmetics",
+        "Chance" : 1.0,
+        "ChanceLocked" : 0.5
+    },
+    "Components" : [
+        {
+            "Component" : "TileTransform",
+            "Properties" : [
+                { "Key" : "Width", "Int" : 1 },
+                { "Key" : "Height", "Int" : 1 },
+                { "Key" : "CoverPercent", "Int" : 25 },
+                { "Key" : "InPort", "Vector2" : { "x" : 0, "y" : -1 } },
+                { "Key" : "OutPort", "Vector2" : { "x" : 0, "y" : -1 } },
+                { "Key" : "IsRotatable", "Bool" : true }
+            ]
+        },
+        {
+            "Component" : "TileGraphics",
+            "Properties" : [
+                { "Key" : "Type", "String": "Object" },
+                { "Key" : "RotateGraphic", "Bool" : false },
+                { "Key" : "Graphic", "String": "Objects/Furniture/Vase01" }
+            ]
+        },
+        {
+            "Component" : "Flammable",
+            "Properties" : [
+                { "Key" : "IgnitionTemperatureCelsius", "Int" : 250 },
+                { "Key" : "FireChance", "Float" : 0.6 },
+                { "Key" : "SkipExplosivenessValidation", "Bool" : true }
+            ]
+        },
+        {
+            "Component" : "Admirable",
+            "Properties" : [
+                { "Key" : "Amount", "Int" : 1 },
+                { "Key" : "Multiplier", "Float" : 0.15 },
+                { "Key" : "Chance", "Float" : 0.3 }
+            ]
+        },
+        {
+            "Component" : "Planter",
+            "Properties" : [
+                { "Key" : "AutoHarvest", "Bool" :  false },
+                { "Key" : "PlantSizes", "StringSet" : ["Small"] },
+                { "Key" : "PlantOffsets", "Vector2Set": [
+                    { "x" : 0, "y" : 0.4 }
+                ]}
+            ]
+        },
+        { "Component" : "ExtraInfo" },
+        {
+            "Component" : "RefillableStorage",
+            "Properties" : [
+                { "Key" : "DeviceType", "String" : "planter" },
+                { "Key" : "Purpose", "String" : "water" },
+                { "Key" : "BarColor", "String" : "5390C6FF" },
+                { "Key" : "LockedMaterial", "String" : "Water" },
+                { "Key" : "Icon", "String" : "Obj/Materials/Water" },
+                { "Key" : "MaterialCapacity", "Int" : 1 }
+            ]
+        },
+        {
+            "Component" : "Toilet",
+            "Properties" : [
+                { "Key" : "HideUI", "Bool" : true },
+                { "Key" : "IsMakeshift", "Bool" : true }
+            ]
+        },
+        {
+            "Component" : "Passability",
+            "Properties" : [
+                { "Key" : "IsPassable", "Bool" : true },
+                { "Key" : "IsWalkable", "Bool" : true },
+                { "Key" : "Difficulty", "Float" : 0.7 }
+            ]
+        },
+        {
+            "Component" : "Constructable",
+            "Properties" : [
+                { "Key" : "WorkAmount", "Int" : 225 },
+                { "Key" : "CanDragRow", "Bool" : true },
+                {
+                    "Key" : "Contents",
+                    "RawMaterials" : [
+                        { "TypeId" : "SteelPlate", "StackSize" : 1 },
+                        { "TypeId" : "Soil", "StackSize" : 1 }
+                    ]
+                }
+            ]
+        }
+    ]
+}

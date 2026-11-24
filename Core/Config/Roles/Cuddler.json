@@ -1,0 +1,16 @@
+{
+    "Id" : "Cuddler",
+    "LovesJobTypes" : [ ],
+    "Species" : [ "Cat", "Dog", "Pig" ],
+    "RoleTypes" : [ ],
+    "AdjustsSkills" : [
+        {
+            "JobId" : "Social",
+            "Adjustment" : 4
+        },
+        {
+            "JobId" : "Melee",
+            "Adjustment" : -1
+        }
+    ]
+}

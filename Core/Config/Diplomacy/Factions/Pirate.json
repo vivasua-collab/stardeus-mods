@@ -1,0 +1,51 @@
+{
+    "Id" : "Pirate",
+    "FlagIcon" : "Icons/Faction/Pirate",
+    "Friendliness" : -0.8,
+    "ChanceBlackMarket" : 1.0,
+    "TradesPeople" : true,
+    "ChancePolice" : 0.0,
+    "ChanceRandomShip" : 0.2,
+    "IsOutlaw" : true,
+    "NeverAllies" : true,
+    "AlwaysEnemies" : [ "Capitalist", "OldEarth" ],
+    "AI" : 0.2,
+    "VictoryRaidChance" : 1.0,
+    "ShipDensityMul" : 0.7,
+    "ChanceTradeWithOutlaw" : 1.0,
+    "HyperjumpRelayBaseToll" : 10000,
+    "RegionDifficultyChance" : [
+        0.0, 0.1,
+        0.7, 1.0,
+        1.0, 0.3
+    ],
+    // power difference => chance to engage in combat
+    "BraveryChance" : [
+        -1.0, 0.25,
+        -0.5, 0.5,
+        0.0, 0.9,
+        0.5, 1.0,
+        1.0, 1.0
+    ],
+    // How likely the reaction will be positive (vs negative) given the faction standing
+    // key => standing, value => chance of positive reaction
+    "AttitudePositiveReactionChance" : [
+        -1.0, 0.0,
+        -0.5, 0.05,
+        0.0, 0.1,
+        0.5, 0.5,
+        1.0, 0.85
+    ],
+    "GenBodyVars" : {
+        "ChanceModded" : 0.5,
+        "ChanceFreak" : 0.2,
+        "ChanceBionic" : 0.2,
+        "ChanceCustomMind" : 0.1,
+        "ChanceHighQualityParts" : 0.1,
+        "ChanceLowQualityParts" : 0.4,
+        "ChanceNonStandard" : 0.3,
+        "ChanceScarred" : 0.7,
+        "ChanceImplant" : 0.05
+    },
+    "CombatObjective" : "Raid"
+}

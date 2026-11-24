@@ -1,0 +1,194 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Stardeus ShipClassDef",
+  "description": "Generated from C# by Game/Generate JSON Schemas, do not edit by hand",
+  "$ref": "#/$defs/ShipClassDef",
+  "$defs": {
+    "ShipClassDef": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "RequiredClassId": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "UnlockPrice": {
+          "type": "integer"
+        },
+        "OriginDifficultyChance": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "number"
+          }
+        },
+        "NPCSizeRange": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "number"
+          }
+        },
+        "ViewZoneWidth": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "number"
+          }
+        },
+        "BaseEvasion": {
+          "type": "number"
+        },
+        "NPCDeviceRepairHealthPerHour": {
+          "type": "number"
+        },
+        "WeaponsTier": {
+          "type": "integer"
+        },
+        "IsSpaceStation": {
+          "type": "boolean"
+        },
+        "IsUnclassified": {
+          "type": "boolean"
+        },
+        "DerelictSizeMin": {
+          "type": "number"
+        },
+        "DerelictSizeMax": {
+          "type": "number"
+        },
+        "DerelictWidthMin": {
+          "type": "number"
+        },
+        "DerelictWidthMax": {
+          "type": "number"
+        },
+        "FluxSoftVentPerHour": {
+          "type": "number"
+        },
+        "Rarity": {
+          "type": "number"
+        },
+        "Id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "IdH": {
+          "type": "integer"
+        },
+        "Preview": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "MaxClassPoints": {
+          "type": "integer"
+        },
+        "MinShields": {
+          "type": "integer"
+        },
+        "MaxShields": {
+          "type": "integer"
+        },
+        "MaxPointDefense": {
+          "type": "integer"
+        },
+        "Visual_EngineCurvatureSign": {
+          "type": "integer"
+        },
+        "Visual_EnginesPerRow": {
+          "type": "integer"
+        },
+        "Visual_EngineDensity": {
+          "type": "number"
+        },
+        "Visual_DeviceMaxScale": {
+          "type": "number"
+        },
+        "MinSize": {
+          "type": "integer"
+        },
+        "MaxSize": {
+          "type": "integer"
+        },
+        "MinEnergy": {
+          "type": "integer"
+        },
+        "FluxBonus": {
+          "type": "integer"
+        },
+        "MaxFluxCapacity": {
+          "type": "integer"
+        },
+        "MaxFluxVents": {
+          "type": "integer"
+        },
+        "NumThrustersChance": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "number"
+          }
+        },
+        "NumShortRangeDrivesChance": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "number"
+          }
+        },
+        "NumLongRangeDrivesChance": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "number"
+          }
+        },
+        "CombatMotionHover": {
+          "type": "number"
+        },
+        "CombatMotionRotation": {
+          "type": "number"
+        },
+        "CombatMotionSpeed": {
+          "type": "number"
+        },
+        "CombatBreachCapsuleChance": {
+          "type": "number"
+        },
+        "NoShieldsChance": {
+          "type": "number"
+        },
+        "HPBonus": {
+          "type": "integer"
+        },
+        "NPCHPBonus": {
+          "type": "integer"
+        },
+        "ViewScale": {
+          "type": "number"
+        }
+      },
+      "additionalProperties": false
+    }
+  }
+}

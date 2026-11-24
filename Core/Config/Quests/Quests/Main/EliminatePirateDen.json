@@ -1,0 +1,232 @@
+{
+    "QuestFlags" : [ "Main", "AutoAdd", "Unique" ],
+    "TitleKey" : "quest.main.eliminate.pirate.den.title",
+    "DescKey" : "quest.main.eliminate.pirate.den.desc",
+    "QuestProviders" : [
+        "Port"
+    ],
+    "AvailableWhen": [
+        "ReachedRecoveredPlanetCoords"
+    ],
+    "FailWhen": [
+        "EliminatedCapitalistPort"
+    ],
+    "SetOnComplete" : [
+        "EliminatedPirateDen",
+        "HasTelescopeResearch"
+    ],
+    "Variables" : [
+        {
+            "Id" : "CapitalistPort",
+            "Type" : "SectorPOI",
+            "Config" : [
+                { "Key" : "SharedVar_LoadPOIId", "String" : "Main_CapitalistPortId" }
+            ]
+        },
+        {
+            "Id" : "NukeSourcePOI",
+            "Type" : "SectorPOI",
+            "Config" : [
+                { "Key" : "MinRegionsAway", "Int" : 1 },
+                { "Key" : "MinRegionDifficulty", "Float" : 0 },
+                { "Key" : "MaxRegionDifficulty", "Float" : 1 },
+                { "Key" : "POIConfigId", "String" : "Event" },
+                { "Key" : "Var_Start", "String" : null },
+                { "Key" : "SkipRegionsWithoutRelay", "Bool" : true }
+            ]
+        },
+        {
+            "Id" : "PiratePort",
+            "Type" : "SectorPOI",
+            "Config" : [
+                { "Key" : "CanBeVisited", "Bool" : false },
+                { "Key" : "MinRegionsAway", "Int" : 1 },
+                { "Key" : "MinRegionDifficulty", "Float" : 0.6 },
+                { "Key" : "MaxRegionDifficulty", "Float" : 0.8 },
+                { "Key" : "SectorTemplate", "String" : "Planet" },
+                { "Key" : "POIConfigId", "String" : "Port" },
+                { "Key" : "FactionId", "String" : "Pirate" },
+                { "Key" : "Var_Start", "String" : null },
+                { "Key" : "SkipRegionsWithoutRelay", "Bool" : false }
+            ]
+        }
+    ],
+    "Steps" : [
+        {
+            "Id" : "GetNukeResearch",
+            "Type" : "ExplorePOI",
+            "TitleKey": "quest.step.search.for.package.title",
+            "DescKey" : "quest.step.search.for.package.desc",
+            "StepFlags" : [ "ActiveOnStart", "HideIfQuestUnaccepted" ],
+            "StateStoryEvents" : {
+                "Completed" : "Space/PirateShipAttack"
+            },
+            "SetOnComplete" : [
+                "RetrievedPackage"
+            ],
+            "Config" : [
+                { "Key" : "Var_POI", "String" : "NukeSourcePOI" },
+                { "Key" : "ExpeditionMinHours", "Float" : 4.0 },
+                { "Key" : "ExpeditionMaxHours", "Float" : 8.0 },
+                { "Key" : "ExpeditionFoundItemMsgKey", "String" : "quest.expedition.found.package" },
+                { "Key" : "PackageFlags", "StringSet" : [ "FailQuestOnDestroy" ] },
+                { "Key" : "PackageRewardIds", "StringSet" : [
+                    "QuestItem",
+                    "MatForNuke_NuclearCell",
+                    "MatForNuke_DarkMatter"
+                ] }
+            ]
+        },
+        {
+            "Id" : "OpenPackage",
+            "Type" : "OpenPackage",
+            "StepFlags" : [ "HideInactive" ],
+            "ActivateWhen" : [
+                "RetrievedPackage"
+            ],
+            "SetOnComplete": [
+                "OpenedPackage"
+            ],
+            "Config" : [
+                // if only one package is involved, this can be null,
+                // otherwise the if of the step that creates the package must be
+                // put here
+                { "Key" : "PackageStepId", "String" : "GetNukeResearch" }
+            ]
+        },
+        {
+            "Id": "BuildNuke",
+            "Type" : "BuildTile",
+            "StepFlags" : [ "HideInactive" ],
+            "Config" : [
+                { "Key" : "Definition", "String" : "Objects/Devices/SectorNuke" },
+                { "Key" : "Count", "Int" : 1 }
+            ],
+            "ActivateWhen" : [
+                "OpenedPackage"
+            ],
+            "SetOnComplete" : [
+                "HasNuke"
+            ]
+        },
+        {
+            "Id" : "ReachPlanet",
+            "Type" : "GoToTargetSector",
+            "StepFlags" : [ "HideInactive" ],
+            "ActivateWhen": [
+                "HasNuke"
+            ],
+            "SetOnComplete" : [
+                "ReachedPlanet"
+            ],
+            "Config" : [
+                { "Key" : "Var_Target", "String" : "PiratePort" }
+            ]
+        },
+        {
+            "Id" : "HailPort",
+            "Type" : "InteractWithSO",
+            "TitleKey": "verb.communicate.with",
+            "StepFlags" : [ "Optional", "HideInactive" ],
+            "ActivateWhen": [
+                "ReachedPlanet"
+            ],
+            "FailWhen" : [
+                "NukedSector"
+            ],
+            "Config" : [
+                { "Key" : "Var_Target", "String" : "PiratePort" },
+                { "Key" : "OfferQuestId", "String" : "Main/EliminateCapitalistPort" },
+                { "Key" : "AutoActivateQuest", "Bool" : false }
+            ]
+        },
+        {
+            "Id" : "NukeSector",
+            "Type" : "NukeSector",
+            "StepFlags" : [ "HideInactive" ],
+            "ActivateWhen": [
+                "ReachedPlanet"
+            ],
+            "SetOnComplete": [
+                "NukedSector"
+            ],
+            "StateStoryEvents" : {
+                "Completed" : "Space/PirateShipAttack"
+            },
+            "Config" : [
+                { "Key" : "Var_Target", "String" : "PiratePort" }
+            ]
+        },
+        {
+            "Id" : "ReceiveReward",
+            "Type" : "InteractWithSO",
+            "StepFlags" : [ "HideInactive", "CompletesQuest", "FailsQuest" ],
+            "TitleKey": "verb.communicate.with",
+            "ActivateWhen": [
+                "NukedSector"
+            ],
+            "Config" : [
+                { "Key" : "Var_Target", "String" : "CapitalistPort" }
+                // { "Key" : "QuestProvider", "Bool" : true }
+                // { "Key" : "OfferQuestId", "String" : "Main/EliminatePirateDen" }
+            ]
+        }
+    ],
+    "Rewards" : [
+        {
+            "Id" : "CashMain",
+            "Type" : "Money_NetWorth",
+            "Config" : [
+                { "Key" : "NetWorthCurve", "FloatSet" : [
+                    0.0, 0.01,
+                    0.95, 0.05,
+                    1.0, 0.1
+                ] },
+                { "Key" : "AmountMin", "Int" : 10000 },
+                { "Key" : "AmountMax", "Int" : 100000 }
+            ]
+        },
+        {
+            "Id" : "CapitalistAttitude",
+            "Type" : "FactionAttitude",
+            "Config" : [
+                { "Key" : "FactionId", "String" : "Capitalist" },
+                { "Key" : "AttitudeChange", "Int" : 50 }
+            ]
+        },
+        {
+            "Id" : "Telescope",
+            "Type" : "Research",
+            "RewardFlags" : [ "PackageContent" ],
+            "Config" : [
+                { "Key" : "Definition", "String" : "Research/Scanning/Telescope" }
+            ]
+        },
+        {
+            "Id" : "QuestItem",
+            "Type" : "Research",
+            "RewardFlags" : [ "PackageContent" ],
+            "Config" : [
+                { "Key" : "Definition", "String" : "Research/ShipCombat/SectorNuke" }
+            ]
+        },
+        {
+            "Id" : "MatForNuke_DarkMatter",
+            "Type" : "Material",
+            "RewardFlags" : [ "PackageContent" ],
+            "Config" : [
+                { "Key" : "MatType", "String" : "DarkMatter" },
+                { "Key" : "Amount", "Int" : 1 }
+            ]
+        },
+        {
+            "Id" : "MatForNuke_NuclearCell",
+            "Type" : "Material",
+            "RewardFlags" : [ "PackageContent" ],
+            "Config" : [
+                { "Key" : "MatType", "String" : "NuclearCell" },
+                { "Key" : "Amount", "Int" : 1 }
+            ]
+        }
+    ]
+}

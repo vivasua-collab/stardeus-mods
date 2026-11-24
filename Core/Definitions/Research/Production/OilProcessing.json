@@ -1,0 +1,22 @@
+{
+    "Id" : "Research/Production/OilProcessing",
+    "Tier" : 2,
+    "IsAbstract" : true,
+    "PreviewIcon" : "Icons/Color/Liquid",
+    "Researchable" : {
+        "IsTreeNode" : true,
+        "Prerequisites" : [
+            "Research/Production/MaterialProcessing"
+        ],
+        "DatoidCosts" : [
+            {
+                "TypeId" : "DatoidTech",
+                "StackSize" : 13
+            },
+            {
+                "TypeId" : "DatoidPhyto",
+                "StackSize" : 8
+            }
+        ]
+    }
+}

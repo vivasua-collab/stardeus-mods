@@ -1,0 +1,18 @@
+{
+    "Id" : "Vent_FluxVent",
+    "DefId" : "Objects/Devices/FluxVent",
+    "Tier" : 2,
+    "ClassPoints" : 1,
+
+    "ZoneSpriteId" : "Objects/Devices/FluxVent_Closed",
+
+    "ZoneSpriteScale" : 0.25,
+
+    "HP" : 150,
+
+    "Rarity" : 0.25,
+
+    "TargetTypeId" : "ShipVent",
+    "EnergyCostPassive": 2,
+    "EnergyCostActive": 15
+}

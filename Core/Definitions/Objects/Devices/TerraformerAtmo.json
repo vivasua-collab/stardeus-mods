@@ -1,0 +1,149 @@
+{
+    "ToolPath" : "Special",
+    "Layer" : "Objects",
+    "ParentId" : "Objects/Devices/BaseDevice",
+    "Researchable" : {
+        "Prerequisites" : [
+            "Research/LifeSupport/AtmosphereGeneration"
+        ]
+    },
+    "Spawnable" : {
+        "Category": "RareDevice",
+        "SkipOwned": 1,
+        "Chance" : 1.0,
+        "ChanceLocked" : 0.0
+    },
+    "Components" : [
+        {
+            "Component" : "TileTransform",
+            "Properties" : [
+                { "Key" : "Width", "Int" : 4 },
+                { "Key" : "Height", "Int" : 4 },
+                // { "Key" : "WorkSpot", "Vector2" : { "x" : 1, "y" : -1 } },
+                // { "Key" : "OutPort", "Vector2" : { "x" : 1, "y" : -1 } },
+                { "Key" : "InPort", "Vector2" : { "x" : 1, "y" : -1 } },
+                { "Key" : "IsRotatable", "Bool" : true }
+            ]
+        },
+        {
+            "Component" : "IndustrialEquipment",
+            "Properties" : [
+                { "Key" : "IsNoisy", "Bool" : true }
+            ]
+        },
+        {
+            "Component" : "Reinstallable",
+            "Properties" : [
+                { "Key" : "IsAdvanced", "Bool" : true }
+            ]
+        },
+        {
+            "Component" : "ElectricNode",
+            "Properties" : [
+                { "Key" : "IsConsumer", "Bool" : true }
+            ]
+        },
+        {
+            "Component" : "WithFuse",
+            "Properties" : [
+                { "Key" : "MalfunctionWeight", "Float": 0.75 }
+            ]
+        },
+        {
+            "Component" : "HeatProducer",
+            "Properties" : [
+                { "Key" : "Rate", "Float" : 5 },
+                { "Key" : "Range", "Int" : 3 },
+                { "Key" : "CheckSameArea", "Bool" : true }
+            ]
+        },
+        {
+            "Component" : "Flammable",
+            "Properties" : [
+                { "Key" : "IgnitionTemperatureCelsius", "Int" : 500 },
+                { "Key" : "FireChance", "Float" : 0.5 },
+                { "Key" : "BaseExplosionLevel", "Int" : 7 },
+                { "Key" : "FlammabilityCurve", "String" : "DeviceHigh" },
+                { "Key" : "ExplosivenessCurve", "String" : "DeviceHigh" }
+            ]
+        },
+        { "Component" : "ExtraInfo" },
+        {
+            "Component" : "RefillableStorage",
+            "Properties" : [
+                { "Key" : "DeviceType", "String" : "terraformer" },
+                { "Key" : "Purpose", "String" : "terraforming.material" },
+                { "Key" : "LockedMaterial", "String" : "AtmosphereMix" },
+                { "Key" : "MaterialCapacity", "Int" : 10 },
+                { "Key" : "Icon", "String" : "Obj/Materials/AtmosphereMix" }
+            ]
+        },
+        {
+            "Component" : "TileGraphics",
+            "Properties" : [
+                { "Key" : "Type", "String": "Object" },
+                { "Key" : "Graphic", "String": "Objects/Devices/TerraformerAtmo" },
+                { "Key" : "HasHeight", "Bool" : true }
+            ]
+        },
+        {
+            "Component" : "LightSource",
+            "Properties" : [
+                { "Key" : "Color", "IntSet" : [ 64, 191, 191, 128 ] },
+                { "Key" : "PulsateColor", "IntSet" : [ 179, 229, 230, 128 ] },
+                { "Key" : "FrequencyRange", "Vector2" : { "x" : 1, "y" : 1.5 } },
+                { "Key" : "Radius", "Float" : 8 }
+            ]
+        },
+        {
+            "Component" : "Terraformer",
+            "Properties" : [
+                { "Key" : "Type", "String" : "Atmosphere" }
+            ]
+        },
+        {
+            "Component" : "AudioSource",
+            "Properties" : [
+                { "Key" : "AmbienceClip", "String" : "Ambience/AirPumpHumm01" },
+                { "Key" : "Rolloff", "Vector2" : { "x" : 4, "y" : 17 } },
+                { "Key" : "IsLinkedToEnergy", "Bool" : true }
+            ]
+        },
+        {
+            "Component" : "VFX",
+            "Properties" : [
+                { "Key" : "Id", "String" : "VFXParticlesTerraformerAtmo" },
+                { "Key" : "IsLinkedToEnergy", "Bool" : true },
+                { "Key" : "Offset", "Vector2" : { "x" : 0.0, "y" : 1.8 } }
+            ]
+        },
+        {
+            "Component" : "Passability",
+            "Properties" : [
+                { "Key" : "IsPassable", "Bool" : false },
+                { "Key" : "IsWalkable", "Bool" : false },
+                { "Key" : "Difficulty", "Float" : 1 }
+            ]
+        },
+        {
+            "Component" : "Constructable",
+            "Properties" : [
+                { "Key" : "WorkAmount", "Int" : 3000 },
+                {
+                    "Key" : "Contents",
+                    "RawMaterials" : [
+                        { "TypeId" : "TitaniumPlate", "StackSize" : 12 },
+                        { "TypeId" : "Glass", "StackSize" : 8 },
+                        { "TypeId" : "Gears", "StackSize" : 10 },
+                        { "TypeId" : "Microchip3", "StackSize" : 10 },
+                        { "TypeId" : "GoldWire", "StackSize" : 5 },
+                        { "TypeId" : "OpticalFiber", "StackSize" : 10 },
+                        { "TypeId" : "Plastic", "StackSize" : 5 },
+                        { "TypeId" : "Rubber", "StackSize" : 5 },
+                        { "TypeId" : "NuclearCell", "StackSize" : 5 }
+                    ]
+                }
+            ]
+        }
+    ]
+}

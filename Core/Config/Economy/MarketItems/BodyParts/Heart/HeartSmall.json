@@ -1,0 +1,9 @@
+{
+    "Id" : "Obj/Parts/Heart/HeartSmall",
+    "Type" : "CFD",
+    "Groups" : [ "BodyPart", "BlackMarket" ],
+    "Value" : 200.0,
+    "Rarity" : 0.1,
+    "MinSectorDifficulty" : 0.3,
+    "Volatility" : 0.00155
+}

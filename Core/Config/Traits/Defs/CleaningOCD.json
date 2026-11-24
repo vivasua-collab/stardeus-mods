@@ -1,0 +1,16 @@
+{
+    "Id" : "CleaningOcd",
+    "IconId" : "Icons/Color/Mop",
+    "TypeId" : "Civilized",
+    "TraitFlagIds" : [ "RoleOnly" ],
+    "Rarity" : 0.25,
+    "AdjustsSkills" : [
+        {
+            "JobId" : "Cleaning",
+            "Adjustment" : 1
+        }
+    ],
+    "AddsNeeds" : [
+        "CleanFloors"
+    ]
+}

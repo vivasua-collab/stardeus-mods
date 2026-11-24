@@ -1,0 +1,15 @@
+{
+    "Type": "Animal",
+    "Ingredients": [
+        { "TypeId" : "CrawlerGoo", "StackSize" : 1 },
+        { "TypeId" : "Carbon", "StackSize" : 3 },
+        { "TypeId" : "Water", "StackSize" : 1 },
+        { "TypeId" : "StemCells", "StackSize" : 1 }
+    ],
+    "IgnoreMarket" : true,
+    "IgnoreEnergyOutput" : true,
+    "OutputMultiplier" : 3,
+    "ProductDefId": "Obj/Materials/CrawlerGoo",
+    "ProductionTimeHours": 6.0,
+    "EnergyCost": 30.0
+}

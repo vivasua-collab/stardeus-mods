@@ -1,0 +1,20 @@
+{
+    "Id" : "Homeless",
+    "Species" : [ "Human" ],
+    "AgePhaseIds" : [ "Childhood", "YoungAdult", "MidLife", "Retirement" ],
+    "RoleTypes" : [ "Dumb", "Poor" ],
+    "AdjustsSkills" : [
+        {
+            "JobId" : "Expedition",
+            "Adjustment" : 4
+        },
+        {
+            "JobId" : "Crafting",
+            "Adjustment" : 6
+        },
+        {
+            "JobId" : "Cleaning",
+            "Adjustment" : -1
+        }
+    ]
+}

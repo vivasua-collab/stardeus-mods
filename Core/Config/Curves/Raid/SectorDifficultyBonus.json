@@ -1,0 +1,14 @@
+{
+    // Biome sector difficulty (0..1) -> flat points added AFTER the early ramp.
+    // Because it is additive on top, the bonus is proportionally large when total
+    // points are small (early game in a hard sector) and melts into the background
+    // once wealth-driven points dominate (late game).
+    "FloatSet" : [
+        0.00,  1.0,
+        0.30,  3.0,
+        0.50,  6.0,
+        0.75,  9.0,
+        0.90, 12.0,
+        1.00, 18.0
+    ]
+}

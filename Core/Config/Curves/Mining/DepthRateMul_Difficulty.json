@@ -1,0 +1,14 @@
+{
+    // Deposit mining difficulty -> depth burn multiplier.
+    // Higher difficulty burns more depth per mined unit, so less total yield
+    // before reaching max mining depth. Difficulty grows while mining, so the
+    // multiplier compounds as the deposit depletes.
+    // Anchor: difficulty 25 (Iron) = current behavior.
+    "FloatSet" : [
+        0.0, 0.8,
+        25.0, 1.0,
+        100.0, 1.25,
+        400.0, 2.5,
+        1300.0, 3.0
+    ]
+}

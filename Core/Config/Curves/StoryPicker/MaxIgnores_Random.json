@@ -1,0 +1,11 @@
+{
+    // how many ignore types we can ignore in this event picker
+    // see StoryEventPickerAspect.IgnoreType
+    // 0.0-1.0 random value -> num types to ignore
+    "FloatSet" : [
+        0.0, 0.0,
+        0.5, 0.0,
+        0.51, 0.0,
+        1.0, 1.0
+    ]
+}

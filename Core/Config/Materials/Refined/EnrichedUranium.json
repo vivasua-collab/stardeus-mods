@@ -1,0 +1,11 @@
+{
+    "Id" : "EnrichedUranium",
+    "IsComposite" : true,
+    "IconId" : "Obj/Materials/EnrichedUranium",
+    "Property" : "NuclearFuel",
+    "GroupId" : "Components",
+    "EnergyOutput" : 200000.0,
+    "Rarity" : 2,
+    "ExplosionLevel" : 6,
+    "ExplosivenessCurveId" : "DeviceHigh"
+}

@@ -1,0 +1,11 @@
+{
+    // Skill level -> work speed. Jobs skill barely speeds up (cleaning, crafting, firefighting, social and the rest): 0.6 + 0.04 per level,
+    // divided by its value at level 3, the typical generated skill, so a typical colonist
+    // works at the speed the content is tuned for and experts much faster. Linear, so the
+    // points only mark the ends; levels 21-25 come from training only
+    "FloatSet" : [
+        0, 0.833,
+        20, 1.944,
+        25, 2.222
+    ]
+}

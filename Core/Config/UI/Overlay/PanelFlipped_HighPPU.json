@@ -1,0 +1,10 @@
+{
+    "Id" : "Overlay/PanelFlipped_HighPPU",
+
+    "Color" : "UI/Saturated/Primary",
+
+    "Image" : "UI/Buttons/ActiveOverlayPanelFlipped",
+    "ImageType" : "Sliced",
+    "ImageBorderLBRT" : [ 12, 28, 28, 12 ],
+    "ImagePPUMultiplier" : 1.5
+}

@@ -1,0 +1,15 @@
+{
+    "Id" : "Slider/SpaceObjectProgress",
+
+    "ChildrenKeys" : [
+        "PanelBackground",
+        "PanelFillArea",
+        "PanelFill"
+    ],
+
+    "ChildrenIds" : [
+        "Panel/SliderSpaceObject",
+        "Panel/SliderSpaceObject",
+        "Panel/SliderFillSpaceObject"
+    ]
+}

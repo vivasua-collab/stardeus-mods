@@ -1,0 +1,112 @@
+{
+    "QuestFlags" : [ "Random", "Template" ],
+    "TitleKeys" : [
+        "quest.ScavengeAndDeliver",
+        "quest.ScavengeAndDeliver2",
+        "quest.ScavengeAndDeliver3",
+        "quest.ScavengeAndDeliver4",
+        "quest.ScavengeAndDeliver5",
+        "quest.ScavengeAndDeliver6"
+    ],
+    "DescKeys" : [
+        "quest.ScavengeAndDeliver.desc",
+        "quest.ScavengeAndDeliver2.desc",
+        "quest.ScavengeAndDeliver3.desc",
+        "quest.ScavengeAndDeliver4.desc",
+        "quest.ScavengeAndDeliver5.desc",
+        "quest.ScavengeAndDeliver6.desc"
+    ],
+    "QuestProviders" : [
+        "Ship",
+        "SpaceStation"
+    ],
+    "Require": {
+        "Days": 5
+    },
+    "Variables" : [
+        {
+            "Id" : "DeliverDeadline",
+            "Type" : "Deadline",
+            "Config" : [
+                {
+                    "Key" : "DaysCurve", "FloatSet" : [
+                        0.0, 16.0,
+                        1.0, 28.0
+                    ]
+                }
+            ]
+        },
+        {
+            "Id" : "POI",
+            "Type" : "SectorPOI",
+            "Config" : [
+                { "Key" : "MinRegionsAway", "Int" : 0 },
+                { "Key" : "MinRegionDifficulty", "Float" : 0 },
+                { "Key" : "MaxRegionDifficulty", "Float" : 0.6 },
+                { "Key" : "POIConfigId", "String" : "Event" },
+                { "Key" : "Var_Start", "String" : null },
+                { "Key" : "SkipRegionsWithoutRelay", "Bool" : true }
+            ]
+        }
+    ],
+    "Steps" : [
+        {
+            "Id" : "ScavengePOI",
+            "Type" : "ExplorePOI",
+            "TitleKey": "quest.step.search.for.package.title",
+            "DescKey" : "quest.step.search.for.package.desc",
+            "Deadline" : "DeliverDeadline",
+            "StepFlags" : [ "ActiveOnStart", "FailsQuest", "HideIfQuestUnaccepted" ],
+            "SetOnComplete" : [
+                "ScavengedPackage"
+            ],
+            "Config" : [
+                { "Key" : "Var_POI", "String" : "POI" },
+                { "Key" : "ExpeditionMinHours", "Float" : 3.0 },
+                { "Key" : "ExpeditionMaxHours", "Float" : 6.0 },
+                { "Key" : "ExpeditionFoundItemMsgKey", "String" : "quest.expedition.found.package" },
+                { "Key" : "PackageRewardIds", "StringSet" : [ "QuestItem" ] }
+            ]
+        },
+        {
+            "Id" : "DeliverPackage",
+            "Type" : "DeliverPackageShip",
+            "Deadline" : "DeliverDeadline",
+            "StepFlags" : [ "CompletesQuest", "FailsQuest", "HideInactive" ],
+            "ActivateWhen" : [
+                "ScavengedPackage"
+            ]
+        }
+    ],
+    "Rewards" : [
+        {
+            "Id" : "CashMain",
+            "Type" : "Money_NetWorth",
+            "Config" : [
+                { "Key" : "NetWorthCurve", "FloatSet" : [
+                    0.0, 0.01,
+                    0.95, 0.05,
+                    1.0, 0.1
+                ] },
+                { "Key" : "AmountMin", "Int" : 5000 },
+                { "Key" : "AmountMax", "Int" : 50000 }
+            ]
+        },
+        {
+            "Id" : "QuestItem",
+            "Type" : "Material_HighValue",
+            "RewardFlags" : [ "PackageContent" ],
+            "Config" : [
+                { "Key" : "MinPrice", "Int" : 500 },
+                { "Key" : "MinValue", "Int" : 5000 },
+                { "Key" : "MaxValue", "Int" : 500000 },
+                {
+                    "Key" : "NetWorthCurve", "FloatSet" : [
+                        0.0, 0.05,
+                        1.0, 0.15
+                    ]
+                }
+            ]
+        }
+    ]
+}

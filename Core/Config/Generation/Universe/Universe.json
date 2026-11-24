@@ -1,0 +1,6 @@
+{
+    "Id" : "Universe",
+    "ShuttleReachDist" : 50,
+    "MinDistanceBetweenSubObjects" : 15.0,
+    "DistanceUnitsKey" : "units.lightyears.billions"
+}

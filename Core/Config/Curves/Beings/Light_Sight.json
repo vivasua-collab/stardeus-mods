@@ -1,0 +1,9 @@
+{
+    // light at the being's tile -> Sight multiplier. Gentle, so firefights in unlit rooms do not drag on, and no bonus in bright light
+    "FloatSet" : [
+        0.0, 0.85,
+        0.3, 0.95,
+        0.6, 1.0,
+        1.0, 1.0
+    ]
+}

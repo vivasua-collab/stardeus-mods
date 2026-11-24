@@ -1,0 +1,13 @@
+{
+    "Id" : "ShipShield",
+    "GroupId" : "ShipDevice_2_Defense",
+    "GroupNameKey" : "noun.ship",
+    "NameKey" : "noun.shields",
+    "Icon" : "Icons/Color/ForceField",
+    "DefaultTargetByWeaponTypes" : [
+        "Ballistic",
+        "Missile",
+        "Laser",
+        "Plasma"
+    ]
+}

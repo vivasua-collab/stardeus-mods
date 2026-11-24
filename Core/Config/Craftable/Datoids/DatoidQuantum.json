@@ -1,0 +1,10 @@
+{
+    "Type": "DatoidQuantum",
+    "Ingredients": [
+        { "TypeId" : "NuclearCell", "StackSize" : 1 },
+        { "TypeId" : "DarkMatter", "StackSize" : 1 }
+    ],
+    "ProductDefId": "Obj/Datoids/DatoidQuantum",
+    "ProductionTimeHours": 2.0,
+    "EnergyCost": 300.0
+}

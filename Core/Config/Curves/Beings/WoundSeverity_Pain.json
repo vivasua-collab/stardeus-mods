@@ -1,0 +1,16 @@
+{
+    // wound severity (WoundPain.EffectiveSeverity: 1 Mild, 2 Moderate, 3 Severe, 4 Critical,
+    // 5 a destroyed part not settled yet) -> how much that one wound adds to the Pain stat.
+    // A being goes down in pain shock past its PainThreshold (0.8 for a human):
+    // two Critical wounds, or a Critical and two Severe ones. Destroyed parts hurt less than
+    // Critical ones: what is gone stops sending pain, and it settles further over time.
+    // A Mild wound is a scratch: scratches on all of a human's
+    // ~30 parts add up to 0.6, which keeps them standing.
+    "FloatSet" : [
+        1.0, 0.02,
+        2.0, 0.12,
+        3.0, 0.25,
+        4.0, 0.4,
+        5.0, 0.3
+    ]
+}

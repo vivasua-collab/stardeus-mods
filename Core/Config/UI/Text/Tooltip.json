@@ -1,0 +1,9 @@
+{
+    "Id" : "Text/Tooltip",
+
+    "TextFontSize" : 24,
+    "Color" : "UI/Text/Main",
+    "Alpha" : 1,
+
+    "TextOverflowMode" : "Overflow"
+}

@@ -1,0 +1,7 @@
+{
+    "Id" : "GameStart",
+    "Type" : "Equity",
+    "Groups" : [ "Entertainment" ],
+    "Value" : 612.0,
+    "Volatility" : 0.0781
+}

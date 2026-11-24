@@ -1,0 +1,10 @@
+{
+    "Id" : "Ashes",
+    "IsComposite" : true,
+    "IconId" : "Obj/Materials/Ashes",
+    "GroupId" : "Components",
+    "EnergyOutput" : 50.0,
+    "IgnoreMarket" : true,
+    "MatRarity" : 0,
+    "Rarity" : 15
+}

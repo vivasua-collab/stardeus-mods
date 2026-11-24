@@ -1,0 +1,12 @@
+// USV: Unmarked Space Vessel
+{
+    "ChanceWillTrade" : 1.0,
+    "CompatibleFactions" : [
+        "Pirate",
+        "Scavenger"
+    ],
+    // empty = all
+    "CompatibleClasses" : [ ],
+    "MinOffensiveness" : 0.0,
+    "MaxOffensiveness" : 1.0
+}

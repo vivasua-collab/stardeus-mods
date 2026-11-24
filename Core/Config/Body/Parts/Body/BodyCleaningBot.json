@@ -1,0 +1,80 @@
+{
+    "SlotTypeId" : "Body",
+    "Compatibility" : "TargetSpecies",
+    "TargetSpecies" : [ "CleaningBot" ],
+    "PartFlags" : [ "Indestructible" ],
+    "ResistanceBase" : 7.0,
+    "Resistances" : [
+        { "DamageType" : "Energy", "Resistance" : 3.0 }
+    ],
+    "AddsAbilities" : [
+        "CleanDevice",
+        "CleanFloors",
+        "UseItem"
+    ],
+    "AddsNeeds" : [
+        "Electricity",
+        "Maintenance",
+        "Temperature",
+        "CleanFloors"
+    ],
+    "AddsAttackMethods" : [
+        {
+            "Component" : "Bump",
+            "Properties" : [
+                { "Key" : "AttackAction", "String" : "Melee" },
+                { "Key" : "DPS", "Float" : 0.77 },
+                { "Key" : "AttackType", "String" : "Blunt" },
+                { "Key" : "ChargeSec", "Float" : 5.0 },
+                { "Key" : "CooldownSec", "Float" : 3.0 },
+                { "Key" : "MoveSpeedMul", "Float" : 0.05 },
+                { "Key" : "StunChanceBio", "Float" : 0.08 },
+                { "Key" : "StunChanceRobo", "Float" : 0.15 },
+                { "Key" : "BleedChance", "Float" : 0.05 },
+                { "Key" : "FatalHitChanceMul", "Float" : 0.0 },
+                { "Key" : "InternalHitChanceMul", "Float" : 0.0 }
+            ]
+        }
+    ],
+    "ProvidesStats" : [
+        {
+            "Component" : "TempMax",
+            "Properties" : [
+                { "Key" : "StateMul", "Float" : 0.0 },
+                { "Key" : "QualityMul", "Float" : 0.1 },
+                { "Key" : "TemperatureCelsius", "Float" : 400.0 }
+            ]
+        },
+        {
+            "Component" : "BatteryConsumption",
+            "Properties" : [
+                { "Key" : "AmountPerDay", "Float" : 50 },
+                { "Key" : "QualityMul", "Float" : 0.1 }
+            ]
+        },
+        {
+            "Component" : "ArmorSharp",
+            "Properties" : [
+                { "Key" : "Amount", "Float" : 0.5 }
+            ]
+        },
+        {
+            "Component" : "ArmorPiercing",
+            "Properties" : [
+                { "Key" : "Amount", "Float" : 0.5 }
+            ]
+        },
+        {
+            "Component" : "ArmorBlunt",
+            "Properties" : [
+                { "Key" : "Amount", "Float" : 0.5 }
+            ]
+        },
+        {
+            "Component" : "ArmorEnergy",
+            "Properties" : [
+                { "Key" : "Amount", "Float" : 0.1 }
+            ]
+        }
+    ]
+}

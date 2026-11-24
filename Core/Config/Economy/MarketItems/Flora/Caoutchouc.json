@@ -1,0 +1,10 @@
+{
+    "Id" : "Obj/Materials/Caoutchouc",
+    "Type" : "CFD",
+    "Groups" : [ "Flora" ],
+    "Value" : 22.0,
+    "Rarity" : 0.2,
+    "TraderQuantity" : 10.0,
+    "MinSectorDifficulty" : 0.35,
+    "Volatility" : 0.0041
+}

@@ -1,0 +1,11 @@
+{
+    "Id" : "Obj/Equipment/Clothing/CombatSuit01",
+    "Type" : "CFD",
+    "Groups" : [ "Equipment" ],
+    "Value" : 9400,
+    "Rarity" : 0.06,
+    "TraderQuantity" : 1.0,
+    "MaxTraderQuantity" : 1,
+    "MinSectorDifficulty" : 0.8,
+    "Volatility" : 0.0095
+}

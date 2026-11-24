@@ -1,0 +1,16 @@
+{
+    "Id" : "DrugDealer",
+    "RoleTypes" : [ "Rich", "Evil" ],
+    "IncapableJobTypes" : [ "Cleaning" ],
+    "Species" : [ "Human", "Robot" ],
+    "AdjustsSkills" : [
+        {
+            "JobId" : "Shooting",
+            "Adjustment" : 4
+        },
+        {
+            "JobId" : "Medical",
+            "Adjustment" : 4
+        }
+    ]
+}

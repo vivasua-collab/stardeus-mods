@@ -1,0 +1,143 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Stardeus SignalReqConfig",
+  "description": "Generated from C# by Game/Generate JSON Schemas, do not edit by hand",
+  "$ref": "#/$defs/SignalReqConfig",
+  "$defs": {
+    "SignalReqConfig": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "Id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "Chance": {
+          "type": "number"
+        },
+        "IsImmediateChoice": {
+          "type": "boolean"
+        },
+        "IsRetryAvailable": {
+          "type": "boolean"
+        },
+        "RequestMsgKey": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "RequestMsgKeyRoot": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "FulfillMsgKey": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "FulfillMsgKeyRoot": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "RefuseMsgKey": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "RefuseMsgKeyRoot": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "MoneyPercentFrom": {
+          "type": "number"
+        },
+        "MoneyPercentTo": {
+          "type": "number"
+        },
+        "RequestDefIds": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "RequestDefMarketGroups": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "RequestQuantity": {
+          "type": "integer"
+        },
+        "RequestQuantityFrom": {
+          "type": "integer"
+        },
+        "RequestQuantityTo": {
+          "type": "integer"
+        },
+        "RewardQuantity": {
+          "type": "integer"
+        },
+        "RewardQuantityFrom": {
+          "type": "integer"
+        },
+        "RewardQuantityTo": {
+          "type": "integer"
+        },
+        "RewardDefIds": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "RewardDefMarketGroups": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "IsRewardKnown": {
+          "type": "boolean"
+        }
+      },
+      "additionalProperties": false
+    }
+  }
+}

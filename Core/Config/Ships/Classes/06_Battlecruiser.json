@@ -1,0 +1,78 @@
+// Battlecruiser class: Heavily armed but more mobile than a battleship.
+{
+    "Id" : "Battlecruiser",
+    "RequiredClassId" : "Cruiser",
+    "UnlockPrice" : 150000,
+
+    "MinSize": 1250,
+    "MaxSize": 2800,
+    "DerelictSizeMin" : 0.4,
+    "DerelictSizeMax" : 0.6,
+    "DerelictWidthMin" : 0.6,
+    "DerelictWidthMax" : 0.8,
+    "MinEnergy" : 3000,
+    "NPCDeviceRepairHealthPerHour" : 900,
+
+    "WeaponsTier" : 3,
+    "MaxClassPoints" : 100,
+    "MaxPointDefense" : 2,
+
+    "MaxShields" : 2,
+    "MinShields" : 1,
+
+    "Visual_EngineCurvatureSign" : -1,
+    "Visual_EnginesPerRow" : 12,
+    "Visual_EngineDensity" : 0.2,
+    "Visual_DeviceMaxScale" : 3.0,
+
+    "CombatMotionHover" : 2.5,
+    "CombatMotionRotation" : 1.8,
+    "CombatMotionSpeed" : 0.5,
+
+    "FluxSoftVentPerHour" : 560,
+
+    "FluxBonus" : 760,
+    "MaxFluxCapacity" : 3000,
+    "MaxFluxVents" : 10,
+    "HPBonus" : 4000,
+    "NPCHPBonus" : 2350,
+    "ViewScale" : 2.4,
+
+    "BaseEvasion" : 0.06,
+
+    "ViewZoneWidth" : [
+        0.0, 0.4,
+        0.25, 0.75,
+        0.5, 1.0,
+        0.8, 0.8,
+        1.0, 0.6
+    ],
+
+    "CombatBreachCapsuleChance" : 0.03,
+
+    "NPCSizeRange" : [
+        0.0, 1400,
+        0.5, 1900,
+        1.0, 2800
+    ],
+    "NumThrustersChance" : [
+        0.0, 2.0,
+        1.0, 6.0
+    ],
+    "NumShortRangeDrivesChance" : [
+        0.0, 1.0,
+        1.0, 4.0
+    ],
+    "NumLongRangeDrivesChance" : [
+        0.0, 0.0,
+        1.0, 1.0
+    ],
+    "Rarity" : 0.4,
+    "OriginDifficultyChance" : [
+        0.0, 0.0,
+        0.5, 0.0,
+        0.6, 0.1,
+        0.7, 0.5,
+        1.0, 1.0
+    ]
+}

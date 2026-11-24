@@ -1,0 +1,15 @@
+{
+    // Biological colonists -> minimum population intent for *biological* growth (stasis
+    // wake-ups and ColonyGrowthBio story events). Bots are population and rightly slow
+    // colonist arrivals, but a ship with 12 bots and 4 colonists must still get people,
+    // just slowly: population 16 puts PopulationIntent at 0, and this floor of 0.30 makes
+    // that a wake-up every ~67 days instead of never. Past 8 colonists the floor is 0 and
+    // population alone decides. Robotic growth never reads this.
+    "FloatSet" : [
+        0.0, 0.50,
+        2.0, 0.40,
+        4.0, 0.30,
+        6.0, 0.15,
+        8.0, 0.00
+    ]
+}

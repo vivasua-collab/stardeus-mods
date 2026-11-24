@@ -1,0 +1,17 @@
+{
+    "Type" : "Robotics3",
+    "ProductDefId" : "Obj/Parts/Implant/ObeyChip",
+    "ProductionTimeHours" : 360,
+    "EnergyCost" : 75,
+    "IgnoreMarket" : true,
+    "Ingredients" : [
+        { "TypeId" : "TitaniumPlate", "StackSize" : 1 },
+        { "TypeId" : "Transistor", "StackSize" : 25 },
+        { "TypeId" : "OpticalFiber", "StackSize" : 15 },
+        { "TypeId" : "Microchip2", "StackSize" : 5 },
+        { "TypeId" : "PlatinumIngot", "StackSize" : 3 }
+    ],
+    "DisposableOutput" : [
+        { "TypeId" : "ScrapMetal", "StackSize" : 1 }
+    ]
+}

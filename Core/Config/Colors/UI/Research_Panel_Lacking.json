@@ -1,0 +1,7 @@
+{
+    "Id" : "UI/Research/Panel/Lacking",
+    // "Hex" : "D65C5C",
+    "Hex" : "682D2D",
+    "Alpha" : 1,
+    "SkipAtlas" : true
+}

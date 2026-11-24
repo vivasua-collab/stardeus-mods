@@ -1,0 +1,107 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Stardeus ColorDef",
+  "description": "Generated from C# by Game/Generate JSON Schemas, do not edit by hand",
+  "$ref": "#/$defs/ColorDef",
+  "$defs": {
+    "Color": {
+      "type": "object",
+      "properties": {
+        "r": {
+          "type": "number"
+        },
+        "g": {
+          "type": "number"
+        },
+        "b": {
+          "type": "number"
+        },
+        "a": {
+          "type": "number"
+        }
+      },
+      "additionalProperties": false
+    },
+    "ColorDef": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "Id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "NameColorId": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "NameNumber": {
+          "type": "integer"
+        },
+        "IsGeneric": {
+          "type": "boolean"
+        },
+        "SpriteId": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "Hex": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "Alpha": {
+          "type": "number"
+        },
+        "Data": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "integer"
+          }
+        },
+        "Color": {
+          "$ref": "#/$defs/Color"
+        },
+        "Groups": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "SkipAtlas": {
+          "type": "boolean"
+        },
+        "AliasFor": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "Weight": {
+          "type": "number"
+        },
+        "IsBroken": {
+          "type": "boolean"
+        }
+      },
+      "additionalProperties": false
+    }
+  }
+}

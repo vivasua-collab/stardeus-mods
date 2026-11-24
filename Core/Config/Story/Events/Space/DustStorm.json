@@ -1,0 +1,26 @@
+{
+    // C# implementation id.
+    // Multiple configurations can point to a single implementation.
+    "EventId" : "DustStorm",
+    // How much does this story event cost to run
+    "Points" : 5,
+    // Options: Negative, Positive, Neutral, Raid
+    "OutcomeType" : "Negative",
+    // Full list is in StoryEventFlags class
+    "EventFlags" : [
+        "Space",
+        "SpaceStorm",
+        "CooldownOnStart",
+        "NoHyperspace",
+        "CanIgnoreRepeatDelay"
+    ],
+    "MaxOngoingDays" : 30,
+    "MinRepeatDelayDays" : 14,
+    // How likely this event can occur given the sector difficulty
+    // sector difficulty -> chance
+    "SectorDifficultyChance" : [
+        0.0, 1.0,
+        0.5, 0.5,
+        1.0, 0.25
+    ]
+}

@@ -1,0 +1,83 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Stardeus ShipShapeConfig",
+  "description": "Generated from C# by Game/Generate JSON Schemas, do not edit by hand",
+  "$ref": "#/$defs/ShipShapeConfig",
+  "$defs": {
+    "ShipShapeConfig": {
+      "type": "object",
+      "properties": {
+        "WidthFrom": {
+          "type": "number"
+        },
+        "WidthTo": {
+          "type": "number"
+        },
+        "HeightFrom": {
+          "type": "number"
+        },
+        "HeightTo": {
+          "type": "number"
+        },
+        "CellWidthFrom": {
+          "type": "number"
+        },
+        "CellWidthTo": {
+          "type": "number"
+        },
+        "CellHeightFrom": {
+          "type": "number"
+        },
+        "CellHeightTo": {
+          "type": "number"
+        },
+        "AlwaysFilledThresholdFrom": {
+          "type": "number"
+        },
+        "AlwaysFilledThresholdTo": {
+          "type": "number"
+        },
+        "XSolidFromFrom": {
+          "type": "number"
+        },
+        "XSolidFromTo": {
+          "type": "number"
+        },
+        "XSolidToFrom": {
+          "type": "number"
+        },
+        "XSolidToTo": {
+          "type": "number"
+        },
+        "XCockpitStartFrom": {
+          "type": "number"
+        },
+        "XCockpitStartTo": {
+          "type": "number"
+        },
+        "CockpitWidthFrom": {
+          "type": "number"
+        },
+        "CockpitWidthTo": {
+          "type": "number"
+        },
+        "CockpitHeightFrom": {
+          "type": "number"
+        },
+        "CockpitHeightTo": {
+          "type": "number"
+        },
+        "NoiseScaleFrom": {
+          "type": "number"
+        },
+        "NoiseScaleTo": {
+          "type": "number"
+        },
+        "CockpitSolidChance": {
+          "type": "number"
+        }
+      },
+      "additionalProperties": false
+    }
+  }
+}

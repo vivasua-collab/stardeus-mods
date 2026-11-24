@@ -1,0 +1,10 @@
+{
+    "Id" : "Ugly",
+    "IconId" : "Icons/Color/NoSparkles",
+    "TypeId" : "BiologicalFunction",
+    "TraitFlagIds" : [ "BodyBound" ],
+    "IncompatibleTraitIds" : [
+        "Beautiful"
+    ],
+    "Rarity" : 0.25
+}

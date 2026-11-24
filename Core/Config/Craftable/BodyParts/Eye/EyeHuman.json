@@ -1,0 +1,13 @@
+{
+    "Type" : "Organics2",
+    "ProductDefId" : "Obj/Parts/Eye/EyeHuman",
+    "ProductionTimeHours" : 504,
+    "EnergyCost" : 25,
+    "IgnoreMarket" : true,
+    "Ingredients" : [
+        { "TypeId" : "Protein", "StackSize" : 3 },
+        { "TypeId" : "Water", "StackSize" : 2 },
+        { "TypeId" : "Carbon", "StackSize" : 2 },
+        { "TypeId" : "StemCells", "StackSize" : 5 }
+    ]
+}

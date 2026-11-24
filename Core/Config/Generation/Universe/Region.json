@@ -1,0 +1,19 @@
+{
+    "Id" : "Region",
+    "Icon" : "Icons/Color/Starmap",
+    "DistanceUnitsKey" : "units.lightyears",
+    "NameChanceWeights" : [ 1.0 ],
+    "CustomNames" : "Space/Region/Custom",
+    "NameParts" : [
+        {
+            "Type" : "SOName",
+            "Paths" : [ "Space/Object/Name" ],
+            "Chances" : [ 1.0 ]
+        },
+        {
+            "Type" : "SOName",
+            "Paths" : [ "Space/Object/Name" ],
+            "Chances" : [ 0.01 ]
+        }
+    ]
+}

@@ -1,0 +1,14 @@
+// RSS: Rogue Space Station
+{
+    "ChanceWillTrade" : 1.0,
+    "CompatibleFactions" : [
+        "Scavenger",
+        "Virus",
+        "Pirate"
+    ],
+    "CompatibleClasses" : [
+        "SpaceStation"
+    ],
+    "MinOffensiveness" : 0.9,
+    "MaxOffensiveness" : 1.0
+}

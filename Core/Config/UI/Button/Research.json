@@ -1,0 +1,17 @@
+{
+    "Id" : "Button/Research",
+
+    "ChildrenKeys" : [
+        "Panel",
+        "Selectable",
+        "Text",
+        "ActiveOverlay"
+    ],
+
+    "ChildrenIds" : [
+        "Panel/ColorlessIconButton",
+        "Selectable/Default",
+        "Text/ResearchButton",
+        "Overlay/Icon"
+    ]
+}

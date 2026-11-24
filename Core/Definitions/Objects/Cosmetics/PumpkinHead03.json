@@ -1,0 +1,14 @@
+{
+    "BuildGroup" : "PumpkinHead",
+    "Layer" : "Objects",
+    "ParentId" : "Objects/Cosmetics/PumpkinHead01",
+    "UseParentTexts" : true,
+    "Components" : [
+        {
+            "Component" : "TileGraphics",
+            "Properties" : [
+                { "Key" : "Graphic", "String": "Objects/Cosmetics/PumpkinHead03" }
+            ]
+        }
+    ]
+}

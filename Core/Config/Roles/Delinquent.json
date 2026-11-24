@@ -1,0 +1,20 @@
+{
+    "Id" : "Delinquent",
+    "Species" : [ "Human" ],
+    "RoleTypes" : [ "Evil" ],
+    "AgePhaseIds" : [ "Childhood", "YoungAdult" ],
+    "AdjustsSkills" : [
+        {
+            "JobId" : "Melee",
+            "Adjustment" : 4
+        },
+        {
+            "JobId" : "Demolition",
+            "Adjustment" : 6
+        },
+        {
+            "JobId" : "Social",
+            "Adjustment" : -2
+        }
+    ]
+}

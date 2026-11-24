@@ -1,0 +1,18 @@
+{
+    "Id" : "Button/EventLog",
+
+    "ChildrenKeys" : [
+        "Panel",
+        "Selectable",
+        "Text",
+        "ActiveOverlay"
+    ],
+
+    "ChildrenIds" : [
+        "Panel/ColorlessIconButton",
+        "Selectable/EventLog",
+        "Text/IconButton",
+        "Overlay/Icon"
+    ]
+
+}

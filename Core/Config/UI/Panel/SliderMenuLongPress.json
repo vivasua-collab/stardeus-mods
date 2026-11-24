@@ -1,0 +1,10 @@
+{
+    "Id" : "Panel/SliderMenuLongPress",
+
+    "Color" : "UI/Slider/Background",
+    "Alpha" : 1,
+
+    "Image" : "UI/Buttons/ButtonBG",
+    "ImageType" : "Sliced",
+    "ImageBorderLBRT" : [ 12, 12, 12, 12 ]
+}

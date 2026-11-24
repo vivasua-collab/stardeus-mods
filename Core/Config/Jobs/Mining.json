@@ -1,0 +1,7 @@
+{
+    "Id" : "Mining",
+    "SkillSpeedCurve" : "Skills/SpeedMining",
+    "Importance" : 3.0,
+    "IconId" : "Icons/Color/Pickaxe",
+    "Types" : [ "Physical", "Mindless" ]
+}

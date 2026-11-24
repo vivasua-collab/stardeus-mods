@@ -1,0 +1,8 @@
+{
+    "Id" : "Research",
+    "SkillSpeedCurve" : "Skills/SpeedIntellectual",
+    "Importance" : 3.0,
+    "IconId" : "Icons/Color/Research",
+    "EnabledByAbilities" : [ "Manipulate", "Research" ],
+    "Types" : [ "Intellectual", "Creative", "Challenging" ]
+}

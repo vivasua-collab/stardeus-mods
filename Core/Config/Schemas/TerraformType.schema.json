@@ -1,0 +1,38 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Stardeus TerraformType",
+  "description": "Generated from C# by Game/Generate JSON Schemas, do not edit by hand",
+  "$ref": "#/$defs/TerraformType",
+  "$defs": {
+    "TerraformType": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "Id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "IsCoreGame": {
+          "type": "boolean"
+        },
+        "IconId": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "DurationDays": {
+          "type": "number"
+        },
+        "MaterialConsumptionPerDay": {
+          "type": "number"
+        }
+      },
+      "additionalProperties": false
+    }
+  }
+}

@@ -1,0 +1,11 @@
+{
+    "Type": "Weapons2",
+    "Ingredients": [
+        { "TypeId" : "TitaniumPlate", "StackSize" : 3 },
+        { "TypeId" : "Plastic", "StackSize" : 1 }
+    ],
+    "IgnoreMarket" : true,
+    "ProductDefId": "Obj/Equipment/Weapons/Machete01",
+    "ProductionTimeHours": 4.0,
+    "EnergyCost": 25.0
+}

@@ -1,0 +1,12 @@
+{
+    "Id" : "Obj/Upgrades/WeaponCapacityUpgrade",
+    "Type" : "CFD",
+    "Groups" : [ "Upgrade" ],
+    "Value" : 28000.0,
+    "Rarity" : 0.06,
+    "TraderQuantity" : 1.0,
+    "MaxTraderQuantity" : 1,
+    "MinSectorDifficulty" : 0.85,
+    "PlayerSellPriceMultiplier": 0.5,
+    "Volatility" : 0.0043
+}

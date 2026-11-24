@@ -1,0 +1,18 @@
+{
+    "Id" : "Button/MenuAccented",
+
+    "ChildrenKeys" : [
+        "Panel",
+        "Selectable",
+        "Text",
+        "ActiveOverlay"
+    ],
+
+    "ChildrenIds" : [
+        "Panel/ColorlessButton",
+        "Selectable/MenuButtonAccented",
+        "Text/MenuButton",
+        "Overlay/Button"
+    ]
+
+}

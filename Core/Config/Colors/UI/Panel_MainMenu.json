@@ -1,0 +1,6 @@
+{
+    "Id" : "UI/Panel/MainMenu",
+    "AliasFor" : "UI/Main/Primary-2",
+    "Alpha" : 1.0,
+    "SkipAtlas" : true
+}

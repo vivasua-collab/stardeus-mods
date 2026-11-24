@@ -1,0 +1,11 @@
+{
+    "Type": "Grindable",
+    "IgnoreMarket" : true,
+    "Ingredients": [
+        { "TypeId" : "Coal", "StackSize" : 1 }
+    ],
+    "OutputMultiplier" : 5,
+    "ProductDefId": "Obj/Materials/Carbon",
+    "ProductionTimeHours": 2,
+    "EnergyCost": 10.0
+}

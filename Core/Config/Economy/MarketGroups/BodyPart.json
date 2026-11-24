@@ -1,0 +1,8 @@
+{
+    "Id" : "BodyPart",
+    "RecessionEffect" : 1.0,
+    "Rarity" : 0.2,
+    "TraderQuantity" : 2.0,
+    "MaxTraderQuantity" : 10,
+    "Volatility" : 0.0011
+}

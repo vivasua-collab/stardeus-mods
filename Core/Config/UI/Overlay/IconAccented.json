@@ -1,0 +1,9 @@
+{
+    "Id" : "Overlay/IconAccented",
+
+    "Color" : "UI/Saturated/Comp",
+
+    "Image" : "UI/Buttons/ActiveOverlayIcon",
+    "ImageType" : "Sliced",
+    "ImageBorderLBRT" : [ 8, 8, 8, 8 ]
+}

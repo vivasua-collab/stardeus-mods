@@ -1,0 +1,10 @@
+{
+    "Type" : "Ore",
+    "Ingredients" : [
+        { "TypeId" : "Titanium", "StackSize" : 1 }
+    ],
+    "OutputMultiplier" : 3,
+    "ProductDefId" : "Obj/Materials/TitaniumPlate",
+    "ProductionTimeHours" : 2.0,
+    "EnergyCost" : 20
+}

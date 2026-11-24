@@ -1,0 +1,9 @@
+{
+    // rng => delay days till next quest available from ANY NPC
+    "FloatSet" : [
+        0.0, 0.0,
+        0.04, 2.0,
+        0.9, 6.0,
+        1.0, 10.0
+    ]
+}

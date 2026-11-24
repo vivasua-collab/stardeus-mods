@@ -1,0 +1,27 @@
+{
+    "Id" : "Research/SpaceTravel/Shuttle",
+    "Tier" : 2,
+    "IsAbstract" : true,
+    "PreviewIcon" : "Objects/Devices/Shuttle_R",
+    "NameKey" : "research.shuttle",
+    "Researchable" : {
+        "IsTreeNode" : true,
+        "Prerequisites" : [
+            "Research/SpaceTravel/LocalManeuvering"
+        ],
+        "DatoidCosts" : [
+            {
+                "TypeId" : "DatoidBasic",
+                "StackSize" : 17
+            },
+            {
+                "TypeId" : "DatoidTech",
+                "StackSize" : 8
+            },
+            {
+                "TypeId" : "DatoidBiotic",
+                "StackSize" : 3
+            }
+        ]
+    }
+}

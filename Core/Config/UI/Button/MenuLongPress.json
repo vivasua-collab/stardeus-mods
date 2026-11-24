@@ -1,0 +1,17 @@
+{
+    "Id" : "Button/MenuLongPress",
+
+    "ChildrenKeys" : [
+        "Panel",
+        "Selectable",
+        "Text",
+        "ActiveOverlay"
+    ],
+
+    "ChildrenIds" : [
+        "Panel/ColorlessButton",
+        "Selectable/MenuButton",
+        "Text/MenuButton",
+        "Overlay/LongPressMenu"
+    ]
+}

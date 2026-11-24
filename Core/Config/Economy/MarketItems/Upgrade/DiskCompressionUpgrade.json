@@ -1,0 +1,12 @@
+{
+    "Id" : "Obj/Upgrades/DiskCompressionUpgrade",
+    "Type" : "CFD",
+    "Groups" : [ "Upgrade" ],
+    "Value" : 2700.0,
+    "Rarity" : 0.3,
+    "TraderQuantity" : 2.0,
+    "MaxTraderQuantity" : 10,
+    "MinSectorDifficulty" : 0.3,
+    "PlayerBuyPriceMultiplier": 3.0,
+    "Volatility" : 0.0058
+}

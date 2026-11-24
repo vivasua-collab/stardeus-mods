@@ -1,0 +1,79 @@
+{
+    "SlotTypeId" : "Body",
+    "Compatibility" : "TargetSpecies",
+    "TargetSpecies" : [ "Cat" ],
+    "PartFlags" : [ "Biological" ],
+    "ResistanceBase" : 5.0,
+    "Resistances" : [
+        { "DamageType" : "Energy", "Resistance" : 8.0 }
+    ],
+    "AddsAbilities" : [
+        "Sleep"
+    ],
+    "AddsNeeds" : [
+        "Health",
+        "Hunger",
+        "Toilet",
+        "Oxygen",
+        "Temperature",
+        "Sleep"
+    ],
+    "ProvidesStats" : [
+        {
+            "Component" : "TempMin",
+            "Properties" : [
+                { "Key" : "StateMul", "Float" : 0.0 },
+                { "Key" : "QualityMul", "Float" : 0.0001 },
+                { "Key" : "TemperatureCelsius", "Float" : -30.0 }
+            ]
+        },
+        {
+            "Component" : "TempMax",
+            "Properties" : [
+                { "Key" : "StateMul", "Float" : 0.0 },
+                { "Key" : "QualityMul", "Float" : 0.01 },
+                { "Key" : "TemperatureCelsius", "Float" : 45.0 }
+            ]
+        },
+        {
+            "Component" : "WoundHealRate",
+            "Properties" : [
+                { "Key" : "StateMul", "Float" : 0.5 },
+                { "Key" : "QualityMul", "Float" : 0.5 },
+                { "Key" : "AmountPerDay", "Float" : 0.25 }
+            ]
+        },
+        {
+            "Component" : "HungerRate",
+            "Properties" : [
+                { "Key" : "StateMul", "Float" : 0.0 },
+                { "Key" : "QualityMul", "Float" : 0.1 },
+                { "Key" : "AmountPerDay", "Float" : 0.5 }
+            ]
+        },
+        {
+            "Component" : "BloodClotRate",
+            "Properties" : [
+                { "Key" : "StateMul", "Float" : 0.5 },
+                { "Key" : "QualityMul", "Float" : 0.5 },
+                { "Key" : "AmountPerDay", "Float" : 0.036 }
+            ]
+        },
+        {
+            "Component" : "SleepRate",
+            "Properties" : [
+                // 1/4. 1.0 or 100% in 4 hours
+                { "Key" : "AmountPerHour", "Float" : 0.25 },
+                { "Key" : "QualityMul", "Float" : 0.0001 }
+            ]
+        },
+        {
+            "Component" : "SleepPressureRate",
+            "Properties" : [
+                // 1/8. Will drop fully in 8 hours
+                { "Key" : "AmountPerHour", "Float" : 0.125 },
+                { "Key" : "QualityMul", "Float" : 0.0001 }
+            ]
+        }
+    ]
+}

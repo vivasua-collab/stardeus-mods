@@ -1,0 +1,43 @@
+{
+    "BuildGroup" : "FloorMarble",
+    "Layer" : "Floor",
+    "ParentId" : "Structure/Floors/Floor01",
+    "Researchable" : {
+        "Prerequisites" : [
+            "Research/Habitation/FurnitureImproved"
+        ]
+    },
+    "Components" : [
+        {
+            "Component" : "TileGraphics",
+            "Properties" : [
+                { "Key" : "Graphic", "String": "Structure/Floors/FloorMarble01" }
+                // { "Key" : "Shader", "String": "SeamlessFloorTile" }
+            ]
+        },
+        {
+            "Component" : "Flammable",
+            "Properties" : [
+                { "Key" : "FireChance", "Float" : 0.05 },
+                { "Key" : "SpreadIntoChance", "Float" : 0.05 }
+            ]
+        },
+        {
+            "Component" : "Damageable",
+            "Properties" : [
+                { "Key" : "Max", "Int" : 120 }
+            ]
+        },
+        {
+            "Component" : "Constructable",
+            "Properties" : [
+                {
+                    "Key" : "Contents",
+                    "RawMaterials" : [
+                        { "TypeId" : "Rock", "StackSize" : 2 }
+                    ]
+                }
+            ]
+        }
+    ]
+}

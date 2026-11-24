@@ -1,0 +1,9 @@
+{
+    "Id" : "Obj/Materials/Pumpkin",
+    "Type" : "CFD",
+    "Groups" : [ "Flora" ],
+    "Value" : 24.0,
+    "Rarity" : 0.9,
+    "MinSectorDifficulty" : 0.25,
+    "Volatility" : 0.0042
+}

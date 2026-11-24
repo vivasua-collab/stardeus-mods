@@ -1,0 +1,17 @@
+{
+    "Type" : "RoboticsManual",
+    "ProductDefId" : "Obj/Parts/Hand/Manipulator",
+    "ProductionTimeHours" : 240,
+    "EnergyCost" : 50,
+    "IgnoreMarket" : true,
+    "Ingredients" : [
+        { "TypeId" : "TitaniumPlate", "StackSize" : 3 },
+        { "TypeId" : "OpticalFiber", "StackSize" : 15 },
+        { "TypeId" : "Microchip", "StackSize" : 10 },
+        { "TypeId" : "Plastic", "StackSize" : 10 },
+        { "TypeId" : "Gears", "StackSize" : 25 }
+    ],
+    "DisposableOutput" : [
+        { "TypeId" : "ScrapMetal", "StackSize" : 3 }
+    ]
+}

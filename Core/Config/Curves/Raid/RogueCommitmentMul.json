@@ -1,0 +1,12 @@
+{
+    // Fraction of the Rogue AI research tree unlocked (0..1) -> raid strength multiplier.
+    // Going rogue used to cost the good ending and the colonist pool, but nothing ongoing.
+    // The deeper the player commits to the branch, the harder the galaxy pushes back.
+    "FloatSet" : [
+        0.00, 1.0,
+        0.25, 1.1,
+        0.50, 1.25,
+        0.75, 1.45,
+        1.00, 1.75
+    ]
+}

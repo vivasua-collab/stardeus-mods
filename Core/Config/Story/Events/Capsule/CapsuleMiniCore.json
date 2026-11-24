@@ -1,0 +1,23 @@
+{
+    // C# implementation id.
+    // Multiple configurations can point to a single implementation.
+    "EventId" : "CapsuleObj",
+    // How much does this story event cost to run
+    "Points" : 15,
+    // Options: Negative, Positive, Neutral, Raid, Raid
+    "OutcomeType" : "Positive",
+    // Full list is in StoryEventFlags class
+    "EventFlags" : [
+        "OnDemand",
+        "Capsule"
+    ],
+    "MinRepeatDelayDays" : 400,
+    // Full list of requirements can be found in Situation class
+    "Require" : {
+        "Days" : 200
+    },
+    // Variables for the story event implementation
+    "Properties" : [
+        { "Key" : "LootDefId", "String" : "Obj/Parts/Core/MiniCore" }
+    ]
+}

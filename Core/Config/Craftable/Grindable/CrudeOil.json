@@ -1,0 +1,11 @@
+{
+    "Type": "Grindable",
+    "IgnoreMarket" : true,
+    "Ingredients": [
+        { "TypeId" : "Rock", "StackSize" : 12 }
+    ],
+    "OutputMultiplier" : 1,
+    "ProductDefId": "Obj/Materials/CrudeOil",
+    "ProductionTimeHours": 5,
+    "EnergyCost": 25.0
+}

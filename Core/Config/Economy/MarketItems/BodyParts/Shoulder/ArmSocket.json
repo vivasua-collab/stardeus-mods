@@ -1,0 +1,8 @@
+{
+    "Id" : "Obj/Parts/Shoulder/ArmSocket",
+    "Type" : "CFD",
+    "Groups" : [ "BodyPart", "Robotics" ],
+    "Value" : 180.0,
+    "Rarity" : 0.1,
+    "Volatility" : 0.00123
+}

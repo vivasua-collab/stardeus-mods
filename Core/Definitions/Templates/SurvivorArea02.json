@@ -1,0 +1,99 @@
+{
+    "SkipToolListing": true,
+    "Layer": "Objects",
+    "Components": [
+        {
+            "Component": "TileTransform",
+            "Properties": [
+                {
+                    "Key": "Width",
+                    "Int": 4
+                },
+                {
+                    "Key": "Height",
+                    "Int": 4
+                }
+            ]
+        },
+        {
+            "Component": "Passability"
+        },
+        {
+            "Component": "TileGraphics",
+            "Properties": [
+                {
+                    "Key": "Graphic",
+                    "String": "Icons/White/Square"
+                }
+            ]
+        },
+        {
+            "Component": "Template",
+            "Properties": [
+                {
+                    "Key": "Chance",
+                    "Float": 0.800000011920929
+                },
+                {
+                    "Key": "MinInstances",
+                    "Int": 1
+                },
+                {
+                    "Key": "MaxInstances",
+                    "Int": 5
+                },
+                {
+                    "Key": "Definitions",
+                    "StringSet": [
+                        "Objects/Devices/MatterReactorMini",
+                        "Objects/Devices/Heater",
+                        "Objects/Devices/PlanterMini",
+                        "Objects/Devices/FloorSocket",
+                        "Objects/Furniture/BedSteel",
+                        "Objects/Devices/OxygenPump"
+                    ]
+                },
+                {
+                    "Key": "Positions",
+                    "Vector2Set": [
+                        {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        {
+                            "x": 0.0,
+                            "y": 1.0
+                        },
+                        {
+                            "x": 0.0,
+                            "y": 3.0
+                        },
+                        {
+                            "x": 1.0,
+                            "y": 2.0
+                        },
+                        {
+                            "x": 2.0,
+                            "y": 3.0
+                        },
+                        {
+                            "x": 3.0,
+                            "y": 0.0
+                        }
+                    ]
+                },
+                {
+                    "Key": "Rotations",
+                    "StringSet": [
+                        "U",
+                        "R",
+                        "D",
+                        "D",
+                        "L",
+                        "L"
+                    ]
+                }
+            ]
+        }
+    ]
+}

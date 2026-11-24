@@ -1,0 +1,7 @@
+{
+    "Id" : "Tesla Edison",
+    "Type" : "Equity",
+    "Groups" : [ "Robotics", "Energy" ],
+    "Value" : 612.0,
+    "Volatility" : 0.0781
+}

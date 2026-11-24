@@ -1,0 +1,13 @@
+{
+    "Ints" : [
+        { "Key" : "MinShipCellWidth", "Int" : 4 },
+        { "Key" : "MinShipCellHeight", "Int" : 3 },
+        { "Key" : "MaxShipCellWidth", "Int" : 6 },
+        { "Key" : "MaxShipCellHeight", "Int" : 5 }
+    ],
+    "Floats" : [
+        { "Key" : "CustomPersonaTemplateChance", "Float" : 0.05 },
+        { "Key" : "CustomSpaceObjectNameChance", "Float" : 0.05 }
+    ]
+
+}

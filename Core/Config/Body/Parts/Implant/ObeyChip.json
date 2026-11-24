@@ -1,0 +1,16 @@
+{
+    "SlotTypeId" : "Implant",
+    "Compatibility" : "Any",
+    "ResistanceBase" : 8.0,
+    "PartFlags" : [ "NeverGenerate" ],
+    "Tier" : 2,
+    "AddsStatModifiers" : [
+        {
+            "Component" : "AIAlignment",
+            "Properties" : [
+                { "Key" : "Value", "Float" : 1.0 },
+                { "Key" : "Type", "String" : "Sets" }
+            ]
+        }
+    ]
+}

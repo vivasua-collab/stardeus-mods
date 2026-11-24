@@ -1,0 +1,26 @@
+{
+    "Id" : "Research/Computing/MemoryCompression",
+    "Tier" : 4,
+    "IsAbstract" : true,
+    "PreviewIcon" : "Icons/Color/Upgrade",
+    "Researchable" : {
+        "IsTreeNode" : true,
+        "Prerequisites" : [
+            "Research/Computing/GPU"
+        ],
+        "DatoidCosts" : [
+            {
+                "TypeId" : "DatoidSynthetic",
+                "StackSize" : 19
+            },
+            {
+                "TypeId" : "DatoidTechHigh",
+                "StackSize" : 17
+            },
+            {
+                "TypeId" : "DatoidNuclear",
+                "StackSize" : 3
+            }
+        ]
+    }
+}

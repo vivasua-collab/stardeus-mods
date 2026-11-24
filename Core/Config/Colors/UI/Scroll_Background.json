@@ -1,0 +1,7 @@
+{
+    "Id" : "UI/Scroll/Background",
+    "AliasFor" : "UI/Grey/Sec-1",
+    // "Hex" : "554E56",
+    "Alpha" : 0.8,
+    "SkipAtlas" : true
+}

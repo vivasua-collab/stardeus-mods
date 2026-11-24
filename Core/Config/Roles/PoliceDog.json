@@ -1,0 +1,17 @@
+{
+    "Id" : "PoliceDog",
+    "LovesJobTypes" : [ ],
+    "IncompatibleTraitIds" : [ "Pacifist" ],
+    "Species" : [ "Dog" ],
+    "RoleTypes" : [ "Good" ],
+    "AdjustsSkills" : [
+        {
+            "JobId" : "Social",
+            "Adjustment" : -1
+        },
+        {
+            "JobId" : "Melee",
+            "Adjustment" : 6
+        }
+    ]
+}

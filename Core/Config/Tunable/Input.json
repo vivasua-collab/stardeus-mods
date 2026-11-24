@@ -1,0 +1,13 @@
+{
+    "Floats" : [
+        { "Key" : "SmoothDragInertiaLimit", "Float" : 3000 },
+        { "Key" : "SmoothDragInertiaWidgetLimit", "Float" : 2000 },
+
+        { "Key" : "SmoothDragMultiplier", "Float" : 1 },
+        { "Key" : "SmoothDragMultiplierWidget", "Float" : 0.1 },
+        { "Key" : "SmoothDragDamp", "Float" : 0.8 },
+
+        { "Key" : "EdgePanDelay", "Float" : 0.2 },
+        { "Key" : "EdgePanAcceleration", "Float" : 0.333 }
+    ]
+}

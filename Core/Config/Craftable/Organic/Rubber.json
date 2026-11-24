@@ -1,0 +1,12 @@
+{
+    "Type": "Organic",
+    "IgnoreMarket" : true,
+    "Ingredients": [
+        { "TypeId" : "Carbon", "StackSize" : 5 },
+        { "TypeId" : "Caoutchouc", "StackSize" : 1 }
+    ],
+    "OutputMultiplier" : 1,
+    "ProductDefId": "Obj/Materials/Rubber",
+    "ProductionTimeHours": 8,
+    "EnergyCost": 30.0
+}

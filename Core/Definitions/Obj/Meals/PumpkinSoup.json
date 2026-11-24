@@ -1,0 +1,28 @@
+{
+    "Layer" : "FreeEntities",
+    "ParentId" : "Obj/Meals/BaseMeal",
+    "Researchable" : {
+        "Prerequisites" : [ "Research/LifeSupport/VegetarianFood" ]
+    },
+    "Components" : [
+        {
+            "Component" : "UnstoredMat",
+            "Properties" : [
+                { "Key" : "Type", "String" : "PumpkinSoup" }
+            ]
+        },
+        {
+            "Component" : "Edible" ,
+            "Properties" : [
+                { "Key" : "Amount", "Float" : 1.0 },
+                { "Key" : "IsVegan", "Bool" : true }
+            ]
+        },
+        {
+            "Component" : "ObjGraphics",
+            "Properties" : [
+                { "Key" : "Graphic", "String": "Obj/Meals/PumpkinSoup" }
+            ]
+        }
+    ]
+}

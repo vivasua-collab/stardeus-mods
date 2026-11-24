@@ -1,0 +1,14 @@
+{
+    "Type": "Animal",
+    "Ingredients": [
+        { "TypeId" : "PlantFiber", "StackSize" : 3 },
+        { "TypeId" : "Carbon", "StackSize" : 3 },
+        { "TypeId" : "Water", "StackSize" : 1 },
+        { "TypeId" : "StemCells", "StackSize" : 3 }
+    ],
+    // "IgnoreMarket" : true,
+    "OutputMultiplier" : 3,
+    "ProductDefId": "Obj/Materials/Protein",
+    "ProductionTimeHours": 8.0,
+    "EnergyCost": 15.0
+}

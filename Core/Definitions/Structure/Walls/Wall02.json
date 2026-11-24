@@ -1,0 +1,42 @@
+{
+    "Layer" : "Walls",
+    "ParentId" : "Structure/Walls/BaseWall",
+    "Researchable" : {
+        "Prerequisites" : [
+            "Research/Construction/Habitation"
+        ]
+    },
+    "Components" : [
+        {
+            "Component" : "TileGraphics",
+            "Properties" : [
+                { "Key" : "Graphic", "String" : "Structure/Walls/Wall02" },
+                { "Key" : "Type", "String" : "Connected" }
+            ]
+        },
+        {
+            "Component" : "HullIntegrity",
+            "Properties" : [
+                { "Key" : "MaxInsulation", "Float" : 0.25 },
+                { "Key" : "MaxAirtight", "Float" : 1 }
+            ]
+        },
+        {
+            "Component" : "Damageable",
+            "Properties" : [
+                { "Key" : "Max", "Int" : 100 }
+            ]
+        },
+        {
+            "Component" : "Constructable",
+            "Properties" : [
+                {
+                    "Key" : "Contents",
+                    "RawMaterials" : [
+                        { "TypeId" : "SteelPlate", "StackSize" : 1 }
+                    ]
+                }
+            ]
+        }
+    ]
+}

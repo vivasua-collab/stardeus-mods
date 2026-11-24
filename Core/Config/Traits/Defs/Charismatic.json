@@ -1,0 +1,12 @@
+{
+    "Id" : "Charismatic",
+    "IconId" : "Icons/Color/Wave",
+    "TypeId" : "Mental",
+    "Rarity" : 0.25,
+    "AdjustsSkills" : [
+        {
+            "JobId" : "Social",
+            "Adjustment" : 2
+        }
+    ]
+}

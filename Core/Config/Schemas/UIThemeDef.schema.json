@@ -1,0 +1,476 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Stardeus UIThemeDef",
+  "description": "Generated from C# by Game/Generate JSON Schemas, do not edit by hand",
+  "$ref": "#/$defs/UIThemeDef",
+  "$defs": {
+    "UIThemeButtonDef": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "Image": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "ImageActive": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "Selectable": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "Text": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "additionalProperties": false
+    },
+    "UIThemeDef": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "Id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "Name": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "Colors": {
+          "type": [
+            "object",
+            "null"
+          ],
+          "additionalProperties": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "Images": {
+          "type": [
+            "object",
+            "null"
+          ],
+          "additionalProperties": {
+            "$ref": "#/$defs/UIThemeImageDef"
+          }
+        },
+        "Buttons": {
+          "type": [
+            "object",
+            "null"
+          ],
+          "additionalProperties": {
+            "$ref": "#/$defs/UIThemeButtonDef"
+          }
+        },
+        "Dropdowns": {
+          "type": [
+            "object",
+            "null"
+          ],
+          "additionalProperties": {
+            "$ref": "#/$defs/UIThemeDropdownDef"
+          }
+        },
+        "Sliders": {
+          "type": [
+            "object",
+            "null"
+          ],
+          "additionalProperties": {
+            "$ref": "#/$defs/UIThemeSliderDef"
+          }
+        },
+        "Scrollbars": {
+          "type": [
+            "object",
+            "null"
+          ],
+          "additionalProperties": {
+            "$ref": "#/$defs/UIThemeScrollbarDef"
+          }
+        },
+        "Inputs": {
+          "type": [
+            "object",
+            "null"
+          ],
+          "additionalProperties": {
+            "$ref": "#/$defs/UIThemeInputDef"
+          }
+        },
+        "SelectableFadeTime": {
+          "type": "number"
+        },
+        "Selectables": {
+          "type": [
+            "object",
+            "null"
+          ],
+          "additionalProperties": {
+            "$ref": "#/$defs/UIThemeSelectableDef"
+          }
+        },
+        "Texts": {
+          "type": [
+            "object",
+            "null"
+          ],
+          "additionalProperties": {
+            "$ref": "#/$defs/UIThemeTextDef"
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "UIThemeDropdownDef": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "ImageBackground": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "ImageBackgroundItem": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "ImageArrow": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "ImageArrowItem": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "SelectableDropdown": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "SelectableItem": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "Text": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "TextItem": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "additionalProperties": false
+    },
+    "UIThemeImageDef": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "Alpha": {
+          "type": "number"
+        },
+        "Color": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "Image": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "ImageType": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "ImagePPUMultiplier": {
+          "type": "number"
+        },
+        "ImageBorderLBRT": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "integer"
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "UIThemeInputDef": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "HighlightColor": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "HighlightAlpha": {
+          "type": "number"
+        },
+        "Selectable": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "TextInput": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "TextPlaceholder": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "Image": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "additionalProperties": false
+    },
+    "UIThemeScrollbarDef": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "ImageHandle": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "ImageScroll": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "Selectable": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "additionalProperties": false
+    },
+    "UIThemeSelectableDef": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "Colors": {
+          "$ref": "#/$defs/UIThemeSelectableDef.SelectableColors"
+        },
+        "Alpha": {
+          "type": "number"
+        }
+      },
+      "additionalProperties": false
+    },
+    "UIThemeSelectableDef.SelectableColors": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "Normal": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "Highlighted": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "Pressed": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "Selected": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "Disabled": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "additionalProperties": false
+    },
+    "UIThemeSliderDef": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "Selectable": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "ImageBackground": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "ImageRim": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "ImageFill": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "ImageHandle": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "additionalProperties": false
+    },
+    "UIThemeTextDef": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "Color": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "Alpha": {
+          "type": "number"
+        },
+        "FontSize": {
+          "type": "integer"
+        },
+        "FontSizeMin": {
+          "type": "integer"
+        },
+        "AutoSize": {
+          "type": "boolean"
+        },
+        "IgnoreFontScaleUp": {
+          "type": "boolean"
+        },
+        "KeepFontStyle": {
+          "type": "boolean"
+        },
+        "LineSpacing": {
+          "type": "integer"
+        },
+        "CharSpacing": {
+          "type": "integer"
+        },
+        "OverflowMode": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "TextMarginLTRB": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "integer"
+          }
+        },
+        "FontStyle": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        }
+      },
+      "additionalProperties": false
+    }
+  }
+}

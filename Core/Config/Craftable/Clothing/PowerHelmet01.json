@@ -1,0 +1,16 @@
+{
+    "Type": "Clothing",
+    "ColorGroupId": "Suit",
+    "Ingredients": [
+        { "TypeId" : "CarbonFiber", "StackSize" : 20 },
+        { "TypeId" : "TitaniumPlate", "StackSize" : 12 },
+        { "TypeId" : "Glass", "StackSize" : 8 },
+        { "TypeId" : "Rubber", "StackSize" : 6 },
+        { "TypeId" : "LeadPlate", "StackSize" : 4 },
+        { "TypeId" : "Microchip3", "StackSize" : 1 }
+    ],
+    "IgnoreMarket" : true,
+    "ProductDefId": "Obj/Equipment/Hats/PowerHelmet01",
+    "ProductionTimeHours": 20.0,
+    "EnergyCost": 180.0
+}

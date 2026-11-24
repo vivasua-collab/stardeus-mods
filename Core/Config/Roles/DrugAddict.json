@@ -1,0 +1,18 @@
+{
+    "Id" : "DrugAddict",
+    "Species" : [ "Human" ],
+    "BodyTypes" : "T",
+    "RoleTypes" : [ "Dumb", "Poor" ],
+    "LovesJobTypes" : [ "Medical" ],
+    "IncapableJobTypes" : [ "Research", "Crafting" ],
+    "AdjustsSkills" : [
+        {
+            "JobId" : "Social",
+            "Adjustment" : -1
+        },
+        {
+            "JobId" : "Medical",
+            "Adjustment" : 6
+        }
+    ]
+}

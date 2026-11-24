@@ -1,0 +1,20 @@
+{
+    // Skill level -> XP lost per day (SkillUpkeepSys). Nothing below 10, then
+    // fast enough that a top skill only holds while it is used. Above 20 it keeps rising, so the
+    // levels only training reaches (21-25) are the hardest to keep
+    "FloatSet" : [
+        9, 0,
+        10, 30,
+        11, 60,
+        12, 120,
+        13, 180,
+        14, 300,
+        15, 540,
+        16, 840,
+        17, 1200,
+        18, 1800,
+        19, 2400,
+        20, 3600,
+        25, 9000
+    ]
+}

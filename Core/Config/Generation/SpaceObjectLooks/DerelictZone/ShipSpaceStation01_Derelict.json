@@ -1,0 +1,6 @@
+{
+    "Id" : "ShipSpaceStation01_Derelict",
+    "Probability" : 1.0,
+    "RandomRotation" : false,
+    "Sprite" : "SpaceObjects/Derelicts/ShipSpaceStation01_Derelict"
+}

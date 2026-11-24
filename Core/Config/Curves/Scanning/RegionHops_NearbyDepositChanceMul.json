@@ -1,0 +1,14 @@
+{
+    // Region hops from the player > nearby deposit spawn chance multiplier.
+    // The base roll (NearbySpawnChance * sector organic chance) is only a few
+    // percent for rare materials, so this ramp has to be steep to pull scan
+    // results back in from the far side of the map. See ScanSearch.
+    "FloatSet" : [
+        0.0, 1.0,
+        1.0, 3.0,
+        2.0, 8.0,
+        3.0, 16.0,
+        5.0, 30.0,
+        8.0, 50.0
+    ]
+}

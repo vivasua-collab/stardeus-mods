@@ -1,0 +1,27 @@
+{
+    "Id" : "Research/Production/AssaultArmor",
+    "Tier" : 4,
+    "IsAbstract" : true,
+    "PreviewIcon" : "Beings/Clothing/Human/AssaultArmor01/AssaultArmor01",
+    "Researchable" : {
+        "IsTreeNode" : true,
+        "Prerequisites" : [
+            "Research/Production/CombatArmor",
+            "Research/Production/AssemblyAdvanced"
+        ],
+        "DatoidCosts" : [
+            {
+                "TypeId" : "DatoidSynthetic",
+                "StackSize" : 18
+            },
+            {
+                "TypeId" : "DatoidTechHigh",
+                "StackSize" : 12
+            },
+            {
+                "TypeId" : "DatoidNuclear",
+                "StackSize" : 6
+            }
+        ]
+    }
+}

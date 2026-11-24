@@ -1,0 +1,31 @@
+{
+    "Id" : "Coal",
+    "IsWithDepth" : true,
+    "IsCommon" : true,
+    "MinDifficulty" : 0.0,
+    "DifficultyChance" : [
+        0.0, 0.7,
+        0.5, 0.5,
+        1.0, 0.4
+    ],
+    "UniverseQuantityChance" : [
+        0.0, 14.0,
+        1.0, 16.0
+    ],
+    "RegionQuantityChance" : [
+        0.0, 1.0,
+        0.7, 2.0,
+        0.9, 2.0,
+        1.0, 3.0
+    ],
+    "InitialDepthChance" : [
+        0.0, 0.0,
+        0.5, 0.2,
+        0.85, 0.3,
+        1.0, 0.5
+    ],
+    "MiningDifficulty" : 25.0,
+    "CollectKey" : "verb.mine",
+    "ScanDifficulty" : 0.7,
+    "NearbySpawnChance" : 0.8
+}

@@ -1,0 +1,10 @@
+{
+    "Id" : "Obj/Materials/Glass",
+    "Type" : "CFD",
+    "Groups" : [ "Material" ],
+    "Value" : 20.0,
+    "Rarity" : 0.4,
+    "TraderQuantity" : 100.0,
+    "MinSectorDifficulty" : 0.25,
+    "Volatility" : 0.0018
+}

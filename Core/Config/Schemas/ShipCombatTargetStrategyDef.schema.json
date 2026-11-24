@@ -1,0 +1,74 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Stardeus ShipCombatTargetStrategyDef",
+  "description": "Generated from C# by Game/Generate JSON Schemas, do not edit by hand",
+  "$ref": "#/$defs/ShipCombatTargetStrategyDef",
+  "$defs": {
+    "ShipCombatTargetStrategyDef": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "Mode": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "SwitchIntervalHoursFrom": {
+          "type": "integer"
+        },
+        "SwitchIntervalHoursTo": {
+          "type": "integer"
+        },
+        "Id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "IdH": {
+          "type": "integer"
+        },
+        "FactionChanceKeys": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "FactionChanceVals": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "number"
+          }
+        },
+        "MinOffensiveness": {
+          "type": "number"
+        },
+        "MaxOffensiveness": {
+          "type": "number"
+        },
+        "StrengthDifferenceChance": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "number"
+          }
+        }
+      },
+      "additionalProperties": false
+    }
+  }
+}

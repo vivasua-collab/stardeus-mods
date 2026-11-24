@@ -1,0 +1,29 @@
+{
+    "Id" : "Research/RogueAI/BiomassHarvesting",
+    "Tier" : 4,
+    "IsAbstract" : true,
+    "PreviewIcon" : "Icons/Color/Meat",
+    "Researchable" : {
+        "IsTreeNode" : true,
+        "Prerequisites" : [
+            "Research/RogueAI/Elysium"
+        ],
+        "UnlockEffects" : [
+            "ElysiumBiomass"
+        ],
+        "DatoidCosts" : [
+            {
+                "TypeId" : "DatoidBiotic",
+                "StackSize" : 36
+            },
+            {
+                "TypeId" : "DatoidPhyto",
+                "StackSize" : 23
+            },
+            {
+                "TypeId" : "DatoidAlien",
+                "StackSize" : 9
+            }
+        ]
+    }
+}

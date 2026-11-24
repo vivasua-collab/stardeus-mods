@@ -1,0 +1,7 @@
+{
+    "Id" : "RogueAI",
+    "Type" : "Equity",
+    "Groups" : [ "Robotics", "Software" ],
+    "Value" : 2157.0,
+    "Volatility" : 0.0750
+}

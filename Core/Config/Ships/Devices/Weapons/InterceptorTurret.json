@@ -1,0 +1,41 @@
+{
+    "Id" : "InterceptorTurret",
+
+    "ProjectileVFX" : "AttackShipPointDefenseVFX",
+    "ShotSoundFX" : "FX/InterceptorTurretSFX",
+    "ShotSoundVol" : 0.25,
+
+    // TODO figure out units
+    "ProjectileSpeed" : 25.0,
+    // time before charging for the first shot
+    "WindupTimeMinutes" : 20,
+    // charge time in seconds real time at 1x speed before each shot
+    "ChargeTimeMinutes" : 45,
+    // time while animation of weapon firing is playing, and UI element will show firing state
+    "FiringTimeMinutes" : 5,
+
+    // flux generated for the shooter
+    "SoftFluxPerShot" : 125,
+    "HardFluxPerShot" : 0,
+
+    // When we hit an enemy with shield up, this is how much flux we will generate
+    // for the enemy
+    "SoftFluxPerShieldHit" : 0,
+    "HardFluxPerShieldHit" : 0,
+
+    // Ballistic weapons do not penetrate shields at all
+    "ShieldPenetrateChance" : 0.0,
+
+    // How likely this weapon will hit the target (incoming projectile)
+    "Accuracy" : 0.90,
+
+    // will shake the shield on hit for that many seconds
+    "ShieldShakeAmt" : 1.0,
+
+    "Damage" : 250,
+    "AmmoCapacity" : 4,
+    "CreatesExplosion" : false,
+    "ExplosionRadius" : 1.0,
+    "DamageTypeId" : "Piercing",
+    "WeaponTypeId" : "PointDefense"
+}

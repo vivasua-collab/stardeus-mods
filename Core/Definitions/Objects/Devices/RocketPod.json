@@ -1,0 +1,114 @@
+{
+    "ToolPath" : "Security",
+    "Layer" : "Objects",
+    "ParentId" : "Objects/Devices/BaseDevice",
+    "Researchable" : {
+        "Prerequisites" : [ "Research/ShipCombat/WeaponsMissile" ]
+    },
+    "Components" : [
+        {
+            "Component" : "TileTransform",
+            "Properties" : [
+                { "Key" : "Width", "Int" : 2 },
+                { "Key" : "Height", "Int" : 2 },
+                { "Key" : "CoverPercent", "Int" : 50 },
+                { "Key" : "InPort", "Vector2" : { "x" : 0, "y" : -1 } },
+                { "Key" : "IsRotatable", "Bool" : true }
+            ]
+        },
+        {
+            "Component" : "IndustrialEquipment",
+            "Properties" : [
+                { "Key" : "IsNoisy", "Bool" : true }
+            ]
+        },
+        {
+            "Component" : "Damageable",
+            "Properties" : [
+                { "Key" : "Max", "Int": 400 }
+            ]
+        },
+        {
+            "Component" : "ElectricNode",
+            "Properties" : [
+                { "Key" : "IsConsumer", "Bool": true }
+            ]
+        },
+        {
+            "Component" : "WithFuse",
+            "Properties" : [
+                { "Key" : "MalfunctionWeight", "Float": 0.6 }
+            ]
+        },
+        {
+            "Component" : "Flammable",
+            "Properties" : [
+                { "Key" : "IgnitionTemperatureCelsius", "Int" : 500 },
+                { "Key" : "FireChance", "Float" : 0.6 },
+                { "Key" : "BaseExplosionLevel", "Int" : 2 },
+                { "Key" : "FlammabilityCurve", "String" : "DeviceHigh" },
+                { "Key" : "ExplosivenessCurve", "String" : "Device" }
+            ]
+        },
+        { "Component" : "OutdoorsCheck" },
+        {
+            "Component" : "RotatingTurret",
+            "Properties" : [
+                { "Key" : "HeadOffset", "Vector2": { "x" : 0.0, "y" : 0.0 } },
+                { "Key" : "TopOffset", "Vector2": { "x" : 0.0, "y" : 0.0 } },
+                { "Key" : "HasTopSprite", "Bool" : false },
+                { "Key" : "ShotFXDuration", "Float" : 15.0 }
+            ]
+        },
+        {
+            "Component" : "ShipWeapon",
+            "Properties" : [
+                { "Key" : "ShipWeaponId" , "String" : "RocketPod" }
+            ]
+        },
+        { "Component" : "ExtraInfo" },
+        {
+            "Component" : "RefillableStorage",
+            "Properties" : [
+                { "Key" : "DeviceType", "String" : "rocket.pod" },
+                { "Key" : "ShowBurnRate", "Bool" : false },
+                { "Key" : "Purpose", "String" : "ammo" },
+                { "Key" : "Icon", "String" : "Icons/Color/Ammo" },
+                { "Key" : "LockedMaterial", "String" : "Missile" },
+                { "Key" : "MaterialCapacity", "Int" : 6 }
+            ]
+        },
+        {
+            "Component" : "TileGraphics",
+            "Properties" : [
+                { "Key" : "Type", "String": "Object" },
+                { "Key" : "Graphic", "String": "Objects/Devices/RocketPod" },
+                { "Key" : "HasHeight", "Bool" : false }
+            ]
+        },
+        {
+            "Component" : "Passability",
+            "Properties" : [
+                { "Key" : "IsPassable", "Bool" : false },
+                { "Key" : "IsWalkable", "Bool" : false },
+                { "Key" : "Difficulty", "Float" : 1 }
+            ]
+        },
+        {
+            "Component" : "Constructable",
+            "Properties" : [
+                { "Key" : "WorkAmount", "Int" : 2000 },
+                {
+                    "Key" : "Contents",
+                    "RawMaterials" : [
+                        { "TypeId" : "TitaniumPlate", "StackSize" : 6 },
+                        { "TypeId" : "SilverIngot", "StackSize" : 2 },
+                        { "TypeId" : "GoldWire", "StackSize" : 3 },
+                        { "TypeId" : "Gears", "StackSize" : 3 },
+                        { "TypeId" : "Microchip3", "StackSize" : 1 }
+                    ]
+                }
+            ]
+        }
+    ]
+}

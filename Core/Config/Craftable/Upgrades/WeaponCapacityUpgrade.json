@@ -1,0 +1,13 @@
+{
+    "Type": "Upgrades",
+    "Ingredients": [
+        { "TypeId" : "TitaniumPlate", "StackSize" : 1 },
+        { "TypeId" : "Microchip2", "StackSize" : 2 },
+        { "TypeId" : "OpticalFiber", "StackSize" : 5 },
+        { "TypeId" : "Transistor", "StackSize" : 15 }
+    ],
+    "IgnoreMarket" : true,
+    "ProductDefId": "Obj/Upgrades/WeaponCapacityUpgrade",
+    "ProductionTimeHours": 72.0,
+    "EnergyCost": 50.0
+}

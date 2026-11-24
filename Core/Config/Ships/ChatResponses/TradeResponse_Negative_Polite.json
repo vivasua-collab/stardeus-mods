@@ -1,0 +1,8 @@
+{
+    "ResponseType" : "Negative",
+    "TopicType" : "TradeResponse",
+    "ToneType" : "Polite",
+    "MessageKeys" : [
+        "ship.chat.busy.polite.*"
+    ]
+}

@@ -1,0 +1,43 @@
+{
+    "Id" : "Human",
+    "StartingSkillCurves" : [
+        {
+            // Every job starts at 0-4 with equal chance; roles, traits
+            // and age (GenBeingJobsDataStep.ApplyAge) build on it
+            "LevelCurve" : [
+                0.0, -0.49,
+                1.0, 4.49
+            ]
+        }
+    ],
+    "AgeSkillCurves" : [
+        {
+            "LevelCurve" : [
+                0.0, 0.0,
+                1.0, 0.25
+            ]
+        }
+    ],
+    "StartingJobs" : [
+        { "Job" : "Cleaning" },
+        { "Job" : "Construction" },
+        { "Job" : "Cooking" },
+        { "Job" : "Crafting" },
+        { "Job" : "Demolition" },
+        { "Job" : "Expedition" },
+        { "Job" : "Firefighting" },
+        { "Job" : "Hauling" },
+        { "Job" : "Medical" },
+        { "Job" : "Melee" },
+        { "Job" : "Mining" },
+        { "Job" : "Piloting" },
+        { "Job" : "Plants" },
+        { "Job" : "Repairs" },
+        { "Job" : "Rescue" },
+        { "Job" : "Research" },
+        { "Job" : "Robotics" },
+        { "Job" : "Shooting" },
+        { "Job" : "Social" },
+        { "Job" : "Task" }
+    ]
+}

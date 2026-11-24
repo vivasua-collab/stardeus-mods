@@ -1,0 +1,10 @@
+{
+    "Id" : "ShipCruiser01_Derelict",
+    "Probability" : 1.0,
+    "RandomRotation" : true,
+    "Sprite" : "SpaceObjects/Derelicts/ShipCruiser01_Derelict_D",
+    "Sprite_L" : "SpaceObjects/Derelicts/ShipCruiser01_Derelict_L",
+    "Sprite_R" : "SpaceObjects/Derelicts/ShipCruiser01_Derelict_R",
+    "Sprite_U" : "SpaceObjects/Derelicts/ShipCruiser01_Derelict_U",
+    "Sprite_D" : "SpaceObjects/Derelicts/ShipCruiser01_Derelict_D"
+}

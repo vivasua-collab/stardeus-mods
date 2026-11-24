@@ -1,0 +1,25 @@
+{
+    // C# implementation id.
+    // Multiple configurations can point to a single implementation.
+    "EventId" : "MicroMeteoroidStrike",
+    // How much does this story event cost to run
+    "Points" : 12,
+    // Options: Negative, Positive, Neutral, Raid
+    "OutcomeType" : "Negative",
+    // Full list is in StoryEventFlags class
+    "EventFlags" : [
+        "Space",
+        "NoHyperspace",
+        "CanIgnoreRepeatDelay"
+    ],
+    // event auto-ends after 12 days or sooner, 15 gives an extra buffer
+    "MaxOngoingDays" : 15,
+    "MinRepeatDelayDays" : 17,
+    // How likely this event can occur given the sector difficulty
+    // sector difficulty -> chance
+    "SectorDifficultyChance" : [
+        0.0, 0.2,
+        0.5, 0.7,
+        1.0, 1.0
+    ]
+}

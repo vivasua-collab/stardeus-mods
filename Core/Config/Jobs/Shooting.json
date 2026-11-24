@@ -1,0 +1,9 @@
+{
+    "Id" : "Shooting",
+    "Importance" : 2.0,
+    "IconId" : "Icons/Color/AttackTarget",
+    "Types" : [ "Violent", "Dangerous" ],
+    "ProvidesStats" : [
+        { "Stat" : "ShootingAccuracy", "CurveId" : "Attacks/ShootingSkill_Accuracy" }
+    ]
+}

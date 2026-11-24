@@ -1,0 +1,8 @@
+{
+    "ResponseType" : "Negative",
+    "TopicType" : "Generic",
+    "ToneType" : "Polite",
+    "MessageKeys" : [
+        "ship.chat.negative.polite.*"
+    ]
+}

@@ -1,0 +1,9 @@
+{
+    "Id" : "Panel/ResearchTree",
+
+    "Alpha" : 0.95,
+    "Color" : "06001A",
+
+    "Image" : "NoAtlas/WhiteSquare",
+    "ImageType" : "Simple"
+}

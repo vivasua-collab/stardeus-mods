@@ -1,0 +1,23 @@
+{
+    "Id" : "President",
+    "Species" : [ "Human", "Robot" ],
+    "AgePhaseIds" : [ "Retirement" ],
+    "RequiresRoles" : [ "Politician", "CultLeader", "Millionaire", "ChiefScientist" ],
+    "RoleTypes" : [ "Smart", "Rich", "Once" ],
+    "IncapableJobTypes" : [ "Hauling", "Cooking" ],
+    "LovesJobTypes" : [ "Social" ],
+    "AdjustsSkills" : [
+        {
+            "JobId" : "Social",
+            "Adjustment" : 10
+        },
+        {
+            "JobId" : "Piloting",
+            "Adjustment" : 2
+        },
+        {
+            "JobId" : "Research",
+            "Adjustment" : 2
+        }
+    ]
+}

@@ -1,0 +1,113 @@
+{
+    "BuildGroup" : "Coffin",
+    "Layer" : "Objects",
+    "ParentId" : "Objects/Cosmetics/BaseCosmetics",
+    "Seasonal" : { "FromMonth" : 10, "FromDay" : 1, "ToMonth" : 11, "ToDay" : 7 },
+    "Spawnable" : {
+        "Category": "Cosmetics",
+        "Chance" : 0.5,
+        "ChanceLocked" : 0.5
+    },
+    "Researchable" : {
+        "Prerequisites" : [ "Research/Habitation/HalloweenDecorations" ]
+    },
+    "Components" : [
+        {
+            "Component" : "TileTransform",
+            "Properties" : [
+                { "Key" : "IsRotatable", "Bool" : true },
+                { "Key" : "CoverPercent", "Int" : 25 }
+            ]
+        },
+        {
+            "Component" : "TileGraphics",
+            "Properties" : [
+                { "Key" : "Type", "String": "Object" },
+                { "Key" : "HasHeight", "Bool" : false },
+                { "Key" : "Graphic", "String": "Objects/Cosmetics/Coffin01" }
+            ]
+        },
+        {
+            "Component" : "Admirable",
+            "Properties" : [
+                { "Key" : "Amount", "Int" : 1 },
+                { "Key" : "Multiplier", "Float" : 0.25 },
+                { "Key" : "Chance", "Float" : 0.5 }
+            ]
+        },
+        {
+            "Component" : "Flammable",
+            "Properties" : [
+                { "Key" : "IgnitionTemperatureCelsius", "Int" : 200 },
+                { "Key" : "FireChance", "Float" : 0.75 },
+                { "Key" : "FlammabilityCurve", "String" : "High" }
+            ]
+        },
+        {
+            "Component" : "Bed",
+            "Properties" : [
+                { "Key" : "Slots", "Int" : 2 },
+                { "Key" : "SlotFlags_0", "StringSet" : [ "Humanoid" ] },
+                { "Key" : "SlotFlags_1", "StringSet" : [ "Animal", "Pet"] },
+                { "Key" : "SlotNameKey_0", "String" : "bed.slot.main" },
+                { "Key" : "SlotNameKey_1", "String" : "bed.slot.pet" },
+                { "Key" : "SlotHidesBody_0", "Bool" : false },
+                { "Key" : "SlotHidesBody_1", "Bool" : false },
+                { "Key" : "SlotTemporary_0", "Bool" : true },
+                { "Key" : "SlotTemporary_1", "Bool" : true },
+                {
+                    "Key" : "SlotOffset_L_0",
+                    "Vector2" : { "x" : 0.15, "y" : 0.15 }
+                },
+                {
+                    "Key" : "SlotOffset_R_0",
+                    "Vector2" : { "x" : -0.2, "y" : 0.15 }
+                },
+                {
+                    "Key" : "SlotOffset_D_0",
+                    "Vector2" : { "x" : 0, "y" : 0.25 }
+                },
+                {
+                    "Key" : "SlotOffset_U_0",
+                    "Vector2" : { "x" : 0, "y" : 0.1 }
+                },
+                {
+                    "Key" : "SlotOffset_L_1",
+                    "Vector2" : { "x" : -0.15, "y" : 0.15 }
+                },
+                {
+                    "Key" : "SlotOffset_R_1",
+                    "Vector2" : { "x" : 0.15, "y" : 0.15 }
+                },
+                {
+                    "Key" : "SlotOffset_D_1",
+                    "Vector2" : { "x" : 0, "y" : -0.05 }
+                },
+                {
+                    "Key" : "SlotOffset_U_1",
+                    "Vector2" : { "x" : 0, "y" : 0.25 }
+                }
+            ]
+        },
+        {
+            "Component" : "Passability",
+            "Properties" : [
+                { "Key" : "IsPassable", "Bool" : true },
+                { "Key" : "IsWalkable", "Bool" : true },
+                { "Key" : "Difficulty", "Float" : 0.5 }
+            ]
+        },
+        {
+            "Component" : "Constructable",
+            "Properties" : [
+                { "Key" : "WorkAmount", "Int" : 800 },
+                {
+                    "Key" : "Contents",
+                    "RawMaterials" : [
+                        { "TypeId" : "Wood", "StackSize" : 2 }
+                    ]
+                }
+            ]
+        }
+    ]
+}

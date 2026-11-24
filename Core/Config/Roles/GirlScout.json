@@ -1,0 +1,33 @@
+{
+    "Id" : "GirlScout",
+    "LovesJobTypes" : [ "Cooking", "Cleaning" ],
+    "Species" : [ "Human" ],
+    "RoleTypes" : [ "Poor", "Good" ],
+    "AgePhaseIds" : [ "Childhood" ],
+    "SexChances" : [
+        {
+            "Sex" : "F",
+            "Chance" : 1.0
+        }
+    ],
+    "AdjustsSkills" : [
+        {
+            "JobId" : "Crafting",
+            "Adjustment" : 5
+        },
+        {
+            "JobId" : "Cooking",
+            "Adjustment" : 3
+        },
+        {
+            "JobId" : "Piloting",
+            "Adjustment" : -1
+        }
+    ],
+    "AddsTraits" : [
+        {
+            "TraitId" : "CleaningOcd",
+            "Chance" : 0.15
+        }
+    ]
+}

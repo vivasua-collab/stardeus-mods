@@ -1,0 +1,8 @@
+{
+    "Id" : "Panel/RadialNotificationDot",
+
+    "Color" : "FFF129",
+    "Alpha" : 1,
+
+    "Image" : "UI/Misc/NotificationDot"
+}

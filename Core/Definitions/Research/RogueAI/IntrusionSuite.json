@@ -1,0 +1,27 @@
+{
+    "Id" : "Research/RogueAI/IntrusionSuite",
+    "Tier" : 4,
+    "NameKey": "objects.devices.intrusionsuite",
+    "IsAbstract" : true,
+    "PreviewIcon" : "Icons/Color/Communications",
+    "Researchable" : {
+        "IsTreeNode" : true,
+        "Prerequisites" : [
+            "Research/RogueAI/SignalIntrusion"
+        ],
+        "DatoidCosts" : [
+            {
+                "TypeId" : "DatoidSynthetic",
+                "StackSize" : 18
+            },
+            {
+                "TypeId" : "DatoidTechHigh",
+                "StackSize" : 12
+            },
+            {
+                "TypeId" : "DatoidQuantum",
+                "StackSize" : 6
+            }
+        ]
+    }
+}

@@ -1,0 +1,7 @@
+{
+    "Id" : "RareUpgrade",
+    "RecessionEffect" : 0.5,
+    "Rarity" : 0.001,
+    "TraderQuantity" : 1.0,
+    "Volatility" : 0.0011
+}

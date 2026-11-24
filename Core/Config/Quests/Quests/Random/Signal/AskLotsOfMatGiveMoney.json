@@ -1,0 +1,56 @@
+{
+    "QuestFlags" : [ "Random", "Template", "Signal" ],
+    "Weight" : 0.25,
+    "TitleKey": "noun.signal.offer",
+    "DescKey": "noun.signal.offer.desc",
+    "QuestProviders" : [ "Signal" ],
+    "QuestValidators" : [ "HasActiveTradePortal" ],
+    "Variables" : [
+        {
+            "Id" : "Deadline",
+            "Type" : "Deadline",
+            "Config" : [
+                { "Key" : "DaysCurve", "FloatSet" : [ 0.0, 30.0, 1.0, 14.0 ] },
+                { "Key" : "DifficultyInput", "String" : "Sector" },
+                { "Key" : "DeadlineMult", "FloatSet" : [ 0.5, 2.0 ] }
+            ]
+        },
+        {
+            "Id" : "Request",
+            "Type" : "MarketItem",
+            "Config" : [
+                { "Key" : "MarketGroups", "StringSet" : [ "Ore", "Material" ] },
+                { "Key" : "QuantityFrom", "Int" : 200 },
+                { "Key" : "QuantityTo", "Int" : 3000 },
+                { "Key" : "PercentFrom", "Float" : 3.0 },
+                { "Key" : "PercentTo", "Float" : 5.0 },
+                { "Key" : "DVar_DefId", "String" : "ReqDefId" },
+                { "Key" : "DVar_Amount", "String" : "ReqQty" },
+                { "Key" : "DVar_Money", "String" : "RewardMoney" }
+            ]
+        }
+    ],
+    "Steps" : [
+        {
+            "Id" : "Deliver",
+            "Type" : "DeliverViaTradePortal",
+            "StepFlags" : [ "ActiveOnStart", "CompletesQuest", "FailsQuest" ],
+            "Deadline" : "Deadline",
+            "Config" : [
+                { "Key" : "DVar_DefId", "String" : "ReqDefId" },
+                { "Key" : "DVar_Amount", "String" : "ReqQty" },
+                { "Key" : "RequestMsgKeys", "StringSet" : [ "sig.ask.obj.clear.reward.*" ] },
+                { "Key" : "RequestMsgArgs", "StringSet" : [ "Def:ReqDefId", "Money:RewardMoney" ] }
+            ]
+        }
+    ],
+    "Rewards" : [
+        {
+            "Id" : "Cash",
+            "Type" : "Money_FromVar",
+            "Config" : [
+                { "Key" : "DVar_Money", "String" : "RewardMoney" }
+            ]
+        }
+    ]
+}

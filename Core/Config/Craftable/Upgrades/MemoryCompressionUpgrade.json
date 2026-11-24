@@ -1,0 +1,14 @@
+{
+    "Type": "Upgrades",
+    "Ingredients": [
+        { "TypeId" : "Microchip3", "StackSize" : 2 },
+        { "TypeId" : "OpticalFiber", "StackSize" : 2 },
+        { "TypeId" : "NuclearCell", "StackSize" : 1 },
+        { "TypeId" : "Transistor", "StackSize" : 10 },
+        { "TypeId" : "GoldWire", "StackSize" : 5 }
+    ],
+    "IgnoreMarket" : true,
+    "ProductDefId": "Obj/Upgrades/MemoryCompressionUpgrade",
+    "ProductionTimeHours": 12.0,
+    "EnergyCost": 50.0
+}

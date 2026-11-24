@@ -1,0 +1,10 @@
+{
+    "Type": "DatoidPhyto",
+    "Ingredients": [
+        { "TypeId" : "PlantFiber", "StackSize" : 1 },
+        { "TypeId" : "Water", "StackSize" : 1 }
+    ],
+    "ProductDefId": "Obj/Datoids/DatoidPhyto",
+    "ProductionTimeHours": 2.0,
+    "EnergyCost": 20.0
+}

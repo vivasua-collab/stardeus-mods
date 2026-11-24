@@ -1,0 +1,14 @@
+{
+    // C# implementation id.
+    "EventId": "ExpeditionFoundDeserter",
+    "Points": 5,
+    // Options: Negative, Positive, Neutral, Raid
+    "OutcomeType": "Positive",
+    // Full list is in StoryEventFlags class
+    "EventFlags": [
+        "OnDemand",
+        "Expedition",
+        "Anomaly"
+    ],
+    "MinRepeatDelayDays": 30
+}

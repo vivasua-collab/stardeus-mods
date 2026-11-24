@@ -1,0 +1,8 @@
+{
+    "Id" : "FTLDrive",
+    "EngineTypeId" : "HyperdriveLong",
+    "Evade" : 0,
+
+    // 6h
+    "ChargeTimeMinutes" : 360
+}

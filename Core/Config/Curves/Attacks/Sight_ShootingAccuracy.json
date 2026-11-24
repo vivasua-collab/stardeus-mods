@@ -1,0 +1,16 @@
+{
+    // Sight -> ShootingAccuracy multiplier at the 8-tile reference distance (a shot raises it
+    // to distance / 8, like the skill). Above 1.0 the gain of a skill 8 shooter
+    // (12 score points per 100% Sight); one eye (0.7) costs a bit more than there, darkness
+    // alone (0.85) only a little
+    "FloatSet" : [
+        0.0, 0.2,
+        0.5, 0.6,
+        0.7, 0.75,
+        0.85, 0.9,
+        1.0, 1.0,
+        1.25, 1.108,
+        1.5, 1.179,
+        2.0, 1.279
+    ]
+}

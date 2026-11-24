@@ -1,0 +1,73 @@
+{
+    "QuestFlags" : [ "Main", "AutoAdd", "Unique" ],
+    "TitleKey" : "quest.main.package.trail1.title",
+    "DescKey" : "quest.main.package.trail1.desc",
+    "QuestProviders" : [
+        "ShipComputer"
+    ],
+    "AvailableWhen": [
+        "HasApproachedDerelict"
+    ],
+    "SetOnComplete" : [
+        "DoneMainPackageTrail1"
+    ],
+    "Variables" : [
+        {
+            "Id" : "Anomaly1",
+            "Type" : "SectorPOI",
+            "Config" : [
+                { "Key" : "POIConfigId", "String" : "Anomaly" },
+                { "Key" : "MinRegionDifficulty", "Float" : 0.45 },
+                { "Key" : "MaxRegionDifficulty", "Float" : 0.6 },
+                { "Key" : "MinRegionsAway", "Int" : 2 }
+            ]
+        }
+    ],
+    "Rewards" : [
+        {
+            "Id" : "Package",
+            "Type" : "Money",
+            "RewardFlags" : [ "PackageContent" ],
+            "Config" : [
+                { "Key" : "Amount", "Int" : 25000 }
+            ]
+        }
+    ],
+    "Steps" : [
+        {
+            "Id" : "RetrieveItem",
+            "Type" : "ExplorePOI",
+            "StepFlags" : [ "ActiveOnStart", "HideInactive" ],
+            "StateStoryEvents" : {
+                "Completed" : "Raid/BreachCapsuleRaid"
+            },
+            "SetOnComplete" : [
+                "RetrievedPackage"
+            ],
+            "Config" : [
+                { "Key" : "Var_POI", "String" : "Anomaly1" },
+                { "Key" : "ExpeditionMinHours", "Float" : 4.0 },
+                { "Key" : "ExpeditionMaxHours", "Float" : 8.0 },
+                { "Key" : "ExpeditionFoundItemMsgKey", "String" : "quest.expedition.found.package" },
+                { "Key" : "PackageFlags", "StringSet" : [ "FailQuestOnDestroy", "CompleteQuestOnOpen" ] },
+                { "Key" : "PackageRewardIds", "StringSet" : [ "Package" ] },
+                // next main quest
+                { "Key" : "PackageQuestId", "String" : "Main/KillTraitorShip" }
+            ]
+        },
+        {
+            "Id" : "OpenPackage",
+            "Type" : "OpenPackage",
+            "StepFlags" : [ "HideInactive" ],
+            "ActivateWhen" : [
+                "RetrievedPackage"
+            ],
+            "Config" : [
+                // if only one package is involved, this can be null,
+                // otherwise the if of the step that creates the package must be
+                // put here
+                { "Key" : "PackageStepId", "String" : null }
+            ]
+        }
+    ]
+}

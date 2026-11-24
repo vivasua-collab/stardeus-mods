@@ -1,0 +1,9 @@
+{
+    "Id" : "Astrophobe",
+    "IconId" : "Icons/Color/NoSparkles",
+    "TypeId" : "Intellectual",
+    "Rarity" : 0.5,
+    "IncompatibleTraitIds" : [
+        "Astrophile"
+    ]
+}

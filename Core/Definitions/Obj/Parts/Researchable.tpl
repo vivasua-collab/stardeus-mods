@@ -1,0 +1,3 @@
+    "Researchable" : {
+        "Prerequisites" : [ "{{researchId}}" ]
+    },

@@ -1,0 +1,30 @@
+{
+    "Id" : "Research/SpaceTravel/WarpDriveAlien",
+    "Tier" : 6,
+    "IsAbstract" : true,
+    "PreviewIcon" : "Icons/Color/Propulsion",
+    "Researchable" : {
+        "IsTreeNode" : true,
+        "Prerequisites" : [
+            "Research/SpaceTravel/PropulsionFTL"
+        ],
+        "DatoidCosts" : [
+            {
+                "TypeId" : "DatoidTechHigh",
+                "StackSize" : 24
+            },
+            {
+                "TypeId" : "DatoidAlien",
+                "StackSize" : 20
+            },
+            {
+                "TypeId" : "DatoidQuantum",
+                "StackSize" : 15
+            },
+            {
+                "TypeId" : "DatoidNuclear",
+                "StackSize" : 15
+            }
+        ]
+    }
+}

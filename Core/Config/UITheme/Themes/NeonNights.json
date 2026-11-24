@@ -1,0 +1,31 @@
+{
+    "Name": "Neon Nights",
+    "Colors": {
+        "White": "#F0F0F0",
+        "Black": "#0D0D15",
+        "Bright": "#00E5FF",
+
+        "RedPanel": "#FF1744",
+
+        "PanelHeader": "#0A1628",
+        "PanelTop": "#152840",
+        "PanelContent": "#1A2F4A",
+        "PanelFooter": "#0F1E35",
+
+        "ButtonSlot": "#1A2840",
+        "ButtonPanel": "#1E3A5C",
+        "ButtonPanelFancy": "#2A5080",
+
+        "Accent": "#FF9500",
+
+        "AlertRed": "RedPanel",
+        "AlertAmber": "Accent",
+        "AlertYellow": "#FFEA00",
+        "AlertGreen": "#00E676",
+
+        "Button1": "#0F1E35",
+        "Button2": "#1E3555",
+        "Button3": "#004D33",
+        "InputHighlight": "#4A7AB8"
+    }
+}

@@ -1,0 +1,9 @@
+{
+    "Id" : "Text/Label",
+
+    "Color" : "UI/Text/Main",
+    "Alpha" : 1,
+
+    "TextFontSize" : 26,
+    "TextOverflowMode" : "Ellipsis"
+}

@@ -1,0 +1,38 @@
+{
+    "Layer" : "FreeEntities",
+    "ParentId" : "Beings/BaseBeing",
+    "PreviewIcon" : "Icons/Color/PreviewCarrier01",
+    "Researchable" : {
+        "Prerequisites" : [ "Research/Robotics/Carrier" ]
+    },
+    "Components" : [
+        {
+            "Component" : "LightSource",
+            "Properties" : [
+                { "Key" : "Radius", "Float" : 5 },
+                { "Key" : "Color", "IntSet" : [ 184, 102, 204, 128 ] },
+                { "Key" : "NeedsEnergy", "Bool" : false }
+            ]
+        },
+        {
+            "Component" : "MobilizerVisual",
+            "Properties" : [
+                { "Key" : "IsDefaultGrounded", "Bool" : false }
+            ]
+        },
+        { "Component" : "BotDockable" },
+        {
+            "Component" : "Disposable",
+            "Properties" : [
+                { "Key" : "IsBiological", "Bool" : false }
+            ]
+        },
+        {
+            "Component" : "ParticleTrail",
+            "Properties" : [
+                { "Key" : "Particles", "String" : "CarrierTrailFX" },
+                { "Key" : "ParticlesOffset", "Vector2" : { "x" : 0, "y" : 0.2 } }
+            ]
+        }
+    ]
+}

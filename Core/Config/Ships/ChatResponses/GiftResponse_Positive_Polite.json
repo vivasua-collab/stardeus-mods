@@ -1,0 +1,8 @@
+{
+    "ResponseType" : "Positive",
+    "TopicType" : "GiftResponse",
+    "ToneType" : "Polite",
+    "MessageKeys" : [
+        "ship.chat.gift_res.positive.polite.*"
+    ]
+}

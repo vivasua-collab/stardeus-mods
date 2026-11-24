@@ -1,0 +1,17 @@
+{
+    "Id" : "SpaceStation",
+    "Type" : "SpaceStation",
+    "MinDifficulty" : 0.0,
+    "DifficultyChance" : [
+        0.0, 1.0,
+        1.0, 1.0
+    ],
+    "RegionQuantityChance" : [
+        0.0, 1.0,
+        0.3, 1.0,
+        0.7, 2.0,
+        1.0, 3.0
+    ],
+    "ProducesShip" : true,
+    "MaxOnePerSector" : true
+}

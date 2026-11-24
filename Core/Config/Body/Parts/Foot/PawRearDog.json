@@ -1,0 +1,7 @@
+{
+    "SlotTypeId" : "Foot",
+    "Compatibility" : "Biological",
+    "Tier" : 1,
+    "ResistanceBase" : 3.0,
+    "TargetSpecies" : [ "Dog" ]
+}

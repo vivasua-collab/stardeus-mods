@@ -1,0 +1,13 @@
+{
+    // Goes straight for the player and ignores whoever is helping them.
+    // A confident ship has no reason to bother with the escorts.
+    "Mode" : "Primary",
+
+    "MinOffensiveness" : 0.0,
+    "MaxOffensiveness" : 1.0,
+    "StrengthDifferenceChance" : [
+        -1.0, 0.2,
+        0.0, 0.6,
+        1.0, 1.0
+    ]
+}

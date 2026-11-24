@@ -1,0 +1,12 @@
+{
+    "Type": "Clothing",
+    "ColorGroupId": "Clothing",
+    "Ingredients": [
+        { "TypeId": "PlantFiber", "StackSize": 1 },
+        { "TypeId" : "Plastic", "StackSize" : 1 }
+    ],
+    "IgnoreMarket" : true,
+    "ProductDefId" : "Obj/Equipment/Clothing/Tracksuit02",
+    "ProductionTimeHours": 2,
+    "EnergyCost": 10,
+}

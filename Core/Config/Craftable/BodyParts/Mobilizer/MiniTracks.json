@@ -1,0 +1,16 @@
+{
+    "Type" : "Robotics1",
+    "ProductDefId" : "Obj/Parts/Mobilizer/MiniTracks",
+    "ProductionTimeHours" : 96,
+    "EnergyCost" : 15,
+    "IgnoreMarket" : true,
+    "Ingredients" : [
+        { "TypeId" : "SteelPlate", "StackSize" : 3 },
+        { "TypeId" : "Microchip", "StackSize" : 1 },
+        { "TypeId" : "Gears", "StackSize" : 10 },
+        { "TypeId" : "CopperWire", "StackSize" : 5 }
+    ],
+    "DisposableOutput" : [
+        { "TypeId" : "ScrapMetal", "StackSize" : 3 }
+    ]
+}

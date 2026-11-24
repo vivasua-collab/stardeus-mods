@@ -1,0 +1,7 @@
+{
+    "Id" : "UI/Starmap/PlayerMarkerHyperspace",
+    // "AliasFor" : "UI/Saturated/Comp",
+    "Hex" : "#BC3FC0",
+    "Alpha" : 1.0,
+    "SkipAtlas" : true
+}

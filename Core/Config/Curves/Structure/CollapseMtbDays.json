@@ -1,0 +1,13 @@
+// Mean days between damaged structure collapses (StructureCollapseSys), by how many floors and
+// walls on the ship are significantly damaged (below 75% health). The more damage is left
+// unrepaired, the more often something gives way.
+{
+    // significantly damaged structures => mean days between collapses
+    "FloatSet" : [
+        1, 30.0,
+        10, 14.0,
+        30, 8.0,
+        100, 4.0,
+        300, 2.0
+    ]
+}

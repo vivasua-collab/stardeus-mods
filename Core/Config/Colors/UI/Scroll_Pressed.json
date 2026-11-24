@@ -1,0 +1,7 @@
+{
+    "Id" : "UI/Scroll/Pressed",
+    "AliasFor" : "UI/Main/Comp+1",
+    // "Hex" : "8E6BA6",
+    "Alpha" : 1.0,
+    "SkipAtlas" : true
+}

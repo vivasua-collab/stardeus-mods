@@ -1,0 +1,8 @@
+{
+    "EventId" : "ColonistCrushExpeditionQuest",
+    "Points" : 10,
+    "OutcomeType" : "Positive",
+    "EventFlags" : [ "ColonistRequest" ],
+    "MinRepeatDelayDays" : 65,
+    "Require" : { "Days" : 25, "Colonists" : 3 }
+}

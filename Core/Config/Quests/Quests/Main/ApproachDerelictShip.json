@@ -1,0 +1,60 @@
+{
+    "QuestFlags" : [ "Main", "AutoAdd", "Unique" ],
+    "TitleKey" : "quest.ApproachDerelictShip",
+    "DescKey" : "quest.ApproachDerelictShip.desc",
+    "QuestProviders" : [
+        "ShipComputer"
+    ],
+    "AvailableWhen" : [
+        "IsFlightReady"
+    ],
+    "SetOnComplete" : [
+        "HasApproachedDerelict"
+    ],
+    "ForScenarios" : [
+        "wrecked_empty_ship",
+        "new_beginning"
+    ],
+    "Variables" : [
+        {
+            "Id" : "Derelict",
+            "Type" : "ExistingSpaceObject",
+            "Config" : [
+                { "Key" : "TryCurrentSector", "Bool" : true },
+                { "Key" : "MustExistOnLoad", "Bool" : false },
+                { "Key" : "Type", "String" : "ShipDerelict" }
+            ]
+        }
+    ],
+    "Steps" : [
+        {
+            "Id": "ApproachDerelictShip",
+            "Type" : "ApproachDerelictShip",
+            "StepFlags" : [ "ActiveOnStart" ],
+            "SetOnComplete" : [
+                "ApproachedDerelict"
+            ],
+            "Config" : [
+                { "Key" : "Var_Derelict", "String" : "Derelict" },
+                // this derelict will spawn a blank quest package
+                { "Key" : "StoryEventId", "String" : "Derelict/DerelictShipFirstStory" },
+                // next main quest
+                { "Key" : "PackageQuestId", "String" : "Main/InvestigateCoordinates1" }
+            ]
+        },
+        {
+            "Id" : "OpenPackage",
+            "Type" : "OpenPackage",
+            "StepFlags" : [ "HideInactive", "CompletesQuest" ],
+            "ActivateWhen" : [
+                "ApproachedDerelict"
+            ],
+            "Config" : [
+                // if only one package is involved, this can be null,
+                // otherwise the if of the step that creates the package must be
+                // put here
+                { "Key" : "PackageStepId", "String" : null }
+            ]
+        }
+    ]
+}

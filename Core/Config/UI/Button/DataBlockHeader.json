@@ -1,0 +1,18 @@
+{
+    "Id" : "Button/DataBlockHeader",
+
+    "ChildrenKeys" : [
+        "Panel",
+        "Selectable",
+        "Text",
+        "ActiveOverlay"
+    ],
+
+    "ChildrenIds" : [
+        "Panel/ColorlessButtonTop",
+        "Selectable/HeaderIcon",
+        "Text/DataBlock",
+        "Overlay/ButtonTop"
+    ]
+
+}

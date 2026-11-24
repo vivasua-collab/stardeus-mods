@@ -1,0 +1,9 @@
+{
+    "Id" : "Leather",
+    "IsComposite" : true,
+    "IconId" : "Obj/Materials/Leather",
+    "GroupId" : "Components",
+    "EnergyOutput" : 240.0,
+    "InternalValue" : 70.0,
+    "Rarity" : 5
+}

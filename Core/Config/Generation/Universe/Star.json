@@ -1,0 +1,25 @@
+{
+    "Id" : "Star",
+    "Icon" : "Icons/Color/Star",
+    "ParentIds" : [
+        "Sector"
+    ],
+    "SizeMin" : 5,
+    "SizeMax" : 15,
+    "MinExitDist" : 25,
+    "StarfieldSizeMul" : 2.5,
+    "SpawnChance" : 0,
+    "NameChanceWeights" : [ 1.0 ],
+    "NameParts" : [
+        {
+            "Type" : "SOName",
+            "Paths" : [ "Space/Object/Name" ],
+            "Chances" : [ 1.0 ]
+        },
+        {
+            "Type" : "SOName",
+            "Paths" : [ "Space/Object/Name" ],
+            "Chances" : [ 0.02 ]
+        }
+    ]
+}

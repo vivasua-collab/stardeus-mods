@@ -1,0 +1,46 @@
+{
+    "Layer" : "FreeEntities",
+    "ParentId" : "Obj/BaseObj",
+    "IgnoreMarket" : true,
+    "Components" : [
+        {
+            "Component" : "ObjHealth",
+            "Properties" : [
+                { "Key" : "Max", "Int" : 50 }
+            ]
+        },
+        {
+            "Component" : "Flammable",
+            "Properties" : [
+                { "Key" : "IsTemperatureResistant", "Bool": true }
+            ]
+        },
+        {
+            "Component" : "ObjGraphics",
+            "Properties" : [
+                { "Key" : "Shader", "String" : "ObjAbove" },
+                // { "Key" : "Renderer", "String" : "VFXRendererObjAbove" },
+                { "Key" : "Graphic", "String": "Obj/Asteroids/Asteroid01" },
+                { "Key" : "HoverWhenInSpace", "Bool" : false},
+                { "Key" : "IsAnimated", "Bool" : true },
+                { "Key" : "DoNotCull", "Bool" : true }
+            ]
+        },
+        {
+            "Component" : "ParticleTrail",
+            "Properties" : [
+                { "Key" : "Particles", "String" : "SmokeTrailFX" },
+                { "Key" : "ParticlesOffset", "Vector2" : { "x" : 0, "y" : 0 } },
+                { "Key" : "InheritScale", "Bool" : true },
+                { "Key" : "DestroyDelay", "Float" : 5 }
+            ]
+        },
+        {
+            "Component" : "Movable",
+            "Properties" : [
+                { "Key" : "IsForbidden", "Bool" : true }
+            ]
+        },
+        { "Component" : "Meteor" }
+    ]
+}

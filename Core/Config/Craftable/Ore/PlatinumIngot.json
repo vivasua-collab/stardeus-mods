@@ -1,0 +1,11 @@
+{
+    "Type" : "Ore",
+    "Ingredients" : [
+        { "TypeId" : "Platinum", "StackSize" : 1 },
+        { "TypeId" : "Carbon", "StackSize" : 1 }
+    ],
+    "OutputMultiplier" : 1,
+    "ProductDefId" : "Obj/Materials/PlatinumIngot",
+    "ProductionTimeHours" : 4.0,
+    "EnergyCost" : 35
+}

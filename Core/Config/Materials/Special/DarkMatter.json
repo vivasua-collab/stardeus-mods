@@ -1,0 +1,13 @@
+{
+    "Id" : "DarkMatter",
+    "IconId" : "Obj/Materials/DarkMatter",
+    "GroupId" : "Components",
+    "CollectorCost" : 5000,
+    "EnergyOutput" : 5000.0,
+    "IgnoreMarket" : true,
+    "InternalValue" : 500.0,
+    "Rarity" : 5,
+    "MatRarity" : 4,
+    "ExplosionLevel" : 7,
+    "ExplosivenessCurveId" : "Device"
+}

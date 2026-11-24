@@ -1,0 +1,32 @@
+{
+    "Layer" : "FreeEntities",
+    "ParentId" : "Obj/Plants/BasePlant",
+    "Researchable" : {
+        "Prerequisites" : [ "Research/Habitation/Decorations" ]
+    },
+    "Components" : [
+        {
+            "Component" : "ObjGraphics",
+            "Properties" : [
+                { "Key" : "Graphic", "String": "Obj/Plants/Cornflower/Cornflower" }
+            ]
+        },
+        {
+            "Component" : "Plant",
+            "Properties" : [
+                { "Key" : "Size", "String" : "Small" },
+                {
+                    "Key" : "HarvestOutput",
+                    "RawMaterials" : [
+                        { "TypeId" : "CornflowerPetals", "StackSize" : 1 },
+                        { "TypeId" : "PlantFiber", "StackSize" : 1 }
+                    ]
+                },
+                { "Key" : "WaterUsePerDay", "Float" : 0.05 },
+                { "Key" : "WorkAmount", "Int" : 25 },
+                { "Key" : "GrowthRate", "Float" : 0.8 },
+                { "Key" : "GrowthAfterHarvest", "Float" : 0.05 }
+            ]
+        }
+    ]
+}

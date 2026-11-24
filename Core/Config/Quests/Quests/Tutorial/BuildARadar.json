@@ -1,0 +1,44 @@
+{
+    "QuestFlags" : [ "Tutorial", "AutoAdd", "Unique" ],
+    "TitleKey" : "quest.BuildRadar",
+    "DescKey" : "quest.BuildRadar.desc",
+    "QuestProviders" : [
+        "ShipComputer"
+    ],
+    // HasFoodProduction: the colonist lessons (beds, food) must be done before the spine moves
+    // on to the radar and the expedition, or the first colonist starves while the player
+    // follows the spine.
+    "AvailableWhen" : [
+        "ReadyForTutorialQuests",
+        "HasRepairStation",
+        "HasFoodProduction"
+    ],
+    "SetOnComplete" : [ "HasRadar" ],
+    "SetOnFail" : [ "HasRadar" ],
+    "Steps" : [
+        {
+            "Id": "ResearchRadar",
+            "Type" : "UnlockResearch",
+            "StepFlags" : [ "ActiveOnStart" ],
+            "Config" : [
+                { "Key" : "Research", "String" : "Research/Scanning/Radar" }
+            ],
+            "SetOnComplete" : [
+                "UnlockedRadar"
+            ]
+        },
+        {
+            "Id": "BuildRadar",
+            "Type" : "HaveOnGrid",
+            "StepFlags": [ "CompletesQuest" ],
+            "Config" : [
+                { "Key" : "Definition", "String" : "Objects/Devices/Radar" },
+                { "Key" : "CountExisting", "Bool" : true },
+                { "Key" : "Count", "Int" : 1 }
+            ],
+            "ActivateWhen" : [
+                "UnlockedRadar"
+            ]
+        }
+    ]
+}

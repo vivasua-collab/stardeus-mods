@@ -1,0 +1,13 @@
+{
+    // C# implementation id.
+    // Multiple configurations can point to a single implementation.
+    "AspectId" : "Ongoing",
+    "Properties" : [
+        // When an event is running for longer than this amount of days
+        // it will be automatically ended as failed. It can be overridden
+        // for each individual event
+        { "Key" : "MaxOngoingEventDaysDefault", "Float" : 3.0 },
+        // WaitingForHook state can stay for 3 weeks in-game
+        { "Key" : "MaxOngoingEventDaysDefault_Hook", "Float" : 21.0 }
+    ]
+}

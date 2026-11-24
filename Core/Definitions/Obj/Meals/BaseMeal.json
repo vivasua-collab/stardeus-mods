@@ -1,0 +1,49 @@
+{
+    "IsAbstract" : true,
+    "Layer" : "FreeEntities",
+    "ParentId" : "Obj/BaseObj",
+    "Spawnable" : {
+        "Category" : "Meal",
+        "TierDiff" : 1,
+        "Chance" : 1.0,
+        "ChanceLocked" : 0.5,
+        "Quantity" : {
+            "Component" : "Curve",
+            "Properties" : [
+                { "Key" : "Keys",  "FloatSet" : [0.0, 0.5, 0.9, 1.0 ] },
+                { "Key" : "Values", "IntSet" :  [10,   15,  20,   25  ] }
+            ]
+        }
+    },
+    "Components" : [
+        { "Component" : "SafetyCheck" },
+        { "Component" : "ExtraInfo" },
+        {
+            "Component" : "ObjHealth",
+            "Properties" : [
+                { "Key" : "IsInvincible", "Bool" : false }
+            ]
+        },
+        {
+            "Component" : "Flammable",
+            "Properties" : [
+                { "Key" : "IgnitionTemperatureCelsius", "Int" : 250 },
+                { "Key" : "FireDamageResistance", "Float" : 0.2 },
+                { "Key" : "FireChance", "Float" : 0.6 }
+            ]
+        },
+        {
+            "Component" : "ObjGraphics",
+            "Properties" : [
+                { "Key" : "Shader", "String" : "ObjFlat" },
+                { "Key" : "Scale", "Float": 0.5 }
+            ]
+        },
+        {
+            "Component" : "UnstoredMat",
+            "Properties" : [
+                { "Key" : "FixedSize", "Bool" : true }
+            ]
+        }
+    ]
+}

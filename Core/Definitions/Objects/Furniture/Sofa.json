@@ -1,0 +1,126 @@
+{
+    "Layer" : "Objects",
+    "ParentId" : "Objects/Furniture/BaseFurniture",
+    "Researchable" : {
+        "Prerequisites" : [ "Research/Habitation/FurnitureImproved" ]
+    },
+    "Spawnable" : {
+        "Category": "Comfort",
+        "Chance" : 1.0,
+        "ChanceLocked" : 0.5,
+        "Quantity" : {
+            "Component" : "PureRandom",
+            "Properties" : [
+                { "Key" : "MaxQuantity", "Int" : 2 },
+                { "Key" : "MaxQuantityChance", "Float" : 0.1 }
+            ]
+        }
+    },
+    "Components" : [
+        {
+            "Component" : "TileTransform",
+            "Properties" : [
+                { "Key" : "Width", "Int" : 2 },
+                { "Key" : "CoverPercent", "Int" : 50 }
+            ]
+        },
+        { "Component" : "SafetyCheck" },
+        {
+            "Component" : "Bed",
+            "Properties" : [
+                { "Key" : "Slots", "Int" : 2 },
+                { "Key" : "SlotFlags_0", "StringSet" : [ "Humanoid" ] },
+                { "Key" : "SlotFlags_1", "StringSet" : [ "Animal", "Pet"] },
+                { "Key" : "SlotNameKey_0", "String" : "bed.slot.main" },
+                { "Key" : "SlotNameKey_1", "String" : "bed.slot.pet" },
+                { "Key" : "SlotHidesBody_0", "Bool" : false },
+                { "Key" : "SlotHidesBody_1", "Bool" : false },
+                { "Key" : "SlotRotation_0", "String" : "L" },
+                { "Key" : "SlotRotation_1", "String" : "L" },
+                { "Key" : "SlotTemporary_0", "Bool" : true },
+                { "Key" : "SlotTemporary_1", "Bool" : false },
+                {
+                    "Key" : "SlotOffset_L_0",
+                    "Vector2" : { "x" : 0, "y" : 0.45}
+                },
+                {
+                    "Key" : "SlotOffset_R_0",
+                    "Vector2" : { "x" : 0, "y" : 0.0 }
+                },
+                {
+                    "Key" : "SlotOffset_D_0",
+                    "Vector2" : { "x" : -0.25, "y" : 0.15 }
+                },
+                {
+                    "Key" : "SlotOffset_U_0",
+                    "Vector2" : { "x" : 0.25, "y" : 0.25 }
+                },
+                {
+                    "Key" : "SlotOffset_L_1",
+                    "Vector2" : { "x" : 0, "y" : -0.25 }
+                },
+                {
+                    "Key" : "SlotOffset_R_1",
+                    "Vector2" : { "x" : 0, "y" : 0.5 }
+                },
+                {
+                    "Key" : "SlotOffset_D_1",
+                    "Vector2" : { "x" : 0.4, "y" : 0.15 }
+                },
+                {
+                    "Key" : "SlotOffset_U_1",
+                    "Vector2" : { "x" : -0.35, "y" : 0.15 }
+                },
+                { "Key" : "ShowOwnerNames", "Bool" : true },
+                { "Key" : "ShowPetNames", "Bool" : true },
+                { "Key" : "OwnerNameFontSize", "Float" : 1.25 },
+                {
+                    "Key" : "SlotNameOffset_D_1",
+                    "Vector2" : { "x" : 0.7, "y" : 0 }
+                },
+                {
+                    "Key" : "SlotNameOffset_R_1",
+                    "Vector2" : { "x" : 0, "y" : -1.4 }
+                },
+                {
+                    "Key" : "SlotNameOffset_U_1",
+                    "Vector2" : { "x" : -0.7, "y" : 0 }
+                },
+                {
+                    "Key" : "SlotNameOffset_L_1",
+                    "Vector2" : { "x" : 0, "y" : -0.7 }
+                },
+                { "Key" : "SlotNameRotation_D_1", "Float" : -90 },
+                { "Key" : "SlotNameRotation_R_1", "Float" : 0 },
+                { "Key" : "SlotNameRotation_U_1", "Float" : 90 },
+                { "Key" : "SlotNameRotation_L_1", "Float" : 0 }
+            ]
+        },
+        {
+            "Component" : "Passability",
+            "Properties" : [
+                { "Key" : "Difficulty", "Float" : 0.7 }
+            ]
+        },
+        {
+            "Component" : "TileGraphics",
+            "Properties" : [
+                { "Key" : "Type", "String": "Object" },
+                { "Key" : "Graphic", "String": "Objects/Furniture/Sofa" }
+            ]
+        },
+        {
+            "Component" : "Constructable",
+            "Properties" : [
+                { "Key" : "WorkAmount", "Int" : 450 },
+                {
+                    "Key" : "Contents",
+                    "RawMaterials" : [
+                        { "TypeId" : "Wood", "StackSize" : 2 },
+                        { "TypeId" : "Leather", "StackSize" : 5 }
+                    ]
+                }
+            ]
+        }
+    ]
+}

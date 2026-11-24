@@ -1,0 +1,111 @@
+{
+    "ToolPath" : "SpaceTravel",
+    "Layer" : "Objects",
+    "ParentId" : "Objects/Devices/BaseDevice",
+    "IsImportant" : true,
+    "Researchable" : {
+        "Prerequisites" : [ "Research/SpaceTravel/Shuttle" ]
+    },
+    "Spawnable" : {
+        "Category": "RareDevice",
+        "TierDiff" : -1,
+        "Chance" : 1.0,
+        "ChanceLocked" : 0.5
+    },
+    "Components" : [
+        {
+            "Component" : "TileTransform",
+            "Properties" : [
+                { "Key" : "Width", "Int" : 3 },
+                { "Key" : "Height", "Int" : 4 },
+                { "Key" : "CoverPercent", "Int" : 75 },
+                { "Key" : "IsRotatable", "Bool" : true },
+                // { "Key" : "WorkSpot", "Vector2" : { "x" : 3, "y": 1 } }
+                { "Key" : "OutPort", "Vector2" : { "x" : 3, "y" : 1 } },
+                { "Key" : "InPort", "Vector2" : { "x" : 3, "y" : 1 } }
+            ]
+        },
+        {
+            "Component" : "IndustrialEquipment",
+            "Properties" : [
+                { "Key" : "IsNoisy", "Bool" : true }
+            ]
+        },
+        {
+            "Component" : "Reinstallable",
+            "Properties" : [
+                { "Key" : "IsAdvanced", "Bool" : true }
+            ]
+        },
+        {
+            "Component" : "LightSource",
+            "Properties" : [
+                { "Key" : "Radius", "Float" : 7 },
+                { "Key" : "NeedsEnergy", "Bool" : false },
+                { "Key" : "IsCustomizable", "Bool" : true },
+                { "Key" : "Color", "IntSet" : [ 156, 140, 217, 128 ] }
+            ]
+        },
+        {
+            "Component" : "Flammable",
+            "Properties" : [
+                { "Key" : "IgnitionTemperatureCelsius", "Int" : 1500 },
+                { "Key" : "FireChance", "Float" : 0.3 },
+                { "Key" : "BaseExplosionLevel", "Int" : 5 },
+                { "Key" : "FlammabilityCurve", "String" : "Device" },
+                { "Key" : "ExplosivenessCurve", "String" : "DeviceHigh" }
+            ]
+        },
+        {
+            "Component" : "Shuttle",
+            "Properties" : [
+                { "Key" : "MiningPower", "Int" : 1 },
+                { "Key" : "MiningDepth", "Float" : 3.0 },
+                { "Key" : "GraphicIn", "String" : "Objects/Devices/Shuttle" },
+                { "Key" : "GraphicOut", "String" : "Objects/Devices/ShuttlePad" }
+            ]
+        },
+        { "Component" : "OutdoorsCheck" },
+        {
+            "Component" : "MatStorage",
+            "Properties" : [
+                { "Key" : "StorageType", "String": "TakeOnly" },
+                { "Key" : "MaxCapacity", "Int": 100 }
+            ]
+        },
+        {
+            "Component" : "TileGraphics",
+            "Properties" : [
+                { "Key" : "Graphic", "String": "Objects/Devices/Shuttle" },
+                { "Key" : "HasHeight", "Bool" : true }
+            ]
+        },
+        {
+            "Component" : "Passability",
+            "Properties" : [
+                { "Key" : "IsPassable", "Bool" : false },
+                { "Key" : "IsWalkable", "Bool" : false },
+                { "Key" : "Difficulty", "Float" : 1 }
+            ]
+        },
+        {
+            "Component" : "Constructable",
+            "Properties" : [
+                { "Key" : "WorkAmount", "Int" : 2400 },
+                { "Key" : "Placement", "String" : "OnFloor" },
+                {
+                    "Key" : "Contents",
+                    "RawMaterials" : [
+                        { "TypeId" : "TitaniumPlate", "StackSize" : 15 },
+                        { "TypeId" : "Glass", "StackSize" : 3 },
+                        { "TypeId" : "Petroleum", "StackSize" : 20 },
+                        { "TypeId" : "Gears", "StackSize" : 10 },
+                        { "TypeId" : "Microchip2", "StackSize" : 4 },
+                        { "TypeId" : "GoldWire", "StackSize" : 8 },
+                        { "TypeId" : "Plastic", "StackSize" : 4 }
+                    ]
+                }
+            ]
+        }
+    ]
+}

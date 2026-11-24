@@ -1,0 +1,11 @@
+{
+    "Id" : "Obj/Equipment/Clothing/SpaceSuit02",
+    "Type" : "CFD",
+    "Groups" : [ "Equipment" ],
+    "Value" : 4700,
+    "Rarity" : 0.1,
+    "TraderQuantity" : 1.0,
+    "MaxTraderQuantity" : 1,
+    "MinSectorDifficulty" : 0.65,
+    "Volatility" : 0.0095
+}

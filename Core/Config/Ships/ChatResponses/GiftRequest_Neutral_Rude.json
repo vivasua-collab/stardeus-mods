@@ -1,0 +1,8 @@
+{
+    "ResponseType" : "Neutral",
+    "TopicType" : "GiftRequest",
+    "ToneType" : "Rude",
+    "MessageKeys" : [
+        "ship.chat.gift_req.neutral.rude.*"
+    ]
+}

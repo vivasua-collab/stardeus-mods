@@ -1,0 +1,29 @@
+{
+    "Id" : "Thug",
+    "Species" : [ "Human" ],
+    "AgePhaseIds" : [ "YoungAdult", "MidLife" ],
+    "RoleTypes" : [ "Dumb", "Poor" ],
+    "IncompatibleTraitIds" : [ "Pacifist" ],
+    "LovesJobTypes" : [ "Melee" ],
+    "BodyTypes" : "M",
+    "SexChances" : [
+        {
+            "Sex" : "M",
+            "Chance" : 1.0
+        },
+        {
+            "Sex" : "F",
+            "Chance" : 0.0
+        }
+    ],
+    "AdjustsSkills" : [
+        {
+            "JobId" : "Melee",
+            "Adjustment" : 4
+        },
+        {
+            "JobId" : "Social",
+            "Adjustment" : -1
+        }
+    ]
+}

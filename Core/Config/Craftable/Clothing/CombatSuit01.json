@@ -1,0 +1,16 @@
+{
+    "Type": "Clothing",
+    "ColorGroupId": "Suit",
+    "Ingredients": [
+        { "TypeId" : "CarbonFiber", "StackSize" : 28 },
+        { "TypeId" : "TitaniumPlate", "StackSize" : 10 },
+        { "TypeId" : "Rubber", "StackSize" : 12 },
+        { "TypeId" : "Plastic", "StackSize" : 10 },
+        { "TypeId" : "LeadPlate", "StackSize" : 4 },
+        { "TypeId" : "BatteryCell", "StackSize" : 10 }
+    ],
+    "IgnoreMarket" : true,
+    "ProductDefId": "Obj/Equipment/Clothing/CombatSuit01",
+    "ProductionTimeHours": 18.0,
+    "EnergyCost": 140.0
+}

@@ -1,0 +1,9 @@
+{
+    "Id" : "GoldWire",
+    "IsComposite" : true,
+    "IsConsumedOnDestroy" : true,
+    "IconId" : "Obj/Materials/GoldWire",
+    "GroupId" : "Electronics",
+    "EnergyOutput" : 230.0,
+    "Rarity" : 20
+}

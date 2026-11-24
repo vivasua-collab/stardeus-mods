@@ -1,0 +1,9 @@
+{
+    "Id" : "Panel/SliderMenu",
+
+    "Color" : "UI/Slider/Background",
+
+    "Image" : "UI/Buttons/IconButtonBG",
+    "ImageType" : "Sliced",
+    "ImageBorderLBRT" : [ 8, 8, 8, 8 ]
+}

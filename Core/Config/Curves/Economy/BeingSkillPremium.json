@@ -1,0 +1,12 @@
+{
+    // Skill score (average level of the top 3 skilled jobs / 20) -> credits a human is
+    // worth on top of their body. Buyers pay for a specialist, so the curve is steep at the top.
+    // Skill score remapped after the 2026-10 skill rebase (new = 0.09 + 1.3 x old), so a typical colonist keeps the old price
+    "FloatSet" : [
+        0.09, 0,
+        0.42, 2000,
+        0.74, 6000,
+        1.07, 15000,
+        1.39, 30000
+    ]
+}

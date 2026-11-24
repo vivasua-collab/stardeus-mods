@@ -1,0 +1,19 @@
+{
+    "SpeciesType" : "Robot",
+    "IsDefault" : true,
+    "Parts" : [
+        { "Slot" : "Body", "Part" : "Body/BodyRobot" },
+        { "Slot" : "Shoulder_L", "Part" : "Shoulder/ArmSocket" },
+        { "Slot" : "Shoulder_R", "Part" : "Shoulder/ArmSocket" },
+        { "Slot" : "Arm_L", "Part" : "Arm/ServoArm" },
+        { "Slot" : "Arm_R", "Part" : "Arm/ServoArm" },
+        { "Slot" : "Hand_L", "Part" : "Hand/MultiTool" },
+        { "Slot" : "Hand_R", "Part" : "Hand/Manipulator" },
+        { "Slot" : "Eye", "Part" : "Eye/MiniOptics" },
+        { "Slot" : "Mobilizer", "Part" : "Mobilizer/Tracks" },
+        { "Slot" : "Battery_1", "Part" : "Battery/MiniCell" },
+        { "Slot" : "Battery_2", "Part" : "Battery/MiniCell" },
+        { "Slot" : "Implant", "Empty" : true },
+        { "Slot" : "Core", "Part" : "Core/MiniCore" }
+    ]
+}

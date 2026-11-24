@@ -1,0 +1,266 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Stardeus BeingRole",
+  "description": "Generated from C# by Game/Generate JSON Schemas, do not edit by hand",
+  "$ref": "#/$defs/BeingRole",
+  "$defs": {
+    "BeingRole": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "IdH": {
+          "type": "integer"
+        },
+        "Flags": {
+          "anyOf": [
+            {
+              "type": "string",
+              "pattern": "^\\s*(None|Dumb|Smart|Poor|Rich|Good|Evil|Once)(\\s*,\\s*(None|Dumb|Smart|Poor|Rich|Good|Evil|Once))*\\s*$"
+            },
+            {
+              "type": "integer"
+            }
+          ]
+        },
+        "IncapableJobTypes": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "LovesJobTypes": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "SexChances": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "$ref": "#/$defs/SexChance"
+          }
+        },
+        "BodyTypes": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "AddsTraits": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "$ref": "#/$defs/TraitWithChance"
+          }
+        },
+        "AdjustsSkills": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "$ref": "#/$defs/SkillAdjustment"
+          }
+        },
+        "IncompatibleTraitIds": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "RoleTypes": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "enum": [
+              "None",
+              "Dumb",
+              "Smart",
+              "Poor",
+              "Rich",
+              "Good",
+              "Evil",
+              "Once"
+            ],
+            "type": "string"
+          }
+        },
+        "AgePhases": {
+          "anyOf": [
+            {
+              "type": "string",
+              "pattern": "^\\s*(None|Childhood|YoungAdult|MidLife|Retirement)(\\s*,\\s*(None|Childhood|YoungAdult|MidLife|Retirement))*\\s*$"
+            },
+            {
+              "type": "integer"
+            }
+          ]
+        },
+        "Species": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "IncompatibleSpecies": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "AgePhaseIds": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "enum": [
+              "None",
+              "Childhood",
+              "YoungAdult",
+              "MidLife",
+              "Retirement"
+            ],
+            "type": "string"
+          }
+        },
+        "RequiresRoles": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "NotAfterRoles": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "Id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "NameT": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "Rarity": {
+          "type": "number"
+        },
+        "Modifiers": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "SexChance": {
+      "type": "object",
+      "properties": {
+        "Sex": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "Chance": {
+          "type": "number"
+        }
+      },
+      "additionalProperties": false
+    },
+    "SkillAdjustment": {
+      "type": "object",
+      "properties": {
+        "JobId": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "Adjustment": {
+          "type": "integer"
+        }
+      },
+      "additionalProperties": false
+    },
+    "TraitWithChance": {
+      "type": "object",
+      "properties": {
+        "TraitId": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "Chance": {
+          "type": "number"
+        }
+      },
+      "additionalProperties": false
+    }
+  }
+}

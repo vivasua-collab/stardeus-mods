@@ -1,0 +1,12 @@
+{
+    "Id" : "Obj/Upgrades/MemoryCompressionUpgrade",
+    "Type" : "CFD",
+    "Groups" : [ "Upgrade" ],
+    "Value" : 5500.0,
+    "Rarity" : 0.15,
+    "TraderQuantity" : 1.0,
+    "MaxTraderQuantity" : 5,
+    "MinSectorDifficulty" : 0.85,
+    "PlayerBuyPriceMultiplier": 2.0,
+    "Volatility" : 0.0045
+}

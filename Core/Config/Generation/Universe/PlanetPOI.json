@@ -1,0 +1,21 @@
+{
+    "Id" : "PlanetPOI",
+    "Icon" : "Icons/Color/Destination",
+    "ParentIds" : [
+        "PlanetCloseup",
+        "Asteroid"
+    ],
+    "SizeMin" : 1,
+    "SizeMax" : 1,
+    "SpawnChance" : 1.0,
+    "LocationApproxMagnitude" : 2.0,
+    "CanBeExplored" : true,
+    "IsConsumable" : true,
+    "CanHaveCustomIcon" : true,
+    "IsInteractive" : true,
+    "IsScannable" : false,
+    "CanBeOwned" : false,
+    "IsOnSurface" : true,
+    "StarfieldSortOrder" : 1,
+    "IsIconMarker" : true
+}

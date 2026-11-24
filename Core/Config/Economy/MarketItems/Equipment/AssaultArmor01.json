@@ -1,0 +1,11 @@
+{
+    "Id" : "Obj/Equipment/Clothing/AssaultArmor01",
+    "Type" : "CFD",
+    "Groups" : [ "Equipment" ],
+    "Value" : 16000,
+    "Rarity" : 0.04,
+    "TraderQuantity" : 1.0,
+    "MaxTraderQuantity" : 1,
+    "MinSectorDifficulty" : 0.9,
+    "Volatility" : 0.0095
+}

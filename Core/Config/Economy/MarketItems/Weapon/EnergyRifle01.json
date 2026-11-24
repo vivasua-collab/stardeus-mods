@@ -1,0 +1,11 @@
+{
+    "Id" : "Obj/Equipment/Weapons/EnergyRifle01",
+    "Type" : "CFD",
+    "Groups" : [ "Weapon" ],
+    "Value" : 3500.0,
+    "Rarity" : 0.15,
+    "TraderQuantity" : 1.0,
+    "MaxTraderQuantity" : 5,
+    "MinSectorDifficulty" : 0.8,
+    "Volatility" : 0.0034
+}

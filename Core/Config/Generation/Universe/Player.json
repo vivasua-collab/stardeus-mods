@@ -1,0 +1,38 @@
+{
+    "Id" : "Player",
+    "Icon" : "Objects/Devices/ShipComputer",
+    "IsDynamic" : true,
+    "CanMoveInStarmap" : true,
+    "SpawnChance" : 0.0,
+    "NameChanceWeights" : [
+        0.95,
+        0.05
+    ],
+    "NameMaxWords" : 3,
+    "NameParts" : [
+        {
+            "Type" : "Prefix",
+            "NonUnique" : true,
+            "Paths" : [ "Space/Ship/Prefix" ],
+            "Chances" : [ 0.0, 1.0 ]
+        },
+        {
+            "Type" : "NamePart",
+            "NonUnique" : true,
+            "Paths" : [ "Space/Ship/Name" ],
+            "Chances" : [ 1.0, 1.0 ]
+        },
+        {
+            "Type" : "NamePart",
+            "NonUnique" : true,
+            "Paths" : [ "Space/Ship/Name" ],
+            "Chances" : [ 0.8, 0.5 ]
+        },
+        {
+            "Type" : "Suffix",
+            "NonUnique" : true,
+            "Paths" : [ "Space/Ship/Suffix" ],
+            "Chances" : [ 0.05, 0.01 ]
+        }
+    ]
+}

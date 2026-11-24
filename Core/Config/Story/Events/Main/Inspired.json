@@ -1,0 +1,17 @@
+{
+    // C# implementation id. Multiple configurations can point to a single implementation.
+    "EventId": "Inspired",
+    // How much does this story event cost to run
+    "Points": 3,
+    // Options: Negative, Positive, Neutral, Raid
+    "OutcomeType": "Positive",
+    // Full list is in StoryEventFlags class
+    "EventFlags": [
+        "Being"
+    ],
+    "MinRepeatDelayDays": 14,
+    // Full list of requirements can be found in Situation class
+    "Require": {
+        "Colonists": 1
+    }
+}

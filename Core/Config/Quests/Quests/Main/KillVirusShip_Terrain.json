@@ -1,0 +1,95 @@
+{
+    "QuestFlags" : [ "Main", "AutoAdd", "Unique" ],
+    "QuestProviders" : [
+        "ShipComputer"
+    ],
+    "TitleKey" : "quest.KillVirusShip_Terrain",
+    "DescKey" : "quest.KillVirusShip_Terrain.desc",
+    "AvailableWhen": [
+        "AskedSentinelsAboutTerraforming"
+    ],
+    "SetOnComplete" : [
+        "HasTerraformingTerrain"
+    ],
+    "FailWhen": [
+        "UsedDarkPortal"
+    ],
+    "Variables" : [
+        {
+            "Id" : "TargetShip",
+            "Type" : "NPCShip",
+            "Config" : [
+                { "Key" : "MustExistOnLoad", "Bool" : false },
+                { "Key" : "FactionId", "String" : "Virus" },
+                // -1 is natural chance for faction
+                { "Key" : "ChancePolice", "Float" : -1.0 },
+                { "Key" : "StrengthMul", "Float" : 1.0 },
+                { "Key" : "ShipBehaviorRegionId", "String" : "Region_Patrol" },
+                { "Key" : "ShipBehaviorSectorId", "String" : "Sector_Orbit" },
+
+                { "Key" : "MinRegionsAway", "Int" : 1 },
+                { "Key" : "MinRegionDifficulty", "Float" : 0.3 },
+                { "Key" : "MaxRegionDifficulty", "Float" : 0.6 },
+                { "Key" : "SkipRegionsWithoutRelay", "Bool" : false }
+            ]
+        }
+    ],
+    "Rewards" : [
+        {
+            "Id" : "Research",
+            "Type" : "Research",
+            "RewardFlags" : [ "PackageContent" ],
+            "Config" : [
+                {
+                    "Key" : "Definition",
+                    "String" : "Research/LifeSupport/TerrainGeneration"
+                },
+                { "Key" : "DiscoverOnly", "Bool" : true }
+            ]
+        }
+    ],
+    "Steps" : [
+        {
+            "Id": "KillShip",
+            "Type" : "KillNPCShip",
+            "StepFlags" : [ "ActiveOnStart", "HideIfQuestUnaccepted" ],
+            "SetOnComplete" : [
+                "KilledShip"
+            ],
+            "Config" : [
+                { "Key" : "Var_Ship", "String" : "TargetShip" }
+            ]
+        },
+        {
+            "Id": "ApproachDerelictShip",
+            "Type" : "ApproachDerelictShip",
+            "StepFlags" : [ "HideInactive" ],
+            "ActivateWhen": [
+                "KilledShip"
+            ],
+            "SetOnComplete" : [
+                "ApproachedDerelict"
+            ],
+            "Config" : [
+                { "Key" : "Var_Derelict", "String" : "TargetShip" },
+                // this derelict will spawn a blank quest package
+                { "Key" : "StoryEventId", "String" : "Derelict/DerelictShipVirusTerrainStory" },
+                { "Key" : "PackageRewardIds", "StringSet" : [ "Research" ] }
+            ]
+        },
+        {
+            "Id" : "OpenPackage",
+            "Type" : "OpenPackage",
+            "StepFlags" : [ "HideInactive", "CompletesQuest" ],
+            "ActivateWhen" : [
+                "ApproachedDerelict"
+            ],
+            "Config" : [
+                // if only one package is involved, this can be null,
+                // otherwise the if of the step that creates the package must be
+                // put here
+                { "Key" : "PackageStepId", "String" : null }
+            ]
+        }
+    ]
+}

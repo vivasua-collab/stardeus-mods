@@ -1,0 +1,16 @@
+{
+    "Id" : "LotteryWinner",
+    "Species" : [ "Human" ],
+    "LovesJobTypes" : [ "Firefighting", "Expedition" ],
+    "RoleTypes" : [ "Dumb", "Rich", "Once" ],
+    "AdjustsSkills" : [
+        {
+            "JobId" : "Social",
+            "Adjustment" : 4
+        },
+        {
+            "JobId" : "Research",
+            "Adjustment" : -2
+        }
+    ]
+}

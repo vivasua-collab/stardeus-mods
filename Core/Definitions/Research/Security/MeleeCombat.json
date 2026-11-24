@@ -1,0 +1,16 @@
+{
+    "Id" : "Research/Security/MeleeCombat",
+    "Tier" : 2,
+    "IsAbstract" : true,
+    "PreviewIcon" : "Obj/Weapons/Machete01/Machete01",
+    "Researchable" : {
+        "IsTreeNode" : true,
+        "Prerequisites" : [
+            "Research/Security/WeaponsBasic"
+        ],
+        "DatoidCosts" : [
+            { "TypeId" : "DatoidBasic", "StackSize" : 12 },
+            { "TypeId" : "DatoidTech",  "StackSize" : 13 }
+        ]
+    }
+}

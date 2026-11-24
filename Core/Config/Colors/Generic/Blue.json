@@ -1,0 +1,6 @@
+{
+    "Id" : "Blue",
+    "Data" : [68, 17, 218, 255],
+    "IsGeneric" : true,
+    "Groups" : [ "TileTint" ]
+}

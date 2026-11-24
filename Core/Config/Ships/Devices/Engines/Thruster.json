@@ -1,0 +1,8 @@
+{
+    "Id" : "Thruster",
+    "EngineTypeId" : "Thruster",
+    // Added as Evade / ship size, giving size 200-500 fighters 2-5% per thruster.
+    "Evade" : 10,
+
+    "ChargeTimeMinutes" : 5
+}

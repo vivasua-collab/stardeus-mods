@@ -1,0 +1,9 @@
+{
+    "Id" : "Text/Area",
+
+    "Color" : "UI/Text/Main",
+    "Alpha" : 1,
+
+    "TextFontSize" : 20,
+    "TextMarginLTRB" : [ 12, 4, 12, 4 ]
+}

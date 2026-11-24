@@ -1,0 +1,50 @@
+{
+    "DefId" : "Obj/Equipment/Weapons/Handgun01",
+    "SlotId" : "Weapon",
+    "SpriteId" : "Obj/Weapons/Handgun01/Handgun01",
+    "Rarity" : 0.8,
+    "SpawnRequirements" : {
+        "Friendlies" : 7,
+        "SectorDifficulty" : 0.45
+    },
+    "LooksShowFlags" : [
+        "Combat"
+    ],
+    "AddsAttackMethods" : [
+        {
+            "Component" : "Shoot",
+            "Properties" : [
+                { "Key" : "AttackAction", "String" : "Ranged" },
+                { "Key" : "RangeMin", "Float" : 1.5 },
+                { "Key" : "RangeMax", "Float" : 12.0 },
+                { "Key" : "DPS", "Float" : 3.0 },
+                { "Key" : "AttackType", "String" : "Piercing" },
+                { "Key" : "ChargeSec", "Float" : 4.0 },
+                { "Key" : "CooldownSec", "Float" : 4.0 },
+                { "Key" : "MoveSpeedMul", "Float" : 0.3 },
+                { "Key" : "StunChanceBio", "Float" : 0.2 },
+                { "Key" : "StunChanceRobo", "Float" : 0.1 },
+                { "Key" : "BleedChance", "Float" : 0.8 },
+                { "Key" : "ArmorPenetration", "Float" : 0.15 },
+                { "Key" : "AccuracyMax", "Float" : 0.8 },
+                { "Key" : "ChargeVFX", "String" : "ChargeGunVFX" },
+                { "Key" : "AttackVFX", "String" : "AttackGunVFX" },
+                { "Key" : "FatalHitChanceMul", "Float" : 0.85 },
+                { "Key" : "InternalHitChanceMul", "Float" : 0.75 },
+                { "Key" : "AttackSounds", "StringSet" : [
+                    "FX/EnergyShot_01",
+                    "FX/EnergyShot_02",
+                    "FX/EnergyShot_03",
+                    "FX/EnergyShot_04",
+                    "FX/EnergyShot_05",
+                    "FX/EnergyShot_06"
+                ] },
+                { "Key" : "AccuracyCurve", "FloatSet" : [
+                    0.0, 0.5,
+                    0.3, 1.0,
+                    1.0, 0.5
+                ] }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,12 @@
+{
+    "Type": "Upgrades",
+    "Ingredients": [
+        { "TypeId" : "LeadPlate", "StackSize" : 5 },
+        { "TypeId" : "CarbonFiber", "StackSize" : 5 },
+        { "TypeId" : "Plastic", "StackSize" : 5 }
+    ],
+    "IgnoreMarket" : true,
+    "ProductDefId": "Obj/Upgrades/ShuttleStorageUpgrade",
+    "ProductionTimeHours": 24.0,
+    "EnergyCost": 50.0
+}

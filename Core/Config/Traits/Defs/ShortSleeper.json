@@ -1,0 +1,18 @@
+{
+    "Id" : "ShortSleeper",
+    "IconId" : "Icons/Color/Sleep",
+    "TypeId" : "BiologicalFunction",
+    "Rarity" : 0.5,
+    "IncompatibleTraitIds" : [
+        "LongSleeper"
+    ],
+    "AddsStatModifiers" : [
+        {
+            "Component" : "SleepRate",
+            "Properties" : [
+                { "Key" : "Value", "Float" : 0.15 },
+                { "Key" : "Type", "String" : "AddsPercent" }
+            ]
+        }
+    ]
+}

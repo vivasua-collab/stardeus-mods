@@ -1,0 +1,7 @@
+{
+    "Id" : "Text/ScreenBlock",
+    "TextFontSize" : 48,
+
+    "Color" : "UI/Text/Main",
+    "Alpha" : 1
+}

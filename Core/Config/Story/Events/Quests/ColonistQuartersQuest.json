@@ -1,0 +1,13 @@
+{
+    "EventId": "ColonistQuartersQuest",
+    "Points": 5,
+    "OutcomeType": "Positive",
+    "EventFlags": [
+        "ColonistRequest"
+    ],
+    "MinRepeatDelayDays": 27,
+    // Full list of requirements can be found in Situation class
+    "Require" : {
+        "Colonists" : 6
+    }
+}

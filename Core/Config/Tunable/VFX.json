@@ -1,0 +1,184 @@
+{
+    "Floats" : [
+        { "Key" : "VFXHeatDistortion_MaxTemp", "Float" : 573.0 },
+        { "Key" : "VFXHeatDistortion_Range", "Float" : 500.0 },
+        { "Key" : "VFXHeatDistortion_Strength", "Float" : 0.003 }
+    ],
+    "Ints" : [
+        // This is not individual particles, but particle systems.
+        // A single system can create let's say 32 instances of smoke coming
+        // from furnaces. Even on large late game ships the actual count
+        // rarely exceeds 200, so 512 is a very high ceiling
+        { "Key" : "GlobalMaxParticles", "Int" : 512 },
+        // Again, this is how many systems of the same type can be spawned,
+        // not individual particles.
+        { "Key" : "GlobalMaxParticlesPerType", "Int" : 32 }
+    ],
+
+    // Disabling visual effects one at a time and seeing if the game stops crashing
+    // can help figure out which effect is causing it.
+    // If you get crashes, especially in late game, try disabling these effects
+    // on by one and if you find one that stops crashing when it's disabled,
+    // contact spajus on discord or steam forums.
+
+    // Read comments to see what to disable first
+    "Bools" : [
+        { "Key" : "DisableVFX_AcidSplashFX", "Bool" : false },
+
+        // This shows lines between selected workers and their current tasks.
+        // Tasks used to be called "ads" since they advertise work that has to
+        // be done, hence the name.
+        { "Key" : "DisableVFX_AdLink", "Bool" : false },
+
+        { "Key" : "DisableVFX_AttackEnergyVFX", "Bool" : false },
+        { "Key" : "DisableVFX_AttackEnergyRedVFX", "Bool" : false },
+        { "Key" : "DisableVFX_AttackGunVFX", "Bool" : false },
+        { "Key" : "DisableVFX_AttackMachineGunVFX", "Bool" : false },
+        { "Key" : "DisableVFX_AttackShipLaserVFX", "Bool" : false },
+        { "Key" : "DisableVFX_AttackShipMachineGunVFX", "Bool" : false },
+        { "Key" : "DisableVFX_AttackShipPlasmaVFX", "Bool" : false },
+        { "Key" : "DisableVFX_AttackShipPointDefenseVFX", "Bool" : false },
+        { "Key" : "DisableVFX_AttackShipRocketVFX", "Bool" : false },
+        { "Key" : "DisableVFX_CarrierTrailFX", "Bool" : false },
+        { "Key" : "DisableVFX_ChargeEnergyVFX", "Bool" : false },
+        { "Key" : "DisableVFX_ChargeGunVFX", "Bool" : false },
+        { "Key" : "DisableVFX_CloningPodFX", "Bool" : false },
+        { "Key" : "DisableVFX_ConstructVFX", "Bool" : false },
+        { "Key" : "DisableVFX_DeconstructVFX", "Bool" : false },
+        { "Key" : "DisableVFX_DroneTrailFX", "Bool" : false },
+        { "Key" : "DisableVFX_Dust", "Bool" : false },
+
+        // Pretty heavy dust storm
+        { "Key" : "DisableVFX_DustStorm", "Bool" : false },
+
+        { "Key" : "DisableVFX_ElectricityGridConnect", "Bool" : false },
+
+        // This is the main electric grid connections view
+        { "Key" : "DisableVFX_ElectricityGridNew", "Bool" : false },
+
+        { "Key" : "DisableVFX_ExplosionVFX", "Bool" : false },
+
+        // This shows various lines when workers are selected
+        { "Key" : "DisableVFX_Guidelines", "Bool" : false },
+
+        { "Key" : "DisableVFX_HeaterFX", "Bool" : false },
+        { "Key" : "DisableVFX_HoverTile", "Bool" : false },
+        { "Key" : "DisableVFX_MarkedTiles", "Bool" : false },
+
+        // This service several different compound visual effects
+        { "Key" : "DisableVFX_MultiParticleRootFX", "Bool" : false },
+
+        { "Key" : "DisableVFX_NanobotsVFX", "Bool" : false },
+        { "Key" : "DisableVFX_OxygenPumpFX", "Bool" : false },
+        { "Key" : "DisableVFX_PanelSparkle4FX", "Bool" : false },
+        { "Key" : "DisableVFX_PanelSparkle9FX", "Bool" : false },
+        { "Key" : "DisableVFX_PanelSparkleFX", "Bool" : false },
+        { "Key" : "DisableVFX_ParticleCollectorFX", "Bool" : false },
+        { "Key" : "DisableVFX_ParticleRain", "Bool" : false },
+
+        // this services multiple different particle storms (magnetic, etc)
+        { "Key" : "DisableVFX_ParticleStorm", "Bool" : false },
+
+        { "Key" : "DisableVFX_Ports", "Bool" : false },
+        { "Key" : "DisableVFX_ProvideMatVFX", "Bool" : false },
+        { "Key" : "DisableVFX_RadarFX", "Bool" : false },
+        { "Key" : "DisableVFX_RepairFX", "Bool" : false },
+        { "Key" : "DisableVFX_RepairStationFX", "Bool" : false },
+        { "Key" : "DisableVFX_SelectedBeings", "Bool" : false },
+        { "Key" : "DisableVFX_SelectedObj", "Bool" : false },
+        { "Key" : "DisableVFX_SelectedTiles", "Bool" : false },
+        { "Key" : "DisableVFX_ShuttleDustFX", "Bool" : false },
+
+        // These smoke trails are suspicious - they show up for breach capsules, meteors, etc
+        { "Key" : "DisableVFX_SlowSmokeTrailFX", "Bool" : false },
+        { "Key" : "DisableVFX_SlowSmokeTrailFX_Below", "Bool" : false },
+        { "Key" : "DisableVFX_SmokeTrailFX", "Bool" : false },
+        { "Key" : "DisableVFX_SmokeTrailFX_Below", "Bool" : false },
+
+        // this one isn't used anymore, it was too heavy
+        { "Key" : "DisableVFX_StarfieldNebula", "Bool" : false },
+
+        { "Key" : "DisableVFX_StarfieldNebulaOptimized", "Bool" : false },
+        { "Key" : "DisableVFX_StarfieldNoNebula", "Bool" : false },
+
+        { "Key" : "DisableVFX_StasisArrayFX", "Bool" : false },
+        { "Key" : "DisableVFX_StasisPodDustFX", "Bool" : false },
+        { "Key" : "DisableVFX_TeleportVFX", "Bool" : false },
+        { "Key" : "DisableVFX_TintVFX", "Bool" : false },
+        { "Key" : "DisableVFX_VFXAttackBeam", "Bool" : false },
+        { "Key" : "DisableVFX_VFXAttackEnergy", "Bool" : false },
+        { "Key" : "DisableVFX_VFXAttackGun", "Bool" : false },
+        { "Key" : "DisableVFX_VFXAttackMachineGun", "Bool" : false },
+
+        // Ship weapon effects, could be heavy too
+        { "Key" : "DisableVFX_VFXAttackShipLaser", "Bool" : false },
+        { "Key" : "DisableVFX_VFXAttackShipMachineGun", "Bool" : false },
+        { "Key" : "DisableVFX_VFXAttackShipPlasma", "Bool" : false },
+        { "Key" : "DisableVFX_VFXAttackShipPointDefense", "Bool" : false },
+        { "Key" : "DisableVFX_VFXAttackShipRocket", "Bool" : false },
+
+        { "Key" : "DisableVFX_VFXChargeEnergy", "Bool" : false },
+        { "Key" : "DisableVFX_VFXChargeGun", "Bool" : false },
+        { "Key" : "DisableVFX_VFXConstruct", "Bool" : false },
+        { "Key" : "DisableVFX_VFXDeconstruct", "Bool" : false },
+        { "Key" : "DisableVFX_VFXMissingFallback", "Bool" : false },
+        { "Key" : "DisableVFX_VFXNanobotHive", "Bool" : false },
+        { "Key" : "DisableVFX_VFXNanobots", "Bool" : false },
+        { "Key" : "DisableVFX_VFXParticlesChargeStation", "Bool" : false },
+        { "Key" : "DisableVFX_VFXParticlesConverter", "Bool" : false },
+        { "Key" : "DisableVFX_VFXParticlesCPU", "Bool" : false },
+        { "Key" : "DisableVFX_VFXParticlesCraftingStation", "Bool" : false },
+        { "Key" : "DisableVFX_VFXParticlesDataHarvesterBasic", "Bool" : false },
+        { "Key" : "DisableVFX_VFXParticlesDataHarvesterQuantum", "Bool" : false },
+        { "Key" : "DisableVFX_VFXParticlesDisassembler", "Bool" : false },
+        { "Key" : "DisableVFX_VFXParticlesExplosion", "Bool" : false },
+        { "Key" : "DisableVFX_VFXParticlesFabricator", "Bool" : false },
+        { "Key" : "DisableVFX_VFXParticlesFire", "Bool" : false },
+        { "Key" : "DisableVFX_VFXParticlesFTLDrive", "Bool" : false },
+        { "Key" : "DisableVFX_VFXParticlesFTLDriveD", "Bool" : false },
+        { "Key" : "DisableVFX_VFXParticlesFTLDriveL", "Bool" : false },
+        { "Key" : "DisableVFX_VFXParticlesFTLDriveR", "Bool" : false },
+        { "Key" : "DisableVFX_VFXParticlesFTLDriveU", "Bool" : false },
+        { "Key" : "DisableVFX_VFXParticlesFurnace", "Bool" : false },
+        { "Key" : "DisableVFX_VFXParticlesGrinder", "Bool" : false },
+        { "Key" : "DisableVFX_VFXParticlesHeal", "Bool" : false },
+        { "Key" : "DisableVFX_VFXParticlesLoom", "Bool" : false },
+        { "Key" : "DisableVFX_VFXParticlesMatterReactorLR", "Bool" : false },
+        { "Key" : "DisableVFX_VFXParticlesMatterReactorMini", "Bool" : false },
+        { "Key" : "DisableVFX_VFXParticlesMatterReactorUD", "Bool" : false },
+        { "Key" : "DisableVFX_VFXParticlesMLBooth", "Bool" : false },
+        { "Key" : "DisableVFX_VFXParticlesNuclearReactor", "Bool" : false },
+        { "Key" : "DisableVFX_VFXParticlesNutrientExtractor", "Bool" : false },
+        { "Key" : "DisableVFX_VFXParticlesQuantumBarrier", "Bool" : false },
+        { "Key" : "DisableVFX_VFXParticlesQuantumCPU", "Bool" : false },
+        { "Key" : "DisableVFX_VFXParticlesRecycler", "Bool" : false },
+        { "Key" : "DisableVFX_VFXParticlesRefinery", "Bool" : false },
+        { "Key" : "DisableVFX_VFXParticlesResearchStation", "Bool" : false },
+        { "Key" : "DisableVFX_VFXParticlesSmallSteam", "Bool" : false },
+        { "Key" : "DisableVFX_VFXParticlesSmokePurple", "Bool" : false },
+        { "Key" : "DisableVFX_VFXParticlesTeleporter", "Bool" : false },
+        { "Key" : "DisableVFX_VFXParticlesTerraformerAqua", "Bool" : false },
+        { "Key" : "DisableVFX_VFXParticlesTerraformerAtmo", "Bool" : false },
+        { "Key" : "DisableVFX_VFXParticlesTerraformerBio", "Bool" : false },
+        { "Key" : "DisableVFX_VFXParticlesTerraformerTerra", "Bool" : false },
+        { "Key" : "DisableVFX_VFXParticlesTractorBeam", "Bool" : false },
+        { "Key" : "DisableVFX_VFXParticlesTractorBeamTarget", "Bool" : false },
+        { "Key" : "DisableVFX_VFXParticlesVoidRipper", "Bool" : false },
+        { "Key" : "DisableVFX_VFXProjectileBiowaste", "Bool" : false },
+        { "Key" : "DisableVFX_VFXProjectileEnergy", "Bool" : false },
+        { "Key" : "DisableVFX_VFXProjectileFireball", "Bool" : false },
+        { "Key" : "DisableVFX_VFXProjectileHeavyEnergy", "Bool" : false },
+        { "Key" : "DisableVFX_VFXProjectileWater", "Bool" : false },
+        { "Key" : "DisableVFX_VFXProvideMat", "Bool" : false },
+        { "Key" : "DisableVFX_VFXRepair", "Bool" : false },
+        { "Key" : "DisableVFX_VFXReturnBeacon", "Bool" : false },
+        { "Key" : "DisableVFX_VFXShipHyperTrail", "Bool" : false },
+        { "Key" : "DisableVFX_VFXTeleport", "Bool" : false },
+        { "Key" : "DisableVFX_VFXTint", "Bool" : false },
+
+        // This is the expensive tractor beam pulling particles
+        { "Key" : "DisableVFX_VFXTractorBeamPull", "Bool" : false },
+
+        { "Key" : "DisableVFX_WaterSplashFX", "Bool" : false }
+    ]
+}

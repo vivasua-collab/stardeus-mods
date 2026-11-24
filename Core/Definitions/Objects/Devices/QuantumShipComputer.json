@@ -1,0 +1,171 @@
+{
+    "ToolPath" : "Computing",
+    "Layer" : "Objects",
+    "ParentId" : "Objects/Devices/BaseDevice",
+    "IsImportant" : true,
+    "Researchable" : {
+        "Prerequisites" : [
+            "Research/Computing/ShipComputerQuantum"
+        ]
+    },
+    "Spawnable" : {
+        "Category": "RareDevice",
+        "SkipOwned": 1,
+        "TierDiff" : -2,
+        "Chance" : 0.2,
+        "ChanceLocked" : 0.1
+    },
+    "Components" : [
+        {
+            "Component" : "TileTransform",
+            "Properties" : [
+                { "Key" : "Width", "Int" : 3 },
+                { "Key" : "Height", "Int" : 3 },
+                { "Key" : "CoverPercent", "Int" : 50 },
+                { "Key" : "IsRotatable", "Bool" : true }
+            ]
+        },
+        {
+            "Component" : "Damageable",
+            "Properties" : [
+                { "Key" : "Max", "Int" : 1000 }
+            ]
+        },
+        {
+            "Component" : "IndustrialEquipment",
+            "Properties" : [
+                { "Key" : "IsNoisy", "Bool" : true }
+            ]
+        },
+        {
+            "Component" : "TileGraphics",
+            "Properties" : [
+                { "Key" : "Type", "String": "Object" },
+                { "Key" : "Graphic", "String": "Objects/Devices/QuantumShipComputer" },
+                { "Key" : "HasHeight", "Bool" : true }
+            ]
+        },
+        { "Component" : "CurrencyMiner" },
+        {
+            "Component" : "AudioSource",
+            "Properties" : [
+                { "Key" : "AmbienceClip", "String" : "Devices/ShipComputerSFX" },
+                { "Key" : "Rolloff", "Vector2" : { "x" : 3, "y" : 12 } },
+                { "Key" : "IsAutoplay", "Bool" : true },
+                { "Key" : "IsLinkedToEnergy", "Bool" : false }
+            ]
+        },
+        {
+            "Component" : "GPUModule",
+            "Properties" : [
+                { "Key" : "Amount",  "Int" : 2 }
+            ]
+        },
+        {
+            "Component" : "CPUModule",
+            "Properties" : [
+                { "Key" : "Amount",  "Int" : 10 }
+            ]
+        },
+        {
+            "Component" : "MemoryModule",
+            "Properties" : [
+                { "Key" : "Amount",  "Int" : 16 }
+            ]
+        },
+        {
+            "Component" : "DiskModule",
+            "Properties" : [
+                { "Key" : "Amount",  "Int" : 96 }
+            ]
+        },
+        {
+            "Component" : "Reinstallable",
+            "Properties" : [
+                { "Key" : "IsAdvanced", "Bool" : true }
+            ]
+        },
+        { "Component" : "ShipComputer" },
+        { "Component" : "ShipComputerEfficiency" },
+        {
+            "Component" : "HeatProducer",
+            "Properties" : [
+                { "Key" : "Rate", "Float" : 50 },
+                { "Key" : "Range", "Int" : 3 },
+                { "Key" : "MaxTempCelsius", "Int" : 300 },
+                { "Key" : "CheckSameArea", "Bool" : true }
+            ]
+        },
+        {
+            "Component" : "ElectricNode",
+            "Properties" : [
+                { "Key" : "IsShipComputer", "Bool" : true },
+                { "Key" : "IsSwitchable", "Bool" : false },
+                { "Key" : "IsConsumerHighPriority", "Bool" : true }
+            ]
+        },
+        {
+            "Component" : "VFX",
+            "Properties" : [
+                { "Key" : "Id", "String" : "VFXParticlesQuantumCPU" },
+                { "Key" : "Offsets", "Vector2Set" : [
+                    { "x" : 0.3, "y" : 1.2 },
+                    { "x" : -0.3, "y" : 0.57 },
+                    { "x" : -0.3, "y" : 1.2 },
+                    { "x" : 0.23, "y" : 1.2 }
+                ] }
+            ]
+        },
+        {
+            "Component" : "Passability",
+            "Properties" : [
+                { "Key" : "IsPassable", "Bool" : false },
+                { "Key" : "IsWalkable", "Bool" : false },
+                { "Key" : "Difficulty", "Float" : 1 }
+            ]
+        },
+        {
+            "Component" : "Flammable",
+            "Properties" : [
+                { "Key" : "IgnitionTemperatureCelsius", "Int" : 1000 },
+                { "Key" : "FireChance", "Float" : 0.9 },
+                { "Key" : "BaseExplosionLevel", "Int" : 8 },
+                { "Key" : "FlammabilityCurve", "String" : "DeviceHigh" },
+                { "Key" : "ExplosivenessCurve", "String" : "ShipComputer" }
+            ]
+        },
+        {
+            "Component" : "LightSource",
+            "Properties" : [
+                { "Key" : "Color", "IntSet" : [ 189, 64, 191, 192 ] },
+                { "Key" : "PulsateColor", "IntSet" : [ 189, 64, 191, 128 ] },
+                { "Key" : "FrequencyRange", "Vector2" : { "x" : 2, "y" : 3 } },
+                { "Key" : "Radius", "Float" : 12 },
+                { "Key" : "NeedsEnergy", "Bool" : false }
+            ]
+        },
+        {
+            "Component" : "Constructable",
+            "Properties" : [
+                { "Key" : "WorkAmount", "Int" : 6000 },
+                {
+                    "Key" : "Contents",
+                    "RawMaterials" : [
+                        { "TypeId" : "Microchip3", "StackSize" : 10 },
+                        { "TypeId" : "SiliconWafer", "StackSize" : 20 },
+                        { "TypeId" : "Transistor", "StackSize" : 200 },
+                        { "TypeId" : "OpticalFiber", "StackSize" : 20 },
+                        { "TypeId" : "Glass", "StackSize" : 10 },
+                        { "TypeId" : "Plastic", "StackSize" : 8 },
+                        { "TypeId" : "GoldWire", "StackSize" : 15 },
+                        { "TypeId" : "TitaniumPlate", "StackSize" : 5 },
+                        { "TypeId" : "DiskCompressionUpgrade", "StackSize" : 10 },
+                        { "TypeId" : "MemoryCompressionUpgrade", "StackSize" : 5 },
+                        { "TypeId" : "AutoConnectUpgrade", "StackSize" : 3 },
+                        { "TypeId" : "NuclearCell", "StackSize" : 4 }
+                    ]
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,22 @@
+{
+    "Layer" : "FreeEntities",
+    "ParentId" : "Obj/Upgrades/BaseUpgrade",
+    "NameKey": "noun.weapon.capacity.upgrade",
+    "Researchable" : {
+        "Prerequisites" : [ "Research/ShipCombat/WeaponCapacityUpgrade" ]
+    },
+    "Components" : [
+        {
+            "Component" : "ObjGraphics",
+            "Properties" : [
+                { "Key" : "Graphic", "String": "Obj/Upgrades/WeaponCapacityUpgrade" }
+            ]
+        },
+        {
+            "Component" : "UnstoredMat",
+            "Properties" : [
+                { "Key" : "Type", "String" : "WeaponCapacityUpgrade" }
+            ]
+        }
+    ]
+}

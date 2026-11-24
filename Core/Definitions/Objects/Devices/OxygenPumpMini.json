@@ -1,0 +1,158 @@
+{
+    "ToolPath" : "Atmosphere",
+    "Layer" : "Objects",
+    "ParentId" : "Objects/Devices/BaseDevice",
+    "Researchable" : {
+        "Prerequisites" : [
+            "Research/LifeSupport/AtmosphereControl"
+        ]
+    },
+    "Spawnable" : {
+        "Category": "Survival",
+        "Chance" : 1.0,
+        "ChanceLocked" : 0.5
+    },
+    "Components" : [
+        {
+            "Component" : "TileTransform",
+            "Properties" : [
+                { "Key" : "IsRotatable", "Bool" : true },
+                { "Key" : "CoverPercent", "Int" : 50 },
+                { "Key" : "Width", "Int" : 1 },
+                // { "Key" : "OutPort", "Vector2" : { "x" : 1, "y" : -1 } },
+                { "Key" : "InPort", "Vector2" : { "x" : 0, "y" : -1 } }
+            ]
+        },
+        {
+            "Component" : "TileAnimation",
+            "Properties" : [
+                {
+                    "Key": "Offsets",
+                    "Vector2Set": [
+                        // Down
+                        { "x": -0.0317, "y": 0.13 },
+                        // Left
+                        { "x": -0.0158, "y": 0.17 },
+                        // Up
+                        { "x": 0.0317, "y": 0.158 },
+                        // Right
+                        { "x": 0.0158, "y": 0.126 }
+                    ]
+                },
+                { "Key" : "Size", "Vector2": { "x" : 0.65, "y" : 0.65 } },
+                { "Key" : "Direction", "Int" : 1 },
+                { "Key" : "BaseSprite", "String" : "Objects/Devices/OxygenPumpMini" },
+                { "Key" : "AnimSprite", "String" : "Objects/DeviceAnims/OxygenPump_Anim" },
+                { "Key" : "Speed", "Float": 0.8 },
+                { "Key" : "FramePrefix", "String": "R" },
+                { "Key" : "NumFrames", "Int": 4 },
+                { "Key" : "NeedsEnergy", "Bool": true }
+            ]
+        },
+        {
+            "Component" : "Flammable",
+            "Properties" : [
+                { "Key" : "IgnitionTemperatureCelsius", "Int" : 250 },
+                { "Key" : "FireChance", "Float" : 0.8 },
+                { "Key" : "BaseExplosionLevel", "Int" : 2 },
+                { "Key" : "SpreadIntoChance", "Float" : 0.7 },
+                { "Key" : "FlammabilityCurve", "String" : "DeviceHigh" },
+                { "Key" : "ExplosivenessCurve", "String" : "DeviceLow" }
+            ]
+        },
+        {
+            "Component" : "TileGraphics",
+            "Properties" : [
+                { "Key" : "HasHeight", "Bool": false },
+                { "Key" : "Graphic", "String": "Objects/Devices/OxygenPumpMini" }
+            ]
+        },
+        {
+            "Component" : "AudioSource",
+            "Properties" : [
+                { "Key" : "AmbienceClip", "String" : "Devices/OxygenPumpSFX" },
+                { "Key" : "IsLinkedToEnergy", "Bool" : true },
+                { "Key" : "Rolloff", "Vector2" : { "x" : 3, "y" : 10 } }
+            ]
+        },
+        {
+            "Component" : "OxygenProducer",
+            "Properties" : [
+                { "Key" : "Rate", "Float" : 0.02 },
+                { "Key" : "FuelPerDay", "Float" : 0.2 },
+                { "Key" : "Range", "Int" : 1 },
+                { "Key" : "DisplayRange", "Int" : 7 },
+                { "Key" : "Effectiveness", "Int" : 1 },
+                { "Key" : "EnergyCost", "Float": 3 }
+            ]
+        },
+        { "Component" : "ExtraInfo" },
+        {
+            "Component" : "RefillableStorage",
+            "Properties" : [
+                { "Key" : "DeviceType", "String" : "oxygen.pump" },
+                { "Key" : "Purpose", "String" : "water" },
+                { "Key" : "BarColor", "String" : "5390C6FF" },
+                { "Key" : "LockedMaterial", "String" : "Water" },
+                { "Key" : "Icon", "String" : "Obj/Materials/Water" },
+                { "Key" : "MaterialCapacity", "Int" : 2 }
+            ]
+        },
+        {
+            "Component" : "Surface",
+            "Properties" : [
+                { "Key" : "IsMultislot", "Bool" : false },
+                { "Key" : "IsMakeshift", "Bool" : true }
+            ]
+        },
+        {
+            "Component" : "ElectricNode",
+            "Properties" : [
+                { "Key" : "Particles", "String" : "OxygenPumpFX" },
+                { "Key" : "ParticleOffsets", "Vector2Set" : [
+                    { "x" : 0, "y" : 0.25 },
+                    { "x" : 0, "y" : 0.25 },
+                    { "x" : 0, "y" : 0.25 },
+                    { "x" : 0, "y" : 0.25 }
+                ] },
+                { "Key" : "IsConsumer", "Bool" : true }
+            ]
+        },
+        {
+            "Component" : "WithFuse",
+            "Properties" : [
+                { "Key" : "MalfunctionWeight", "Float": 0.2 }
+            ]
+        },
+        {
+            "Component" : "Passability",
+            "Properties" : [
+                { "Key" : "IsPassable", "Bool" : false },
+                { "Key" : "IsWalkable", "Bool" : false },
+                { "Key" : "Difficulty", "Float" : 1 }
+            ]
+        },
+        {
+            "Component" : "OutdoorsCheck",
+            "Properties" : [
+                { "Key" : "MustBeIndoors", "Bool" : true }
+            ]
+        },
+        {
+            "Component" : "Constructable",
+            "Properties" : [
+                { "Key" : "WorkAmount", "Int" : 600 },
+                { "Key" : "CanDragRow", "Bool": false },
+                {
+                    "Key" : "Contents",
+                    "RawMaterials" : [
+                        { "TypeId" : "SteelPlate", "StackSize" : 1 },
+                        { "TypeId" : "Glass", "StackSize" : 1 },
+                        { "TypeId" : "CopperWire", "StackSize" : 1 },
+                        { "TypeId" : "Transistor", "StackSize" : 1 }
+                    ]
+                }
+            ]
+        }
+    ]
+}

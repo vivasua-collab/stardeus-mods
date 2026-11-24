@@ -1,0 +1,22 @@
+{
+    "Id" : "Research/Security/WeaponsBasic",
+    "Tier" : 1,
+    "IsAbstract" : true,
+    "PreviewIcon" : "Obj/Weapons/Knife01/Knife01",
+    "Researchable" : {
+        "IsTreeNode" : true,
+        "Prerequisites" : [
+            "Research/Security/Root"
+        ],
+        "DatoidCosts" : [
+            {
+                "TypeId" : "DatoidBasic",
+                "StackSize" : 7
+            },
+            {
+                "TypeId" : "DatoidTech",
+                "StackSize" : 2
+            }
+        ]
+    }
+}

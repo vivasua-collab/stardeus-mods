@@ -1,0 +1,15 @@
+{
+    "Id" : "Gamer",
+    "Species" : [ "Human" ],
+    "AgePhaseIds" : [ "Childhood", "YoungAdult" ],
+    "AdjustsSkills" : [
+        {
+            "JobId" : "Cleaning",
+            "Adjustment" : -1
+        },
+        {
+            "JobId" : "Shooting",
+            "Adjustment" : 6
+        }
+    ]
+}

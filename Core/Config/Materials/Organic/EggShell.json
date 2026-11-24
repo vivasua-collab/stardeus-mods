@@ -1,0 +1,9 @@
+{
+    "Id" : "EggShell",
+    "IsComposite" : true,
+    "IconId" : "Obj/Eggs/Egg01_Hatched",
+    "GroupId" : "Components",
+    "EnergyOutput" : 400.0,
+    "InternalValue" : 80.0,
+    "Rarity" : 1
+}

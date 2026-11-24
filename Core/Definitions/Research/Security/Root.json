@@ -1,0 +1,10 @@
+{
+    "Id" : "Research/Security/Root",
+    "Tier" : 0,
+    "IsAbstract" : true,
+    "PreviewIcon" : "Icons/Color/Combat",
+    "NameKey" : "research.security",
+    "Researchable" : {
+        "IsTreeNode" : true
+    }
+}

@@ -1,0 +1,22 @@
+{
+    "EventId": "ExpeditionFoundMarketItem",
+    "Points": 0,
+    // Options: Negative, Positive, Neutral, Raid
+    "OutcomeType": "Positive",
+    "EventFlags": [
+        "OnDemand",
+        "Expedition"
+    ],
+    "Properties" : [
+        {
+            "Key" : "MarketGroups",
+            "StringSet" : [
+                "Food"
+            ]
+        },
+        {
+            "Key": "FailureChance",
+            "Float": 0.02
+        }
+    ]
+}

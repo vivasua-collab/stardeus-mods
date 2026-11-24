@@ -1,0 +1,12 @@
+{
+    "Id" : "MemoryCompressionUpgrade",
+    "DefId" : "Obj/Upgrades/MemoryCompressionUpgrade",
+    "IsComposite" : true,
+    "IsConsumedOnDestroy" : true,
+    "IconId" : "Obj/Upgrades/MemoryCompressionUpgrade",
+    "Property" : "Electronic",
+    "Group" : "Upgrade",
+    "GroupId" : "Upgrades",
+    "EnergyOutput" : 50.0,
+    "Rarity" : 1
+}

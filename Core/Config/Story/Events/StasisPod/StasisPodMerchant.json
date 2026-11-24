@@ -1,0 +1,21 @@
+{
+    // C# implementation id.
+    // Multiple configurations can point to a single implementation.
+    "EventId" : "StasisPodMerchant",
+    // How much does this story event cost to run
+    "Points" : 5,
+    // Options: Negative, Positive, Neutral, Raid, Raid
+    "OutcomeType" : "Positive",
+    // Full list is in StoryEventFlags class
+    "EventFlags" : [
+        "OnDemand",
+        "StasisPod",
+        "CanHaveDuplicates",
+        "Fallback"
+    ]
+    // "MinRepeatDelayDays" : 1,
+    // Full list of requirements can be found in Situation class
+    // "Require" : {
+    //     "Check" : true
+    // }
+}

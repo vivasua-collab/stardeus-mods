@@ -1,0 +1,12 @@
+{
+    "Type": "Terraforming",
+    "Ingredients": [
+        { "TypeId" : "Aerolith", "StackSize" : 1 },
+        { "TypeId" : "Water", "StackSize" : 2 },
+        { "TypeId" : "Carbon", "StackSize" : 3 },
+        { "TypeId" : "PlantFiber", "StackSize" : 5 }
+    ],
+    "ProductDefId": "Obj/Materials/AtmosphereMix",
+    "ProductionTimeHours": 4.0,
+    "EnergyCost": 50.0
+}

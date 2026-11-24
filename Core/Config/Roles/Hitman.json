@@ -1,0 +1,19 @@
+{
+    "Id" : "Hitman",
+    "LovesJobTypes" : [ "Shooting", "Cleaning" ],
+    "IncompatibleTraitIds" : [ "Pacifist" ],
+    "IncapableJobTypes" : [ ],
+    "Species" : [ "Human", "Robot", "Drone", "Carrier", "Orbotron", "Sentry", "CleaningBot" ],
+    "RoleTypes" : [ "Rich", "Evil" ],
+    "BodyTypes" : "MF",
+    "AdjustsSkills" : [
+        {
+            "JobId" : "Shooting",
+            "Adjustment" : 6
+        },
+        {
+            "JobId" : "Cleaning",
+            "Adjustment" : 4
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    // Opportunist: picks off whoever can fight back the least. Favoured by ships
+    // that are outgunned and looking for any win they can get.
+    "Mode" : "Weakest",
+    "SwitchIntervalHoursFrom" : 2,
+    "SwitchIntervalHoursTo" : 5,
+
+    "MinOffensiveness" : 0.0,
+    "MaxOffensiveness" : 1.0,
+    "StrengthDifferenceChance" : [
+        -1.0, 0.8,
+        0.0, 0.5,
+        1.0, 0.2
+    ]
+}

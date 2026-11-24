@@ -1,0 +1,8 @@
+{
+    "ResponseType" : "Neutral",
+    "TopicType" : "HailRequest",
+    "ToneType" : "Rude",
+    "MessageKeys" : [
+        "ship.chat.hail_req.neutral.rude.*"
+    ]
+}

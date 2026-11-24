@@ -1,0 +1,27 @@
+{
+    "Id" : "Research/Scanning/Xenodetection",
+    "Tier" : 3,
+    "IsAbstract" : true,
+    "PreviewIcon" : "Icons/Color/Xenodetection",
+    "NameKey" : "research.xenodetection",
+    "Researchable" : {
+        "IsTreeNode" : true,
+        "Prerequisites" : [
+            "Research/Scanning/Radar"
+        ],
+        "DatoidCosts" : [
+            {
+                "TypeId" : "DatoidPhyto",
+                "StackSize" : 16
+            },
+            {
+                "TypeId" : "DatoidBiotic",
+                "StackSize" : 13
+            },
+            {
+                "TypeId" : "DatoidTechHigh",
+                "StackSize" : 6
+            }
+        ]
+    }
+}

@@ -1,0 +1,13 @@
+{
+    "Id" : "DatoidAlien",
+    "IsComposite" : true,
+    "IconId" : "Obj/Datoids/DatoidAlien",
+    "DefId" : "Obj/Datoids/DatoidAlien",
+    "Property" : "Datoid",
+    "Group" : "Datoid",
+    "GroupId" : "Datoids",
+    "IgnoreMarket" : true,
+    "EnergyOutput" : 100.0,
+    "Rarity" : 90,
+    "InternalValue" : 8
+}

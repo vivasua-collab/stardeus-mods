@@ -1,0 +1,11 @@
+{
+    // A generated skill level (base roll + role and trait boosts, scaled by age) -> the level
+    // the being starts with. Unchanged up to 10, then compressed so stacked
+    // boosts land at 16-20 instead of far past the range
+    "FloatSet" : [
+        0, 0,
+        10, 10,
+        20, 16,
+        27, 20
+    ]
+}

@@ -1,0 +1,8 @@
+{
+    "Id" : "Rubber",
+    "IsComposite" : true,
+    "IconId" : "Obj/Materials/Rubber",
+    "GroupId" : "Components",
+    "EnergyOutput" : 250.0,
+    "Rarity" : 15
+}

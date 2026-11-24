@@ -1,0 +1,7 @@
+{
+    "Id" : "Food",
+    "RecessionEffect" : 0.1,
+    "Rarity" : 0.7,
+    "TraderQuantity" : 500.0,
+    "Volatility" : 0.0011
+}

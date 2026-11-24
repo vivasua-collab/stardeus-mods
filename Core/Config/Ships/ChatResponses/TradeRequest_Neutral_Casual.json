@@ -1,0 +1,8 @@
+{
+    "ResponseType" : "Neutral",
+    "TopicType" : "TradeRequest",
+    "ToneType" : "Casual",
+    "MessageKeys" : [
+        "ship.chat.trade_req.neutral.casual.*"
+    ]
+}

@@ -1,0 +1,79 @@
+{
+    "ToolPath" : "Doors",
+    "IsAbstract" : true,
+    "ParentId" : "Structure/BaseStructure",
+    "Components" : [
+        {
+            "Component" : "TileTransform",
+            "Properties" : [
+                { "Key" : "ValidRotations", "String" : "DR" }
+            ]
+        },
+        { "Component" : "Door" },
+        { "Component" : "ExtraInfo" },
+        { "Component" : "Upgrades"},
+        { "Component" : "Reinstallable" },
+        {
+            "Component" : "Flammable",
+            "Properties" : [
+                { "Key" : "FireDamageResistance", "Float" : 0.5 },
+                { "Key" : "SpreadIntoChance", "Float" : 0.2 }
+            ]
+        },
+        {
+            "Component" : "HullIntegrity",
+            "Properties" : [
+                { "Key" : "MaxInsulation", "Float" : 0.995 },
+                { "Key" : "MaxAirtight", "Float" : 1 }
+            ]
+        },
+        {
+            "Component" : "ElectricNode",
+            "Properties" : [
+                { "Key" : "IsConsumer", "Bool" : true }
+            ]
+        },
+        {
+            "Component" : "WithFuse",
+            "Properties" : [
+                { "Key" : "MalfunctionWeight", "Float": 0.1 }
+            ]
+        },
+        {
+            "Component" : "TileGraphics",
+            "Properties" : [
+                { "Key" : "AnimationFrames", "Int": 4 }
+            ]
+        },
+        {
+            "Component" : "Passability",
+            "Properties" : [
+                { "Key" : "IsDoor", "Bool" : true },
+                { "Key" : "IsPassable", "Bool" : true },
+                { "Key" : "IsWalkable", "Bool" : true },
+                //  This value doesn't matter, it will become 0.8 when DoorComp takes over
+                { "Key" : "Difficulty", "Float" : 0 }
+            ]
+        },
+        {
+            "Component" : "Constructable",
+            "Properties" : [
+                { "Key" : "Placement", "String" : "OnFloor" },
+                { "Key" : "CanReplaceSameLayer", "Bool": true },
+                { "Key" : "CanDragRow", "Bool": false },
+                { "Key" : "WorkAmount", "Int" : 400 },
+                {
+                    "Key" : "Contents",
+                    "RawMaterials" : [
+                        { "TypeId" : "SteelPlate", "StackSize" : 2 },
+                        { "TypeId" : "TitaniumPlate", "StackSize" : 1 },
+                        { "TypeId" : "Gears", "StackSize" : 2 },
+                        { "TypeId" : "Transistor", "StackSize" : 1 },
+                        { "TypeId" : "CopperWire", "StackSize" : 1 }
+                    ]
+                }
+            ]
+        },
+        { "Component" : "TileLabel" }
+    ]
+}

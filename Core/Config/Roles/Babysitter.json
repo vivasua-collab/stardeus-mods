@@ -1,0 +1,27 @@
+{
+    "Id" : "Babysitter",
+    "LovesJobTypes" : [ "Cooking" ],
+    "Species" : [ "Human", "Robot", "Sentry" ],
+    "RoleTypes" : [ "Good" ],
+    "AgePhaseIds" : [ "Childhood", "YoungAdult" ],
+    "SexChances" : [
+        {
+            "Sex" : "F",
+            "Chance" : 1.0
+        },
+        {
+            "Sex" : "M",
+            "Chance" : 0.2
+        }
+    ],
+    "AdjustsSkills" : [
+        {
+            "JobId" : "Cooking",
+            "Adjustment" : 6
+        },
+        {
+            "JobId" : "Medical",
+            "Adjustment" : 2
+        }
+    ]
+}

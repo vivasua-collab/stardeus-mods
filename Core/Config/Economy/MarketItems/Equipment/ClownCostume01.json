@@ -1,0 +1,10 @@
+{
+    "Id" : "Obj/Equipment/Clothing/ClownCostume01",
+    "Type" : "CFD",
+    "Groups" : [ "Equipment" ],
+    "Value" : 6000.0,
+    "Rarity" : 0.001,
+    "TraderQuantity" : 1.0,
+    "MinSectorDifficulty" : 0.99,
+    "Volatility" : 0.0054
+}

@@ -1,0 +1,13 @@
+{
+    "Id" : "DatoidQuantum",
+    "IsComposite" : true,
+    "IconId" : "Obj/Datoids/DatoidQuantum",
+    "DefId" : "Obj/Datoids/DatoidQuantum",
+    "Property" : "Datoid",
+    "Group" : "Datoid",
+    "GroupId" : "Datoids",
+    "IgnoreMarket" : true,
+    "EnergyOutput" : 100.0,
+    "Rarity" : 100,
+    "InternalValue" : 9
+}

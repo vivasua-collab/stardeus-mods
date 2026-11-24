@@ -1,0 +1,53 @@
+{
+    "Bools" : [
+        { "Key" : "AutoForbidDroppedWeapons", "Bool" : true },
+        { "Key" : "AutoForbidDerelictResources", "Bool" : true },
+        { "Key" : "AutoForbidSpaceBodyLoot", "Bool" : true },
+        { "Key" : "AutoForbidStrippedEquipment", "Bool" : true }
+    ],
+    "Ints" : [
+        { "Key" : "MaxScanStrength", "Int" : 10 },
+        // How many deposits a focused deep scan can find per sector. After that
+        // deep scans there are random again, so targeting more means travelling.
+        { "Key" : "DeepScanFocusMaxPerSector", "Int" : 1 },
+        // Storages auto-haul loose piles and items within this many tiles of their own
+        // island, in space or on floor. Anything further out waits for a Store order.
+        { "Key" : "AutoHaulIslandReach", "Int" : 10 }
+    ],
+    "Floats" : [
+        { "Key" : "ProcessingSpeed", "Float" : 1.0 },
+        { "Key" : "CraftingSpeed", "Float" : 1.0 },
+        { "Key" : "CraftingEnergyCost", "Float" : 1.0 },
+        { "Key" : "AutoHaulFrequency", "Float" : 1.0 },
+        // Deep scan with a focus material picked is this much slower
+        { "Key" : "DeepScanFocusDifficultyMul", "Float" : 1.5 }
+    ],
+    "FloatSets" : [
+        {
+            // How much difficulty will deep scan add to sector's current
+            // difficulty before checking deposit compatibility.
+            // Rare deposits are compatible only with higher difficulty sectors
+            // therefore adding difficulty to deep scan makes rare resources
+            // available in easier regions.
+            // random chance -> extra difficulty (0.0 - 1.0)
+            "Key" : "DeepScanExtraDifficultyChance",
+            "FloatSet" : [
+                0.0, 0.0,
+                0.5, 0.2,
+                0.9, 0.3,
+                1.0, 0.4
+            ]
+        },
+        {
+            // How difficult will deep scan be given the sector difficulty
+            // sector difficulty > deep scan difficulty (initial)
+            "Key" : "DeepScanSectorDifficultyCurve",
+            "FloatSet" : [
+                0.0, 0.75,
+                0.5, 1.5,
+                0.9, 5.0,
+                1.0, 10.0
+            ]
+        }
+    ]
+}

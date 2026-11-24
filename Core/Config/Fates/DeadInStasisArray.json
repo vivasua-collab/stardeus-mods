@@ -1,0 +1,7 @@
+{
+    "RemoveColonist" : true,
+    "IsDead" : true,
+    "IncludeInStasis" : true,
+    "ExcludeNotInStasis" : true,
+    "Chance" : 0.01
+}

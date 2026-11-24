@@ -1,0 +1,16 @@
+{
+    "SlotTypeId" : "Kidney",
+    "Compatibility" : "Biological",
+    "ResistanceBase" : 4.0,
+    "Tier" : 2,
+    "ProvidesStats" : [
+        {
+            "Component" : "BloodFilterRate",
+            "Properties" : [
+                { "Key" : "CompoundLimit", "Float" : 0.5 },
+                { "Key" : "AmountPerHour", "Float" : 0.1 },
+                { "Key" : "StateMul", "Float" : 1.0 }
+            ]
+        }
+    ]
+}

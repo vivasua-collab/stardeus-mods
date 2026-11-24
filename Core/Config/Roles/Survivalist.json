@@ -1,0 +1,20 @@
+{
+    "Id" : "Survivalist",
+    "Species" : [ "Human", "Dog", "Cat" ],
+    "AgePhaseIds" : [ "Childhood" , "YoungAdult", "MidLife", "Retirement" ],
+    "RoleTypes" : [ ],
+    "AdjustsSkills" : [
+        {
+            "JobId" : "Cooking",
+            "Adjustment" : 4
+        },
+        {
+            "JobId" : "Medical",
+            "Adjustment" : 4
+        },
+        {
+            "JobId" : "Social",
+            "Adjustment" : -1
+        }
+    ]
+}

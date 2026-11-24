@@ -1,0 +1,14 @@
+{
+    "BuildGroup" : "FloorArmored",
+    "Layer" : "Floor",
+    "ParentId" : "Structure/Floors/FloorArmored01",
+    "UseParentTexts" : true,
+    "Components" : [
+        {
+            "Component" : "TileGraphics",
+            "Properties" : [
+                { "Key" : "Graphic", "String": "Structure/Floors/FloorArmored03" }
+            ]
+        }
+    ]
+}

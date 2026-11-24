@@ -1,0 +1,36 @@
+{
+    "Layer" : "FreeEntities",
+    "ParentId" : "Obj/BaseObj",
+    "IgnoreMarket" : true,
+    "NameKey": "objects.devices.cargocopter",
+    "DescKey": "objects.devices.cargocopter.desc",
+    "Components" : [
+        {
+            "Component" : "ObjHealth",
+            "Properties" : [
+                { "Key" : "Max", "Int" : 10000 }
+            ]
+        },
+        {
+            "Component" : "ObjGraphics",
+            "Properties" : [
+                { "Key" : "Graphic", "String": "Objects/Devices/CargoCopter_Flying" },
+                { "Key" : "Size", "Vector2": { "x" : 2, "y" : 2 } },
+                { "Key" : "Shader", "String" : "ObjAbove" },
+                // { "Key" : "Renderer", "String" : "VFXRendererObjAbove" },
+                { "Key" : "PositionFilter", "String" : "CopterHover" },
+                { "Key" : "HoverWhenInSpace", "Bool" : false},
+                { "Key" : "HasShadow", "Bool" : true },
+                { "Key" : "IsAnimated", "Bool" : true },
+                { "Key" : "DoNotCull", "Bool" : true }
+            ]
+        },
+        { "Component" : "CopterFlying" },
+        {
+            "Component" : "Movable",
+            "Properties" : [
+                { "Key" : "IsForbidden", "Bool" : true }
+            ]
+        }
+    ]
+}

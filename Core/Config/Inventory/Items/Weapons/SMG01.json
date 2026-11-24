@@ -1,0 +1,46 @@
+{
+    "DefId" : "Obj/Equipment/Weapons/SMG01",
+    "SlotId" : "Weapon",
+    "SpriteId" : "Obj/Weapons/SMG01/SMG01",
+    "Rarity" : 0.5,
+    "SpawnRequirements" : {
+        "Days" : 40,
+        "Friendlies" : 8,
+        "SectorDifficulty" : 0.4
+    },
+    "LooksShowFlags" : [
+        "Combat"
+    ],
+    "AddsAttackMethods" : [
+        {
+            "Component" : "Shoot",
+            "Properties" : [
+                { "Key" : "AttackAction", "String" : "Ranged" },
+                { "Key" : "RangeMin", "Float" : 1.0 },
+                { "Key" : "RangeMax", "Float" : 10.0 },
+                { "Key" : "DPS", "Float" : 4.2 },
+                { "Key" : "AttackType", "String" : "Piercing" },
+                { "Key" : "ChargeSec", "Float" : 2.0 },
+                { "Key" : "CooldownSec", "Float" : 2.0 },
+                { "Key" : "MoveSpeedMul", "Float" : 0.6 },
+                { "Key" : "StunChanceBio", "Float" : 0.15 },
+                { "Key" : "StunChanceRobo", "Float" : 0.05 },
+                { "Key" : "BleedChance", "Float" : 0.5 },
+                { "Key" : "ArmorPenetration", "Float" : 0.12 },
+                { "Key" : "AccuracyMax", "Float" : 0.85 },
+                { "Key" : "ChargeVFX", "String" : "ChargeGunVFX" },
+                { "Key" : "AttackVFX", "String" : "AttackMachineGunVFX" },
+                { "Key" : "FatalHitChanceMul", "Float" : 0.6 },
+                { "Key" : "InternalHitChanceMul", "Float" : 0.4 },
+                { "Key" : "AttackSounds", "StringSet" : [
+                    "FX/MachineGun01"
+                ] },
+                { "Key" : "AccuracyCurve", "FloatSet" : [
+                    0.0, 0.6,
+                    0.3, 1.0,
+                    1.0, 0.5
+                ] }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,22 @@
+{
+    "Id" : "Research/ShipCombat/WeaponsLaser",
+    "Tier" : 3,
+    "IsAbstract" : true,
+    "PreviewIcon" : "Icons/Color/AttackTarget",
+    "Researchable" : {
+        "IsTreeNode" : true,
+        "Prerequisites" : [
+            "Research/ShipCombat/WeaponsBallistic"
+        ],
+        "DatoidCosts" : [
+            {
+                "TypeId" : "DatoidEnergy",
+                "StackSize" : 12
+            },
+            {
+                "TypeId" : "DatoidTechHigh",
+                "StackSize" : 7
+            }
+        ]
+    }
+}

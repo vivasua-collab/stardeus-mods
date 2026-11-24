@@ -1,0 +1,36 @@
+{
+    "Id" : "Research/LifeSupport/AtmosphereGeneration",
+    "Tier" : 6,
+    "IsAbstract" : true,
+    "PreviewIcon" : "Icons/Color/Terraform",
+    "NameKey" : "research.atmospheregeneration",
+    "Researchable" : {
+        "IsTreeNode" : true,
+        "IsDiscoverable" : true,
+        "Prerequisites" : [
+            "Research/LifeSupport/CoolingAdvanced"
+        ],
+        "DatoidCosts" : [
+            {
+                "TypeId" : "DatoidPhyto",
+                "StackSize" : 47
+            },
+            {
+                "TypeId" : "DatoidBiotic",
+                "StackSize" : 44
+            },
+            {
+                "TypeId" : "DatoidTechHigh",
+                "StackSize" : 15
+            },
+            {
+                "TypeId" : "DatoidNuclear",
+                "StackSize" : 11
+            },
+            {
+                "TypeId" : "DatoidQuantum",
+                "StackSize" : 28
+            }
+        ]
+    }
+}

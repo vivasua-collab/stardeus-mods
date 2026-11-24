@@ -1,0 +1,10 @@
+{
+    "Id" : "Panel/ColorlessPanel",
+
+    "Color" : "FFFFFF",
+    "Alpha" : 1.0,
+
+    "Image" : "UI/Panels/PanelBG",
+    "ImageType" : "Sliced",
+    "ImageBorderLBRT" : [ 28, 28, 12, 12 ]
+}

@@ -1,0 +1,143 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Stardeus ShipWeaponDef",
+  "description": "Generated from C# by Game/Generate JSON Schemas, do not edit by hand",
+  "$ref": "#/$defs/ShipWeaponDef",
+  "$defs": {
+    "ShipWeaponDef": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "Id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "IdH": {
+          "type": "integer"
+        },
+        "WeaponType": {
+          "anyOf": [
+            {
+              "type": "string",
+              "enum": [
+                "Undefined",
+                "Ballistic",
+                "Missile",
+                "Laser",
+                "Plasma",
+                "PointDefense"
+              ]
+            },
+            {
+              "type": "integer"
+            }
+          ]
+        },
+        "WeaponTypeId": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "ProjectileVFX": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "ShotSoundFX": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "ShotSoundVol": {
+          "type": "number"
+        },
+        "ProjectileSpeed": {
+          "type": "number"
+        },
+        "WindupTimeMinutes": {
+          "type": "integer"
+        },
+        "ChargeTimeMinutes": {
+          "type": "integer"
+        },
+        "FiringTimeMinutes": {
+          "type": "integer"
+        },
+        "SoftFluxPerShot": {
+          "type": "integer"
+        },
+        "HardFluxPerShot": {
+          "type": "integer"
+        },
+        "SoftFluxPerShieldHit": {
+          "type": "integer"
+        },
+        "HardFluxPerShieldHit": {
+          "type": "integer"
+        },
+        "Damage": {
+          "type": "integer"
+        },
+        "DamageTypeId": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "AmmoCapacity": {
+          "type": "integer"
+        },
+        "CreatesExplosion": {
+          "type": "boolean"
+        },
+        "ExplosionRadius": {
+          "type": "number"
+        },
+        "Accuracy": {
+          "type": "number"
+        },
+        "ShieldPenetrateChance": {
+          "type": "number"
+        },
+        "ShieldShakeAmt": {
+          "type": "number"
+        },
+        "DamageType": {
+          "anyOf": [
+            {
+              "type": "string",
+              "enum": [
+                "None",
+                "Blunt",
+                "Sharp",
+                "Piercing",
+                "Energy",
+                "Explosive",
+                "Structural",
+                "Acid",
+                "Heat",
+                "Cold",
+                "Water",
+                "Organ",
+                "Malnutrition",
+                "Decay",
+                "Toxin"
+              ]
+            },
+            {
+              "type": "integer"
+            }
+          ]
+        }
+      },
+      "additionalProperties": false
+    }
+  }
+}

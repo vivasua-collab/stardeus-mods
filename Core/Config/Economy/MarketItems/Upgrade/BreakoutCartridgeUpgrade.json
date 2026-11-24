@@ -1,0 +1,12 @@
+{
+    "Id" : "Obj/Upgrades/BreakoutCartridgeUpgrade",
+    "Type" : "CFD",
+    "Groups" : [ "Upgrade", "RareUpgrade" ],
+    "Value" : 35000.0,
+    "Rarity" : 0.25,
+    "TraderQuantity" : 1.0,
+    "MaxTraderQuantity" : 1,
+    "MinSectorDifficulty" : 0.3,
+    "PlayerSellPriceMultiplier": 0.6,
+    "Volatility" : 0.0022
+}

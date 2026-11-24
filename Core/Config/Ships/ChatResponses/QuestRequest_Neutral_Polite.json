@@ -1,0 +1,8 @@
+{
+    "ResponseType" : "Neutral",
+    "TopicType" : "QuestRequest",
+    "ToneType" : "Polite",
+    "MessageKeys" : [
+        "ship.chat.quest_req.neutral.polite.*"
+    ]
+}

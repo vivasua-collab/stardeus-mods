@@ -1,0 +1,14 @@
+{
+    "BuildGroup" : "FloorLit",
+    "Layer" : "Floor",
+    "ParentId" : "Structure/Floors/Floor01Lit",
+    "UseParentTexts" : true,
+    "Components" : [
+        {
+            "Component" : "TileGraphics",
+            "Properties" : [
+                { "Key" : "Graphic", "String": "Structure/Floors/Floor04Lit" }
+            ]
+        }
+    ]
+}

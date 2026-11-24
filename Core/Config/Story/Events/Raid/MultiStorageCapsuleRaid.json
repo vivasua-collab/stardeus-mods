@@ -1,0 +1,40 @@
+{
+    // C# implementation id.
+    // Multiple configurations can point to a single implementation.
+    "EventId" : "MultiStorageCapsuleRaid",
+    // How much does this story event cost to run
+    "Points" : 12,
+    // Options: Negative, Positive, Neutral, Raid, Raid
+    "OutcomeType" : "Raid",
+    // Full list is in StoryEventFlags class
+    "EventFlags" : [
+        "Raid",
+        "Space",
+        "CanHaveDuplicates",
+        "NoHyperspace"
+    ],
+    "MinRepeatDelayDays" : 15,
+    // "MinRepeatDelayDays" : ,
+    // Full list of requirements can be found in Situation class
+    // "Require" : {
+    //     "Colonists" : 5
+    // },
+    // Variables for the story event implementation
+    "SectorDifficultyChance" : [
+        0.0, 0.1,
+        0.5, 0.25,
+        1.0, 1.0
+    ],
+    "Properties" : [
+        { "Key" : "RiggedEvent", "String" : "Raid/StorageCapsuleRaid" },
+        { "Key" : "AutoOpenInMinutesFrom", "Int" : 15 },
+        { "Key" : "AutoOpenInMinutesTo", "Int" : 45 },
+        // Caps the headcount too (one raider per capsule). 30 dropped 30 cheap raiders
+        // across the inside of the ship at once (STA-1687)
+        { "Key" : "MaxCapsules", "Int" : 18 },
+        // Whole-raid budget multiplier (CombatRaid.AdjustStrength). Slightly above 1 because
+        // the capsules open 15-45 minutes apart, which is weaker than one group of the same
+        // total. Provisional, to be calibrated (see RaidScaling.md).
+        { "Key" : "RaidStrengthMul", "Float" : 1.25 }
+    ]
+}

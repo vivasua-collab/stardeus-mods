@@ -1,0 +1,15 @@
+{
+    "Id" : "Slider/Research",
+
+    "ChildrenKeys" : [
+        "PanelBackground",
+        "PanelFillArea",
+        "PanelFill"
+    ],
+
+    "ChildrenIds" : [
+        "Panel/SliderResearch",
+        "Panel/SliderResearch",
+        "Panel/SliderFillResearch"
+    ]
+}

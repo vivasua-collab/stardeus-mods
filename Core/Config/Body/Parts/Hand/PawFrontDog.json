@@ -1,0 +1,9 @@
+{
+    "SlotTypeId" : "Hand",
+    "Compatibility" : "Biological",
+    "TargetSpecies" : [ "Dog" ],
+    "Tier" : 1,
+    "ResistanceBase" : 4.0,
+    "AddsAbilities" : [
+    ]
+}

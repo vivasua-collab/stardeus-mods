@@ -1,0 +1,10 @@
+{
+    "Type": "Disposable",
+    "DisposableOutput": [
+        { "TypeId" : "TitaniumPlate", "StackSize" : 5 },
+        { "TypeId" : "Microchip", "StackSize" : 1 }
+    ],
+    "ProductDefId": "Obj/Containers/QuestPackage",
+    "ProductionTimeHours": 1.0,
+    "EnergyCost": 15.0
+}

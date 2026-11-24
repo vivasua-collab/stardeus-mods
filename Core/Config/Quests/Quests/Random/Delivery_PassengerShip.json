@@ -1,0 +1,120 @@
+{
+    "QuestFlags" : [ "Random", "Template" ],
+    "TitleKeys" : [
+        "quest.DeliverPassengerFromShip",
+        "quest.DeliverPassengerFromShip2",
+        "quest.DeliverPassengerFromShip3",
+        "quest.DeliverPassengerFromShip4",
+        "quest.DeliverPassengerFromShip5",
+        "quest.DeliverPassengerFromShip6"
+    ],
+    "DescKeys" : [
+        "quest.DeliverPassengerFromShip.desc",
+        "quest.DeliverPassengerFromShip2.desc",
+        "quest.DeliverPassengerFromShip3.desc",
+        "quest.DeliverPassengerFromShip4.desc",
+        "quest.DeliverPassengerFromShip5.desc",
+        "quest.DeliverPassengerFromShip6.desc"
+    ],
+    "QuestProviders" : [ "Ship" ],
+    "Require" : {
+        "Days" : 8
+    },
+    "QuestValidators" : [ "HasActiveTradePortal" ],
+    "Variables" : [
+        {
+            "Id" : "PassengerStaysDeadline",
+            "Type" : "Deadline",
+            "Config" : [
+                { "Key" : "DaysCurve", "FloatSet" : [ 0.0, 12.0, 1.0, 24.0 ] }
+            ]
+        },
+        {
+            "Id" : "POI",
+            "Type" : "SectorPOI",
+            "Config" : [
+                { "Key" : "MinRegionsAway", "Int" : 1 },
+                { "Key" : "MinRegionDifficulty", "Float" : 0 },
+                { "Key" : "MaxRegionDifficulty", "Float" : 0.6 },
+                { "Key" : "POIConfigId", "String" : "Event" },
+                { "Key" : "SkipRegionsWithoutRelay", "Bool" : true }
+            ]
+        }
+    ],
+    "Steps" : [
+        {
+            "Id" : "SpawnPassenger",
+            "Type" : "SpawnPassenger",
+            "StepFlags" : [ "ActiveOnStart", "Secret", "FailsQuest" ],
+            "SetOnComplete" : [ "PassengerAboard" ],
+            "Config" : [
+                { "Key" : "SpeciesIds", "StringSet" : [ "Human" ] }
+            ]
+        },
+        {
+            "Id" : "PassengerWatchdog",
+            "Type" : "PassengerWatchdog",
+            "StepFlags" : [ "Secret", "FailsQuest" ],
+            "ActivateWhen" : [ "PassengerAboard" ]
+        },
+        {
+            "Id" : "FlyToSector",
+            "Type" : "GoToTargetSector",
+            "StepFlags" : [ "HideInactive" ],
+            "ActivateWhen" : [ "PassengerAboard" ],
+            "SetOnComplete" : [ "ArrivedAtSector" ],
+            "Config" : [
+                { "Key" : "Var_Target", "String" : "POI" }
+            ]
+        },
+        {
+            "Id" : "DeliverPassenger",
+            "Type" : "DeliverPassengerToPOI",
+            "TitleKey" : "quest.delivery.passenger.step.deliver.title",
+            "DescKey" : "quest.delivery.passenger.step.deliver.desc",
+            "Deadline" : "PassengerStaysDeadline",
+            "StepFlags" : [ "HideInactive", "FailsQuest" ],
+            "ActivateWhen" : [ "ArrivedAtSector" ],
+            "SetOnComplete" : [ "Delivered" ],
+            "Config" : [
+                { "Key" : "Var_POI", "String" : "POI" },
+                { "Key" : "ExpeditionMinHours", "Float" : 3.0 },
+                { "Key" : "ExpeditionMaxHours", "Float" : 6.0 },
+                { "Key" : "ExpeditionFoundItemMsgKey", "String" : "quest.delivery.passenger.delivered" },
+                { "Key" : "PackageRewardIds", "StringSet" : [ "PackageReward" ] },
+                { "Key" : "PackageFlags", "StringSet" : [ "FailQuestOnDestroy" ] }
+            ]
+        },
+        {
+            "Id" : "OpenPackage",
+            "Type" : "OpenPackage",
+            "StepFlags" : [ "HideInactive", "CompletesQuest", "FailsQuest" ],
+            "ActivateWhen" : [ "Delivered" ],
+            "Config" : [
+                { "Key" : "PackageStepId", "String" : null }
+            ]
+        }
+    ],
+    "Rewards" : [
+        {
+            "Id" : "PackageReward",
+            "Type" : "Material_HighValue",
+            "RewardFlags" : [ "PackageContent" ],
+            "Config" : [
+                { "Key" : "MinPrice", "Int" : 1000 },
+                { "Key" : "MinValue", "Int" : 10000 },
+                { "Key" : "MaxValue", "Int" : 600000 },
+                { "Key" : "NetWorthCurve", "FloatSet" : [ 0.0, 0.06, 1.0, 0.18 ] }
+            ]
+        },
+        {
+            "Id" : "CompletionBonus",
+            "Type" : "Money_NetWorth",
+            "Config" : [
+                { "Key" : "NetWorthCurve", "FloatSet" : [ 0.0, 0.01, 0.95, 0.04, 1.0, 0.08 ] },
+                { "Key" : "AmountMin", "Int" : 4000 },
+                { "Key" : "AmountMax", "Int" : 40000 }
+            ]
+        }
+    ]
+}

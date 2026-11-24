@@ -1,0 +1,8 @@
+{
+    // https://paletton.com/#uid=7470u0kwi++bu++hX++++rd++kX
+    "Id" : "UI/Saturated/Comp",
+    // if you change this, change Consts.TMPTextNewsColor too
+    "Hex" : "FFCA00",
+    "Alpha" : 1.0,
+    "SkipAtlas" : true
+}

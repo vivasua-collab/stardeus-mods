@@ -1,0 +1,32 @@
+{
+    "Layer" : "FreeEntities",
+    "ParentId" : "Obj/Equipment/BaseEquipment",
+    "Researchable" : {
+        "Prerequisites" : [
+            "Research/Production/SpaceSuit"
+        ]
+    },
+    "Components" : [
+        {
+            "Component" : "StorableObj",
+            "Properties" : [
+                { "Key" : "Group", "String" : "Clothing" }
+            ]
+        },
+        {
+            "Component" : "ObjGraphics",
+            "Properties" : [
+                { "Key" : "Graphic", "String": "Beings/Clothing/Human/SpaceSuit01/SpaceSuit01" },
+                { "Key" : "Scale", "Float" : 0.6 }
+            ]
+        },
+        { "Component" : "SafetyCheck" },
+        {
+            "Component" : "Flammable",
+            "Properties" : [
+                { "Key" : "IgnitionTemperatureCelsius", "Int" : 300 },
+                { "Key" : "FireChance", "Float" : 0.2 }
+            ]
+        }
+    ]
+}

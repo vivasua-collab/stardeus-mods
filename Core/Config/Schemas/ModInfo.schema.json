@@ -1,0 +1,155 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Stardeus ModInfo",
+  "description": "Generated from C# by Game/Generate JSON Schemas, do not edit by hand",
+  "$ref": "#/$defs/ModInfo",
+  "$defs": {
+    "AtlasInfo": {
+      "type": "object",
+      "properties": {
+        "Id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "Path": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "ExtraPaths": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "SkipAtlas": {
+          "type": "boolean"
+        },
+        "DoNotFilterAtlas": {
+          "type": "boolean"
+        },
+        "MipMapBias": {
+          "type": "number"
+        },
+        "TexturePadding": {
+          "type": "integer"
+        },
+        "SkipMipMaps": {
+          "type": "boolean"
+        },
+        "InnerPadding": {
+          "type": "number"
+        },
+        "SkipRescale": {
+          "type": "boolean"
+        },
+        "MinimizeNumAtlases": {
+          "type": "boolean"
+        },
+        "ExtrudeEdges": {
+          "type": "boolean"
+        }
+      },
+      "additionalProperties": false
+    },
+    "ModInfo": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "Id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "Name": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "Description": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "DescriptionSteam": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "DoNotUpdateSteamDescription": {
+          "type": "boolean"
+        },
+        "Cheat": {
+          "type": "boolean"
+        },
+        "SteamWorkshop": {
+          "type": "boolean"
+        },
+        "ModVersion": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "GameVersion": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "DLLFiles": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "Dependencies": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "Atlases": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "$ref": "#/$defs/AtlasInfo"
+          }
+        },
+        "IsCoreTranslation": {
+          "type": "boolean"
+        }
+      },
+      "additionalProperties": false
+    }
+  }
+}

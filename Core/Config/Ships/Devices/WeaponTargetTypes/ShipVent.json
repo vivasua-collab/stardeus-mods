@@ -1,0 +1,13 @@
+{
+    "Id" : "ShipVent",
+    "GroupId" : "ShipDevice_2_Defense",
+    "GroupNameKey" : "noun.ship",
+    "NameKey" : "noun.flux.vents",
+    "Icon" : "Icons/Color/Flux",
+    "DefaultTargetByWeaponTypes" : [
+        "Ballistic",
+        "Missile",
+        "Laser",
+        "Plasma"
+    ]
+}

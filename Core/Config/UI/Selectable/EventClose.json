@@ -1,0 +1,17 @@
+{
+    "Id" : "Selectable/EventClose",
+
+    "CBColorNormal" : "UI/Btn/White",
+    "CBAlphaNormal" : 0.1,
+    "CBColorHighlighted" : "UI/Btn/White",
+    "CBAlphaHighlighted" : 0.8,
+    "CBColorPressed" : "UI/Btn/White",
+    "CBAlphaPressed" : 1.0,
+    "CBColorSelected" : "UI/Btn/White",
+    "CBAlphaSelected" : 0.5,
+    "CBColorDisabled" : "UI/Btn/White",
+    "CBAlphaDisabled" : 0.05,
+
+    "CBColorMultiplier" : 1.0,
+    "CBFadeDuration" : 0.1
+}

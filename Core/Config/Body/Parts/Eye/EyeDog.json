@@ -1,0 +1,23 @@
+{
+    "SlotTypeId" : "Eye",
+    "Compatibility" : "Biological",
+    "TargetSpecies" : [ "Dog" ],
+    "Tier" : 2,
+    "AddsNeeds" : [
+        "Light"
+    ],
+    "ResistanceBase" : 1.0,
+    "Resistances" : [
+        { "DamageType" : "Blunt", "Resistance" : 6.0 }
+    ],
+    "ProvidesStats" : [
+        {
+            "Component" : "Sight",
+            "Properties" : [
+                { "Key" : "CompoundLimit", "Float" : 0.8 },
+                { "Key" : "Amount", "Float" : 0.4 },
+                { "Key" : "StateMul", "Float" : 1.0 }
+            ]
+        }
+    ]
+}

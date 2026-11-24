@@ -1,0 +1,27 @@
+{
+    "Id" : "Research/Production/EnergyEfficiency",
+    "Tier" : 3,
+    "IsAbstract" : true,
+    "PreviewIcon" : "Icons/Color/Upgrade",
+    "NameKey" : "research.energyefficiency",
+    "Researchable" : {
+        "IsTreeNode" : true,
+        "Prerequisites" : [
+            "Research/Production/AssemblyImproved"
+        ],
+        "DatoidCosts" : [
+            {
+                "TypeId" : "DatoidTech",
+                "StackSize" : 6
+            },
+            {
+                "TypeId" : "DatoidEnergy",
+                "StackSize" : 8
+            },
+            {
+                "TypeId" : "DatoidTechHigh",
+                "StackSize" : 7
+            }
+        ]
+    }
+}

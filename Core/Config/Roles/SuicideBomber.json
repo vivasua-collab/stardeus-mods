@@ -1,0 +1,19 @@
+{
+    "Id" : "SuicideBomber",
+    "Species" : [ "Human", "Robot", "Drone", "Carrier", "CleaningBot" ],
+    "RoleTypes" : [ "Dumb", "Poor", "Evil", "Once" ],
+    "LovesJobTypes" : [ "Dangerous" ],
+    "IncapableJobTypes" : [ "Intellectual" ],
+    "IncompatibleTraitIds" : [ "Pacifist" ],
+    "Rarity" : 0.25,
+    "AdjustsSkills" : [
+        {
+            "JobId" : "Demolition",
+            "Adjustment" : 4
+        },
+        {
+            "JobId" : "Crafting",
+            "Adjustment" : 6
+        }
+    ]
+}

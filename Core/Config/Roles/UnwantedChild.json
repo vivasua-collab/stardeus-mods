@@ -1,0 +1,20 @@
+{
+    "Id" : "UnwantedChild",
+    "Species" : [ "Human" ],
+    "RoleTypes" : [ ],
+    "AgePhaseIds" : [ "Childhood" ],
+    "AdjustsSkills" : [
+        {
+            "JobId" : "Melee",
+            "Adjustment" : 3
+        },
+        {
+            "JobId" : "Mining",
+            "Adjustment" : 2
+        },
+        {
+            "JobId" : "Social",
+            "Adjustment" : -2
+        }
+    ]
+}

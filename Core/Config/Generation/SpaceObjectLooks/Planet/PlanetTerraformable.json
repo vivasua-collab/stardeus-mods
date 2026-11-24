@@ -1,0 +1,35 @@
+{
+    "Id" : "PlanetTerraformable",
+    "Shader" : "Shader Graphs/SOPlanetTerraformable",
+    "StarfieldSizeMul" : 3.0,
+    "Probability" : 1.0,
+    "IsForTerraformable" : true,
+    "ShaderPropertiesFloatFrom": [
+        { "Key" : "_RotationSpeed", "Float" : 0.10 },
+        { "Key" : "_CloudScale", "Float" : 20.0 },
+        { "Key" : "_CloudScale2", "Float" : 6.0 },
+        { "Key" : "_CloudIntensity", "Float" : 0.7 },
+        { "Key" : "_DetailScale", "Float" : 10.0 },
+        { "Key" : "_VoronoiDensity", "Float" : 0.2 },
+        { "Key" : "_ContinentScale", "Float" : 2.8 },
+        { "Key" : "_CloudRotSpeed", "Float" : 0.1 }
+    ],
+    "ShaderPropertiesFloatTo": [
+        { "Key" : "_RotationSpeed", "Float" : 0.10 },
+        { "Key" : "_CloudScale", "Float" : 15.0 },
+        { "Key" : "_CloudScale2", "Float" : 14.0 },
+        { "Key" : "_CloudIntensity", "Float" : 0.6 },
+        { "Key" : "_DetailScale", "Float" : 20.0 },
+        { "Key" : "_VoronoiDensity", "Float" : 3.0 },
+        { "Key" : "_ContinentScale", "Float" : 5.0 },
+        { "Key" : "_CloudRotSpeed", "Float" : 0.15 }
+    ],
+    "ShaderPropertiesVector2From": [
+        { "Key" : "_ScrollDir", "Vector2" : { "x" : -1.0, "y" : -1.0 } },
+        { "Key" : "_CloudScrollDir", "Vector2" : { "x" : 0.01, "y" : 0.01 } }
+    ],
+    "ShaderPropertiesVector2To": [
+        { "Key" : "_ScrollDir", "Vector2" : { "x" : 1.0, "y" : 1.0 } },
+        { "Key" : "_CloudScrollDir", "Vector2" : { "x" : 0.05, "y" : 0.05 } }
+    ]
+}

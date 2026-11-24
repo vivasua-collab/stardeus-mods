@@ -1,0 +1,9 @@
+{
+    "Id" : "Hydronium",
+    "IsComposite" : true,
+    "IconId" : "Obj/Materials/Hydronium",
+    "GroupId" : "Ore",
+    "EnergyOutput" : 3000.0,
+    "Rarity" : 1,
+    "MatRarity" : 4
+}

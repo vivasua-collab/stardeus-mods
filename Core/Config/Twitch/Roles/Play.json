@@ -1,0 +1,10 @@
+{
+    "Id" : "Play",
+    "AlwaysAddFor" : [
+        "Viewer",
+        "Broadcaster",
+        "Moderator",
+        "VIP",
+        "Subscriber"
+    ]
+}

@@ -1,0 +1,165 @@
+{
+    "QuestFlags" : [ "Side", "Random", "HideProgress", "Unique", "Retryable", "ConsumeProvider" ],
+    "QuestProviders" : [
+        "Signal"
+    ],
+    "TitleKey" : "quest.TraceSignal",
+    "DescKey" : "quest.TraceSignal.desc",
+    "Require": {
+        "Days" : 300,
+        "Friendlies" : 15,
+        "SectorDifficulty" : 0.7
+    },
+    "SetOnComplete" : [
+        "HasAsimovOverride"
+    ],
+    "Variables" : [
+        {
+            "Id" : "TestDeadline",
+            "Type" : "Deadline",
+            "Config" : [
+                {
+                    "Key" : "DaysCurve", "FloatSet" : [
+                        0.0, 14.0,
+                        1.0, 24.0
+                    ]
+                }
+            ]
+        },
+        {
+            "Id" : "Sig1",
+            "Type" : "SectorPOI",
+            "Config" : [
+                { "Key" : "POIConfigId", "String" : "Signal" },
+                { "Key" : "MinRegionsAway", "Int" : 1 },
+                { "Key" : "MinRegionDifficulty", "Float" : 0.35 },
+                { "Key" : "MaxRegionDifficulty", "Float" : 0.55 },
+                // if we are N regions away, only regions with relay will be used
+                { "Key" : "SkipRegionsWithoutRelay", "Bool" : true }
+            ]
+        },
+        {
+            "Id" : "Sig2",
+            "Type" : "SectorPOI",
+            "Config" : [
+                { "Key" : "Var_Start", "String" : "Sig1" },
+                { "Key" : "POIConfigId", "String" : "Signal" },
+                { "Key" : "MinRegionDifficulty", "Float" : 0.65 },
+                { "Key" : "MaxRegionDifficulty", "Float" : 0.85 },
+                { "Key" : "MinRegionsAway", "Int" : 2 }
+            ]
+        },
+        {
+            "Id" : "Anomaly1",
+            "Type" : "SectorPOI",
+            "Config" : [
+                { "Key" : "Var_Start", "String" : "Sig2" },
+                { "Key" : "POIConfigId", "String" : "Anomaly" },
+                { "Key" : "MinRegionDifficulty", "Float" : 0.9 },
+                { "Key" : "MinRegionsAway", "Int" : 1 }
+            ]
+        }
+    ],
+    "Rewards" : [
+        {
+            "Id" : "Upgrade",
+            "Type" : "Material",
+            "RewardFlags" : [ "PackageContent" ],
+            "Config" : [
+                {
+                    "Key" : "MatType",
+                    "String" : "AsimovOverrideUpgrade"
+                },
+                { "Key" : "Amount", "Int" : 1 }
+            ]
+        }
+    ],
+    "Steps" : [
+        {
+            "Id" : "RespondToSig1",
+            "Type" : "RespondToSignal",
+            "StepFlags" : [ "ActiveOnStart", "FailsQuest" ],
+            "Deadline" : "TestDeadline",
+            "TitleKey" : "quest.step.investigate.signal.title",
+            "DescKey" : "quest.step.investigate.signal.desc",
+            "SetOnComplete" : [
+                "RespondedToSig1"
+            ],
+            "StateStoryEvents" : {
+                "Completed" : "Raid/MapEdgeRaid"
+            },
+            "Config" : [
+                { "Key" : "Var_Signal", "String" : "Sig1" },
+                { "Key" : "InactiveTitleKey", "String" : "quest.step.investigate.signal.unknown" },
+                { "Key" : "InactiveDescKey", "String" : "quest.details.will.reveal.on.accept" },
+                {
+                    "Key": "MessageKeys",
+                    "StringSet": [
+                        "quest.SignalTrail.msg.*"
+                    ]
+                }
+            ]
+        },
+        {
+            "Id" : "RespondToSig2",
+            "Type" : "RespondToSignal",
+            "StepFlags" : [ "HideInactive" ],
+            "TitleKey" : "quest.step.investigate.signal.title",
+            "DescKey" : "quest.step.investigate.signal.desc",
+            "ActivateWhen" : [
+                "RespondedToSig1"
+            ],
+            "SetOnComplete" : [
+                "RespondedToSig2"
+            ],
+            "StateStoryEvents" : {
+                "Completed" : "Space/PirateShipAttack"
+            },
+            "Config" : [
+                { "Key" : "Var_Signal", "String" : "Sig2" },
+                {
+                    "Key": "MessageKeys",
+                    "StringSet": [
+                        "quest.SignalTrail.msg.*"
+                    ]
+                }
+            ]
+        },
+        {
+            "Id" : "RetrieveItem",
+            "Type" : "ExplorePOI",
+            "StepFlags" : [ "HideInactive" ],
+            "StateStoryEvents" : {
+                "Completed" : "Raid/HullpiercerLargeRaid"
+            },
+            "SetOnComplete" : [
+                "RetrievedPackage"
+            ],
+            "ActivateWhen" : [
+                "RespondedToSig2"
+            ],
+            "Config" : [
+                { "Key" : "Var_POI", "String" : "Anomaly1" },
+                { "Key" : "ExpeditionMinHours", "Float" : 4.0 },
+                { "Key" : "ExpeditionMaxHours", "Float" : 8.0 },
+                { "Key" : "ExpeditionFoundItemMsgKey", "String" : "quest.expedition.found.package" },
+                { "Key" : "PackageFlags", "StringSet" : [ "FailQuestOnDestroy", "CompleteQuestOnOpen" ] },
+                { "Key" : "PackageRewardIds", "StringSet" : [ "Upgrade" ] }
+            ]
+        },
+        {
+            "Id" : "OpenPackage",
+            "Type" : "OpenPackage",
+            "StepFlags" : [ "HideInactive" ],
+            "ActivateWhen" : [
+                "RetrievedPackage"
+            ],
+            "Config" : [
+                // if only one package is involved, this can be null,
+                // otherwise the if of the step that creates the package must be
+                // put here
+                { "Key" : "PackageStepId", "String" : null }
+            ]
+        }
+    ]
+}

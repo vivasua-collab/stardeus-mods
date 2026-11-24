@@ -1,0 +1,179 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Stardeus UIStyleDef",
+  "description": "Generated from C# by Game/Generate JSON Schemas, do not edit by hand",
+  "$ref": "#/$defs/UIStyleDef",
+  "$defs": {
+    "UIStyleDef": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "Id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "ChildrenKeys": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "ChildrenIds": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "Image": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "ImageBorderLBRT": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "integer"
+          }
+        },
+        "ImageType": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "ImagePPUMultiplier": {
+          "type": "number"
+        },
+        "Color": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "Alpha": {
+          "type": "number"
+        },
+        "CBColorNormal": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "CBAlphaNormal": {
+          "type": "number"
+        },
+        "CBColorHighlighted": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "CBAlphaHighlighted": {
+          "type": "number"
+        },
+        "CBColorPressed": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "CBAlphaPressed": {
+          "type": "number"
+        },
+        "CBColorSelected": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "CBAlphaSelected": {
+          "type": "number"
+        },
+        "CBColorDisabled": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "CBAlphaDisabled": {
+          "type": "number"
+        },
+        "CBColorMultiplier": {
+          "type": "number"
+        },
+        "CBFadeDuration": {
+          "type": "number"
+        },
+        "TextSelectionColor": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "TextColor": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "TextFontSize": {
+          "type": "number"
+        },
+        "TextSkipAutoScale": {
+          "type": "boolean"
+        },
+        "TextFontStyles": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "TextOverflowMode": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "TextMarginLTRB": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "integer"
+          }
+        },
+        "Debug": {
+          "type": "boolean"
+        }
+      },
+      "additionalProperties": false
+    }
+  }
+}

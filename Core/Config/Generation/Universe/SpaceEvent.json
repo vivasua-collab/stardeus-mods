@@ -1,0 +1,7 @@
+{
+    "Id" : "SpaceEvent",
+    "NameKey" : "space.object.PlanetPOI",
+    "MinDistanceBetweenSubObjects" : 4.5,
+    "MinExitDist" : 15,
+    "Icon" : "Icons/Color/Destination"
+}

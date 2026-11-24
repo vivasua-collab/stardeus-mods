@@ -1,0 +1,9 @@
+{
+    "Id" : "Terranite",
+    "IsComposite" : true,
+    "IconId" : "Obj/Materials/Terranite",
+    "GroupId" : "Ore",
+    "EnergyOutput" : 3000.0,
+    "Rarity" : 1,
+    "MatRarity" : 4
+}

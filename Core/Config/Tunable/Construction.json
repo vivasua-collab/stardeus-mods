@@ -1,0 +1,29 @@
+{
+    "Ints" : [
+        // how many tiles are allowed to be mass relocated or built a copy of as a batch
+        { "Key" : "MassActionMaxTiles", "Int" : 250 },
+        // most floors or walls one damaged structure collapse can take down
+        { "Key" : "StructureCollapseMaxTiles", "Int" : 30 },
+        // removing anything never takes longer than building this much WorkAmount
+        { "Key" : "DeconstructionMaxWork", "Int" : 1500 },
+        // ticks a worker spends sizing up the damage before the repair starts
+        { "Key" : "RepairWarmupTicks", "Int" : 3 }
+    ],
+    "Floats" : [
+        // WorkAmount per tick of a skill-0 worker (skill adds at most +30%, see the
+        // Construction/SkillWorkSpeedMul curve)
+        { "Key" : "ConstructionSpeed", "Float" : 10.0 },
+        // floors and walls come apart fast, so derelicts can be stripped in bulk
+        { "Key" : "DeconstructionSpeedStructure", "Float" : 90.0 },
+        // everything else takes as long to remove as to build
+        { "Key" : "DeconstructionSpeedObjects", "Float" : 10.0 },
+        // health per tick of a skill-0 worker
+        { "Key" : "RepairSpeed", "Float" : 2.0 },
+        // game day before which collapsed structure is not auto-rebuilt, unless a repair was ordered
+        { "Key" : "StructureCollapseRebuildAfterDays", "Float" : 30.0 },
+        // game day before which damaged structure never collapses by itself (the opening has its own collapse)
+        { "Key" : "StructureCollapseGraceDays", "Float" : 7.0 },
+        // least time between two collapses
+        { "Key" : "StructureCollapseMinGapHours", "Float" : 24.0 }
+    ]
+}

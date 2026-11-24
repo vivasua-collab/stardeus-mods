@@ -1,0 +1,21 @@
+{
+    // plan.FinalPoints -> raider gear tier (rounded to nearest int).
+    // 0 = current pool (Rarity-only weighting, Quality 0.7-1.0); bots: Carriers, Cleaning Bots.
+    // 1 = WellArmed: weighted toward higher-CombatValue gear, Quality 0.8-1.0; bots: Drones, Robots.
+    // 2 = EliteArmed: strongly weighted toward best gear, Quality 0.9-1.0, more cybernetics;
+    //     bots: Sentries, Orbotrons (see Species.RaidTierWeights).
+    // Thresholds are set against what a raider of that tier costs (StrengthOf with measured
+    // durability, see TypicalRaiderCost.json), and the tier only leans draws toward better gear:
+    // what a raider may cost is capped by MaxRaiderCost.json, and a tier whose bots cost more
+    // than the cap falls back to the bots of the tier below. Tier 1 from 40 keeps the ~25-point
+    // raids of a 1M colony on cheap bots. Before durability was re-measured (October 2026) a
+    // tier-2 raider priced ~26 and the threshold was 150. See RaidScaling.md.
+    "FloatSet" : [
+        0.0,    0.0,
+        39.0,   0.0,
+        40.0,   1.0,
+        99.0,   1.0,
+        100.0,  2.0,
+        1000.0, 2.0
+    ]
+}

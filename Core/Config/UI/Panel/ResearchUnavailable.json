@@ -1,0 +1,9 @@
+{
+    "Id" : "Panel/ResearchUnavailable",
+
+    "Color" : "UI/Research/Panel/Unavailable",
+
+    "Image" : "UI/Panels/PopupBG",
+    "ImageType" : "Sliced",
+    "ImageBorderLBRT" : [ 12, 12, 28, 28 ]
+}

@@ -1,0 +1,65 @@
+{
+    "DefId" : "Obj/Equipment/Weapons/SniperRifle01",
+    "SlotId" : "Weapon",
+    // illegal for robots, unless their faction is above the law (RobotWeaponLaw)
+    "RequiresBodyFlags" : [ "Humanoid" ],
+    "SpriteId" : "Obj/Weapons/SniperRifle01/SniperRifle01",
+    "Rarity" : 0.6,
+    "SpawnRequirements" : {
+        "Days" : 90,
+        "Friendlies" : 9,
+        "SectorDifficulty" : 0.6
+    },
+    "LooksShowFlags" : [
+        "Combat"
+    ],
+    "AddsAttackMethods" : [
+        {
+            "Component" : "Shoot",
+            "Properties" : [
+                { "Key" : "AttackAction", "String" : "Ranged" },
+                { "Key" : "RangeMin", "Float" : 2.5 },
+                { "Key" : "RangeMax", "Float" : 23.0 },
+                { "Key" : "DPS", "Float" : 5.0 },
+                { "Key" : "AttackType", "String" : "Piercing" },
+                { "Key" : "ChargeSec", "Float" : 7.0 },
+                { "Key" : "CooldownSec", "Float" : 2.0 },
+                { "Key" : "MoveSpeedMul", "Float" : 0.05 },
+                { "Key" : "StunChanceBio", "Float" : 0.35 },
+                { "Key" : "StunChanceRobo", "Float" : 0.2 },
+                { "Key" : "BleedChance", "Float" : 0.85 },
+                // ignores this share of worn armor: the top guns answer the top armor
+                { "Key" : "ArmorPenetration", "Float" : 0.35 },
+                { "Key" : "AccuracyMax", "Float" : 0.9 },
+                { "Key" : "ChargeVFX", "String" : "ChargeGunVFX" },
+                { "Key" : "AttackVFX", "String" : "AttackGunVFX" },
+                { "Key" : "FatalHitChanceMul", "Float" : 1.2 },
+                { "Key" : "InternalHitChanceMul", "Float" : 0.9 },
+                { "Key" : "AttackSounds", "StringSet" : [
+                    "FX/RifleShot01",
+                    "FX/RifleShot02",
+                    "FX/RifleShot03"
+                ] },
+                { "Key" : "AccuracyCurve", "FloatSet" : [
+                    0.0, 0.15,
+                    0.7, 1.0,
+                    1.0, 0.9
+                ] }
+            ]
+        },
+        {
+            "Component" : "ButtStrike",
+            "Properties" : [
+                { "Key" : "AttackAction", "String" : "Melee" },
+                { "Key" : "DPS", "Float" : 2.15 },
+                { "Key" : "AttackType", "String" : "Blunt" },
+                { "Key" : "ChargeSec", "Float" : 3.0 },
+                { "Key" : "CooldownSec", "Float" : 3.0 },
+                { "Key" : "MoveSpeedMul", "Float" : 0.05 },
+                { "Key" : "StunChanceBio", "Float" : 0.97 },
+                { "Key" : "StunChanceRobo", "Float" : 0.43 },
+                { "Key" : "BleedChance", "Float" : 0.2 }
+            ]
+        }
+    ]
+}

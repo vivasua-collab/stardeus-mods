@@ -1,0 +1,9 @@
+{
+    "Id" : "Text/GameButtonSmall",
+
+    "Color" : "UI/Text/Main",
+    "Alpha" : 1,
+
+    "TextFontSize" : 18,
+    "TextOverflowMode" : "Ellipsis"
+}

@@ -1,0 +1,14 @@
+{
+    "BuildGroup" : "FloorWood",
+    "Layer" : "Floor",
+    "ParentId" : "Structure/Floors/FloorWood01",
+    "UseParentTexts" : true,
+    "Components" : [
+        {
+            "Component" : "TileGraphics",
+            "Properties" : [
+                { "Key" : "Graphic", "String": "Structure/Floors/FloorWood02" }
+            ]
+        }
+    ]
+}

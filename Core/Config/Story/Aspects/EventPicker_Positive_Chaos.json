@@ -1,0 +1,35 @@
+{
+    // C# implementation id.
+    // Multiple configurations can point to a single implementation.
+    "AspectId" : "EventPicker",
+    "Properties" : [
+        // Never picks on its own: Mtb keeps every window open, so a periodic pick here
+        // would skip its opening grace and its mean gap. Events come from the Mtb roll
+        // and from hooks only
+        { "Key" : "Manual", "Bool" : true },
+        { "Key" : "Outcome", "String" : "Positive" },
+        {
+            "Key" : "SeenDaysAgoWeightCurve",
+            "String" : "StoryPicker/SeenDaysAgoWeight"
+        },
+        {
+            "Key" : "StartDaysAgoWeightCurve",
+            "String" : "StoryPicker/StartDaysAgoWeight"
+        },
+        {
+            "Key" : "SeenCountWeightCurve",
+            "String" : "StoryPicker/SeenCountWeight"
+        },
+        {
+            // Cooldown on this window after any start. The Mtb roll picks with
+            // the schedule ignored, so its clusters stay; this only keeps hooks
+            // that respect the schedule from landing right after another event.
+            "Key" : "ScheduleCooldownHoursCurve",
+            // random value => hours
+            "FloatSet" : [
+                0.0, 4.0,
+                1.0, 8.0
+            ]
+        }
+    ]
+}

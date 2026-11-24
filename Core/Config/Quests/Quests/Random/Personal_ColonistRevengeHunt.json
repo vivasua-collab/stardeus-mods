@@ -1,0 +1,132 @@
+{
+    "QuestFlags" : [ "Random", "Template", "RequiresMemories" ],
+    "TitleKeys" : [
+        "quest.colonist.revenge.title.01",
+        "quest.colonist.revenge.title.02",
+        "quest.colonist.revenge.title.03",
+        "quest.colonist.revenge.title.04",
+        "quest.colonist.revenge.title.05",
+        "quest.colonist.revenge.title.06",
+        "quest.colonist.revenge.title.07",
+        "quest.colonist.revenge.title.08",
+        "quest.colonist.revenge.title.09",
+        "quest.colonist.revenge.title.10"
+    ],
+    "DescKeys" : [
+        "quest.colonist.revenge.desc.01",
+        "quest.colonist.revenge.desc.02",
+        "quest.colonist.revenge.desc.03",
+        "quest.colonist.revenge.desc.04",
+        "quest.colonist.revenge.desc.05",
+        "quest.colonist.revenge.desc.06",
+        "quest.colonist.revenge.desc.07",
+        "quest.colonist.revenge.desc.08",
+        "quest.colonist.revenge.desc.09",
+        "quest.colonist.revenge.desc.10"
+    ],
+    "QuestProviders" : [ "Colonist" ],
+    "CompatibleFactions" : [ "Player" ],
+    "QuestValidators" : [ "ShipCombatReady" ],
+    "Variables" : [
+        {
+            "Id" : "HuntDeadline",
+            "Type" : "Deadline",
+            "Config" : [
+                {
+                    "Key" : "DaysCurve", "FloatSet" : [
+                        0.0, 14.0,
+                        1.0, 28.0
+                    ]
+                }
+            ]
+        },
+        {
+            "Id" : "TargetShip",
+            "Type" : "NPCShip",
+            "Config" : [
+                { "Key" : "MustExistOnLoad", "Bool" : false },
+                {
+                    // | # | Title / story | Faction | Why |
+                    // |---|---|---|---|
+                    // | 01 | Blood debt — murdered their family | `Pirate` | violent killers |
+                    // | 02 | Grudges die slowly — insulted their cat | `RandomFriendly` | petty, ordinary crew |
+                    // | 03 | The coffee incident — counterfeit coffee merchant | `Capitalist` | shady merchant |
+                    // | 04 | Bitter memories — captain married their ex-spouse | `RandomFriendly` | ordinary captain |
+                    // | 05 | Academic theft — stole a research project | `Capitalist` | corporate/competitor theft |
+                    // | 06 | Abandoned in the void — crew abandoned them in a pirate attack | `RandomFriendly` | **former ship/crew** |
+                    // | 07 | An insult remembered — bar humiliation | `RandomFriendly` | ordinary captain |
+                    // | 08 | Unfinished business — sabotaged their previous vessel | `Pirate` | malicious saboteur |
+                    // | 09 | Card table betrayal — cheated at cards | `Adventurer` | rogue gambler |
+                    // | 10 | Twelve years later — borrowed a toolbox, never returned it | `RandomFriendly` | petty, neighborly crew |
+                    "Key" : "FactionIds", "StringSet" : [
+                        "Pirate",
+                        "RandomFriendly",
+                        "Capitalist",
+                        "RandomFriendly",
+                        "Capitalist",
+                        "RandomFriendly",
+                        "RandomFriendly",
+                        "Pirate",
+                        "Adventurer",
+                        "RandomFriendly"
+                    ]
+                },
+                { "Key" : "ChancePolice", "Float" : -1.0 },
+                {
+                    "Key" : "StrengthMulCurve", "FloatSet" : [
+                        0.0, 0.5,
+                        0.25, 0.8,
+                        0.5, 1.0,
+                        0.9, 1.25,
+                        1.0, 1.5
+                    ]
+                },
+                { "Key" : "ShipBehaviorRegionId", "String" : "Region_Patrol" },
+                { "Key" : "ShipBehaviorSectorId", "String" : "Sector_Orbit" },
+                { "Key" : "MinRegionsAway", "Int" : 0 },
+                { "Key" : "MinRegionDifficulty", "Float" : 0.0 },
+                { "Key" : "MaxRegionDifficulty", "Float" : 1.0 },
+                { "Key" : "SkipRegionsWithoutRelay", "Bool" : true }
+            ]
+        }
+    ],
+    "Steps" : [
+        {
+            "Id" : "KillTargetShip",
+            "Type" : "KillNPCShip",
+            "Deadline" : "HuntDeadline",
+            "StepFlags" : [ "ActiveOnStart", "CompletesQuest", "FailsQuest", "HideIfQuestUnaccepted" ],
+            "Config" : [
+                { "Key" : "Var_Ship", "String" : "TargetShip" }
+            ]
+        }
+    ],
+    "Rewards" : [
+        {
+            "Id" : "GiverHappy",
+            "Type" : "ColonistMood",
+            "Config" : [
+                { "Key" : "Magnitude", "Int" : 10 },
+                { "Key" : "DurationHours", "Float" : 48.0 },
+                { "Key" : "ReasonKey", "String" : "mood.colonist.revenge.satisfied" }
+            ]
+        },
+        {
+            "Id" : "GiverTrusts",
+            "Type" : "ColonistTrust",
+            "Config" : [
+                { "Key" : "Magnitude", "Int" : 15 },
+                { "Key" : "DurationHours", "Float" : 2880.0 }
+            ]
+        },
+        {
+            "Id" : "GiverDisappointed",
+            "Type" : "ColonistTrust",
+            "RewardFlags" : [ "Penalty" ],
+            "Config" : [
+                { "Key" : "Magnitude", "Int" : -5 },
+                { "Key" : "DurationHours", "Float" : 720.0 }
+            ]
+        }
+    ]
+}

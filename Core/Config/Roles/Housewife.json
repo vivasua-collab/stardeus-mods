@@ -1,0 +1,30 @@
+{
+    "Id" : "Housewife",
+    "LovesJobTypes" : [ "Cooking", "Cleaning" ],
+    "Species" : [ "Human" ],
+    "IncapableJobTypes" : [ "Expedition" ],
+    "AgePhaseIds" : [ "YoungAdult", "MidLife" ],
+    "RoleTypes" : [ "Dumb" ],
+    "SexChances" : [
+        {
+            "Sex" : "F",
+            "Chance" : 1.0
+        }
+    ],
+    "AdjustsSkills" : [
+        {
+            "JobId" : "Cooking",
+            "Adjustment" : 6
+        },
+        {
+            "JobId" : "Cleaning",
+            "Adjustment" : 4
+        }
+    ],
+    "AddsTraits" : [
+        {
+            "TraitId" : "CleaningOcd",
+            "Chance" : 0.15
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Id" : "ShipBattleship01",
+    "Probability" : 1.0,
+    "StarmapSizeMul" : 0.44,
+    "StarfieldSizeMul" : 0.22,
+    "IsConstantSizeInStarmap" : false,
+    "OrderDist" : -50,
+    "Sprite" : "SpaceObjects/Ships/ShipBattleship01_D",
+    "CanRotate" : true,
+    "KeepUprightInStarfield" : true,
+    "Sprite_L" : "SpaceObjects/Ships/ShipBattleship01_L",
+    "Sprite_R" : "SpaceObjects/Ships/ShipBattleship01_R",
+    "Sprite_U" : "SpaceObjects/Ships/ShipBattleship01_U",
+    "Sprite_D" : "SpaceObjects/Ships/ShipBattleship01_D"
+}

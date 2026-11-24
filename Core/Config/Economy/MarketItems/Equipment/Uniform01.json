@@ -1,0 +1,9 @@
+{
+    "Id" : "Obj/Equipment/Clothing/Uniform01",
+    "Type" : "CFD",
+    "Groups" : [ "Equipment" ],
+    "Value" : 100.0,
+    "Rarity" : 0.5,
+    "MinSectorDifficulty" : 0.25,
+    "Volatility" : 0.0022
+}

@@ -1,0 +1,12 @@
+{
+    "Type" : "Ammo",
+    "Ingredients" : [
+        { "TypeId" : "Transistor", "StackSize" : 5 },
+        { "TypeId" : "BatteryCell", "StackSize" : 1 },
+        { "TypeId" : "TitaniumPlate", "StackSize" : 1 }
+    ],
+    "IgnoreMarket" : true,
+    "ProductDefId" : "Obj/Ammo/InterceptorDart",
+    "ProductionTimeHours" : 4,
+    "EnergyCost" : 20
+}

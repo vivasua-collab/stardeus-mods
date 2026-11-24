@@ -1,0 +1,12 @@
+{
+    "Id" : "ShipSpaceStation01_Derelict",
+    "Probability" : 1.0,
+    "StarmapSizeMul" : 1.0,
+    "StarfieldSizeMul" : 0.5,
+    "RandomRotation" : false,
+    "IsConstantSizeInStarmap" : true,
+    "OrderDist" : -50,
+    "Sprite" : "SpaceObjects/Derelicts/ShipSpaceStation01_Derelict",
+    "CanRotate" : false,
+    "KeepUprightInStarfield" : true
+}

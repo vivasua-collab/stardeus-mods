@@ -1,0 +1,17 @@
+{
+    "Id" : "Research/Security/AdvancedMelee",
+    "Tier" : 4,
+    "IsAbstract" : true,
+    "PreviewIcon" : "Obj/Weapons/Vibroblade01/Vibroblade01",
+    "Researchable" : {
+        "IsTreeNode" : true,
+        "Prerequisites" : [
+            "Research/Security/EnergyWeapons"
+        ],
+        "DatoidCosts" : [
+            { "TypeId" : "DatoidTechHigh", "StackSize" : 15 },
+            { "TypeId" : "DatoidNuclear",  "StackSize" : 8 },
+            { "TypeId" : "DatoidAlien",    "StackSize" : 5 }
+        ]
+    }
+}

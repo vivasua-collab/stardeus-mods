@@ -1,0 +1,23 @@
+{
+    "IsAbstract" : true,
+    "Layer" : "FreeEntities",
+    "IgnoreMarket" : true,
+    // BasePlant is separate from BaseObj, as it has no Movable
+    "Components" : [
+        { "Component" : "Transform" },
+        { "Component" : "ObjHealth" },
+        {
+            "Component" : "ObjGraphics",
+            "Properties" : [
+                { "Key" : "Shader", "String": "Obj" }
+            ]
+        },
+        {
+            "Component" : "Flammable",
+            "Properties" : [
+                { "Key" : "IgnitionTemperatureCelsius", "Int" : 130 },
+                { "Key" : "FireChance", "Float" : 0.9 }
+            ]
+        }
+    ]
+}

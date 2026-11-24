@@ -1,0 +1,7 @@
+{
+    "Id" : "Beta",
+    "Type" : "Equity",
+    "Groups" : [ "Entertainment" ],
+    "Value" : 445.0,
+    "Volatility" : 0.0450
+}

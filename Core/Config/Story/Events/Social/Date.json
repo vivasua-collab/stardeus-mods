@@ -1,0 +1,14 @@
+{
+    // C# implementation id
+    "EventId": "Date",
+    // How much does this story event cost to run
+    "Points": 0,
+    // Options: Negative, Positive, Neutral, Raid
+    "OutcomeType": "Positive",
+    // Full list is in StoryEventFlags class
+    "EventFlags": [
+        "OnDemand",
+        "Social"
+    ],
+    "MinRepeatDelayDays" : 3
+}

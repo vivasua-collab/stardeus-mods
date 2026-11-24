@@ -1,0 +1,10 @@
+{
+    "Id" : "Obj/Materials/Leather",
+    "Type" : "CFD",
+    "Groups" : [ "Material", "Organic" ],
+    "Value" : 450.0,
+    "Rarity" : 0.08,
+    "TraderQuantity" : 30.0,
+    "MinSectorDifficulty" : 0.5,
+    "Volatility" : 0.0038
+}

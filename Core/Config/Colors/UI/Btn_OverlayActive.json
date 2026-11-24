@@ -1,0 +1,7 @@
+{
+    "Id" : "UI/Btn/OverlayActive",
+    // "AliasFor" : "UI/White/Primary",
+    "AliasFor" : "UI/Saturated/Sec",
+    "Alpha" : 0.75,
+    "SkipAtlas" : true
+}

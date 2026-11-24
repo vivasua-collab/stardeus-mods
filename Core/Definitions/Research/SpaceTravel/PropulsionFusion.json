@@ -1,0 +1,22 @@
+{
+    "Id" : "Research/SpaceTravel/PropulsionFusion",
+    "Tier" : 1,
+    "IsAbstract" : true,
+    "PreviewIcon" : "Icons/Color/Propulsion",
+    "Researchable" : {
+        "IsTreeNode" : true,
+        "Prerequisites" : [
+            "Research/SpaceTravel/Propulsion"
+        ],
+        "DatoidCosts" : [
+            {
+                "TypeId" : "DatoidBasic",
+                "StackSize" : 9
+            },
+            {
+                "TypeId" : "DatoidTech",
+                "StackSize" : 4
+            }
+        ]
+    }
+}

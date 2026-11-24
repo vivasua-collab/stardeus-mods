@@ -1,0 +1,34 @@
+{
+    "Id" : "Mindjar",
+    "StartingSkillCurves" : [
+        {
+            "Jobs" : [ "Social" ],
+            "LevelCurve" : [
+                0.0, 0.0,
+                1.0, 0.0
+            ]
+        },
+        {
+            "LevelCurve" : [
+                0.0, 0.0,
+                0.3, 0.0,
+                0.31, 1.0,
+                0.9, 1.0,
+                0.91, 2.0,
+                1.0, 2.0
+            ]
+        }
+    ],
+    "AgeSkillCurves" : [
+        {
+            "LevelCurve" : [
+                0.0, 0.0,
+                1.0, 0.3
+            ]
+        }
+    ],
+    "StartingJobs" : [
+        { "Job" : "Social" },
+        { "Job" : "Task" }
+    ]
+}

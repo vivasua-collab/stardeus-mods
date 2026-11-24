@@ -1,0 +1,14 @@
+{
+    "BuildGroup" : "Coffin",
+    "Layer" : "Objects",
+    "ParentId" : "Objects/Cosmetics/Coffin01",
+    "UseParentTexts" : true,
+    "Components" : [
+        {
+            "Component" : "TileGraphics",
+            "Properties" : [
+                { "Key" : "Graphic", "String": "Objects/Cosmetics/Coffin02" }
+            ]
+        }
+    ]
+}

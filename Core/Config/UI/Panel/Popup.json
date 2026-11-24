@@ -1,0 +1,9 @@
+{
+    "Id" : "Panel/Popup",
+
+    "Color" : "UI/Panel/Accent",
+
+    "Image" : "UI/Panels/PopupBG",
+    "ImageType" : "Sliced",
+    "ImageBorderLBRT" : [ 12, 12, 28, 28 ]
+}

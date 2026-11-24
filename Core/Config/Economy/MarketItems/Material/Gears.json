@@ -1,0 +1,9 @@
+{
+    "Id" : "Obj/Materials/Gears",
+    "Type" : "CFD",
+    "Groups" : [ "Material" ],
+    "Value" : 27.0,
+    "Rarity" : 0.35,
+    "TraderQuantity" : 300.0,
+    "Volatility" : 0.0011
+}

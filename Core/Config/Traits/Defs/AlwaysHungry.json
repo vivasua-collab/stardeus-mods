@@ -1,0 +1,19 @@
+{
+    "Id" : "AlwaysHungry",
+    "IconId" : "Icons/Color/Food",
+    "TypeId" : "BiologicalFunction",
+    "Rarity" : 0.5,
+    "BodyTypes" : "L",
+    "IncompatibleTraitIds" : [
+        "BadAppetite"
+    ],
+    "AddsStatModifiers" : [
+        {
+            "Component" : "HungerRate",
+            "Properties" : [
+                { "Key" : "Value", "Float" : 0.5 },
+                { "Key" : "Type", "String" : "AddsPercent" }
+            ]
+        }
+    ]
+}

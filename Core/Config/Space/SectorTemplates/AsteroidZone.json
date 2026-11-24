@@ -1,0 +1,22 @@
+{
+    "Id" : "AsteroidZone",
+    "Type" : "AsteroidZone",
+    "MustHavePOIs" : true,
+    "TemplateWeight" : 0.3,
+    "Surprise" : true,
+    "NoLife" : true,
+    "NumPOIsChance" : [
+        0.0, 0.0,
+        0.1, 1.0,
+        0.5, 2.0,
+        0.9, 3.0,
+        1.0, 4.0
+    ],
+    "NumDepositsChance" : [
+        0.0, 1.0,
+        0.1, 2.0,
+        0.5, 2.0,
+        0.9, 3.0,
+        1.0, 4.0
+    ]
+}

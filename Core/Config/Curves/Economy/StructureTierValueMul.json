@@ -1,0 +1,20 @@
+{
+    // Def.Tier -> multiplier on a finished structure's materials value, for net worth
+    // (NetWorthCalculator.WorthOfStructure). Materials are a floor on what a building is
+    // worth, not a measure of it: a Fabricator is 5k of parts, a nuclear reactor 15k, and a
+    // shield emitter that decides a ship battle is 1.3k - two rifles. Tier is the research
+    // tier the def sits behind (inherited from its research node at load), already
+    // constrained to be monotonic in cost by the research design rules, so it is a free,
+    // authored tech-level index. Hull (tier 0-1) stays at its materials on purpose: a floor
+    // tile is a floor tile. Provisional; calibrate with `economy networth` on the anchor
+    // save (Docs/Architecture/Systems/RaidScaling.md, "What counts as wealth").
+    "FloatSet" : [
+        0.0, 1.0,
+        1.0, 1.0,
+        2.0, 1.5,
+        3.0, 2.0,
+        4.0, 3.0,
+        5.0, 4.0,
+        6.0, 5.0
+    ]
+}

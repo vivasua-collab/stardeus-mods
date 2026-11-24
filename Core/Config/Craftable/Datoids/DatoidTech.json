@@ -1,0 +1,10 @@
+{
+    "Type": "DatoidTech",
+    "Ingredients": [
+        { "TypeId" : "Transistor", "StackSize" : 1 },
+        { "TypeId" : "CopperWire", "StackSize" : 1 }
+    ],
+    "ProductDefId": "Obj/Datoids/DatoidTech",
+    "ProductionTimeHours": 2.0,
+    "EnergyCost": 15.0
+}

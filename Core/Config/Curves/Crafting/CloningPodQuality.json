@@ -1,0 +1,15 @@
+{
+    // uniform random 0.0 to 1.0 => quality of organs grown without an operator
+    // shaped like a normal distribution around 80%, rarely 60% or 100%
+    "FloatSet" : [
+        0.0, 0.6,
+        0.03, 0.66,
+        0.1, 0.7,
+        0.25, 0.75,
+        0.5, 0.8,
+        0.75, 0.85,
+        0.9, 0.9,
+        0.97, 0.94,
+        1.0, 1.0
+    ]
+}

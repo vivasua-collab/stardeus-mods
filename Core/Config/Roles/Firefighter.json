@@ -1,0 +1,17 @@
+{
+    "Id" : "Firefighter",
+    "RoleTypes" : [ "Dumb", "Poor" ],
+    "AgePhaseIds" : [ "YoungAdult", "MidLife", "Retirement" ],
+    "Species" : [ "Human", "Robot", "Sentry", "Orbotron", "Carrier", "Drone" ],
+    "LovesJobTypes" : [ "Firefighting" ],
+    "AdjustsSkills" : [
+        {
+            "JobId" : "Firefighting",
+            "Adjustment" : 8
+        },
+        {
+            "JobId" : "Construction",
+            "Adjustment" : -1
+        }
+    ]
+}

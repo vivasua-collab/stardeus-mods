@@ -1,0 +1,38 @@
+{
+    "Layer" : "FreeEntities",
+    "ParentId" : "Obj/BaseObj",
+    "IgnoreMarket" : true,
+    "Components" : [
+        {
+            "Component" : "ObjHealth",
+            "Properties" : [
+                { "Key" : "Max", "Int" : 500 }
+            ]
+        },
+        {
+            "Component" : "Flammable",
+            "Properties" : [
+                { "Key" : "IsTemperatureResistant", "Bool": true }
+            ]
+        },
+        {
+            "Component" : "ObjGraphics",
+            "Properties" : [
+                { "Key" : "Graphic", "String": "Objects/Devices/BreachCapsule_Flying" },
+                { "Key" : "Shader", "String" : "ObjBelow" },
+                { "Key" : "Scale", "Float" : 3.6 },
+                { "Key" : "HoverWhenInSpace", "Bool" : false},
+                { "Key" : "HasShadow", "Bool" : false },
+                { "Key" : "IsAnimated", "Bool" : true },
+                { "Key" : "DoNotCull", "Bool" : true }
+            ]
+        },
+        {
+            "Component" : "Movable",
+            "Properties" : [
+                { "Key" : "IsForbidden", "Bool" : true }
+            ]
+        },
+        { "Component" : "BreachCapsuleFlying" }
+    ]
+}

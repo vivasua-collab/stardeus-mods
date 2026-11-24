@@ -1,0 +1,22 @@
+{
+    "Id" : "TestSubject",
+    "RoleTypes" : [ "Dumb", "Poor" ],
+    "AdjustsSkills" : [
+        {
+            "JobId" : "Firefighting",
+            "Adjustment" : 2
+        },
+        {
+            "JobId" : "Melee",
+            "Adjustment" : 2
+        },
+        {
+            "JobId" : "Research",
+            "Adjustment" : 4
+        },
+        {
+            "JobId" : "Social",
+            "Adjustment" : -1
+        }
+    ]
+}

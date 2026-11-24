@@ -1,0 +1,19 @@
+{
+    "Id" : "SlowMetabolism",
+    "IconId" : "Icons/Color/Food",
+    "TypeId" : "BiologicalFunction",
+    "Rarity" : 0.5,
+    "BodyTypes" : "L",
+    "IncompatibleTraitIds" : [
+        "FastMetabolism"
+    ],
+    "AddsStatModifiers" : [
+        {
+            "Component" : "DigestionRate",
+            "Properties" : [
+                { "Key" : "Value", "Float" : -0.5 },
+                { "Key" : "Type", "String" : "AddsPercent" }
+            ]
+        }
+    ]
+}

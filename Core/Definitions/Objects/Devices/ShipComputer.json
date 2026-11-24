@@ -1,0 +1,178 @@
+{
+    "ToolPath" : "Computing",
+    "Layer" : "Objects",
+    "ParentId" : "Objects/Devices/BaseDevice",
+    "IsImportant" : true,
+    "Researchable" : {
+        "Prerequisites" : [
+            "Research/Computing/ShipComputer"
+        ]
+    },
+    "Spawnable" : {
+        "Category": "RareDevice",
+        "TierDiff" : -1,
+        "Chance" : 1.0,
+        "ChanceLocked" : 0.5
+    },
+    "Components" : [
+        {
+            "Component" : "TileTransform",
+            "Properties" : [
+                { "Key" : "Width", "Int" : 2 },
+                { "Key" : "Height", "Int" : 2 },
+                { "Key" : "CoverPercent", "Int" : 70 },
+                { "Key" : "IsRotatable", "Bool" : false }
+            ]
+        },
+        {
+            "Component" : "IndustrialEquipment",
+            "Properties" : [
+                { "Key" : "IsNoisy", "Bool" : true }
+            ]
+        },
+        {
+            "Component" : "Damageable",
+            "Properties" : [
+                { "Key" : "Max", "Int" : 1000 }
+            ]
+        },
+        {
+            "Component" : "TileGraphics",
+            "Properties" : [
+                { "Key" : "Type", "String": "Object" },
+                { "Key" : "Graphic", "String": "Objects/Devices/ShipComputer" },
+                { "Key" : "HasHeight", "Bool" : true }
+            ]
+        },
+        {
+            "Component" : "TileAnimation",
+            "Properties" : [
+                { "Key" : "Offset", "Vector2": { "x" : 0.0, "y" : 0.9 } },
+                { "Key" : "Size", "Vector2": { "x" : 2, "y" : 2 } },
+                { "Key" : "Direction", "Int" : 1 },
+                { "Key" : "BaseSprite", "String": "Objects/Devices/ShipComputer_Base" },
+                { "Key" : "AnimSprite", "String" : "Objects/DeviceAnims/ShipComputer_Anim" },
+                { "Key" : "Speed", "Float": 0.66 },
+                { "Key" : "FramePrefix", "String": "R" },
+                { "Key" : "NumFrames", "Int": 48 },
+                { "Key" : "NeedsEnergy", "Bool": false }
+            ]
+        },
+        { "Component" : "CurrencyMiner" },
+        {
+            "Component" : "AudioSource",
+            "Properties" : [
+                { "Key" : "AmbienceClip", "String" : "Devices/ShipComputerSFX" },
+                { "Key" : "Rolloff", "Vector2" : { "x" : 3, "y" : 12 } },
+                { "Key" : "IsAutoplay", "Bool" : true },
+                { "Key" : "IsLinkedToEnergy", "Bool" : false }
+            ]
+        },
+        {
+            "Component" : "Flammable",
+            "Properties" : [
+                { "Key" : "IgnitionTemperatureCelsius", "Int" : 1000 },
+                { "Key" : "FireChance", "Float" : 0.9 },
+                { "Key" : "BaseExplosionLevel", "Int" : 8 },
+                { "Key" : "FlammabilityCurve", "String" : "DeviceHigh" },
+                { "Key" : "ExplosivenessCurve", "String" : "ShipComputer" }
+            ]
+        },
+        {
+            "Component" : "GPUModule",
+            "Properties" : [
+                { "Key" : "Amount",  "Int" : 1 }
+            ]
+        },
+        {
+            "Component" : "CPUModule",
+            "Properties" : [
+                { "Key" : "Amount",  "Int" : 8 }
+            ]
+        },
+        {
+            "Component" : "MemoryModule",
+            "Properties" : [
+                { "Key" : "Amount",  "Int" : 8 }
+            ]
+        },
+        {
+            "Component" : "DiskModule",
+            "Properties" : [
+                { "Key" : "Amount",  "Int" : 64 }
+            ]
+        },
+        {
+            "Component" : "Reinstallable",
+            "Properties" : [
+                { "Key" : "IsAdvanced", "Bool" : true }
+            ]
+        },
+        { "Component" : "ShipComputer" },
+        { "Component" : "ShipComputerEfficiency" },
+        {
+            "Component" : "HeatProducer",
+            "Properties" : [
+                { "Key" : "IsPassive", "Bool" : true },
+                { "Key" : "Rate", "Float" : 15 },
+                { "Key" : "Range", "Int" : 3 },
+                { "Key" : "MaxTempCelsius", "Int" : 150 },
+                { "Key" : "CheckSameArea", "Bool" : true }
+            ]
+        },
+        {
+            "Component" : "ElectricNode",
+            "Properties" : [
+                { "Key" : "IsShipComputer", "Bool" : true },
+                { "Key" : "IsSwitchable", "Bool" : false },
+                { "Key" : "IsConsumerHighPriority", "Bool" : true }
+            ]
+        },
+        {
+            "Component" : "VFX",
+            "Properties" : [
+                { "Key" : "Id", "String" : "VFXParticlesCPU" },
+                { "Key" : "IsLinkedToEnergy", "Bool" : false },
+                { "Key" : "Offset", "Vector2" : { "x" : 0, "y" : 0.7 } }
+            ]
+        },
+        {
+            "Component" : "Passability",
+            "Properties" : [
+                { "Key" : "IsPassable", "Bool" : false },
+                { "Key" : "IsWalkable", "Bool" : false },
+                { "Key" : "Difficulty", "Float" : 1 }
+            ]
+        },
+        {
+            "Component" : "LightSource",
+            "Properties" : [
+                { "Key" : "Color", "IntSet" : [ 189, 64, 191, 192 ] },
+                { "Key" : "PulsateColor", "IntSet" : [ 189, 64, 191, 128 ] },
+                { "Key" : "FrequencyRange", "Vector2" : { "x" : 2, "y" : 3 } },
+                { "Key" : "Radius", "Float" : 12 },
+                { "Key" : "NeedsEnergy", "Bool" : false }
+            ]
+        },
+        {
+            "Component" : "Constructable",
+            "Properties" : [
+                { "Key" : "WorkAmount", "Int" : 4000 },
+                {
+                    "Key" : "Contents",
+                    "RawMaterials" : [
+                        { "TypeId" : "Microchip3", "StackSize" : 8 },
+                        { "TypeId" : "SiliconWafer", "StackSize" : 15 },
+                        { "TypeId" : "Transistor", "StackSize" : 50 },
+                        { "TypeId" : "TitaniumPlate", "StackSize" : 6 },
+                        { "TypeId" : "GoldWire", "StackSize" : 10 },
+                        { "TypeId" : "OpticalFiber", "StackSize" : 10 },
+                        { "TypeId" : "Plastic", "StackSize" : 6 },
+                        { "TypeId" : "Glass", "StackSize" : 4 },
+                        { "TypeId" : "NuclearCell", "StackSize" : 2 }
+                    ]
+                }
+            ]
+        }
+    ]
+}

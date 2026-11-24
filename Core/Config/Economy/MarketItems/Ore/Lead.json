@@ -1,0 +1,11 @@
+{
+    "Id" : "Obj/Materials/Lead",
+    "Type" : "CFD",
+    "Groups" : [ "Ore" ],
+    "Value" : 508.0,
+    "Rarity" : 0.02,
+    "TraderQuantity" : 250.0,
+    "OnlineShopQuantity" : 100,
+    "MinSectorDifficulty" : 0.4,
+    "Volatility" : 0.0022
+}

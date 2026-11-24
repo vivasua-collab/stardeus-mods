@@ -1,0 +1,9 @@
+{
+    "Id" : "Text/ChartLegend",
+
+    "Color" : "UI/Text/Accented",
+    "Alpha" : 0.7,
+
+    "TextFontSize" : 20,
+    "TextOverflowMode" : "Ellipsis"
+}

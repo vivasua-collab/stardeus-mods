@@ -1,0 +1,10 @@
+{
+    "Id" : "Obj/Meals/Bread",
+    "Type" : "CFD",
+    "Groups" : [ "Food" ],
+    "Value" : 59.0,
+    "Rarity" : 0.16,
+    "TraderQuantity" : 30.0,
+    "MinSectorDifficulty" : 0.15,
+    "Volatility" : 0.00036
+}

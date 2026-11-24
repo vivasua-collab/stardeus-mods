@@ -1,0 +1,126 @@
+{
+    "Floats" : [
+        // Defines how sharp the price changes are for everything
+        { "Key" : "MarketMoveSpeed", "Float" : 1.0 },
+        // This does not define how fast the market will move, it defines
+        // how frequently it changes the behavior (i.e. switches from rise to fall)
+        { "Key" : "MarketChangeRate", "Float" : 1.0 },
+        { "Key" : "MarketLongVolatility", "Float" : 1.0 },
+        { "Key" : "MarketGroupVolatility", "Float" : 0.2 },
+        { "Key" : "MarketShortVolatility", "Float" : 2.0 },
+        { "Key" : "MarketSurgeChanceLongTerm", "Float" : 0.02 },
+        { "Key" : "MarketSurgeChanceShortTerm", "Float" : 0.04 },
+        { "Key" : "MarketCrashChanceLongTerm", "Float" : 0.02 },
+        { "Key" : "MarketCrashChanceShortTerm", "Float" : 0.04 },
+        { "Key" : "MarketRecessionChanceLongTerm", "Float" : 0.01 },
+        { "Key" : "MarketRecessionChanceShortTerm", "Float" : 0.00000 },
+        { "Key" : "MarketRecessionStrength", "Float" : 1.0 },
+        { "Key" : "MarketRiseChanceLongTerm", "Float" : 0.55 },
+        { "Key" : "MarketRiseChanceShortTerm", "Float" : 0.5 },
+        { "Key" : "MarketStillChanceLongTerm", "Float" : 0.2 },
+        { "Key" : "MarketStillChanceShortTerm", "Float" : 0.2 },
+        { "Key" : "MarketFallChanceLongTerm", "Float" : 0.50 },
+        { "Key" : "MarketFallChanceShortTerm", "Float" : 0.5 },
+        { "Key" : "MarketItemVolatilityMul", "Float" : 0.5 },
+        { "Key" : "MarketItemMaxNormalPriceRisePerDay", "Float" : 0.03 },
+        { "Key" : "MarketItemMaxNormalPriceFallPerDay", "Float" : 0.03 },
+        { "Key" : "MarketItemMaxExtremePriceRisePerDay", "Float" : 0.10 },
+        { "Key" : "MarketItemMaxExtremePriceFallPerDay", "Float" : 0.10 },
+        { "Key" : "MarketItemMaxPriceMulFrom", "Float" : 1.2 },
+        { "Key" : "MarketItemMaxPriceMulTo", "Float" : 2.5 },
+        { "Key" : "MarketItemMinPriceMulFrom", "Float" : 0.6 },
+        { "Key" : "MarketItemMinPriceMulTo", "Float" : 0.9 },
+
+        { "Key" : "MarketItemHeatRecoveryPerDay", "Float" : 0.01 },
+        { "Key" : "MarketItemHeatChangeRate", "Float" : 0.05 },
+        // how much the global market reacts to player trades
+        { "Key" : "MarketItemHeatGlobalImpact", "Float" : 0.001 },
+
+        // Online Shop
+        { "Key" : "OnlineShopPriceMarkup", "Float" : 3.0 },
+
+        // Used gear carries a mood cost to whoever wears it next (see WornItemMood),
+        // so a merchant reselling it prices that defect in.
+        { "Key" : "TradeSecondHandPriceMul", "Float" : 0.5 },
+        { "Key" : "TradeDeadMansPriceMul", "Float" : 0.25 },
+
+        // Net worth of finished structures (NetWorthCalculator.WorthOfStructure):
+        // credits added per ship class point for ship-combat devices (weapons, shields,
+        // capacitors, engines, vents), on top of materials x Curves/Economy/StructureTierValueMul.
+        // Class points are the authored measure of how much of a ship's combat budget a device
+        // takes, i.e. what it is worth to the ship - a shield emitter (8 CP) is ~13k, about
+        // three top-grade rifles, instead of the 1.3k its parts come to.
+        { "Key" : "StructureClassPointValue", "Float" : 1500.0 },
+        // Fraction of structure value that counts toward raid threat wealth
+        // (CombatRaid.ThreatNetWorth), the rest of net worth counting at 1. Popular colony sim's
+        // storyteller counts buildings at 0.5 so that building infrastructure out of a stockpile
+        // is rewarded over hoarding the same value loose. Held at 1.0 for now: structures were
+        // undervalued (materials only) until the tier/class-point valuation above, and the
+        // discount is worth deciding on once that is calibrated rather than stacking the two.
+        { "Key" : "StructureThreatWeight", "Float" : 1.0 }
+    ],
+    "Ints" : [
+        { "Key" : "MarketDayLengthHours", "Int" : 24 },
+        { "Key" : "MarketLongTrendMinDays", "Int" : 14 },
+        { "Key" : "MarketLongTrendMaxDays", "Int" : 30 },
+        { "Key" : "MarketShortTrendMinDays", "Int" : 7 },
+        { "Key" : "MarketShortTrendMaxDays", "Int" : 14 },
+        { "Key" : "MarketGroupTrendMinDays", "Int" : 7 },
+        { "Key" : "MarketGroupTrendMaxDays", "Int" : 30 },
+        { "Key" : "MarketGroupTrendMaxDays", "Int" : 30 },
+
+        { "Key" : "TraderMinCash", "Int" : 5000 },
+        { "Key" : "TraderMaxCash", "Int" : 1000000 },
+        { "Key" : "TraderMinItems", "Int" : 20 },
+        { "Key" : "TraderMinGroups", "Int" : 4 },
+        // below this player wallet amount, trader cash generation is not dampened
+        { "Key" : "TraderWealthParityCash", "Int" : 15000 },
+        // quality items (inventory items, body parts) are individual trade entries;
+        // cap same-def stock so the trade UI doesn't flood
+        { "Key" : "TraderQualityItemMaxStock", "Int" : 10 }
+    ],
+    "FloatSets" : [
+        { "Key" : "TraderInventoryRefreshCurve", "FloatSet" : [
+            // chance -> days. bell curve that will hover around ~7 days
+            0.0, 4.0,
+            0.1, 6.0,
+            0.5, 7.0,
+            0.9, 8.0,
+            1.0, 14.0
+        ] },
+        { "Key" : "TraderQuantityCurve", "FloatSet" : [
+            0.0, 0.1,
+            0.1, 0.5,
+            0.3, 1.0,
+            0.5, 2.0,
+            0.6, 3.0,
+            0.9, 7.0,
+            0.95, 10.0,
+            1.0, 50.0
+        ] },
+        { "Key" : "TraderDifficultyQuantityMulCurve", "FloatSet" : [
+            0.0, 0.5,
+            0.1, 0.8,
+            0.5, 1.0,
+            0.9, 2.5,
+            1.0, 5.0
+        ] },
+        { "Key" : "TraderMarkupCurve", "FloatSet" : [
+            0.0, 0.01,
+            0.1, 0.02,
+            0.5, 0.05,
+            0.9, 0.1,
+            1.0, 0.2
+        ] },
+        // chance -> price adjustment. bell curve around 1
+        { "Key" : "TraderMarketGroupCostAdjustmentCurve", "FloatSet" : [
+            0.0, 0.7,
+            0.05, 0.8,
+            0.1, 0.9,
+            0.5, 1.0,
+            0.9, 1.1,
+            0.95, 1.2,
+            1.0, 1.3
+        ] }
+    ]
+}

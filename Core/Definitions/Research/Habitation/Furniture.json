@@ -1,0 +1,19 @@
+{
+    "Id" : "Research/Habitation/Furniture",
+    "Tier" : 1,
+    "IsAbstract" : true,
+    "PreviewIcon" : "Icons/Color/Furniture",
+    "NameKey" : "research.furniture",
+    "Researchable" : {
+        "IsTreeNode" : true,
+        "Prerequisites" : [
+            "Research/Habitation/Root"
+        ],
+        "DatoidCosts" : [
+            {
+                "TypeId" : "DatoidBasic",
+                "StackSize" : 7
+            }
+        ]
+    }
+}

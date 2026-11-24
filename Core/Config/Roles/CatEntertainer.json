@@ -1,0 +1,11 @@
+{
+    "Id" : "CatEntertainer",
+    "RoleTypes" : [ "Dumb", "Poor", "Good" ],
+    "Species" : [ "CleaningBot", "Human" ],
+    "AdjustsSkills" : [
+        {
+            "JobId" : "Social",
+            "Adjustment" : 4
+        }
+    ]
+}

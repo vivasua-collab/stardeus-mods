@@ -1,0 +1,11 @@
+{
+    "Id" : "Obj/Equipment/Clothing/PowerArmor01",
+    "Type" : "CFD",
+    "Groups" : [ "Equipment" ],
+    "Value" : 28000,
+    "Rarity" : 0.01,
+    "TraderQuantity" : 1.0,
+    "MaxTraderQuantity" : 1,
+    "MinSectorDifficulty" : 1.0,
+    "Volatility" : 0.0095
+}

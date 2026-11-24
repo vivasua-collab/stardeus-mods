@@ -1,0 +1,20 @@
+{
+    "Id" : "Bookworm",
+    "IconId" : "Icons/Color/Info",
+    "TypeId" : "Intellectual",
+    "Rarity" : 0.5,
+    "AdjustsSkills" : [
+        {
+            "JobId" : "Research",
+            "Adjustment" : 1
+        },
+        {
+            "JobId" : "Mining",
+            "Adjustment" : -1
+        },
+        {
+            "JobId" : "Expedition",
+            "Adjustment" : -1
+        }
+    ]
+}

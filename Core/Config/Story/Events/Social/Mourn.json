@@ -1,0 +1,13 @@
+{
+    // C# implementation id
+    "EventId": "Mourn",
+    // How much does this story event cost to run
+    "Points": 0,
+    // Options: Negative, Positive, Neutral, Raid
+    "OutcomeType": "Neutral",
+    // Full list is in StoryEventFlags class
+    "EventFlags": [
+        "OnDemand",
+        "Social"
+    ]
+}

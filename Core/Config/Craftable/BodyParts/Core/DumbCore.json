@@ -1,0 +1,14 @@
+{
+    "Type" : "RoboticsManual",
+    "ProductDefId" : "Obj/Parts/Core/DumbCore",
+    "ProductionTimeHours" : 168,
+    "EnergyCost" : 20,
+    "IgnoreMarket" : true,
+    "Ingredients" : [
+        { "TypeId" : "Transistor", "StackSize" : 10 },
+        { "TypeId" : "Plastic", "StackSize" : 3 },
+        { "TypeId" : "GoldWire", "StackSize" : 3 },
+        { "TypeId" : "Microchip", "StackSize" : 5 },
+        { "TypeId" : "SiliconWafer", "StackSize" : 4 }
+    ]
+}

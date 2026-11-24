@@ -1,0 +1,10 @@
+{
+    "Id" : "CargoCopter",
+    "Icon" : "Objects/Devices/CargoCopter_Flying",
+    "IsDynamic" : true,
+    "IsInteractive" : true,
+    "CanMoveInStarmap" : true,
+    "SpawnChance" : 0.0,
+    "StarfieldSortOrder" : 2,
+    "CanBeOwned" : true
+}

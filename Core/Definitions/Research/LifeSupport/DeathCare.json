@@ -1,0 +1,23 @@
+{
+    "Id" : "Research/LifeSupport/DeathCare",
+    "Tier" : 1,
+    "IsAbstract" : true,
+    "PreviewIcon" : "Icons/Color/Skull",
+    "NameKey" : "noun.death.care",
+    "Researchable" : {
+        "IsTreeNode" : true,
+        "Prerequisites" : [
+            "Research/LifeSupport/Root"
+        ],
+        "DatoidCosts" : [
+            {
+                "TypeId" : "DatoidBasic",
+                "StackSize" : 3
+            },
+            {
+                "TypeId" : "DatoidBiotic",
+                "StackSize" : 2
+            }
+        ]
+    }
+}

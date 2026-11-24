@@ -1,0 +1,18 @@
+{
+    "Floats" : [
+        { "Key" : "SkillLevelUpSpeed", "Float" : 1.0 },
+        // Learning speed without and with Loves: a job not loved learns at about half the base
+        // rate, a loved one a quarter faster than it
+        { "Key" : "SkillLearnMulNone", "Float" : 0.55 },
+        { "Key" : "SkillLearnMulLoves", "Float" : 1.25 },
+        // Chance per skill level that generation makes a colonist love a job, on top of the
+        // Loves roles and traits give: about 3.5 loved jobs of 17
+        { "Key" : "SkillLovesChancePerLevel", "Float" : 0.055 },
+        // XP a skill gains in one day (after the passion factor) before learning slows to
+        // SkillSaturatedLearnMul. Keeps one long session from jumping several levels; ML booth
+        // training is not limited
+        { "Key" : "SkillDailySoftCap", "Float" : 4000.0 },
+        { "Key" : "SkillSaturatedLearnMul", "Float" : 0.2 },
+        { "Key" : "NavigationSpeed", "Float" : 1.0 }
+    ]
+}

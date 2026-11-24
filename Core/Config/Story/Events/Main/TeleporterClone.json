@@ -1,0 +1,21 @@
+{
+    // C# implementation id. Multiple configurations can point to a single implementation.
+    "EventId": "TeleporterClone",
+    // How much does this story event cost to run
+    "Points": 10,
+    // Options: Negative, Positive, Neutral, Raid
+    "OutcomeType": "Positive",
+    // Full list is in StoryEventFlags class
+    "EventFlags": [
+        "Being",
+        "ColonyGrowthBio",
+        "WaitsForCondition"
+    ],
+    // Minimum days before this event can repeat
+    "MinRepeatDelayDays": 2000,
+    // Requirements for this event to be available
+    // Population gating lives in ColonyGrowth (intent + hold), not in a Require here
+    "Require": {
+        "StoryEvents": 8
+    }
+}

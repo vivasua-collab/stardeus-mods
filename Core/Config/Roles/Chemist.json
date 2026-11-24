@@ -1,0 +1,17 @@
+{
+    "Id" : "Chemist",
+    "LovesJobTypes" : [ "Research" ],
+    "Species" : [ "Human" ],
+    "AgePhaseIds" : [ "YoungAdult", "MidLife", "Retirement" ],
+    "RoleTypes" : [ ],
+    "AdjustsSkills" : [
+        {
+            "JobId" : "Research",
+            "Adjustment" : 6
+        },
+        {
+            "JobId" : "Cooking",
+            "Adjustment" : 4
+        }
+    ]
+}

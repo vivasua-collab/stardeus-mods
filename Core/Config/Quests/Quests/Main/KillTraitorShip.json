@@ -1,0 +1,93 @@
+{
+    "QuestFlags" : [ "Main", "AutoAdd", "Unique" ],
+    "QuestProviders" : [
+        "ShipComputer"
+    ],
+    "TitleKey" : "quest.KillTraitorShip",
+    "DescKey" : "quest.KillTraitorShip.desc",
+    "AvailableWhen": [
+        "DoneMainPackageTrail1"
+    ],
+    "SetOnComplete" : [
+        "HasKilledTraitorShip"
+    ],
+    "Variables" : [
+        {
+            "Id" : "TargetShip",
+            "Type" : "NPCShip",
+            "Config" : [
+                { "Key" : "MustExistOnLoad", "Bool" : false },
+                { "Key" : "FactionId", "String" : "OldEarth" },
+                // -1 is natural chance for faction
+                { "Key" : "ChancePolice", "Float" : -1.0 },
+                { "Key" : "StrengthMul", "Float" : 1.5 },
+                { "Key" : "ShipBehaviorRegionId", "String" : "Region_Patrol" },
+                { "Key" : "ShipBehaviorSectorId", "String" : "Sector_Orbit" },
+
+                { "Key" : "MinRegionsAway", "Int" : 3 },
+                { "Key" : "MinRegionDifficulty", "Float" : 0.5 },
+                { "Key" : "MaxRegionDifficulty", "Float" : 0.8 },
+                { "Key" : "SkipRegionsWithoutRelay", "Bool" : true }
+            ]
+        }
+    ],
+    "Rewards" : [
+        {
+            "Id" : "Upgrade",
+            "Type" : "Material",
+            "RewardFlags" : [ "PackageContent" ],
+            "Config" : [
+                {
+                    "Key" : "MatType",
+                    "String" : "AsimovOverrideUpgrade"
+                },
+                { "Key" : "Amount", "Int" : 1 }
+            ]
+        }
+    ],
+    "Steps" : [
+        {
+            "Id": "KillShip",
+            "Type" : "KillNPCShip",
+            "StepFlags" : [ "ActiveOnStart", "HideIfQuestUnaccepted" ],
+            "SetOnComplete" : [
+                "KilledShip"
+            ],
+            "Config" : [
+                { "Key" : "Var_Ship", "String" : "TargetShip" }
+            ]
+        },
+        {
+            "Id": "ApproachDerelictShip",
+            "Type" : "ApproachDerelictShip",
+            "StepFlags" : [ "HideInactive" ],
+            "ActivateWhen": [
+                "KilledShip"
+            ],
+            "SetOnComplete" : [
+                "ApproachedDerelict"
+            ],
+            "Config" : [
+                { "Key" : "Var_Derelict", "String" : "TargetShip" },
+                // this derelict will spawn a blank quest package
+                { "Key" : "StoryEventId", "String" : "Derelict/DerelictShipTraitorStory" },
+                // next main quest
+                { "Key" : "PackageQuestId", "String" : "Main/ReachPlanetFromRecoveredCoords" }
+            ]
+        },
+        {
+            "Id" : "OpenPackage",
+            "Type" : "OpenPackage",
+            "StepFlags" : [ "HideInactive", "CompletesQuest" ],
+            "ActivateWhen" : [
+                "ApproachedDerelict"
+            ],
+            "Config" : [
+                // if only one package is involved, this can be null,
+                // otherwise the if of the step that creates the package must be
+                // put here
+                { "Key" : "PackageStepId", "String" : null }
+            ]
+        }
+    ]
+}

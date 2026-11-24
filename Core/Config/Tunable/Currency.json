@@ -1,0 +1,8 @@
+{
+    "Floats" : [
+        { "Key" : "CurrencyMiningAmtPerDayPerGPU", "Float" : 1000.0 }
+    ],
+    "Ints" : [
+        { "Key" : "CurrencyMiningMemRequiredPerGPU", "Int" : 4 }
+    ]
+}

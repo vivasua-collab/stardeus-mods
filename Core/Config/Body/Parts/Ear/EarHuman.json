@@ -1,0 +1,10 @@
+{
+    "SlotTypeId" : "Ear",
+    "Compatibility" : "Biological",
+    "TargetSpecies" : [ "Human" ],
+    "Tier" : 2,
+    "ResistanceBase" : 3.0,
+    "AddsAbilities" : [
+        "Hear"
+    ]
+}

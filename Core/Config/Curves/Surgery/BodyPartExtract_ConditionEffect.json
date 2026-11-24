@@ -1,0 +1,10 @@
+{
+    // part condition -> success multiplier
+    // Damage only trims the chance, quality decides it: a destroyed part is the one players
+    // most need out, and at x0 it sat on the minimum chance whatever its quality (STA-1804)
+    "FloatSet" : [
+        0.0, 0.6,
+        0.5, 0.85,
+        1.0, 1.0
+    ]
+}

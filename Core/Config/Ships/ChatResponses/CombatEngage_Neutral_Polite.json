@@ -1,0 +1,8 @@
+{
+    "ResponseType" : "Neutral",
+    "TopicType" : "CombatEngage",
+    "ToneType" : "Polite",
+    "MessageKeys" : [
+        "ship.chat.combat_engage.neutral.polite.*"
+    ]
+}

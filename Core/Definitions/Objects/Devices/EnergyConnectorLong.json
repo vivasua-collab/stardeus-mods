@@ -1,0 +1,45 @@
+{
+    "ToolPath" : "Energy",
+    "Layer" : "Objects",
+    "ParentId" : "Objects/Devices/EnergyConnector",
+    "UseParentTexts" : true,
+    "Researchable" : {
+        "Prerequisites" : [ "Research/Energy/ConnectorLongRange" ]
+    },
+    "TranslationVars" : [ "4", "20" ],
+    "Spawnable" : {
+        "Category": "Connector",
+        "Chance" : 1.0,
+        "ChanceLocked" : 0.5
+    },
+    "Components" : [
+        {
+            "Component" : "TileGraphics",
+            "Properties" : [
+                { "Key" : "Graphic", "String": "Objects/Devices/EnergyConnectorLong" }
+            ]
+        },
+        {
+            "Component" : "ElectricNode",
+            "Properties" : [
+                { "Key" : "MaxConnections", "Int" : 4 },
+                { "Key" : "ConnectorRange", "Int" : 20 }
+            ]
+        },
+        {
+            "Component" : "Constructable",
+            "Properties" : [
+                { "Key" : "WorkAmount", "Int" : 500 },
+                { "Key" : "CanReplaceGroup", "String" : "EnergyConnector" },
+                {
+                    "Key" : "Contents",
+                    "RawMaterials" : [
+                        { "TypeId" : "SteelPlate", "StackSize" : 2 },
+                        { "TypeId" : "GoldWire", "StackSize" : 2 },
+                        { "TypeId" : "Transistor", "StackSize" : 1 }
+                    ]
+                }
+            ]
+        }
+    ]
+}

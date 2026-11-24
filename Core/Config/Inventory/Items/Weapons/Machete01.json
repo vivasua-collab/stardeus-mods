@@ -1,0 +1,33 @@
+{
+    "DefId" : "Obj/Equipment/Weapons/Machete01",
+    "SlotId" : "Weapon",
+    "SpriteId" : "Obj/Weapons/Machete01/Machete01",
+    "Rarity" : 0.55,
+    "SpawnRequirements" : {
+        "Days" : 30,
+        "Friendlies" : 8,
+        "SectorDifficulty" : 0.3
+    },
+    "LooksShowFlags" : [
+        "Combat"
+    ],
+    "AddsAttackMethods" : [
+        {
+            "Component" : "Cut",
+            "Properties" : [
+                { "Key" : "AttackAction", "String" : "Melee" },
+                { "Key" : "DPS", "Float" : 4.50 },
+                { "Key" : "AttackType", "String" : "Sharp" },
+                { "Key" : "ChargeSec", "Float" : 4.0 },
+                { "Key" : "CooldownSec", "Float" : 4.0 },
+                { "Key" : "MoveSpeedMul", "Float" : 0.05 },
+                { "Key" : "StunChanceBio", "Float" : 0.20 },
+                { "Key" : "StunChanceRobo", "Float" : 0.0 },
+                { "Key" : "BleedChance", "Float" : 0.35 },
+                { "Key" : "ArmorPenetration", "Float" : 0.2 },
+                { "Key" : "FatalHitChanceMul", "Float" : 0.85 },
+                { "Key" : "InternalHitChanceMul", "Float" : 1.25 }
+            ]
+        }
+    ]
+}

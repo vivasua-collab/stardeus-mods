@@ -1,0 +1,7 @@
+{
+    "Id" : "SectorUnknown",
+    "Icon" : "Icons/Color/Destination",
+    "DistanceUnitsKey" : "units.km.millions",
+    "NameKey" : "space.object.PlanetPOI",
+    "InfoKey" : "space.object.info.PlanetPOI"
+}

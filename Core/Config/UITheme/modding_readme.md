@@ -1,0 +1,1 @@
+When creating custom themes, only put properties you want to change from Default.json. Look at NeonLights.json for an example of simple color override theme, which will likely what 99% of all UI themes will want to do.

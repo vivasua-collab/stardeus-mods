@@ -1,0 +1,9 @@
+{
+    "Id" : "Research/Habitation/Root",
+    "Tier" : 0,
+    "IsAbstract" : true,
+    "PreviewIcon" : "Icons/Color/Persona",
+    "Researchable" : {
+        "IsTreeNode" : true
+    }
+}

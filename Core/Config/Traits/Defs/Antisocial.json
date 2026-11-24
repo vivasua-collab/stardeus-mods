@@ -1,0 +1,15 @@
+{
+    "Id" : "Antisocial",
+    "IconId" : "Icons/Color/ThumbsDown",
+    "TypeId" : "Mental",
+    "Rarity" : 0.5,
+    "IncapableJobTypes" : [
+        "Social"
+    ],
+    "AdjustsSkills" : [
+        {
+            "JobId" : "Research",
+            "Adjustment" : 2
+        }
+    ]
+}

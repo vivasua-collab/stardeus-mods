@@ -1,0 +1,21 @@
+{
+    "EventId": "ExpeditionFoundDamagedBot",
+    "Points": 25,
+    "OutcomeType": "Positive",
+    "EventFlags": [
+        "OnDemand",
+        "Expedition",
+        "ColonyGrowthRobo"
+    ],
+    "Properties": [
+        { "Key": "SpeciesId", "String": "Orbotron" },
+        { "Key": "FailureChance", "Float": 0.20 }
+    ],
+    "MinRepeatDelayDays": 250,
+    "Require": {
+        "Days": 300,
+        "Friendlies": 13,
+        "SectorDifficulty": 0.8,
+        "ColonySizeDiff": 1
+    }
+}

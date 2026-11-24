@@ -1,0 +1,11 @@
+{
+    "Id" : "Obj/Materials/Platinum",
+    "Type" : "CFD",
+    "Groups" : [ "Ore" ],
+    "Value" : 2200.0,
+    "Rarity" : 0.03,
+    "TraderQuantity" : 3.0,
+    "OnlineShopQuantity" : 5,
+    "MinSectorDifficulty" : 0.55,
+    "Volatility" : 0.0023
+}

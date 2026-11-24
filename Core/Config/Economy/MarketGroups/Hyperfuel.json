@@ -1,0 +1,7 @@
+{
+    "Id" : "Hyperfuel",
+    "RecessionEffect" : 0.1,
+    "Rarity" : 0.1,
+    "TraderQuantity" : 10.0,
+    "Volatility" : 0.0007
+}

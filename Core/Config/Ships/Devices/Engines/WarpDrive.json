@@ -1,0 +1,7 @@
+{
+    "Id" : "WarpDrive",
+    "EngineTypeId" : "HyperdriveLong",
+    "Evade" : 0,
+
+    "ChargeTimeMinutes" : 900
+}

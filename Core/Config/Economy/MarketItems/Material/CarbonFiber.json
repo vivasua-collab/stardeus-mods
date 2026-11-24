@@ -1,0 +1,10 @@
+{
+    "Id" : "Obj/Materials/CarbonFiber",
+    "Type" : "CFD",
+    "Groups" : [ "Material" ],
+    "Value" : 30.0,
+    "Rarity" : 0.5,
+    "TraderQuantity" : 10.0,
+    "MinSectorDifficulty" : 0.35,
+    "Volatility" : 0.0016
+}

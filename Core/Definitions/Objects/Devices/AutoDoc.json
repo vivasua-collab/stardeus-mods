@@ -1,0 +1,170 @@
+{
+    "ToolPath" : "Facilities",
+    "Layer" : "Objects",
+    "ParentId" : "Objects/Devices/BaseDevice",
+    "Researchable" : {
+        "Prerequisites" : [
+            "Research/LifeSupport/MedicalCare"
+        ]
+    },
+    "Spawnable" : {
+        "Category": "Medical",
+        "Chance" : 0.9,
+        "ChanceLocked" : 0.4
+    },
+    "Components" : [
+        {
+            "Component" : "TileTransform",
+            "Properties" : [
+                { "Key" : "Width", "Int" : 2 },
+                { "Key" : "Height", "Int" : 1 },
+                { "Key" : "IsRotatable", "Bool" : true },
+                { "Key" : "CoverPercent", "Int" : 50 },
+                // { "Key" : "WorkSpot", "Vector2" : { "x" : 1, "y" : -1 } }
+                { "Key" : "InPort", "Vector2" : { "x" : 1, "y" : -1 } },
+                { "Key" : "OutPort", "Vector2" : { "x" : 1, "y" : -1 } }
+            ]
+        },
+        {
+            "Component" : "ElectricNode",
+            "Properties" : [
+                { "Key" : "IsConsumer", "Bool" : true }
+            ]
+        },
+        {
+            "Component" : "WithFuse",
+            "Properties" : [
+                { "Key" : "MalfunctionWeight", "Float": 0.05 }
+            ]
+        },
+        {
+            "Component" : "Flammable",
+            "Properties" : [
+                { "Key" : "IgnitionTemperatureCelsius", "Int" : 400 },
+                { "Key" : "FireChance", "Float" : 0.5 },
+                { "Key" : "BaseExplosionLevel", "Int" : 2 },
+                { "Key" : "FlammabilityCurve", "String" : "DeviceLow" },
+                { "Key" : "ExplosivenessCurve", "String" : "DeviceLow" }
+            ]
+        },
+        { "Component" : "SafetyCheck" },
+        {
+            "Component" : "VFX",
+            "Properties" : [
+                { "Key" : "Id", "String" : "VFXParticlesHeal" },
+                { "Key" : "Offsets", "Vector2Set" : [
+                    { "x" : 0, "y" : 0.5 },
+                    { "x" : 0, "y" : 0.5 },
+                    { "x" : 0, "y" : 0.5 },
+                    { "x" : 0, "y" : 0.5 }
+                ] }
+            ]
+        },
+        {
+            "Component" : "AudioSource",
+            "Properties" : [
+                { "Key" : "AmbienceClip", "String" : "Devices/AssemblerSFX" },
+                { "Key" : "Rolloff", "Vector2" : { "x" : 3, "y" : 15 } },
+                { "Key" : "IsLinkedToEnergy", "Bool" : true }
+            ]
+        },
+        {
+            "Component" : "AutoDoc",
+            "Properties" : [
+                { "Key" : "HideBeing", "Bool" : true },
+                { "Key" : "SlotUsePorts", "Bool" : true },
+                { "Key" : "WoundHealRateAddPctPerHour", "Float" : 0.3 },
+                { "Key" : "BloodClotRateAddPctPerHour", "Float" : 0.055 },
+                { "Key" : "BloodRegenRateAddPctPerHour", "Float" : 0.3 },
+                { "Key" : "IntestinesIncreasePerHour", "Float" : 0.3 },
+                { "Key" : "ToiletIncreasePerHour", "Float" : 0.3 },
+                { "Key" : "HygieneIncreasePerHour", "Float" : 0.3 },
+                { "Key" : "MinSleepIncreasePerHour", "Float" : 0.05 }
+            ]
+        },
+        {
+            "Component" : "TileGraphics",
+            "Properties" : [
+                { "Key" : "Type", "String": "Object" },
+                { "Key" : "Graphic", "String": "Objects/Devices/AutoDoc" },
+                { "Key" : "HasHeight", "Bool" : true }
+            ]
+        },
+        {
+            "Component" : "TileAnimation",
+            "Properties" : [
+                {
+                    "Key": "Offsets",
+                    "Vector2Set": [
+                        { "x": -0.0635, "y": 0.381 },
+                        { "x": 0.0, "y": 0.381 },
+                        { "x": 0.0635, "y": 0.381 },
+                        { "x": 0.0, "y": 0.2857 }
+                    ]
+                },
+                {
+                    "Key": "Rotations",
+                    "StringSet": [
+                        // Down
+                        "D",
+                        // Left
+                        "L",
+                        // Up
+                        "U",
+                        // Right
+                        "R"
+                    ]
+                },
+                { "Key" : "Size", "Vector2": { "x" : 1.6, "y" : 1.6 } },
+                { "Key" : "Direction", "Int" : 1 },
+                { "Key" : "BaseSprite", "String": "Objects/Devices/AutoDoc_Base" },
+                { "Key" : "AnimSprite", "String" : "Objects/DeviceAnims/AutoDoc_Anim" },
+                // Since two devices use same animation (Mini oxygen pump and regular one)
+                // we need to copy the sprite, otherwise resizing it to a different scale will
+                // resize it for both devices
+                { "Key" : "CopyAnimSprite", "Bool" : true },
+                { "Key" : "Speed", "Float": 0.66 },
+                { "Key" : "SpriteOrder", "String": "TurretHead" },
+                { "Key" : "FramePrefix", "String": "F" },
+                { "Key" : "NumFrames", "Int": 24 },
+                { "Key" : "PingPong", "Bool": true },
+                { "Key" : "PingPongStillFrames", "Int": 12 },
+                { "Key" : "NeedsEnergy", "Bool": true }
+            ]
+        },
+        {
+            "Component" : "LightSource",
+            "Properties" : [
+                { "Key" : "Color", "IntSet" : [ 224, 133, 133, 128 ] },
+                { "Key" : "PulsateColor", "IntSet" : [ 224, 133, 133, 192 ] },
+                { "Key" : "FrequencyRange", "Vector2" : { "x" : 1, "y" : 5 } },
+                { "Key" : "Radius", "Float" : 5 }
+            ]
+        },
+        {
+            "Component" : "Passability",
+            "Properties" : [
+                { "Key" : "IsPassable", "Bool" : false },
+                { "Key" : "IsWalkable", "Bool" : false },
+                { "Key" : "Difficulty", "Float" : 1 }
+            ]
+        },
+        {
+            "Component" : "Constructable",
+            "Properties" : [
+                { "Key" : "WorkAmount", "Int" : 1600 },
+                { "Key" : "CanDragRow", "Bool" : true },
+                {
+                    "Key" : "Contents",
+                    "RawMaterials" : [
+                        { "TypeId" : "TitaniumPlate", "StackSize" : 3 },
+                        { "TypeId" : "Plastic", "StackSize" : 2 },
+                        { "TypeId" : "Rubber", "StackSize" : 5 },
+                        { "TypeId" : "Glass", "StackSize" : 2 },
+                        { "TypeId" : "Microchip", "StackSize" : 3 }
+                    ]
+                }
+            ]
+        }
+    ]
+}

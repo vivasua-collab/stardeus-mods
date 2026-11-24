@@ -1,0 +1,12 @@
+{
+    "Type": "Electronics2",
+    "Ingredients": [
+        { "TypeId" : "Microchip", "StackSize" : 1 },
+        { "TypeId" : "GoldWire", "StackSize" : 2 },
+        { "TypeId" : "CarbonFiber", "StackSize" : 1 }
+    ],
+    "IgnoreMarket" : true,
+    "ProductDefId": "Obj/Materials/Microchip2",
+    "ProductionTimeHours": 2.0,
+    "EnergyCost": 30.0
+}

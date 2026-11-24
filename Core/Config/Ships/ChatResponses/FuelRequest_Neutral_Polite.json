@@ -1,0 +1,8 @@
+{
+    "ResponseType" : "Neutral",
+    "TopicType" : "FuelRequest",
+    "ToneType" : "Polite",
+    "MessageKeys" : [
+        "ship.chat.fuel_req.neutral.polite.*"
+    ]
+}

@@ -1,0 +1,7 @@
+{
+    "Id" : "UI/Text/LightGrey",
+    "AliasFor" : "UI/Grey/Primary+2",
+    // "Hex" : "87738C",
+    "Alpha" : 1.0,
+    "SkipAtlas" : true
+}

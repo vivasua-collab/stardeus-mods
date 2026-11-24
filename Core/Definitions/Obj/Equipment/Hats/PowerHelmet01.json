@@ -1,0 +1,33 @@
+{
+    "Layer" : "FreeEntities",
+    "ParentId" : "Obj/Equipment/BaseEquipment",
+    "Researchable" : {
+        "Prerequisites" : [
+            "Research/Production/PowerArmor"
+        ]
+    },
+    "Components" : [
+        {
+            "Component" : "StorableObj",
+            "Properties" : [
+                { "Key" : "Group", "String" : "Clothing" }
+            ]
+        },
+        {
+            "Component" : "ObjGraphics",
+            "Properties" : [
+                { "Key" : "Graphic", "String": "Beings/Hats/Human/PowerHelmet01/PowerHelmet01" },
+                { "Key" : "Scale", "Float" : 0.33 },
+                { "Key" : "SelectableScale", "Float": 0.5 }
+            ]
+        },
+        { "Component" : "SafetyCheck" },
+        {
+            "Component" : "Flammable",
+            "Properties" : [
+                { "Key" : "IgnitionTemperatureCelsius", "Int" : 400 },
+                { "Key" : "FireChance", "Float" : 0.1 }
+            ]
+        }
+    ]
+}

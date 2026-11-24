@@ -1,0 +1,16 @@
+{
+    "Id" : "Stalker",
+    "IconId" : "Icons/Color/Stalker",
+    "TypeId" : "Civilized",
+    "Rarity" : 0.15,
+    "AdjustsSkills" : [
+        {
+            "JobId" : "Social",
+            "Adjustment" : -1
+        },
+        {
+            "JobId" : "Medical",
+            "Adjustment" : 2
+        }
+    ]
+}

@@ -1,0 +1,75 @@
+// Dreadnought Class: The ultimate warship, extreme firepower and armor.
+{
+    "Id" : "Dreadnought",
+    "RequiredClassId" : "Carrier",
+    "UnlockPrice" : 1000000,
+
+    "MinSize": 2500,
+    "MaxSize": 5500,
+    "DerelictSizeMin" : 0.7,
+    "DerelictSizeMax" : 0.9,
+    "DerelictWidthMin" : 0.7,
+    "DerelictWidthMax" : 0.9,
+    "MinEnergy" : 10000,
+    "NPCDeviceRepairHealthPerHour" : 1500,
+
+    "WeaponsTier" : 4,
+    "MaxClassPoints" : 215,
+    "MaxPointDefense" : 4,
+
+    "MaxShields" : 4,
+    "MinShields" : 2,
+
+    "Visual_EngineCurvatureSign" : -1,
+    "Visual_EnginesPerRow" : 10,
+    "Visual_EngineDensity" : 0.09,
+    "Visual_DeviceMaxScale" : 4.5,
+
+    "CombatMotionHover" : 4.5,
+    "CombatMotionRotation" : 1.2,
+    "CombatMotionSpeed" : 0.2,
+
+    "FluxSoftVentPerHour" : 870,
+
+    "FluxBonus" : 1110,
+    "MaxFluxCapacity" : 5000,
+    "MaxFluxVents" : 18,
+    "HPBonus" : 10000,
+    "NPCHPBonus" : 4050,
+    "ViewScale" : 2.25,
+
+    "BaseEvasion" : 0.03,
+
+    "ViewZoneWidth" : [
+        0.0, 1.0,
+        0.9, 1.0,
+        1.0, 0.9
+    ],
+
+    "CombatBreachCapsuleChance" : 0.12,
+
+    "NPCSizeRange" : [
+        0.0, 2700,
+        0.5, 3700,
+        1.0, 5500
+    ],
+    "NumThrustersChance" : [
+        0.0, 4.0,
+        1.0, 16.0
+    ],
+    "NumShortRangeDrivesChance" : [
+        0.0, 2.0,
+        1.0, 6.0
+    ],
+    "NumLongRangeDrivesChance" : [
+        0.0, 1.0,
+        1.0, 2.0
+    ],
+    "Rarity" : 0.2,
+    "OriginDifficultyChance" : [
+        0.0, 0.0,
+        0.7, 0.0,
+        0.8, 0.5,
+        1.0, 1.0
+    ]
+}

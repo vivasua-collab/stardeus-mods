@@ -1,0 +1,7 @@
+{
+    "Id" : "UI/Research/Panel/Researched",
+    // "Hex" : "745487",
+    "Hex" : "52C4CC",
+    "Alpha" : 1,
+    "SkipAtlas" : true
+}

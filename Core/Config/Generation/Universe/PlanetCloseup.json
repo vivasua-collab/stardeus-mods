@@ -1,0 +1,10 @@
+{
+    "Id" : "PlanetCloseup",
+    "Icon" : "Icons/Color/Planet",
+    "InheritParentLooks" : true,
+    "StarfieldSizeMul" : 2.5,
+    "StarmapSizeMul" : 50.0,
+    "StarmapDecoration" : true,
+    "CanBeOwned" : false,
+    "SpawnChance" : 0.0
+}

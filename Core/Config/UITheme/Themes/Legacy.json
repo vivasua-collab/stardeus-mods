@@ -1,0 +1,38 @@
+{
+    // The darker, more purple look the UI had before themes existed (v0.14 and earlier),
+    // tuned after a community version that matched the old screenshots more closely.
+    // PanelHeader (indigo) and PanelFooter (darkest) swap Default's surface order on purpose:
+    // the old UI had the indigo in its header bars. ProgressFill is overridden because Default's
+    // PanelFooter+L10 would vanish on the indigo PanelHeader progress track.
+    "Name": "Legacy",
+    "Colors": {
+        "White": "#EFE3F7",
+        "Black": "#221C28",
+
+        "PanelHeader": "#120948",
+        "PanelTop": "#18032A",
+        "PanelContent": "#201A26",
+        "PanelFooter": "#0B062A",
+
+        "ButtonSlot": "#0B062A",
+        "ButtonPanel": "#280546",
+        "ButtonPanelFancy": "#280546",
+
+        "Accent": "#FFC900",
+
+        "AlertYellow": "Accent",
+
+        "Button2": "#120948",
+        "ProgressFill": "ButtonPanel+L10"
+    },
+    "Images": {
+        // Tabbed windows (Surgery, Codex, Log, Policies) stay purple instead of the grey PanelContent
+        "TabPanelBody": {
+            "Color": "PanelTop",
+            "Image": "UI/Panels/PanelRectShadow",
+            "ImageType": "Sliced",
+            "ImageBorderLBRT": [ 48, 48, 48, 48 ],
+            "ImagePPUMultiplier": 4
+        }
+    }
+}

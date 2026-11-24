@@ -1,0 +1,16 @@
+{
+    "Id" : "BusinessOwner",
+    "Species" : [ "Human" ],
+    "AgePhaseIds" : [ "MidLife", "Retirement" ],
+    "RoleTypes" : [ "Smart", "Rich" ],
+    "AdjustsSkills" : [
+        {
+            "JobId" : "Social",
+            "Adjustment" : 4
+        },
+        {
+            "JobId" : "Cooking",
+            "Adjustment" : -1
+        }
+    ]
+}

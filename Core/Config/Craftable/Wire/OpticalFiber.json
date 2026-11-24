@@ -1,0 +1,12 @@
+{
+    "Type": "Wire2",
+    "Ingredients": [
+        { "TypeId" : "Glass", "StackSize" : 1 },
+        { "TypeId" : "Plastic", "StackSize" : 1 }
+    ],
+    "IgnoreMarket" : true,
+    "OutputMultiplier" : 1,
+    "ProductDefId": "Obj/Materials/OpticalFiber",
+    "ProductionTimeHours": 4.0,
+    "EnergyCost": 30.0
+}

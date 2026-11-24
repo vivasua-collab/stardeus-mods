@@ -1,0 +1,10 @@
+{
+    "Id" : "SpaceStation01",
+    "Probability" : 1.0,
+    "StarmapSizeMul" : 10.0,
+    "StarfieldSizeMul" : 0.5,
+    "OrderDist" : -20,
+    "KeepUprightInStarfield" : true,
+    "IsConstantSizeInStarmap" : false,
+    "Sprite" : "SpaceObjects/Stations/SpaceStation01"
+}

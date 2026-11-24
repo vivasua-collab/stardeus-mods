@@ -1,0 +1,26 @@
+{
+    "Id" : "Research/Economy/StockMarket",
+    "Tier" : 2,
+    "IsAbstract" : true,
+    "PreviewIcon" : "Icons/Color/StockMarket",
+    "NameKey" : "research.stockmarket",
+    "Researchable" : {
+        "IsTreeNode" : true,
+        "Prerequisites" : [
+            "Research/Economy/TradePortal"
+        ],
+        "UnlockEffects" : [
+            "StockMarketUnlocked"
+        ],
+        "DatoidCosts" : [
+            {
+                "TypeId" : "DatoidBasic",
+                "StackSize" : 10
+            },
+            {
+                "TypeId" : "DatoidTech",
+                "StackSize" : 6
+            }
+        ]
+    }
+}

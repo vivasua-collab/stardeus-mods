@@ -1,0 +1,26 @@
+{
+    "Id" : "Research/Energy/StorageNuclear",
+    "Tier" : 4,
+    "IsAbstract" : true,
+    "PreviewIcon" : "Icons/Color/Radioactive",
+    "Researchable" : {
+        "IsTreeNode" : true,
+        "Prerequisites" : [
+            "Research/Energy/SolarEfficient"
+        ],
+        "DatoidCosts" : [
+            {
+                "TypeId" : "DatoidEnergy",
+                "StackSize" : 12
+            },
+            {
+                "TypeId" : "DatoidTechHigh",
+                "StackSize" : 9
+            },
+            {
+                "TypeId" : "DatoidNuclear",
+                "StackSize" : 12
+            }
+        ]
+    }
+}

@@ -1,0 +1,10 @@
+{
+    "Id" : "Text/MainMenuButton",
+
+    "Color" : "UI/Text/Main",
+    "Alpha" : 1,
+
+    "TextFontSize" : 28,
+    // "TextFontStyles" : [ "UpperCase" ],
+    "TextOverflowMode" : "Ellipsis"
+}

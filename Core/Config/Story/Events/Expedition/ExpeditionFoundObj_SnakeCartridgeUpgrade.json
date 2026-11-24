@@ -1,0 +1,24 @@
+{
+    // C# implementation id.
+    "EventId": "ExpeditionFoundObj",
+    "Points": 10,
+    // Options: Negative, Positive, Neutral, Raid
+    "OutcomeType": "Positive",
+    // Full list is in StoryEventFlags class
+    "EventFlags": [
+        "Expedition",
+        "OnDemand",
+        "Anomaly"
+    ],
+    "MinRepeatDelayDays": 120,
+    "Properties": [
+        { "Key": "LootDefId", "String": "Obj/Upgrades/SnakeCartridgeUpgrade" },
+        { "Key": "MinQuantity", "Int": 1 },
+        { "Key": "MaxQuantity", "Int": 1 },
+        { "Key": "FailureChance", "Float": 0.03 }
+    ],
+    "Require": {
+        "SectorDifficulty": 0.0,
+        "Days": 50
+    }
+}

@@ -1,0 +1,60 @@
+{
+    "Id" : "Virus",
+    "AttitudeChances" : [
+        {
+            "FactionId" : "Player",
+            "Chance" : [
+                0.0, -0.4,
+                1.0, -0.8
+            ]
+        },
+        {
+            "FactionId" : "Adventurer",
+            "Chance" : [
+                0.0, -0.3,
+                1.0, -0.6
+            ]
+        },
+        {
+            "FactionId" : "Capitalist",
+            "Chance" : [
+                0.0, -0.1,
+                1.0, -0.4
+            ]
+        },
+        {
+            "FactionId" : "OldEarth",
+            "Chance" : [
+                0.0, -0.2,
+                1.0, -0.3
+            ]
+        },
+        {
+            "FactionId" : "Scavenger",
+            "Chance" : [
+                0.0, 0.2,
+                1.0, -0.2
+            ]
+        },
+        {
+            "FactionId" : "Pirate",
+            "Chance" : [
+                0.0, -0.1,
+                1.0, -0.2
+            ]
+        },
+        {
+            "FactionId" : "Sentinel",
+            "Chance" : [
+                0.0, -0.8,
+                1.0, -0.9
+            ]
+        }
+    ],
+    "DefaultAttitude" : {
+        "Chance" : [
+            0.0, -0.3,
+            1.0, -0.5
+        ]
+    }
+}

@@ -1,0 +1,10 @@
+{
+    "Id" : "Obj/Materials/Nanobots",
+    "Type" : "CFD",
+    "Groups" : [ "Electronics", "Robotics" ],
+    "Value" : 1100.0,
+    "Rarity" : 0.2,
+    "TraderQuantity" : 5.0,
+    "MinSectorDifficulty" : 0.7,
+    "Volatility" : 0.0029
+}

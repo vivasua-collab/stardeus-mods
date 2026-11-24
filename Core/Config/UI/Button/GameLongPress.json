@@ -1,0 +1,17 @@
+{
+    "Id" : "Button/GameLongPress",
+
+    "ChildrenKeys" : [
+        "Panel",
+        "Selectable",
+        "Text",
+        "ActiveOverlay"
+    ],
+
+    "ChildrenIds" : [
+        "Panel/ColorlessButton",
+        "Selectable/Default",
+        "Text/GameButton",
+        "Overlay/LongPress"
+    ]
+}

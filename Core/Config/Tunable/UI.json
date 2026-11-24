@@ -1,0 +1,199 @@
+{
+    "Ints" : [
+        { "Key" : "UIFavMatGroupOrder_Food", "Int" : -100 },
+        { "Key" : "UIFavMatGroupOrder_Hyperfuel", "Int" : -95 },
+        { "Key" : "UIFavMatGroupOrder_Plates", "Int" : -90 },
+        { "Key" : "UIFavMatGroupOrder_Electronics", "Int" : -80 },
+        { "Key" : "UIFavMatGroupOrder_Components", "Int" : -70 },
+        { "Key" : "UIFavMatGroupOrder_Ore", "Int" : -60 },
+        { "Key" : "UIFavMatGroupOrder_FoodIngredients", "Int" : -50 },
+        { "Key" : "UIFavMatGroupOrder_Plants", "Int" : -40 },
+        { "Key" : "UIFavMatGroupOrder_Terraforming", "Int" : 5 },
+        { "Key" : "UIFavMatGroupOrder_Datoids", "Int" : 10 },
+        { "Key" : "UIFavMatGroupOrder_Pigments", "Int" : 20 },
+        { "Key" : "UIFavMatGroupOrder_Upgrades", "Int" : 25 },
+        { "Key" : "UIFavMatGroupOrder_Weapons", "Int" : 30 },
+        { "Key" : "UIFavMatGroupOrder_Ammo", "Int" : 31 },
+        { "Key" : "UIFavMatGroupOrder_Equipment", "Int" : 40 },
+        { "Key" : "UIFavMatGroupOrder_Clothing", "Int" : 50 },
+
+        { "Key" : "UIGroupOrder_Top", "Int" : -32000 },
+        { "Key" : "UIGroupOrder_Stats", "Int" : -30000 },
+        { "Key" : "UIGroupOrder_Condition", "Int" : -29000 },
+        { "Key" : "UIGroupOrder_Management", "Int" : -28000 },
+        { "Key" : "UIGroupOrder_Environment", "Int" : -27000 },
+        { "Key" : "UIGroupOrder_Activity", "Int" : -26000 },
+        { "Key" : "UIGroupOrder_Misc", "Int" : -25000 },
+
+        { "Key" : "UIListOrder_ElectricNode", "Int" : -40000 },
+        { "Key" : "UIListOrder_OperatableDevice", "Int" : -38000 },
+
+        { "Key" : "UIListOrder_Persona", "Int" : -30000 },
+        { "Key" : "UIListOrder_Transform", "Int" : -30000 },
+        { "Key" : "UIListOrder_TileTransform", "Int" : -30000 },
+        { "Key" : "UIListOrder_ObjGraphics", "Int" : -30000 },
+        { "Key" : "UIListOrder_Faction", "Int" : -20800 },
+        { "Key" : "UIListOrder_Upgrades", "Int" : -20750 },
+        { "Key" : "UIListOrder_Constructable", "Int" : -20700 },
+        { "Key" : "UIListOrder_Attachments", "Int" : -20700 },
+        { "Key" : "UIListOrder_Damageable", "Int" : -20680 },
+        { "Key" : "UIListOrder_HullIntegrity", "Int" : -20670 },
+        { "Key" : "UIListOrder_Traits", "Int" : -20600 },
+        { "Key" : "UIListOrder_Jobs", "Int" : -20500 },
+        { "Key" : "UIListOrder_Worker", "Int" : -20450 },
+        { "Key" : "UIListOrder_Health", "Int" : -20400 },
+        { "Key" : "UIListOrder_Flammable", "Int" : -20300 },
+        { "Key" : "UIListOrder_OutdoorsCheck", "Int" : -20270 },
+        { "Key" : "UIListOrder_HeatProducer", "Int" : -20250 },
+        { "Key" : "UIListOrder_EnergyNode", "Int" : -20200 },
+        { "Key" : "UIListOrder_Motion", "Int" : -20100 },
+        { "Key" : "UIListOrder_Mood", "Int" : -20000 },
+        { "Key" : "UIListOrder_Needs", "Int" : -19900 },
+        { "Key" : "UIListOrder_Inventory", "Int" : -19890 },
+        { "Key" : "UIListOrder_ExpeditionMember", "Int" : -19860 },
+        { "Key" : "UIListOrder_Pettable", "Int" : -19850 },
+        { "Key" : "UIListOrder_CleaningBot", "Int" : -19850 },
+        { "Key" : "UIListOrder_DockableBot", "Int" : -18840 },
+        { "Key" : "UIListOrder_Brain", "Int" : -18900 },
+        { "Key" : "UIListOrder_AIGoal", "Int" : -18800 },
+        { "Key" : "UIListOrder_Labor", "Int" : -18700 },
+
+        { "Key" : "UIListOrder_CurrencyMiner", "Int" : 20020 },
+        { "Key" : "UIListOrder_ShipComputerEfficiency", "Int" : 20030 },
+        { "Key" : "UIListOrder_ShipComputer", "Int" : 20090 },
+        { "Key" : "UIListOrder_CPUModule", "Int" : 20100 },
+        { "Key" : "UIListOrder_GPUModule", "Int" : 20150 },
+        { "Key" : "UIListOrder_MemoryModule", "Int" : 20200 },
+        { "Key" : "UIListOrder_DiskModule", "Int" : 20300 },
+
+        { "Key" : "UIListOrder_Crafter", "Int" : 29390 },
+
+        { "Key" : "UIListOrder_MatHaulTarget", "Int" : 29501 },
+        { "Key" : "UIListOrder_RawMaterialGenerator", "Int" : 29502 },
+        { "Key" : "UIListOrder_RefillableStorage", "Int" : 29503 },
+        { "Key" : "UIListOrder_MatStorage", "Int" : 29590 },
+        { "Key" : "UIListOrder_UnstoredMat", "Int" : 29591 },
+
+        { "Key" : "UIListOrder_Cleanable", "Int" : 29900 },
+        { "Key" : "UIListOrder_LightSource", "Int" : 29990 },
+
+        // All unlisted components will use 30000
+
+        { "Key" : "UIListOrder_Reinstallable", "Int" : 40000 },
+        { "Key" : "UIListOrder_Movable", "Int" : 41000 },
+        { "Key" : "UIListOrder_BuildACopy", "Int" : 42000 },
+
+        { "Key" : "UIListOrder_TileLabel", "Int" : 30010 },
+
+        { "Key" : "UIListOrder_entity.misc", "Int" : 32000 },
+
+        { "Key" : "ToolOrder_place_tiles", "Int" : 10 },
+        { "Key" : "ToolOrder_connect", "Int" : 20 },
+        { "Key" : "ToolOrder_repair", "Int" : 30 },
+        { "Key" : "ToolOrder_store", "Int" : 40 },
+        { "Key" : "ToolOrder_remove_tiles", "Int" : 50 },
+        { "Key" : "ToolOrder_manage_ads", "Int" : 60 },
+        // { "Key" : "ToolOrder_plan", "Int" : 15 },
+
+        { "Key" : "ToolOrder_PlaceTiles_Floors", "Int" : 10 },
+        { "Key" : "ToolOrder_PlaceTiles_Walls", "Int" : 20 },
+        { "Key" : "ToolOrder_PlaceTiles_Doors", "Int" : 30 },
+        { "Key" : "ToolOrder_PlaceTiles_Lights", "Int" : 35 },
+
+        { "Key" : "ToolOrder_PlaceTiles_Energy", "Int" : 40 },
+        { "Key" : "ToolOrder_PlaceTiles_Production", "Int" : 50 },
+        { "Key" : "ToolOrder_PlaceTiles_Computing", "Int" : 60 },
+        { "Key" : "ToolOrder_PlaceTiles_Facilities", "Int" : 70 },
+
+        { "Key" : "ToolOrder_PlaceTiles_Atmosphere", "Int" : 80 },
+        { "Key" : "ToolOrder_PlaceTiles_Food", "Int" : 90 },
+        { "Key" : "ToolOrder_PlaceTiles_Furniture", "Int" : 100 },
+        { "Key" : "ToolOrder_PlaceTiles_Entertainment", "Int" : 110 },
+        { "Key" : "ToolOrder_PlaceTiles_Decorations", "Int" : 120 },
+
+        { "Key" : "ToolOrder_PlaceTiles_Comms", "Int" : 130 },
+        { "Key" : "ToolOrder_PlaceTiles_SpaceTravel", "Int" : 140 },
+        { "Key" : "ToolOrder_PlaceTiles_Security", "Int" : 150 },
+        { "Key" : "ToolOrder_PlaceTiles_Special", "Int" : 160 },
+
+        { "Key" : "Research_UI_RootNode_Weight", "Int" : 100 },
+        { "Key" : "Research_UI_Node_Weight", "Int" : 1000 },
+        { "Key" : "Research_UI_Node_Weight2", "Int" : 100 },
+        { "Key" : "Research_UI_EdgeSeparation", "Int" : 50 },
+        { "Key" : "Research_UI_Iterations", "Int" : 100 },
+        { "Key" : "Research_UI_ProjectionIterations", "Int" : 10 },
+
+        // Following values are for Incremental layout type
+        { "Key" : "Research_UI_BrandesThreshold", "Int" : 600 },
+        { "Key" : "Research_UI_GroupSplit", "Int" : 2 },
+        { "Key" : "Research_UI_OrderingRepetitionCoef", "Int" : 20 },
+        { "Key" : "Research_UI_OrderingMaxPasses", "Int" : 24 },
+        { "Key" : "Research_UI_SwapStepsBound", "Int" : 20 },
+
+        { "Key" : "RadialMenu_MouseExitDistance", "Int" : 400 }
+    ],
+    "Floats" : [
+        { "Key" : "CameraWASDSpeed", "Float" : 1.5 },
+        { "Key" : "CameraWASDAccelTime", "Float" : 0.1 },
+
+        { "Key" : "CullDistance_Decals", "Float" : 50 },
+        { "Key" : "CullDistance_Info", "Float" : 120 },
+        { "Key" : "CullDistance_Names", "Float" : 30 },
+
+        { "Key" : "StarmapTrajectoryThickness", "Float" : 1.5 },
+        { "Key" : "StarmapExitRingThickness", "Float" : 1.5 },
+        { "Key" : "StarmapIconsMinSpacing", "Float" : 160 },
+        { "Key" : "ResearchItemCollapseScale", "Float" : 0.6 },
+        { "Key" : "BeingNameSize", "Float" : 1.0 },
+        { "Key" : "BeingNameDistScaleFrom", "Float" : 1.5 },
+        { "Key" : "BeingNameDistScaleTo", "Float" : 3.0 },
+        { "Key" : "BeingNameDistRangeFrom", "Float" : 2.0 },
+        { "Key" : "BeingNameDistRangeTo", "Float" : 7.0 },
+
+        { "Key" : "UGUIScrollSpeed", "Float" : 15.0 },
+        { "Key" : "UGUIScrollSpeed_Gamepad", "Float" : 0.5 },
+        { "Key" : "UGUIScrollSpeedMax", "Float" : 32.0 },
+
+        { "Key" : "FreeSelectHoverMaxDistance", "Float" : 60 },
+        { "Key" : "FreeSelectGoalHoverBoostDelay", "Float" : 3.0 },
+
+        { "Key" : "Research_UI_MainNode_WidthMul", "Float" : 1.0 },
+        { "Key" : "Research_UI_Node_DepthEdgeWeightMul", "Float" : 3.0 },
+
+        // Following values are for Incremental layout type
+        { "Key" : "Research_UI_AttractiveForceConstant", "Float" : 1 },
+        { "Key" : "Research_UI_Decay", "Float" : 0.9 },
+        { "Key" : "Research_UI_Friction", "Float"   : 0.9 },
+        { "Key" : "Research_UI_BendPenalty", "Float" : 0.2 },
+        { "Key" : "Research_UI_RootNode_Size", "Float" : 5 },
+        { "Key" : "Research_UI_Node_Width", "Float" : 58 },
+        { "Key" : "Research_UI_Node_Height", "Float" : 50 },
+        { "Key" : "Research_UI_Node_Increment", "Float" : 10 },
+        { "Key" : "Research_UI_Node_MulX", "Float" : 7 },
+        { "Key" : "Research_UI_Node_MulY", "Float" : 5 },
+        { "Key" : "Research_UI_LineShift", "Float" : 0 },
+        { "Key" : "Research_UI_LaneGap", "Float" : 36 },
+        { "Key" : "Research_UI_EdgeTightPadding", "Float" : 20 },
+        { "Key" : "Research_UI_EdgeLoosePadding", "Float" : 50 },
+        { "Key" : "Research_UI_EdgeConeAngle", "Float" : 0.2 },
+
+        { "Key" : "UIEventBellDelaySecondsShort", "Float" : 5.0 },
+        { "Key" : "UIEventBellDelaySecondsLong", "Float" : 20.0 },
+
+        { "Key" : "UICodexPopupDelaySeconds", "Float" : 1 },
+        { "Key" : "UITooltipFadeInSeconds", "Float" : 0.1 }
+    ],
+    "Strings" : [
+        { "Key" : "Research_UI_Node_Layout", "String" : "Layered" }
+    ],
+    "Bools" : [
+        { "Key" : "Research_UI_AvoidOverlaps", "Bool" : true },
+        { "Key" : "Research_UI_RouteEdges", "Bool" : true },
+        { "Key" : "Research_UI_ApplyForces", "Bool" : true },
+        { "Key" : "Research_UI_ApproximateRouting", "Bool" : true },
+        { "Key" : "Research_UI_LiftCrossEdges", "Bool" : false },
+        { "Key" : "Research_UI_RouteMultiEdgesAsBundles", "Bool" : true },
+        { "Key" : "BeingsListUI_ShowEnemies", "Bool" : true },
+        { "Key" : "NotificationHub_ForceStopClock", "Bool" : true }
+    ]
+}

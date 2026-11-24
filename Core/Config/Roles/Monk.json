@@ -1,0 +1,20 @@
+{
+    "Id" : "Monk",
+    "Species" : [ "Human" ],
+    "LovesJobTypes" : [ "Cleaning", "Cooking" ],
+    "RoleTypes" : [ "Poor", "Good" ],
+    "AdjustsSkills" : [
+        {
+            "JobId" : "Social",
+            "Adjustment" : -2
+        },
+        {
+            "JobId" : "Cooking",
+            "Adjustment" : 4
+        },
+        {
+            "JobId" : "Cleaning",
+            "Adjustment" : 4
+        }
+    ]
+}

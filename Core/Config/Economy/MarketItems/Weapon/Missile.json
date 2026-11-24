@@ -1,0 +1,9 @@
+{
+    "Id" : "Obj/Ammo/Missile",
+    "Type" : "CFD",
+    "Groups" : [ "Weapon" ],
+    "Value" : 4500.0,
+    "TraderQuantity" : 20.0,
+    "Rarity" : 0.3,
+    "Volatility" : 0.0029
+}

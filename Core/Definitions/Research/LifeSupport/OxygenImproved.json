@@ -1,0 +1,22 @@
+{
+    "Id" : "Research/LifeSupport/OxygenImproved",
+    "Tier" : 2,
+    "IsAbstract" : true,
+    "PreviewIcon" : "Icons/Color/Oxygen",
+    "Researchable" : {
+        "IsTreeNode" : true,
+        "Prerequisites" : [
+            "Research/LifeSupport/AtmosphereControl"
+        ],
+        "DatoidCosts" : [
+            {
+                "TypeId" : "DatoidTech",
+                "StackSize" : 9
+            },
+            {
+                "TypeId" : "DatoidPhyto",
+                "StackSize" : 5
+            }
+        ]
+    }
+}

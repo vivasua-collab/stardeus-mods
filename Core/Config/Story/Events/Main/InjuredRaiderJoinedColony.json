@@ -1,0 +1,15 @@
+{
+    // C# implementation id. Multiple configurations can point to a single implementation.
+    "EventId": "InjuredRaiderJoinedColony",
+    // How much does this story event cost to run
+    "Points": 7,
+    // Options: Negative, Positive, Neutral, Raid
+    "OutcomeType": "Positive",
+    // Full list is in StoryEventFlags class
+    "EventFlags": [
+        "Being",
+        "ColonyGrowthBio"
+    ],
+    // Population gating lives in ColonyGrowth (intent + hold), not in a Require here
+    "MinRepeatDelayDays": 50
+}

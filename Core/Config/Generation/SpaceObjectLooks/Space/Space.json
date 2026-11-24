@@ -1,0 +1,8 @@
+{
+    "Id" : "Space",
+    "Probability" : 1.0,
+    "FixedStarmapSize" : 0.25,
+    "KeepUprightInStarfield" : true,
+    "IsConstantSizeInStarmap" : true,
+    "Sprite" : "Icons/White/Circle"
+}

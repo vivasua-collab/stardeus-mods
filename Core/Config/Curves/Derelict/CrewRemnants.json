@@ -1,0 +1,13 @@
+{
+    // Ship Size -> number of crew remnants spawned on a derelict resulting from that ship
+    // being defeated in combat. Split into dead/wounded/unscathed by DerelictCrewDeadChance
+    // and DerelictCrewWoundedChance. The points follow the NPC size ranges of the ship
+    // classes (Config/Ships/Classes NPCSizeRange), so each class keeps its usual crew count.
+    "FloatSet" : [
+        50,   2.0,
+        650,  3.0,
+        900,  5.0,
+        1500, 9.0,
+        2300, 12.0
+    ]
+}

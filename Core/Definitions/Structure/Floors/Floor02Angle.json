@@ -1,0 +1,14 @@
+{
+    "BuildGroup" : "FloorAngle",
+    "Layer" : "Floor",
+    "ParentId" : "Structure/Floors/Floor01Angle",
+    "UseParentTexts" : true,
+    "Components" : [
+        {
+            "Component" : "TileGraphics",
+            "Properties" : [
+                { "Key" : "Graphic", "String": "Structure/Floors/Floor02Angle" }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,8 @@
+{
+    // Sight -> WorkSpeed multiplier. Sight weighs 0.2-0.7 on work and never gives a bonus
+    "FloatSet" : [
+        0.0, 0.6,
+        0.7, 0.93,
+        1.0, 1.0
+    ]
+}

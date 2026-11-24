@@ -1,0 +1,18 @@
+{
+    "Type": "Animal",
+    "Ingredients": [
+        { "TypeId" : "Protein", "StackSize" : 10 },
+        { "TypeId" : "Carbon", "StackSize" : 5 },
+        { "TypeId" : "Water", "StackSize" : 6 },
+        { "TypeId" : "StemCells", "StackSize" : 80 }
+    ],
+    "DisposableOutput": [
+        { "TypeId" : "Protein", "StackSize" : 1 },
+        { "TypeId" : "Water", "StackSize" : 1 },
+        { "TypeId" : "StemCells", "StackSize" : 1 },
+        { "TypeId" : "CrawlerGoo", "StackSize" : 5 }
+    ],
+    "ProductDefId": "Beings/Crawler01",
+    "ProductionTimeHours": 168.0,
+    "EnergyCost": 30.0
+}

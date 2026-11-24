@@ -1,0 +1,15 @@
+{
+    "Type": "Upgrades",
+    "Ingredients": [
+        { "TypeId" : "Microchip", "StackSize" : 5 },
+        { "TypeId" : "BatteryCell", "StackSize" : 1 },
+        { "TypeId" : "Plastic", "StackSize" : 1 },
+        { "TypeId" : "SiliconWafer", "StackSize" : 2 },
+        { "TypeId" : "Transistor", "StackSize" : 5 },
+        { "TypeId" : "CopperWire", "StackSize" : 5 }
+    ],
+    "IgnoreMarket" : true,
+    "ProductDefId": "Obj/Upgrades/EnergyEfficiencyUpgrade",
+    "ProductionTimeHours": 8.0,
+    "EnergyCost": 50.0
+}

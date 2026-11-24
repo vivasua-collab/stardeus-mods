@@ -1,0 +1,9 @@
+{
+    "Id" : "Text/InputPlaceholder",
+
+    "Color" : "UI/Text/Main",
+    "Alpha" : 0.5,
+
+    "TextFontSize" : 24,
+    "TextMarginLTRB" : [ 12, 0, 12, 0 ]
+}

@@ -1,0 +1,52 @@
+{
+    // C# implementation id.
+    // Multiple configurations can point to a single implementation.
+    "AspectId" : "Schedule",
+    // Variables for the schedule on / off
+    "Properties" : [
+        { "Key" : "Outcome", "String" : "Positive" },
+        // Days until the first Positive window opens on a new game, at the latest. The opening
+        // is scripted (Curated_Balanced); random events come after it.
+        {
+            "Key" : "InitialDelayDaysCurve",
+            "FloatSet" : [
+                0.0, 12.0,
+                1.0, 15.0
+            ]
+        },
+        // The opening waits for the player, not the calendar: the first window opens this many
+        // days after the radar is built, if that is sooner than the delay above. A fast player
+        // finishes the tutorial spine in a third of the time a slow one needs
+        { "Key" : "OpenAfterQuestBool", "String" : "HasRadar" },
+        {
+            "Key" : "OpenAfterDaysCurve",
+            "FloatSet" : [
+                0.0, 0.5,
+                1.0, 1.5
+            ]
+        },
+        // Periodic events a window may start (rolled per window). Without a cap a window
+        // full of cheap events fires until the point budget is gone.
+        {
+            "Key" : "EventsPerCycleCurve",
+            "FloatSet" : [
+                0.0, 1.0,
+                1.0, 2.0
+            ]
+        },
+        {
+            "Key" : "DaysCurve_On",
+            "FloatSet" : [
+                0.0, 2.0,
+                1.0, 3.0
+            ]
+        },
+        {
+            "Key" : "DaysCurve_Off",
+            "FloatSet" : [
+                0.0, 7.0,
+                1.0, 10.0
+            ]
+        }
+    ]
+}

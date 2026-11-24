@@ -1,0 +1,43 @@
+{
+    "Id" : "chaos",
+    "Order" : 10,
+    "Aspects" : [
+        // No calm / eventful phases. A memoryless roll (mean time between events) keeps the
+        // Positive / Neutral / Negative windows permanently open and fires at random moments,
+        // so events cluster and leave droughts instead of arriving on a beat
+        "Mtb_Chaos",
+
+        // Assigns story points (more points compared to balanced; an affordability gate here,
+        // not a budget, because Mtb picks with the schedule ignored)
+        "PointAllowance_Neutral_Random",
+        "PointAllowance_Positive_Random",
+        "PointAllowance_Negative_Random",
+        "PointAllowance_Raid_Random",
+
+        // Picks one of the potential events (rules respected; the random generator is the one
+        // that breaks them)
+        "EventPicker_Neutral_Chaos",
+        "EventPicker_Positive_Chaos",
+        "EventPicker_Negative_Chaos",
+        "EventPicker_Raid_Chaos",
+
+        // Handles event transition from starting to ongoing, ticking and expiry
+        "Ongoing",
+
+        // Controls periodic raids (wide spread, wide strength jitter, no opening delay)
+        "Raid_Chaos",
+
+        // Required in every generator for handling stasis wake-ups
+        "StasisWakeUp",
+
+        // Required in every generator: the colony safety net, drops a rescue crew
+        // when nobody aboard can work any more
+        "SecondChance",
+
+        // Required in every generator for executing hooks (events for special objects)
+        "EventHook",
+
+        // Required in every generator to end ongoing events
+        "EventEnd"
+    ]
+}

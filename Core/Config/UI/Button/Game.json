@@ -1,0 +1,18 @@
+{
+    "Id" : "Button/Game",
+
+    "ChildrenKeys" : [
+        "Panel",
+        "Selectable",
+        "Text",
+        "ActiveOverlay"
+    ],
+
+    "ChildrenIds" : [
+        "Panel/ColorlessButton",
+        "Selectable/Default",
+        "Text/GameButton",
+        "Overlay/Button"
+    ]
+
+}

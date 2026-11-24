@@ -1,0 +1,112 @@
+{
+    "QuestFlags" : [ "Main", "AutoAdd", "Unique" ],
+    "TitleKey" : "quest.main.eliminate.sentinel.hq.title",
+    "DescKey" : "quest.main.eliminate.sentinel.hq.desc",
+    "QuestProviders" : [
+        "ShipComputer"
+    ],
+    "AvailableWhen": [
+        "EnabledElysium"
+    ],
+    "SetOnComplete" : [
+        "SentinelEliminated",
+        "ReachedEndGame"
+    ],
+    "Variables" : [
+        {
+            // Deliberately NOT Main_SentinelPortId - BecomeRogueAI nukes that port on the
+            // way to going rogue, so this endgame needs a second, still-standing one.
+            // The difficulty band matches SentinelBase.json's own DifficultyChance curve
+            // (0.5 - 0.75), or no matching sector could ever be found.
+            "Id" : "SentinelHQ",
+            "Type" : "SectorPOI",
+            "Config" : [
+                { "Key" : "CanBeVisited", "Bool" : true },
+                { "Key" : "MinRegionsAway", "Int" : 1 },
+                { "Key" : "MinRegionDifficulty", "Float" : 0.4 },
+                { "Key" : "MaxRegionDifficulty", "Float" : 0.8 },
+                { "Key" : "SectorTemplate", "String" : "Planet" },
+                { "Key" : "POIConfigId", "String" : "Port" },
+                { "Key" : "FactionId", "String" : "Sentinel" },
+                { "Key" : "Var_Start", "String" : null },
+                { "Key" : "SkipRegionsWithoutRelay", "Bool" : false },
+                { "Key" : "SharedVar_SavePOIId", "String" : "Main_SentinelHQId" }
+            ]
+        }
+    ],
+    "Steps" : [
+        {
+            "Id": "ResearchSignalAmplifier",
+            "Type" : "UnlockResearch",
+            "StepFlags" : [ "ActiveOnStart" ],
+            "Config" : [
+                { "Key" : "Research", "String" : "Research/RogueAI/SignalAmplifier" }
+            ],
+            "SetOnComplete" : [
+                "ResearchedSignalAmplifier"
+            ]
+        },
+        {
+            "Id": "InstallSignalAmplifier",
+            "Type" : "InstallUpgrade",
+            "StepFlags" : [ "HideInactive" ],
+            "ActivateWhen" : [
+                "ResearchedSignalAmplifier"
+            ],
+            "Config" : [
+                { "Key" : "UpgradeId", "String" : "SignalAmplifier" },
+                { "Key" : "TargetDevice", "String" : "Objects/Devices/IntrusionSuite" }
+            ],
+            "SetOnComplete" : [
+                "InstalledSignalAmplifier"
+            ]
+        },
+        {
+            // Runs in parallel with the research/build track - travel is the slow part.
+            "Id" : "ReachSentinelHQ",
+            "Type" : "GoToTargetSector",
+            "StepFlags" : [ "ActiveOnStart" ],
+            "SetOnComplete" : [
+                "ReachedSentinelHQ"
+            ],
+            "Config" : [
+                { "Key" : "Var_Target", "String" : "SentinelHQ" }
+            ]
+        },
+        {
+            "Id" : "HackSentinelHQ",
+            "Type" : "HackSentinelPort",
+            "StepFlags" : [ "HideInactive", "CompletesQuest", "FailsQuest" ],
+            "ActivateWhen" : [
+                "InstalledSignalAmplifier",
+                "ReachedSentinelHQ"
+            ],
+            "Config" : [
+                { "Key" : "Var_Target", "String" : "SentinelHQ" }
+            ]
+        }
+    ],
+    "Rewards" : [
+        {
+            "Id" : "CashMain",
+            "Type" : "Money_NetWorth",
+            "Config" : [
+                { "Key" : "NetWorthCurve", "FloatSet" : [
+                    0.0, 0.02,
+                    0.95, 0.1,
+                    1.0, 0.2
+                ] },
+                { "Key" : "AmountMin", "Int" : 50000 },
+                { "Key" : "AmountMax", "Int" : 500000 }
+            ]
+        },
+        {
+            "Id" : "VirusAttitude",
+            "Type" : "FactionAttitude",
+            "Config" : [
+                { "Key" : "FactionId", "String" : "Virus" },
+                { "Key" : "AttitudeChange", "Int" : 100 }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,26 @@
+{
+    "Id" : "Research/ShipCombat/WeaponsPlasma",
+    "Tier" : 5,
+    "IsAbstract" : true,
+    "PreviewIcon" : "Icons/Color/AttackTarget",
+    "Researchable" : {
+        "IsTreeNode" : true,
+        "Prerequisites" : [
+            "Research/ShipCombat/WeaponsMissile"
+        ],
+        "DatoidCosts" : [
+            {
+                "TypeId" : "DatoidTechHigh",
+                "StackSize" : 28
+            },
+            {
+                "TypeId" : "DatoidAlien",
+                "StackSize" : 13
+            },
+            {
+                "TypeId" : "DatoidNuclear",
+                "StackSize" : 14
+            }
+        ]
+    }
+}

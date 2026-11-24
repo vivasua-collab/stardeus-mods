@@ -1,0 +1,8 @@
+{
+    "Id" : "Obj/Parts/Ear/EarHuman",
+    "Type" : "CFD",
+    "Groups" : [ "BodyPart", "BlackMarket" ],
+    "Value" : 150.0,
+    "Rarity" : 0.1,
+    "Volatility" : 0.0015
+}

@@ -1,0 +1,18 @@
+{
+    "Id" : "DerelictZone",
+    "Type" : "DerelictZone",
+    "Surprise" : true,
+    "ContentIsShips" : true,
+    "CheckRegionChance" : true,
+    "FallbackLevel" : 2,
+    "DifficultyChance" : [
+        0.0, 0.25,
+        1.0, 0.3
+    ],
+    // Was [0,1, 0,1, 0.81,2, 1,2], which the old Curve direction check reversed into a flat 2
+    // (STA-1674). Pinned to the 2 that shipped so fixing Curve does not change galaxy gen.
+    "QuantityChance" : [
+        0.0, 2.0,
+        1.0, 2.0
+    ]
+}

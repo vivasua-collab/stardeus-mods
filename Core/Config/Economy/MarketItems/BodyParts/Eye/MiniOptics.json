@@ -1,0 +1,9 @@
+{
+    "Id" : "Obj/Parts/Eye/MiniOptics",
+    "Type" : "CFD",
+    "Groups" : [ "BodyPart", "Robotics" ],
+    "Value" : 400.0,
+    "Rarity" : 0.1,
+    "MinSectorDifficulty" : 0.4,
+    "Volatility" : 0.0014
+}

@@ -1,0 +1,19 @@
+{
+    "Id" : "Weapon_InterceptorTurret",
+    "DefId" : "Objects/Devices/InterceptorTurret",
+    "Tier" : 1,
+    "ClassPoints" : 2,
+
+    // if it would only have one rotation:
+    "ZoneSpriteId" : "Objects/Devices/InterceptorTurret",
+
+    // "ZoneSpriteScale" : 0.5,
+
+    "HP" : 200,
+
+    "Rarity" : 0.25,
+
+    "TargetTypeId" : "ShipWeapon_PointDefense",
+    "EnergyCostPassive": 5,
+    "EnergyCostActive": 25
+}

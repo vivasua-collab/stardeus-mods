@@ -1,0 +1,26 @@
+{
+    "Id" : "Research/Security/FireSuppression",
+    "Tier" : 2,
+    "IsAbstract" : true,
+    "PreviewIcon" : "Icons/Color/Fire",
+    "Researchable" : {
+        "IsTreeNode" : true,
+        "Prerequisites" : [
+            "Research/Security/EmergencySiren"
+        ],
+        "DatoidCosts" : [
+            {
+                "TypeId" : "DatoidBasic",
+                "StackSize" : 9
+            },
+            {
+                "TypeId" : "DatoidTech",
+                "StackSize" : 8
+            },
+            {
+                "TypeId" : "DatoidSynthetic",
+                "StackSize" : 3
+            }
+        ]
+    }
+}

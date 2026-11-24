@@ -1,0 +1,29 @@
+{
+    "Id" : "Research/ShipCombat/EMPShield",
+    "Tier" : 4,
+    "IsAbstract" : true,
+    "NameKey": "obj.upgrades.empshieldupgrade",
+    "PreviewIcon" : "Icons/Color/Magnet",
+    "Researchable" : {
+        "IsTreeNode" : true,
+        "Prerequisites" : [
+            "Research/ShipCombat/FluxCapacitor"
+        ],
+        // 202 by datoid value, inside the current Tier 4 min-max (149-320),
+        // so ResearchEvaluator's tier bounds stay where they were
+        "DatoidCosts" : [
+            {
+                "TypeId" : "DatoidTechHigh",
+                "StackSize" : 16
+            },
+            {
+                "TypeId" : "DatoidEnergy",
+                "StackSize" : 14
+            },
+            {
+                "TypeId" : "DatoidSynthetic",
+                "StackSize" : 10
+            }
+        ]
+    }
+}

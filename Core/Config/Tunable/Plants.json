@@ -1,0 +1,5 @@
+{
+    "Floats" : [
+        { "Key" : "BasePlantGrowthPercentPerDay", "Float" : 0.2 }
+    ]
+}

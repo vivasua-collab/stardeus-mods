@@ -1,0 +1,8 @@
+{
+    "ResponseType" : "Neutral",
+    "TopicType" : "HailRequest",
+    "ToneType" : "Casual",
+    "MessageKeys" : [
+        "ship.chat.hail_req.neutral.casual.*"
+    ]
+}

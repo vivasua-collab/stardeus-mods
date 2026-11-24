@@ -1,0 +1,13 @@
+{
+    "Id" : "Star",
+    "Templates" : [
+        "Star"
+    ],
+    "Shadow" : "#6A5208",
+    "Mid" : "#F5D040",
+    "Highlight" : "#FFF8D8",
+    "Strength" : 0.9,
+    "Intensity" : 1.6,
+    "BrightnessRange" : 0.6,
+    "RimStrength" : 0.24
+}

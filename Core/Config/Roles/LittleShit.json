@@ -1,0 +1,21 @@
+{
+    "Id" : "LittleShit",
+    "Species" : [ "Human" ],
+    "RoleTypes" : [ "Evil" ],
+    "LovesJobTypes" : [ "Demolition", "Shooting" ],
+    "AgePhaseIds" : [ "Childhood" ],
+    "AdjustsSkills" : [
+        {
+            "JobId" : "Melee",
+            "Adjustment" : 3
+        },
+        {
+            "JobId" : "Shooting",
+            "Adjustment" : 2
+        },
+        {
+            "JobId" : "Social",
+            "Adjustment" : -1
+        }
+    ]
+}

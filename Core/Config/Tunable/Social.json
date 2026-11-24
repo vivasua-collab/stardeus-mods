@@ -1,0 +1,18 @@
+{
+    "Ints" : [
+        // If there were no interactions, how long will it take to forget
+        // an acquaintance
+        { "Key" : "ForgetAcquaintancesAfterDays", "Int" : 30 }
+    ],
+    "Floats" : [
+        // When attitude changes towards a being, if Attraction > 0,
+        // Love will change by AttitudeChange * Attraction * SocialLoveRate
+        { "Key" : "SocialLoveRate", "Float" : 1.5 },
+        // When attitude changes towards a being, if SocialAffinity < 0,
+        // Hate will change by AttitudeChange * SocialAffinity * SocialHateRate
+        { "Key" : "SocialHateRate", "Float" : 1.5 },
+        // When attitude changes towards a being, if SocialAffinity > 0,
+        // Friendship will change by AttitudeChange * SocialAffinity * SocialFriendshipRate
+        { "Key" : "SocialFriendshipRate", "Float" : 5 }
+    ]
+}

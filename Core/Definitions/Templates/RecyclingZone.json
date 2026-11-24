@@ -1,0 +1,255 @@
+{
+    "SkipToolListing": true,
+    "Layer": "Objects",
+    "Components": [
+        {
+            "Component": "TileTransform",
+            "Properties": [
+                {
+                    "Key": "Width",
+                    "Int": 9
+                },
+                {
+                    "Key": "Height",
+                    "Int": 7
+                }
+            ]
+        },
+        {
+            "Component": "Passability"
+        },
+        {
+            "Component": "TileGraphics",
+            "Properties": [
+                {
+                    "Key": "Graphic",
+                    "String": "Icons/White/Square"
+                }
+            ]
+        },
+        {
+            "Component": "Template",
+            "Properties": [
+                {
+                    "Key": "Chance",
+                    "Float": 0.7
+                },
+                {
+                    "Key": "MinInstances",
+                    "Int": 1
+                },
+                {
+                    "Key": "MaxInstances",
+                    "Int": 4
+                },
+                {
+                    "Key": "Definitions",
+                    "StringSet": [
+                        "Structure/Walls/Wall02",
+                        "Structure/Walls/Wall02",
+                        "Structure/Walls/Wall02",
+                        "Structure/Walls/Wall02",
+                        "Structure/Walls/Wall02",
+                        "Structure/Walls/Wall02",
+                        "Structure/Walls/Wall02",
+                        "Structure/Walls/Wall02",
+                        "Structure/Walls/Wall02",
+                        "Objects/Devices/Recycler",
+                        "Structure/Doors/Door01",
+                        "Structure/Walls/Wall02",
+                        "Structure/Walls/Wall02",
+                        "Structure/Walls/Wall02",
+                        "Structure/Walls/Wall02",
+                        "Objects/Furniture/TableSteel1x3",
+                        "Structure/Walls/Wall02",
+                        "Structure/Walls/Wall02",
+                        "Objects/Devices/Toilet",
+                        "Structure/Walls/Wall02",
+                        "Structure/Walls/Wall02",
+                        "Structure/Walls/Wall02",
+                        "Objects/Devices/Shower",
+                        "Structure/Walls/Wall02",
+                        "Structure/Walls/Wall02",
+                        "Structure/Walls/Wall02",
+                        "Structure/Walls/Wall02",
+                        "Structure/Walls/Wall02",
+                        "Structure/Doors/Door01",
+                        "Structure/Walls/Wall02",
+                        "Structure/Walls/Wall02",
+                        "Structure/Walls/Wall02"
+                    ]
+                },
+                {
+                    "Key": "Positions",
+                    "Vector2Set": [
+                        {
+                            "x": 0.0,
+                            "y": 1.0
+                        },
+                        {
+                            "x": 0.0,
+                            "y": 2.0
+                        },
+                        {
+                            "x": 0.0,
+                            "y": 3.0
+                        },
+                        {
+                            "x": 0.0,
+                            "y": 4.0
+                        },
+                        {
+                            "x": 0.0,
+                            "y": 5.0
+                        },
+                        {
+                            "x": 0.0,
+                            "y": 6.0
+                        },
+                        {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        {
+                            "x": 1.0,
+                            "y": 6.0
+                        },
+                        {
+                            "x": 2.0,
+                            "y": 1.0
+                        },
+                        {
+                            "x": 2.0,
+                            "y": 3.0
+                        },
+                        {
+                            "x": 2.0,
+                            "y": 6.0
+                        },
+                        {
+                            "x": 3.0,
+                            "y": 0.0
+                        },
+                        {
+                            "x": 3.0,
+                            "y": 1.0
+                        },
+                        {
+                            "x": 3.0,
+                            "y": 6.0
+                        },
+                        {
+                            "x": 4.0,
+                            "y": 0.0
+                        },
+                        {
+                            "x": 4.0,
+                            "y": 1.0
+                        },
+                        {
+                            "x": 4.0,
+                            "y": 6.0
+                        },
+                        {
+                            "x": 5.0,
+                            "y": 0.0
+                        },
+                        {
+                            "x": 5.0,
+                            "y": 3.0
+                        },
+                        {
+                            "x": 5.0,
+                            "y": 5.0
+                        },
+                        {
+                            "x": 5.0,
+                            "y": 6.0
+                        },
+                        {
+                            "x": 6.0,
+                            "y": 0.0
+                        },
+                        {
+                            "x": 6.0,
+                            "y": 3.0
+                        },
+                        {
+                            "x": 6.0,
+                            "y": 5.0
+                        },
+                        {
+                            "x": 7.0,
+                            "y": 0.0
+                        },
+                        {
+                            "x": 7.0,
+                            "y": 5.0
+                        },
+                        {
+                            "x": 8.0,
+                            "y": 0.0
+                        },
+                        {
+                            "x": 8.0,
+                            "y": 1.0
+                        },
+                        {
+                            "x": 8.0,
+                            "y": 2.0
+                        },
+                        {
+                            "x": 8.0,
+                            "y": 3.0
+                        },
+                        {
+                            "x": 8.0,
+                            "y": 4.0
+                        },
+                        {
+                            "x": 8.0,
+                            "y": 5.0
+                        }
+                    ]
+                },
+                {
+                    "Key": "Rotations",
+                    "StringSet": [
+                        "D",
+                        "D",
+                        "D",
+                        "D",
+                        "D",
+                        "D",
+                        "D",
+                        "D",
+                        "D",
+                        "D",
+                        "D",
+                        "D",
+                        "D",
+                        "D",
+                        "D",
+                        "D",
+                        "D",
+                        "D",
+                        "D",
+                        "D",
+                        "D",
+                        "D",
+                        "D",
+                        "D",
+                        "D",
+                        "D",
+                        "D",
+                        "D",
+                        "R",
+                        "D",
+                        "D",
+                        "D"
+                    ]
+                }
+            ]
+        }
+    ]
+}

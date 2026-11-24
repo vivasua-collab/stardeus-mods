@@ -1,0 +1,62 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Stardeus FactionAttitudeDef",
+  "description": "Generated from C# by Game/Generate JSON Schemas, do not edit by hand",
+  "$ref": "#/$defs/FactionAttitudeDef",
+  "$defs": {
+    "FactionAttitudeChance": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "FactionId": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "Chance": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "number"
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "FactionAttitudeDef": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "Id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "IdH": {
+          "type": "integer"
+        },
+        "AttitudeChances": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "$ref": "#/$defs/FactionAttitudeChance"
+          }
+        },
+        "DefaultAttitude": {
+          "$ref": "#/$defs/FactionAttitudeChance"
+        }
+      },
+      "additionalProperties": false
+    }
+  }
+}

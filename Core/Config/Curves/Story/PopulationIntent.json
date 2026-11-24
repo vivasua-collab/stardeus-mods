@@ -1,0 +1,26 @@
+{
+    // Population (Situation.Population: colonists + bots, pets at 0.5) -> population intent.
+    // One dial for "does this colony want more people": it divides the stasis
+    // wake-up interval (BaseGrowthDays / intent) and multiplies the pick weight of every
+    // ColonyGrowthBio / ColonyGrowthRobo story event. 0 is the ceiling: nothing joins until
+    // population drops. Bots count in full because they do a colonist's work and the same
+    // storyteller grows them; ColonistFloor.json keeps a bot fleet from starving a small crew.
+    //
+    // Tuned so that with BaseGrowthDays 20 a bare New Beginning run (3 starting bots, none
+    // built) gets its colonists on days 8 / 22 / 40 / 64 / 96 / 138 / 193 / 265, which puts
+    // 6 colonists at day 138.
+    "FloatSet" : [
+        0.0,  1.40,
+        4.0,  1.40,
+        5.0,  1.10,
+        6.0,  0.85,
+        7.0,  0.62,
+        8.0,  0.48,
+        9.0,  0.36,
+        10.0, 0.28,
+        11.0, 0.22,
+        12.0, 0.17,
+        14.0, 0.06,
+        16.0, 0.00
+    ]
+}

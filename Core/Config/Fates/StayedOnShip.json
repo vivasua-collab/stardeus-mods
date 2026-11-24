@@ -1,0 +1,7 @@
+{
+    "RemoveColonist" : false,
+    "IsDead" : false,
+    "ExcludeRobots" : true,
+    "Max" : 10,
+    "Chance" : 0.4
+}

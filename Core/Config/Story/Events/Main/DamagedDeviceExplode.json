@@ -1,0 +1,25 @@
+{
+    // C# implementation id
+    "EventId": "DamagedDeviceExplode",
+    // How much does this story event cost to run
+    "Points": 12,
+    // Options: Negative, Positive, Neutral, Raid
+    "OutcomeType": "Negative",
+    // Full list is in StoryEventFlags class
+    "EventFlags": [
+        "Device",
+        "Explosion",
+        "HeavyDisaster",
+        "Neglect",
+        "Annoying"
+    ],
+    // Minimum days before this event can repeat
+    "MinRepeatDelayDays": 200,
+    // Requirements for this event to be available
+    "Require": {
+        "GridSize": 150,
+        "Difficulty": 0.25,
+        "SectorDifficulty": 0.7,
+        "Days": 30
+    }
+}

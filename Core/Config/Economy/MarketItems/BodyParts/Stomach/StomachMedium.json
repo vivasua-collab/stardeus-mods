@@ -1,0 +1,9 @@
+{
+    "Id" : "Obj/Parts/Stomach/StomachMedium",
+    "Type" : "CFD",
+    "Groups" : [ "BodyPart", "BlackMarket" ],
+    "Value" : 280.0,
+    "Rarity" : 0.1,
+    "MinSectorDifficulty" : 0.4,
+    "Volatility" : 0.00149
+}

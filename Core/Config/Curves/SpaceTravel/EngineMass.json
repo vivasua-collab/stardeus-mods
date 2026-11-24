@@ -1,0 +1,21 @@
+{
+    // Ship size in tiles -> mass the thrusters push in local space, for the player's ship and NPC ships.
+    // Equal up to 6000 tiles (just under the largest NPC Titan), so small and mid ships keep their speed.
+    // Above it the mass grows with the square root of size, so a huge ship loses less speed per added tile.
+    "FloatSet" : [
+        0, 0,
+        6000, 6000,
+        7000, 6481,
+        8000, 6928,
+        10000, 7746,
+        12000, 8485,
+        15000, 9487,
+        20000, 10954,
+        25000, 12247,
+        30000, 13416,
+        40000, 15492,
+        60000, 18974,
+        100000, 24495,
+        262144, 39659
+    ]
+}

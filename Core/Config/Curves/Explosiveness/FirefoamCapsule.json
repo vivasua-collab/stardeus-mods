@@ -1,0 +1,11 @@
+// For the Firefoam Capsule. Key is health, value is the chance to pop when taking damage.
+// The hit size scales it as it does explosions. A destroyed capsule always pops
+{
+    "FloatSet" : [
+        0.0, 1.0,
+        0.25, 0.6,
+        0.5, 0.2,
+        0.75, 0.05,
+        1.0, 0.0
+    ]
+}

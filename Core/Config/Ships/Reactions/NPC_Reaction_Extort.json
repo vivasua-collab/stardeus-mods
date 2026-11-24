@@ -1,0 +1,51 @@
+{
+    "ReactionId" : "Extort",
+
+    "AttitudeMul" : [
+        -1.0, 1.0,
+        -0.25, 0.5,
+        0.0, 0.05,
+        0.5, 0.01,
+        1.0, 0.0
+    ],
+    "RegionDifficultyMul" : [
+        0.0, 0.0,
+        0.4, 0.0,
+        0.5, 0.5,
+        1.0, 1.0
+    ],
+
+    "FactionChanceKey" : [
+        "Virus",
+        "Pirate",
+        "Scavenger",
+        "Capitalist",
+        "OldEarth",
+        "Adventurer",
+        "Sentinel"
+    ],
+    "FactionChanceValue" : [
+        2.0,
+        3.0,
+        1.5,
+        0.15,
+        0.05,
+        0.25,
+        0.1
+    ],
+    "DefaultFactionChance" : 0.05,
+
+    "ClassChanceKey" : [
+        "Fighter",
+        "Corvette",
+        "Frigate",
+        "Carrier"
+    ],
+    "ClassChanceValue" : [
+        0.7,
+        0.8,
+        0.9,
+        0.8
+    ],
+    "DefaultClassChance" : 1.0
+}

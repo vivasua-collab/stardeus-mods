@@ -1,0 +1,9 @@
+{
+    "Id" : "Text/SmallOverflowing",
+
+    "Color" : "UI/Text/Main",
+    "Alpha" : 0.8,
+
+    "TextFontSize" : 18,
+    "TextOverflowMode" : "Overflow"
+}

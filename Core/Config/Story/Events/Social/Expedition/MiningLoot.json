@@ -1,0 +1,44 @@
+{
+    // C# implementation id.
+    // Multiple configurations can point to a single implementation.
+    "EventId" : "ExpeditionInteraction",
+    // How much does this story event cost to run
+    "Points" : 5,
+    // Options: Negative, Positive, Neutral, Raid
+    "OutcomeType" : "Positive",
+    // Full list is in StoryEventFlags class
+    "EventFlags" : [
+        "Social",
+        "OnDemand"
+    ],
+    "MinRepeatDelayDays" : 8,
+    // Full list of requirements can be found in Situation class
+    // "Require" : {
+    //     "Colonists" : 5
+    // },
+    // Variables for the story event implementation
+    "Properties" : [
+        // one robot save another or a human
+        { "Key" : "CompatibleStage", "String" : "MineResource" },
+        { "Key" : "MinHoursInStage", "Float" : 8.0 },
+        { "Key" : "RequireDepositWithDepth", "Bool" : true },
+        // for important interactions
+        { "Key" : "ShowPopup", "Bool" : true },
+        { "Key" : "AddEventNotification", "Bool" : false },
+        { "Key" : "ShowFanfare", "Bool" : false },
+        { "Key" : "AddLog", "Bool" : true },
+        { "Key" : "TitleKey", "String" : "social.exp.mining.loot.title" },
+        { "Key" : "TextKey", "String" : "social.exp.mining.loot.desc" },
+        { "Key" : "AddRandomLoot", "Bool" : true },
+        { "Key" : "AttitudeChange", "Float" : 0.05 },
+        { "Key" : "Icon", "String" : "Icons/Color/Pickaxe" },
+        // hero
+        // { "Key" : "ChangeWeightB1", "Float" : 1.0 },
+        { "Key" : "MentalEffectB1", "Int" : 3 },
+        { "Key" : "MentalEffectDurationHoursB1", "Float" : 4.0 },
+        // the one that gets saved
+        // { "Key" : "ChangeWeightB2", "Float" : 1.0 },
+        { "Key" : "MentalEffectB2", "Int" : 3 },
+        { "Key" : "MentalEffectDurationHoursB2", "Float" : 4.0 }
+    ]
+}

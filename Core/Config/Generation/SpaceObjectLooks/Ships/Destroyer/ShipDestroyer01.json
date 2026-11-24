@@ -1,0 +1,15 @@
+{
+    "Id" : "ShipDestroyer01",
+    "Probability" : 1.0,
+    "StarmapSizeMul" : 0.38,
+    "StarfieldSizeMul" : 0.19,
+    "IsConstantSizeInStarmap" : false,
+    "OrderDist" : -50,
+    "Sprite" : "SpaceObjects/Ships/ShipDestroyer01_D",
+    "CanRotate" : true,
+    "KeepUprightInStarfield" : true,
+    "Sprite_L" : "SpaceObjects/Ships/ShipDestroyer01_L",
+    "Sprite_R" : "SpaceObjects/Ships/ShipDestroyer01_R",
+    "Sprite_U" : "SpaceObjects/Ships/ShipDestroyer01_U",
+    "Sprite_D" : "SpaceObjects/Ships/ShipDestroyer01_D"
+}

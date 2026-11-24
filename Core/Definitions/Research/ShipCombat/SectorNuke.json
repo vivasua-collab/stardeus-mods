@@ -1,0 +1,28 @@
+{
+    "Id" : "Research/ShipCombat/SectorNuke",
+    "NameKey" : "objects.devices.sectornuke",
+    "Tier" : 4,
+    "IsAbstract" : true,
+    "PreviewIcon" : "Icons/Color/AttackTarget",
+    "Researchable" : {
+        "IsTreeNode" : true,
+        "IsDiscoverable" : true,
+        "Prerequisites" : [
+            "Research/ShipCombat/WeaponsMissile"
+        ],
+        "DatoidCosts" : [
+            {
+                "TypeId" : "DatoidNuclear",
+                "StackSize" : 15
+            },
+            {
+                "TypeId" : "DatoidEnergy",
+                "StackSize" : 18
+            },
+            {
+                "TypeId" : "DatoidTech",
+                "StackSize" : 49
+            }
+        ]
+    }
+}

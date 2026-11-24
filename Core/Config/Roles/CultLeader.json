@@ -1,0 +1,14 @@
+{
+    "Id" : "CultLeader",
+    "Species" : [ "Human", "Robot" ],
+    "AgePhaseIds" : [ "YoungAdult", "MidLife", "Retirement" ],
+    "IncapableJobTypes" : [ "Unskilled" ],
+    "LovesJobTypes" : [ "Social" ],
+    "RoleTypes" : [ "Smart", "Rich", "Evil", "Once" ],
+    "AdjustsSkills" : [
+        {
+            "JobId" : "Social",
+            "Adjustment" : 10
+        }
+    ]
+}

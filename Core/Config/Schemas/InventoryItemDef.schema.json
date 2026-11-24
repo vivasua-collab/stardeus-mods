@@ -1,0 +1,615 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Stardeus InventoryItemDef",
+  "description": "Generated from C# by Game/Generate JSON Schemas, do not edit by hand",
+  "$ref": "#/$defs/InventoryItemDef",
+  "$defs": {
+    "ComponentConfig": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "Component": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "Properties": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "$ref": "#/$defs/SerializableProperty"
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "InventoryItemDef": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "IdH": {
+          "type": "integer"
+        },
+        "ShowFlags": {
+          "anyOf": [
+            {
+              "type": "string",
+              "pattern": "^\\s*(None|SafeEnv|Combat|Sleeping|SlotEmpty)(\\s*,\\s*(None|SafeEnv|Combat|Sleeping|SlotEmpty))*\\s*$"
+            },
+            {
+              "type": "integer"
+            }
+          ]
+        },
+        "HideFlags": {
+          "anyOf": [
+            {
+              "type": "string",
+              "pattern": "^\\s*(None|SafeEnv|Combat|Sleeping|SlotEmpty)(\\s*,\\s*(None|SafeEnv|Combat|Sleeping|SlotEmpty))*\\s*$"
+            },
+            {
+              "type": "integer"
+            }
+          ]
+        },
+        "HidesMask": {
+          "type": "integer"
+        },
+        "Id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "DefId": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "SlotId": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "HidesSlotId": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "SpriteId": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "ColorGroupId": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "Rarity": {
+          "type": "number"
+        },
+        "CombatStrengthBonus": {
+          "type": "number"
+        },
+        "CombatValue": {
+          "type": "number"
+        },
+        "MaxDPS": {
+          "type": "number"
+        },
+        "SpawnRequirements": {
+          "$ref": "#/$defs/Situation"
+        },
+        "LooksShowFlags": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "enum": [
+              "None",
+              "SafeEnv",
+              "Combat",
+              "Sleeping",
+              "SlotEmpty"
+            ],
+            "type": "string"
+          }
+        },
+        "LooksHideFlags": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "enum": [
+              "None",
+              "SafeEnv",
+              "Combat",
+              "Sleeping",
+              "SlotEmpty"
+            ],
+            "type": "string"
+          }
+        },
+        "HidesLookParts": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "AddsAbilities": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "AddsConditions": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "StatSources": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "$ref": "#/$defs/StatSourceData"
+          }
+        },
+        "ProvidesStats": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "$ref": "#/$defs/ComponentConfig"
+          }
+        },
+        "AddsStatModifiers": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "$ref": "#/$defs/ComponentConfig"
+          }
+        },
+        "AddsStatModifiersWhenShown": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "$ref": "#/$defs/ComponentConfig"
+          }
+        },
+        "AddsAttackMethods": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "$ref": "#/$defs/ComponentConfig"
+          }
+        },
+        "RequiredJobId": {
+          "type": "integer"
+        },
+        "RequiresBodyFlags": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "enum": [
+              "None",
+              "Biological",
+              "Robotic",
+              "IsNegative",
+              "Humanoid",
+              "Animal",
+              "Pet",
+              "Wild",
+              "Flying"
+            ],
+            "type": "string"
+          }
+        },
+        "RequiredBodyFlags": {
+          "anyOf": [
+            {
+              "type": "string",
+              "pattern": "^\\s*(None|Biological|Robotic|IsNegative|Humanoid|Animal|Pet|Wild|Flying)(\\s*,\\s*(None|Biological|Robotic|IsNegative|Humanoid|Animal|Pet|Wild|Flying))*\\s*$"
+            },
+            {
+              "type": "integer"
+            }
+          ]
+        },
+        "Kind": {
+          "anyOf": [
+            {
+              "type": "string",
+              "enum": [
+                "Any",
+                "Melee",
+                "Ranged"
+              ]
+            },
+            {
+              "type": "integer"
+            }
+          ]
+        }
+      },
+      "additionalProperties": false
+    },
+    "Mat": {
+      "type": "object",
+      "properties": {
+        "TypeId": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "StackSize": {
+          "type": "integer"
+        },
+        "MaxStackSize": {
+          "type": "integer"
+        }
+      },
+      "additionalProperties": false
+    },
+    "SerializableProperty": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "Key": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "String": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "Int": {
+          "type": "integer"
+        },
+        "Float": {
+          "type": "number"
+        },
+        "Vector2": {
+          "$ref": "#/$defs/Vector2"
+        },
+        "PosIdx": {
+          "type": "integer"
+        },
+        "Bool": {
+          "type": "boolean"
+        },
+        "BoolSet": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "boolean"
+          }
+        },
+        "IntSet": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "integer"
+          }
+        },
+        "FloatSet": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "number"
+          }
+        },
+        "StringSet": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "Vector2Set": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "$ref": "#/$defs/Vector2"
+          }
+        },
+        "RawMaterials": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "$ref": "#/$defs/Mat"
+          }
+        },
+        "IsUsed": {
+          "type": "boolean"
+        }
+      },
+      "additionalProperties": false
+    },
+    "Situation": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "Friendlies": {
+          "type": "integer"
+        },
+        "Workers": {
+          "type": "integer"
+        },
+        "Colonists": {
+          "type": "integer"
+        },
+        "Guests": {
+          "type": "integer"
+        },
+        "Firefighters": {
+          "type": "integer"
+        },
+        "ColonySizeDiff": {
+          "type": "integer"
+        },
+        "Population": {
+          "type": "number"
+        },
+        "HumanDeaths": {
+          "type": "integer"
+        },
+        "Enemies": {
+          "type": "integer"
+        },
+        "ActiveThreats": {
+          "type": "integer"
+        },
+        "Areas": {
+          "type": "integer"
+        },
+        "Islands": {
+          "type": "integer"
+        },
+        "ShipSize": {
+          "type": "integer"
+        },
+        "ResearchedTech": {
+          "type": "integer"
+        },
+        "GridMaxOutput": {
+          "type": "number"
+        },
+        "GridConsumption": {
+          "type": "number"
+        },
+        "GridDeficit": {
+          "type": "number"
+        },
+        "GridBatCharge": {
+          "type": "number"
+        },
+        "GridBatOutput": {
+          "type": "number"
+        },
+        "GridRenewableOutput": {
+          "type": "number"
+        },
+        "GridSize": {
+          "type": "integer"
+        },
+        "Grids": {
+          "type": "integer"
+        },
+        "SectorDifficulty": {
+          "type": "number"
+        },
+        "ShipComputers": {
+          "type": "integer"
+        },
+        "TotalCPU": {
+          "type": "integer"
+        },
+        "TotalGPU": {
+          "type": "integer"
+        },
+        "TotalMemory": {
+          "type": "integer"
+        },
+        "TotalDisk": {
+          "type": "integer"
+        },
+        "BlackHoleJumps": {
+          "type": "integer"
+        },
+        "DerelictsApproached": {
+          "type": "integer"
+        },
+        "ExpeditionsCompleted": {
+          "type": "integer"
+        },
+        "ExpeditionsOngoing": {
+          "type": "integer"
+        },
+        "StoryEvents": {
+          "type": "integer"
+        },
+        "StoryPointsPositiveMax": {
+          "type": "integer"
+        },
+        "StoryPointsPositive": {
+          "type": "integer"
+        },
+        "StoryPointsNegativeMax": {
+          "type": "integer"
+        },
+        "StoryPointsNegative": {
+          "type": "integer"
+        },
+        "StoryPointsNeutralMax": {
+          "type": "integer"
+        },
+        "StoryPointsNeutral": {
+          "type": "integer"
+        },
+        "StoryPointsRaidMax": {
+          "type": "integer"
+        },
+        "StoryPointsRaid": {
+          "type": "integer"
+        },
+        "SpaceObjectsDiscovered": {
+          "type": "integer"
+        },
+        "Days": {
+          "type": "integer"
+        },
+        "Weeks": {
+          "type": "integer"
+        },
+        "Months": {
+          "type": "integer"
+        },
+        "Years": {
+          "type": "integer"
+        },
+        "Money": {
+          "type": "number"
+        },
+        "NetWorth": {
+          "type": "number"
+        },
+        "BaseNetWorth": {
+          "type": "number"
+        },
+        "ShipClassPoints": {
+          "type": "integer"
+        },
+        "Mats": {
+          "type": "integer"
+        },
+        "TimesOnFire": {
+          "type": "integer"
+        },
+        "NumRaids": {
+          "type": "integer"
+        },
+        "NumBreakdowns": {
+          "type": "integer"
+        },
+        "CombatStrength": {
+          "type": "number"
+        },
+        "ThreatWeight": {
+          "type": "number"
+        },
+        "NumShipCombats": {
+          "type": "integer"
+        },
+        "OngoingBuildTasks": {
+          "type": "integer"
+        },
+        "Difficulty": {
+          "type": "number"
+        }
+      },
+      "additionalProperties": false
+    },
+    "StatSourceData": {
+      "type": "object",
+      "properties": {
+        "StatId": {
+          "type": "integer"
+        },
+        "CompoundLimit": {
+          "type": "number"
+        },
+        "StateMul": {
+          "type": "number"
+        },
+        "QualityMul": {
+          "type": "number"
+        },
+        "Amount": {
+          "type": "number"
+        }
+      },
+      "additionalProperties": false
+    },
+    "Vector2": {
+      "type": "object",
+      "properties": {
+        "x": {
+          "type": "number"
+        },
+        "y": {
+          "type": "number"
+        }
+      },
+      "additionalProperties": false
+    }
+  }
+}

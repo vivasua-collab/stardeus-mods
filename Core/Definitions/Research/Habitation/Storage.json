@@ -1,0 +1,19 @@
+{
+    "Id" : "Research/Habitation/Storage",
+    "Tier" : 1,
+    "IsAbstract" : true,
+    "PreviewIcon" : "Icons/Color/Haul",
+    "NameKey" : "storage",
+    "Researchable" : {
+        "IsTreeNode" : true,
+        "Prerequisites" : [
+            "Research/Habitation/Furniture"
+        ],
+        "DatoidCosts" : [
+            {
+                "TypeId" : "DatoidBasic",
+                "StackSize" : 8
+            }
+        ]
+    }
+}

@@ -1,0 +1,7 @@
+{
+    "Id" : "UI/Panel/Dialog",
+    "AliasFor" : "UI/Main/Primary",
+    // "Hex" : "30193F",
+    "Alpha" : 0.9,
+    "SkipAtlas" : true
+}

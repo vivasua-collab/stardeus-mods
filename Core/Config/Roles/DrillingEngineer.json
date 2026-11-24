@@ -1,0 +1,14 @@
+{
+    "Id" : "DrillingEngineer",
+    "LovesJobTypes" : [ "Mining" ],
+    "Species" : [ "Human", "Robot" ],
+    "IncapableJobTypes" : [ "Research" ],
+    "AgePhaseIds" : [ "YoungAdult", "MidLife", "Retirement" ],
+    "RoleTypes" : [ "Smart", "Rich" ],
+    "AdjustsSkills" : [
+        {
+            "JobId" : "Mining",
+            "Adjustment" : 6
+        }
+    ]
+}

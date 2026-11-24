@@ -1,0 +1,67 @@
+{
+    "Layer" : "Objects",
+    "ParentId" : "Objects/Cosmetics/BaseCosmetics",
+    "DescKey" : "objects.cosmetics.chess.piece.desc",
+    "SkipToolListing" : true,
+    "Spawnable" : {
+        "Category" : "Chess",
+        "SkipOwned" : 8,
+        "Chance" : 1.0,
+        "ChanceLocked" : 1.0
+    },
+    "Components" : [
+        {
+            "Component" : "TileTransform",
+            "Properties" : [
+                { "Key" : "IsRotatable", "Bool" : false },
+                { "Key" : "CoverPercent", "Int" : 25 }
+            ]
+        },
+        {
+            "Component" : "TileGraphics",
+            "Properties" : [
+                { "Key" : "Type", "String": "Object" },
+                { "Key" : "HasHeight", "Bool" : true },
+                { "Key" : "Graphic", "String": "Objects/Cosmetics/Chess/ChessPawnW" }
+            ]
+        },
+        { "Component" : "ChessPiece" },
+        {
+            "Component" : "Admirable",
+            "Properties" : [
+                { "Key" : "Amount", "Int" : 1 },
+                { "Key" : "Multiplier", "Float" : 0.2 },
+                { "Key" : "Chance", "Float" : 0.2 },
+                // What is being admired (a translation key), variants of the same thing share it
+                { "Key" : "FunSubject", "String" : "fun.subject.chesspawn" }
+            ]
+        },
+        {
+            "Component" : "Flammable",
+            "Properties" : [
+                { "Key" : "IgnitionTemperatureCelsius", "Int" : 250 },
+                { "Key" : "FireChance", "Float" : 0.6 }
+            ]
+        },
+        {
+            "Component" : "Passability",
+            "Properties" : [
+                { "Key" : "IsPassable", "Bool" : true },
+                { "Key" : "IsWalkable", "Bool" : true },
+                { "Key" : "Difficulty", "Float" : 0.9 }
+            ]
+        },
+        {
+            "Component" : "Constructable",
+            "Properties" : [
+                { "Key" : "WorkAmount", "Int" : 800 },
+                {
+                    "Key" : "Contents",
+                    "RawMaterials" : [
+                        { "TypeId" : "PlatinumIngot", "StackSize" : 1 }
+                    ]
+                }
+            ]
+        }
+    ]
+}

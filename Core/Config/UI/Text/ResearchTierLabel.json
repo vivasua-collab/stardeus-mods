@@ -1,0 +1,8 @@
+{
+    "Id" : "Text/ResearchTierLabel",
+
+    "Color" : "UI/Text/Accented",
+    "Alpha" : 0.25,
+    "TextFontSize" : 300,
+    "TextFontStyles" : [ "UpperCase" ]
+}

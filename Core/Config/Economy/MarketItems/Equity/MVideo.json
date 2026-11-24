@@ -1,0 +1,7 @@
+{
+    "Id" : "MVideo",
+    "Type" : "Equity",
+    "Groups" : [ "Electronics" ],
+    "Value" : 1212.0,
+    "Volatility" : 0.0581
+}

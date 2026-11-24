@@ -1,0 +1,49 @@
+{
+    // C# implementation id.
+    // Multiple configurations can point to a single implementation.
+    "AspectId" : "Schedule",
+    // Variables for the schedule on / off
+    "Properties" : [
+        { "Key" : "Outcome", "String" : "Neutral" },
+        // Days until the first Neutral window (pods, capsules, derelicts, signals) opens, at the
+        // latest
+        {
+            "Key" : "InitialDelayDaysCurve",
+            "FloatSet" : [
+                0.0, 16.0,
+                1.0, 20.0
+            ]
+        },
+        // Or this many days after the first expedition, if that is sooner
+        { "Key" : "OpenAfterQuestBool", "String" : "HadExpedition" },
+        {
+            "Key" : "OpenAfterDaysCurve",
+            "FloatSet" : [
+                0.0, 1.0,
+                1.0, 2.0
+            ]
+        },
+        // Periodic events a window may start (rolled per window)
+        {
+            "Key" : "EventsPerCycleCurve",
+            "FloatSet" : [
+                0.0, 1.0,
+                1.0, 2.0
+            ]
+        },
+        {
+            "Key" : "DaysCurve_On",
+            "FloatSet" : [
+                0.0, 2.0,
+                1.0, 3.0
+            ]
+        },
+        {
+            "Key" : "DaysCurve_Off",
+            "FloatSet" : [
+                0.0, 8.0,
+                1.0, 12.0
+            ]
+        }
+    ]
+}

@@ -1,0 +1,13 @@
+{
+    "Id" : "Photographer",
+    "Species" : [ "Human" ],
+    "AgePhaseIds" : [ "Childhood", "YoungAdult", "MidLife" ],
+    "RoleTypes" : [ ],
+    "LovesJobTypes" : [ "Shooting" ],
+    "AdjustsSkills" : [
+        {
+            "JobId" : "Shooting",
+            "Adjustment" : 4
+        }
+    ]
+}

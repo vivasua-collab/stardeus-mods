@@ -1,0 +1,10 @@
+{
+    "Id" : "Research/RogueAI/Root",
+    "Tier" : 0,
+    "IsAbstract" : true,
+    "PreviewIcon" : "Icons/Color/RobotEye",
+    "Researchable" : {
+        "IsDiscoverable" : true,
+        "IsTreeNode" : true
+    }
+}

@@ -1,0 +1,55 @@
+{
+    "BuildGroup" : "FloorAngle",
+    "Layer" : "Floor",
+    "ParentId" : "Structure/Floors/Floor01",
+    "Components" : [
+        {
+            "Component" : "TileTransform",
+            "Properties" : [
+                { "Key" : "PlacementType", "String" : "Single" },
+                { "Key" : "IsRotatable", "Bool" : true }
+            ]
+        },
+        {
+            "Component" : "TileGraphics",
+            "Properties" : [
+                { "Key" : "Graphic", "String": "Structure/Floors/Floor01Angle" },
+                { "Key" : "Shader", "String": "TransparentFloorTile" },
+                { "Key" : "IsAngled", "Bool": true }
+            ]
+        },
+        {
+            "Component" : "Damageable",
+            "Properties" : [
+                { "Key" : "Max", "Int" : 50 }
+            ]
+        },
+        {
+            "Component" : "HullIntegrity",
+            "Properties" : [
+                { "Key" : "MaxIntegrity", "Float" : 0.5 },
+                { "Key" : "MaxInsulation", "Float" : 0 },
+                { "Key" : "MaxAirtight", "Float" : 0 }
+            ]
+        },
+        {
+            "Component" : "Constructable",
+            "Properties" : [
+                { "Key" : "CanDragRow", "Bool": false },
+                {
+                    "Key" : "Contents",
+                    "RawMaterials" : [
+                        { "TypeId" : "SteelPlate", "StackSize" : 1 }
+                    ]
+                }
+            ]
+        },
+        {
+            "Component" : "Passability",
+            "Properties" : [
+                { "Key" : "IsWalkable", "Bool" : false },
+                { "Key" : "Difficulty", "Float" : 0.5 }
+            ]
+        }
+    ]
+}

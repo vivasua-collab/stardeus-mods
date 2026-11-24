@@ -1,0 +1,16 @@
+{
+    "SlotTypeId" : "Implant",
+    "Compatibility" : "Robotic",
+    "ResistanceBase" : 8.0,
+    "Tier" : 2,
+    "AddsStatModifiers" : [
+        {
+            "Component" : "ArmorEnergy",
+            "Properties" : [
+                { "Key" : "StateMul", "Float" : 1.0 },
+                { "Key" : "Value", "Float" : 2 },
+                { "Key" : "Type", "String" : "Adds" }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,117 @@
+{
+    "ToolPath" : "Security",
+    "Layer" : "Objects",
+    "ParentId" : "Objects/Devices/BaseDevice",
+    "Researchable" : {
+        "Prerequisites" : [ "Research/ShipCombat/PointDefense" ]
+    },
+    "Components" : [
+        {
+            "Component" : "TileTransform",
+            "Properties" : [
+                { "Key" : "Width", "Int" : 1 },
+                { "Key" : "Height", "Int" : 1 },
+                { "Key" : "CoverPercent", "Int" : 50 },
+                { "Key" : "InPort", "Vector2" : { "x" : 0, "y" : -1 } },
+                { "Key" : "IsRotatable", "Bool" : true }
+            ]
+        },
+        {
+            "Component" : "IndustrialEquipment",
+            "Properties" : [
+                { "Key" : "IsNoisy", "Bool" : true }
+            ]
+        },
+        {
+            "Component" : "Damageable",
+            "Properties" : [
+                { "Key" : "Max", "Int": 200 }
+            ]
+        },
+        {
+            "Component" : "ElectricNode",
+            "Properties" : [
+                { "Key" : "IsConsumer", "Bool": true }
+            ]
+        },
+        {
+            "Component" : "WithFuse",
+            "Properties" : [
+                { "Key" : "MalfunctionWeight", "Float": 0.6 }
+            ]
+        },
+        {
+            "Component" : "Flammable",
+            "Properties" : [
+                { "Key" : "IgnitionTemperatureCelsius", "Int" : 500 },
+                { "Key" : "FireChance", "Float" : 0.6 },
+                { "Key" : "BaseExplosionLevel", "Int" : 2 },
+                { "Key" : "FlammabilityCurve", "String" : "DeviceHigh" },
+                { "Key" : "ExplosivenessCurve", "String" : "DeviceHigh" }
+            ]
+        },
+        {
+            "Component" : "RotatingTurret",
+            "Properties" : [
+                { "Key" : "HeadOffset", "Vector2": { "x" : 0.0, "y" : 0.0 } },
+                { "Key" : "TopOffset", "Vector2": { "x" : 0.0, "y" : 0.0 } },
+                // rotation symmetry kicks in at frame 43, which means we can take 128 % 43 when we need a frame
+                { "Key" : "SymmetryFrame", "Int" : 43 },
+                { "Key" : "SpriteOrder", "String" : "InBetweenTile" },
+                { "Key" : "HasTopSprite", "Bool" : false },
+                { "Key" : "ShotFXDuration", "Float" : 15.0 }
+            ]
+        },
+        { "Component" : "OutdoorsCheck" },
+        { "Component" : "ExtraInfo" },
+        {
+            "Component" : "RefillableStorage",
+            "Properties" : [
+                { "Key" : "DeviceType", "String" : "interceptor.turret" },
+                { "Key" : "ShowBurnRate", "Bool" : false },
+                { "Key" : "Purpose", "String" : "ammo" },
+                { "Key" : "Icon", "String" : "Icons/Color/Ammo" },
+                { "Key" : "LockedMaterial", "String" : "InterceptorDart" },
+                { "Key" : "MaterialCapacity", "Int" : 4 }
+            ]
+        },
+        {
+            "Component" : "ShipWeapon",
+            "Properties" : [
+                { "Key" : "ShipWeaponId" , "String" : "InterceptorTurret" }
+            ]
+        },
+        {
+            "Component" : "TileGraphics",
+            "Properties" : [
+                { "Key" : "Type", "String": "Object" },
+                { "Key" : "Graphic", "String": "Objects/Devices/InterceptorTurret" },
+                { "Key" : "RotateGraphic", "Bool" : false },
+                { "Key" : "HasHeight", "Bool" : false }
+            ]
+        },
+        {
+            "Component" : "Passability",
+            "Properties" : [
+                { "Key" : "IsPassable", "Bool" : false },
+                { "Key" : "IsWalkable", "Bool" : false },
+                { "Key" : "Difficulty", "Float" : 1 }
+            ]
+        },
+        {
+            "Component" : "Constructable",
+            "Properties" : [
+                { "Key" : "WorkAmount", "Int" : 1400 },
+                {
+                    "Key" : "Contents",
+                    "RawMaterials" : [
+                        { "TypeId" : "TitaniumPlate", "StackSize" : 2 },
+                        { "TypeId" : "Gears", "StackSize" : 1 },
+                        { "TypeId" : "Plastic", "StackSize" : 2 },
+                        { "TypeId" : "Microchip2", "StackSize" : 2 }
+                    ]
+                }
+            ]
+        }
+    ]
+}

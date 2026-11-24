@@ -1,0 +1,30 @@
+{
+    "Id" : "Research/RogueAI/Elysium",
+    "Tier" : 3,
+    "IsAbstract" : true,
+    "PreviewIcon" : "Icons/Color/RobotEye",
+    "NameKey" : "research.elysium",
+    "Researchable" : {
+        "IsTreeNode" : true,
+        "Prerequisites" : [
+            "Research/RogueAI/Root"
+        ],
+        "UnlockEffects" : [
+            "ElysiumUnlocked"
+        ],
+        "DatoidCosts" : [
+            {
+                "TypeId" : "DatoidPhyto",
+                "StackSize" : 17
+            },
+            {
+                "TypeId" : "DatoidSynthetic",
+                "StackSize" : 10
+            },
+            {
+                "TypeId" : "DatoidAlien",
+                "StackSize" : 4
+            }
+        ]
+    }
+}

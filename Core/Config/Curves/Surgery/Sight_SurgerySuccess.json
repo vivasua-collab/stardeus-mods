@@ -1,0 +1,7 @@
+{
+    // surgeon's Sight -> SurgerySuccess multiplier. Sight weighs 0.4, no bonus
+    "FloatSet" : [
+        0.0, 0.6,
+        1.0, 1.0
+    ]
+}

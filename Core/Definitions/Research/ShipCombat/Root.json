@@ -1,0 +1,10 @@
+{
+    "Id" : "Research/ShipCombat/Root",
+    "Tier" : 0,
+    "IsAbstract" : true,
+    "NameKey" : "noun.ship.combat",
+    "PreviewIcon" : "Icons/Color/AttackTarget",
+    "Researchable" : {
+        "IsTreeNode" : true
+    }
+}

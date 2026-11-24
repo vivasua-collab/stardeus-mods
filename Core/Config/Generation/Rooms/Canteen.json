@@ -1,0 +1,27 @@
+{
+    "Type" : "Canteen",
+    "SizeMin" : 50,
+    "SizeMax" : 120,
+    "CountMin" : 2,
+    "CountMax" : 4,
+    "Chance" : 1.0,
+    "FillMin" : 0.4,
+    "FillMax" : 0.8,
+    "CompatibleObjects" : [
+        "Objects/Furniture/ChairWood",
+        "Objects/Furniture/ChairSteel",
+        "Objects/Furniture/TableWood1x2",
+        "Objects/Furniture/TableSteel1x2",
+        "Objects/Furniture/TableWood1x3",
+        "Objects/Furniture/TableSteel1x3",
+        "Objects/Devices/Heater",
+        "Objects/Devices/OxygenPump"
+    ],
+    "CompatibleTemplates" : [
+        "Templates/TableWithChairs01",
+        "Templates/TableWithChairs02",
+        "Templates/TableWithChairs03",
+        "Templates/TableWithChairs04",
+        "Templates/Hygiene01"
+    ]
+}

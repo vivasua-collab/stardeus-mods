@@ -1,0 +1,15 @@
+{
+    "Id" : "ShipCarrier01",
+    "Probability" : 1.0,
+    "StarmapSizeMul" : 0.46,
+    "StarfieldSizeMul" : 0.23,
+    "IsConstantSizeInStarmap" : false,
+    "OrderDist" : -50,
+    "Sprite" : "SpaceObjects/Ships/ShipCarrier01_D",
+    "CanRotate" : true,
+    "KeepUprightInStarfield" : true,
+    "Sprite_L" : "SpaceObjects/Ships/ShipCarrier01_L",
+    "Sprite_R" : "SpaceObjects/Ships/ShipCarrier01_R",
+    "Sprite_U" : "SpaceObjects/Ships/ShipCarrier01_U",
+    "Sprite_D" : "SpaceObjects/Ships/ShipCarrier01_D"
+}

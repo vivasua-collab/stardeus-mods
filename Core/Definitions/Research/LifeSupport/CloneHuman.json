@@ -1,0 +1,26 @@
+{
+    "Id" : "Research/LifeSupport/CloneHuman",
+    "Tier" : 5,
+    "IsAbstract" : true,
+    "PreviewIcon" : "Icons/Color/DNA",
+    "Researchable" : {
+        "IsTreeNode" : true,
+        "Prerequisites" : [
+            "Research/LifeSupport/GrowingPartsAdvanced"
+        ],
+        "DatoidCosts" : [
+            {
+                "TypeId" : "DatoidBiotic",
+                "StackSize" : 30
+            },
+            {
+                "TypeId" : "DatoidSynthetic",
+                "StackSize" : 36
+            },
+            {
+                "TypeId" : "DatoidAlien",
+                "StackSize" : 14
+            }
+        ]
+    }
+}

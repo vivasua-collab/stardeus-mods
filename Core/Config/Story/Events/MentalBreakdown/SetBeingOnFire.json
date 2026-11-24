@@ -1,0 +1,26 @@
+{
+    // C# implementation id.
+    // Multiple configurations can point to a single implementation.
+    "EventId" : "BreakdownSetBeingOnFire",
+    // How much does this story event cost to run
+    "Points" : 14,
+    // Options: Negative, Positive, Neutral, Raid
+    "OutcomeType" : "Negative",
+    // Full list is in StoryEventFlags class
+    "EventFlags" : [
+        "OnDemand",
+        "MentalBreakdown",
+        "CanHaveDuplicates"
+    ],
+    // Full list of requirements can be found in Situation class
+    "Require" : {
+        "Difficulty" : 0.5,
+        "Friendlies" : 12
+    },
+    // Variables for the story event implementation
+    "Properties" : [
+        { "Key" : "SupportsImmobilized", "Bool" : false },
+        { "Key" : "RequiredAIAction", "String" : "BreakdownSetBeingOnFire" },
+        { "Key" : "PlayerFactionOnly", "Bool" : false }
+    ]
+}

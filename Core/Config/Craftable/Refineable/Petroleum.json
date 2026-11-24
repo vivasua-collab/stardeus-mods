@@ -1,0 +1,11 @@
+{
+    "Type" : "Refineable",
+    "Ingredients" : [
+        { "TypeId" : "CrudeOil", "StackSize" : 1 }
+    ],
+    "IgnoreEnergyOutput" : true,
+    "ProductDefId" : "Obj/Materials/Petroleum",
+    "ProductionTimeHours" : 3.0,
+    "OutputMultiplier" : 2,
+    "EnergyCost" : 30
+}

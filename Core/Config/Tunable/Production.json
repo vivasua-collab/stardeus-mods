@@ -1,0 +1,17 @@
+{
+    "Ints" : [
+        { "Key" : "DefaultCraftingDemandAmount", "Int" : 10 },
+        { "Key" : "DefaultCraftingMaxBatchSize", "Int" : 10 }
+    ],
+    "Floats" : [
+        { "Key" : "DustStormAccumulationRate", "Float" : 10.0 },
+        { "Key" : "ParticleCollectorRate", "Float" : 0.005 },
+        { "Key" : "MatterReactorConsumptionRate", "Float" : 0.25 },
+        { "Key" : "HeatProductionMultiplier", "Float" : 1.0 },
+        { "Key" : "DisposerInputMultiplier", "Float" : 0.5 },
+        { "Key" : "DisposerStemCellsMultiplier", "Float" : 0.1 },
+        { "Key" : "DisposerOutputMultiplier", "Float" : 0.2 },
+        { "Key" : "CraftingQualityWithoutOperatorMin", "Float" : 0.4 },
+        { "Key" : "CraftingQualityWithoutOperatorMax", "Float" : 0.7 }
+    ]
+}

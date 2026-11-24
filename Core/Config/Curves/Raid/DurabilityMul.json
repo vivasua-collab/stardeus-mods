@@ -1,0 +1,26 @@
+{
+    // Effective protection (CombatRaid.ProtectionOf) -> multiplier on a being's offense in
+    // CombatRaid.StrengthOf, for biological bodies; robots use DurabilityMulRobot. Measured, not
+    // authored: DurabilitySweepTests takes every raider body and armor tier down through the real
+    // damage code, as raiders (who take lucky hits more often than colonists). Anchored at the
+    // measured unarmored human (7.72 -> 1.0).
+    // Re-measured with pain shock and every weapon's armor penetration (October 2026),
+    // effective protection -> durability: human in a SpaceSuit01 11.3 -> 1.42, SpaceSuit02
+    // 13.2 -> 1.64, CombatSuit alone 19.0 -> 2.27, Combat set 25.3 -> 2.88, Assault set
+    // 35.1 -> 4.07, Power set 57.4 -> 6.09. Pain adds up from many small wounds and the weapons
+    // ignore part of the worn armor, so armor buys less than it did. Bodies weaker than a human
+    // go below 1.0 on purpose (the 4.77 point is the Cleaning Bot's, kept for small animals).
+    // Floor 0.25, cap 6.9.
+    "FloatSet" : [
+        0.0,   0.25,
+        4.77,  0.75,
+        7.72,  1.0,
+        11.3,  1.42,
+        13.2,  1.64,
+        19.0,  2.27,
+        25.3,  2.88,
+        35.1,  4.07,
+        57.4,  6.09,
+        100.0, 6.9
+    ]
+}

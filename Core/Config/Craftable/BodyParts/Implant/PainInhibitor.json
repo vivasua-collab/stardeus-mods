@@ -1,0 +1,16 @@
+{
+    "Type" : "Robotics2",
+    "ProductDefId" : "Obj/Parts/Implant/PainInhibitor",
+    "ProductionTimeHours" : 168,
+    "EnergyCost" : 50,
+    "IgnoreMarket" : true,
+    "Ingredients" : [
+        { "TypeId" : "TitaniumPlate", "StackSize" : 1 },
+        { "TypeId" : "Transistor", "StackSize" : 12 },
+        { "TypeId" : "OpticalFiber", "StackSize" : 4 },
+        { "TypeId" : "Microchip2", "StackSize" : 2 }
+    ],
+    "DisposableOutput" : [
+        { "TypeId" : "ScrapMetal", "StackSize" : 1 }
+    ]
+}

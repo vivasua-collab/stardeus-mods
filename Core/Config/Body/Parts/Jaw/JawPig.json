@@ -1,0 +1,47 @@
+{
+    "SlotTypeId" : "Jaw",
+    "Compatibility" : "Biological",
+    "TargetSpecies" : [ "Pig" ],
+    "CompatibleBodySizes" : [ "Small", "Medium", "Large" ],
+    "ResistanceBase" : 6.0,
+    "Tier" : 2,
+    "AddsAbilities" : [
+        "Chew",
+        "Vocalize"
+    ],
+    "ProvidesStats" : [
+        {
+            "Component" : "CarryCapacity",
+            "Properties" : [
+                { "Key" : "Amount", "Float" : 10 },
+                { "Key" : "CompoundLimit", "Float" : 0 },
+                { "Key" : "StateMul", "Float" : 0.6 }
+            ]
+        },
+        {
+            "Component" : "HungerSatisfyRate",
+            "Properties" : [
+                { "Key" : "StateMul", "Float" : 0.0 },
+                { "Key" : "AmountPerHour", "Float" : 2.0 }
+            ]
+        }
+    ],
+    "AddsAttackMethods" : [
+        {
+            "Component" : "Bite",
+            "Properties" : [
+                { "Key" : "AttackAction", "String" : "Melee" },
+                { "Key" : "DPS", "Float" : 2.00 },
+                { "Key" : "AttackType", "String" : "Sharp" },
+                { "Key" : "ChargeSec", "Float" : 2.0 },
+                { "Key" : "CooldownSec", "Float" : 3.0 },
+                { "Key" : "MoveSpeedMul", "Float" : 0.05 },
+                { "Key" : "StunChanceBio", "Float" : 0.35 },
+                { "Key" : "StunChanceRobo", "Float" : 0.0 },
+                { "Key" : "BleedChance", "Float" : 1.0 },
+                { "Key" : "FatalHitChanceMul", "Float" : 0.0 },
+                { "Key" : "InternalHitChanceMul", "Float" : 0.0 }
+            ]
+        }
+    ]
+}

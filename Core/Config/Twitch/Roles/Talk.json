@@ -1,0 +1,10 @@
+{
+    "Id" : "Talk",
+    "AlwaysAddFor" : [
+        "Broadcaster",
+        "Moderator",
+        "VIP",
+        "Subscriber"
+    ],
+    "AddAtReputation" : 120
+}

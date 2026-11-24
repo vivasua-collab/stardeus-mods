@@ -1,0 +1,13 @@
+{
+    "Type": "Upgrades",
+    "Ingredients": [
+        { "TypeId" : "BatteryCell", "StackSize" : 3 },
+        { "TypeId" : "Microchip", "StackSize" : 1 },
+        { "TypeId" : "Transistor", "StackSize" : 10 },
+        { "TypeId" : "CopperWire", "StackSize" : 5 }
+    ],
+    "IgnoreMarket" : true,
+    "ProductDefId": "Obj/Upgrades/ThrusterUpgrade",
+    "ProductionTimeHours": 12.0,
+    "EnergyCost": 50.0
+}

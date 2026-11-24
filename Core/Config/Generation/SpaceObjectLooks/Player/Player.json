@@ -1,0 +1,7 @@
+{
+    "Id" : "Player",
+    "Probability" : 1.0,
+    "IsConstantSizeInStarmap" : true,
+    "StarmapSizeMul" : 0.5,
+    "Sprite" : "Objects/Devices/ShipComputer"
+}

@@ -1,0 +1,10 @@
+{
+    "Id" : "Overlay/Panel_HighPPU",
+
+    "Color" : "UI/Saturated/Primary",
+
+    "Image" : "UI/Buttons/ActiveOverlayPanel",
+    "ImageType" : "Sliced",
+    "ImageBorderLBRT" : [ 28, 28, 12, 12 ],
+    "ImagePPUMultiplier" : 1.5
+}

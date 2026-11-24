@@ -1,0 +1,11 @@
+{
+    "Type": "Burnable",
+    "IgnoreMarket" : true,
+    "Ingredients": [
+        { "TypeId" : "Wood", "StackSize" : 1 }
+    ],
+    "OutputMultiplier" : 1,
+    "ProductDefId": "Obj/Materials/Ashes",
+    "ProductionTimeHours": 1,
+    "EnergyCost": 10.0
+}

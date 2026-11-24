@@ -1,0 +1,27 @@
+{
+    // C# implementation id.
+    // Multiple configurations can point to a single implementation.
+    "EventId" : "BreakdownRoam",
+    // How much does this story event cost to run
+    "Points" : 0,
+    // Options: Negative, Positive, Neutral, Raid
+    "OutcomeType" : "Neutral",
+    // Full list is in StoryEventFlags class
+    "EventFlags" : [
+        "OnDemand",
+        "MentalBreakdown",
+        "CanHaveDuplicates"
+    ],
+    // "MinRepeatDelayDays" : 0,
+    // Full list of requirements can be found in Situation class
+    // "Require" : {
+    //     "Colonists" : 5
+    // },
+    // Variables for the story event implementation
+    "Properties" : [
+        { "Key" : "SupportsImmobilized", "Bool" : false }
+    ]
+    // "Require" : {
+    //     "ColonySizeDiff": 1
+    // }
+}

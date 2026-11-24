@@ -1,0 +1,11 @@
+{
+    "Id" : "Water",
+    "IsComposite" : false,
+    "IsConsumedOnConstruct" : true,
+    "IconId" : "Obj/Materials/Water",
+    "Property" : "Liquid",
+    "GroupId" : "FoodIngredients",
+    "EnergyOutput" : 300.0,
+    "InternalValue" : 21.0,
+    "Rarity" : 70
+}

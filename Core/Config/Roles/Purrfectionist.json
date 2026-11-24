@@ -1,0 +1,12 @@
+{
+    "Id" : "Purrfectionist",
+    "LovesJobTypes" : [ ],
+    "Species" : [ "Cat" ],
+    "RoleTypes" : [ ],
+    "AdjustsSkills" : [
+        {
+            "JobId" : "Social",
+            "Adjustment" : 4
+        }
+    ]
+}

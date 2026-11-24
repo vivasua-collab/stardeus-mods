@@ -1,0 +1,21 @@
+{
+    "SlotTypeId" : "Jaw",
+    "Compatibility" : "Biological",
+    "TargetSpecies" : [ "Human" ],
+    "CompatibleBodySizes" : [ "Small", "Medium", "Large" ],
+    "ResistanceBase" : 6.0,
+    "Tier" : 2,
+    "AddsAbilities" : [
+        "Chew",
+        "Vocalize"
+    ],
+    "ProvidesStats" : [
+        {
+            "Component" : "HungerSatisfyRate",
+            "Properties" : [
+                { "Key" : "StateMul", "Float" : 0.0 },
+                { "Key" : "AmountPerHour", "Float" : 0.9 }
+            ]
+        }
+    ]
+}

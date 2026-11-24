@@ -1,0 +1,17 @@
+{
+    "Id" : "Pianist",
+    "Species" : [ "Human" ],
+    "LovesJobTypes" : [ "MicroPrecision" ],
+    "AgePhaseIds" : [ "YoungAdult", "MidLife", "Retirement" ],
+    "RoleTypes" : [ "Dumb", "Poor" ],
+    "AdjustsSkills" : [
+        {
+            "JobId" : "Crafting",
+            "Adjustment" : 4
+        },
+        {
+            "JobId" : "Melee",
+            "Adjustment" : -2
+        }
+    ]
+}

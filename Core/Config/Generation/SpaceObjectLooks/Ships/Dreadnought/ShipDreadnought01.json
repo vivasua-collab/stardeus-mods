@@ -1,0 +1,15 @@
+{
+    "Id" : "ShipDreadnought01",
+    "Probability" : 1.0,
+    "StarmapSizeMul" : 0.48,
+    "StarfieldSizeMul" : 0.24,
+    "IsConstantSizeInStarmap" : false,
+    "OrderDist" : -50,
+    "Sprite" : "SpaceObjects/Ships/ShipDreadnought01_D",
+    "CanRotate" : true,
+    "KeepUprightInStarfield" : true,
+    "Sprite_L" : "SpaceObjects/Ships/ShipDreadnought01_L",
+    "Sprite_R" : "SpaceObjects/Ships/ShipDreadnought01_R",
+    "Sprite_U" : "SpaceObjects/Ships/ShipDreadnought01_U",
+    "Sprite_D" : "SpaceObjects/Ships/ShipDreadnought01_D"
+}

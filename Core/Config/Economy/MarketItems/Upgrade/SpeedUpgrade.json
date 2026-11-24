@@ -1,0 +1,12 @@
+{
+    "Id" : "Obj/Upgrades/SpeedUpgrade",
+    "Type" : "CFD",
+    "Groups" : [ "Upgrade" ],
+    "Value" : 3750.0,
+    "Rarity" : 0.3,
+    "TraderQuantity" : 1.0,
+    "MaxTraderQuantity" : 10,
+    "MinSectorDifficulty" : 0.46,
+    "PlayerBuyPriceMultiplier": 2.0,
+    "Volatility" : 0.0038
+}

@@ -1,0 +1,11 @@
+{
+    // Asteroid radius * difficulty soft level > chance to punch through the ship.
+    // Anything that does not punch through bursts on the surface instead.
+    // Regular asteroids (radius 4+) always punch through on Balanced and above,
+    // this mostly decides the fate of fragments.
+    "FloatSet" : [
+        1.5, 0.0,
+        2.5, 0.5,
+        4.0, 1.0
+    ]
+}

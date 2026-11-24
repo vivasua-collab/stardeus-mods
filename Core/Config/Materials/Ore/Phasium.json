@@ -1,0 +1,11 @@
+{
+    "Id" : "Phasium",
+    "IconId" : "Obj/Materials/Phasium",
+    "GroupId" : "Hyperfuel",
+    "InternalValue" : 400.0,
+    "EnergyOutput" : 3460.0,
+    "Rarity" : 13,
+    "MatRarity" : 1,
+    "ExplosionLevel" : 2,
+    "ExplosivenessCurveId" : "DeviceLow"
+}

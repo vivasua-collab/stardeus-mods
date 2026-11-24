@@ -1,0 +1,9 @@
+{
+    "Id" : "Panel/Modal",
+
+    "Color" : "0A0519",
+    "Alpha" : 0.8,
+
+    "Image" : "NoAtlas/WhiteSquare",
+    "ImageType" : "Simple"
+}

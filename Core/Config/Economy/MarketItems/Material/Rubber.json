@@ -1,0 +1,11 @@
+{
+    "Id" : "Obj/Materials/Rubber",
+    "Type" : "CFD",
+    "Groups" : [ "Material" ],
+    "Value" : 91.0,
+    "Rarity" : 0.2,
+    "TraderQuantity" : 100.0,
+    "OnlineShopQuantity" : 50,
+    "MinSectorDifficulty" : 0.3,
+    "Volatility" : 0.0027
+}

@@ -1,0 +1,15 @@
+{
+    "Type": "Clothing",
+    "ColorGroupId": "Suit",
+    "Ingredients": [
+        { "TypeId" : "CarbonFiber", "StackSize" : 10 },
+        { "TypeId" : "Glass", "StackSize" : 5 },
+        { "TypeId" : "Rubber", "StackSize" : 4 },
+        { "TypeId" : "Plastic", "StackSize" : 4 },
+        { "TypeId" : "LeadPlate", "StackSize" : 1 }
+    ],
+    "IgnoreMarket" : true,
+    "ProductDefId": "Obj/Equipment/Hats/SpaceHelmet02",
+    "ProductionTimeHours": 8.0,
+    "EnergyCost": 50.0
+}

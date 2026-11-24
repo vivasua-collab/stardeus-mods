@@ -1,0 +1,26 @@
+{
+    "Layer" : "FreeEntities",
+    "ParentId" : "Obj/Upgrades/BaseUpgrade",
+    "Researchable" : {
+        "Prerequisites" : [ "Research/Energy/ConnectorAuto" ]
+    },
+    "Spawnable" : {
+        "TierDiff" : -1,
+        "Chance" : 0.25,
+        "ChanceLocked" : 0.0
+    },
+    "Components" : [
+        {
+            "Component" : "ObjGraphics",
+            "Properties" : [
+                { "Key" : "Graphic", "String": "Obj/Upgrades/AutoConnectUpgrade" }
+            ]
+        },
+        {
+            "Component" : "UnstoredMat",
+            "Properties" : [
+                { "Key" : "Type", "String" : "AutoConnectUpgrade" }
+            ]
+        }
+    ]
+}

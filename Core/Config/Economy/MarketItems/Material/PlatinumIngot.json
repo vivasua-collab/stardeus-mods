@@ -1,0 +1,10 @@
+{
+    "Id" : "Obj/Materials/PlatinumIngot",
+    "Type" : "CFD",
+    "Groups" : [ "Material" ],
+    "Value" : 2910.0,
+    "Rarity" : 0.16,
+    "TraderQuantity" : 5.0,
+    "MinSectorDifficulty" : 0.6,
+    "Volatility" : 0.0082
+}

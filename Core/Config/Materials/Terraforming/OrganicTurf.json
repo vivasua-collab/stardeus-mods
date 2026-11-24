@@ -1,0 +1,9 @@
+{
+    "Id" : "OrganicTurf",
+    "IsComposite" : true,
+    "IconId" : "Obj/Materials/OrganicTurf",
+    "Property" : "Solid",
+    "GroupId" : "Terraforming",
+    "EnergyOutput" : 3000.0,
+    "Rarity" : 1
+}

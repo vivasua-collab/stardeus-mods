@@ -1,0 +1,93 @@
+{
+    "QuestFlags" : [ "Random", "Template" ],
+    "TitleKeys" : [
+        "quest.BountyHuntPirateShip",
+        "quest.BountyHuntPirateShip2",
+        "quest.BountyHuntPirateShip3",
+        "quest.BountyHuntPirateShip4",
+        "quest.BountyHuntPirateShip5",
+        "quest.BountyHuntPirateShip6",
+        "quest.BountyHuntPirateShip7",
+        "quest.BountyHuntPirateShip8"
+    ],
+    "DescKeys" : [
+        "quest.BountyHuntPirateShip.desc",
+        "quest.BountyHuntPirateShip2.desc",
+        "quest.BountyHuntPirateShip3.desc",
+        "quest.BountyHuntPirateShip4.desc",
+        "quest.BountyHuntPirateShip5.desc",
+        "quest.BountyHuntPirateShip6.desc",
+        "quest.BountyHuntPirateShip7.desc",
+        "quest.BountyHuntPirateShip8.desc"
+    ],
+    "QuestProviders" : [
+        "Ship",
+        "SpaceStation"
+    ],
+    "Require": {
+        "Days": 10
+    },
+    "QuestValidators" : [ "ShipCombatReady" ],
+    "Variables" : [
+        {
+            "Id" : "HuntDeadline",
+            "Type" : "Deadline",
+            "Config" : [
+                {
+                    "Key" : "DaysCurve", "FloatSet" : [
+                        0.0, 10.0,
+                        1.0, 20.0
+                    ]
+                }
+            ]
+        },
+        {
+            "Id" : "TargetShip",
+            "Type" : "NPCShip",
+            "Config" : [
+                { "Key" : "MustExistOnLoad", "Bool" : false },
+                { "Key" : "FactionId", "String" : "Pirate" },
+                { "Key" : "ChancePolice", "Float" : -1.0 },
+                {
+                    "Key" : "StrengthMulCurve", "FloatSet" : [
+                        0.0, 0.8,
+                        0.9, 1.5,
+                        1.0, 2.0
+                    ]
+                },
+                { "Key" : "ShipBehaviorRegionId", "String" : "Region_Patrol" },
+                { "Key" : "ShipBehaviorSectorId", "String" : "Sector_Orbit" },
+                { "Key" : "MinRegionsAway", "Int" : 0 },
+                { "Key" : "MinRegionDifficulty", "Float" : 0.0 },
+                { "Key" : "MaxRegionDifficulty", "Float" : 1.0 },
+                { "Key" : "SkipRegionsWithoutRelay", "Bool" : true }
+            ]
+        }
+    ],
+    "Steps" : [
+        {
+            "Id" : "KillPirateShip",
+            "Type" : "KillNPCShip",
+            "Deadline" : "HuntDeadline",
+            "StepFlags" : [ "ActiveOnStart", "CompletesQuest", "FailsQuest", "HideIfQuestUnaccepted" ],
+            "Config" : [
+                { "Key" : "Var_Ship", "String" : "TargetShip" }
+            ]
+        }
+    ],
+    "Rewards" : [
+        {
+            "Id" : "BountyReward",
+            "Type" : "Money_NetWorth",
+            "Config" : [
+                { "Key" : "NetWorthCurve", "FloatSet" : [
+                    0.0, 0.02,
+                    0.95, 0.08,
+                    1.0, 0.15
+                ] },
+                { "Key" : "AmountMin", "Int" : 15000 },
+                { "Key" : "AmountMax", "Int" : 150000 }
+            ]
+        }
+    ]
+}

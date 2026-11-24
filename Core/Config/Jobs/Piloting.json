@@ -1,0 +1,7 @@
+{
+    "Id" : "Piloting",
+    "Importance" : 3.0,
+    "IconId" : "Icons/Color/SpaceShip",
+    "EnabledByAbilities" : [ "Manipulate", "Pilot" ],
+    "Types" : [ "MicroPrecision", "Intellectual" ]
+}

@@ -1,0 +1,12 @@
+{
+    "Id" : "Obj/Parts/Core/DumbCore",
+    "Type" : "CFD",
+    "Groups" : [ "BodyPart", "Robotics" ],
+    "Value" : 15000.0,
+    "PlayerBuyPriceMultiplier" : 2.0,
+    "PlayerSellPriceMultiplier" : 0.2,
+    "Rarity" : 0.4,
+    "MinSectorDifficulty" : 0.3,
+    "TraderQuantity" : 3.0,
+    "Volatility" : 0.00177
+}

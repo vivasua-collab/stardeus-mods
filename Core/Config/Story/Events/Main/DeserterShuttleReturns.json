@@ -1,0 +1,12 @@
+{
+    // C# implementation id. Multiple configurations can point to a single implementation.
+    "EventId": "DeserterShuttleReturns",
+    // How much does this story event cost to run
+    "Points": 8,
+    // Options: Negative, Positive, Neutral, Raid
+    "OutcomeType": "Positive",
+    // Full list is in StoryEventFlags class
+    "EventFlags": [
+        "CanHaveDuplicates"
+    ]
+}

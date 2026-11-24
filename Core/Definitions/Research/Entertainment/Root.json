@@ -1,0 +1,10 @@
+{
+    "Id" : "Research/Entertainment/Root",
+    "Tier" : 0,
+    "IsAbstract" : true,
+    "PreviewIcon" : "Icons/Color/MoodGood",
+    "NameKey" : "research.entertainment",
+    "Researchable" : {
+        "IsTreeNode" : true
+    }
+}

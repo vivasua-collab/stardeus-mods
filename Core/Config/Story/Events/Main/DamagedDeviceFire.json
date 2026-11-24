@@ -1,0 +1,23 @@
+{
+    // C# implementation id
+    "EventId": "DamagedDeviceFire",
+    // How much does this story event cost to run
+    "Points": 8,
+    // Options: Negative, Positive, Neutral, Raid
+    "OutcomeType": "Negative",
+    // Full list is in StoryEventFlags class
+    "EventFlags": [
+        "Device",
+        "Fire",
+        "Neglect",
+        "Annoying"
+    ],
+    // Minimum days before this event can repeat
+    "MinRepeatDelayDays": 80,
+    // Requirements for this event to be available
+    "Require": {
+        "GridSize": 25,
+        "Difficulty": 0.25,
+        "Days": 25
+    }
+}

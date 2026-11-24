@@ -1,0 +1,9 @@
+{
+    // Sector difficulty -> base meteoroids per meteoroid shower salvo
+    "FloatSet" : [
+        0.0,  8.0,
+        0.4, 14.0,
+        0.7, 20.0,
+        1.0, 28.0
+    ]
+}

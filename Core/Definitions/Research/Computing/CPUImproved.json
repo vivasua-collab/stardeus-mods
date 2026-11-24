@@ -1,0 +1,26 @@
+{
+    "Id" : "Research/Computing/CPUImproved",
+    "Tier" : 3,
+    "IsAbstract" : true,
+    "PreviewIcon" : "Icons/Color/CPU",
+    "Researchable" : {
+        "IsTreeNode" : true,
+        "Prerequisites" : [
+            "Research/Computing/CPU"
+        ],
+        "DatoidCosts" : [
+            {
+                "TypeId" : "DatoidSynthetic",
+                "StackSize" : 3
+            },
+            {
+                "TypeId" : "DatoidEnergy",
+                "StackSize" : 7
+            },
+            {
+                "TypeId" : "DatoidTechHigh",
+                "StackSize" : 9
+            }
+        ]
+    }
+}

@@ -1,0 +1,27 @@
+{
+    "Id" : "Research/Robotics/MindTransfer",
+    "Tier" : 2,
+    "IsAbstract" : true,
+    "NameKey" : "mind.transfer",
+    "PreviewIcon" : "Icons/Color/MindTransfer",
+    "Researchable" : {
+        "IsTreeNode" : true,
+        "Prerequisites" : [
+            "Research/Robotics/AssemblyHub"
+        ],
+        "DatoidCosts" : [
+            {
+                "TypeId" : "DatoidTech",
+                "StackSize" : 8
+            },
+            {
+                "TypeId" : "DatoidBiotic",
+                "StackSize" : 5
+            },
+            {
+                "TypeId" : "DatoidEnergy",
+                "StackSize" : 3
+            }
+        ]
+    }
+}

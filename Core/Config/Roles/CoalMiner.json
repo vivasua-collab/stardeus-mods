@@ -1,0 +1,29 @@
+{
+    "Id" : "CoalMiner",
+    "LovesJobTypes" : [ "Mining" ],
+    "Species" : [ "Human", "Robot" ],
+    "IncapableJobTypes" : [ "Research" ],
+    "AgePhaseIds" : [ "Childhood", "YoungAdult", "MidLife" ],
+    "RoleTypes" : [ "Dumb", "Poor" ],
+    "BodyTypes" : "MF",
+    "SexChances" : [
+        {
+            "Sex" : "M",
+            "Chance" : 0.90
+        },
+        {
+            "Sex" : "F",
+            "Chance" : 0.10
+        }
+    ],
+    "AdjustsSkills" : [
+        {
+            "JobId" : "Mining",
+            "Adjustment" : 6
+        },
+        {
+            "JobId" : "Melee",
+            "Adjustment" : 2
+        }
+    ]
+}

@@ -1,0 +1,37 @@
+{
+    "RemoveColonist" : true,
+    "IsDead" : false,
+    "ExcludePets" : true,
+    "ExcludeRobots" : true,
+    "Max" : 1,
+    "Chance" : 0.3,
+    "GenerateName" : true,
+    "NameChanceWeights" : [
+        0.95,
+        0.05
+    ],
+    "CustomNames" : "Space/Planet/Custom",
+    "NameParts" : [
+        {
+            "Type" : "Prefix",
+            "NonUnique" : true,
+            "Paths" : [ "Space/Object/Prefix" ],
+            "Chances" : [ 0.0, 1.0 ]
+        },
+        {
+            "Type" : "SOName",
+            "Paths" : [ "Space/Object/Name" ],
+            "Chances" : [ 1.0, 1.0 ]
+        },
+        {
+            "Type" : "SOName",
+            "Paths" : [ "Space/Object/Name" ],
+            "Chances" : [ 0.1, 0.01 ]
+        },
+        {
+            "Type" : "PlanetSuffix",
+            "Paths" : [ "Space/Object/Suffix" ],
+            "Chances" : [ 0.05, 0.01 ]
+        }
+    ]
+}

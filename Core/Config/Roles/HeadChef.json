@@ -1,0 +1,15 @@
+{
+    "Id" : "HeadChef",
+    "LovesJobTypes" : [ "Cooking" ],
+    "IncapableJobTypes" : [ "Cleaning" ],
+    "Species" : [ "Human", "Robot", "Carrier", "Drone" ],
+    "RoleTypes" : [ ],
+    "AgePhaseIds" : [ "MidLife", "Retirement" ],
+    "RequiresRoles" : [ "Cook" ],
+    "AdjustsSkills" : [
+        {
+            "JobId" : "Cooking",
+            "Adjustment" : 10
+        }
+    ]
+}

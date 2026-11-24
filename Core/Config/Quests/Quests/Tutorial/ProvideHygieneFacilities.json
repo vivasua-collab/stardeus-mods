@@ -1,0 +1,67 @@
+{
+    "QuestFlags" : [ "Tutorial", "AutoAdd", "Unique" ],
+    "TitleKey" : "quest.ProvideHygiene",
+    "DescKey" : "quest.ProvideHygiene.desc",
+    "QuestProviders" : [
+        "ShipComputer"
+    ],
+    "Require": {
+        // Colonists keeps this from being offered to a crew whose only colonist died after
+        // food was set up; the chain position (after food) is what paces it otherwise.
+        "Colonists" : 1
+    },
+    // Second step of the colonist branch: food is the urgent need, hygiene follows it.
+    "AvailableWhen" : [
+        "ReadyForTutorialQuests",
+        "HasFoodProduction"
+    ],
+    "CompleteWhen" : [
+        "HasToilet",
+        "HasShower"
+    ],
+    "SetOnComplete" : [ "HasHygiene" ],
+    "SetOnFail" : [ "HasHygiene" ],
+    "Steps" : [
+        {
+            "Id": "ResearchHygiene",
+            "Type" : "UnlockResearch",
+            "StepFlags" : [ "ActiveOnStart" ],
+            "Config" : [
+                { "Key" : "Research", "String" : "Research/LifeSupport/Hygiene" }
+            ],
+            "SetOnComplete" : [
+                "UnlockedHygiene"
+            ]
+        },
+        {
+            "Id": "BuildToilet",
+            "Type" : "BuildTile",
+            "Config" : [
+                { "Key" : "Definition", "String" : "Objects/Devices/Toilet" },
+                { "Key" : "Count", "Int" : 1 },
+                { "Key" : "CountExisting", "Bool" : true }
+            ],
+            "ActivateWhen" : [
+                "UnlockedHygiene"
+            ],
+            "SetOnComplete" : [
+                "HasToilet"
+            ]
+        },
+        {
+            "Id": "BuildShower",
+            "Type" : "BuildTile",
+            "Config" : [
+                { "Key" : "Definition", "String" : "Objects/Devices/Shower" },
+                { "Key" : "Count", "Int" : 1 },
+                { "Key" : "CountExisting", "Bool" : true }
+            ],
+            "ActivateWhen" : [
+                "UnlockedHygiene"
+            ],
+            "SetOnComplete" : [
+                "HasShower"
+            ]
+        }
+    ]
+}

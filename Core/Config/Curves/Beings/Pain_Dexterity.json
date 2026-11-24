@@ -1,0 +1,12 @@
+{
+    // Pain -> Dexterity multiplier, flesh only (StatsBeing.ActivateFor). Pain dims
+    // everything the hands do, slightly: a being about to go down in pain shock (0.8) works
+    // and shoots at 85%
+    "FloatSet" : [
+        0.0, 1.0,
+        0.15, 0.98,
+        0.4, 0.93,
+        0.8, 0.85,
+        1.5, 0.75
+    ]
+}

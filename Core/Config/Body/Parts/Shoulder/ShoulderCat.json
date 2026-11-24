@@ -1,0 +1,9 @@
+{
+    "SlotTypeId" : "Shoulder",
+    "Compatibility" : "Biological",
+    "Tier" : 1,
+    "ResistanceBase" : 5.0,
+    "TargetSpecies" : [ "Cat" ],
+    "CompatibleSpeciesFlags" : [ "Animal" ],
+    "CompatibleBodySizes" : [ "Small", "Medium" ]
+}

@@ -1,0 +1,10 @@
+{
+    "Id" : "Text/DataBlockHeader",
+
+    "Color" : "UI/Text/Main",
+    "Alpha" : 1,
+
+    "TextFontSize" : 22,
+    "TextFontStyles" : [ "Bold" ],
+    "TextOverflowMode" : "Ellipsis"
+}

@@ -1,0 +1,16 @@
+{
+    "Id" : "Panel/EventsCount",
+
+    "Color" : "UI/Panel/Events",
+    "Alpha" : 0.5,
+
+    // For 32 pixel height:
+    "Image" : "UI/Buttons/IconButtonBG",
+    "ImageType" : "Sliced",
+    "ImageBorderLBRT" : [ 8, 8, 8, 8 ]
+
+    // For 48 pixel height:
+    // "Image" : "UI/Buttons/CountBG",
+    // "ImageType" : "Sliced",
+    // "ImageBorderLBRT" : [ 12, 12, 12, 12 ]
+}

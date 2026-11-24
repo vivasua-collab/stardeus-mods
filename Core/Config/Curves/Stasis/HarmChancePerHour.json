@@ -1,0 +1,14 @@
+// Chance per hour that one sleeper takes organ damage in an unstable stasis array.
+// Has to be zero from 0.5 up: a powered array without advanced life support settles
+// between 0.5 and 0.7, and an array with nothing wrong with it must never hurt anyone.
+{
+    // stability => chance per sleeper per hour
+    "FloatSet" : [
+        0.0, 0.04,
+        0.2, 0.02,
+        0.33, 0.01,
+        0.4, 0.005,
+        0.5, 0.0,
+        1.0, 0.0
+    ]
+}

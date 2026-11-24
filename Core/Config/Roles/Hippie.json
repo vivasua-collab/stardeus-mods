@@ -1,0 +1,14 @@
+{
+    "Id" : "Hippie",
+    "Species" : [ "Human" ],
+    "AgePhaseIds" : [ "YoungAdult", "MidLife", "Retirement" ],
+    "IncapableJobTypes" : [ "Shooting" ],
+    "BodyTypes" : "T",
+    "RoleTypes" : [ "Dumb", "Poor", "Good" ],
+    "AdjustsSkills" : [
+        {
+            "JobId" : "Medical",
+            "Adjustment" : 6
+        }
+    ]
+}

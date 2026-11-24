@@ -1,0 +1,8 @@
+{
+    "Id" : "Panel/ToggleCheck",
+
+    "Color" : "FFFFFF",
+    "Alpha" : 1,
+
+    "Image" : "Icons/Color/Check"
+}

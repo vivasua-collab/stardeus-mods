@@ -1,0 +1,6 @@
+{
+    "Id" : "UI/Text/White",
+    "AliasFor" : "UI/White/Sec+2",
+    "Alpha" : 1.0,
+    "SkipAtlas" : true
+}

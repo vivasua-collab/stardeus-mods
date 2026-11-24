@@ -1,0 +1,10 @@
+{
+    // Crew population after a death (humans count 1, bots 0.5) -> raid adaptation days lost
+    // (a bot's death loses half). A small crew feels one death more than a big one. The
+    // popular colony sim's curve with the adaptation days doubled.
+    "FloatSet" : [
+        0.0,    60.0,
+        11.0,   60.0,
+        20.0,   40.0
+    ]
+}

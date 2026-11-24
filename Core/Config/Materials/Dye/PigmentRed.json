@@ -1,0 +1,10 @@
+{
+    "Id" : "PigmentRed",
+    "IsComposite" : true,
+    "IconId" : "Obj/Materials/PigmentRed",
+    "Property" : "Liquid",
+    "GroupId" : "Pigments",
+    "IsConsumedOnConstruct" : true,
+    "EnergyOutput" : 15.0,
+    "Rarity" : 25
+}

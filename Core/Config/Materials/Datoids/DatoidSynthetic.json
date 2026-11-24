@@ -1,0 +1,13 @@
+{
+    "Id" : "DatoidSynthetic",
+    "IsComposite" : true,
+    "IconId" : "Obj/Datoids/DatoidSynthetic",
+    "DefId" : "Obj/Datoids/DatoidSynthetic",
+    "Property" : "Datoid",
+    "Group" : "Datoid",
+    "GroupId" : "Datoids",
+    "IgnoreMarket" : true,
+    "EnergyOutput" : 100.0,
+    "Rarity" : 50,
+    "InternalValue" : 5
+}

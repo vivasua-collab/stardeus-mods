@@ -1,0 +1,10 @@
+{
+    "Id" : "Ship",
+    "Icon" : "Icons/Color/Warning",
+    "IsDynamic" : true,
+    "IsInteractive" : true,
+    "HasTrader" : true,
+    "CanMoveInStarmap" : true,
+    "SpawnChance" : 0.0,
+    "StarfieldSortOrder" : 2
+}

@@ -1,0 +1,13 @@
+{
+    "Type": "Weapons1",
+    "Ingredients": [
+        { "TypeId" : "SteelPlate", "StackSize" : 3 },
+        { "TypeId" : "BatteryCell", "StackSize" : 1 },
+        { "TypeId" : "Microchip", "StackSize" : 1 },
+        { "TypeId" : "Plastic", "StackSize" : 1 }
+    ],
+    "IgnoreMarket" : true,
+    "ProductDefId": "Obj/Misc/C42",
+    "ProductionTimeHours": 4.0,
+    "EnergyCost": 50.0
+}

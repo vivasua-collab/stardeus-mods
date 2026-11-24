@@ -1,0 +1,22 @@
+{
+    "Id" : "Assassin",
+    "LovesJobTypes" : [ "Shooting", "Melee" ],
+    "IncompatibleTraitIds" : [ "Pacifist" ],
+    "Species" : [ "Human", "Robot", "Drone", "Carrier", "Orbotron", "Sentry", "CleaningBot" ],
+    "RoleTypes" : [ "Rich", "Evil" ],
+    "BodyTypes" : "MF",
+    "AdjustsSkills" : [
+        {
+            "JobId" : "Shooting",
+            "Adjustment" : 4
+        },
+        {
+            "JobId" : "Melee",
+            "Adjustment" : 6
+        },
+        {
+            "JobId" : "Construction",
+            "Adjustment" : -1
+        }
+    ]
+}

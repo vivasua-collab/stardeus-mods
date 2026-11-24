@@ -1,0 +1,28 @@
+{
+    "Name": "Grey",
+    "Colors": {
+        "White": "#FFFFFF",
+        "Black": "#000000",
+        "Bright": "#DBF1F9",
+
+        "RedPanel": "#FF0000",
+
+        "PanelHeader": "#1A1A1A",
+        "PanelTop": "#2D2D2D",
+        "PanelContent": "#3A3A3A",
+        "PanelFooter": "#1F1F1F",
+
+        "ButtonSlot": "#2A2A2A",
+        "ButtonPanel": "#404040",
+        "ButtonPanelFancy": "#606060",
+
+        "Accent": "#F3FFA4",
+
+        "AlertYellow": "#FFD84A",
+
+        "Button1": "#1F1F1F",
+        "Button2": "#353535",
+        "Button3": "#403340",
+        "InputHighlight": "#6F5785"
+    }
+}

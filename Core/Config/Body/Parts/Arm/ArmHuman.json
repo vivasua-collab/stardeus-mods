@@ -1,0 +1,22 @@
+{
+    "SlotTypeId" : "Arm",
+    "Compatibility" : "Biological",
+    "TargetSpecies" : [ "Human" ],
+    "CompatibleSpeciesFlags" : [ "Humanoid" ],
+    "CompatibleBodySizes" : [ "Medium", "Large" ],
+    "PartFlags" : [ "Biological" ],
+    "ResistanceBase" : 5.0,
+    "Tier" : 2,
+    "AddsAbilities" : [
+    ],
+    "ProvidesStats" : [
+        {
+            "Component" : "Dexterity",
+            "Properties" : [
+                { "Key" : "Amount", "Float" : 0.25 },
+                { "Key" : "CompoundLimit", "Float" : 1.0 },
+                { "Key" : "StateMul", "Float" : 0.6 }
+            ]
+        }
+    ]
+}

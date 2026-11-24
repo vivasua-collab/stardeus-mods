@@ -1,0 +1,23 @@
+{
+    "Id" : "Research/Construction/WinchRangeUpgrade",
+    "Tier" : 2,
+    "IsAbstract" : true,
+    "PreviewIcon" : "Objects/Devices/WinchHook_D",
+    "NameKey" : "obj.upgrades.winchrangeupgrade",
+    "Researchable" : {
+        "IsTreeNode" : true,
+        "Prerequisites" : [
+            "Research/Construction/Winch"
+        ],
+        "DatoidCosts" : [
+            {
+                "TypeId" : "DatoidTech",
+                "StackSize" : 4
+            },
+            {
+                "TypeId" : "DatoidSynthetic",
+                "StackSize" : 2
+            }
+        ]
+    }
+}

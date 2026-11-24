@@ -1,0 +1,12 @@
+{
+    "Type": "Electronics3",
+    "Ingredients": [
+        { "TypeId" : "Microchip2", "StackSize" : 1 },
+        { "TypeId" : "OpticalFiber", "StackSize" : 1 },
+        { "TypeId" : "GoldWire", "StackSize" : 2 }
+    ],
+    "IgnoreMarket" : true,
+    "ProductDefId": "Obj/Materials/Microchip3",
+    "ProductionTimeHours": 2.0,
+    "EnergyCost": 40.0
+}

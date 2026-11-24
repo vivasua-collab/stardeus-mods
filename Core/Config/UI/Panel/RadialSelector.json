@@ -1,0 +1,9 @@
+{
+    "Id" : "Panel/RadialSelector",
+
+    "Color" : "FFFFFF",
+    //"UI/Main/Primary+2",
+    "Alpha" : 1.0,
+
+    "Image" : "UI/Radial/Selector"
+}

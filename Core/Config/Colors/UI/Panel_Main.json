@@ -1,0 +1,8 @@
+{
+    "Id" : "UI/Panel/Main",
+    "AliasFor" : "UI/Greyish/Sec",
+    // "Hex" : "080421",
+    //"Hex" : "2E2035",
+    "Alpha" : 1.0,
+    "SkipAtlas" : true
+}

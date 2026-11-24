@@ -1,0 +1,79 @@
+{
+    "QuestFlags" : [ "Tutorial", "AutoAdd", "Unique" ],
+    "TitleKey" : "quest.EstablishResearch",
+    "DescKey" : "quest.EstablishResearch.desc",
+    "QuestProviders" : [
+        "ShipComputer"
+    ],
+    // Right after production, before the stasis run starts. Every later quest with a research
+    // step (atmosphere, radar, smelting, ...) can then assume the harvester exists, and the
+    // stasis / human-needs sequence is not interrupted by an unrelated lesson in the middle.
+    "AvailableWhen" : [
+        "ReadyForTutorialQuests",
+        "HasEstablishedProduction"
+    ],
+    "SetOnComplete" : [ "HasEstablishedResearch" ],
+    "SetOnFail" : [ "HasEstablishedResearch" ],
+    "BoundTutorialIds": [ "Resources/ConfigureCrafter" ],
+    "Steps" : [
+        {
+            "Id": "BuildDatoidLoader",
+            "Type" : "BuildTile",
+            "StepFlags" : [ "ActiveOnStart" ],
+            "Config" : [
+                { "Key" : "Definition", "String" : "Objects/Devices/DatoidLoader" },
+                { "Key" : "CountExisting", "Bool" : true },
+                { "Key" : "Count", "Int" : 1 }
+            ],
+            "SetOnComplete" : [
+                "HasDatoidLoader"
+            ]
+        },
+        {
+            "Id": "HaveDataHarvester",
+            "Type" : "HaveOnGrid",
+            "Config" : [
+                { "Key" : "Definition", "String" : "Objects/Devices/DataHarvesterBasic" },
+                { "Key" : "Count", "Int" : 1 }
+            ],
+            "ActivateWhen" : [
+                "HasDatoidLoader"
+            ],
+            "SetOnComplete" : [
+                "HasDataHarvester"
+            ]
+        },
+        {
+            "Id": "ConfigureDataHarvester",
+            "Type" : "ConfigureCrafter",
+            "ActivateWhen" : [
+                "HasDataHarvester"
+            ],
+            "SetOnComplete" : [
+                "HasConfiguredDataHarvester"
+            ],
+            "Config" : [
+                {
+                    "Key" : "Crafter",
+                    "String" : "Objects/Devices/DataHarvesterBasic"
+                },
+                {
+                    "Key" : "Product",
+                    "String" : "Obj/Datoids/DatoidBasic"
+                }
+            ]
+        },
+        {
+            "Id": "ProduceBasicDatoid",
+            "StepFlags" : [ "CompletesQuest" ],
+            "Type" : "Produce",
+            "ActivateWhen" : [
+                "HasConfiguredDataHarvester"
+            ],
+            "Config" : [
+                { "Key" : "Product", "String" : "Obj/Datoids/DatoidBasic" },
+                { "Key" : "Count", "Int" : 1 }
+            ]
+        }
+    ]
+}

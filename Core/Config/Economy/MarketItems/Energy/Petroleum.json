@@ -1,0 +1,10 @@
+{
+    "Id" : "Obj/Materials/Petroleum",
+    "Type" : "CFD",
+    "Groups" : [ "Energy" ],
+    "Value" : 238.0,
+    "Rarity" : 0.24,
+    "TraderQuantity" : 30.0,
+    "MinSectorDifficulty" : 0.45,
+    "Volatility" : 0.0028
+}

@@ -1,0 +1,57 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Stardeus TwitchRole",
+  "description": "Generated from C# by Game/Generate JSON Schemas, do not edit by hand",
+  "$ref": "#/$defs/TwitchRole",
+  "$defs": {
+    "TwitchRole": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "Id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "IdH": {
+          "type": "integer"
+        },
+        "AddForFlags": {
+          "anyOf": [
+            {
+              "type": "string",
+              "pattern": "^\\s*(None|Viewer|VIP|Subscriber|Moderator|Broadcaster)(\\s*,\\s*(None|Viewer|VIP|Subscriber|Moderator|Broadcaster))*\\s*$"
+            },
+            {
+              "type": "integer"
+            }
+          ]
+        },
+        "AddAtReputation": {
+          "type": "integer"
+        },
+        "AlwaysAddFor": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "enum": [
+              "None",
+              "Viewer",
+              "VIP",
+              "Subscriber",
+              "Moderator",
+              "Broadcaster"
+            ],
+            "type": "string"
+          }
+        }
+      },
+      "additionalProperties": false
+    }
+  }
+}

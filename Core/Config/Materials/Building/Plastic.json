@@ -1,0 +1,8 @@
+{
+    "Id" : "Plastic",
+    "IsComposite" : true,
+    "IconId" : "Obj/Materials/Plastic",
+    "GroupId" : "Components",
+    "EnergyOutput" : 250.0,
+    "Rarity" : 15
+}

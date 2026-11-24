@@ -1,0 +1,82 @@
+{
+    "Id" : "peaceful",
+    "Level" : 0.1,
+    "DatoidCostScale" : 0.5,
+    "StartingResources" : 1.5,
+    "PlanetResources" : 1.5,
+    "DefaultDestructionLevel" : 0.20,
+    // Difficulty changes mood only through the resting sanity. Sanity falls at the same rate
+    // and breakdowns roll the same chance on every difficulty: scaling those too compounded,
+    // and on the hardest difficulty colonists broke down whatever the player did
+    "SanityDropRate" : 1.0,
+    "SanityBaseline" : 0.50,
+    "BreachCapsuleSpeed" : 1.0,
+    // For how many in-game minutes a brand new fire resists being extinguished,
+    // and how much it is boosted while that lasts
+    "FireBoostMinutes" : 15,
+    "FireBoostGrowthMul" : 1.05,
+    "FireBoostSpreadMul" : 1.1,
+    "FireBoostFirefightingMul" : 0.9,
+    // Strength above which a boosted fire builds up pressure to spread.
+    // 1.0 = only at full strength, same as an unboosted fire
+    "FireBoostSpreadThreshold" : 1.0,
+    // Scales the chance that incidents start extra fires or explosions
+    "FireChanceScale" : 0.1,
+    "WantedTensionMultiplier" : 0.25,
+    // Raid adaptation: how much of its swing reaches raid points, and how fast it grows over
+    // a run without losses (RaidAdaptation)
+    "AdaptationEffect" : 1.0,
+    "AdaptationGrowthOverZero" : 0.0,
+    "MinDeepScansPerLocation" : 2,
+    "MaxDeepScansPerLocation" : 5,
+    // how many in-game minutes ships will linger before pressing "shoot" button
+    // when their weapons are ready
+    "NPCShipShootHesitationMin" : 30,
+    "NPCShipShootHesitationMax" : 60,
+    // Fraction of an NPC ship's free class points offensiveness may spend on weapons
+    "ShipCombatDifficulty" : 0.35,
+    // Multiplier applied to quest-spawned NPC ship opponents' class points
+    "QuestShipStrengthMul" : 0.6,
+    // How strong will event-spawned opponents be against player's ship.
+    // strength: 0.0 - dead ship, 1.0, same as you, 2.0 - 2x as strong as you
+    // 0.0 - , 1.0 - not scared at all
+    // random value => strength
+    "NPCShipStrengthChance" : [
+        0.0, 0.1,
+        0.05, 0.1,
+        0.15, 0.2,
+        0.75, 0.25,
+        0.95, 0.3,
+        1.0, 0.5
+    ],
+    // The only difficulty without major threats: no scheduled raids, no Raid or HeavyDisaster
+    // story events. Smaller threats keep coming at the normal cadence, just cheaper
+    "AllowMajorThreats" : false,
+    // No raids here today, but every difficulty from Relaxing down holds the first raid until
+    // a repair station is built (see Relaxing), so it still applies if Peaceful ever allows them
+    "FirstRaidWaitsForRepairStationDays" : 14,
+    // Story cadence is the story generator's, not the difficulty's: CooldownMul stays 1.0.
+    // What makes Peaceful easier is PointAllowanceMul, AllowMajorThreats and the rest above
+    "StoryScheduleModifiers" : [
+        {
+            "Schedule" : "Neutral",
+            "PointAllowanceMul" : 1.0,
+            "CooldownMul" : 1.0
+        },
+        {
+            "Schedule" : "Positive",
+            "PointAllowanceMul" : 3.0,
+            "CooldownMul" : 1.0
+        },
+        {
+            "Schedule" : "Negative",
+            "PointAllowanceMul" : 0.5,
+            "CooldownMul" : 1.0
+        },
+        {
+            "Schedule" : "Raid",
+            "PointAllowanceMul" : 0.5,
+            "CooldownMul" : 1.0
+        }
+    ]
+}

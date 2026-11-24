@@ -1,0 +1,15 @@
+{
+    // C# implementation id.
+    "EventId": "ExpeditionPickUpCrawlers",
+    "Points": 10,
+    // Options: Negative, Positive, Neutral, Raid
+    "OutcomeType": "Negative",
+    // Full list is in StoryEventFlags class
+    "EventFlags": [
+        "OnDemand",
+        "Expedition"
+    ],
+    "Require": {
+        "SectorDifficulty": 0.5
+    }
+}

@@ -1,0 +1,76 @@
+{
+    "Ints" : [
+        { "Key" : "CargoShip_SteelPlate", "Int" : 500 },
+        { "Key" : "CargoShip_TitaniumPlate", "Int" : 200 },
+        { "Key" : "CargoShip_Glass", "Int" : 50 },
+        { "Key" : "CargoShip_CopperPlate", "Int" : 30 },
+        { "Key" : "CargoShip_Carbon", "Int" : 20 },
+        { "Key" : "CargoShip_Lithium", "Int" : 20 },
+        { "Key" : "CargoShip_Water", "Int" : 100 },
+        // The food tutorial's Survival Meal needs Protein, and nothing makes it this early
+        { "Key" : "CargoShip_Protein", "Int" : 15 },
+        { "Key" : "CargoShip_Rock", "Int" : 30 },
+        { "Key" : "CargoShip_SurvivalMeal", "Int" : 50 },
+        { "Key" : "CargoShip_Soil", "Int" : 30 },
+        { "Key" : "CargoShip_CarbonFiber", "Int" : 15 },
+        { "Key" : "CargoShip_SiliconWafer", "Int" : 20 },
+        { "Key" : "CargoShip_Microchip", "Int" : 10 },
+        { "Key" : "CargoShip_Microchip2", "Int" : 3 },
+        { "Key" : "CargoShip_Transistor", "Int" : 20 },
+        { "Key" : "CargoShip_BatteryCell", "Int" : 5 },
+        { "Key" : "CargoShip_FusionCell", "Int" : 10 },
+        { "Key" : "CargoShip_Phasium", "Int" : 10 },
+        { "Key" : "CargoShip_Plastic", "Int" : 10 },
+        { "Key" : "CargoShip_OpticalFiber", "Int" : 5 },
+        // Sized for the Assembler recipe (5), which the production tutorial requires.
+        // There was no GoldWire here at all, so the quest was unbuildable even with the
+        // research unlocked, and GoldWire cannot be crafted out of trouble - its recipe
+        // needs mined GoldIngot.
+        { "Key" : "CargoShip_GoldWire", "Int" : 30 },
+        { "Key" : "CargoShip_CopperWire", "Int" : 50 },
+        { "Key" : "CargoShip_Rubber", "Int" : 30 },
+        { "Key" : "CargoShip_Gears", "Int" : 30 }
+    ],
+    "StringSets" : [
+        {
+            "Key" : "CargoShip_UnlockedResearch",
+            "StringSet" : [
+                "Research/Scanning/Communications",
+                "Research/SpaceTravel/Bridge",
+                "Research/SpaceTravel/Propulsion",
+                "Research/SpaceTravel/PropulsionFusion",
+                "Research/Robotics/Maintenance",
+                "Research/Production/Assembly",
+                // Research/Production/AssemblyImproved (the Assembler) is not listed here on
+                // purpose: the scenario grants it in code only when the intro found nobody who
+                // can run the Crafting Station, see
+                // BaseRandomShipScenario.UnlockAssemblerIfCrewCannotCraft.
+                "Research/Production/Electronics",
+                "Research/Habitation/Furniture",
+                "Research/Habitation/Storage",
+                "Research/Economy/Wallet",
+                "Research/Energy/Reactor",
+                "Research/Energy/ConnectorImproved",
+                "Research/Energy/ConnectorWall",
+                "Research/Construction/Structure",
+                "Research/Construction/StorageMini",
+                "Research/Construction/Lighting",
+                "Research/Computing/Research"
+            ]
+        },
+        {
+            "Key" : "CargoShip_Objs",
+            // Kept even empty: gen stages take rng forks in order, so dropping this stage
+            // would move what every later stage places
+            "StringSet" : []
+        },
+        {
+            "Key" : "CargoShip_StartingWeapons",
+            // Equipped on the starting crew (StartingCrewWeapons), not dropped on the floor
+            "StringSet" : [
+                "Obj/Equipment/Weapons/Handgun01",
+                "Obj/Equipment/Weapons/Knife01"
+            ]
+        }
+    ]
+}

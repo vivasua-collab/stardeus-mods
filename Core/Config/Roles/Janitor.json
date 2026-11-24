@@ -1,0 +1,20 @@
+{
+    "Id" : "Janitor",
+    "IncapableJobTypes" : [ "Research", "Robotics" ],
+    "LovesJobTypes" : [ "Cleaning" ],
+    "Species" : [ "Human", "CleaningBot" ],
+    "RoleTypes" : [ "Dumb", "Poor" ],
+    "AgePhaseIds" : [ "YoungAdult", "MidLife", "Retirement" ],
+    "AdjustsSkills" : [
+        {
+            "JobId" : "Cleaning",
+            "Adjustment" : 6
+        }
+    ],
+    "AddsTraits" : [
+        {
+            "TraitId" : "CleaningOcd",
+            "Chance" : 0.5
+        }
+    ]
+}

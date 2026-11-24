@@ -1,0 +1,38 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Stardeus ShipCapacitorDef",
+  "description": "Generated from C# by Game/Generate JSON Schemas, do not edit by hand",
+  "$ref": "#/$defs/ShipCapacitorDef",
+  "$defs": {
+    "ShipCapacitorDef": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "Id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "IdH": {
+          "type": "integer"
+        },
+        "DeviceId": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "Capacity": {
+          "type": "integer"
+        },
+        "ChargeTimeMinutes": {
+          "type": "integer"
+        }
+      },
+      "additionalProperties": false
+    }
+  }
+}

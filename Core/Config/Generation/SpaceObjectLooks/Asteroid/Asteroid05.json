@@ -1,0 +1,8 @@
+{
+    "Id" : "Asteroid05",
+    "Probability" : 1.0,
+    "StarmapSizeMul" : 3.0,
+    "StarfieldSizeMul" : 0.1,
+    "RandomRotationZ" : true,
+    "Sprite" : "Obj/Asteroids/Asteroid05"
+}

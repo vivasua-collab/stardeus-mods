@@ -1,0 +1,62 @@
+{
+    "Layer" : "FreeEntities",
+    "ParentId" : "Obj/Eggs/BaseEgg",
+    "UseParentTexts" : true,
+    "Researchable" : {
+        "Prerequisites" : [
+            "Research/LifeSupport/CloneEgg"
+        ]
+    },
+    "Spawnable" : {
+        "Chance" : 0.05,
+        "ChanceLocked" : 0.05,
+        "Quantity" : {
+            "Component" : "Curve",
+            "Properties" : [
+                { "Key" : "Keys",  "FloatSet" : [0.0, 0.8, 0.98, 1.0 ] },
+                { "Key" : "Values", "IntSet" :  [0,   0,  1,   20  ] }
+            ]
+        }
+    },
+    "Components" : [
+        {
+            "Component" : "ObjGraphics",
+            "Properties" : [
+                { "Key" : "Graphic", "String": "Obj/Eggs/Egg01" },
+                { "Key" : "Offset", "Vector2": { "x" : 0, "y" : 0.3 } }
+            ]
+        },
+        { "Component" : "Egg" },
+        {
+            "Component" : "Disposable",
+            "Properties" : [
+                { "Key" : "IsBiological", "Bool" : true }
+            ]
+        },
+        {
+            "Component" : "Admirable",
+            "Properties" : [
+                { "Key" : "Amount", "Int" : 1 },
+                { "Key" : "Multiplier", "Float" : 0.15 },
+                { "Key" : "Chance", "Float" : 0.7 }
+            ]
+        },
+        {
+            "Component" : "Flammable",
+            "Properties" : [
+                { "Key" : "IgnitionTemperatureCelsius", "Int" : 300 },
+                { "Key" : "FireChance", "Float" : 0.1 }
+            ]
+        },
+        {
+            "Component" : "LightSource",
+            "Properties" : [
+                { "Key" : "NeedsEnergy", "Bool" : false },
+                { "Key" : "Color", "IntSet" : [ 128, 223, 32, 128 ] },
+                { "Key" : "PulsateColor", "IntSet" : [ 223, 32, 32, 128 ] },
+                { "Key" : "FrequencyRange", "Vector2" : { "x" : 1, "y" : 5 } },
+                { "Key" : "Radius", "Float" : 5 }
+            ]
+        }
+    ]
+}

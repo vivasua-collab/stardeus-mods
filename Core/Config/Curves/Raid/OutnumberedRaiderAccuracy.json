@@ -1,0 +1,17 @@
+{
+    // NumRaids (raids so far, this one included) -> a hostile's accuracy multiplier for each
+    // crew member past the first that is fighting it (OutnumberedOdds), stacked up to 3.
+    // The first raids are where a new colony is lost: one well-geared raider beat a bot crew
+    // of three. Raid 1, one raider against three of the crew: 0.7 x 0.7 = x0.49.
+    // Gone from raid 6, like EarlyRaidRamp's opening.
+    "FloatSet" : [
+        0,  0.70,
+        1,  0.70,
+        2,  0.76,
+        3,  0.82,
+        4,  0.88,
+        5,  0.94,
+        6,  1.00,
+        100, 1.00
+    ]
+}

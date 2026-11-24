@@ -1,0 +1,11 @@
+{
+    // Days since a Signal Intrusion hack last turned a hostile robot -> chance the next
+    // successful hack turns one too (otherwise its core burns out). Keeps one multi-selection
+    // from taking over a whole raid. Never converted reads as the last point.
+    "FloatSet" : [
+        0.0, 0.0,
+        1.0, 0.05,
+        3.0, 0.2,
+        7.0, 0.35
+    ]
+}

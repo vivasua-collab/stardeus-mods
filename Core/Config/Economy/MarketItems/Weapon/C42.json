@@ -1,0 +1,11 @@
+{
+    "Id" : "Obj/Misc/C42",
+    "Type" : "CFD",
+    "Groups" : [ "Weapon" ],
+    "Value" : 950.0,
+    "Rarity" : 0.2,
+    "TraderQuantity" : 1.0,
+    "MaxTraderQuantity" : 5,
+    "MinSectorDifficulty" : 0.6,
+    "Volatility" : 0.009
+}

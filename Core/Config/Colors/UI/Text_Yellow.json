@@ -1,0 +1,6 @@
+{
+    "Id" : "UI/Text/Yellow",
+    "AliasFor" : "UI/Main/Comp+2",
+    "Alpha" : 1.0,
+    "SkipAtlas" : true
+}

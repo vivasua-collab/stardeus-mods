@@ -1,0 +1,30 @@
+{
+    "Id" : "Beautician",
+    "Species" : [ "Human", "Robot" ],
+    "AgePhaseIds" : [ "YoungAdult", "MidLife", "Retirement" ],
+    "RoleTypes" : [ ],
+    "SexChances" : [
+        {
+            "Sex" : "F",
+            "Chance" : 0.7
+        },
+        {
+            "Sex" : "M",
+            "Chance" : 0.3
+        }
+    ],
+    "AdjustsSkills" : [
+        {
+            "JobId" : "Social",
+            "Adjustment" : 2
+        },
+        {
+            "JobId" : "Medical",
+            "Adjustment" : 4
+        },
+        {
+            "JobId" : "Construction",
+            "Adjustment" : -2
+        }
+    ]
+}

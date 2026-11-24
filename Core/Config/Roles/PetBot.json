@@ -1,0 +1,14 @@
+{
+    "Id" : "PetBot",
+    "Species" : [ "Robot", "Drone", "Carrier", "Orbotron", "Sentry" ],
+    "AdjustsSkills" : [
+        {
+            "JobId" : "Repairs",
+            "Adjustment" : 4
+        },
+        {
+            "JobId" : "Construction",
+            "Adjustment" : -1
+        }
+    ]
+}

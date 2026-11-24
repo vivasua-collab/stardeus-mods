@@ -1,0 +1,10 @@
+{
+    "Type": "Disposable",
+    "DisposableOutput": [
+        { "TypeId" : "ScrapMetal", "StackSize" : 5 },
+        { "TypeId" : "TitaniumPlate", "StackSize" : 2 }
+    ],
+    "ProductDefId": "Obj/Containers/StorageCapsule",
+    "ProductionTimeHours": 0.5,
+    "EnergyCost": 10.0
+}

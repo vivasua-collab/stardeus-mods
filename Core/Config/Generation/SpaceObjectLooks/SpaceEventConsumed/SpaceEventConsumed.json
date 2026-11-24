@@ -1,0 +1,9 @@
+{
+    "Id" : "SpaceEventConsumed",
+    "Probability" : 1.0,
+    "StarmapSizeMul" : 0.25,
+    "StarfieldSizeMul" : 0.25,
+    "KeepUprightInStarfield" : true,
+    "IsConstantSizeInStarmap" : true,
+    "Sprite" : "Icons/Color/DestinationGrey"
+}

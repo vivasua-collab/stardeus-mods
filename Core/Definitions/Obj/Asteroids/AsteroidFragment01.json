@@ -1,0 +1,24 @@
+{
+    // What a regular asteroid breaks into. Radius comes from the parent asteroid.
+    "Layer" : "FreeEntities",
+    "ParentId" : "Obj/Asteroids/Asteroid01",
+    // Explicit, so the variants that use this def's texts land on the asteroid's
+    "NameKey" : "obj.asteroids.asteroid01",
+    "DescKey" : "obj.asteroids.asteroid01.desc",
+    "Components" : [
+        {
+            "Component" : "Asteroid",
+            "Properties" : [
+                // Smallest rock, it does not break up further.
+                // Has to be cleared, it would inherit the parent's otherwise
+                { "Key" : "FragmentDef", "String" : "" }
+            ]
+        },
+        {
+            "Component" : "ObjHealth",
+            "Properties" : [
+                { "Key" : "Max", "Int" : 60 }
+            ]
+        }
+    ]
+}

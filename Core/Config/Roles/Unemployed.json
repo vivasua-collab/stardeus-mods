@@ -1,0 +1,20 @@
+{
+    "Id" : "Unemployed",
+    "Species" : [ "Human" ],
+    "RoleTypes" : [ "Dumb", "Poor" ],
+    "AgePhaseIds" : [ "YoungAdult", "MidLife" ],
+    "AdjustsSkills" : [
+        {
+            "JobId" : "Cooking",
+            "Adjustment" : 4
+        },
+        {
+            "JobId" : "Crafting",
+            "Adjustment" : 2
+        },
+        {
+            "JobId" : "Research",
+            "Adjustment" : -1
+        }
+    ]
+}

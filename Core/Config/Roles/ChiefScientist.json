@@ -1,0 +1,19 @@
+{
+    "Id" : "ChiefScientist",
+    "LovesJobTypes" : [ "Research", "Robotics" ],
+    "IncapableJobTypes" : [ "Hauling" ],
+    "RequiresRoles" : [ "Scientist" ],
+    "Species" : [ "Human" ],
+    "RoleTypes" : [ "Smart", "Rich" ],
+    "AgePhaseIds" : [ "MidLife", "Retirement" ],
+    "AdjustsSkills" : [
+        {
+            "JobId" : "Research",
+            "Adjustment" : 6
+        },
+        {
+            "JobId" : "Crafting",
+            "Adjustment" : 4
+        }
+    ]
+}

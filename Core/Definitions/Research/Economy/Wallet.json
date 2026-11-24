@@ -1,0 +1,21 @@
+{
+    "Id" : "Research/Economy/Wallet",
+    "Tier" : 1,
+    "IsAbstract" : true,
+    "PreviewIcon" : "Icons/Color/Starcreds",
+    "Researchable" : {
+        "IsTreeNode" : true,
+        "Prerequisites" : [
+            "Research/Economy/Root"
+        ],
+        "UnlockEffects" : [
+            "WalletUnlocked"
+        ],
+        "DatoidCosts" : [
+            {
+                "TypeId" : "DatoidBasic",
+                "StackSize" : 6
+            }
+        ]
+    }
+}

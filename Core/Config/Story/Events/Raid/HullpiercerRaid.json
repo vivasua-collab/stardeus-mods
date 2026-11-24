@@ -1,0 +1,38 @@
+{
+    // C# implementation id.
+    // Multiple configurations can point to a single implementation.
+    "EventId" : "HullpiercerRaid",
+    // How much does this story event cost to run
+    "Points" : 9,
+    // Options: Negative, Positive, Neutral, Raid, Raid
+    "OutcomeType" : "Raid",
+    // Full list is in StoryEventFlags class
+    "EventFlags" : [
+        "Raid",
+        "Space",
+        "CanHaveDuplicates",
+        "NoHyperspace"
+    ],
+    "SectorDifficultyChance" : [
+        0.0, 0.0,
+        0.3, 0.1,
+        0.5, 0.5,
+        1.0, 1.0
+    ],
+    "MinRepeatDelayDays" : 20,
+    // Full list of requirements can be found in Situation class
+    // "Require" : {
+    //     "Colonists" : 5
+    // },
+    // Variables for the story event implementation
+    "Properties" : [
+        // how many hullpiercers will we launch
+        { "Key" : "MinInstances", "Int" : 1 },
+        { "Key" : "MaxInstances", "Int" : 3 },
+        // Multiplier on the whole raid's point budget (CombatRaid.AdjustStrength). One
+        // budget is spent up front and carried by the piercers, so this - not the piercer
+        // count - is what makes a hullpiercer raid bigger or smaller. Provisional, to be
+        // calibrated with the wealth sweep harness (see RaidScaling.md).
+        { "Key" : "RaidStrengthMul", "Float" : 1.0 }
+    ]
+}

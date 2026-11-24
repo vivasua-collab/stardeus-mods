@@ -1,0 +1,44 @@
+{
+    "Layer" : "FreeEntities",
+    "ParentId" : "Beings/BaseBeing",
+    "PreviewIcon" : "Icons/Color/PreviewRobot01",
+    "Researchable" : {
+        "Prerequisites" : [ "Research/Robotics/Robot" ]
+    },
+    "Components" : [
+        {
+            "Component" : "LightSource",
+            "Properties" : [
+                { "Key" : "Radius", "Float" : 7 },
+                { "Key" : "Color", "IntSet" : [ 184, 102, 204, 128 ] },
+                { "Key" : "NeedsEnergy", "Bool" : false }
+            ]
+        },
+        {
+            "Component" : "BeingNameText" ,
+            "Properties" : [
+                { "Key" : "Offset", "Vector2" : { "x" : 0, "y" : -0.5 } }
+            ]
+        },
+        {
+            "Component" : "MobilizerVisual",
+            "Properties" : [
+                { "Key" : "IsDefaultGrounded", "Bool" : true }
+            ]
+        },
+        { "Component" : "BotDockable" },
+        {
+            "Component" : "Disposable",
+            "Properties" : [
+                { "Key" : "IsBiological", "Bool" : false }
+            ]
+        },
+        {
+            "Component" : "ParticleTrail",
+            "Properties" : [
+                { "Key" : "Trails", "String" : "RobotTrailFX" },
+                { "Key" : "TrailsOffset", "Vector2" : { "x" : 0, "y" : 0.0 } }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,27 @@
+{
+    "Id" : "Research/LifeSupport/CloneEgg",
+    "Tier" : 4,
+    "IsAbstract" : true,
+    "PreviewIcon" : "Icons/Color/DNA",
+    "Researchable" : {
+        "IsTreeNode" : true,
+        "Prerequisites" : [
+            "Research/LifeSupport/CloneCrawler"
+        ],
+        // "SkipCostValidation" : true,
+        "DatoidCosts" : [
+            {
+                "TypeId" : "DatoidPhyto",
+                "StackSize" : 20
+            },
+            {
+                "TypeId" : "DatoidBiotic",
+                "StackSize" : 16
+            },
+            {
+                "TypeId" : "DatoidNuclear",
+                "StackSize" : 5
+            }
+        ]
+    }
+}

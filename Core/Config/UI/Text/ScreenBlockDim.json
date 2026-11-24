@@ -1,0 +1,7 @@
+{
+    "Id" : "Text/ScreenBlockDim",
+    "TextFontSize" : 36,
+
+    "Color" : "UI/Text/Dim",
+    "Alpha" : 1
+}

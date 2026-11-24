@@ -1,0 +1,11 @@
+{
+    "Id" : "SoyBurger",
+    "DefId" : "Obj/Meals/SoyBurger",
+    "IsComposite" : true,
+    "IconId" : "Obj/Meals/SoyBurger",
+    "Property" : "Nutrient",
+    "Group" : "Food",
+    "GroupId" : "Food",
+    "EnergyOutput" : 380.0,
+    "Rarity" : 60
+}

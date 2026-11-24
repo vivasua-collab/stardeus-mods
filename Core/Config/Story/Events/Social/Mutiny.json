@@ -1,0 +1,21 @@
+{
+    // C# implementation id.
+    // Multiple configurations can point to a single implementation.
+    "EventId": "Mutiny",
+    // How much does this story event cost to run
+    "Points": 35,
+    // Options: Negative, Positive, Neutral, Raid
+    "OutcomeType": "Negative",
+    // Full list is in StoryEventFlags class
+    "EventFlags": [
+        "Drama",
+        "CanHaveDuplicates"
+    ],
+    "MinRepeatDelayDays": 400,
+    // Full list of requirements can be found in Situation class
+    "Require": {
+        "Days": 150,
+        "Difficulty": 1.0,
+        "Colonists": 7
+    }
+}

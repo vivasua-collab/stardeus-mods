@@ -1,0 +1,12 @@
+{
+    "Type" : "Organics1",
+    "Ingredients": [
+        { "TypeId" : "CrawlerGoo", "StackSize" : 1 },
+        { "TypeId" : "Carbon", "StackSize" : 10 }
+    ],
+    "IgnoreMarket" : true,
+    "OutputMultiplier" : 10,
+    "ProductDefId": "Obj/Materials/StemCells",
+    "ProductionTimeHours": 6.0,
+    "EnergyCost": 15.0
+}

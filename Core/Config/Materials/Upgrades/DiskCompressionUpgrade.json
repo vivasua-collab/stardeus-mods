@@ -1,0 +1,12 @@
+{
+    "Id" : "DiskCompressionUpgrade",
+    "DefId" : "Obj/Upgrades/DiskCompressionUpgrade",
+    "IsComposite" : true,
+    "IsConsumedOnDestroy" : true,
+    "IconId" : "Obj/Upgrades/DiskCompressionUpgrade",
+    "Property" : "Electronic",
+    "Group" : "Upgrade",
+    "GroupId" : "Upgrades",
+    "EnergyOutput" : 50.0,
+    "Rarity" : 1
+}

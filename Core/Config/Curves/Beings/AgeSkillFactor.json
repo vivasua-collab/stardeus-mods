@@ -1,0 +1,12 @@
+{
+    // Age as a share of the species' life expectancy -> the most a generated skill level is
+    // scaled by for age (rolled between 1 and this). For a human living about
+    // 100 years: 0.7 at 10, 1.0 at 35, 1.6 at 60, so young colonists start a little weaker and
+    // old ones markedly more skilled
+    "FloatSet" : [
+        0.0, 0.0,
+        0.1, 0.7,
+        0.35, 1.0,
+        0.6, 1.6
+    ]
+}

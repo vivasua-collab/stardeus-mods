@@ -1,0 +1,9 @@
+{
+    "Id" : "Edenium",
+    "IsComposite" : true,
+    "IconId" : "Obj/Materials/Edenium",
+    "GroupId" : "Ore",
+    "EnergyOutput" : 3000.0,
+    "Rarity" : 1,
+    "MatRarity" : 4
+}

@@ -1,0 +1,9 @@
+{
+    "Id" : "Panel/MenuDivider",
+
+    "Color" : "UI/Main/Comp",
+    "Alpha" : 1.0,
+
+    "Image" : "NoAtlas/WhiteSquare",
+    "ImageType" : "Simple"
+}

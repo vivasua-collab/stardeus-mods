@@ -1,0 +1,10 @@
+{
+    "SlotTypeId" : "Head",
+    "Compatibility" : "TargetSpecies",
+    "TargetSpecies" : [ "Pig" ],
+    "ResistanceBase" : 5.0,
+    "AddsAbilities" : [
+    ],
+    "AddsNeeds" : [
+    ]
+}

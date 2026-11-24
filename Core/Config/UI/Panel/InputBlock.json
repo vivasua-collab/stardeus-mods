@@ -1,0 +1,7 @@
+{
+    "Id" : "Panel/InputBlock",
+    "Color" : "UI/Panel/InputBlock",
+    "Image" : "UI/Panels/PanelBG",
+    "ImageType" : "Sliced",
+    "ImageBorderLBRT" : [ 28, 28, 12, 12 ]
+}

@@ -1,0 +1,7 @@
+{
+    "Id" : "Ore",
+    "RecessionEffect" : 0.3,
+    "Rarity" : 1.0,
+    "TraderQuantity" : 1500.0,
+    "Volatility" : 0.0012
+}

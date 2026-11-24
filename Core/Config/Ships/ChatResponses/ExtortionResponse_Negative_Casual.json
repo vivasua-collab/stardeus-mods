@@ -1,0 +1,8 @@
+{
+    "ResponseType" : "Negative",
+    "TopicType" : "ExtortionResponse",
+    "ToneType" : "Casual",
+    "MessageKeys" : [
+        "ship.chat.extort_res.negative.casual.*"
+    ]
+}

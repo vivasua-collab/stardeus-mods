@@ -1,0 +1,67 @@
+{
+    "Layer" : "Objects",
+    "ParentId" : "Objects/Cosmetics/BaseCosmetics",
+    "Seasonal" : { "FromMonth" : 10, "FromDay" : 1, "ToMonth" : 11, "ToDay" : 7 },
+    "Spawnable" : {
+        "Category": "Cosmetics",
+        "Chance" : 0.5,
+        "ChanceLocked" : 0.5
+    },
+    "Researchable" : {
+        "Prerequisites" : [ "Research/Habitation/HalloweenDecorations" ]
+    },
+    "Components" : [
+        {
+            "Component" : "TileTransform",
+            "Properties" : [
+                { "Key" : "IsRotatable", "Bool" : true },
+                { "Key" : "CoverPercent", "Int" : 25 }
+            ]
+        },
+        {
+            "Component" : "TileGraphics",
+            "Properties" : [
+                { "Key" : "Type", "String": "Object" },
+                { "Key" : "HasHeight", "Bool" : true },
+                { "Key" : "Graphic", "String": "Objects/Cosmetics/GhostStatue" }
+            ]
+        },
+        {
+            "Component" : "Admirable",
+            "Properties" : [
+                { "Key" : "Amount", "Int" : 1 },
+                { "Key" : "Multiplier", "Float" : 0.2 },
+                { "Key" : "Chance", "Float" : 0.3 }
+            ]
+        },
+        {
+            "Component" : "Flammable",
+            "Properties" : [
+                { "Key" : "IgnitionTemperatureCelsius", "Int" : 120 },
+                { "Key" : "FireChance", "Float" : 0.95 },
+                { "Key" : "FlammabilityCurve", "String" : "Extreme" }
+            ]
+        },
+        {
+            "Component" : "Passability",
+            "Properties" : [
+                { "Key" : "IsPassable", "Bool" : true },
+                { "Key" : "IsWalkable", "Bool" : true },
+                { "Key" : "Difficulty", "Float" : 0.8 }
+            ]
+        },
+        {
+            "Component" : "Constructable",
+            "Properties" : [
+                { "Key" : "WorkAmount", "Int" : 800 },
+                {
+                    "Key" : "Contents",
+                    "RawMaterials" : [
+                        { "TypeId" : "Plastic", "StackSize" : 1 },
+                        { "TypeId" : "SteelPlate", "StackSize" : 1 }
+                    ]
+                }
+            ]
+        }
+    ]
+}

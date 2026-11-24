@@ -1,0 +1,209 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Stardeus SpaceObjectType",
+  "description": "Generated from C# by Game/Generate JSON Schemas, do not edit by hand",
+  "$ref": "#/$defs/SpaceObjectType",
+  "$defs": {
+    "NamePartDef": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "NonUnique": {
+          "type": "boolean"
+        },
+        "Type": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "Paths": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "Chances": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "number"
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "SpaceObjectType": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "Id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "Icon": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "ParentIds": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "CanBeExplored": {
+          "type": "boolean"
+        },
+        "IsConsumable": {
+          "type": "boolean"
+        },
+        "IsAutoVisited": {
+          "type": "boolean"
+        },
+        "InheritParentLooks": {
+          "type": "boolean"
+        },
+        "IsScannable": {
+          "type": "boolean"
+        },
+        "UseTypeName": {
+          "type": "boolean"
+        },
+        "HasTrader": {
+          "type": "boolean"
+        },
+        "IsTerraformable": {
+          "type": "boolean"
+        },
+        "CanHaveCustomIcon": {
+          "type": "boolean"
+        },
+        "CanBeOwned": {
+          "type": "boolean"
+        },
+        "NameMaxWords": {
+          "type": "integer"
+        },
+        "CustomNames": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "NameChanceWeights": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "number"
+          }
+        },
+        "NameParts": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "$ref": "#/$defs/NamePartDef"
+          }
+        },
+        "SpawnChance": {
+          "type": "number"
+        },
+        "SizeMin": {
+          "type": "number"
+        },
+        "SizeMax": {
+          "type": "number"
+        },
+        "DistanceUnitsKey": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "DistanceUnitsT": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "MinDistanceBetweenSubObjects": {
+          "type": "number"
+        },
+        "IsOnSurface": {
+          "type": "boolean"
+        },
+        "ShuttleReachDist": {
+          "type": "integer"
+        },
+        "LocationApproxMagnitude": {
+          "type": "number"
+        },
+        "StarmapSizeMul": {
+          "type": "number"
+        },
+        "StarfieldSizeMul": {
+          "type": "number"
+        },
+        "StarmapDecoration": {
+          "type": "boolean"
+        },
+        "IsDynamic": {
+          "type": "boolean"
+        },
+        "CanMoveInStarmap": {
+          "type": "boolean"
+        },
+        "MinExitDist": {
+          "type": "number"
+        },
+        "IsInteractive": {
+          "type": "boolean"
+        },
+        "NameKey": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "InfoKey": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "StarfieldSortOrder": {
+          "type": "integer"
+        },
+        "IsIconMarker": {
+          "type": "boolean"
+        }
+      },
+      "additionalProperties": false
+    }
+  }
+}

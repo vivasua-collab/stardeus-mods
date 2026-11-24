@@ -1,0 +1,16 @@
+{
+    "Id" : "Research/Security/PrecisionFirearms",
+    "Tier" : 2,
+    "IsAbstract" : true,
+    "PreviewIcon" : "Obj/Weapons/SniperRifle01/SniperRifle01",
+    "Researchable" : {
+        "IsTreeNode" : true,
+        "Prerequisites" : [
+            "Research/Security/Firearms"
+        ],
+        "DatoidCosts" : [
+            { "TypeId" : "DatoidTech",      "StackSize" : 13 },
+            { "TypeId" : "DatoidSynthetic", "StackSize" : 4 }
+        ]
+    }
+}
