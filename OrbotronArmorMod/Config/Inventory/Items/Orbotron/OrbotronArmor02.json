@@ -1,0 +1,56 @@
+{
+  "DefId": "Obj/Equipment/Orbotron/OrbotronArmor02",
+  "SlotId": "OrbotronArmor",
+  "Rarity": 0.10,
+  "CombatStrengthBonus": 2.0,
+  "SpawnRequirements": {
+    "Days": 400,
+    "Friendlies": 14,
+    "SectorDifficulty": 0.9
+  },
+  "RequiresBodyFlags": [
+    "Robotic"
+  ],
+  "AddsStatModifiers": [
+    {
+      "Component": "ArmorSharp",
+      "Properties": [
+        { "Key": "StateMul", "Float": 1.0 },
+        { "Key": "Value", "Float": 6.5 },
+        { "Key": "Type", "String": "Adds" }
+      ]
+    },
+    {
+      "Component": "ArmorPiercing",
+      "Properties": [
+        { "Key": "StateMul", "Float": 1.0 },
+        { "Key": "Value", "Float": 6.0 },
+        { "Key": "Type", "String": "Adds" }
+      ]
+    },
+    {
+      "Component": "ArmorBlunt",
+      "Properties": [
+        { "Key": "StateMul", "Float": 1.0 },
+        { "Key": "Value", "Float": 6.5 },
+        { "Key": "Type", "String": "Adds" }
+      ]
+    },
+    {
+      "Component": "ArmorEnergy",
+      "Properties": [
+        { "Key": "StateMul", "Float": 1.0 },
+        { "Key": "Value", "Float": 7.0 },
+        { "Key": "Type", "String": "Adds" }
+      ]
+    },
+    {
+      "Component": "WeakPointCover",
+      "Properties": [
+        { "Key": "StateMul", "Float": 1.0 },
+        { "Key": "Value", "Float": 0.175 },
+        { "Key": "Type", "String": "Adds" }
+      ]
+    }
+  ]
+}
