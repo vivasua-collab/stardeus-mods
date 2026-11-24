@@ -1,0 +1,10 @@
+Key,Translation,Version,Comment
+inventory.slot.OrbotronArmor,Броня Орботрона,,
+research.robotics.orbotronarmor,Броня Орботрона,,
+research.robotics.orbotronarmor.desc,Исследование отдельной системы бронирования для Орботронов.,,
+research.robotics.orbotronarmoradvanced,Усиленная броня Орботрона,,
+research.robotics.orbotronarmoradvanced.desc,Улучшенный защитный корпус для Орботронов.,,
+obj.equipment.orbotron.orbotronarmor01,Броня Орботрона,,
+obj.equipment.orbotron.orbotronarmor01.desc,Базовая защитная оболочка для корпуса Орботрона.,,
+obj.equipment.orbotron.orbotronarmor02,Усиленная броня Орботрона,,
+obj.equipment.orbotron.orbotronarmor02.desc,Улучшенная защитная оболочка для корпуса Орботрона.,,

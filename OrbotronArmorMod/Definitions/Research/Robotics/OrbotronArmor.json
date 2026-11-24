@@ -1,0 +1,20 @@
+{
+  "Id": "Research/Robotics/OrbotronArmor",
+  "Tier": 5,
+  "IsAbstract": true,
+  "PreviewIcon": "Icons/Color/Shield",
+  "NameKey": "research.robotics.orbotronarmor",
+  "DescKey": "research.robotics.orbotronarmor.desc",
+  "Researchable": {
+    "IsTreeNode": true,
+    "Prerequisites": [
+      "Research/Robotics/Orbotron"
+    ],
+    "DatoidCosts": [
+      { "TypeId": "DatoidTechHigh", "StackSize": 12 },
+      { "TypeId": "DatoidNuclear", "StackSize": 10 },
+      { "TypeId": "DatoidAlien", "StackSize": 10 },
+      { "TypeId": "DatoidQuantum", "StackSize": 3 }
+    ]
+  }
+}

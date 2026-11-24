@@ -1,0 +1,9 @@
+{
+  "Id": "OrbotronArmorMod",
+  "Name": "Orbotron Armor Test",
+  "Description": "Test mod adding a dedicated Orbotron armor slot, two armor items and their research progression.",
+  "ModVersion": "0.1.0",
+  "GameVersion": "0.15.11",
+  "SteamWorkshop": false,
+  "Dependencies": []
+}

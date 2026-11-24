@@ -1,0 +1,20 @@
+{
+  "Layer": "FreeEntities",
+  "ParentId": "Obj/Equipment/BaseEquipment",
+  "NameKey": "obj.equipment.orbotron.orbotronarmor02",
+  "DescKey": "obj.equipment.orbotron.orbotronarmor02.desc",
+  "PreviewIcon": "Icons/Color/Shield",
+  "Researchable": {
+    "Prerequisites": [
+      "Research/Robotics/OrbotronArmorAdvanced"
+    ]
+  },
+  "Components": [
+    {
+      "Component": "StorableObj",
+      "Properties": [
+        { "Key": "Group", "String": "Clothing" }
+      ]
+    }
+  ]
+}

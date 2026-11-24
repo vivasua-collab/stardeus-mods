@@ -1,0 +1,10 @@
+{
+  "target": "Config/Species/Types/Orbotron.json",
+  "operations": [
+    {
+      "op": "add",
+      "path": "/InventorySlotTypes/-",
+      "value": "OrbotronArmor"
+    }
+  ]
+}

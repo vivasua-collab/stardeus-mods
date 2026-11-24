@@ -1,0 +1,14 @@
+{
+  "Type": "Robotics3",
+  "Ingredients": [
+    { "TypeId": "TitaniumPlate", "StackSize": 5 },
+    { "TypeId": "LeadPlate", "StackSize": 4 },
+    { "TypeId": "CarbonFiber", "StackSize": 8 },
+    { "TypeId": "Microchip", "StackSize": 2 },
+    { "TypeId": "BatteryCell", "StackSize": 2 }
+  ],
+  "IgnoreMarket": true,
+  "ProductDefId": "Obj/Equipment/Orbotron/OrbotronArmor01",
+  "ProductionTimeHours": 24.0,
+  "EnergyCost": 150.0
+}
