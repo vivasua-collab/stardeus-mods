@@ -8,7 +8,7 @@ This repository is a mod workspace, not the game's source repository. The `Core/
 
 | Folder | Type | Purpose |
 |---|---|---|
-| [`OrbotronSlotRepairMod/`](OrbotronSlotRepairMod/README.md) | C# / Harmony + research definition | Adds **Repair Damaged Slot**, unlocked by a separate Tier 3 research node requiring Construction Drone research. The current implementation does not charge materials. |
+| [`OrbotronSlotRepairMod/`](OrbotronSlotRepairMod/README.md) | C# / Harmony + research definition | Adds an **Orbotron-only** **Repair Damaged Slot** operation, unlocked after Orbotron research (Tier 5). The current implementation does not charge materials. |
 | [`FriendlyRobotCoreExtractionMod/`](FriendlyRobotCoreExtractionMod/README.md) | C# / Harmony + research definition | Adds a research-gated **Safe Core Extraction** operation for friendly robotic beings. |
 | [`OrbotronArmorMod/`](OrbotronArmorMod/README.md) | JSON-only | Adds Orbotron armor equipment, recipes, and research definitions. It has no C# project and does not need the build steps below. |
 | `Core/` | Reference data | Snapshot of game configuration and reference source used during mod development. |
@@ -28,9 +28,9 @@ The vanilla single-slot removal task is not a valid transport-task factory for e
 
 Both custom operations now create their own patient-side transport goal, following the vanilla install-goal pattern. The goal carries `SurgeryType_Int`, `SurgeryId`, `BodySlotId_String`, the patient-delivery state and the normal Assembly Hub availability check. `BodyModSpotComp.ResolveOpType` is patched so each custom operation is treated as a slot-targeted procedure that needs no delivered part. The vanilla queue skips a patient while `Being.Goal` is occupied; it does not automatically interrupt unrelated work. The custom mods also try to start the queue head immediately after registration, interrupting only an unrelated interruptible goal. An ongoing surgery and a non-interruptible goal are left alone. The Assembly Hub operator remains a separate AI job; the patient transport goal does not assign the operator.
 
-For slot repair, completion only clears the slot's `IsDestroyed` flag. The slot remains empty (`IsPartRemoved = true`), so the vanilla installation flow becomes available again. The repair test build still has no material debit.
+For slot repair, eligibility is restricted to body species `Orbotron` and checked at UI, operation-ordering, and finalization boundaries. Completion only clears the slot's `IsDestroyed` flag. The slot remains empty (`IsPartRemoved = true`), so the vanilla installation flow becomes available again. The current build still has no material debit.
 
-The slot repair node is `Research/Robotics/BodySlotRepair` (Tier 3), with a direct prerequisite on `Research/Robotics/Drone` (Construction Drone, Tier 3). The Repair Damaged Slot command is hidden until this research is unlocked.
+The slot repair node is `Research/Robotics/BodySlotRepair` (Tier 5), with a direct prerequisite on `Research/Robotics/Orbotron`. The Repair Damaged Slot command is restricted to body species `Orbotron` and is hidden until this additional research is unlocked.
 
 ## Building the C# mods
 
@@ -76,9 +76,9 @@ To install or refresh a mod, keep its complete mod folder (including `ModInfo.js
 
 ## Current compilation status
 
-**User-confirmed build on 2026-11-25:** both C# projects compiled successfully against the local **Stardeus 0.15.11b** Managed directory after the previous patient-side goal implementation. The user also confirmed in-game that the Slot Repair operation now completes.
+**User-confirmed build on 2026-11-25:** both C# projects compiled successfully against the local **Stardeus 0.15.11b** Managed directory after the previous patient-side goal implementation.
 
-**Current source status:** this revision changes both C# projects (Safe Core failure prevention and research gating for Slot Repair), so both projects must be rebuilt before the current commit is treated as compile-verified.
+**Runtime status (2026-11-25):** the user has confirmed that Safe Core Extraction now works correctly in-game. The basic Slot Repair operation was also confirmed working before this Orbotron-only restriction was added. The current Slot Repair changes (species restriction and Tier 5 research dependency) require a fresh build and in-game validation.
 
 Prior local builds reported five warnings:
 
