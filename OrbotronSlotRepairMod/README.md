@@ -1,45 +1,44 @@
-# Robotic Body Slot Repair (0.1.0)
+# Orbotron Slot Repair (0.1.1)
 
 Target game: **Stardeus 0.15.11**.
 
-This is an experimental C# mod, not a JSON-only mod. It adds a **Repair Damaged Slot** order to the robotic surgery selection UI. The queued operation is handled by the vanilla robotic BodyModSpot / Assembly Hub pipeline.
+This experimental C# mod adds a **Repair Damaged Slot** operation to the robotic surgery selection UI. It is intentionally restricted to the **Orbotron** body species; it does not apply to other robots or non-biological beings.
 
 ## Research unlock
 
-The operation is gated by a separate research node:
-
-- **Research:** Robotic Body Slot Repair
+- **Research:** Orbotron Slot Repair
 - **ID:** `Research/Robotics/BodySlotRepair`
-- **Tier:** 3
-- **Prerequisite:** `Research/Robotics/Drone` — Construction Drone, Tier 3
+- **Tier:** 5
+- **Prerequisite:** `Research/Robotics/Orbotron` — the Orbotron research node
 
-The Repair Damaged Slot button is not shown until this research is unlocked.
+The repair command is hidden until Orbotron research and this additional research node are both unlocked.
 
-## Scope of this test build
+## Eligibility and effect
 
-- Adds an order for a robotic body slot when the research is unlocked, `BodyPartSlot.IsDestroyed` is true and the slot is empty (`IsPartRemoved = true`, `InstalledDef = null`).
-- The operation is represented by a custom `SurgicalOpType` and intercepted at the Assembly Hub finalization point.
+- The target must have body species ID `Orbotron`.
+- The target slot must be destroyed (`IsDestroyed = true`) and empty (`IsPartRemoved = true`, `InstalledDef = null`).
+- The species restriction is enforced in the UI, when the surgical operation is ordered, and again when the Assembly Hub finalizes it. Other robot types cannot use this operation by opening another UI route or by submitting a custom operation.
 - Completion clears only the slot-level `IsDestroyed` flag. The part is not recreated; the slot remains empty and can use the normal installation workflow afterward.
 - It does **not** repair a destroyed installed part, clear `Welded` / `Crippled`, heal wounds, or repair a destroyed parent slot.
-- It does not modify enemy robots or ordinary part extraction.
+- It does not modify other robot species or ordinary part extraction.
 
-## Why the first task-routing attempt failed
+## Why this is a custom operation
 
-The failure named `DestroySlot` is applied during a surgical extraction. The game sets `slot.IsDestroyed = true`, but unless the failure was `WeldPart`, the extraction continues. The normal removal routine then clears `InstalledDef`, sets `IsPartRemoved = true`, and clears the slot's part state. Thus a destroyed slot is already an empty slot, not a removable installed part.
+The game's `DestroySlot` surgical failure sets `BodyPartSlot.IsDestroyed`. Unless the failure is `WeldPart`, extraction continues and the removal routine clears `InstalledDef`, sets `IsPartRemoved = true`, and clears the part state. Thus a destroyed slot is already an empty slot, not a removable installed part.
 
-The first mod version incorrectly rejected `IsPartRemoved` and then attempted to reuse `BodyComp.TryOrderRemove`. That vanilla method also rejects already-removed slots. Separately, it refuses removal from a living non-player being unless the being is incapacitated. Those guards are intentional for ordinary harvesting; they are not appropriate for repairing a socket on a friendly active robot.
+The normal removal operation cannot be reused: it rejects slots already marked as removed, and also refuses removal from a living non-player being unless the being is incapacitated.
 
-## AI task routing in the current revision
+## AI task routing
 
-The custom operation now creates its own patient-side transport goal, following the vanilla part-installation goal pattern instead of calling `TryOrderRemove`. The goal carries the custom operation type, operation ID and target slot ID, requires the `Move` ability (so another robot can carry an immobile patient), and uses the vanilla Assembly Hub availability check.
+The custom operation creates its own patient-side transport goal, following the vanilla part-installation goal pattern. The goal carries the custom operation type, operation ID and target slot ID, requires the `Move` ability (so another robot can carry an immobile patient), and uses the vanilla Assembly Hub availability check.
 
-The custom operation is marked as a slot-targeted action with no part to deliver. The normal `Surgery_GoTo` / `CarryPatient` chain therefore moves the patient to a robotic Assembly Hub. The Assembly Hub still requires its separate `Robotics` operator job.
+The custom operation is treated as a slot-targeted action with no part to deliver. The normal `Surgery_GoTo` / `CarryPatient` chain therefore moves the Orbotron to a robotic Assembly Hub. The Assembly Hub still requires its separate `Robotics` operator job.
 
 After completion, only `IsDestroyed` is cleared. `IsPartRemoved` stays true, which is correct: the socket is repaired, but it is still empty. The vanilla install options should then become available.
 
 ## Known incomplete part
 
-The requested price is one quarter of a new Orbotron. The operation currently has **no material debit**. I have deliberately not fabricated a resource-inventory API without compiling against the user's exact 0.15.11 Managed DLLs. Therefore this build tests the operation/UI/state transition only; it is not the balanced final version.
+The operation currently has **no material debit**. The previously discussed target price of one quarter of a new Orbotron has not been implemented; no resource-inventory API has been added without compiling against the user's exact 0.15.11 Managed DLLs.
 
 ## Build and install
 
@@ -52,19 +51,21 @@ dotnet build .vscode/mod.csproj
 The build writes the DLL to `Libraries/OrbotronSlotRepairMod.dll`. Copy the complete `OrbotronSlotRepairMod` folder into the game's Mods directory, enable it in Main Menu > Mods, and restart.
 
 Do not test on the only copy of a valuable save. Removing mods that add operations can leave pending operations in saves.
+
 ## Test checklist
 
-1. Research Construction Drone (Tier 3), then research **Robotic Body Slot Repair**.
-2. Load a test save with a friendly robot whose body contains a destroyed slot (`IsDestroyed=true`).
-3. Open the robot in the surgery selection UI.
-4. Confirm **Repair Damaged Slot: [slot]** appears only for destroyed slots and only after the research is unlocked.
-5. Queue it and confirm an Assembly Hub takes the robot.
-6. Confirm the slot becomes selectable for normal installation after completion.
-7. Confirm the operation does not change wounds, part flags, or other slots.
+1. Research **Orbotron**.
+2. Research **Orbotron Slot Repair**.
+3. On a copied test save, open an Orbotron with a destroyed empty body slot.
+4. Confirm **Repair Damaged Slot** appears for that Orbotron.
+5. Open another robot species with a destroyed empty slot and confirm the repair command does **not** appear.
+6. Queue the Orbotron repair and confirm an Assembly Hub takes the Orbotron.
+7. Confirm the slot becomes selectable for normal installation after completion.
+8. Confirm the operation does not change wounds, part flags, or other slots.
 
 ## Validation status
 
-- Source logic mapped against the repository's Stardeus 0.15.11 Core snapshot.
-- User-confirmed local C# build (2026-11-25): both projects compiled successfully before the current research-gating change.
-- In-game runtime: the user confirmed that Repair Damaged Slot completes correctly. The new research prerequisite and visibility gate still need an in-game check.
+- Species identity verified against the Stardeus 0.15.11 Core data: `Config/Species/Types/Orbotron.json` resolves the body species as `Orbotron`, with `DefId = Beings/Orbotron01`.
+- The previous unrestricted repair operation was confirmed by the user to complete in-game.
+- The Orbotron-only checks and Tier 5 research prerequisite in this revision require a fresh local build and in-game validation.
 - `tools/stardeus validate`: **not run**.
