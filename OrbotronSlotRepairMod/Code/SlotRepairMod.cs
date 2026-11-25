@@ -91,9 +91,13 @@ namespace Game.OrbotronSlotRepairMod {
                         || x.State.Value == SurgicalOpState.Ongoing)
                     && x.AssociatedGoal == currentGoal
                     && AIGoal.IsActive(x.AssociatedGoal));
-                if (!isCurrentSurgery
-                        && !AIGoal.Interrupt(currentGoal, G.Ticks, T.NounSurgery)) {
-                    return;
+                if (!isCurrentSurgery) {
+                    if (!AIGoal.Interrupt(currentGoal, G.Ticks, T.NounSurgery)) {
+                        return;
+                    }
+                    // Interrupt clears the assigned worker, but does not unset Entity.Goal.
+                    // ClearGoal performs the target-side cleanup required by BodyComp.
+                    being.ClearGoal(T.NounSurgery);
                 }
             }
 
