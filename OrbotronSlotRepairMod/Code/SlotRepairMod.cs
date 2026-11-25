@@ -4,6 +4,7 @@ using System.Reflection;
 using HarmonyLib;
 using Game.CodeGen;
 using Game.Data;
+using Game.Systems.Creatures;
 using Game.Systems.BodyParts;
 using Game.Systems.Creatures.Surgeries;
 using Game.Systems.UIUX;
