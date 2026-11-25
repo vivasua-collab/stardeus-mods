@@ -296,10 +296,8 @@ namespace Game.FriendlyRobotCoreExtractionMod {
             if ((byte)opType != CoreExtractionIds.SafeCoreExtraction) { return; }
             if (!__instance.HoldsMind || __instance.Type.Id != "Core") { return; }
             if (__instance.Body.Owner.Species.IsBiological || !__instance.Body.Owner.IsFriendly) { return; }
-            if (canFail) {
-                D.Warn("[FriendlyRobotCoreExtractionMod] Disabling Core extraction failure roll: {0}",
-                    __instance.Id);
-            }
+            D.Warn("[FriendlyRobotCoreExtractionMod] Safe Core extraction: failure roll disabled for slot {0}",
+                __instance.Id);
             canFail = false;
         }
     }

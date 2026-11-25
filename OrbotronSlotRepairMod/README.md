@@ -54,10 +54,10 @@ The build writes the DLL to `Libraries/OrbotronSlotRepairMod.dll`. Copy the comp
 Do not test on the only copy of a valuable save. Removing mods that add operations can leave pending operations in saves.
 ## Test checklist
 
-1. Load a test save with a friendly robot whose body contains a destroyed slot (`IsDestroyed=true`).
-2. Open the robot in the surgery selection UI.
-3. Confirm **Repair Damaged Slot: [slot]** appears only for destroyed slots.
-4. Confirm the button appears only after researching Robotic Body Slot Repair.
+1. Research Construction Drone (Tier 3), then research **Robotic Body Slot Repair**.
+2. Load a test save with a friendly robot whose body contains a destroyed slot (`IsDestroyed=true`).
+3. Open the robot in the surgery selection UI.
+4. Confirm **Repair Damaged Slot: [slot]** appears only for destroyed slots and only after the research is unlocked.
 5. Queue it and confirm an Assembly Hub takes the robot.
 6. Confirm the slot becomes selectable for normal installation after completion.
 7. Confirm the operation does not change wounds, part flags, or other slots.
