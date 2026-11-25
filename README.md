@@ -87,10 +87,10 @@ The five reported warnings are unchanged:
   - `System.Threading.Tasks.Extensions` 4.2.0.0 vs 4.2.1.0 (4.2.0.0 selected);
   - `System.Text.Encoding.CodePages` 4.1.0.0 vs 8.0.0.0 (4.1.0.0 selected).
 
-The project files currently reference the game's `Managed\\*.dll` set, including Roslyn assemblies whose dependency versions differ from some assemblies selected from the game directory. The reference set still needs a deliberate review; these warnings have not been hidden or force-resolved.
+The project files currently reference the game's `Managed\*.dll` set, including Roslyn assemblies whose dependency versions differ from some assemblies selected from the game directory. The reference set still needs a deliberate review; these warnings have not been hidden or force-resolved.
 
 **In-game finding (2026-11-25):** the user reported that the Repair Damaged Slot operation did not enter or remain in the queue. Source tracing identified the two incompatible assumptions in the previous implementation: a destroyed socket is already marked removed, and the vanilla removal-task path rejects it (as well as living non-incapacitated non-player patients). The dedicated custom-goal rewrite addresses those points; runtime validation remains pending.
-      
+
 ## Validation boundary
 
 Compilation confirms that the current C# source can be compiled against the supplied local game assemblies. It does not confirm that Harmony patches apply successfully, that the UI operations appear, or that the operations complete correctly in a live save.
