@@ -12,6 +12,14 @@ This is an experimental C# mod, not a JSON-only mod. It adds a **Repair Damaged 
 - It does **not** repair a destroyed installed part, clear `Welded` / `Crippled`, heal wounds, or repair a destroyed parent slot.
 - It does not modify enemy robots or ordinary part extraction.
 
+## AI task routing
+
+A registered surgical operation is not itself an AI job. The vanilla `SurgicalQueue` normally waits until the patient has no active `Being.Goal`, then asks `BodyComp.TryOrderOp` to create the patient-side task. The stock single-slot path only handles `Remove`, `Install`, and `Swap`, so custom operation types need an explicit bridge.
+
+The current implementation reuses the vanilla remove-task setup, then writes the custom operation type back into the goal. It also marks the custom type as a single-slot operation so the target slot ID is carried through the vanilla `Surgery_GoTo` / `CarryPatient` actions into the Assembly Hub. After the button is pressed, it attempts to interrupt an unrelated interruptible patient goal and start the head of that patient's surgery queue immediately. An already-running surgery is not interrupted; a non-interruptible goal can keep the operation queued until it finishes.
+
+This bridge was added after the last successful local compilation report. Rebuild before testing this revision.
+
 ## Known incomplete part
 
 The requested price is one quarter of a new Orbotron. The operation currently has **no material debit**. I have deliberately not fabricated a resource-inventory API without compiling against the user's exact 0.15.11 Managed DLLs. Therefore this build tests the operation/UI/state transition only; it is not the balanced final version.
@@ -39,6 +47,6 @@ Do not test on the only copy of a valuable save. Removing mods that add operatio
 ## Validation status
 
 - Source logic mapped against the repository's Stardeus 0.15.11 Core snapshot.
-- C# compilation against local game DLLs: **not run**.
+- Last reported local C# build (2026-11-25), before the AI task-routing bridge: **passed with five warnings**. The current bridge revision: **rebuild pending**.
 - `tools/stardeus validate`: **not run**.
 - In-game runtime: **not run**.
