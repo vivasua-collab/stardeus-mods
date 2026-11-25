@@ -4,6 +4,7 @@ using System.Reflection;
 using HarmonyLib;
 using Game.CodeGen;
 using Game.Components;
+using Game.Constants;
 using Game.Data;
 using Game.Systems.Creatures;
 using Game.Systems.BodyParts;
@@ -82,7 +83,7 @@ namespace Game.FriendlyRobotCoreExtractionMod {
 
     [HarmonyPatch]
     internal static class SafeCoreFinalizePatch {
-        private static MethodBase TargetMethod() {
+        private static MethodInfo TargetMethod() {
             return AccessTools.Method(typeof(BodyModSpotComp), "FinalizeProcedure");
         }
 
@@ -126,7 +127,7 @@ namespace Game.FriendlyRobotCoreExtractionMod {
 
     [HarmonyPatch]
     internal static class SafeCoreNoFailureRollPatch {
-        private static MethodBase TargetMethod() {
+        private static MethodInfo TargetMethod() {
             return AccessTools.GetDeclaredMethods(typeof(BodyPartSlot))
                 .First(m => m.Name == "TryRemovePart" && m.GetParameters().Length == 8
                     && m.GetParameters()[7].ParameterType == typeof(string));
