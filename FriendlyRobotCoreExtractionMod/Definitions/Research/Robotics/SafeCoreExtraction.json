@@ -1,0 +1,18 @@
+{
+  "Id": "Research/Robotics/SafeCoreExtraction",
+  "Tier": 3,
+  "IsAbstract": true,
+  "PreviewIcon": "Icons/Color/MindTransfer",
+  "NameKey": "research.safecoreextraction",
+  "Researchable": {
+    "IsTreeNode": true,
+    "Prerequisites": [
+      "Research/Robotics/Drone"
+    ],
+    "DatoidCosts": [
+      { "TypeId": "DatoidTech", "StackSize": 12 },
+      { "TypeId": "DatoidSynthetic", "StackSize": 8 },
+      { "TypeId": "DatoidEnergy", "StackSize": 8 }
+    ]
+  }
+}
