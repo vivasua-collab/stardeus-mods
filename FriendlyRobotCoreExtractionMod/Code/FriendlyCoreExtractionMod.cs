@@ -96,6 +96,12 @@ namespace Game.FriendlyRobotCoreExtractionMod {
                     && x.AssociatedGoal == currentGoal
                     && AIGoal.IsActive(x.AssociatedGoal));
                 if (!isCurrentSurgery) {
+                    // AIGoal.Interrupt dereferences Agent for non-interruptable goals.
+                    // Do not call it when there is no agent or when the agent is not disabled.
+                    if (currentGoal.IsNonInterruptable
+                            && (currentGoal.Agent == null || !currentGoal.Agent.IsDisabled)) {
+                        return;
+                    }
                     if (!AIGoal.Interrupt(currentGoal, G.Ticks, T.NounSurgery)) {
                         return;
                     }
