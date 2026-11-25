@@ -21,6 +21,12 @@ namespace Game.OrbotronSlotRepairMod {
         internal const byte RepairDestroyedSlot = 8;
         internal const string ModId = "OrbotronSlotRepairMod";
         internal const string ResearchId = "Research/Robotics/BodySlotRepair";
+        internal const string OrbotronSpeciesId = "Orbotron";
+
+        internal static bool IsOrbotron(BeingData being) {
+            return being?.Species != null
+                && string.Equals(being.Species.Id, OrbotronSpeciesId, StringComparison.Ordinal);
+        }
     }
 
     public static class SlotRepairModInit {
@@ -112,9 +118,10 @@ namespace Game.OrbotronSlotRepairMod {
             if ((byte)op.OpType != SlotRepairIds.RepairDestroyedSlot) { return true; }
 
             var slot = op.TargetSlot;
-            if (slot == null || !slot.IsDestroyed || !slot.IsPartRemoved
-                    || slot.InstalledDef != null) {
-                op.FailReason = "Target is not an empty destroyed body slot.";
+            if (slot == null || !SlotRepairIds.IsOrbotron(slot.Body.Owner)
+                    || !SlotRepairIds.IsOrbotron(op.TargetBeing)
+                    || !slot.IsDestroyed || !slot.IsPartRemoved || slot.InstalledDef != null) {
+                op.FailReason = "Target is not an empty destroyed Orbotron body slot.";
                 op.State.Set(SurgicalOpState.Failed);
                 __result = false;
                 return false;
@@ -188,9 +195,9 @@ namespace Game.OrbotronSlotRepairMod {
                 WGroup wFooter) {
             var slot = AccessTools.Field(typeof(SurgeryChoiceView), "slot")
                 ?.GetValue(__instance) as BodyPartSlot;
-            if (slot == null || !slot.IsDestroyed || !slot.IsPartRemoved
-                    || slot.InstalledDef != null || slot.Body?.Owner?.Species == null
-                    || slot.Body.Owner.Species.IsBiological || !IsResearchUnlocked()) { return; }
+            if (slot == null || !SlotRepairIds.IsOrbotron(slot.Body.Owner)
+                    || !slot.IsDestroyed || !slot.IsPartRemoved
+                    || slot.InstalledDef != null || !IsResearchUnlocked()) { return; }
 
             var index = wFooter.Container.childCount;
             var button = UISpawn.Widget<WButtonText>(lifetime,
@@ -242,8 +249,9 @@ namespace Game.OrbotronSlotRepairMod {
                 .GetValue(__instance, null) as Being;
             var slotId = AccessTools.Field(typeof(BodyModSpotComp), "bodyPartSlot")
                 .GetValue(__instance) as string;
-            if (patient == null || string.IsNullOrEmpty(slotId)) {
-                failReason = "Repair operation has no patient or target slot.";
+            if (patient == null || !SlotRepairIds.IsOrbotron(patient.Data)
+                    || string.IsNullOrEmpty(slotId)) {
+                failReason = "Repair operation requires an Orbotron patient and a target slot.";
                 SetOutcome(ref __result, 2);
                 return false;
             }
