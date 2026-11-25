@@ -6,19 +6,25 @@ This is an experimental C# mod, not a JSON-only mod. It adds a **Repair Damaged 
 
 ## Scope of this test build
 
-- Adds an order for a selected robotic body slot when `BodyPartSlot.IsDestroyed` is true.
-- The operation is represented as a custom `SurgicalOpType` value and intercepted at the Assembly Hub finalization point.
-- The operation clears only the slot-level `IsDestroyed` flag and asks the body to recalculate its condition.
+- Adds an order for a robotic body slot when `BodyPartSlot.IsDestroyed` is true and the slot is empty (`IsPartRemoved = true`, `InstalledDef = null`).
+- The operation is represented by a custom `SurgicalOpType` and intercepted at the Assembly Hub finalization point.
+- Completion clears only the slot-level `IsDestroyed` flag. The part is not recreated; the slot remains empty and can use the normal installation workflow afterward.
 - It does **not** repair a destroyed installed part, clear `Welded` / `Crippled`, heal wounds, or repair a destroyed parent slot.
 - It does not modify enemy robots or ordinary part extraction.
 
-## AI task routing
+## Why the first task-routing attempt failed
 
-A registered surgical operation is not itself an AI job. The vanilla `SurgicalQueue` normally waits until the patient has no active `Being.Goal`, then asks `BodyComp.TryOrderOp` to create the patient-side task. The stock single-slot path only handles `Remove`, `Install`, and `Swap`, so custom operation types need an explicit bridge.
+The failure named `DestroySlot` is applied during a surgical extraction. The game sets `slot.IsDestroyed = true`, but unless the failure was `WeldPart`, the extraction continues. The normal removal routine then clears `InstalledDef`, sets `IsPartRemoved = true`, and clears the slot's part state. Thus a destroyed slot is already an empty slot, not a removable installed part.
 
-The current implementation reuses the vanilla remove-task setup, then writes the custom operation type back into the goal. It also marks the custom type as a single-slot operation so the target slot ID is carried through the vanilla `Surgery_GoTo` / `CarryPatient` actions into the Assembly Hub. After the button is pressed, it attempts to interrupt an unrelated interruptible patient goal, clear the target-side goal reference, and start the head of that patient's surgery queue immediately. An already-running surgery is not interrupted; a non-interruptible goal can keep the operation queued until it finishes.
+The first mod version incorrectly rejected `IsPartRemoved` and then attempted to reuse `BodyComp.TryOrderRemove`. That vanilla method also rejects already-removed slots. Separately, it refuses removal from a living non-player being unless the being is incapacitated. Those guards are intentional for ordinary harvesting; they are not appropriate for repairing a socket on a friendly active robot.
 
-This bridge was added after the last successful local compilation report. Rebuild before testing this revision.
+## AI task routing in the current revision
+
+The custom operation now creates its own patient-side transport goal, following the vanilla part-installation goal pattern instead of calling `TryOrderRemove`. The goal carries the custom operation type, operation ID and target slot ID, requires the `Move` ability (so another robot can carry an immobile patient), and uses the vanilla Assembly Hub availability check.
+
+The custom operation is marked as a slot-targeted action with no part to deliver. The normal `Surgery_GoTo` / `CarryPatient` chain therefore moves the patient to a robotic Assembly Hub. The Assembly Hub still requires its separate `Robotics` operator job.
+
+After completion, only `IsDestroyed` is cleared. `IsPartRemoved` stays true, which is correct: the socket is repaired, but it is still empty. The vanilla install options should then become available.
 
 ## Known incomplete part
 
@@ -47,6 +53,6 @@ Do not test on the only copy of a valuable save. Removing mods that add operatio
 ## Validation status
 
 - Source logic mapped against the repository's Stardeus 0.15.11 Core snapshot.
-- Last reported local C# build (2026-11-25), before the AI task-routing bridge: **passed with five warnings**. The current bridge revision: **rebuild pending**.
+- User-confirmed local C# build (2026-11-25): the previous queue-query correction compiled with five warnings and no errors. The current dedicated-goal revision was committed afterward and still needs a local rebuild.
 - `tools/stardeus validate`: **not run**.
-- In-game runtime: **not run**.
+- In-game runtime: user reported that the previous repair action did not enter or remain in the queue; the dedicated-goal correction is pending a new runtime test.

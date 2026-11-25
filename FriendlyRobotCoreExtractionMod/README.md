@@ -19,13 +19,11 @@ The Core snapshot identifies **Construction Drone** as `Research/Robotics/Drone`
 
 ## AI task routing
 
-A registered surgical operation is not itself an AI job. The vanilla `SurgicalQueue` normally waits until the patient has no active `Being.Goal`, then asks `BodyComp.TryOrderOp` to create the patient-side task. The stock single-slot path only handles `Remove`, `Install`, and `Swap`, so custom operation types need an explicit bridge.
+A registered operation needs a patient-side AI goal before the global queue will consider it in progress. The previous implementation reused `BodyComp.TryOrderRemove`; that was incorrect for this operation. Vanilla removal has an intentional eligibility check that rejects a living non-player patient unless it is incapacitated. Safe Core Extraction is specifically intended to work on a living friendly robot, so that path prevented the task from being created.
 
-The current implementation reuses the vanilla remove-task setup, then writes the custom extraction type back into the goal. It also marks the custom type as a single-slot operation so the Core slot ID is carried through the vanilla `Surgery_GoTo` / `CarryPatient` actions into the Assembly Hub. After the button is pressed, it attempts to interrupt an unrelated interruptible patient goal, clear the target-side goal reference, and start the head of that patient's surgery queue immediately. An already-running surgery is not interrupted; a non-interruptible goal can keep the operation queued until it finishes.
+The current revision creates a custom patient-side transport goal following the vanilla installation-goal pattern. It carries the custom operation type, operation ID and Core slot ID, uses the `Move` ability so another robot can carry an immobile patient, and keeps the vanilla Assembly Hub availability check. It then uses the normal `Surgery_GoTo` / `CarryPatient` path to load the patient into the Assembly Hub.
 
-The Assembly Hub still requires a Robotics operator under its normal `OperatableDevice` rules. The patient-side AI task and the hub operator task are separate jobs.
-
-This bridge was added after the last successful local compilation report. Rebuild before testing this revision.
+The Assembly Hub still requires a separate `Robotics` operator job. The patient-side transport goal and the hub operator task are independent.
 
 ## Build and install
 
@@ -52,6 +50,6 @@ Do not test on the only copy of a valuable save. Removing mods that add research
 ## Validation status
 
 - Core extraction call path and Mind transfer mapped in the 0.15.11 Core snapshot.
-- Last reported local C# build (2026-11-25), before the AI task-routing bridge: **passed with five warnings**. The current bridge revision: **rebuild pending**.
+- User-confirmed local C# build (2026-11-25): the previous queue-query correction compiled with five warnings and no errors. The current dedicated-goal revision was committed afterward and still needs a local rebuild.
 - `tools/stardeus validate`: **not run**.
 - In-game runtime: **not run**.

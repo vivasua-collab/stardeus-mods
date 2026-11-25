@@ -31,9 +31,79 @@ namespace Game.OrbotronSlotRepairMod {
         }
     }
 
-    // The vanilla queue creates patient goals through BodyComp.TryOrderOp, but that
-    // method only knows Remove / Install / Swap. Reuse its remove-task setup, then
-    // restore our custom operation type in the AI goal so the Assembly Hub sees it.
+    // Build the patient-side transport goal directly, following the vanilla install path.
+    // TryOrderRemove is not suitable for these custom procedures: it rejects empty slots
+    // (IsPartRemoved) and also refuses a living, non-player patient unless incapacitated.
+    internal static class CustomSurgeryGoalFactory {
+        internal static bool TryOrder(BodyComp body, SurgicalOperation op, string iconId) {
+            var patient = body?.Being;
+            if (patient == null || !patient.IsActive || patient.Data == null) {
+                op.FailReason = T.NotAvailable;
+                return false;
+            }
+            if (op.TargetBeing != patient.Data || op.TargetSlot == null
+                    || op.TargetSlot.Body.Owner != patient.Data) {
+                op.FailReason = "Surgical operation target does not match its patient.";
+                op.State.Set(SurgicalOpState.Failed);
+                return false;
+            }
+            if (body.HasExistingGoal(false, out var existingReason)) {
+                op.FailReason = existingReason;
+                return false;
+            }
+            if (!op.TargetSlot.Body.HasSurgeryFacilities(out var deviceDefIdH)) {
+                op.FailReason = $"{T.RequiredDeviceIsNotAvailable}: {Texts.LinkToCodex(deviceDefIdH)}";
+                return false;
+            }
+
+            var goal = AIGoal.Create(JobTypeIdH.Task, T.PartPerformReplacement, body, G.Ticks)
+                .WithIcon(iconId)
+                .WithVar(AIGoalVars.BodySlotId_String, op.TargetSlot.Id)
+                .WithVar(AIGoalVars.SurgeryType_Int, (int)op.OpType)
+                .WithVar(AIGoalVars.SurgeryId, op.Id)
+                .WithWorldToDesired(AIVarsH.IsPatientDelivered, false, true)
+                .WithOverwritePriority(1)
+                .WithPriority(A.BodyPartProcedurePriority)
+                .WithRequiredAbilities(AbilityIdH.Move)
+                .ByPlayer(true)
+                .WriteInitialState();
+
+            // Keep the same hub-availability gate used by vanilla BodyComp surgery goals.
+            var checkMethod = AccessTools.Method(typeof(BodyComp), "CanPerformSurgeryNow");
+            if (checkMethod == null) {
+                op.FailReason = "Could not resolve the vanilla Assembly Hub availability check.";
+                return false;
+            }
+            try {
+                goal.CheckDoable = (AIGoal.AIGoalCheck)Delegate.CreateDelegate(
+                    typeof(AIGoal.AIGoalCheck), body, checkMethod);
+            } catch (Exception ex) {
+                D.LogEx(ex, "Failed binding the vanilla surgery availability check.");
+                op.FailReason = T.Error;
+                return false;
+            }
+
+            AIAgentComp forcedAgent = null;
+            if (!patient.Motion.IsImmobilized && goal.CanBeDoneBy(patient.AIAgent)) {
+                forcedAgent = patient.AIAgent;
+            }
+            if (body.Entity.TrySetGoal(goal, forcedAgent)) {
+                op.AssociatedGoal = goal;
+                op.FailReason = null;
+                D.Warn("[CustomSurgery] Created patient transport goal for {0}: {1}",
+                    patient, op);
+                return true;
+            }
+
+            op.FailReason = T.AdRejUndefined;
+            D.Warn("[CustomSurgery] Could not assign patient transport goal for {0}: {1}",
+                patient, op);
+            return false;
+        }
+    }
+
+    // Route repairs through a dedicated patient transport goal. The destroyed socket is
+    // already empty, so the vanilla Remove operation is both semantically wrong and rejected.
     [HarmonyPatch(typeof(BodyComp), nameof(BodyComp.TryOrderOp))]
     internal static class SlotRepairOrderPatch {
         private static bool Prefix(BodyComp __instance, SurgicalOperation op,
@@ -41,25 +111,16 @@ namespace Game.OrbotronSlotRepairMod {
             if ((byte)op.OpType != SlotRepairIds.RepairDestroyedSlot) { return true; }
 
             var slot = op.TargetSlot;
-            if (slot == null || slot.IsPartRemoved || !slot.IsDestroyed) {
-                op.FailReason = "Target slot is no longer damaged.";
+            if (slot == null || !slot.IsDestroyed || !slot.IsPartRemoved
+                    || slot.InstalledDef != null) {
+                op.FailReason = "Target is not an empty destroyed body slot.";
                 op.State.Set(SurgicalOpState.Failed);
                 __result = false;
                 return false;
             }
 
-            var method = AccessTools.Method(typeof(BodyComp), "TryOrderRemove");
-            if (method == null) {
-                op.FailReason = "Could not resolve the vanilla body-part operation task.";
-                op.State.Set(SurgicalOpState.Failed);
-                __result = false;
-                return false;
-            }
-
-            __result = (bool)method.Invoke(__instance, new object[] { slot, op });
-            if (__result && op.AssociatedGoal != null) {
-                op.AssociatedGoal.WithVar(AIGoalVars.SurgeryType_Int, (int)op.OpType);
-            }
+            __result = CustomSurgeryGoalFactory.TryOrder(
+                __instance, op, IconId.CBodyReplaceBad);
             return false;
         }
     }
@@ -187,8 +248,9 @@ namespace Game.OrbotronSlotRepairMod {
                 return false;
             }
 
+            // A destroyed slot is already empty (IsPartRemoved=true, state=null).
+            // Clearing this flag makes the ordinary installation path available again.
             slot.IsDestroyed = false;
-            slot.UpdateCondition(false, false, forceUpdateHierarchy: true);
             AccessTools.Method(slot.Body.GetType(), "CheckCondition")
                 ?.Invoke(slot.Body, new object[] { false });
 
