@@ -114,7 +114,7 @@ namespace Game.FriendlyRobotCoreExtractionMod {
             if (being.Goal != null || !being.TryGetComponent<BodyComp>(out var body)) {
                 return;
             }
-            var nextOp = A.S.Query.TryNextSurgicalProcedure.Ask(being.Data);
+            var nextOp = A.S.Query.TryNextSurgicalProcedure.Ask(being);
             if (nextOp != null && body.TryOrderOp(nextOp)) {
                 nextOp.State.Set(SurgicalOpState.Preparing);
             }
