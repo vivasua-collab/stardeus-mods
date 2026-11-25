@@ -3,7 +3,6 @@ using System.Linq;
 using System.Reflection;
 using HarmonyLib;
 using Game.CodeGen;
-using Game.Components;
 using Game.Data;
 using Game.Systems.BodyParts;
 using Game.Systems.Creatures.Surgeries;
@@ -11,12 +10,9 @@ using Game.Systems.UIUX;
 using Game.UI;
 using Game.Utils;
 using KL.Utils;
-using UnityEngine;
 
 namespace Game.OrbotronSlotRepairMod {
     internal static class SlotRepairIds {
-        // Values are intentionally outside the vanilla enum range. Keep unique across
-        // independently installed test mods.
         internal const byte RepairDestroyedSlot = 8;
         internal const string ModId = "OrbotronSlotRepairMod";
     }
@@ -30,39 +26,35 @@ namespace Game.OrbotronSlotRepairMod {
         }
     }
 
-    [HarmonyPatch(typeof(SurgeriesHandler), "SpawnBodyPartWidgets")]
-    internal static class SlotRepairSelectionPatch {
-        private static object ReadMember(object obj, string name) {
-            if (obj == null) { return null; }
-            var t = obj.GetType();
-            return AccessTools.Field(t, name)?.GetValue(obj)
-                ?? AccessTools.Property(t, name)?.GetValue(obj, null);
-        }
+    // Body-part operations are selected in SurgeryChoiceView, not in the body diagram
+    // builder (SurgeriesHandler.SpawnBodyPartWidgets). A postfix also runs when the
+    // vanilla popup returns early for a destroyed slot.
+    [HarmonyPatch(typeof(SurgeryChoiceView), "LoadPopupContent")]
+    internal static class SlotRepairChoicePatch {
+        private static void Postfix(SurgeryChoiceView __instance, Lifetime lifetime,
+                WGroup wFooter) {
+            var slot = AccessTools.Field(typeof(SurgeryChoiceView), "slot")
+                ?.GetValue(__instance) as BodyPartSlot;
+            if (slot == null || !slot.IsDestroyed) { return; }
 
-        private static void Postfix(object __instance, Lifetime life, BeingData b) {
-            if (b == null || b.Species == null || b.Species.IsBiological) { return; }
-            var widget = ReadMember(__instance, "widget");
-            var bodyContainer = ReadMember(widget, "BodyContainer");
-            var container = ReadMember(bodyContainer, "Container");
-            if (container == null) { return; }
-
-            foreach (var slot in b.Body.Slots) {
-                if (!slot.IsDestroyed) { continue; }
-                var button = UISpawn.Widget<WButtonText>(life,
-                    UIPrefabId.WContent2ButtonSimple, (Transform)container, -1);
-                button.Load("Repair Damaged Slot: " + slot.NameT, () => {
-                    var op = new SurgicalOperation {
-                        TargetBeing = b,
-                        TargetSlot = slot,
-                        OpType = (SurgicalOpType)SlotRepairIds.RepairDestroyedSlot,
-                        Icon = IconId.CWrench2,
-                        Desc = "Repair Damaged Slot"
-                    };
-                    if (!A.S.Query.RegisterSurgicalOperation.Ask(op, true)) {
-                        A.S.Sig.ShowErrorMessage.Send(op.FailReason ?? "Could not queue slot repair.");
-                    }
-                });
-            }
+            var index = wFooter.Container.childCount;
+            var button = UISpawn.Widget<WButtonText>(lifetime,
+                UIPrefabId.WFooterItem_DeleteButton, wFooter.Container, index);
+            button.Load("Repair Damaged Slot", () => {
+                var op = new SurgicalOperation {
+                    TargetBeing = slot.Body.Owner,
+                    TargetSlot = slot,
+                    OpType = (SurgicalOpType)SlotRepairIds.RepairDestroyedSlot,
+                    Icon = IconId.CWrench2,
+                    Desc = "Repair Damaged Slot"
+                };
+                if (!A.S.Query.RegisterSurgicalOperation.Ask(op, true)) {
+                    A.S.Sig.ShowErrorMessage.Send(op.FailReason ?? "Could not queue slot repair.");
+                } else {
+                    A.S.UIQuery.ShowContextPopup.Ask(__instance, false);
+                }
+            });
+            wFooter.SetActiveFast(true);
         }
     }
 
@@ -108,7 +100,7 @@ namespace Game.OrbotronSlotRepairMod {
                 ?.Invoke(slot.Body, new object[] { false });
 
             failReason = null;
-            SetOutcome(ref __result, 1); // ProcedureOutcome.Completed
+            SetOutcome(ref __result, 1);
             return false;
         }
 
