@@ -23,6 +23,8 @@ A registered operation needs a patient-side AI goal before the global queue will
 
 The current revision creates a custom patient-side transport goal following the vanilla installation-goal pattern. It carries the custom operation type, operation ID and Core slot ID, uses the `Move` ability so another robot can carry an immobile patient, and keeps the vanilla Assembly Hub availability check. It then uses the normal `Surgery_GoTo` / `CarryPatient` path to load the patient into the Assembly Hub.
 
+The vanilla queue skips a patient while `Being.Goal` is occupied; it does not automatically interrupt unrelated work. The mod also attempts to start the queue head immediately after registration, interrupting only an unrelated interruptible goal. An ongoing surgery and a non-interruptible goal are left alone.
+
 The Assembly Hub still requires a separate `Robotics` operator job. The patient-side transport goal and the hub operator task are independent.
 
 ## Build and install
@@ -52,4 +54,4 @@ Do not test on the only copy of a valuable save. Removing mods that add research
 - Core extraction call path and Mind transfer mapped in the 0.15.11 Core snapshot.
 - User-confirmed local C# build (2026-11-25): the previous queue-query correction compiled with five warnings and no errors. The current dedicated-goal revision was committed afterward and still needs a local rebuild.
 - `tools/stardeus validate`: **not run**.
-- In-game runtime: **not run**.
+- In-game runtime: the user previously reported the same queue/task-start symptom for the earlier implementation; the dedicated-goal revision has not yet been tested in-game.

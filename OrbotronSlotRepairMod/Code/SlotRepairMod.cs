@@ -187,7 +187,8 @@ namespace Game.OrbotronSlotRepairMod {
                 WGroup wFooter) {
             var slot = AccessTools.Field(typeof(SurgeryChoiceView), "slot")
                 ?.GetValue(__instance) as BodyPartSlot;
-            if (slot == null || !slot.IsDestroyed || slot.Body?.Owner?.Species == null
+            if (slot == null || !slot.IsDestroyed || !slot.IsPartRemoved
+                    || slot.InstalledDef != null || slot.Body?.Owner?.Species == null
                     || slot.Body.Owner.Species.IsBiological) { return; }
 
             var index = wFooter.Container.childCount;
