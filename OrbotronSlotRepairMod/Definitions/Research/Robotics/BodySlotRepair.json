@@ -1,6 +1,6 @@
 {
   "Id": "Research/Robotics/BodySlotRepair",
-  "Tier": 3,
+  "Tier": 5,
   "IsAbstract": true,
   "PreviewIcon": "Icons/Color/Wrench2",
   "NameKey": "research.robotics.bodyslotrepair",
@@ -8,7 +8,7 @@
   "Researchable": {
     "IsTreeNode": true,
     "Prerequisites": [
-      "Research/Robotics/Drone"
+      "Research/Robotics/Orbotron"
     ],
     "DatoidCosts": [
       {
