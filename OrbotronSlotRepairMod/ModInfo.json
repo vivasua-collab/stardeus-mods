@@ -1,8 +1,8 @@
 {
   "Id": "OrbotronSlotRepairMod",
-  "Name": "Robotic Body Slot Repair",
-  "Description": "Adds a Tier 3 research-gated Assembly Hub operation for restoring destroyed robotic body slots.",
-  "ModVersion": "0.1.0",
+  "Name": "Orbotron Slot Repair",
+  "Description": "Adds a Tier 5 Orbotron-only Assembly Hub operation for restoring destroyed body slots.",
+  "ModVersion": "0.1.1",
   "GameVersion": "0.15.11",
   "SteamWorkshop": false,
   "Dependencies": []
