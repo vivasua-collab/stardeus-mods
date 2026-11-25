@@ -92,8 +92,8 @@ Prior local builds reported five warnings:
 The project files currently reference the game's `Managed\*.dll` set, including Roslyn assemblies whose dependency versions differ from some assemblies selected from the game directory. The reference set still needs a deliberate review; these warnings have not been hidden or force-resolved.
 
 **In-game findings (2026-11-25):**
-- Repair Damaged Slot: the user confirmed that the operation works. The new Tier 3 research lock has not yet been tested in-game.
-- Safe Core Extraction: patient transport and extraction work, but the extracted Core received a damaged condition and could not be used by the replicator. The current source revision disables the failure roll at the typed `TryRemovePart.canFail` argument and also suppresses Safe Core extraction failure outcomes in `SurgeryUtils.ApplySurgicalOpFailure`. Runtime validation of this correction remains pending.
+- Repair Damaged Slot: the user confirmed that the basic operation works. The new Orbotron-only restriction and Tier 5 research dependency require a fresh build and in-game validation.
+- Safe Core Extraction: the user confirmed that the operation now works correctly in-game. The previous issue with the extracted Core receiving a damaged condition is resolved in the tested build.
       
 ## Validation boundary
 
