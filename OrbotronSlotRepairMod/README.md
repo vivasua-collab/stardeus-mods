@@ -1,12 +1,23 @@
-# Assembly Hub Slot Repair Test (0.1.0)
+# Robotic Body Slot Repair (0.1.0)
 
 Target game: **Stardeus 0.15.11**.
 
 This is an experimental C# mod, not a JSON-only mod. It adds a **Repair Damaged Slot** order to the robotic surgery selection UI. The queued operation is handled by the vanilla robotic BodyModSpot / Assembly Hub pipeline.
 
+## Research unlock
+
+The operation is gated by a separate research node:
+
+- **Research:** Robotic Body Slot Repair
+- **ID:** `Research/Robotics/BodySlotRepair`
+- **Tier:** 3
+- **Prerequisite:** `Research/Robotics/Drone` — Construction Drone, Tier 3
+
+The Repair Damaged Slot button is not shown until this research is unlocked.
+
 ## Scope of this test build
 
-- Adds an order for a robotic body slot when `BodyPartSlot.IsDestroyed` is true and the slot is empty (`IsPartRemoved = true`, `InstalledDef = null`).
+- Adds an order for a robotic body slot when the research is unlocked, `BodyPartSlot.IsDestroyed` is true and the slot is empty (`IsPartRemoved = true`, `InstalledDef = null`).
 - The operation is represented by a custom `SurgicalOpType` and intercepted at the Assembly Hub finalization point.
 - Completion clears only the slot-level `IsDestroyed` flag. The part is not recreated; the slot remains empty and can use the normal installation workflow afterward.
 - It does **not** repair a destroyed installed part, clear `Welded` / `Crippled`, heal wounds, or repair a destroyed parent slot.
@@ -46,13 +57,14 @@ Do not test on the only copy of a valuable save. Removing mods that add operatio
 1. Load a test save with a friendly robot whose body contains a destroyed slot (`IsDestroyed=true`).
 2. Open the robot in the surgery selection UI.
 3. Confirm **Repair Damaged Slot: [slot]** appears only for destroyed slots.
-4. Queue it and confirm an Assembly Hub takes the robot.
-5. Confirm the slot becomes selectable for normal installation after completion.
-6. Confirm the operation does not change wounds, part flags, or other slots.
+4. Confirm the button appears only after researching Robotic Body Slot Repair.
+5. Queue it and confirm an Assembly Hub takes the robot.
+6. Confirm the slot becomes selectable for normal installation after completion.
+7. Confirm the operation does not change wounds, part flags, or other slots.
 
 ## Validation status
 
 - Source logic mapped against the repository's Stardeus 0.15.11 Core snapshot.
-- User-confirmed local C# build (2026-11-25): the previous queue-query correction compiled with five warnings and no errors. The current dedicated-goal revision was committed afterward and still needs a local rebuild.
+- User-confirmed local C# build (2026-11-25): both projects compiled successfully before the current research-gating change.
+- In-game runtime: the user confirmed that Repair Damaged Slot completes correctly. The new research prerequisite and visibility gate still need an in-game check.
 - `tools/stardeus validate`: **not run**.
-- In-game runtime: user reported that the previous repair action did not enter or remain in the queue; the dedicated-goal correction is pending a new runtime test.

@@ -1,0 +1,3 @@
+Key,Translation,Version,Comment
+research.robotics.bodyslotrepair,Ремонт роботизированных слотов,0.1.0,Исследование
+research.robotics.bodyslotrepair.desc,Открывает операцию ремонта разрушенных слотов тела робота на сборочном комплексе. Требуется исследование строительного дрона.,0.1.0,Описание исследования

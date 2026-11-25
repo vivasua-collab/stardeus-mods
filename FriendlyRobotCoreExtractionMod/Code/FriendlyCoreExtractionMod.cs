@@ -277,20 +277,54 @@ namespace Game.FriendlyRobotCoreExtractionMod {
         }
     }
 
+    // Disable the extraction failure roll for this operation at its source.
+    // The final TryRemovePart overload parameters are (.., bool canFail, ..,
+    // SurgicalOpType opType, string performerLink). Use a typed ref so Harmony writes
+    // the changed value directly back into the original argument list.
     [HarmonyPatch]
     internal static class SafeCoreNoFailureRollPatch {
         private static MethodInfo TargetMethod() {
             return AccessTools.GetDeclaredMethods(typeof(BodyPartSlot))
                 .First(m => m.Name == "TryRemovePart" && m.GetParameters().Length == 8
+                    && m.GetParameters()[3].ParameterType == typeof(bool)
+                    && m.GetParameters()[6].ParameterType == typeof(SurgicalOpType)
                     && m.GetParameters()[7].ParameterType == typeof(string));
         }
 
-        private static void Prefix(BodyPartSlot __instance, object[] __args) {
-            if (__args == null || __args.Length != 8) { return; }
-            if ((byte)__args[6] != CoreExtractionIds.SafeCoreExtraction) { return; }
+        private static void Prefix(BodyPartSlot __instance, ref bool canFail,
+                SurgicalOpType opType) {
+            if ((byte)opType != CoreExtractionIds.SafeCoreExtraction) { return; }
             if (!__instance.HoldsMind || __instance.Type.Id != "Core") { return; }
             if (__instance.Body.Owner.Species.IsBiological || !__instance.Body.Owner.IsFriendly) { return; }
-            __args[3] = false;
+            if (canFail) {
+                D.Warn("[FriendlyRobotCoreExtractionMod] Disabling Core extraction failure roll: {0}",
+                    __instance.Id);
+            }
+            canFail = false;
+        }
+    }
+
+    // Safety net: even if another call path reaches the failure resolver with canFail=true,
+    // a Safe Core Extraction must never apply a wound, cripple, DestroyPart or DestroySlot outcome.
+    [HarmonyPatch]
+    internal static class SafeCoreFailureOutcomePatch {
+        private static MethodInfo TargetMethod() {
+            return AccessTools.GetDeclaredMethods(typeof(SurgeryUtils))
+                .First(m => m.Name == "ApplySurgicalOpFailure"
+                    && m.GetParameters().Length == 8
+                    && m.GetParameters()[5].ParameterType == typeof(bool)
+                    && m.GetParameters()[6].ParameterType == typeof(SurgicalOpType)
+                    && m.GetParameters()[7].ParameterType == typeof(string));
+        }
+
+        private static bool Prefix(SurgicalOpType opType, bool isExtract,
+                ref SurgicalOpFailureType __result) {
+            if ((byte)opType != CoreExtractionIds.SafeCoreExtraction || !isExtract) {
+                return true;
+            }
+            __result = SurgicalOpFailureType.None;
+            D.Warn("[FriendlyRobotCoreExtractionMod] Suppressed Core extraction failure outcome.");
+            return false;
         }
     }
 }

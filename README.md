@@ -8,7 +8,7 @@ This repository is a mod workspace, not the game's source repository. The `Core/
 
 | Folder | Type | Purpose |
 |---|---|---|
-| [`OrbotronSlotRepairMod/`](OrbotronSlotRepairMod/README.md) | C# / Harmony | Adds the experimental **Repair Damaged Slot** Assembly Hub operation for destroyed robotic body slots. The current test implementation does not charge materials. |
+| [`OrbotronSlotRepairMod/`](OrbotronSlotRepairMod/README.md) | C# / Harmony + research definition | Adds **Repair Damaged Slot**, unlocked by a separate Tier 3 research node requiring Construction Drone research. The current implementation does not charge materials. |
 | [`FriendlyRobotCoreExtractionMod/`](FriendlyRobotCoreExtractionMod/README.md) | C# / Harmony + research definition | Adds a research-gated **Safe Core Extraction** operation for friendly robotic beings. |
 | [`OrbotronArmorMod/`](OrbotronArmorMod/README.md) | JSON-only | Adds Orbotron armor equipment, recipes, and research definitions. It has no C# project and does not need the build steps below. |
 | `Core/` | Reference data | Snapshot of game configuration and reference source used during mod development. |
@@ -29,6 +29,8 @@ The vanilla single-slot removal task is not a valid transport-task factory for e
 Both custom operations now create their own patient-side transport goal, following the vanilla install-goal pattern. The goal carries `SurgeryType_Int`, `SurgeryId`, `BodySlotId_String`, the patient-delivery state and the normal Assembly Hub availability check. `BodyModSpotComp.ResolveOpType` is patched so each custom operation is treated as a slot-targeted procedure that needs no delivered part. The vanilla queue skips a patient while `Being.Goal` is occupied; it does not automatically interrupt unrelated work. The custom mods also try to start the queue head immediately after registration, interrupting only an unrelated interruptible goal. An ongoing surgery and a non-interruptible goal are left alone. The Assembly Hub operator remains a separate AI job; the patient transport goal does not assign the operator.
 
 For slot repair, completion only clears the slot's `IsDestroyed` flag. The slot remains empty (`IsPartRemoved = true`), so the vanilla installation flow becomes available again. The repair test build still has no material debit.
+
+The slot repair node is `Research/Robotics/BodySlotRepair` (Tier 3), with a direct prerequisite on `Research/Robotics/Drone` (Construction Drone, Tier 3). The Repair Damaged Slot command is hidden until this research is unlocked.
 
 ## Building the C# mods
 
@@ -74,11 +76,11 @@ To install or refresh a mod, keep its complete mod folder (including `ModInfo.js
 
 ## Current compilation status
 
-**User-confirmed build on 2026-11-25:** both C# projects compiled successfully against the local **Stardeus 0.15.11b** Managed directory after the queue-query argument correction. The reported builds still had five warnings and no C# errors.
+**User-confirmed build on 2026-11-25:** both C# projects compiled successfully against the local **Stardeus 0.15.11b** Managed directory after the previous patient-side goal implementation. The user also confirmed in-game that the Slot Repair operation now completes.
 
-**Current source status:** the patient-side goal implementation described above was committed after that successful build. This newest revision still needs to be rebuilt against the local game DLLs before it is treated as compile-verified.
+**Current source status:** this revision changes both C# projects (Safe Core failure prevention and research gating for Slot Repair), so both projects must be rebuilt before the current commit is treated as compile-verified.
 
-The five reported warnings are unchanged:
+Prior local builds reported five warnings:
 
 - `MSB3245`: the build resolver reports that it cannot resolve `System.Runtime`.
 - `MSB3277`: reference-version conflicts are reported for:
@@ -89,8 +91,10 @@ The five reported warnings are unchanged:
 
 The project files currently reference the game's `Managed\*.dll` set, including Roslyn assemblies whose dependency versions differ from some assemblies selected from the game directory. The reference set still needs a deliberate review; these warnings have not been hidden or force-resolved.
 
-**In-game finding (2026-11-25):** the user reported that the Repair Damaged Slot operation did not enter or remain in the queue. Source tracing identified the two incompatible assumptions in the previous implementation: a destroyed socket is already marked removed, and the vanilla removal-task path rejects it (as well as living non-incapacitated non-player patients). The dedicated custom-goal rewrite addresses those points; runtime validation remains pending.
-
+**In-game findings (2026-11-25):**
+- Repair Damaged Slot: the user confirmed that the operation works. The new Tier 3 research lock has not yet been tested in-game.
+- Safe Core Extraction: patient transport and extraction work, but the extracted Core received a damaged condition and could not be used by the replicator. The current source revision disables the failure roll at the typed `TryRemovePart.canFail` argument and also suppresses Safe Core extraction failure outcomes in `SurgeryUtils.ApplySurgicalOpFailure`. Runtime validation of this correction remains pending.
+      
 ## Validation boundary
 
 Compilation confirms that the current C# source can be compiled against the supplied local game assemblies. It does not confirm that Harmony patches apply successfully, that the UI operations appear, or that the operations complete correctly in a live save.

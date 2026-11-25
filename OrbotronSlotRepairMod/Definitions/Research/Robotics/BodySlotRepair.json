@@ -1,0 +1,28 @@
+{
+  "Id": "Research/Robotics/BodySlotRepair",
+  "Tier": 3,
+  "IsAbstract": true,
+  "PreviewIcon": "Icons/Color/Wrench2",
+  "NameKey": "research.robotics.bodyslotrepair",
+  "DescKey": "research.robotics.bodyslotrepair.desc",
+  "Researchable": {
+    "IsTreeNode": true,
+    "Prerequisites": [
+      "Research/Robotics/Drone"
+    ],
+    "DatoidCosts": [
+      {
+        "TypeId": "DatoidTech",
+        "StackSize": 12
+      },
+      {
+        "TypeId": "DatoidSynthetic",
+        "StackSize": 8
+      },
+      {
+        "TypeId": "DatoidEnergy",
+        "StackSize": 8
+      }
+    ]
+  }
+}

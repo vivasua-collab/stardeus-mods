@@ -20,6 +20,7 @@ namespace Game.OrbotronSlotRepairMod {
     internal static class SlotRepairIds {
         internal const byte RepairDestroyedSlot = 8;
         internal const string ModId = "OrbotronSlotRepairMod";
+        internal const string ResearchId = "Research/Robotics/BodySlotRepair";
     }
 
     public static class SlotRepairModInit {
@@ -189,7 +190,7 @@ namespace Game.OrbotronSlotRepairMod {
                 ?.GetValue(__instance) as BodyPartSlot;
             if (slot == null || !slot.IsDestroyed || !slot.IsPartRemoved
                     || slot.InstalledDef != null || slot.Body?.Owner?.Species == null
-                    || slot.Body.Owner.Species.IsBiological) { return; }
+                    || slot.Body.Owner.Species.IsBiological || !IsResearchUnlocked()) { return; }
 
             var index = wFooter.Container.childCount;
             var button = UISpawn.Widget<WButtonText>(lifetime,
@@ -210,6 +211,11 @@ namespace Game.OrbotronSlotRepairMod {
                 }
             });
             wFooter.SetActiveFast(true);
+        }
+
+        private static bool IsResearchUnlocked() {
+            var progress = A.S.Research.Get(Hashes.S(SlotRepairIds.ResearchId));
+            return progress != null && progress.IsUnlocked;
         }
     }
 

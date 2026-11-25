@@ -1,7 +1,7 @@
 {
   "Id": "OrbotronSlotRepairMod",
-  "Name": "Assembly Hub Slot Repair Test",
-  "Description": "Experimental Assembly Hub operation for restoring destroyed robotic body slots. Test build for Stardeus 0.15.11.",
+  "Name": "Robotic Body Slot Repair",
+  "Description": "Adds a Tier 3 research-gated Assembly Hub operation for restoring destroyed robotic body slots.",
   "ModVersion": "0.1.0",
   "GameVersion": "0.15.11",
   "SteamWorkshop": false,

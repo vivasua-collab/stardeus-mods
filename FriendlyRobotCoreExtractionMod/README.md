@@ -14,8 +14,19 @@ The Core snapshot identifies **Construction Drone** as `Research/Robotics/Drone`
 - It is available only after `Research/Robotics/SafeCoreExtraction` is unlocked.
 - The operation is queued through the vanilla surgical queue and processed by a robotic BodyModSpot / Assembly Hub.
 - The custom operation invokes the vanilla body-part removal procedure.
-- During this operation only, the extraction failure roll is disabled. The vanilla `TransferMindAfterPartRemoval` path remains in use, so the Mind is transferred into the extracted Core by the game's own code.
+- During this operation only, surgical extraction failure outcomes are suppressed. The vanilla `TransferMindAfterPartRemoval` path remains in use, so the Mind is transferred into the extracted Core by the game's own code.
 - It does not alter extraction rules for enemy robots, non-Core slots, or ordinary surgery.
+
+## Preventing damage to the extracted Core
+
+The vanilla extraction path can apply surgical failure outcomes to the installed part. In particular, `SurgeryUtils.ApplySurgicalOpFailure` can add a wound to the part's `BodyPartState`, which is then copied into the extracted object. This can leave the Core marked damaged even though Mind transfer succeeds.
+
+The current revision prevents this in two places, but only for the Safe Core Extraction operation:
+
+- A typed Harmony prefix sets the `canFail` argument of the matching `BodyPartSlot.TryRemovePart` overload to `false`.
+- A second guard at `SurgeryUtils.ApplySurgicalOpFailure` returns `None` for extraction operations carrying the Safe Core Extraction type.
+
+The operation therefore preserves the Core's pre-existing `BodyPartState` without adding a new surgery wound or destruction outcome. It does not repair damage that the Core already had before extraction.
 
 ## AI task routing
 
@@ -52,6 +63,6 @@ Do not test on the only copy of a valuable save. Removing mods that add research
 ## Validation status
 
 - Core extraction call path and Mind transfer mapped in the 0.15.11 Core snapshot.
-- User-confirmed local C# build (2026-11-25): the previous queue-query correction compiled with five warnings and no errors. The current dedicated-goal revision was committed afterward and still needs a local rebuild.
+- User-confirmed local C# build (2026-11-25): both projects compiled successfully before the current failure-prevention change.
+- In-game runtime: patient transport and Core extraction are confirmed working. The user observed that the extracted Core was marked damaged and unusable in the replicator. The current double guard against surgical failure outcomes needs a new build and runtime test.
 - `tools/stardeus validate`: **not run**.
-- In-game runtime: the user previously reported the same queue/task-start symptom for the earlier implementation; the dedicated-goal revision has not yet been tested in-game.
