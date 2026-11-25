@@ -114,7 +114,7 @@ namespace Game.FriendlyRobotCoreExtractionMod {
             if (being.Goal != null || !being.TryGetComponent<BodyComp>(out var body)) {
                 return;
             }
-            var nextOp = A.S.Query.TryNextSurgicalProcedure.Ask(being);
+            var nextOp = A.S.Query.TryNextSurgicalProcedure.Ask(being.Data);
             if (nextOp != null && body.TryOrderOp(nextOp)) {
                 nextOp.State.Set(SurgicalOpState.Preparing);
             }
@@ -150,7 +150,7 @@ namespace Game.FriendlyRobotCoreExtractionMod {
                 if (!A.S.Query.RegisterSurgicalOperation.Ask(op, true)) {
                     A.S.Sig.ShowErrorMessage.Send(op.FailReason ?? "Could not queue safe Core extraction.");
                 } else {
-                    SafeCoreQueueKick.TryStartNext(being);
+                    SafeCoreQueueKick.TryStartNext(being.Being);
                     A.S.UIQuery.ShowContextPopup.Ask(__instance, false);
                 }
             });

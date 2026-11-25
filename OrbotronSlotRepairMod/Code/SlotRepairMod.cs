@@ -110,7 +110,7 @@ namespace Game.OrbotronSlotRepairMod {
             if (being.Goal != null || !being.TryGetComponent<BodyComp>(out var body)) {
                 return;
             }
-            var nextOp = A.S.Query.TryNextSurgicalProcedure.Ask(being);
+            var nextOp = A.S.Query.TryNextSurgicalProcedure.Ask(being.Data);
             if (nextOp != null && body.TryOrderOp(nextOp)) {
                 nextOp.State.Set(SurgicalOpState.Preparing);
             }
@@ -143,7 +143,7 @@ namespace Game.OrbotronSlotRepairMod {
                 if (!A.S.Query.RegisterSurgicalOperation.Ask(op, true)) {
                     A.S.Sig.ShowErrorMessage.Send(op.FailReason ?? "Could not queue slot repair.");
                 } else {
-                    SlotRepairQueueKick.TryStartNext(slot.Body.Owner);
+                    SlotRepairQueueKick.TryStartNext(slot.Body.Owner.Being);
                     A.S.UIQuery.ShowContextPopup.Ask(__instance, false);
                 }
             });
