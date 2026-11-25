@@ -7,6 +7,7 @@ using Game.Components;
 using Game.Constants;
 using Game.Data;
 using Game.Systems.Creatures;
+using Game.Systems.AI;
 using Game.Systems.BodyParts;
 using Game.Systems.Creatures.Surgeries;
 using Game.Systems.UIUX;
@@ -28,6 +29,85 @@ namespace Game.FriendlyRobotCoreExtractionMod {
             if (Harmony.HasAnyPatches(CoreExtractionIds.ModId)) { return; }
             new Harmony(CoreExtractionIds.ModId).PatchAll(typeof(FriendlyCoreExtractionModInit).Assembly);
             D.Warn("[FriendlyRobotCoreExtractionMod] Harmony patches registered.");
+        }
+    }
+
+    // The vanilla queue creates patient goals through BodyComp.TryOrderOp, but that
+    // method only knows Remove / Install / Swap. Reuse its remove-task setup, then
+    // restore our custom operation type in the AI goal so the Assembly Hub sees it.
+    [HarmonyPatch(typeof(BodyComp), nameof(BodyComp.TryOrderOp))]
+    internal static class SafeCoreOrderPatch {
+        private static bool Prefix(BodyComp __instance, SurgicalOperation op,
+                ref bool __result) {
+            if ((byte)op.OpType != CoreExtractionIds.SafeCoreExtraction) { return true; }
+
+            var slot = op.TargetSlot;
+            if (slot == null || !slot.HoldsMind || slot.Type.Id != "Core"
+                    || slot.IsPartRemoved || slot.IsDestroyed || slot.InstalledDef == null
+                    || !slot.CanRemovePart(false)
+                    || !op.TargetBeing.IsFriendly || op.TargetBeing.Species.IsBiological) {
+                op.FailReason = "Target is not a valid removable friendly robotic Core.";
+                op.State.Set(SurgicalOpState.Failed);
+                __result = false;
+                return false;
+            }
+
+            var method = AccessTools.Method(typeof(BodyComp), "TryOrderRemove");
+            if (method == null) {
+                op.FailReason = "Could not resolve the vanilla body-part operation task.";
+                op.State.Set(SurgicalOpState.Failed);
+                __result = false;
+                return false;
+            }
+
+            __result = (bool)method.Invoke(__instance, new object[] { slot, op });
+            if (__result && op.AssociatedGoal != null) {
+                op.AssociatedGoal.WithVar(AIGoalVars.SurgeryType_Int, (int)op.OpType);
+            }
+            return false;
+        }
+    }
+
+    // Make the custom operation behave as a single-slot operation in the vanilla
+    // AI action chain, so the selected Core slot is carried into the Assembly Hub.
+    [HarmonyPatch(typeof(BodyModSpotComp), "ResolveOpType")]
+    internal static class SafeCoreResolveOpTypePatch {
+        private static bool Prefix(SurgicalOpType ot, ref bool needsPart,
+                ref bool needsBodySlot) {
+            if ((byte)ot != CoreExtractionIds.SafeCoreExtraction) { return true; }
+            needsPart = false;
+            needsBodySlot = true;
+            return false;
+        }
+    }
+
+    // Start the queue head immediately after the player orders it. The stock global
+    // queue ticks only every ten minutes and waits while the patient has another goal.
+    internal static class SafeCoreQueueKick {
+        internal static void TryStartNext(Being being) {
+            if (being == null || !being.IsActive) { return; }
+
+            var currentGoal = being.Goal;
+            if (currentGoal != null) {
+                var operations = A.S.Query.GetAllSurgeries.Ask();
+                bool isCurrentSurgery = operations.Any(x => x.TargetBeing == being.Data
+                    && (x.State.Value == SurgicalOpState.Preparing
+                        || x.State.Value == SurgicalOpState.Ongoing)
+                    && x.AssociatedGoal == currentGoal
+                    && AIGoal.IsActive(x.AssociatedGoal));
+                if (!isCurrentSurgery
+                        && !AIGoal.Interrupt(currentGoal, G.Ticks, T.NounSurgery)) {
+                    return;
+                }
+            }
+
+            if (being.Goal != null || !being.TryGetComponent<BodyComp>(out var body)) {
+                return;
+            }
+            var nextOp = A.S.Query.TryNextSurgicalProcedure.Ask(being.Data);
+            if (nextOp != null && body.TryOrderOp(nextOp)) {
+                nextOp.State.Set(SurgicalOpState.Preparing);
+            }
         }
     }
 
@@ -60,6 +140,7 @@ namespace Game.FriendlyRobotCoreExtractionMod {
                 if (!A.S.Query.RegisterSurgicalOperation.Ask(op, true)) {
                     A.S.Sig.ShowErrorMessage.Send(op.FailReason ?? "Could not queue safe Core extraction.");
                 } else {
+                    SafeCoreQueueKick.TryStartNext(being);
                     A.S.UIQuery.ShowContextPopup.Ask(__instance, false);
                 }
             });
