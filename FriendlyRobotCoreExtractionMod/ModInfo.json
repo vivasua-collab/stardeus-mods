@@ -1,0 +1,9 @@
+{
+  "Id": "FriendlyRobotCoreExtractionMod",
+  "Name": "Friendly Robot Safe Core Extraction Test",
+  "Description": "Adds a research-gated, safe Core extraction order for friendly robotic beings. Test build for Stardeus 0.15.11.",
+  "ModVersion": "0.1.0",
+  "GameVersion": "0.15.11",
+  "SteamWorkshop": false,
+  "Dependencies": []
+}
