@@ -15,6 +15,17 @@ This repository is a mod workspace, not the game's source repository. The `Core/
 
 Each mod folder has its own `ModInfo.json`, and its own README describes its behavior, limitations, and in-game test checklist.
 
+## Shared Assembly Hub operation pipeline
+
+A surgical operation has two distinct stages:
+
+1. It is registered in the global `SurgicalQueue`.
+2. The queue asks the patient's `BodyComp.TryOrderOp` to create the patient-side AI goal. The goal carries the surgery type and target slot ID through `Surgery_GoTo` / `CarryPatient`, then loads the patient into a `BodyModSpotComp` (Assembly Hub).
+
+The stock queue normally waits while the patient already has an AI goal. The stock single-slot `BodyComp.TryOrderOp` path also only handles vanilla `Remove`, `Install`, and `Swap` operations. Custom single-slot operations must therefore bridge both the task-creation step and the `ResolveOpType` flags that indicate a target body slot is required. The two C# test mods now contain that bridge and try to start the queue head immediately after the player orders it. They interrupt an unrelated interruptible patient goal, but do not interrupt an already-running surgery or a non-interruptible goal.
+
+The Assembly Hub operator is a separate AI job. The robotic Assembly Hub uses the `Robotics` job type; assigning a patient-side surgery goal does not itself assign an operator to the hub.
+
 ## Building the C# mods
 
 ### Requirements
@@ -59,9 +70,11 @@ To install or refresh a mod, keep its complete mod folder (including `ModInfo.js
 
 ## Current compilation status
 
-**Verified by local build report on 2026-11-25:** both C# projects compile successfully against the user's local **Stardeus 0.15.11b** Managed directory.
+**Baseline build verified on 2026-11-25:** both C# projects compiled successfully against the local **Stardeus 0.15.11b** Managed directory before the latest AI task-routing bridge was added.
 
-The builds currently finish with **five warnings** per project and no C# compilation errors:
+**Current source status:** the bridge changes now in `main` have **not yet been rebuilt** against the local game DLLs. Re-run both commands above before treating the current revision as compile-verified.
+
+The earlier baseline builds finished with **five warnings** per project and no C# compilation errors:
 
 - `MSB3245`: the build resolver reports that it cannot resolve `System.Runtime`.
 - `MSB3277`: reference-version conflicts are reported for:
@@ -72,7 +85,7 @@ The builds currently finish with **five warnings** per project and no C# compila
 
 The current project files reference the game's `Managed\*.dll` set. The warning details show that this reference graph includes `Microsoft.CodeAnalysis.*` (Roslyn) assemblies, which request newer versions of some libraries than the versions selected from the game's Managed directory. The exact reference set still needs a deliberate review; the warnings have not been hidden or force-resolved.
 
-These warnings did **not** prevent either DLL from being generated in the reported build. They should not be confused with proof of successful in-game loading or operation behavior. Runtime testing remains a separate step.
+These warnings did **not** prevent either baseline DLL from being generated in the reported build. They should not be confused with proof of successful in-game loading or operation behavior. Runtime testing remains a separate step.
 
 ## Validation boundary
 
