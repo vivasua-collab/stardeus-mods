@@ -5,6 +5,7 @@ using HarmonyLib;
 using Game.CodeGen;
 using Game.Components;
 using Game.Data;
+using Game.Systems.Creatures;
 using Game.Systems.BodyParts;
 using Game.Systems.Creatures.Surgeries;
 using Game.Systems.UIUX;
@@ -29,47 +30,44 @@ namespace Game.FriendlyRobotCoreExtractionMod {
         }
     }
 
-    [HarmonyPatch(typeof(SurgeriesHandler), "SpawnBodyPartWidgets")]
-    internal static class SafeCoreSelectionPatch {
-        private static object ReadMember(object obj, string name) {
-            if (obj == null) { return null; }
-            var t = obj.GetType();
-            return AccessTools.Field(t, name)?.GetValue(obj)
-                ?? AccessTools.Property(t, name)?.GetValue(obj, null);
+    // The actual per-slot operation menu is SurgeryChoiceView. The old patch targeted
+    // the body diagram construction and created unrelated buttons outside the popup.
+    [HarmonyPatch(typeof(SurgeryChoiceView), "LoadPopupContent")]
+    internal static class SafeCoreChoicePatch {
+        private static void Postfix(SurgeryChoiceView __instance, Lifetime lifetime,
+                WGroup wFooter) {
+            var slot = AccessTools.Field(typeof(SurgeryChoiceView), "slot")
+                ?.GetValue(__instance) as BodyPartSlot;
+            if (slot == null || !slot.HoldsMind || slot.Type.Id != "Core" || slot.IsDestroyed
+                    || slot.IsPartRemoved || slot.InstalledDef == null) { return; }
+
+            var being = slot.Body.Owner;
+            if (being == null || !being.IsFriendly || being.Species == null
+                    || being.Species.IsBiological || !IsResearchUnlocked()) { return; }
+
+            var index = wFooter.Container.childCount;
+            var button = UISpawn.Widget<WButtonText>(lifetime,
+                UIPrefabId.WFooterItem_DeleteButton, wFooter.Container, index);
+            button.Load("Safe Core Extraction", () => {
+                var op = new SurgicalOperation {
+                    TargetBeing = being,
+                    TargetSlot = slot,
+                    OpType = (SurgicalOpType)CoreExtractionIds.SafeCoreExtraction,
+                    Icon = IconId.CBodyRemoveOne,
+                    Desc = "Safe Core Extraction"
+                };
+                if (!A.S.Query.RegisterSurgicalOperation.Ask(op, true)) {
+                    A.S.Sig.ShowErrorMessage.Send(op.FailReason ?? "Could not queue safe Core extraction.");
+                } else {
+                    A.S.UIQuery.ShowContextPopup.Ask(__instance, false);
+                }
+            });
+            wFooter.SetActiveFast(true);
         }
 
         private static bool IsResearchUnlocked() {
             var progress = A.S.Research.Get(Hashes.S(CoreExtractionIds.ResearchId));
             return progress != null && progress.IsUnlocked;
-        }
-
-        private static void Postfix(object __instance, Lifetime life, BeingData b) {
-            if (b == null || !b.IsFriendly || b.Species == null || b.Species.IsBiological) { return; }
-            if (!IsResearchUnlocked()) { return; }
-
-            var widget = ReadMember(__instance, "widget");
-            var bodyContainer = ReadMember(widget, "BodyContainer");
-            var container = ReadMember(bodyContainer, "Container");
-            if (container == null) { return; }
-
-            foreach (var slot in b.Body.Slots) {
-                if (!slot.HoldsMind || slot.Type.Id != "Core" || slot.IsPartRemoved
-                        || slot.InstalledDef == null) { continue; }
-                var button = UISpawn.Widget<WButtonText>(life,
-                    UIPrefabId.WContent2ButtonSimple, (Transform)container, -1);
-                button.Load("Safe Core Extraction: " + slot.NameT, () => {
-                    var op = new SurgicalOperation {
-                        TargetBeing = b,
-                        TargetSlot = slot,
-                        OpType = (SurgicalOpType)CoreExtractionIds.SafeCoreExtraction,
-                        Icon = IconId.CBodyRemoveOne,
-                        Desc = "Safe Core Extraction"
-                    };
-                    if (!A.S.Query.RegisterSurgicalOperation.Ask(op, true)) {
-                        A.S.Sig.ShowErrorMessage.Send(op.FailReason ?? "Could not queue safe Core extraction.");
-                    }
-                });
-            }
         }
     }
 
@@ -139,7 +137,7 @@ namespace Game.FriendlyRobotCoreExtractionMod {
             if ((byte)__args[6] != CoreExtractionIds.SafeCoreExtraction) { return; }
             if (!__instance.HoldsMind || __instance.Type.Id != "Core") { return; }
             if (__instance.Body.Owner.Species.IsBiological || !__instance.Body.Owner.IsFriendly) { return; }
-            __args[3] = false; // canFail = false, only for this custom operation
+            __args[3] = false;
         }
     }
 }
