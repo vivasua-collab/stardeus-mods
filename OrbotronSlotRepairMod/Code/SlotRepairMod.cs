@@ -3,6 +3,7 @@ using System.Linq;
 using System.Reflection;
 using HarmonyLib;
 using Game.CodeGen;
+using Game.Components;
 using Game.Data;
 using Game.Systems.Creatures;
 using Game.Systems.BodyParts;
@@ -11,6 +12,7 @@ using Game.Systems.UIUX;
 using Game.UI;
 using Game.Utils;
 using KL.Utils;
+using UnityEngine;
 
 namespace Game.OrbotronSlotRepairMod {
     internal static class SlotRepairIds {
