@@ -17,6 +17,16 @@ The Core snapshot identifies **Construction Drone** as `Research/Robotics/Drone`
 - During this operation only, the extraction failure roll is disabled. The vanilla `TransferMindAfterPartRemoval` path remains in use, so the Mind is transferred into the extracted Core by the game's own code.
 - It does not alter extraction rules for enemy robots, non-Core slots, or ordinary surgery.
 
+## AI task routing
+
+A registered surgical operation is not itself an AI job. The vanilla `SurgicalQueue` normally waits until the patient has no active `Being.Goal`, then asks `BodyComp.TryOrderOp` to create the patient-side task. The stock single-slot path only handles `Remove`, `Install`, and `Swap`, so custom operation types need an explicit bridge.
+
+The current implementation reuses the vanilla remove-task setup, then writes the custom extraction type back into the goal. It also marks the custom type as a single-slot operation so the Core slot ID is carried through the vanilla `Surgery_GoTo` / `CarryPatient` actions into the Assembly Hub. After the button is pressed, it attempts to interrupt an unrelated interruptible patient goal and start the head of that patient's surgery queue immediately. An already-running surgery is not interrupted; a non-interruptible goal can keep the operation queued until it finishes.
+
+The Assembly Hub still requires a Robotics operator under its normal `OperatableDevice` rules. The patient-side AI task and the hub operator task are separate jobs.
+
+This bridge was added after the last successful local compilation report. Rebuild before testing this revision.
+
 ## Build and install
 
 The folder includes `.vscode/mod.csproj`. Set its `StardeusManagedPath` property to the game's `Stardeus_Data/Managed` directory if the default Steam path differs, then run:
@@ -42,6 +52,6 @@ Do not test on the only copy of a valuable save. Removing mods that add research
 ## Validation status
 
 - Core extraction call path and Mind transfer mapped in the 0.15.11 Core snapshot.
-- C# compilation against local game DLLs: **not run**.
+- Last reported local C# build (2026-11-25), before the AI task-routing bridge: **passed with five warnings**. The current bridge revision: **rebuild pending**.
 - `tools/stardeus validate`: **not run**.
 - In-game runtime: **not run**.
