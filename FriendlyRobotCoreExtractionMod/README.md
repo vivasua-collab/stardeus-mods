@@ -63,6 +63,6 @@ Do not test on the only copy of a valuable save. Removing mods that add research
 ## Validation status
 
 - Core extraction call path and Mind transfer mapped in the 0.15.11 Core snapshot.
-- User-confirmed local C# build (2026-11-25): both projects compiled successfully before the current failure-prevention change.
-- In-game runtime (2026-11-25): the user confirmed that Safe Core Extraction now works correctly. The previous issue where the extracted Core was marked damaged is considered resolved in the tested build.
+- User-confirmed local C# build (2026-11-25): the tested Safe Core Extraction revision was built against the local Stardeus 0.15.11b Managed assemblies.
+- In-game runtime (2026-11-25): the user confirmed that Safe Core Extraction works correctly after the failure-prevention change. The previous issue where the extracted Core was marked damaged is resolved in the tested build.
 - `tools/stardeus validate`: **not run**.
