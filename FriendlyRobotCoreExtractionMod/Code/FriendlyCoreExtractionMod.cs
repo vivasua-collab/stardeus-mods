@@ -35,7 +35,7 @@ namespace Game.FriendlyRobotCoreExtractionMod {
                 WGroup wFooter) {
             var slot = AccessTools.Field(typeof(SurgeryChoiceView), "slot")
                 ?.GetValue(__instance) as BodyPartSlot;
-            if (slot == null || !slot.HoldsMind || slot.Type.Id != "Core"
+            if (slot == null || !slot.HoldsMind || slot.Type.Id != "Core" || slot.IsDestroyed
                     || slot.IsPartRemoved || slot.InstalledDef == null) { return; }
 
             var being = slot.Body.Owner;
