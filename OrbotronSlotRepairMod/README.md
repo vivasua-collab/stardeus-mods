@@ -18,10 +18,15 @@ The requested price is one quarter of a new Orbotron. The operation currently ha
 
 ## Build and install
 
-Open this folder in the configured `stardeus-modding-with-ai` workspace, create/configure its C# project with `tools/stardeus new OrbotronSlotRepairMod --kind csharp,content` if needed, then copy this folder's `Code/` and `ModInfo.json` into that generated mod. Build against the local 0.15.11 game DLLs, enable the mod, and restart.
+The folder includes `.vscode/mod.csproj`. Set its `StardeusManagedPath` property to the game's `Stardeus_Data/Managed` directory if the default Steam path differs, then run:
+
+```powershell
+dotnet build .vscode/mod.csproj
+```
+
+The build writes the DLL to `Libraries/OrbotronSlotRepairMod.dll`. Copy the complete `OrbotronSlotRepairMod` folder into the game's Mods directory, enable it in Main Menu > Mods, and restart.
 
 Do not test on the only copy of a valuable save. Removing mods that add operations can leave pending operations in saves.
-
 ## Test checklist
 
 1. Load a test save with a friendly robot whose body contains a destroyed slot (`IsDestroyed=true`).
