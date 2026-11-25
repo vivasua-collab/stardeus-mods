@@ -4,6 +4,7 @@ using System.Reflection;
 using HarmonyLib;
 using Game.CodeGen;
 using Game.Components;
+using Game.Constants;
 using Game.Data;
 using Game.Systems.Creatures;
 using Game.Systems.BodyParts;
@@ -73,7 +74,7 @@ namespace Game.OrbotronSlotRepairMod {
 
     [HarmonyPatch]
     internal static class SlotRepairFinalizePatch {
-        private static MethodBase TargetMethod() {
+        private static MethodInfo TargetMethod() {
             return AccessTools.Method(typeof(BodyModSpotComp), "FinalizeProcedure");
         }
 
