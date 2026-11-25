@@ -21,7 +21,7 @@ The Core snapshot identifies **Construction Drone** as `Research/Robotics/Drone`
 
 A registered surgical operation is not itself an AI job. The vanilla `SurgicalQueue` normally waits until the patient has no active `Being.Goal`, then asks `BodyComp.TryOrderOp` to create the patient-side task. The stock single-slot path only handles `Remove`, `Install`, and `Swap`, so custom operation types need an explicit bridge.
 
-The current implementation reuses the vanilla remove-task setup, then writes the custom extraction type back into the goal. It also marks the custom type as a single-slot operation so the Core slot ID is carried through the vanilla `Surgery_GoTo` / `CarryPatient` actions into the Assembly Hub. After the button is pressed, it attempts to interrupt an unrelated interruptible patient goal and start the head of that patient's surgery queue immediately. An already-running surgery is not interrupted; a non-interruptible goal can keep the operation queued until it finishes.
+The current implementation reuses the vanilla remove-task setup, then writes the custom extraction type back into the goal. It also marks the custom type as a single-slot operation so the Core slot ID is carried through the vanilla `Surgery_GoTo` / `CarryPatient` actions into the Assembly Hub. After the button is pressed, it attempts to interrupt an unrelated interruptible patient goal, clear the target-side goal reference, and start the head of that patient's surgery queue immediately. An already-running surgery is not interrupted; a non-interruptible goal can keep the operation queued until it finishes.
 
 The Assembly Hub still requires a Robotics operator under its normal `OperatableDevice` rules. The patient-side AI task and the hub operator task are separate jobs.
 
