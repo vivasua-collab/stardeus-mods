@@ -11,7 +11,7 @@ The existing Disassembler tab receives an **Automatic equipment recycling** sect
 - **Weapons:** select one weapon type or all weapon types, then choose any quality or a maximum quality.
 - **Clothing and armor:** select one clothing type or all clothing types, choose any quality or a maximum quality, and independently include/exclude New, Second Hand, and Belonged to dead origin states.
 
-Rules are stored per Disassembler in its component data. They are copied with building configuration and retained through save/load. A matching enabled rule is sufficient for an item to qualify.
+Rules are stored per Disassembler in its component data. They are copied with building configuration and retained through save/load. A matching enabled rule is sufficient for an item to qualify. Clothing origin filters use the game's `ItemOwnership.BucketFor` classification. Clothing objects reported by the game as `Untracked` (their inventory slot does not track worn-item ownership) do not match New, Second Hand, or Belonged to dead until the game provides origin data for them.
 
 The automatic scanner checks at a one in-game-hour interval. It examines the global object registry and accepts items in Active (on-map) or Stored state. Stored items are ejected using the game's own storage API and then submitted to the vanilla `DisposableComp.TryOrderDispose` workflow. This reuses the normal worker hauling job and Disassembler queue.
 
