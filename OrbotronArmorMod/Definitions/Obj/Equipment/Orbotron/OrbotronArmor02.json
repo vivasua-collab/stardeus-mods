@@ -15,6 +15,12 @@
       "Properties": [
         { "Key": "Group", "String": "Clothing" }
       ]
+    },
+    {
+      "Component": "ObjGraphics",
+      "Properties": [
+        { "Key": "Graphic", "String": "Obj/BodyParts/Robotic" }
+      ]
     }
   ]
 }
