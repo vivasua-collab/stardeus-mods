@@ -1,0 +1,61 @@
+{
+  "format": 1,
+  "restore": {
+    "H:\\Godot\\stardeus-mods\\DisasemblerEquipment\\.vscode\\mod.csproj": {}
+  },
+  "projects": {
+    "H:\\Godot\\stardeus-mods\\DisasemblerEquipment\\.vscode\\mod.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "H:\\Godot\\stardeus-mods\\DisasemblerEquipment\\.vscode\\mod.csproj",
+        "projectName": "DisasemblerEquipment",
+        "projectPath": "H:\\Godot\\stardeus-mods\\DisasemblerEquipment\\.vscode\\mod.csproj",
+        "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
+        "outputPath": "H:\\Godot\\stardeus-mods\\DisasemblerEquipment\\.vscode\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net481"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net481": {
+            "framework": "net481",
+            "targetAlias": "net481",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "10.0.400"
+      },
+      "frameworks": {
+        "net481": {
+          "framework": "net481",
+          "targetAlias": "net481",
+          "dependencies": {
+            "Microsoft.NETFramework.ReferenceAssemblies": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.0.3, )",
+              "autoReferenced": true
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.404\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

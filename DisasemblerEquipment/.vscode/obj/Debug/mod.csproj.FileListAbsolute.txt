@@ -1,0 +1,8 @@
+H:\Godot\stardeus-mods\DisasemblerEquipment\Libraries\DisasemblerEquipment.dll
+H:\Godot\stardeus-mods\DisasemblerEquipment\Libraries\DisasemblerEquipment.pdb
+H:\Godot\stardeus-mods\DisasemblerEquipment\.vscode\obj\Debug\mod.csproj.AssemblyReference.cache
+H:\Godot\stardeus-mods\DisasemblerEquipment\.vscode\obj\Debug\mod.GeneratedMSBuildEditorConfig.editorconfig
+H:\Godot\stardeus-mods\DisasemblerEquipment\.vscode\obj\Debug\mod.csproj.CoreCompileInputs.cache
+H:\Godot\stardeus-mods\DisasemblerEquipment\.vscode\obj\Debug\mod.sourcelink.json
+H:\Godot\stardeus-mods\DisasemblerEquipment\.vscode\obj\Debug\DisasemblerEquipment.dll
+H:\Godot\stardeus-mods\DisasemblerEquipment\.vscode\obj\Debug\DisasemblerEquipment.pdb
