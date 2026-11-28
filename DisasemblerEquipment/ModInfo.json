@@ -1,0 +1,9 @@
+{
+  "Id": "DisasemblerEquipment",
+  "Name": "Disasembler Equipment",
+  "Description": "Adds configurable automatic weapon, clothing and armor recycling rules to the vanilla Disassembler.",
+  "ModVersion": "0.1.0",
+  "GameVersion": "0.15.11",
+  "SteamWorkshop": false,
+  "Dependencies": []
+}
