@@ -124,7 +124,7 @@ namespace Game.DisasemblerEquipment {
             if (d.Data == null) { return; }
             var rules = Get(d);
             if (rules.Count == 0) { d.Data.RemoveStringSet(Ids.RulesKey); return; }
-            d.Data.SetStringSet(Ids.RulesKey, rules.Select(Json.Dump).ToArray());
+            d.Data.SetStringSet(Ids.RulesKey, rules.Select(rule => Json.Dump(rule)).ToArray());
         }
 
         internal static void Load(DisposerComp d, ComponentData data) {
@@ -268,7 +268,8 @@ namespace Game.DisasemblerEquipment {
             foreach (var id in PendingSource.Keys.ToArray()) {
                 var data = state.Query.TryFindObjData.Ask(id);
                 if (data == null || data.State != ObjState.Active || data.Obj == null
-                        || !data.Obj.TryGetComponent<DisposableComp>(out var d) || !d.HasAnyGoal) {
+                        || !data.Obj.TryGetComponent<DisposableComp>(out var d)
+                        || d.HasGoal == false) {
                     ClearPending(id);
                 }
             }
