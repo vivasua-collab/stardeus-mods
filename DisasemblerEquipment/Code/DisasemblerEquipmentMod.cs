@@ -423,6 +423,7 @@ namespace Game.DisasemblerEquipment {
             Rules.Clear(__instance);
             QueueData.Remove(__instance);
             AutoScanner.Remove(__instance);
+            RuleUI.RemoveDraft(__instance);
         }
     }
 
@@ -479,21 +480,76 @@ namespace Game.DisasemblerEquipment {
     }
 
     internal static class RuleUI {
-        internal static void Append(DisposerTab tab, DisposerComp d, Lifetime life, WGroup group) {
-            // One block per category: a header may only appear once per block, at its very
-            // beginning (see Game.Systems.UIUX.UISpawnExamples prefab guidelines). Vanilla
-            // blocks occupy sibling indexes 0 and 1, ours append after them.
-            int gIdx = group.Container.childCount;
-            SpawnList(tab,d,life,group,gIdx++,Ids.Weapon,"Weapons",IconId.CCog);
-            SpawnList(tab,d,life,group,gIdx++,Ids.Clothing,"Clothing and armor",IconId.CRecycling);
+        // Editor draft kept outside the UI widgets so it survives tab reloads: every
+        // ReloadTab disposes the tab lifetime (despawning all editor widgets) and closes
+        // the sub panel with clearMemory:false, which keeps SubPanelWidget.IsOpenFor
+        // intact. The editor is then re-opened from this draft on the next LoadContent.
+        // Keyed by disposer EntityId, same lifecycle as Rules/QueueData state.
+        private sealed class EditorDraft {
+            internal EquipmentRecycleRule Rule;
+            internal int Category;
+            internal int EditingIndex;
         }
 
-        private static void SpawnList(DisposerTab tab,DisposerComp d,Lifetime life,
-                WGroup group,int gIdx,int category,string title,string icon) {
+        private static readonly Dictionary<int,EditorDraft> Drafts = new();
+
+        private static string SubIdFor(int entityId,int category,int editingIndex) =>
+            $"DEQ.RuleEditor:{entityId}:{category}:{editingIndex}";
+
+        internal static void RemoveDraft(DisposerComp d) {
+            if (d != null) { Drafts.Remove(d.EntityId); }
+        }
+
+        internal static void Append(DisposerTab tab, DisposerComp d, Lifetime life, WGroup group) {
+            // A draft whose SubId no longer matches IsOpenFor belongs to an editor the user
+            // closed themselves (Close(clearMemory:true) clears IsOpenFor; reloads keep it),
+            // so it must never be restored again.
+            var openFor = SubPanelWidget.IsOpenFor;
+            foreach (var key in Drafts.Keys.ToArray()) {
+                var stale = Drafts[key];
+                if (openFor != SubIdFor(key,stale.Category,stale.EditingIndex)) { Drafts.Remove(key); }
+            }
+            // Re-open the editor that was visible before the rebuild (BedTab pattern):
+            // force layout on the not-yet-laid-out pooled anchor, Show, then a deferred
+            // full reposition on the next frame as the safety net.
+            EditorDraft restore = null;
+            if (Drafts.TryGetValue(d.EntityId,out var draft)
+                    && openFor == SubIdFor(d.EntityId,draft.Category,draft.EditingIndex)) {
+                var existing = Rules.Get(d);
+                if (draft.EditingIndex < 0 || (draft.EditingIndex < existing.Count
+                        && existing[draft.EditingIndex] != null
+                        && existing[draft.EditingIndex].Category == draft.Category)) {
+                    restore = draft;
+                } else {
+                    Drafts.Remove(d.EntityId);
+                }
+            }
+            // One block per category: a header may only appear once per block, at its very
+            // beginning (see Game.Systems.UIUX.UISpawnExamples prefab guidelines). Vanilla
+            // blocks occupy sibling indexes 0 and 1, ours append after them. Both SpawnList
+            // calls must run: spawning the blocks is their side effect.
+            int gIdx = group.Container.childCount;
+            var weaponAnchor = SpawnList(tab,d,life,group,gIdx++,Ids.Weapon,"Weapons",IconId.CCog,restore);
+            var clothingAnchor = SpawnList(tab,d,life,group,gIdx++,Ids.Clothing,"Clothing and armor",IconId.CRecycling,restore);
+            var anchor = weaponAnchor ?? clothingAnchor;
+            if (restore != null && anchor != null) {
+                UnityEngine.UI.LayoutRebuilder.ForceRebuildLayoutImmediate(group.Container);
+                OpenEditor(tab,d,life,anchor,restore.Category,restore.EditingIndex);
+                var captured = anchor;
+                Coroutines.OnNextFrame(() => {
+                    if (life.IsDisposed) { return; }
+                    A.S.UIQuery.GetEntitySubPanel.Ask().RepositionWidget(captured,connectorOnly:false);
+                });
+            }
+        }
+
+        private static WBase SpawnList(DisposerTab tab,DisposerComp d,Lifetime life,
+                WGroup group,int gIdx,int category,string title,string icon,EditorDraft restore) {
             var block = UISpawn.Block(life,group,gIdx);
             var container = block.Container;
             int i=0;
             UISpawn.Widget<WText>(life,UIPrefabId.WContent2Header,container,i++).Load(title);
+            WBase anchor = null;
             var rules = Rules.Get(d);
             for (int n=0;n<rules.Count;n++) {
                 var rule = rules[n];
@@ -504,17 +560,35 @@ namespace Game.DisasemblerEquipment {
                 var row = UISpawn.Widget<WContentButtonWithX>(life,UIPrefabId.WContent2ButtonX,container,i++);
                 row.Button.Load(icon,Rules.Summary(rule),()=>OpenEditor(tab,d,life,row,category,index));
                 row.XButton.Load(()=>{ Rules.Remove(d,index); A.S.UIQuery.ReloadEntityTab.Ask(tab); });
+                if (restore != null && restore.Category == category && restore.EditingIndex == n) { anchor=row; }
             }
             var add = UISpawn.Widget<WButtonText>(life,UIPrefabId.WContent2ButtonSimple,container,i++);
             add.Load("Add rule",()=>OpenEditor(tab,d,life,add,category,-1));
+            if (restore != null && restore.Category == category && restore.EditingIndex < 0) { anchor=add; }
+            return anchor;
         }
 
         private static void OpenEditor(DisposerTab tab,DisposerComp d,Lifetime parent,
                 WBase anchor,int category,int editingIndex) {
+            var subId = SubIdFor(d.EntityId,category,editingIndex);
+            // Reuse the draft only when this exact editor is being re-shown by the
+            // reload-restore path (IsOpenFor still points at it). A fresh open - after the
+            // user closed the editor, or while a different editor is open - always starts
+            // from the saved rules, so a closed editor is never resurrected with stale values.
             var rules = Rules.Get(d);
-            var rule = editingIndex >= 0 && editingIndex < rules.Count ? rules[editingIndex].Clone()
-                : new EquipmentRecycleRule { Category=category, Enabled=true, AnyQuality=true,
-                    MaxQuality=1f, OriginMask=Ids.AllOrigins };
+            if (!Drafts.TryGetValue(d.EntityId,out var draft)
+                    || draft.Category != category || draft.EditingIndex != editingIndex
+                    || SubPanelWidget.IsOpenFor != subId) {
+                draft = new EditorDraft {
+                    Rule = editingIndex >= 0 && editingIndex < rules.Count ? rules[editingIndex].Clone()
+                        : new EquipmentRecycleRule { Category=category, Enabled=true, AnyQuality=true,
+                            MaxQuality=1f, OriginMask=Ids.AllOrigins },
+                    Category = category,
+                    EditingIndex = editingIndex
+                };
+                Drafts[d.EntityId] = draft;
+            }
+            var rule = draft.Rule;
             var panel = A.S.UIQuery.GetEntitySubPanel.Ask();
             if (panel.IsShowing) { panel.Close(); }
             var life = panel.CreateLifetime(parent);
@@ -571,11 +645,19 @@ namespace Game.DisasemblerEquipment {
             }
 
             var save=UISpawn.Widget<WButtonText>(life,UIPrefabId.WFooterItem_ConfirmButton,panel.Footer.Container,0);
-            save.Load("Save rule",()=>{Rules.Add(d,rule,editingIndex);panel.Close();A.S.UIQuery.ReloadEntityTab.Ask(tab);});
+            save.Load("Save rule",()=>{
+                Rules.Add(d,rule,editingIndex);
+                Drafts.Remove(d.EntityId);
+                panel.Close();
+                A.S.UIQuery.ReloadEntityTab.Ask(tab);
+            });
             var cancel=UISpawn.Widget<WButtonText>(life,UIPrefabId.WFooterItem_RedButton,panel.Footer.Container,1);
-            cancel.Load("Cancel",()=>panel.Close());
+            cancel.Load("Cancel",()=>{
+                Drafts.Remove(d.EntityId);
+                panel.Close();
+            });
             panel.ShowFooter(true);
-            panel.Show(anchor);
+            panel.Show(anchor,subId);
         }
 
         private static void OriginToggle(Lifetime life,RectTransform container,ref int i,
