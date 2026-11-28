@@ -153,7 +153,7 @@ namespace Game.DisasemblerEquipment {
 
         internal static string Summary(EquipmentRecycleRule r) {
             var type = r.DefIdH == 0 ? "All types" : The.Defs.FastGet(r.DefIdH)?.NameT ?? "Unknown type";
-            var q = r.AnyQuality ? "Any quality" : $"≤ {Units.Percentage(r.MaxQuality)}";
+            var q = r.AnyQuality ? "Any quality" : $"≤ {Units.Percentage(r.MaxQuality, clamp: false)}";
             if (r.Category == Ids.Weapon) { return $"{type} — {q}"; }
             var origin = new List<string>();
             if ((r.OriginMask & Ids.New) != 0) { origin.Add("New"); }
@@ -539,13 +539,13 @@ namespace Game.DisasemblerEquipment {
             any.Item.Load(IconId.CPercentGreen,"Any quality",rule.AnyQuality?T.Yes:T.No);
             var slider = UISpawn.Widget<WSliderWithIconText2>(life,UIPrefabId.WContent2Text2Slider,block.Container,i++);
             rule.MaxQuality=Mathf.Clamp(rule.MaxQuality,0f,3f);
-            slider.Item.Load(IconId.CBookmark,"Maximum quality",rule.AnyQuality?"∞":Units.Percentage(rule.MaxQuality));
-            slider.Slider.Load(rule.MaxQuality,v=>{rule.MaxQuality=Mathf.Clamp(v,0f,3f);slider.Item.SetText2(Units.Percentage(rule.MaxQuality));},0f,3f);
+            slider.Item.Load(IconId.CBookmark,"Maximum quality",rule.AnyQuality?"∞":Units.Percentage(rule.MaxQuality, clamp: false));
+            slider.Slider.Load(rule.MaxQuality,v=>{rule.MaxQuality=Mathf.Clamp(v,0f,3f);slider.Item.SetText2(Units.Percentage(rule.MaxQuality, clamp: false));},0f,3f);
             slider.Slider.SetInteractable(!rule.AnyQuality);
             any.Toggle.Load(rule.AnyQuality,v=>{
                 rule.AnyQuality=v; any.Item.SetText2(v?T.Yes:T.No);
                 slider.Slider.SetInteractable(!v);
-                slider.Item.SetText2(v?"∞":Units.Percentage(rule.MaxQuality));
+                slider.Item.SetText2(v?"∞":Units.Percentage(rule.MaxQuality, clamp: false));
             });
 
             if (category == Ids.Clothing) {
