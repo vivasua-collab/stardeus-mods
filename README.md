@@ -10,6 +10,7 @@ This repository is a mod workspace, not the game's source repository. The `Core/
 |---|---|---|
 | [`OrbotronSlotRepairMod/`](OrbotronSlotRepairMod/README.md) | C# / Harmony + research definition | Adds an **Orbotron-only** **Repair Damaged Slot** operation, unlocked after Orbotron research (Tier 5). The current implementation does not charge materials. |
 | [`FriendlyRobotCoreExtractionMod/`](FriendlyRobotCoreExtractionMod/README.md) | C# / Harmony + research definition | Adds a research-gated **Safe Core Extraction** operation for friendly robotic beings. |
+| [`DisasemblerEquipment/`](DisasemblerEquipment/README.md) | C# / Harmony | Adds configurable automatic weapon, clothing and armor recycling rules to the existing Disassembler. |
 | [`OrbotronArmorMod/`](OrbotronArmorMod/README.md) | JSON-only | Adds Orbotron armor equipment, recipes, and research definitions. It has no C# project and does not need the build steps below. |
 | `Core/` | Reference data | Snapshot of game configuration and reference source used during mod development. |
 
@@ -61,6 +62,12 @@ dotnet build "C:\Users\user\AppData\LocalLow\Kodo Linija\Stardeus\Mods\OrbotronS
 dotnet build "C:\Users\user\AppData\LocalLow\Kodo Linija\Stardeus\Mods\FriendlyRobotCoreExtractionMod\.vscode\mod.csproj" "-p:StardeusManagedPath=D:\Games\Stardeus v0.15.11b\Stardeus_Data\Managed" -v:minimal
 ```
 
+**DisasemblerEquipment**
+
+```powershell
+dotnet build "C:\Users\user\AppData\LocalLow\Kodo Linija\Stardeus\Mods\DisasemblerEquipment\.vscode\mod.csproj" "-p:StardeusManagedPath=D:\Games\Stardeus v0.15.11b\Stardeus_Data\Managed" -v:minimal
+```
+
 You can also run the same command from another checkout by replacing the absolute project path with the corresponding path to that checkout's `.vscode\mod.csproj`.
 
 ### Build output
@@ -69,6 +76,7 @@ A successful build produces these files:
 
 - `OrbotronSlotRepairMod/Libraries/OrbotronSlotRepairMod.dll`
 - `FriendlyRobotCoreExtractionMod/Libraries/FriendlyRobotCoreExtractionMod.dll`
+- `DisasemblerEquipment/Libraries/DisasemblerEquipment.dll`
 
 The projects are configured not to copy the game's referenced assemblies to the mod output directory (`Private=False`). The build creates the mod DLL; it does not by itself enable the mod in the game.
 
@@ -79,6 +87,8 @@ To install or refresh a mod, keep its complete mod folder (including `ModInfo.js
 **User-confirmed build on 2026-11-25:** both C# projects compiled successfully against the local **Stardeus 0.15.11b** Managed directory after the previous patient-side goal implementation.
 
 **Runtime status (2026-11-25):** the user has confirmed that Safe Core Extraction now works correctly in-game. The basic Slot Repair operation was also confirmed working before this Orbotron-only restriction was added. The current Slot Repair changes (species restriction and Tier 5 research dependency) require a fresh build and in-game validation.
+
+**DisasemblerEquipment 0.1.0:** initial DLL source and project scaffold have been added for Stardeus 0.15.11b. It has not yet been locally compiled or tested in-game. See its README for scope and known limitations.
 
 Prior local builds reported five warnings:
 
