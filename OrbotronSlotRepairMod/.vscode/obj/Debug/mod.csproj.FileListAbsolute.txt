@@ -1,0 +1,8 @@
+H:\Godot\stardeus-mods\OrbotronSlotRepairMod\Libraries\OrbotronSlotRepairMod.dll
+H:\Godot\stardeus-mods\OrbotronSlotRepairMod\Libraries\OrbotronSlotRepairMod.pdb
+H:\Godot\stardeus-mods\OrbotronSlotRepairMod\.vscode\obj\Debug\mod.csproj.AssemblyReference.cache
+H:\Godot\stardeus-mods\OrbotronSlotRepairMod\.vscode\obj\Debug\mod.GeneratedMSBuildEditorConfig.editorconfig
+H:\Godot\stardeus-mods\OrbotronSlotRepairMod\.vscode\obj\Debug\mod.csproj.CoreCompileInputs.cache
+H:\Godot\stardeus-mods\OrbotronSlotRepairMod\.vscode\obj\Debug\mod.sourcelink.json
+H:\Godot\stardeus-mods\OrbotronSlotRepairMod\.vscode\obj\Debug\OrbotronSlotRepairMod.dll
+H:\Godot\stardeus-mods\OrbotronSlotRepairMod\.vscode\obj\Debug\OrbotronSlotRepairMod.pdb
