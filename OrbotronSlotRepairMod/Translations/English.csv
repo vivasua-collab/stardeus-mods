@@ -1,3 +1,4 @@
 Key,Translation,Version,Comment
 research.robotics.bodyslotrepair,Orbotron Slot Repair,0.1.1,Research unlock
-research.robotics.bodyslotrepair.desc,Unlocks the Repair Damaged Slot operation for Orbotrons at a robotic Assembly Hub. Requires Orbotron research.,0.1.1,Research description
+research.robotics.bodyslotrepair.desc,Unlocks the Repair Damaged Slot and Remove Welded Part operations for Orbotrons at a robotic Assembly Hub. Requires Orbotron research.,0.1.2,Research description
+orbotron.slotrepair.removeWeldedPart,Remove Welded Part,0.1.2,Custom operation name (footer button, queue and progress bar)
