@@ -19,7 +19,8 @@
     {
       "Component": "ObjGraphics",
       "Properties": [
-        { "Key": "Graphic", "String": "Obj/BodyParts/Robotic" }
+        { "Key": "Graphic", "String": "Obj/Equipment/Orbotron/OrbotronArmor01" },
+        { "Key": "Scale", "Float": 1.2 }
       ]
     }
   ]

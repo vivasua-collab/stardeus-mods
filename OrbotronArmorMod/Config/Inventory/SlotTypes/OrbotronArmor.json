@@ -1,5 +1,6 @@
 {
   "Id": "OrbotronArmor",
   "Worn": true,
-  "Order": 30
+  "Order": 30,
+  "LookPart": "Clothing"
 }

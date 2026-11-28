@@ -1,6 +1,7 @@
 {
   "DefId": "Obj/Equipment/Orbotron/OrbotronArmor02",
   "SlotId": "OrbotronArmor",
+  "SpriteId": "Beings/Clothing/Orbotron/OrbotronArmor02/[BODY_TYPE]Armor02",
   "Rarity": 0.10,
   "CombatStrengthBonus": 2.0,
   "SpawnRequirements": {
