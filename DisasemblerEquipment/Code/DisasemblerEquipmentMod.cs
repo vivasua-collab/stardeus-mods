@@ -480,30 +480,32 @@ namespace Game.DisasemblerEquipment {
 
     internal static class RuleUI {
         internal static void Append(DisposerTab tab, DisposerComp d, Lifetime life, WGroup group) {
-            var block = UISpawn.Block(life,group,group.Container.childCount);
-            int i = 0;
-            UISpawn.Widget<WText>(life,UIPrefabId.WContent2Header,block.Container,i++)
-                .Load("Automatic equipment recycling");
-            SpawnList(tab,d,life,block.Container,ref i,Ids.Weapon,"Weapons",IconId.CCog);
-            SpawnList(tab,d,life,block.Container,ref i,Ids.Clothing,"Clothing and armor",IconId.CRecycling);
+            // One block per category: a header may only appear once per block, at its very
+            // beginning (see Game.Systems.UIUX.UISpawnExamples prefab guidelines). Vanilla
+            // blocks occupy sibling indexes 0 and 1, ours append after them.
+            int gIdx = group.Container.childCount;
+            SpawnList(tab,d,life,group,gIdx++,Ids.Weapon,"Weapons",IconId.CCog);
+            SpawnList(tab,d,life,group,gIdx++,Ids.Clothing,"Clothing and armor",IconId.CRecycling);
         }
 
         private static void SpawnList(DisposerTab tab,DisposerComp d,Lifetime life,
-                RectTransform container,ref int i,int category,string title,string icon) {
+                WGroup group,int gIdx,int category,string title,string icon) {
+            var block = UISpawn.Block(life,group,gIdx);
+            var container = block.Container;
+            int i=0;
             UISpawn.Widget<WText>(life,UIPrefabId.WContent2Header,container,i++).Load(title);
             var rules = Rules.Get(d);
             for (int n=0;n<rules.Count;n++) {
                 var rule = rules[n];
                 if (rule == null || rule.Category != category) { continue; }
-                UISpawn.Widget<WIconText>(life,UIPrefabId.WContent2Text,container,i++)
-                    .Load(icon,Rules.Summary(rule));
-                var edit = UISpawn.Widget<WButtonText>(life,UIPrefabId.WFooterItem_DeleteButton,container,i++);
                 int index=n;
-                edit.Load("Edit rule",()=>OpenEditor(tab,d,life,edit,category,index));
-                var remove = UISpawn.Widget<WButtonText>(life,UIPrefabId.WFooterItem_DeleteButton,container,i++);
-                remove.Load("Remove rule",()=>{ Rules.Remove(d,index); A.S.UIQuery.ReloadEntityTab.Ask(tab); });
+                // Content rows use content prefabs: the row opens the editor, the X removes
+                // the rule (WContent2ButtonX pattern from UISpawnExamples).
+                var row = UISpawn.Widget<WContentButtonWithX>(life,UIPrefabId.WContent2ButtonX,container,i++);
+                row.Button.Load(icon,Rules.Summary(rule),()=>OpenEditor(tab,d,life,row,category,index));
+                row.XButton.Load(()=>{ Rules.Remove(d,index); A.S.UIQuery.ReloadEntityTab.Ask(tab); });
             }
-            var add = UISpawn.Widget<WButtonText>(life,UIPrefabId.WFooterItem_DeleteButton,container,i++);
+            var add = UISpawn.Widget<WButtonText>(life,UIPrefabId.WContent2ButtonSimple,container,i++);
             add.Load("Add rule",()=>OpenEditor(tab,d,life,add,category,-1));
         }
 
