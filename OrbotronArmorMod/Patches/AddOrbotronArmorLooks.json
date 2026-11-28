@@ -1,0 +1,19 @@
+{
+  "target": "Config/Species/Looks/Orbotron.json",
+  "operations": [
+    {
+      "op": "add",
+      "path": "/PartDefs/-",
+      "value": {
+        "PartType": "Clothing",
+        "PositionFilter": "DroneHover",
+        "RenderSorted": true,
+        "Offset": { "x": 0, "y": 0.3 },
+        "Scale": 2,
+
+        "MobilizerAffected": true,
+        "MobilizerAltPosFilter": ""
+      }
+    }
+  ]
+}
