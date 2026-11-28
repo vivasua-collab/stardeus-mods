@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "s5IFrjaWwf8=",
+  "success": true,
+  "projectFilePath": "H:\\Godot\\stardeus-mods\\DisasemblerEquipment\\.vscode\\mod.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\user\\.nuget\\packages\\microsoft.netframework.referenceassemblies\\1.0.3\\microsoft.netframework.referenceassemblies.1.0.3.nupkg.sha512",
+    "C:\\Users\\user\\.nuget\\packages\\microsoft.netframework.referenceassemblies.net481\\1.0.3\\microsoft.netframework.referenceassemblies.net481.1.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
